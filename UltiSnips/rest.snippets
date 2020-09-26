@@ -1,0 +1,17 @@
+snippet init
+# Global configs
+${1:http}://${2:localhost}:${3:3000}
+Accept: ${4:application/json}
+--
+
+# ${5:API description}
+--
+${6:method} /${7:path}
+endsnippet
+
+snippet api
+
+--
+# ${1:API descripttion}
+${2:GET} /$3
+endsnippet

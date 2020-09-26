@@ -1,0 +1,141 @@
+# ts data type
+snippet num
+$1: number$0
+endsnippet
+
+snippet str
+$1: string$0
+endsnippet
+
+snippet pro
+$1: Promise<$2>$0
+endsnippet
+
+snippet boo
+$1: boolean$0
+endsnippet
+
+snippet onu
+$1: Number$0
+endsnippet
+
+snippet ost
+$1: String$0
+endsnippet
+
+snippet obo
+$1: Boolean$0
+endsnippet
+
+snippet arr
+$1: $2[]$0
+endsnippet
+
+# ts function shortcuts
+snippet imp
+import { $2 } from '$1'$0
+endsnippet
+
+snippet put
+@Put('${1:/:id}')
+$0
+endsnippet
+
+snippet pos
+@Post('${1:/:id}')
+$0
+endsnippet
+
+snippet pat
+@Patch('${1:/:id}')
+$0
+endsnippet
+
+snippet put
+@Put('${1:/:id}')
+$0
+endsnippet
+
+snippet get
+@Get('${1:/:id}')
+$0
+endsnippet
+
+# controller decorator
+snippet ctl
+@Controller('$1')
+$0
+endsnippet
+
+# data transfer decorators
+snippet par
+@Param(${1:'id'})$0
+endsnippet
+
+snippet bod
+@Body($1)$0
+endsnippet
+
+snippet que
+@Query($1)$0
+endsnippet
+
+# lib decorators
+snippet nc
+import {
+	Controller,
+	Post,
+	Body,
+	Get,
+	Patch,
+	Param,
+	Delete
+} from '@nestjs/common'$0
+endsnippet
+
+snippet ns
+import { ${1:ApiProperty} } from '@nestjs/swagger'$0
+endsnippet
+
+snippet ap
+@ApiProperty({
+	description: '${1:description}',
+	required: ${2:true},
+	type: ${3:String}
+})
+${4:@IsNotEmpty()}
+${5:field}: ${6:string};$0
+endsnippet
+
+snippet cv
+import { ${1:IsNotEmpty} } from 'class-validator'$0
+endsnippet
+
+snippet ine
+@IsNotEmpty()$0
+endsnippet
+
+# throw exceptions
+snippet 400
+throw new BadRequestException(${2:'bad request'})$0
+endsnippet
+
+snippet 404
+throw new NotFoundException('$1 ${2:does not exists}')$0
+endsnippet
+
+snippet 401
+throw new UnauthorizedException(${1:'unauthorized'})$0
+endsnippet
+
+snippet 403
+throw new ForbiddenException(${1:'forbidden'})$0
+endsnippet
+
+snippet 500
+throw new InternalServerErrorException(${1:'internal server error'})$0
+endsnippet
+
+snippet 501
+throw new NotImplementedException(${2:'not implemented'})$0
+endsnippet
