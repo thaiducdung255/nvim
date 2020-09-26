@@ -4,7 +4,7 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'dense-analysis/ale'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'airblade/vim-gitgutter'
+"  Plug 'airblade/vim-gitgutter'
   Plug 'diepm/vim-rest-console'
   Plug 'crusoexia/vim-monokai'
   Plug 'easymotion/vim-easymotion'
@@ -17,6 +17,10 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'kien/rainbow_parentheses.vim'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'mhinz/vim-signify'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
+  Plug 'junegunn/gv.vim'
 call plug#end()
 
 nnoremap <LEADER>pi :PlugInstall<CR>

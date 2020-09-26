@@ -45,5 +45,6 @@ nnoremap <LEADER>wq :wq<CR>
 nnoremap <LEADER>s :w<CR>
 nnoremap <LEADER>q :q<CR>
 
-nnoremap <LEADER>ecf :e ~/.config/nvim/
+nnoremap <LEADER>ecf :e ~/.config/nvim/vim-conf/
+nnoremap <LEADER>icf :e ~/.config/nvim/init.vim<CR>
 nnoremap <LEADER>rcf :source %<CR>
