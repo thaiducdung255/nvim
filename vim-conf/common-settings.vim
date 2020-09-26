@@ -1,0 +1,37 @@
+syntax on
+set noerrorbells
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent
+set autoindent
+set nowrap
+set ignorecase
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set nohls
+set colorcolumn=100
+set number relativenumber
+set completeopt-=preview
+set splitbelow
+set splitright
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+set cursorline
+set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*
+set complete-=5
+set lazyredraw
+set termguicolors
+let mapleader=" "
+set backspace=indent,eol,start
+let g:python_host_prog="/usr/bin/python"
+let g:python3_host_prog="/usr/bin/python3"
+let g:ctrlp_show_hidden=1
+
+" ignore x to last register
+" noremap x "_x
+vnoremap p "_dP
