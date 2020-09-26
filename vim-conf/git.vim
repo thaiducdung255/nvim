@@ -16,8 +16,8 @@ nmap <LEADER>gK 9999<leader>gk
 " Custom shortcuts
 nmap <LEADER>gad :Git add<SPACE>.<CR>
 nmap <LEADER>gco :Git commit<SPACE>-m<SPACE>
-nmap <LEADER>gps :Git push<CR>
-nmap <LEADER>gpl :Git pull<CR>
+nmap <LEADER>gps :Git push
+nmap <LEADER>gpl :Git pull
 nmap <LEADER>gdi :Git diff<CR>
 nmap <LEADER>glo :Git log<CR>
 nmap <LEADER>gbl :Git blame<CR>
