@@ -20,8 +20,8 @@ vnoremap ` di``<ESC>hpl
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
 " toggle upper/lower case
-inoremap <C-u> <ESC>vb<S-u>A
-inoremap <A-u> <ESC>vbuA
+inoremap <A-u> <ESC>vb<S-u>A
+inoremap <C-u> <ESC>vbuA
 
 " auto pair bracket
 inoremap ( ()<ESC>i
@@ -34,12 +34,11 @@ inoremap ,, ,<CR>
 inoremap {<CR> {<CR>}<ESC>O
 
 " scroll shortcut
-nnoremap <silent> <S-j> :vertical +10<CR>
-nnoremap <silent> <S-k> :vertical -10<CR>
+" nnoremap <silent> <S-j> :vertical +10<CR>
+" nnoremap <silent> <S-k> :vertical -10<CR>
 
 " other
-inoremap jj {<SPACE><SPACE>}<ESC>hi
-inoremap kk <ESC>
+inoremap jj <ESC>
 
 nnoremap <LEADER>wq :wq<CR>
 nnoremap <LEADER>s :w<CR>

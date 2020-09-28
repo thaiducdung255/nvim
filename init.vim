@@ -18,3 +18,4 @@ source $HOME/.config/nvim/vim-conf/commands.vim
 source $HOME/.config/nvim/vim-conf/tab.vim
 source $HOME/.config/nvim/vim-conf/editor.vim
 source $HOME/.config/nvim/vim-conf/git.vim
+source $HOME/.config/nvim/vim-conf/terminal.vim
