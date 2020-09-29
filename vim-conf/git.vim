@@ -14,8 +14,9 @@ nmap <LEADER>gJ 9999<leader>gJ
 nmap <LEADER>gK 9999<leader>gk
 
 " Custom shortcuts
+nmap <LEADER>gst :Git status<CR>
 nmap <LEADER>gad :Git add<SPACE>.<CR>
-nmap <LEADER>gco :Git commit<SPACE>-m<SPACE>
+nmap <LEADER>gco :call GitCommit()<CR>
 nmap <LEADER>gps :Git push<CR>
 nmap <LEADER>gpl :Git pull<CR>
 nmap <LEADER>gdi :Git diff<CR>
@@ -31,3 +32,10 @@ nmap <LEADER>gh :SignifyToggleHighlight<CR>
 " highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
 " highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
 " highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+
+function! GitCommit()
+  call inputsave()
+  let message = input('commit message: ')
+  call inputrestore()
+  execute(':Git commit -m "' . message . '"')
+endfunction

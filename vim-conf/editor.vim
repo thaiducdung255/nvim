@@ -47,3 +47,15 @@ nnoremap <LEADER>q :q<CR>
 nnoremap <LEADER>ecf :e ~/.config/nvim/vim-conf/
 nnoremap <LEADER>icf :e ~/.config/nvim/init.vim<CR>
 nnoremap <LEADER>rcf :source %<CR>
+
+function! FindAndReplace()
+  call inputsave()
+  let originalText = input('Replace: ')
+  call inputrestore()
+  call inputsave()
+  let finalText = input('By: ')
+  call inputrestore()
+  execute('%s/' . originalText . '/' . finalText . '/gc')
+endfunction
+
+nnoremap <C-r> :call FindAndReplace()
