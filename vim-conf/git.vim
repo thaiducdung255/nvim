@@ -15,6 +15,7 @@ nmap <LEADER>gK 9999<leader>gk
 
 " Custom shortcuts
 nmap <LEADER>gst :Git status<CR>
+nmap <LEADER>gch :call GitCheckout()<CR>
 nmap <LEADER>gad :Git add<SPACE>.<CR>
 nmap <LEADER>gco :call GitCommit()<CR>
 nmap <LEADER>gps :Git push<CR>
@@ -35,7 +36,14 @@ nmap <LEADER>gh :SignifyToggleHighlight<CR>
 
 function! GitCommit()
   call inputsave()
-  let message = input('commit message: ')
+  let message = input('Commit message: ')
   call inputrestore()
   execute(':Git commit -m "' . message . '"')
+endfunction
+
+function! GitCheckout()
+  call inputsave()
+  let branch = input('Branch: ')
+  call inputrestore()
+  execute(':Git checkout '.branch)
 endfunction
