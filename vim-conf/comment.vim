@@ -12,7 +12,7 @@ endfunction
 
 function! Uncomment()
   let ext = tolower(expand('%:e'))
-  if ext == 'php' || ext == 'rb' || ext == 'sh' || ext == 'py'
+  if ext == 'php' || ext == 'rb' || ext == 'sh' || ext == 'py' || ext == 'env'
     silent s/^\s*\#//
   elseif ext == 'js' || ext == 'ts'
     silent s:^\s*\/\/::g

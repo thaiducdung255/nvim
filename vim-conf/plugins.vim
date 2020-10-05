@@ -4,7 +4,6 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'dense-analysis/ale'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-"  Plug 'airblade/vim-gitgutter'
   Plug 'diepm/vim-rest-console'
   Plug 'crusoexia/vim-monokai'
   Plug 'easymotion/vim-easymotion'

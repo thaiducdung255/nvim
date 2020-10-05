@@ -38,8 +38,6 @@ inoremap {<CR> {<CR>}<ESC>O
 " nnoremap <silent> <S-k> :vertical -10<CR>
 
 " other
-inoremap jj <ESC>
-
 nnoremap <LEADER>wq :wq<CR>
 nnoremap <LEADER>s :w<CR>
 nnoremap <LEADER>q :q<CR>
@@ -58,4 +56,4 @@ function! FindAndReplace()
   execute('%s/' . originalText . '/' . finalText . '/gc')
 endfunction
 
-nnoremap <C-r> :call FindAndReplace()
+nnoremap <C-f> :call FindAndReplace()<CR>
