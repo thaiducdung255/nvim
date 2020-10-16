@@ -34,8 +34,8 @@ inoremap ,, ,<CR>
 inoremap {<CR> {<CR>}<ESC>O
 
 " scroll shortcut
-" nnoremap <silent> <S-j> :vertical +10<CR>
-" nnoremap <silent> <S-k> :vertical -10<CR>
+" nnoremap <silent> <A-j> :vertical +10<CR>
+" nnoremap <silent> <A-k> :vertical -10<CR>
 
 " other
 nnoremap <LEADER>wq :wq<CR>

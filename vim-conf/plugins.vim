@@ -1,4 +1,4 @@
-call plug#begin('/home/df/.vim/autoload')
+call plug#begin('/home/dungtd10/.vim/autoload')
   Plug 'Valloric/YouCompleteMe'
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
@@ -14,7 +14,6 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
   Plug 'kien/rainbow_parentheses.vim'
-  Plug 'terryma/vim-multiple-cursors'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-fugitive'

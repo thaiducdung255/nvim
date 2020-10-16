@@ -15,6 +15,7 @@ nmap <LEADER>gK 9999<leader>gk
 
 " Custom shortcuts
 nmap <LEADER>gst :Git status<CR>
+nmap <LEADER>gbr :Git branch<CR>
 nmap <LEADER>gch :call GitCheckout()<CR>
 nmap <LEADER>gad :Git add<SPACE>.<CR>
 nmap <LEADER>gco :call GitCommit()<CR>
@@ -23,11 +24,11 @@ nmap <LEADER>gpl :Git pull<CR>
 nmap <LEADER>gdi :Git diff<CR>
 nmap <LEADER>glo :Git log<CR>
 nmap <LEADER>gbl :Git blame<CR>
-
+nmap <LEADER>gpa :Git add<SPACE>.<CR>:call GitCommit()<CR>:Git push()<CR>
 nmap <LEADER>gvf :GV<CR>
 nmap <LEADER>gva :GV!<CR>
 
-nmap <LEADER>gh :SignifyToggleHighlight<CR>
+nmap <LEADER>ghl :SignifyToggleHighlight<CR>
 
 " If you like colors instead
 " highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
