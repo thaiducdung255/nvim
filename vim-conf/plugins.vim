@@ -1,4 +1,4 @@
-call plug#begin('/home/dungtd10/.vim/autoload')
+call plug#begin('/home/df/.vim/autoload')
   Plug 'Valloric/YouCompleteMe'
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
@@ -19,6 +19,7 @@ call plug#begin('/home/dungtd10/.vim/autoload')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
+  Plug 'zxqfl/tabnine-vim'
 call plug#end()
 
 nnoremap <LEADER>pi :PlugInstall<CR>
