@@ -12,12 +12,13 @@ vnoremap <C-V> "+p<ESC>
 vnoremap <C-C> "+y<ESC>
 
 " auto pair bracket fix
-vnoremap [ di[]<ESC>hpl
-vnoremap ( di()<ESC>hpl
-vnoremap ' di''<ESC>hpl
-vnoremap " di""<ESC>hpl
-vnoremap ` di``<ESC>hpl
-vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
+vnoremap [ da[]<ESC>hpl
+vnoremap ( da()<ESC>hpl
+vnoremap ' da''<ESC>hpl
+vnoremap " da""<ESC>hpl
+vnoremap ` da``<ESC>hpl
+vnoremap { da{<SPACE><SPACE>}<ESC>hhpll
+vnoremap $ da${}<ESC>hpl
 
 " toggle upper/lower case
 inoremap <A-u> <ESC>vb<S-u>A
@@ -35,8 +36,9 @@ inoremap ` ``<ESC>i
 inoremap " ""<ESC>i
 inoremap ,, ,<CR>
 inoremap {<CR> {<CR>}<ESC>O
+inoremap $<SPACE> ${}<ESC>i
 
-" scroll shortcut
+" scroll configs
 " nnoremap <silent> <A-j> :vertical +10<CR>
 " nnoremap <silent> <A-k> :vertical -10<CR>
 
