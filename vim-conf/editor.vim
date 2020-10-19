@@ -26,7 +26,7 @@ inoremap <C-u> <ESC>vbuA
 " auto pair bracket
 inoremap jj <ESC>la
 inoremap ; ;<CR>
-inoremap <CR> ;<CR>
+inoremap :: ()<SPACE>=><SPACE>
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
 inoremap { {}<ESC>i
