@@ -24,3 +24,5 @@ call plug#end()
 
 nnoremap <LEADER>pi :PlugInstall<CR>
 nnoremap <LEADER>pc :PlugClean<CR>
+nnoremap <LEADER>pu :PlugUpdate<CR>
+nnoremap <LEADER>pg :PlugUpgrade<CR>
