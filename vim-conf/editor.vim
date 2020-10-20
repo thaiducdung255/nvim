@@ -24,15 +24,7 @@ vnoremap $ da${}<ESC>hpl
 inoremap <A-u> <ESC>vb<S-u>A
 inoremap <C-u> <ESC>vbuA
 
-" auto pair bracket
 inoremap jj <ESC>la
-"inoremap ( ()<ESC>i
-"inoremap [ []<ESC>i
-"inoremap { {}<ESC>i
-"inoremap ' ''<ESC>i
-"inoremap ` ``<ESC>i
-"inoremap " ""<ESC>i
-"inoremap {<CR> {<CR>}<ESC>O
 
 " js auto convert ops
 inoremap -- <SPACE>-=<SPACE>1

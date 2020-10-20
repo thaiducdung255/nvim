@@ -13,7 +13,3 @@ nnoremap <silent> <C-l> :vertical resize +2<CR>
 " splits and tab create/close configs
 nnoremap <silent> <A-p> :vsplit<CR>:wincmd l<CR>
 nnoremap <silent> <A-o> :split<CR>:wincmd j<CR>
-
-" maximize window
-nnoremap <silent> <LEADER>wm <C-w>_<C-w>\|
-nnoremap <silent> <LEADER>wn <C-w>=
