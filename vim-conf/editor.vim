@@ -26,17 +26,13 @@ inoremap <C-u> <ESC>vbuA
 
 " auto pair bracket
 inoremap jj <ESC>la
-inoremap ; ;<CR>
-inoremap :: ()<SPACE>=><SPACE>
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {}<ESC>i
-inoremap ' ''<ESC>i
-inoremap ` ``<ESC>i
-inoremap " ""<ESC>i
-inoremap ,, ,<CR>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap $<SPACE> ${}<ESC>i
+"inoremap ( ()<ESC>i
+"inoremap [ []<ESC>i
+"inoremap { {}<ESC>i
+"inoremap ' ''<ESC>i
+"inoremap ` ``<ESC>i
+"inoremap " ""<ESC>i
+"inoremap {<CR> {<CR>}<ESC>O
 
 " js auto convert ops
 inoremap -- <SPACE>-=<SPACE>1
@@ -54,6 +50,10 @@ inoremap ^ <SPACE>**<SPACE>
 " nnoremap <silent> <A-k> :vertical -10<CR>
 
 " other
+inoremap $<SPACE> ${}<ESC>i
+inoremap ,, ,<CR>
+inoremap :: ()<SPACE>=><SPACE>
+inoremap ; ;<CR>
 nnoremap <LEADER>wq :wq<CR>
 nnoremap <LEADER>s :w<CR>
 nnoremap <LEADER>q :q<CR>

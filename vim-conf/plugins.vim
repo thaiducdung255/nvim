@@ -20,6 +20,7 @@ call plug#begin('/home/dungtd10/.vim/autoload')
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
   Plug 'zxqfl/tabnine-vim'
+  Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 nnoremap <LEADER>pi :PlugInstall<CR>
