@@ -8,8 +8,8 @@ inoremap <C-e> <ESC>ea
 inoremap <C-b> <ESC>bi
 
 " using system copy/paste shortcuts
-vnoremap <C-V> "+p<ESC>
-vnoremap <C-C> "+y<ESC>
+vnoremap <C-v> "+p<ESC>
+vnoremap <C-c> "+y<ESC>
 
 " auto pair bracket fix
 vnoremap [ da[]<ESC>hpl
@@ -37,6 +37,17 @@ inoremap " ""<ESC>i
 inoremap ,, ,<CR>
 inoremap {<CR> {<CR>}<ESC>O
 inoremap $<SPACE> ${}<ESC>i
+
+" js auto convert ops
+inoremap -- <SPACE>-=<SPACE>1
+inoremap ++ <SPACE>+=<SPACE>1
+inoremap == <SPACE>===<SPACE>
+inoremap + <SPACE>+<SPACE>
+inoremap - <SPACE>-<SPACE>
+inoremap * <SPACE>*<SPACE>
+inoremap / <SPACE>/<SPACE>
+inoremap // //<SPACE>
+inoremap ^ <SPACE>**<SPACE>
 
 " scroll configs
 " nnoremap <silent> <A-j> :vertical +10<CR>

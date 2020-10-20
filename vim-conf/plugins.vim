@@ -1,4 +1,4 @@
-call plug#begin('/home/df/.vim/autoload')
+call plug#begin('/home/dungtd10/.vim/autoload')
   Plug 'Valloric/YouCompleteMe'
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
