@@ -37,9 +37,9 @@ inoremap / <SPACE>/<SPACE>
 inoremap // //<SPACE>
 inoremap ^ <SPACE>**<SPACE>
 
-" scroll configs
-" nnoremap <silent> <A-j> :vertical +10<CR>
-" nnoremap <silent> <A-k> :vertical -10<CR>
+" remap scroll configs
+nnoremap <A-d> <C-d>
+nnoremap <A-u> <C-u>
 
 " other
 inoremap $<SPACE> ${}<ESC>i
