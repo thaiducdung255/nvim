@@ -22,3 +22,6 @@ source $HOME/.config/nvim/vim-conf/auto-pairs.vim
 source $HOME/.config/nvim/vim-conf/clever-f.vim
 source $HOME/.config/nvim/vim-conf/vim-maximizer.vim
 source $HOME/.config/nvim/vim-conf/incsearch-easymotion.vim
+source $HOME/.config/nvim/vim-conf/vim-operator-user.vim
+source $HOME/.config/nvim/vim-conf/tabman.vim
+source $HOME/.config/nvim/vim-conf/nerd-tree.vim

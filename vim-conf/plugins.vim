@@ -17,6 +17,8 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'haya14busa/incsearch-fuzzy.vim'
 
   Plug 'kien/ctrlp.vim'
+  Plug 'preservim/nerdtree'
+  Plug 'kien/tabman.vim'
 
   " snippets plugs
   Plug 'SirVer/ultisnips'
@@ -40,7 +42,11 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'dkprice/vim-easygrep'
   Plug 'szw/vim-maximizer'
   Plug 'tpope/vim-commentary'
-call plug#end()
+
+  " yanked area highlight
+  Plug 'kana/vim-operator-user'
+  Plug 'haya14busa/vim-operator-flashy'
+  call plug#end()
 
 nnoremap <silent><LEADER>pi :PlugInstall<CR>
 nnoremap <silent><LEADER>pc :PlugClean<CR>
