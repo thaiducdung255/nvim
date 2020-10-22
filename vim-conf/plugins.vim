@@ -25,6 +25,9 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'dkprice/vim-easygrep'
   Plug 'szw/vim-maximizer'
   Plug 'tpope/vim-commentary'
+  Plug 'haya14busa/incsearch.vim'
+  Plug 'haya14busa/incsearch-easymotion.vim'
+  Plug 'haya14busa/incsearch-fuzzy.vim'
 call plug#end()
 
 nnoremap <LEADER>pi :PlugInstall<CR>

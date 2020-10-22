@@ -21,3 +21,4 @@ source $HOME/.config/nvim/vim-conf/terminal.vim
 source $HOME/.config/nvim/vim-conf/auto-pairs.vim
 source $HOME/.config/nvim/vim-conf/clever-f.vim
 source $HOME/.config/nvim/vim-conf/vim-maximizer.vim
+source $HOME/.config/nvim/vim-conf/incsearch-easymotion.vim

@@ -13,8 +13,8 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
+set nohlsearch
 set incsearch
-set nohls
 set colorcolumn=100
 set number relativenumber
 set completeopt-=preview

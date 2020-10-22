@@ -27,15 +27,9 @@ inoremap <C-u> <ESC>vbuA
 inoremap jj <ESC>la
 
 " js auto convert ops
-inoremap -- <SPACE>-=<SPACE>1
-inoremap ++ <SPACE>+=<SPACE>1
-inoremap == <SPACE>===<SPACE>
-inoremap + <SPACE>+<SPACE>
-inoremap - <SPACE>-<SPACE>
-inoremap * <SPACE>*<SPACE>
-inoremap / <SPACE>/<SPACE>
-inoremap // //<SPACE>
-inoremap ^ <SPACE>**<SPACE>
+inoremap --<SPACE> <SPACE>-=<SPACE>1
+inoremap ++<SPACE> <SPACE>+=<SPACE>1
+inoremap ==<SPACE> <SPACE>===<SPACE>
 
 " remap scroll configs
 nnoremap <A-d> <C-d>
@@ -44,6 +38,7 @@ nnoremap <A-u> <C-u>
 " other
 inoremap $<SPACE> ${}<ESC>i
 inoremap ,, ,<CR>
+inoremap , ,<SPACE>
 inoremap :: ()<SPACE>=><SPACE>
 inoremap ; ;<CR>
 nnoremap <LEADER>wq :wq<CR>
