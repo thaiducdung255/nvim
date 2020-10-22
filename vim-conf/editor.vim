@@ -41,13 +41,13 @@ inoremap ,, ,<CR>
 inoremap , ,<SPACE>
 inoremap :: ()<SPACE>=><SPACE>
 inoremap ; ;<CR>
-nnoremap <LEADER>wq :wq<CR>
-nnoremap <LEADER>s :w<CR>
-nnoremap <LEADER>q :q<CR>
+nnoremap <silent><LEADER>wq :wq<CR>
+nnoremap <silent><LEADER>s :w<CR>
+nnoremap <silent><LEADER>q :q<CR>
 
-nnoremap <LEADER>ecf :e ~/.config/nvim/vim-conf/
-nnoremap <LEADER>icf :e ~/.config/nvim/init.vim<CR>
-nnoremap <LEADER>rcf :source %<CR>
+nnoremap <silent><LEADER>ecf :e ~/.config/nvim/vim-conf/
+nnoremap <silent><LEADER>icf :e ~/.config/nvim/init.vim<CR>
+nnoremap <silent><LEADER>rcf :source %<CR>
 
 function! FindAndReplace()
   call inputsave()
@@ -59,4 +59,4 @@ function! FindAndReplace()
   execute('%s/' . originalText . '/' . finalText . '/gc')
 endfunction
 
-nnoremap <C-f> :call FindAndReplace()<CR>
+nnoremap <silent><C-f> :call FindAndReplace()<CR>

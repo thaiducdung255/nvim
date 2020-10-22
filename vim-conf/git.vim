@@ -14,21 +14,21 @@ nmap <LEADER>gJ 9999<leader>gJ
 nmap <LEADER>gK 9999<leader>gk
 
 " Custom shortcuts
-nmap <LEADER>gst :Git status<CR>
-nmap <LEADER>gbr :Git branch<CR>
-nmap <LEADER>gch :call GitCheckout()<CR>
-nmap <LEADER>gad :Git add<SPACE>.<CR>
-nmap <LEADER>gco :call GitCommit()<CR>
-nmap <LEADER>gps :Git push<CR>
-nmap <LEADER>gpl :Git pull<CR>
-nmap <LEADER>gdi :Git diff<CR>
-nmap <LEADER>glo :Git log<CR>
-nmap <LEADER>gbl :Git blame<CR>
-nmap <LEADER>gpa :Git add<SPACE>.<CR>:call GitCommit()<CR>:Git push()<CR>
-nmap <LEADER>gvf :GV<CR>
-nmap <LEADER>gva :GV!<CR>
+nmap <silent><LEADER>gst :Git status<CR>
+nmap <silent><LEADER>gbr :Git branch<CR>
+nmap <silent><LEADER>gch :call GitCheckout()<CR>
+nmap <silent><LEADER>gad :Git add<SPACE>.<CR>
+nmap <silent><LEADER>gco :call GitCommit()<CR>
+nmap <silent><LEADER>gps :Git push<CR>
+nmap <silent><LEADER>gpl :Git pull<CR>
+nmap <silent><LEADER>gdi :Git diff<CR>
+nmap <silent><LEADER>glo :Git log<CR>
+nmap <silent><LEADER>gbl :Git blame<CR>
+nmap <silent><LEADER>gpa :Git add<SPACE>.<CR>:call GitCommit()<CR>:Git push()<CR>
+nmap <silent><LEADER>gvf :GV<CR>
+nmap <silent><LEADER>gva :GV!<CR>
 
-nmap <LEADER>ghl :SignifyToggleHighlight<CR>
+nmap <silent><LEADER>ghl :SignifyToggleHighlight<CR>
 
 " If you like colors instead
 " highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00

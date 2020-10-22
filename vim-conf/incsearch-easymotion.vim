@@ -14,5 +14,5 @@ function! s:config_easyfuzzymotion(...) abort
 endfunction
 
 noremap <silent><expr> <M-f> incsearch#go(<SID>config_easyfuzzymotion())
-nnoremap z :call incsearch#call(incsearch#config#easymotion#make())<CR>
-nnoremap / :call incsearch#call(incsearch#config#fuzzy#make())<CR>
+nnoremap <silent>z :call incsearch#call(incsearch#config#easymotion#make())<CR>
+nnoremap <silent>/ :call incsearch#call(incsearch#config#fuzzy#make())<CR>

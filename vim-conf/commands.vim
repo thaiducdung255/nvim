@@ -1,2 +1,2 @@
-nnoremap <SPACE><SPACE>r :!
-nnoremap <SPACE><SPACE>p :Explore<CR>
+nnoremap <silent><SPACE><SPACE>r :!
+nnoremap <silent><SPACE><SPACE>p :Explore<CR>
