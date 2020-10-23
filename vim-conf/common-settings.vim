@@ -22,7 +22,7 @@ set splitbelow
 set splitright
 set fileformat=unix
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-set cursorline
+set nocursorline
 set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*
 set complete-=5
 set lazyredraw

@@ -1,2 +1,3 @@
-nnoremap <SPACE>r :!
-nnoremap <silent><SPACE>p :Explore<CR>
+nnoremap <SPACE>fg :!grep -r<SPACE>
+nnoremap <LEADER>r :!
+nnoremap <silent><LEADER>p :Explore<CR>
