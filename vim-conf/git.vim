@@ -14,20 +14,37 @@ nmap <LEADER>gJ 9999<leader>gJ
 nmap <LEADER>gK 9999<leader>gk
 
 " Custom shortcuts
-nmap <LEADER>gad :Git add<SPACE>.<CR>
-nmap <LEADER>gco :Git commit<SPACE>-m<SPACE>
-nmap <LEADER>gps :Git push
-nmap <LEADER>gpl :Git pull
-nmap <LEADER>gdi :Git diff<CR>
-nmap <LEADER>glo :Git log<CR>
-nmap <LEADER>gbl :Git blame<CR>
+nmap <silent><LEADER>gst :Git status<CR>
+nmap <silent><LEADER>gbr :Git branch<CR>
+nmap <silent><LEADER>gch :call GitCheckout()<CR>
+nmap <silent><LEADER>gad :Git add<SPACE>.<CR>
+nmap <silent><LEADER>gco :call GitCommit()<CR>
+nmap <silent><LEADER>gps :Git push<CR>
+nmap <silent><LEADER>gpl :Git pull<CR>
+nmap <silent><LEADER>gdi :Git diff<CR>
+nmap <silent><LEADER>glo :Git log<CR>
+nmap <silent><LEADER>gbl :Git blame<CR>
+nmap <silent><LEADER>gpa :Git add<SPACE>.<CR>:call GitCommit()<CR>:Git push()<CR>
+nmap <silent><LEADER>gvf :GV<CR>
+nmap <silent><LEADER>gva :GV!<CR>
 
-nmap <LEADER>gvf :GV<CR>
-nmap <LEADER>gva :GV!<CR>
-
-nmap <LEADER>gh :SignifyToggleHighlight<CR>
+nmap <silent><LEADER>ghl :SignifyToggleHighlight<CR>
 
 " If you like colors instead
 " highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
 " highlight SignifySignDelete ctermfg=black ctermbg=red    guifg=#ffffff guibg=#ff0000
 " highlight SignifySignChange ctermfg=black ctermbg=yellow guifg=#000000 guibg=#ffff00
+
+function! GitCommit()
+  call inputsave()
+  let message = input('Commit message: ')
+  call inputrestore()
+  execute(':Git commit -m "' . message . '"')
+endfunction
+
+function! GitCheckout()
+  call inputsave()
+  let branch = input('Branch: ')
+  call inputrestore()
+  execute(':Git checkout '.branch)
+endfunction

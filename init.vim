@@ -9,7 +9,6 @@ source $HOME/.config/nvim/vim-conf/vim-airline.vim
 source $HOME/.config/nvim/vim-conf/util-snippets.vim
 source $HOME/.config/nvim/vim-conf/ctrlp.vim
 source $HOME/.config/nvim/vim-conf/ale.vim
-source $HOME/.config/nvim/vim-conf/comment.vim
 source $HOME/.config/nvim/vim-conf/rg.vim
 source $HOME/.config/nvim/vim-conf/ycm.vim
 source $HOME/.config/nvim/vim-conf/buffer.vim
@@ -18,3 +17,11 @@ source $HOME/.config/nvim/vim-conf/commands.vim
 source $HOME/.config/nvim/vim-conf/tab.vim
 source $HOME/.config/nvim/vim-conf/editor.vim
 source $HOME/.config/nvim/vim-conf/git.vim
+source $HOME/.config/nvim/vim-conf/terminal.vim
+source $HOME/.config/nvim/vim-conf/auto-pairs.vim
+source $HOME/.config/nvim/vim-conf/clever-f.vim
+source $HOME/.config/nvim/vim-conf/vim-maximizer.vim
+source $HOME/.config/nvim/vim-conf/incsearch-easymotion.vim
+source $HOME/.config/nvim/vim-conf/vim-operator-user.vim
+source $HOME/.config/nvim/vim-conf/tabman.vim
+source $HOME/.config/nvim/vim-conf/nerd-tree.vim

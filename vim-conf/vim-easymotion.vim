@@ -1,14 +1,14 @@
 let g:EasyMotion_do_mapping=0
 let g:EasyMotion_smartcase=1
 
-nmap gl <plug>(easymotion-bd-jk)
-map gl <plug>(easymotion-overwin-line)
+nmap ; <plug>(easymotion-bd-jk)
+map ; <plug>(easymotion-overwin-line)
 
-map <A-d> <plug>(easymotion-bd-f2)
-nmap <A-d> <plug>(easymotion-overwin-f2)
+map <SPACE>; <plug>(easymotion-bd-f2)
+nmap <SPACE>; <plug>(easymotion-overwin-f2)
 
-map <A-f> <plug>(easymotion-bd-f)
-nmap <A-f> <plug>(easymotion-overwin-f)
+map <SPACE>f <plug>(easymotion-bd-f)
+nmap <SPACE>f <plug>(easymotion-overwin-f)
 
-map <A-w> <plug>(easymotion-bd-w)
-nmap <A-w> <plug>(easymotion-overwin-w)
+map <SPACE>w <plug>(easymotion-bd-w)
+nmap <SPACE>w <plug>(easymotion-overwin-w)
