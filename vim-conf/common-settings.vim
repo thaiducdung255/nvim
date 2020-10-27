@@ -36,3 +36,15 @@ let g:ctrlp_show_hidden=1
 " ignore x to last register
 " noremap x "_x
 vnoremap p "_dP
+
+let t:is_transparent = 0
+function! Toggle_transparent_background()
+  if t:is_transparent == 0
+    hi Normal guibg=#111111 ctermbg=black
+    let t:is_transparent = 1
+  else
+    hi Normal guibg=NONE ctermbg=NONE
+    let t:is_transparent = 0
+  endif
+endfunction
+nnoremap <silent> <C-b> :call Toggle_transparent_background()<CR>
