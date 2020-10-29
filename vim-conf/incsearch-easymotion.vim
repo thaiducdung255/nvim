@@ -1,7 +1,4 @@
 let g:incsearch#auto_nohlsearch=1
-" map / <Plug>(incserach-easymotion-/)
-" map ? <Plug>(incserach-easymotion-?)
-" map \ <Plug>(incserach-easymotion-stay)
 
 function! s:config_easyfuzzymotion(...) abort
   return extend(copy({
@@ -13,6 +10,6 @@ function! s:config_easyfuzzymotion(...) abort
   \ }), get(a:, 1, {}))
 endfunction
 
-noremap <silent><expr> <M-/> incsearch#go(<SID>config_easyfuzzymotion())
+noremap <silent><expr> <LEADER>z incsearch#go(<SID>config_easyfuzzymotion())
 nnoremap <silent>/ :call incsearch#call(incsearch#config#easymotion#make())<CR>
 " nnoremap <silent><C-/> :call incsearch#call(incsearch#config#fuzzy#make())<CR>
