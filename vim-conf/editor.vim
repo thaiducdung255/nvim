@@ -12,13 +12,12 @@ vnoremap <C-v> "+p<ESC>
 vnoremap <C-c> "+y<ESC>
 
 " auto pair bracket fix
-vnoremap [ da[]<ESC>hpl
-vnoremap ( da()<ESC>hpl
-vnoremap ' da''<ESC>hpl
-vnoremap " da""<ESC>hpl
-vnoremap ` da``<ESC>hpl
-vnoremap { da{<SPACE><SPACE>}<ESC>hhpll
-vnoremap $ da${}<ESC>hpl
+vnoremap [ di[]<ESC>hpl
+vnoremap ( di()<ESC>hpl
+vnoremap ' di''<ESC>hpl
+vnoremap " di""<ESC>hpl
+vnoremap ` di``<ESC>hpl
+vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
 " toggle upper/lower case
 inoremap <A-u> <ESC>vb<S-u>A
@@ -36,11 +35,7 @@ nnoremap <A-d> <C-d>
 nnoremap <A-u> <C-u>
 
 " other
-inoremap $<SPACE> ${}<ESC>i
 inoremap ,, ,<CR>
-inoremap , ,<SPACE>
-inoremap :: ()<SPACE>=><SPACE>
-inoremap ; ;<CR>
 nnoremap <silent><LEADER>wq :wq<CR>
 nnoremap <silent><LEADER>s :w<CR>
 nnoremap <silent><LEADER>q :q<CR>
