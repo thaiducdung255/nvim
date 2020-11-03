@@ -3,7 +3,7 @@ source $HOME/.config/nvim/vim-conf/plugins.vim
 source $HOME/.config/nvim/vim-conf/vim-easymotion.vim
 source $HOME/.config/nvim/vim-conf/vim-rest-console.vim
 source $HOME/.config/nvim/vim-conf/rainbow-parentheses.vim
-source $HOME/.config/nvim/vim-conf/indent.vim
+source $HOME/.config/nvim/vim-conf/indentLine.vim
 source $HOME/.config/nvim/vim-conf/themes.vim
 source $HOME/.config/nvim/vim-conf/vim-airline.vim
 source $HOME/.config/nvim/vim-conf/util-snippets.vim

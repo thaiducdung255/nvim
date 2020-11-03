@@ -10,6 +10,6 @@ function! s:config_easyfuzzymotion(...) abort
   \ }), get(a:, 1, {}))
 endfunction
 
-noremap <silent><expr> <LEADER>z incsearch#go(<SID>config_easyfuzzymotion())
+noremap <silent><expr> <LEADER>/ incsearch#go(<SID>config_easyfuzzymotion())
 nnoremap <silent>/ :call incsearch#call(incsearch#config#easymotion#make())<CR>
 " nnoremap <silent><C-/> :call incsearch#call(incsearch#config#fuzzy#make())<CR>

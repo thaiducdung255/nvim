@@ -28,7 +28,7 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
   Plug 'kien/rainbow_parentheses.vim'
-  Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'Yggdroot/indentLine'
 
   " git plugs
   Plug 'mhinz/vim-signify'
