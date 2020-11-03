@@ -1,5 +1,5 @@
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_map='<LEADER>a'
-nnoremap <LEADER>gb :CtrlPBuffer<CR>
-nnoremap <LEADER>gm :CtrlPMRU<CR>
-nnoremap <LEADER>gg :CtrlP ~/Projects/
+nnoremap <LEADER>cb :CtrlPBuffer<CR>
+nnoremap <LEADER>cm :CtrlPMRU<CR>
+nnoremap <LEADER>cp :CtrlP ~/Projects/
