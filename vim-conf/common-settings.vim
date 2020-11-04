@@ -1,4 +1,5 @@
 syntax on
+set encoding=utf-8
 set noerrorbells
 set tabstop=2
 set softtabstop=2
