@@ -2,6 +2,15 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'Valloric/YouCompleteMe'
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
+	Plug 'RRethy/vim-illuminate'
+	Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+
+	" FZF integration
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+	Plug 'sharkdp/bat'
+	Plug 'ggreer/the_silver_searcher'
+	Plug 'BurntSushi/ripgrep'
 
   " airline plugs
   Plug 'vim-airline/vim-airline'
@@ -35,6 +44,8 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
   Plug 'junegunn/gv.vim'
+
+	Plug 'APZelos/blamer.nvim'
 
   Plug 'zxqfl/tabnine-vim'
   Plug 'jiangmiao/auto-pairs'

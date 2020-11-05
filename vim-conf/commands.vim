@@ -1,2 +1,2 @@
-nnoremap <SPACE>fg :!grep -r<SPACE>
+nnoremap <LEADER>gr :!grep -r<SPACE>
 nnoremap <LEADER>r :!

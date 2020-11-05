@@ -4,9 +4,10 @@ set noerrorbells
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-" set expandtab
+set expandtab
 set smartindent
 set autoindent
+set copyindent
 set nowrap
 set ignorecase
 set smartcase
@@ -15,6 +16,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set autoread
 set nohls
 set colorcolumn=100
 set number relativenumber
@@ -22,6 +24,8 @@ set completeopt-=preview
 set splitbelow
 set splitright
 set fileformat=unix
+filetype indent on
+filetype plugin indent on
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set nocursorline
 set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*

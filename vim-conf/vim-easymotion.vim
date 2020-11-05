@@ -4,11 +4,11 @@ let g:EasyMotion_smartcase=1
 nmap ; <plug>(easymotion-bd-jk)
 map ; <plug>(easymotion-overwin-line)
 
-map <SPACE>; <plug>(easymotion-bd-f2)
-nmap <SPACE>; <plug>(easymotion-overwin-f2)
+map <LEADER>; <plug>(easymotion-bd-f2)
+nmap <LEADER>; <plug>(easymotion-overwin-f2)
 
-map <SPACE>f <plug>(easymotion-bd-f)
-nmap <SPACE>f <plug>(easymotion-overwin-f)
+map <LEADER>f <plug>(easymotion-bd-f)
+nmap <LEADER>f <plug>(easymotion-overwin-f)
 
-map <SPACE>w <plug>(easymotion-bd-w)
-nmap <SPACE>w <plug>(easymotion-overwin-w)
+map <LEADER>w <plug>(easymotion-bd-w)
+nmap <LEADER>w <plug>(easymotion-overwin-w)

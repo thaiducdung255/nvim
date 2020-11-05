@@ -25,3 +25,5 @@ source $HOME/.config/nvim/vim-conf/incsearch-easymotion.vim
 source $HOME/.config/nvim/vim-conf/vim-operator-user.vim
 source $HOME/.config/nvim/vim-conf/tabman.vim
 source $HOME/.config/nvim/vim-conf/nerd-tree.vim
+source $HOME/.config/nvim/vim-conf/blamer.vim
+source $HOME/.config/nvim/vim-conf/vim-illuminate.vim
