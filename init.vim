@@ -7,7 +7,6 @@ source $HOME/.config/nvim/vim-conf/indentLine.vim
 source $HOME/.config/nvim/vim-conf/themes.vim
 source $HOME/.config/nvim/vim-conf/vim-airline.vim
 source $HOME/.config/nvim/vim-conf/util-snippets.vim
-source $HOME/.config/nvim/vim-conf/ctrlp.vim
 source $HOME/.config/nvim/vim-conf/ale.vim
 source $HOME/.config/nvim/vim-conf/rg.vim
 source $HOME/.config/nvim/vim-conf/ycm.vim
@@ -22,8 +21,9 @@ source $HOME/.config/nvim/vim-conf/auto-pairs.vim
 source $HOME/.config/nvim/vim-conf/clever-f.vim
 source $HOME/.config/nvim/vim-conf/vim-maximizer.vim
 source $HOME/.config/nvim/vim-conf/incsearch-easymotion.vim
-source $HOME/.config/nvim/vim-conf/vim-operator-user.vim
 source $HOME/.config/nvim/vim-conf/tabman.vim
 source $HOME/.config/nvim/vim-conf/nerd-tree.vim
 source $HOME/.config/nvim/vim-conf/blamer.vim
 source $HOME/.config/nvim/vim-conf/vim-illuminate.vim
+source $HOME/.config/nvim/vim-conf/fzf.vim
+source $HOME/.config/nvim/keys/which-key.vim

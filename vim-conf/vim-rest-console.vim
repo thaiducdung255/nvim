@@ -1,4 +1,4 @@
-let g:vrc_trigger='<LEADER>;'
+let g:vrc_trigger='<LEADER><LEADER>'
 let g:vrc_response_default_content_type='application/json'
 let g:vrc_curl_opts={
 			\ '-s': '',

@@ -36,10 +36,9 @@ let mapleader=" "
 set backspace=indent,eol,start
 let g:python_host_prog="/usr/bin/python"
 let g:python3_host_prog="/usr/bin/python3"
-let g:ctrlp_show_hidden=1
 
 " ignore x to last register
-" noremap x "_x
+noremap x "_x
 vnoremap p "_dP
 
 let t:is_transparent = 0
