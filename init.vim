@@ -8,7 +8,7 @@ source $HOME/.config/nvim/vim-conf/themes.vim
 source $HOME/.config/nvim/vim-conf/vim-airline.vim
 source $HOME/.config/nvim/vim-conf/util-snippets.vim
 source $HOME/.config/nvim/vim-conf/ale.vim
-source $HOME/.config/nvim/vim-conf/rg.vim
+source $HOME/.config/nvim/vim-conf/undotree.vim
 source $HOME/.config/nvim/vim-conf/ycm.vim
 source $HOME/.config/nvim/vim-conf/buffer.vim
 source $HOME/.config/nvim/vim-conf/window.vim
@@ -18,7 +18,6 @@ source $HOME/.config/nvim/vim-conf/editor.vim
 source $HOME/.config/nvim/vim-conf/git.vim
 source $HOME/.config/nvim/vim-conf/terminal.vim
 source $HOME/.config/nvim/vim-conf/auto-pairs.vim
-source $HOME/.config/nvim/vim-conf/clever-f.vim
 source $HOME/.config/nvim/vim-conf/vim-maximizer.vim
 source $HOME/.config/nvim/vim-conf/incsearch-easymotion.vim
 source $HOME/.config/nvim/vim-conf/tabman.vim
@@ -26,4 +25,5 @@ source $HOME/.config/nvim/vim-conf/nerd-tree.vim
 source $HOME/.config/nvim/vim-conf/blamer.vim
 source $HOME/.config/nvim/vim-conf/vim-illuminate.vim
 source $HOME/.config/nvim/vim-conf/fzf.vim
-source $HOME/.config/nvim/keys/which-key.vim
+source $HOME/.config/nvim/vim-conf/clever-f.vim
+source $HOME/.config/nvim/vim-conf/rnvimr.vim

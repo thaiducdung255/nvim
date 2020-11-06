@@ -6,10 +6,11 @@ call plug#begin('/home/df/.vim/autoload')
 	Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
 	Plug 'APZelos/blamer.nvim'
   Plug 'jiangmiao/auto-pairs'
-  Plug 'rhysd/clever-f.vim'
   Plug 'szw/vim-maximizer'
   Plug 'tpope/vim-commentary'
-  Plug 'liuchengxu/vim-which-key'
+  Plug 'rhysd/clever-f.vim'
+  Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+  " Plug 'justinmk/vim-sneak'
 
 	" FZF integration
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
