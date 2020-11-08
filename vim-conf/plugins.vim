@@ -10,6 +10,8 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'tpope/vim-commentary'
   Plug 'rhysd/clever-f.vim'
   Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+  Plug 'diepm/vim-rest-console'
+  Plug 'tomasr/molokai'
   " Plug 'justinmk/vim-sneak'
 
 	" FZF integration
@@ -20,9 +22,6 @@ call plug#begin('/home/df/.vim/autoload')
   " airline plugs
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-
-  Plug 'diepm/vim-rest-console'
-  Plug 'crusoexia/vim-monokai'
 
   " easymotion + fuzzy-search + incsearch
   Plug 'easymotion/vim-easymotion'

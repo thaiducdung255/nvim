@@ -1,4 +1,4 @@
-syntax on
+syntax enable
 set encoding=utf-8
 set noerrorbells
 set tabstop=2
@@ -52,3 +52,11 @@ function! Toggle_transparent_background()
   endif
 endfunction
 nnoremap <silent> <C-b> :call Toggle_transparent_background()<CR>
+
+map [[ :silent! eval search('{', 'b')<CR>w99[{
+
+map ][ :silent! eval search('}')<CR>b99]}
+
+map ]] j0[[%:silent! eval search('{')<CR>
+
+map [] k$][%:silent! eval search('}', 'b')<CR>
