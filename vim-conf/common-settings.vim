@@ -27,7 +27,7 @@ set fileformat=unix
 filetype indent on
 filetype plugin indent on
 highlight ColorColumn ctermbg=0 guibg=lightgrey
-set nocursorline
+set cursorline
 set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*
 set complete-=5
 set lazyredraw
@@ -38,7 +38,7 @@ let g:python_host_prog="/usr/bin/python"
 let g:python3_host_prog="/usr/bin/python3"
 
 " ignore x to last register
-noremap x "_x
+" noremap x "_x
 vnoremap p "_dP
 
 let t:is_transparent = 0

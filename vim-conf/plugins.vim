@@ -11,7 +11,7 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'rhysd/clever-f.vim'
   Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
   Plug 'diepm/vim-rest-console'
-  Plug 'tomasr/molokai'
+  Plug 'mhartington/oceanic-next'
   " Plug 'justinmk/vim-sneak'
 
 	" FZF integration
