@@ -24,7 +24,7 @@ nmap <silent><LEADER>gl :Git pull<CR>
 nmap <silent><LEADER>gd :Git diff<CR>
 nmap <silent><LEADER>go :Git log<CR>
 nmap <silent><LEADER>gm :Git blame<CR>
-nmap <silent><LEADER>gu :Git add<SPACE>.<CR>:call GitCommit()<CR>:Git push()<CR>
+nmap <silent><LEADER>gu :call GitUltimate()<CR>
 nmap <silent><LEADER>gf :GV<CR>
 nmap <silent><LEADER>gp :GV!<CR>
 
@@ -40,6 +40,15 @@ function! GitCommit()
   let message = input('Commit message: ')
   call inputrestore()
   execute(':Git commit -m "' . message . '"')
+endfunction
+
+function! GitUltimate()
+  call inputsave()
+  let message = input('Commit message: ')
+  call inputrestore()
+  execute(':Git add .')
+  execute(':Git commit -m "' . message . '"')
+  execute(':Git push')
 endfunction
 
 function! GitCheckout()

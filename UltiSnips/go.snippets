@@ -1,0 +1,23 @@
+snippet main "init a go file" i
+package ${1:main}
+
+import (
+	${2:"fmt"}
+)
+
+func main($3) {
+	$0
+}
+endsnippet
+
+snippet pr "print" i
+fmt.Print($0)
+endsnippet
+
+snippet pl "println" i
+fmt.Println($0)
+endsnippet
+
+snippet pf "print" i
+fmt.Printf($0)
+endsnippet
