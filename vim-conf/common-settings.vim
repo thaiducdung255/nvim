@@ -18,7 +18,7 @@ set undofile
 set incsearch
 set autoread
 set nohls
-set colorcolumn=100
+" set colorcolumn=100
 set number relativenumber
 set completeopt-=preview
 set splitbelow
