@@ -1,5 +1,5 @@
 let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<C-j>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
+let g:UltiSnipsJumpForwardTrigger = "<leader>j"
+let g:UltiSnipsJumpBackwardTrigger = "<leader>k"
 
 nnoremap <silent> <LEADER>ne :UltiSnipsEdit<CR>

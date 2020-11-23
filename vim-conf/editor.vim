@@ -29,13 +29,18 @@ inoremap jj <ESC>la
 inoremap --<SPACE> <SPACE>-=<SPACE>1
 inoremap ++<SPACE> <SPACE>+=<SPACE>1
 inoremap ==<SPACE> <SPACE>===<SPACE>
+inoremap ,, ,<CR>
+inoremap , ,<SPACE>
+
+" edit visual mode behavior
+nnoremap  <LEADER>v v$
+nnoremap <S-y> y$
 
 " remap scroll configs
 nnoremap <A-d> <C-d>
 nnoremap <A-u> <C-u>
 
 " other
-inoremap ,, ,<CR>
 nnoremap <silent><LEADER>wq :wq<CR>
 nnoremap <silent><LEADER>s :w<CR>
 nnoremap <silent><LEADER>q :q<CR>
