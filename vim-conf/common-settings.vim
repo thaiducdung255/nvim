@@ -1,9 +1,9 @@
 syntax enable
 set encoding=utf-8
 set noerrorbells
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=3
+set softtabstop=3
+set shiftwidth=3
 set expandtab
 set smartindent
 set autoindent
