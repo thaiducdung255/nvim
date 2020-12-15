@@ -2,17 +2,21 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'Valloric/YouCompleteMe'
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
-	Plug 'RRethy/vim-illuminate'
-	Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
-	Plug 'APZelos/blamer.nvim'
+  Plug 'RRethy/vim-illuminate'
+  Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+  Plug 'APZelos/blamer.nvim'
   Plug 'jiangmiao/auto-pairs'
   Plug 'szw/vim-maximizer'
   Plug 'tpope/vim-commentary'
   Plug 'rhysd/clever-f.vim'
   Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
   Plug 'diepm/vim-rest-console'
+  Plug 'ervandew/supertab'
+  Plug 'luochen1990/rainbow'
+  " Plug 'Yggdroot/indentLine'
+
+  " color schemes
   Plug 'mhartington/oceanic-next'
-  " Plug 'justinmk/vim-sneak'
 
 	" FZF integration
 	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -37,11 +41,15 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
 
-  Plug 'ervandew/supertab'
+  " plugs for js
   Plug 'pangloss/vim-javascript'
+  " Plug 'yuezk/vim-js'
+
+  " plugs for ts
   Plug 'leafgarland/typescript-vim'
-  Plug 'kien/rainbow_parentheses.vim'
-  Plug 'Yggdroot/indentLine'
+
+  " plugs for go
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
   " git plugs
   Plug 'mhinz/vim-signify'

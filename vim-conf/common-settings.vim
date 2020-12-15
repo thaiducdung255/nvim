@@ -1,10 +1,13 @@
-syntax enable
+syntax on
 set encoding=utf-8
 set noerrorbells
 set tabstop=3
 set softtabstop=3
 set shiftwidth=3
-set expandtab
+" support indent highlight for tab
+set list lcs=tab:\|\ 
+" indent type: expand tab is using space to indent
+" set expandtab
 set smartindent
 set autoindent
 set copyindent
@@ -24,9 +27,10 @@ set completeopt-=preview
 set splitbelow
 set splitright
 set fileformat=unix
+filetype on
+filetype plugin on
 filetype indent on
-filetype plugin indent on
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+" highlight ColorColumn ctermbg=0 guibg=lightgrey
 set cursorline
 set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*
 set complete-=5
@@ -60,3 +64,6 @@ map ][ :silent! eval search('}')<CR>b99]}
 map ]] j0[[%:silent! eval search('{')<CR>
 
 map [] k$][%:silent! eval search('}', 'b')<CR>
+
+" support .pdf file
+:command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
