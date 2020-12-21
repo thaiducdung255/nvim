@@ -1,8 +1,8 @@
 let b:ale_fixers = ['prettier', 'eslint']
 
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint'],
+\   'javascript': ['remove_trailing_lines', 'trim_whitespace', 'eslint'],
+\   'golang': ['remove_trailing_lines', 'trim_whitespace'],
 \}
 
 let g:ale_linters = {}

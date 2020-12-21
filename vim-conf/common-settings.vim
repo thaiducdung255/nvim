@@ -5,7 +5,7 @@ set tabstop=3
 set softtabstop=3
 set shiftwidth=3
 " support indent highlight for tab
-" set list lcs=tab:\·\ 
+" set list lcs=tab:\·\
 set list lcs=tab:\:\ 
 " indent type: expand tab is using space to indent
 " set expandtab
@@ -39,8 +39,8 @@ set lazyredraw
 set termguicolors
 let mapleader=" "
 set backspace=indent,eol,start
-let g:python_host_prog="/usr/bin/python2"
-let g:python3_host_prog="/usr/bin/python"
+let g:python_host_prog="/usr/bin/python"
+let g:python3_host_prog="/usr/bin/python3"
 
 " ignore x to last register
 " noremap x "_x

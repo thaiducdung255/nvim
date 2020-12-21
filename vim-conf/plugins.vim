@@ -13,7 +13,6 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'diepm/vim-rest-console'
   Plug 'ervandew/supertab'
   Plug 'luochen1990/rainbow'
-  " Plug 'Yggdroot/indentLine'
 
   " color schemes
   Plug 'mhartington/oceanic-next'
