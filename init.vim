@@ -10,6 +10,7 @@ source $HOME/.config/nvim/vim-conf/util-snippets.vim
 source $HOME/.config/nvim/vim-conf/ale.vim
 source $HOME/.config/nvim/vim-conf/undotree.vim
 source $HOME/.config/nvim/vim-conf/ycm.vim
+source $HOME/.config/nvim/vim-conf/ycm.vim
 source $HOME/.config/nvim/vim-conf/buffer.vim
 source $HOME/.config/nvim/vim-conf/window.vim
 source $HOME/.config/nvim/vim-conf/commands.vim
