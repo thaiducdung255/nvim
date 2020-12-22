@@ -6,11 +6,9 @@ source $HOME/.config/nvim/vim-conf/rainbow-parentheses.vim
 source $HOME/.config/nvim/vim-conf/indentLine.vim
 source $HOME/.config/nvim/vim-conf/themes.vim
 source $HOME/.config/nvim/vim-conf/vim-airline.vim
-source $HOME/.config/nvim/vim-conf/util-snippets.vim
 source $HOME/.config/nvim/vim-conf/ale.vim
 source $HOME/.config/nvim/vim-conf/undotree.vim
-source $HOME/.config/nvim/vim-conf/ycm.vim
-source $HOME/.config/nvim/vim-conf/ycm.vim
+source $HOME/.config/nvim/vim-conf/coc.vim
 source $HOME/.config/nvim/vim-conf/buffer.vim
 source $HOME/.config/nvim/vim-conf/window.vim
 source $HOME/.config/nvim/vim-conf/commands.vim
@@ -28,5 +26,4 @@ source $HOME/.config/nvim/vim-conf/vim-illuminate.vim
 source $HOME/.config/nvim/vim-conf/fzf.vim
 source $HOME/.config/nvim/vim-conf/clever-f.vim
 source $HOME/.config/nvim/vim-conf/rnvimr.vim
-source $HOME/.config/nvim/vim-conf/supertab.vim
 source $HOME/.config/nvim/vim-conf/vim-go.vim
