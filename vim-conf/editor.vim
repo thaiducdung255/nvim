@@ -23,8 +23,6 @@ vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 inoremap <A-u> <ESC>vb<S-u>A
 inoremap <C-u> <ESC>vbuA
 
-inoremap jj <ESC>la
-
 " js auto convert ops
 inoremap --<SPACE> <SPACE>-=<SPACE>1
 inoremap ++<SPACE> <SPACE>+=<SPACE>1
@@ -33,12 +31,15 @@ inoremap ,, ,<CR>
 inoremap , ,<SPACE>
 
 " edit visual mode behavior
-nnoremap  <LEADER>v v$
+nnoremap  <LEADER>v v$h
 nnoremap <S-y> y$
 
 " remap scroll configs
 nnoremap <A-d> <C-d>
 nnoremap <A-u> <C-u>
+
+" back to prev line
+nnoremap <LEADER>gg <C-o>
 
 " other
 nnoremap <silent><LEADER>wq :wq<CR>

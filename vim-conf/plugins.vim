@@ -1,5 +1,6 @@
 call plug#begin('/home/df/.vim/autoload')
-  Plug 'Valloric/YouCompleteMe'
+  Plug 'codota/tabnine-vim'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
   Plug 'RRethy/vim-illuminate'
@@ -11,7 +12,6 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'rhysd/clever-f.vim'
   Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
   Plug 'diepm/vim-rest-console'
-  Plug 'ervandew/supertab'
   Plug 'luochen1990/rainbow'
 
   " color schemes
@@ -36,13 +36,8 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'preservim/nerdtree'
   Plug 'kien/tabman.vim'
 
-  " snippets plugs
-  Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
-
   " plugs for js
   Plug 'pangloss/vim-javascript'
-  " Plug 'yuezk/vim-js'
 
   " plugs for ts
   Plug 'leafgarland/typescript-vim'
