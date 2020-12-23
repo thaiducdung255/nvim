@@ -99,17 +99,13 @@ nnoremap <silent><nowait> <space>cp  :<C-u>CocListResume<CR>
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? \"\<C-n>" :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? \"\<TAB>" :
-      \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " Coc snippets configs
 let g:coc_snippet_prev = '<leader><leader>'
 let g:coc_snippet_next = '<leader>;'
+
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
