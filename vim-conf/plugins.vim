@@ -1,6 +1,6 @@
 call plug#begin('/home/df/.vim/autoload')
-  " Plug 'codota/tabnine-vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
   Plug 'RRethy/vim-illuminate'

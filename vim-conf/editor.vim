@@ -42,6 +42,7 @@ nnoremap <A-u> <C-u>
 nnoremap <LEADER>gg <C-o>
 
 " other
+inoremap jj <ESC>la
 nnoremap <silent><LEADER>wq :wq<CR>
 nnoremap <silent><LEADER>s :w<CR>
 nnoremap <silent><LEADER>q :q<CR>
