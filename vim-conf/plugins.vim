@@ -1,5 +1,5 @@
 call plug#begin('/home/df/.vim/autoload')
-  Plug 'codota/tabnine-vim'
+  " Plug 'codota/tabnine-vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
@@ -14,6 +14,10 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'diepm/vim-rest-console'
   Plug 'luochen1990/rainbow'
 
+  " code snippets
+  " Plug 'SirVer/ultisnips'
+  " Plug 'honza/vim-snippets'
+  
   " color schemes
   Plug 'mhartington/oceanic-next'
 
