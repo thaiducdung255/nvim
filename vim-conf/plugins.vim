@@ -1,6 +1,8 @@
 call plug#begin('/home/df/.vim/autoload')
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+  " Plug 'ycm-core/YouCompleteMe'
+  " Plug 'ervandew/supertab'
+  " Plug 'neoclide/coc-tabnine'
+  Plug 'neoclide/coc.nvim'
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
   Plug 'RRethy/vim-illuminate'
@@ -41,10 +43,10 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'kien/tabman.vim'
 
   " plugs for js
-  Plug 'pangloss/vim-javascript'
+  " Plug 'pangloss/vim-javascript'
 
   " plugs for ts
-  Plug 'leafgarland/typescript-vim'
+  " Plug 'leafgarland/typescript-vim'
 
   " plugs for go
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }

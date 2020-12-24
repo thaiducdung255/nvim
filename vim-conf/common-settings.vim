@@ -1,11 +1,11 @@
 syntax on
 
 " coc configs
-set updatetime=300
-set shortmess+=c
-set cmdheight=1
-set hidden
-set nowritebackup
+" set updatetime=300
+" set shortmess+=c
+" set cmdheight=1
+" set hidden
+" set nowritebackup
 
 set encoding=utf-8
 set noerrorbells
