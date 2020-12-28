@@ -10,6 +10,10 @@ func main() {
 }
 endsnippet
 
+snippet eq ":="
+$1 := $0
+endsnippet
+
 snippet cc "print"
 fmt.Print($0)
 endsnippet
@@ -22,8 +26,8 @@ snippet co "print"
 fmt.Printf("$1", $2)$0
 endsnippet
 
-snippet fun "function"
-func $1($2) $3 {
+snippet fn "function"
+func $1() {
 	$4
 }$5
 endsnippet
