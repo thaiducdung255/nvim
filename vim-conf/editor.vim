@@ -49,7 +49,7 @@ nnoremap <silent><LEADER>q :q<CR>
 
 nnoremap <LEADER>ec :e ~/.config/nvim/vim-conf/
 nnoremap <silent><LEADER>ei :e ~/.config/nvim/init.vim<CR>
-nnoremap <silent><LEADER>es :source %<CR>
+nnoremap <silent><LEADER>es :w<CR>:source %<CR>
 
 function! FindAndReplace()
   call inputsave()

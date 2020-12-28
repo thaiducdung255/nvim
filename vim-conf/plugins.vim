@@ -1,7 +1,4 @@
 call plug#begin('/home/df/.vim/autoload')
-  " Plug 'ycm-core/YouCompleteMe'
-  " Plug 'ervandew/supertab'
-  " Plug 'neoclide/coc-tabnine'
   Plug 'neoclide/coc.nvim'
   Plug 'mbbill/undotree'
   Plug 'dense-analysis/ale'
@@ -11,10 +8,12 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'jiangmiao/auto-pairs'
   Plug 'szw/vim-maximizer'
   Plug 'tpope/vim-commentary'
-  Plug 'rhysd/clever-f.vim'
+  " Plug 'rhysd/clever-f.vim'
   Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
   Plug 'diepm/vim-rest-console'
   Plug 'luochen1990/rainbow'
+  Plug 'unblevable/quick-scope'
+  Plug 'vim-scripts/SearchComplete'
 
   " code snippets
   " Plug 'SirVer/ultisnips'
@@ -39,14 +38,8 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'haya14busa/incsearch-fuzzy.vim'
 
   " folder + tab management
-  Plug 'preservim/nerdtree'
-  Plug 'kien/tabman.vim'
-
-  " plugs for js
-  " Plug 'pangloss/vim-javascript'
-
-  " plugs for ts
-  " Plug 'leafgarland/typescript-vim'
+  " Plug 'preservim/nerdtree'
+  " Plug 'kien/tabman.vim'
 
   " plugs for go
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
