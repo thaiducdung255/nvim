@@ -1,4 +1,4 @@
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 let g:qs_max_chars=120
 
 " NOTE: must be placed before set colorschemes
