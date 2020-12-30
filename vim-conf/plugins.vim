@@ -8,7 +8,6 @@ call plug#begin('/home/df/.vim/autoload')
   Plug 'jiangmiao/auto-pairs'
   Plug 'szw/vim-maximizer'
   Plug 'tpope/vim-commentary'
-  " Plug 'rhysd/clever-f.vim'
   Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
   Plug 'diepm/vim-rest-console'
   Plug 'luochen1990/rainbow'
@@ -43,6 +42,9 @@ call plug#begin('/home/df/.vim/autoload')
 
   " plugs for go
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+  " plugs for js
+  " Plug 'yuezk/vim-js' 
 
   " git plugs
   Plug 'mhinz/vim-signify'
