@@ -25,6 +25,5 @@ source $HOME/.config/nvim/vim-conf/nerd-tree.vim
 source $HOME/.config/nvim/vim-conf/blamer.vim
 source $HOME/.config/nvim/vim-conf/vim-illuminate.vim
 source $HOME/.config/nvim/vim-conf/fzf.vim
-" source $HOME/.config/nvim/vim-conf/tigris.vim
 source $HOME/.config/nvim/vim-conf/rnvimr.vim
 source $HOME/.config/nvim/vim-conf/vim-go.vim

@@ -31,7 +31,7 @@ inoremap ,, ,<CR>
 inoremap , ,<SPACE>
 
 " edit visual mode behavior
-nnoremap  <LEADER>v v$h
+nnoremap  <A-v> v$h
 nnoremap <S-y> y$
 
 " remap scroll configs
