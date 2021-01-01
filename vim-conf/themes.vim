@@ -3,7 +3,6 @@ if (has("termguicolors"))
 endif
 
 " Theme
-syntax enable
 colorscheme OceanicNext
 
 let g:oceanic_next_terminal_bold = 1
