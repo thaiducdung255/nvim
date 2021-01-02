@@ -32,24 +32,24 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+nmap nr <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>cf  <Plug>(coc-format-selected)
-nmap <leader>cf  <Plug>(coc-format-selected)
+xmap np  <Plug>(coc-format-selected)
+nmap np  <Plug>(coc-format-selected)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> <LEADER>ch :call <SID>show_documentation()<CR>
+nnoremap <silent> nd :call <SID>show_documentation()<CR>
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap <leader>ca  <Plug>(coc-codeaction-selected)
-nmap <leader>ca  <Plug>(coc-codeaction-selected)
+xmap nc  <Plug>(coc-codeaction-selected)
+nmap nc  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap na  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>cf  <Plug>(coc-fix-current)
+nmap nf  <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -72,23 +72,23 @@ inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float
 vnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>ca  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>ce  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>cc  :<C-u>CocList commands<cr>
+" " Mappings for CoCList
+" " Show all diagnostics.
+nnoremap <silent><nowait> nn  :<C-u>CocList diagnostics<cr>
+" " Manage extensions.
+" nnoremap <silent><nowait> <space>ce  :<C-u>CocList extensions<cr>
+" " Show commands.
+nnoremap <silent><nowait> nc  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>co  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>cs  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>cj  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>ck  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>cp  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> no  :<C-u>CocList outline<cr>
+" " Search workspace symbols.
+nnoremap <silent><nowait> <space>ns  :<C-u>CocList -I symbols<cr>
+" " Do default action for next item.
+" nnoremap <silent><nowait> <space>cj  :<C-u>CocNext<CR>
+" " Do default action for previous item.
+" nnoremap <silent><nowait> <space>ck  :<C-u>CocPrev<CR>
+" " Resume latest coc list.
+" nnoremap <silent><nowait> <space>cp  :<C-u>CocListResume<CR>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
