@@ -82,7 +82,7 @@ nnoremap <silent><nowait> nc  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> no  :<C-u>CocList outline<cr>
 " " Search workspace symbols.
-nnoremap <silent><nowait> <space>ns  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> ns  :<C-u>CocList -I symbols<cr>
 " " Do default action for next item.
 " nnoremap <silent><nowait> <space>cj  :<C-u>CocNext<CR>
 " " Do default action for previous item.

@@ -1,5 +1,4 @@
 source $HOME/.config/nvim/vim-conf/common-settings.vim
-source $HOME/.config/nvim/vim-conf/editor.vim
 source $HOME/.config/nvim/vim-conf/plugins.vim
 source $HOME/.config/nvim/vim-conf/clever-f.vim
 source $HOME/.config/nvim/vim-conf/vim-easymotion.vim
@@ -24,3 +23,4 @@ source $HOME/.config/nvim/vim-conf/vim-illuminate.vim
 source $HOME/.config/nvim/vim-conf/fzf.vim
 source $HOME/.config/nvim/vim-conf/rnvimr.vim
 source $HOME/.config/nvim/vim-conf/vim-go.vim
+source $HOME/.config/nvim/vim-conf/editor.vim
