@@ -11,7 +11,7 @@ call plug#begin('/home/df/.vim/autoload')
  	Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
  	Plug 'diepm/vim-rest-console'
  	Plug 'luochen1990/rainbow'
- 	Plug 'unblevable/quick-scope'
+ 	Plug 'rhysd/clever-f.vim'
  	Plug 'vim-scripts/SearchComplete'
  	Plug 'brooth/far.vim'
 
