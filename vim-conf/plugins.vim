@@ -51,7 +51,7 @@ call plug#begin('/home/df/.vim/autoload')
 
  	call plug#end()
 
-nnoremap <silent><LEADER>pi :PlugInstall<CR>
+nnoremap <silent><LEADER>pi :w<CR>:source %<CR>:PlugInstall<CR>
 nnoremap <silent><LEADER>pc :PlugClean<CR>
 nnoremap <silent><LEADER>pu :PlugUpdate<CR>
 nnoremap <silent><LEADER>pg :PlugUpgrade<CR>

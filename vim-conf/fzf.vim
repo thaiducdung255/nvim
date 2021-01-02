@@ -59,7 +59,9 @@ command! -bang -nargs=* GGrep
 
 " find file name
 nnoremap <LEADER><Tab> :FZF<CR>
+nnoremap <LEADER>b :Buffers<CR>
+nnoremap <LEADER>h :History<CR>
 
 " find file content
-nnoremap <LEADER>pp :Rg<CR>
+nnoremap <LEADER>s :Rg<CR>
 nnoremap <LEADER>a :RG<CR>
