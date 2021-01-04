@@ -74,7 +74,7 @@ vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(
 
 " " Mappings for CoCList
 " " Show all diagnostics.
-nnoremap <silent><nowait> nn  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> ng  :<C-u>CocList diagnostics<cr>
 " " Manage extensions.
 " nnoremap <silent><nowait> <space>ce  :<C-u>CocList extensions<cr>
 " " Show commands.

@@ -17,7 +17,7 @@ function! GlobalFindAndReplace()
   call inputsave()
   let finalText = input('By: ')
   call inputrestore()
-  execute('F ' . originalText . ' ' . finalText . ' **/*')
+  execute('Far ' . originalText . ' ' . finalText . ' **/*')
 endfunction
 
 nnoremap <silent><LEADER>gr :call GlobalFindAndReplace()<CR>
