@@ -39,7 +39,8 @@ nnoremap <A-d> <C-d>
 nnoremap <A-u> <C-u>
 
 " back to prev line
-nnoremap <LEADER>gg <C-o>
+nnoremap <LEADER>n <C-o>
+nnoremap <LEADER>m <C-i>
 
 " other
 inoremap jj <ESC>la
