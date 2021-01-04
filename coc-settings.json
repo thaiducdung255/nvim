@@ -1,4 +1,5 @@
 {
   "coc.preferences.extensionUpdateCheck": "daily",
-  "tsserver.log": "normal"
+  "tsserver.log": "normal",
+  "diagnostic.displayByAle": true
 }
