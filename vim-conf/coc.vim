@@ -43,8 +43,8 @@ nnoremap <silent> nd :call <SID>show_documentation()<CR>
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
-xmap nc  <Plug>(coc-codeaction-selected)
-nmap nc  <Plug>(coc-codeaction-selected)
+xmap ns  <Plug>(coc-codeaction-selected)<CR>
+nmap ns  <Plug>(coc-codeaction-selected)<CR>
 
 " Remap keys for applying codeAction to the current buffer.
 nmap na  <Plug>(coc-codeaction)
@@ -82,7 +82,7 @@ nnoremap <silent><nowait> nc  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> no  :<C-u>CocList outline<cr>
 " " Search workspace symbols.
-nnoremap <silent><nowait> ns  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> ni  :<C-u>CocList -I symbols<cr>
 " " Do default action for next item.
 " nnoremap <silent><nowait> <space>cj  :<C-u>CocNext<CR>
 " " Do default action for previous item.
