@@ -13,11 +13,12 @@ set ignorecase smartcase  " ignore case only when the pattern contains no capita
 function! GlobalFindAndReplace()
   call inputsave()
   let originalText = input('Global Replace: ')
+  let ext = tolower(expand('%:e'))
   call inputrestore()
   call inputsave()
   let finalText = input('By: ')
   call inputrestore()
-  execute('Far ' . originalText . ' ' . finalText . ' **/*')
+  execute('Far ' . originalText . ' ' . finalText . ' **/*.' . ext)
 endfunction
 
 nnoremap <silent><LEADER>gr :call GlobalFindAndReplace()<CR>
