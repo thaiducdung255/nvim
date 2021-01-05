@@ -4,7 +4,6 @@ call plug#begin('/home/df/.vim/autoload')
  	Plug 'dense-analysis/ale'
  	Plug 'RRethy/vim-illuminate'
  	Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
- 	Plug 'APZelos/blamer.nvim'
  	Plug 'jiangmiao/auto-pairs'
  	Plug 'szw/vim-maximizer'
  	Plug 'tpope/vim-commentary'
@@ -39,14 +38,12 @@ call plug#begin('/home/df/.vim/autoload')
  	" plugs for go
  	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
- 	" plugs for js
- 	" Plug 'yuezk/vim-js' 
-
  	" git plugs
  	Plug 'mhinz/vim-signify'
  	Plug 'tpope/vim-fugitive'
  	Plug 'tpope/vim-rhubarb'
  	Plug 'junegunn/gv.vim'
+ 	Plug 'APZelos/blamer.nvim'
 
  	call plug#end()
 
