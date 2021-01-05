@@ -1,5 +1,4 @@
 source $HOME/.config/nvim/vim-conf/common-settings.vim
-source $HOME/.config/nvim/vim-conf/far.vim
 source $HOME/.config/nvim/vim-conf/plugins.vim
 source $HOME/.config/nvim/vim-conf/clever-f.vim
 source $HOME/.config/nvim/vim-conf/vim-easymotion.vim

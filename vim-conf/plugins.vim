@@ -13,7 +13,6 @@ call plug#begin('/home/df/.vim/autoload')
  	Plug 'luochen1990/rainbow'
  	Plug 'rhysd/clever-f.vim'
  	Plug 'vim-scripts/SearchComplete'
- 	Plug 'brooth/far.vim'
 
  	" code snippets
  	" Plug 'SirVer/ultisnips'
