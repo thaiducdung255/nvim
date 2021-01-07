@@ -16,7 +16,7 @@ call plug#begin('/home/df/.vim/autoload')
  	" code snippets
  	" Plug 'SirVer/ultisnips'
  	" Plug 'honza/vim-snippets'
- 	
+
  	" color schemes
  	Plug 'mhartington/oceanic-next'
 
@@ -47,6 +47,7 @@ call plug#begin('/home/df/.vim/autoload')
 
  	call plug#end()
 
+	let g:deoplete#enable_at_startup = 1
 nnoremap <silent><LEADER>pi :w<CR>:source %<CR>:PlugInstall<CR>
 nnoremap <silent><LEADER>pc :PlugClean<CR>
 nnoremap <silent><LEADER>pu :PlugUpdate<CR>
