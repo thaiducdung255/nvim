@@ -1,8 +1,5 @@
 syntax on
 
-" ALE config to work with coc
-let g:ale_disable_lsp = 1
-
 set updatetime=300
 " set shortmess+=c
 " set cmdheight=1
