@@ -3,5 +3,6 @@
   "tsserver.log": "normal",
   "diagnostic.displayByAle": true,
   "coc.source.buffer.firstMatch": false,
-  "coc.source.around.firstMatch": false
+  "coc.source.around.firstMatch": false,
+  "tslint.jsEnable": true,
 }
