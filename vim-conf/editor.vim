@@ -26,9 +26,9 @@ inoremap <C-u> <ESC>vbuA
 " js auto convert ops
 inoremap ,, ,<CR>
 inoremap , ,<SPACE>
-" nnoremap <CR> :!
-" nnoremap ; :
-" nnoremap : ;
+nnoremap <CR> :!
+nnoremap ; :
+nnoremap : ;
 
 " edit visual mode behavior
 nnoremap  <A-v> v$h

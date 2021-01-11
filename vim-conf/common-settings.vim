@@ -41,7 +41,7 @@ set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*
 set complete-=5
 set lazyredraw
 set termguicolors
-let mapleader="<SPACE>"
+let mapleader=" "
 set backspace=indent,eol,start
 let g:python_host_prog="/usr/bin/python2"
 let g:python3_host_prog="/usr/bin/python3"
