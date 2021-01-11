@@ -1,1 +1,1 @@
-nnoremap <silent><LEADER>m :MaximizerToggle<CR>
+nnoremap <silent>m :MaximizerToggle<CR>

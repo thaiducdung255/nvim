@@ -1,16 +1,14 @@
 " This is the default extra key bindings
 let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
+  \ 'alt-t': 'tab split',
+  \ 'alt-l': 'split',
+  \ 'alt-j': 'vsplit' }
 
 " Enable per-command history.
-" CTRL-N and'
 " Border color
-let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+let g:fzf_layout = {'up':'~95%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
 let $FZF_DEFAULT_OPTS ="--preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
-" let $FZF_DEFAULT_COMMAND="rg --files --hidden --ignore-file .git"
 let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden --ignore-case --skip-vcs-ignores --ignore ".git/*" --ignore "build/*" --ignore ".local/*" --ignore ".cache/*" --ignore ".vim/*" --ignore "package-lock.json" --ignore ".npm/*" --ignore ".idea/*" --ignore "dist/*" --ignore "node_modules/*"'
 
 " Customize fzf colors to match your color scheme

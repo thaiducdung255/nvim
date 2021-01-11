@@ -24,11 +24,11 @@ inoremap <A-u> <ESC>vb<S-u>A
 inoremap <C-u> <ESC>vbuA
 
 " js auto convert ops
-inoremap --<SPACE> <SPACE>-=<SPACE>1
-inoremap ++<SPACE> <SPACE>+=<SPACE>1
-inoremap ==<SPACE> <SPACE>===<SPACE>
 inoremap ,, ,<CR>
 inoremap , ,<SPACE>
+" nnoremap <CR> :!
+" nnoremap ; :
+" nnoremap : ;
 
 " edit visual mode behavior
 nnoremap  <A-v> v$h
