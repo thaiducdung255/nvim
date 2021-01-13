@@ -14,21 +14,21 @@ nmap gJ 9999<leader>gJ
 nmap gK 9999<leader>gk
 
 " Custom shortcuts
-nmap <silent><LEADER>gs :Git status<CR>
-nmap <silent><LEADER>gb :Git branch<CR>
-nmap <silent><LEADER>gt :call GitCheckout()<CR>
-nmap <silent><LEADER>ga :Git add<SPACE>.<CR>
-nmap <silent><LEADER>gc :call GitCommit()<CR>
-nmap <silent><LEADER>gh :Git push<CR>
-nmap <silent><LEADER>gl :Git pull<CR>
-nmap <silent><LEADER>gd :Git diff<CR>
-nmap <silent><LEADER>go :Git log<CR>
-nmap <silent><LEADER>gm :Git blame<CR>
-nmap <silent><LEADER>gu :call GitUltimate()<CR>
-nmap <silent><LEADER>gf :GV<CR>
-nmap <silent><LEADER>gp :GV!<CR>
+nnoremap <silent><LEADER>gs :Git status<CR>
+nnoremap <silent><LEADER>gb :Git branch<CR>
+nnoremap <silent><LEADER>gt :call GitCheckout()<CR>
+nnoremap <silent><LEADER>ga :Git add<SPACE>.<CR>
+nnoremap <silent><LEADER>gc :call GitCommit()<CR>
+nnoremap <silent><LEADER>gh :Git push<CR>
+nnoremap <silent><LEADER>gl :Git pull<CR>
+nnoremap <silent><LEADER>gd :Git diff<CR>
+nnoremap <silent><LEADER>go :Git log<CR>
+nnoremap <silent><LEADER>gm :Git blame<CR>
+nnoremap <silent><LEADER>gu :call GitUltimate()<CR>
+nnoremap <silent><LEADER>gf :GV<CR>
+nnoremap <silent><LEADER>gp :GV!<CR>
 
-nmap <silent><LEADER>gv :SignifyToggleHighlight<CR>
+nnoremap <silent><LEADER>gv :SignifyToggleHighlight<CR>
 
 " If you like colors instead
 " highlight SignifySignAdd                  ctermbg=green                guibg=#00ff00
