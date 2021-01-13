@@ -32,12 +32,12 @@ vnoremap ; :
 vnoremap : ;
 
 " edit visual mode behavior
-nnoremap  <A-v> v$h
+nnoremap  gv v$h
 nnoremap <S-y> y$
 
 " remap scroll configs
-nnoremap <A-d> <C-d>
-nnoremap <A-u> <C-u>
+nnoremap N <C-d>
+nnoremap M <C-u>
 
 " back to prev line
 nnoremap gn <C-o>
