@@ -26,9 +26,10 @@ inoremap <C-u> <ESC>vbuA
 " js auto convert ops
 inoremap ,, ,<CR>
 inoremap , ,<SPACE>
-nnoremap <CR> :!
 nnoremap ; :
 nnoremap : ;
+vnoremap ; :
+vnoremap : ;
 
 " edit visual mode behavior
 nnoremap  <A-v> v$h
@@ -44,9 +45,9 @@ nnoremap gm <C-i>
 
 " other
 inoremap jj <ESC>la
-nnoremap <silent><LEADER>wq :wq<CR>
-nnoremap <silent><LEADER>s :w<CR>
+nnoremap <silent><LEADER>w :w<CR>
 nnoremap <silent><LEADER>q :q<CR>
+nnoremap <silent><LEADER>. :Startify<CR>
 
 nnoremap <LEADER>ec :e ~/.config/nvim/vim-conf/
 nnoremap <silent><LEADER>ei :e ~/.config/nvim/init.vim<CR>
