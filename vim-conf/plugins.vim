@@ -15,7 +15,6 @@ call plug#begin('/home/df/.vim/autoload')
 	Plug 'luochen1990/rainbow'
 	Plug 'rhysd/clever-f.vim'
 	Plug 'vim-scripts/SearchComplete'
-	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 	" color schemes
 	Plug 'mhartington/oceanic-next'
