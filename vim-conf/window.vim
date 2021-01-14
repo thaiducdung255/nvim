@@ -11,5 +11,5 @@ nnoremap <silent> <C-k> :resize +2<CR>
 nnoremap <silent> <C-l> :vertical resize +2<CR>
 
 " splits and tab create/close configs
-nnoremap <silent> <LEADER>; :vsplit<CR>:wincmd l<CR>
-nnoremap <silent> <LEADER>' :split<CR>:wincmd j<CR>
+nnoremap <silent> <LEADER>n :vsplit<CR>:wincmd l<CR>
+nnoremap <silent> <LEADER>m :split<CR>:wincmd j<CR>
