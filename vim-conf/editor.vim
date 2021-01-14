@@ -20,8 +20,8 @@ vnoremap ` di``<ESC>hpl
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
 " toggle upper/lower case
-inoremap <A-u> <ESC>vb<S-u>A
-inoremap <C-u> <ESC>vbuA
+imap <A-u> <ESC>vbUea
+imap <A-i> <ESC>vbuea
 
 " js auto convert ops
 inoremap ,, ,<CR>
