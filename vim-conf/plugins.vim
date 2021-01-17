@@ -16,6 +16,13 @@ call plug#begin('/home/df/.vim/autoload')
 	Plug 'rhysd/clever-f.vim'
 	Plug 'vim-scripts/SearchComplete'
 
+	Plug 'terryma/vim-expand-region'
+	Plug 'editorconfig/editorconfig-vim'
+	" Plug 'kkoomen/vim-doge'
+	Plug 'vim-scripts/Align'
+	Plug 'wellle/targets.vim'
+	" Plug 'maxbrunsfeld/vim-yankstack'
+
 	" color schemes
 	Plug 'mhartington/oceanic-next'
 
