@@ -19,4 +19,7 @@ let g:startify_lists = [
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
 
-let g:startify_custom_indices = ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';', 'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.']
+let g:startify_custom_indices = ['a', 's', 'd', 'f', 'G', 'h', 'j', 'k', 'l', ':',
+         \'A', 'S', 'D', 'H', 'J', 'K', 'L',
+         \'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/'
+         \'Z', 'X', 'C', 'V', 'B', '<', '>', '?']

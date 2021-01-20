@@ -144,3 +144,17 @@ endsnippet
 snippet cp
 process.stdout.write($0)
 endsnippet
+
+snippet doc "documentation"
+
+/**
+* ${1:Description}
+*
+* @param ${2:name} ${3:description}
+${4:*/}
+endsnippet
+
+snippet para "parameter snippet for docuemntation" i
+* @param ${1:name} ${2:description}
+${0:*/}
+endsnippet

@@ -32,7 +32,7 @@ vnoremap ; :
 vnoremap : ;
 
 " edit visual mode behavior
-nnoremap  gv v$h
+nnoremap <LEADER>v v$h
 nnoremap <S-y> y$
 
 " remap scroll configs
