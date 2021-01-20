@@ -1,6 +1,7 @@
 source $HOME/.config/nvim/vim-conf/common-settings.vim
 source $HOME/.config/nvim/vim-conf/plugins.vim
 source $HOME/.config/nvim/vim-conf/editorconf.vim
+source $HOME/.config/nvim/vim-conf/floatterm.vim
 source $HOME/.config/nvim/vim-conf/expand-region.vim
 source $HOME/.config/nvim/vim-conf/startify.vim
 source $HOME/.config/nvim/vim-conf/indent.vim

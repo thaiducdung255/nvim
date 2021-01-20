@@ -18,7 +18,7 @@ call plug#begin('/home/df/.vim/autoload')
 
    Plug 'terryma/vim-expand-region'
    Plug 'editorconfig/editorconfig-vim'
-   " Plug 'kkoomen/vim-doge'
+   Plug 'voldikss/vim-floaterm'
    Plug 'vim-scripts/Align'
    Plug 'wellle/targets.vim'
    " Plug 'maxbrunsfeld/vim-yankstack'
