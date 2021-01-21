@@ -49,7 +49,7 @@ snippet npu "@Put()"
 $0
 endsnippet
 
-snippet npo "@POST()"
+snippet npo "@Post()"
 @Post('${1:/:id}')
 $0
 endsnippet
@@ -79,7 +79,7 @@ snippet nbo "@Body()"
 @Body($1)$0
 endsnippet
 
-snippet nque "@Query()"
+snippet nqu "@Query()"
 @Query($1)$0
 endsnippet
 
@@ -94,7 +94,55 @@ ${4:@IsNotEmpty()}
 ${5:field}: ${6:string};$0
 endsnippet
 
-snippet nne "@IsNotEmpty"
+snippet vne "@IsNotEmpty"
+@IsNotEmpty()$0
+endsnippet
+
+snippet vma "@Max"
+@Max($0)
+endsnippet
+
+snippet vmi "@Min"
+@Min($0)
+endsnippet
+
+snippet vmal "@MaxLength"
+@MaxLength($0)
+endsnippet
+
+snippet vmil "@MinLength"
+@MinLength($0)
+endsnippet
+
+snippet vop "@IsOptional"
+@IsOptional()$0
+endsnippet
+
+snippet tty "@Type"
+@Type(() => ${1:Type})$0
+endsnippet
+
+snippet vnu "@IsNumber"
+@IsNumber()$0
+endsnippet
+
+snippet vbo "@IsBoolean"
+@IsBoolean()$0
+endsnippet
+
+snippet var "@IsArray"
+@IsArray()$0
+endsnippet
+
+snippet vob "@IsObject"
+@IsObject()$0
+endsnippet
+
+snippet vst "@IsString"
+@IsString()$0
+endsnippet
+
+snippet vne "@IsNotEmpty"
 @IsNotEmpty()$0
 endsnippet
 
@@ -198,7 +246,7 @@ snippet rt "return"
 return $0
 endsnippet
 
-snippet ndate "new Date()" i
+snippet ndt "new Date()" i
 new Date($1)$0
 endsnippet
 
