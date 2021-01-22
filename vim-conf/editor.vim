@@ -12,12 +12,15 @@ vnoremap <C-v> "+p<ESC>
 vnoremap <C-c> "+y<ESC>
 
 " auto pair bracket fix
-vnoremap [ di[]<ESC>hpl
-vnoremap ( di()<ESC>hpl
-vnoremap ' di''<ESC>hpl
-vnoremap " di""<ESC>hpl
-vnoremap ` di``<ESC>hpl
+vnoremap [ di[]<ESC>hpF[i
+vnoremap ( di()<ESC>hpF(i
+vnoremap ' di''<ESC>hpF'
+vnoremap " di""<ESC>hpF"
+vnoremap ` di``<ESC>hpF`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
+
+nnoremap <LEADER>`' f`r'f`r'F'
+nnoremap <LEADER>'` f'r`f'r`F`
 
 " toggle upper/lower case
 imap <A-u> <ESC>vbUea
@@ -39,7 +42,7 @@ nnoremap <S-y> y$
 nnoremap N <C-d>
 nnoremap M <C-u>
 
-" back to prev line
+" prev/next position nav
 nnoremap gn <C-o>
 nnoremap gm <C-i>
 
