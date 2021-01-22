@@ -19,8 +19,11 @@ vnoremap " di""<ESC>hpF"
 vnoremap ` di``<ESC>hpF`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
-nnoremap <LEADER>`' f`r'f`r'F'
-nnoremap <LEADER>'` f'r`f'r`F`
+nnoremap <LEADER>' f`r'f`r'F'
+nnoremap <LEADER>` f'r`f'r`F`
+nnoremap ) f)xF(x
+nnoremap ] f]xF[x
+nnoremap } f}hxxF{xx
 
 " toggle upper/lower case
 imap <A-u> <ESC>vbUea
