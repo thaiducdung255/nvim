@@ -3,7 +3,6 @@ source $HOME/.config/nvim/vim-conf/plugins.vim
 source $HOME/.config/nvim/vim-conf/editorconf.vim
 source $HOME/.config/nvim/vim-conf/floatterm.vim
 source $HOME/.config/nvim/vim-conf/expand-region.vim
-source $HOME/.config/nvim/vim-conf/startify.vim
 source $HOME/.config/nvim/vim-conf/indent.vim
 source $HOME/.config/nvim/vim-conf/clever-f.vim
 source $HOME/.config/nvim/vim-conf/vim-easymotion.vim

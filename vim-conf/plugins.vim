@@ -1,7 +1,6 @@
 call plug#begin('/home/df/.vim/autoload')
    Plug 'godlygeek/tabular'
    Plug 'Yggdroot/indentLine'
-   Plug 'mhinz/vim-startify'
    Plug 'neoclide/coc.nvim'
    Plug 'mbbill/undotree'
    Plug 'dense-analysis/ale'
