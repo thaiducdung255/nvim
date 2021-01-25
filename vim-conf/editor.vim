@@ -19,8 +19,8 @@ vnoremap " di""<ESC>hpF"
 vnoremap ` di``<ESC>hpF`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
-nnoremap <LEADER>' f`r'f`r'F'
-nnoremap <LEADER>` f'r`f'r`F`
+nnoremap <LEADER>' hf`r'f`r'F'
+nnoremap <LEADER>` hf'r`f'r`F`
 nnoremap ) f)xF(x
 nnoremap ] f]xF[x
 nnoremap } f}hxxF{xx
@@ -32,6 +32,7 @@ imap <A-i> <ESC>vbuea
 " js auto convert ops
 inoremap ,, ,<CR>
 inoremap , ,<SPACE>
+inoremap : :<SPACE>
 nnoremap ; :
 nnoremap : ;
 vnoremap ; :
