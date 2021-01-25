@@ -40,7 +40,7 @@ xmap mp  <Plug>(coc-format-selected)
 nmap mp  <Plug>(coc-format-selected)
 
 " Use K to show documentation in preview window.
-nnoremap <silent> nd :call <SID>show_documentation()<CR>
+nnoremap <silent> md :call <SID>show_documentation()<CR>
 
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
