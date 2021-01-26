@@ -4,5 +4,4 @@
   "diagnostic.displayByAle": true,
   "coc.source.buffer.firstMatch": false,
   "coc.source.around.firstMatch": false,
-  "tslint.jsEnable": true,
 }
