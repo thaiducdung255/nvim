@@ -1,22 +1,14 @@
-" navigation shortcuts
-inoremap <C-a> <ESC>A
-inoremap <C-l> <ESC>la
-inoremap <C-j> <ESC>ja
-inoremap <C-k> <ESC>ka
-inoremap <C-h> <ESC>i
-inoremap <C-e> <ESC>ea
-inoremap <C-b> <ESC>bi
-
 " using system copy/paste shortcuts
 vnoremap <C-v> "+p<ESC>
 vnoremap <C-c> "+y<ESC>
 
 " auto pair bracket fix
-vnoremap [ di[]<ESC>hpF[i
+vnoremap [ di[]<ESC>hpf[
+vnoremap $ di${}<ESC>hpf}
 vnoremap ( di()<ESC>hpF(i
 vnoremap ' di''<ESC>hpF'
-vnoremap " di""<ESC>hpF"
-vnoremap ` di``<ESC>hpF`
+vnoremap " di""<ESC>hpf"
+vnoremap ` di``<ESC>hpf`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
 nnoremap <LEADER>' hf`r'f`r'F'
@@ -54,7 +46,6 @@ nnoremap gm <C-i>
 inoremap jj <ESC>la
 nnoremap <silent><LEADER>w :w<CR>
 nnoremap <silent><LEADER>q :q<CR>
-nnoremap <silent><LEADER>. :Startify<CR>
 
 nnoremap <LEADER>ec :e ~/.config/nvim/vim-conf/
 nnoremap <silent><LEADER>ei :e ~/.config/nvim/init.vim<CR>

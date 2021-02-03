@@ -1,6 +1,7 @@
 let g:ale_lint_on_insert_leave=1
 let g:ale_disable_lsp=1
-let g:ale_sign_column_always = 1
+let g:ale_sign_column_always=1
+let g:ale_fix_on_save=1
 
 let g:ale_fixers = {
 \   'javascript|go|typescript': ['remove_trailing_lines', 'trim_whitespace'],

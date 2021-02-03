@@ -11,7 +11,6 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'tpope/vim-commentary'
    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
    Plug 'diepm/vim-rest-console'
-   Plug 'luochen1990/rainbow'
    Plug 'rhysd/clever-f.vim'
    Plug 'vim-scripts/SearchComplete'
    Plug 'brooth/far.vim'
@@ -21,7 +20,8 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'voldikss/vim-floaterm'
    Plug 'vim-scripts/Align'
    Plug 'wellle/targets.vim'
-   " Plug 'maxbrunsfeld/vim-yankstack'
+   Plug 'maxbrunsfeld/vim-yankstack'
+   Plug 'puremourning/vimspector'
 
    " color schemes
    Plug 'mhartington/oceanic-next'
@@ -40,6 +40,8 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'haya14busa/incsearch.vim'
    Plug 'haya14busa/incsearch-easymotion.vim'
    Plug 'haya14busa/incsearch-fuzzy.vim'
+
+   Plug 'HerringtonDarkholme/yats.vim'
 
    " plugs for go
    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
