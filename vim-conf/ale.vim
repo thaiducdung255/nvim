@@ -12,7 +12,7 @@ let g:ale_fixers = {
 
 let g:ale_linters = {}
 let g:ale_linters.typescript = ['eslint', 'tsserver']
-let g:ale_linters.javascript = ['eslint']
+let g:ale_linters.javascript = ['eslint', 'flow-language-server']
 let g:ale_linters.go = ['golint', 'gofmt']
 let g:ale_typescript_prettier_use_local_config=1
 let g:ale_completion_autoimport = 1
