@@ -14,6 +14,7 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'rhysd/clever-f.vim'
    Plug 'vim-scripts/SearchComplete'
    Plug 'brooth/far.vim'
+   Plug 'AndrewRadev/switch.vim'
 
    Plug 'terryma/vim-expand-region'
    Plug 'editorconfig/editorconfig-vim'
@@ -45,6 +46,9 @@ call plug#begin('/home/df/.vim/autoload')
 
    " plugs for go
    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+   " plugs for js
+   Plug 'pangloss/vim-javascript'
 
    " git plugs
    Plug 'mhinz/vim-signify'

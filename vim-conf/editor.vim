@@ -4,7 +4,6 @@ vnoremap <C-c> "+y<ESC>
 
 " auto pair bracket fix
 vnoremap [ di[]<ESC>hpf[
-vnoremap $ di${}<ESC>hpf}
 vnoremap ( di()<ESC>hpF(i
 vnoremap ' di''<ESC>hpF'
 vnoremap " di""<ESC>hpf"
@@ -32,7 +31,7 @@ vnoremap : ;
 
 " edit visual mode behavior
 nnoremap <LEADER>v v$h
-nnoremap <S-y> y$
+nnoremap <LEADER>y y$
 
 " remap scroll configs
 nnoremap N <C-d>
