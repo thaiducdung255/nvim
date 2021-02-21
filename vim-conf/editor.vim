@@ -33,12 +33,6 @@ nnoremap cb ci<
 nnoremap db di<
 nnoremap mb vi<
 
-" jump to brackets
-nnoremap g; f(
-nnoremap go f{
-nnoremap gf f[
-nnoremap gb f<
-
 " toggle upper/lower case
 imap <A-u> <ESC>vbUea
 imap <A-i> <ESC>vbuea
