@@ -10,15 +10,26 @@ vnoremap " di""<ESC>hpf"
 vnoremap ` di``<ESC>hpf`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
+" bracket modifications
 nnoremap <LEADER>' hf`r'f`r'F'
 nnoremap <LEADER>` hf'r`f'r`F`
 nnoremap ) f)xF(x
 nnoremap ] f]xF[x
 nnoremap } f}hxxF{xx
 
+" jump to brackets
+nnoremap gp f(
+nnoremap go f{
+nnoremap gf f[
+nnoremap g; f<
+
 " toggle upper/lower case
 imap <A-u> <ESC>vbUea
 imap <A-i> <ESC>vbuea
+
+" jump in line configs
+nnoremap gh ^
+nnoremap gl $
 
 " js auto convert ops
 inoremap ,, ,<CR>
