@@ -7,6 +7,3 @@ nnoremap g; :call clever_f#find("a", "(")<CR>
 nnoremap go :call clever_f#find("a", "{")<CR>
 nnoremap gf :call clever_f#find("a", "[")<CR>
 nnoremap gb :call clever_f#find("a", "<")<CR>
-
-" jump before brackets
-" nnoremap 
