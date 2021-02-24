@@ -62,5 +62,5 @@ nnoremap <LEADER>z :History<CR>
 nnoremap <LEADER>c :Commands<CR>
 
 " find file content
-nnoremap <LEADER>f :Rg<CR>
-nnoremap <LEADER>a :RG<CR>
+nnoremap <TAB> :Rg<CR>
+nnoremap <LEADER>f :RG<CR>
