@@ -8,10 +8,10 @@ let g:signify_sign_show_count = 0
 let g:signify_sign_show_text = 1
 
 " Jump though hunks
-nmap gj <plug>(signify-next-hunk)
-nmap gk <plug>(signify-prev-hunk)
-nmap gJ 9999<leader>gJ
-nmap gK 9999<leader>gk
+nmap dj <plug>(signify-next-hunk)
+nmap dk <plug>(signify-prev-hunk)
+nmap dJ 9999<leader>gJ
+nmap dK 9999<leader>gk
 
 " Custom shortcuts
 nnoremap <silent><LEADER>gs :Git status<CR>
