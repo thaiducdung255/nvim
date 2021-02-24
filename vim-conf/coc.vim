@@ -50,7 +50,7 @@ nmap ms  <Plug>(coc-codeaction-selected)<CR>
 " Remap keys for applying codeAction to the current buffer.
 nmap ma  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap mf  <Plug>(coc-fix-current)
+nmap mn  <Plug>(coc-fix-current)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -81,7 +81,7 @@ nnoremap <silent><nowait> mg  :<C-u>CocList diagnostics<cr>
 " " Show commands.
 nnoremap <silent><nowait> mc  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> mo  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> mm  :<C-u>CocList outline<cr>
 " " Search workspace symbols.
 nnoremap <silent><nowait> mi  :<C-u>CocList -I symbols<cr>
 " " Do default action for next item.
