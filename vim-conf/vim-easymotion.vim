@@ -7,8 +7,8 @@ map <LEADER>; <plug>(easymotion-overwin-line)
 map <LEADER>i <plug>(easymotion-bd-f2)
 nmap <LEADER>i <plug>(easymotion-overwin-f2)
 
-map <Tab> <plug>(easymotion-bd-f)
-nmap <Tab> <plug>(easymotion-overwin-f)
+map <LEADER>o <plug>(easymotion-bd-f)
+nmap <LEADER>o <plug>(easymotion-overwin-f)
 
 map <LEADER>d <plug>(easymotion-bd-w)
 nmap <LEADER>d <plug>(easymotion-overwin-w)

@@ -20,5 +20,5 @@ let g:ale_fix_on_save=0
 let g:ale_linters_explicit=1
 let g:ale_sign_error = '➤'
 let g:ale_sign_warning = '●'
-nmap <silent> <LEADER>ak <Plug>(ale_previous_wrap)
-nmap <silent> <LEADER>aj <Plug>(ale_next_wrap)
+nmap <silent> <LEADER>ek <Plug>(ale_previous_wrap)
+nmap <silent> <LEADER>ej <Plug>(ale_next_wrap)
