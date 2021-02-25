@@ -17,22 +17,6 @@ nnoremap ) f)xF(x
 nnoremap ] f]xF[x
 nnoremap } f}hxxF{xx
 
-nnoremap c; ci(
-nnoremap d; di(
-nnoremap m; vi(
-
-nnoremap co ci{
-nnoremap do di{
-nnoremap mo vi{
-
-nnoremap cf ci[
-nnoremap df di[
-nnoremap mf vi[
-
-nnoremap cb ci<
-nnoremap db di<
-nnoremap mb vi<
-
 " toggle upper/lower case
 imap <A-u> <ESC>vbUea
 imap <A-i> <ESC>vbuea
