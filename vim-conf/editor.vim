@@ -11,25 +11,37 @@ vnoremap ` di``<ESC>hpf`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
 " brackets motions
-nnoremap c; f(ci(
-nnoremap co f{ci{
-nnoremap cf f[ci[
-nnoremap cb f<ci<
+nnoremap c; hf(ci(
+nnoremap co hf{ci{
+nnoremap cf hf[ci[
+nnoremap cb hf<ci<
+nnoremap c' hf'ci'
+nnoremap c" hf"ci"
+nnoremap ce hf`ci`
 
-nnoremap m; f(di(
-nnoremap mo f{di{
-nnoremap mf f[di[
-nnoremap mb f<di<
+nnoremap m; hf(di(
+nnoremap mo hf{di{
+nnoremap mf hf[di[
+nnoremap mb hf<di<
+nnoremap m' hf'ci'
+nnoremap m" hf"ci"
+nnoremap me hf`ci`
 
-nnoremap z; f(vi(
-nnoremap zo f{vi{
-nnoremap zf f[vi[
-nnoremap zb f<vi<
+nnoremap z; hf(vi(
+nnoremap zo hf{vi{
+nnoremap zf hf[vi[
+nnoremap zb hf<vi<
+nnoremap z' hf'ci'
+nnoremap z" hf"ci"
+nnoremap ze hf`ci`
 
-nnoremap '; f(vi(p
-nnoremap 'o f{vi{p
-nnoremap 'f f[vi[p
-nnoremap 'b f<vi<p
+nnoremap '; hf(vi(p
+nnoremap 'o hf{vi{p
+nnoremap 'f hf[vi[p
+nnoremap 'b hf<vi<p
+nnoremap '' hf'ci'
+nnoremap '" hf"ci"
+nnoremap 'e hf`ci`
 
 " bracket modifications
 nnoremap <LEADER>' hf`r'f`r'F'
