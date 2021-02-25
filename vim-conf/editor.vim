@@ -10,6 +10,27 @@ vnoremap " di""<ESC>hpf"
 vnoremap ` di``<ESC>hpf`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
+" brackets motions
+nnoremap c; f(ci(
+nnoremap co f{ci{
+nnoremap cf f[ci[
+nnoremap cb f<ci<
+
+nnoremap m; f(di(
+nnoremap mo f{di{
+nnoremap mf f[di[
+nnoremap mb f<di<
+
+nnoremap z; f(vi(
+nnoremap zo f{vi{
+nnoremap zf f[vi[
+nnoremap zb f<vi<
+
+nnoremap '; f(vi(p
+nnoremap 'o f{vi{p
+nnoremap 'f f[vi[p
+nnoremap 'b f<vi<p
+
 " bracket modifications
 nnoremap <LEADER>' hf`r'f`r'F'
 nnoremap <LEADER>` hf'r`f'r`F`
