@@ -11,37 +11,27 @@ vnoremap ` di``<ESC>hpf`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
 " brackets motions
-nnoremap c; hf(ci(
-nnoremap co hf{ci{
-nnoremap cf hf[ci[
-nnoremap cb hf<ci<
-nnoremap c' hf'ci'
-nnoremap c" hf"ci"
-nnoremap ce hf`ci`
+nnoremap cj ci(
+nnoremap ck ci[
+nnoremap cl ci{
+nnoremap c; ci'
+nnoremap c: ci"
+nnoremap ch ci`
 
-nnoremap m; hf(di(
-nnoremap mo hf{di{
-nnoremap mf hf[di[
-nnoremap mb hf<di<
-nnoremap m' hf'ci'
-nnoremap m" hf"ci"
-nnoremap me hf`ci`
+nnoremap dj di(
+nnoremap dk di[
+nnoremap dl di{
+nnoremap d; di'
+nnoremap d: di"
+nnoremap dh di`
 
-nnoremap z; hf(vi(
-nnoremap zo hf{vi{
-nnoremap zf hf[vi[
-nnoremap zb hf<vi<
-nnoremap z' hf'ci'
-nnoremap z" hf"ci"
-nnoremap ze hf`ci`
+nnoremap sj vi(
+nnoremap sk vi[
+nnoremap sl vi{
+nnoremap s; vi'
+nnoremap s: vi"
+nnoremap sh vi`
 
-nnoremap '; hf(vi(p
-nnoremap 'o hf{vi{p
-nnoremap 'f hf[vi[p
-nnoremap 'b hf<vi<p
-nnoremap '' hf'ci'
-nnoremap '" hf"ci"
-nnoremap 'e hf`ci`
 
 " bracket modifications
 nnoremap <LEADER>' hf`r'f`r'F'
@@ -54,9 +44,11 @@ nnoremap } f}hxxF{xx
 imap <A-u> <ESC>vbUea
 imap <A-i> <ESC>vbuea
 
+vmap <A-u> ~
+
 " jump in line configs
-nnoremap gh ^
-nnoremap gl $
+nnoremap ga ^
+nnoremap gf $
 
 " js auto convert ops
 inoremap ,, ,<CR>
