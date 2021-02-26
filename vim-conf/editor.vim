@@ -11,23 +11,23 @@ vnoremap ` di``<ESC>hpf`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
 " brackets motions
-nnoremap cj ci(
-nnoremap ck ci[
-nnoremap cl ci{
+nnoremap cj f(ci(
+nnoremap ck f[ci[
+nnoremap cl f{ci{
 nnoremap c; ci'
 nnoremap c: ci"
 nnoremap ch ci`
 
-nnoremap dj di(
-nnoremap dk di[
-nnoremap dl di{
+nnoremap dj f(di(
+nnoremap dk f[di[
+nnoremap dl f{di{
 nnoremap d; di'
 nnoremap d: di"
 nnoremap dh di`
 
-nnoremap sj vi(
-nnoremap sk vi[
-nnoremap sl vi{
+nnoremap sj f(vi(
+nnoremap sk f[vi[
+nnoremap sl f{vi{
 nnoremap s; vi'
 nnoremap s: vi"
 nnoremap sh vi`
