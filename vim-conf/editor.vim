@@ -16,21 +16,24 @@ nnoremap ck f[ci[
 nnoremap cl f{ci{
 nnoremap c; ci'
 nnoremap c: ci"
-nnoremap ch ci`
+nnoremap c' ci`
+nnoremap ch f<ci<
 
 nnoremap dj f(di(
 nnoremap dk f[di[
 nnoremap dl f{di{
 nnoremap d; di'
 nnoremap d: di"
-nnoremap dh di`
+nnoremap d' di`
+nnoremap dh f<di<
 
 nnoremap sj f(vi(
 nnoremap sk f[vi[
 nnoremap sl f{vi{
 nnoremap s; vi'
 nnoremap s: vi"
-nnoremap sh vi`
+nnoremap s' vi`
+nnoremap sh f<si<
 
 
 " bracket modifications
