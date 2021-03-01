@@ -17,7 +17,7 @@ nnoremap cf hf[ci[
 nnoremap cb hf<ci<
 nnoremap c' hf'ci'
 nnoremap c" hf"ci"
-nnoremap ce hf`ci`
+nnoremap cs hf`ci`
 
 nnoremap m; hf(di(
 nnoremap mo hf{di{
@@ -25,7 +25,7 @@ nnoremap mf hf[di[
 nnoremap mb hf<di<
 nnoremap m' hf'ci'
 nnoremap m" hf"ci"
-nnoremap me hf`ci`
+nnoremap ms hf`ci`
 
 nnoremap z; hf(vi(
 nnoremap zo hf{vi{
@@ -33,7 +33,7 @@ nnoremap zf hf[vi[
 nnoremap zb hf<vi<
 nnoremap z' hf'ci'
 nnoremap z" hf"ci"
-nnoremap ze hf`ci`
+nnoremap zs hf`ci`
 
 nnoremap '; hf(vi(p
 nnoremap 'o hf{vi{p
@@ -41,7 +41,7 @@ nnoremap 'f hf[vi[p
 nnoremap 'b hf<vi<p
 nnoremap '' hf'ci'
 nnoremap '" hf"ci"
-nnoremap 'e hf`ci`
+nnoremap 's hf`ci`
 
 " bracket modifications
 nnoremap <LEADER>' hf`r'f`r'F'

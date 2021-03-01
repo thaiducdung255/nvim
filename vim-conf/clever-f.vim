@@ -9,4 +9,4 @@ nnoremap gf :call clever_f#find("a", "[")<CR>
 nnoremap gb :call clever_f#find("a", "<")<CR>
 nnoremap g' :call clever_f#find("a", "'")<CR>
 nnoremap g" :call clever_f#find("a", """)<CR>
-nnoremap ge :call clever_f#find("a", "`")<CR>
+nnoremap gs :call clever_f#find("a", "`")<CR>
