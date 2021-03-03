@@ -10,5 +10,5 @@ nnoremap gK :call clever_f#find("a", "]")<CR>
 nnoremap gl :call clever_f#find("a", "{")<CR>
 nnoremap gL :call clever_f#find("a", "}")<CR>
 nnoremap g; :call clever_f#find("a", "'")<CR>
-nnoremap g: :call clever_f#find("a", """)<CR>
+nnoremap g: :call clever_f#find("a", "\"")<CR>
 nnoremap gh :call clever_f#find("a", "`")<CR>
