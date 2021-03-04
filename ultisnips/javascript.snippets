@@ -51,7 +51,7 @@ while ($1 ${3:<} ${4:arr.length}) {
 }$0
 endsnippet
 
-snippet env "environments" i
+snippet pev "environments" i
 process.env.
 endsnippet
 
@@ -210,3 +210,139 @@ snippet ale "assert.isAtMost"
 assert.isAtMost($0)
 endsnippet
 
+# FAKER SNIPPETS =======================================================================
+snippet ffn "faker.fileName"
+faker.system.fileName()
+endsnippet
+
+snippet fft "faker.commonFileType"
+faker.system.commonFileType()
+endsnippet
+
+snippet ffp "faker.filePath"
+faker.system.filePath()
+endsnippet
+
+snippet ftr "faker.time.recent"
+faker.time.recent()
+endsnippet
+
+snippet fdp "faker.date.past"
+faker.date.past()
+endsnippet
+
+snippet fdf "faker.date.future"
+faker.date.future()
+endsnippet
+
+snippet fdr "faker.date.recent"
+faker.date.recent()
+endsnippet
+
+snippet fds "faker.date.soon"
+faker.date.soon()
+endsnippet
+
+snippet fie "faker.email"
+faker.internet.email()
+endsnippet
+
+snippet fil "faker.url"
+faker.internet.url()
+endsnippet
+
+snippet fin "faker.username"
+faker.internet.userName()
+endsnippet
+
+snippet fip "faker.ip"
+faker.internet.ip()
+endsnippet
+
+snippet fin "faker.username"
+faker.internet.userName()
+endsnippet
+
+snippet fis "faker.password"
+faker.internet.password()
+endsnippet
+
+snippet fic "faker.color"
+faker.internet.color()
+endsnippet
+
+snippet flw "faker.lorem.word"
+faker.lorem.word()
+endsnippet
+
+snippet flws "faker.lorem.words"
+faker.lorem.words()
+endsnippet
+
+snippet fls "faker.lorem.sentence"
+faker.lorem.sentence()
+endsnippet
+
+snippet flss "faker.lorem.sentences"
+faker.lorem.sentences()
+endsnippet
+
+snippet flp "faker.lorem.paragraph"
+faker.lorem.paragraph()
+endsnippet
+
+snippet flps "faker.lorem.paragraphs"
+faker.lorem.paragraphs()
+endsnippet
+
+snippet flt "faker.lorem.text"
+faker.lorem.text()
+endsnippet
+
+snippet frn "faker.number"
+faker.random.number({ min: $1, max: $2 })
+endsnippet
+
+snippet frf "faker.float"
+faker.random.float({ min: $1, max: $2 })
+endsnippet
+
+snippet fru "faker.uuid"
+faker.random.uuid()
+endsnippet
+
+snippet frl "faker.locale"
+faker.random.locale()
+endsnippet
+
+snippet frh "faker.hex"
+faker.random.hexaDecimal()
+endsnippet
+
+snippet fnjt "faker.job-type"
+faker.name.jobType()
+endsnippet
+
+snippet fnfn "faker.find-name"
+faker.name.findName()
+endsnippet
+
+snippet fng "faker.gender"
+faker.name.gender()
+endsnippet
+
+snippet faz "faker.zipCode"
+faker.address.zipCode()
+endsnippet
+
+snippet fac "faker.city"
+faker.address.city()
+endsnippet
+
+snippet fala "faker.latitude"
+faker.address.latitude()
+endsnippet
+
+snippet falo "faker.longtitude"
+faker.address.longtitude()
+endsnippet

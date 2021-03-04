@@ -3,6 +3,7 @@ let g:switch_mapping=":"
 let jsAndTsOptions = 
    \[
       \['true', 'false'],
+      \['toUpperCase', 'toLowerCase'],
       \['toString', 'toISOString'],
       \['new Date()', 'Date.now()'],
       \['resolve', 'reject'],
