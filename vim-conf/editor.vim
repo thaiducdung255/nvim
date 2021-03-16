@@ -49,10 +49,8 @@ nnoremap ] f]xF[x
 nnoremap } f}hxxF{xx
 
 " toggle upper/lower case
-imap <A-u> <ESC>vbUea
-imap <A-i> <ESC>vbuea
-
-vmap <A-u> ~
+inoremap <C-n> <ESC>vbUea
+inoremap <C-m> <ESC>vbuea
 
 " jump in line configs
 nnoremap ga ^
