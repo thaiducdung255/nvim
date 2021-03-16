@@ -54,8 +54,6 @@ nnoremap gf $
 
 " js auto convert ops
 inoremap ,, ,<CR>
-inoremap , ,<SPACE>
-inoremap : :<SPACE>
 nnoremap ; :
 nnoremap : ;
 vnoremap ; :
