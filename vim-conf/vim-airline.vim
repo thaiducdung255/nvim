@@ -8,7 +8,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'default'
 let airline#extensions#ale#error_symbol = '[E] '
 let airline#extensions#ale#warning_symbol = '[W] '
-let airline_theme='angr'
+let airline_theme='tender'
 
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
