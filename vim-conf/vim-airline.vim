@@ -11,7 +11,7 @@ let airline#extensions#ale#warning_symbol = '[W] '
 let airline_theme='angr'
 
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+   let g:airline_symbols = {}
 endif
 
 " unicode symbols

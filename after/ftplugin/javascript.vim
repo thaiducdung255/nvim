@@ -1,6 +1,7 @@
 " Preserve existing doge settings.
 let b:doge_patterns = get(b:, 'doge_patterns', {})
 let b:doge_supported_doc_standards = get(b:, 'doge_supported_doc_standards', [])
+
 if index(b:doge_supported_doc_standards, 'js') < 0
    call add(b:doge_supported_doc_standards, 'js')
 endif

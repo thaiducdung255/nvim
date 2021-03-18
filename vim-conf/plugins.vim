@@ -1,5 +1,6 @@
 call plug#begin('/home/df/.vim/autoload')
    Plug 'godlygeek/tabular'
+   Plug 'unblevable/quick-scope'
    Plug 'Yggdroot/indentLine'
    Plug 'neoclide/coc.nvim'
    Plug 'mbbill/undotree'
@@ -11,7 +12,7 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'tpope/vim-commentary'
    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
    Plug 'diepm/vim-rest-console'
-   Plug 'rhysd/clever-f.vim'
+   " Plug 'rhysd/clever-f.vim'
    Plug 'vim-scripts/SearchComplete'
    Plug 'brooth/far.vim'
    Plug 'AndrewRadev/switch.vim'
@@ -26,6 +27,11 @@ call plug#begin('/home/df/.vim/autoload')
 
    " color schemes
    Plug 'mhartington/oceanic-next'
+   Plug 'sickill/vim-monokai'
+   Plug 'nanotech/jellybeans.vim'
+   Plug 'w0ng/vim-hybrid'
+   Plug 'jacoborus/tender.vim'
+   Plug 'sainnhe/edge'
 
    " FZF integration
    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
