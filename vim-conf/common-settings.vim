@@ -1,4 +1,5 @@
 syntax on
+syntax enable
 
 set updatetime=300
 
