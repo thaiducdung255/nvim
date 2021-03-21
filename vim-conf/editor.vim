@@ -10,7 +10,39 @@ vnoremap " di""<ESC>hpf"
 vnoremap ` di``<ESC>hpf`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
+" auto insert brackets alternatives
+inoremap ;j ()<ESC>i
+inoremap ;k []<ESC>i
+inoremap ;l {}<ESC>i
+inoremap ;h ``<ESC>i
+
 " brackets motions
+nnoremap gj f(
+nnoremap gk f[
+nnoremap gl f{
+nnoremap g; f'
+nnoremap g: f"
+nnoremap g' f`
+nnoremap gh f<
+
+nnoremap zj ct)
+nnoremap zk ct]
+nnoremap zl ct}
+nnoremap z; ct'
+nnoremap z: ct"
+nnoremap z' ct`
+nnoremap zh ct>
+
+nnoremap zJ cT(
+nnoremap zK cT[
+nnoremap zL cT{
+nnoremap zH cT<
+
+nnoremap gJ f)
+nnoremap gK f]
+nnoremap gL f}
+nnoremap gH f>
+
 nnoremap cj f(ci(
 nnoremap ck f[ci[
 nnoremap cl f{ci{
@@ -36,17 +68,16 @@ nnoremap s' vi`
 nnoremap sh f<si<
 
 " bracket modifications
-nnoremap <LEADER>' hf`r'f`r'F'
-nnoremap <LEADER>` hf'r`f'r`F`
-nnoremap ) f)xF(x
-nnoremap ] f]xF[x
-nnoremap } f}hxxF{xx
+nnoremap y' hf`r'f`r'F'
+nnoremap y" hf'r`f'r`F`
+nnoremap yj f)xF(x
+nnoremap yk f]xF[x
+nnoremap yl f}hxxF{xx
 
 " toggle upper/lower case
-imap <A-u> <ESC>vbUea
-imap <A-i> <ESC>vbuea
-
-vmap <A-u> ~
+inoremap <C-z> <ESC>vbUea
+inoremap <C-x> <ESC>vbuea
+inoremap <C-c> <ESC>b~ea
 
 " jump in line configs
 nnoremap ga ^
@@ -54,8 +85,6 @@ nnoremap gf $
 
 " js auto convert ops
 inoremap ,, ,<CR>
-inoremap , ,<SPACE>
-inoremap : :<SPACE>
 nnoremap ; :
 nnoremap : ;
 vnoremap ; :
