@@ -28,7 +28,7 @@ call plug#begin('/home/df/.vim/autoload')
 
    " color schemes
    Plug 'mhartington/oceanic-next'
-   Plug 'jacoborus/tender.vim'
+   Plug 'zanglg/nova.vim'
    Plug 'sainnhe/edge'
 
    " FZF integration

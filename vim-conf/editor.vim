@@ -86,7 +86,6 @@ nnoremap gf $
 vnoremap ga ^
 vnoremap gf $
 
-
 " js auto convert ops
 inoremap ,, ,<CR>
 nnoremap ; :
