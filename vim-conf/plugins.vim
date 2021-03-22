@@ -24,6 +24,7 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'wellle/targets.vim'
    Plug 'maxbrunsfeld/vim-yankstack'
    Plug 'puremourning/vimspector'
+   Plug 'tpope/vim-dadbod'
 
    " color schemes
    Plug 'mhartington/oceanic-next'

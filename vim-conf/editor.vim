@@ -83,6 +83,10 @@ inoremap <C-c> <ESC>b~ea
 nnoremap ga ^
 nnoremap gf $
 
+vnoremap ga ^
+vnoremap gf $
+
+
 " js auto convert ops
 inoremap ,, ,<CR>
 nnoremap ; :
