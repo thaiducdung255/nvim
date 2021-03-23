@@ -10,7 +10,7 @@ set softtabstop=3
 set shiftwidth=3
 
 " support indent highlight for tab
-" set list lcs=tab:\∙\ 
+set list lcs=tab:\¦\ 
 
 " indent type: expand tab is using space to indent
 set expandtab
