@@ -86,13 +86,6 @@ nnoremap gf $
 vnoremap ga ^
 vnoremap gf $
 
-" js auto convert ops
-inoremap ,, ,<CR>
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
-
 " edit visual mode behavior
 nnoremap <LEADER>v v$h
 nnoremap <LEADER>y y$
