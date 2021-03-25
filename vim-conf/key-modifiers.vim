@@ -5,70 +5,57 @@ nnoremap : ;
 vnoremap ; :
 vnoremap : ;
 
-" " number modifiers
-" inoremap <A-q> 1
-" inoremap <A-w> 2
-" inoremap <A-e> 3
-" inoremap <A-r> 4
-" inoremap <A-t> 5
-" inoremap <A-y> 6
-" inoremap <A-u> 7
-" inoremap <A-i> 8
-" inoremap <A-o> 9
-" inoremap <A-p> 0
+" auto insert brackets alternatives
+inoremap ;j ()<ESC>i
+inoremap ;k []<ESC>i
+inoremap ;l {}<ESC>i
+inoremap ;h ``<ESC>i
+inoremap ;a =>
+inoremap ;v ${}<ESC>i
 
-" nnoremap <A-q> 1
-" nnoremap <A-w> 2
-" nnoremap <A-e> 3
-" nnoremap <A-r> 4
-" nnoremap <A-t> 5
-" nnoremap <A-y> 6
-" nnoremap <A-u> 7
-" nnoremap <A-i> 8
-" nnoremap <A-o> 9
-" nnoremap <A-p> 0
+" number modifiers
+inoremap ;q 1
+inoremap ;w 2
+inoremap ;e 3
+inoremap ;r 4
+inoremap ;t 5
+inoremap ;y 6
+inoremap ;u 7
+inoremap ;i 8
+inoremap ;o 9
+inoremap ;p 0
 
-" vnoremap <A-q> 1
-" vnoremap <A-w> 2
-" vnoremap <A-e> 3
-" vnoremap <A-r> 4
-" vnoremap <A-t> 5
-" vnoremap <A-y> 6
-" vnoremap <A-u> 7
-" vnoremap <A-i> 8
-" vnoremap <A-o> 9
-" vnoremap <A-p> 0
+nnoremap 'q 1
+nnoremap 'w 2
+nnoremap 'e 3
+nnoremap 'r 4
+nnoremap 't 5
+nnoremap 'y 6
+nnoremap 'u 7
+nnoremap 'i 8
+nnoremap 'o 9
+nnoremap 'p 0
 
-" " special symbol modifiers
-" inoremap <A-Q> !
-" inoremap <A-W> @
-" inoremap <A-E> #
-" inoremap <A-R> $
-" inoremap <A-T> %
-" inoremap <A-Y> ^
-" inoremap <A-U> &
-" inoremap <A-I> *
-" inoremap <A-O> (
-" inoremap <A-P> )
+vnoremap 'q 1
+vnoremap 'w 2
+vnoremap 'e 3
+vnoremap 'r 4
+vnoremap 't 5
+vnoremap 'y 6
+vnoremap 'u 7
+vnoremap 'i 8
+vnoremap 'o 9
+vnoremap 'p 0
 
-" nnoremap <A-Q> !
-" nnoremap <A-W> @
-" nnoremap <A-E> #
-" nnoremap <A-R> $
-" nnoremap <A-T> %
-" nnoremap <A-Y> ^
-" nnoremap <A-U> &
-" nnoremap <A-I> *
-" nnoremap <A-O> (
-" nnoremap <A-P> )
 
-" vnoremap <A-Q> !
-" vnoremap <A-W> @
-" vnoremap <A-E> #
-" vnoremap <A-R> $
-" vnoremap <A-T> %
-" vnoremap <A-Y> ^
-" vnoremap <A-U> &
-" vnoremap <A-I> *
-" vnoremap <A-O> (
-" vnoremap <A-P> )
+" special symbol modifiers
+inoremap 'q !
+inoremap 'w @
+inoremap 'e #
+inoremap 'r $
+inoremap 't %
+inoremap 'y ^
+inoremap 'u &
+inoremap 'i *
+inoremap 'o (
+inoremap 'p )

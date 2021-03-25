@@ -10,12 +10,6 @@ vnoremap " di""<ESC>hpf"
 vnoremap ` di``<ESC>hpf`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
-" auto insert brackets alternatives
-inoremap ;j ()<ESC>i
-inoremap ;k []<ESC>i
-inoremap ;l {}<ESC>i
-inoremap ;h ``<ESC>i
-
 " brackets motions
 nnoremap gj f(
 nnoremap gk f[
