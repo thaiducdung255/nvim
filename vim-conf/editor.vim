@@ -11,6 +11,7 @@ vnoremap ` di``<ESC>hpf`
 vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
 
 " brackets motions
+" go to brackets
 nnoremap gj f(
 nnoremap gk f[
 nnoremap gl f{
@@ -19,6 +20,12 @@ nnoremap g: f"
 nnoremap g' f`
 nnoremap gh f<
 
+nnoremap gJ f)
+nnoremap gK f]
+nnoremap gL f}
+nnoremap gH f>
+
+" edit bracket motions with t/T
 nnoremap zj ct)
 nnoremap zk ct]
 nnoremap zl ct}
@@ -32,11 +39,7 @@ nnoremap zK cT[
 nnoremap zL cT{
 nnoremap zH cT<
 
-nnoremap gJ f)
-nnoremap gK f]
-nnoremap gL f}
-nnoremap gH f>
-
+" edit inside brackets
 nnoremap cj f(ci(
 nnoremap ck f[ci[
 nnoremap cl f{ci{
@@ -45,6 +48,7 @@ nnoremap c: ci"
 nnoremap c' ci`
 nnoremap ch f<ci<
 
+" delete inside brackets
 nnoremap dj f(di(
 nnoremap dk f[di[
 nnoremap dl f{di{
@@ -53,6 +57,7 @@ nnoremap d: di"
 nnoremap d' di`
 nnoremap dh f<di<
 
+" select inside brackets
 nnoremap sj f(vi(
 nnoremap sk f[vi[
 nnoremap sl f{vi{
@@ -61,7 +66,7 @@ nnoremap s: vi"
 nnoremap s' vi`
 nnoremap sh f<si<
 
-" bracket modifications
+" brackets "/` modifications
 nnoremap y' hf`r'f`r'F'
 nnoremap y" hf'r`f'r`F`
 nnoremap yj f)xF(x
