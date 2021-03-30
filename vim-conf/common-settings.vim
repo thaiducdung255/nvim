@@ -65,3 +65,5 @@ endfunction
 
 " support .pdf file
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
+autocmd FileType json set ft=javascript
+autocmd FileType json ALEDisableBuffer

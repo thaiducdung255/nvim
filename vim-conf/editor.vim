@@ -101,6 +101,7 @@ nnoremap gm <C-i>
 inoremap jj <ESC>la
 nnoremap <silent><LEADER>w :w<CR>
 nnoremap <silent><LEADER>q :q<CR>
+nnoremap <silent><LEADER>Q :q!<CR>
 
 nnoremap <LEADER>ec :e ~/.config/nvim/vim-conf/
 nnoremap <silent><LEADER>ei :e ~/.config/nvim/init.vim<CR>
