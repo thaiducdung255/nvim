@@ -3,12 +3,13 @@ vnoremap <C-v> "+p<ESC>
 vnoremap <C-c> "+y<ESC>
 
 " auto pair bracket fix
-vnoremap [ di[]<ESC>hpf[
-vnoremap ( di()<ESC>hpF(i
-vnoremap ' di''<ESC>hpF'
-vnoremap " di""<ESC>hpf"
-vnoremap ` di``<ESC>hpf`
-vnoremap { di{<SPACE><SPACE>}<ESC>hhpll
+vnoremap sk di[]<ESC>hpf[
+vnoremap sj di()<ESC>hpF(i
+vnoremap s; di''<ESC>hpF'
+vnoremap s: di""<ESC>hpf"
+vnoremap s' di``<ESC>hpf`
+vnoremap sl di{<SPACE><SPACE>}<ESC>hhpll
+vnoremap sh di<><ESC>hpf<
 
 " brackets motions
 " go to brackets
@@ -67,11 +68,15 @@ nnoremap s' vi`
 nnoremap sh f<si<
 
 " brackets "/` modifications
-nnoremap y' hf`r'f`r'F'
-nnoremap y" hf'r`f'r`F`
-nnoremap yj f)xF(x
-nnoremap yk f]xF[x
-nnoremap yl f}hxxF{xx
+nnoremap :; f`r'f`r'F'
+nnoremap :' f'r`f'r`F`
+nnoremap '; f'xf'x
+nnoremap ': f"xf"x
+nnoremap '' f`xf`x
+nnoremap 'j f)xF(x
+nnoremap 'k f]xF[x
+nnoremap 'l f}hxxF{xx
+nnoremap 'h f>xF<x
 
 " toggle upper/lower case
 inoremap <C-z> <ESC>vbUea
@@ -97,8 +102,12 @@ nnoremap M <C-u>
 nnoremap gn <C-o>
 nnoremap gm <C-i>
 
+" remap redo command
+nnoremap U <C-r>
+
 " other
-inoremap jj <ESC>la
+inoremap kk <ESC>la
+inoremap jj <ESC>i
 nnoremap <silent><LEADER>w :w<CR>
 nnoremap <silent><LEADER>q :q<CR>
 nnoremap <silent><LEADER>Q :q!<CR>
@@ -107,7 +116,7 @@ nnoremap <LEADER>ec :e ~/.config/nvim/vim-conf/
 nnoremap <silent><LEADER>ei :e ~/.config/nvim/init.vim<CR>
 nnoremap <silent><LEADER>es :w<CR>:source %<CR>
 
-function! FindAndReplace()
+function! s:findAndReplace()
   call inputsave()
   let originalText = input('Replace: ')
   call inputrestore()
@@ -117,4 +126,4 @@ function! FindAndReplace()
   execute('%s/' . originalText . '/' . finalText . '/gc')
 endfunction
 
-nnoremap <silent><C-f> :call FindAndReplace()<CR>
+command! Frr call <SID>findAndReplace()

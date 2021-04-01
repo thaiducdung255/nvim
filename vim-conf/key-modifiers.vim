@@ -9,8 +9,8 @@ vnoremap : ;
 inoremap ;j ()<ESC>i
 inoremap ;k []<ESC>i
 inoremap ;l {}<ESC>i
-inoremap ;h ``<ESC>i
-inoremap ;a =>
+inoremap ;: ``<ESC>i
+inoremap ;f =>
 inoremap ;v ${}<ESC>i
 
 " number modifiers
@@ -25,37 +25,33 @@ inoremap ;i 8
 inoremap ;o 9
 inoremap ;p 0
 
-nnoremap 'q 1
-nnoremap 'w 2
-nnoremap 'e 3
-nnoremap 'r 4
-nnoremap 't 5
-nnoremap 'y 6
-nnoremap 'u 7
-nnoremap 'i 8
-nnoremap 'o 9
-nnoremap 'p 0
+nnoremap <C-q> 1
+nnoremap <C-w> 2
+nnoremap <C-e> 3
+nnoremap <C-r> 4
+nnoremap <C-t> 5
+nnoremap <C-a> 6
+nnoremap <C-s> 7
+nnoremap <C-d> 8
+nnoremap <C-f> 9
+nnoremap <C-g> 0
 
-vnoremap 'q 1
-vnoremap 'w 2
-vnoremap 'e 3
-vnoremap 'r 4
-vnoremap 't 5
-vnoremap 'y 6
-vnoremap 'u 7
-vnoremap 'i 8
-vnoremap 'o 9
-vnoremap 'p 0
+vnoremap <C-q> 1
+vnoremap <C-w> 2
+vnoremap <C-e> 3
+vnoremap <C-r> 4
+vnoremap <C-t> 5
+vnoremap <C-a> 6
+vnoremap <C-s> 7
+vnoremap <C-d> 8
+vnoremap <C-f> 9
+vnoremap <C-g> 0
 
 
 " special symbol modifiers
-inoremap 'q !
-inoremap 'w @
-inoremap 'e #
-inoremap 'r $
-inoremap 't %
-inoremap 'y ^
-inoremap 'u &
-inoremap 'i *
-inoremap 'o (
-inoremap 'p )
+inoremap ;n !
+inoremap ;d @
+inoremap ;c #
+inoremap ;m %
+inoremap ;a &
+inoremap ;s *
