@@ -19,11 +19,13 @@ inoremap ;w 2
 inoremap ;e 3
 inoremap ;r 4
 inoremap ;t 5
-inoremap ;y 6
-inoremap ;u 7
-inoremap ;i 8
-inoremap ;o 9
-inoremap ;p 0
+inoremap ;a 6
+inoremap ;s 7
+inoremap ;d 8
+inoremap ;f 9
+inoremap ;g 0
+inoremap ;z -
+inoremap ;x =
 
 nnoremap <C-q> 1
 nnoremap <C-w> 2
@@ -49,9 +51,15 @@ vnoremap <C-g> 0
 
 
 " special symbol modifiers
-inoremap ;n !
-inoremap ;d @
-inoremap ;c #
-inoremap ;m %
-inoremap ;a &
-inoremap ;s *
+inoremap ;Q !
+inoremap ;W @
+inoremap ;E #
+inoremap ;R $
+inoremap ;T %
+inoremap ;A ^
+inoremap ;S &
+inoremap ;D *
+inoremap ;F (
+inoremap ;G )
+inoremap ;Z _
+inoremap ;X +
