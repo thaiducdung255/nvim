@@ -15,14 +15,14 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'vim-scripts/SearchComplete'
    Plug 'brooth/far.vim'
    Plug 'AndrewRadev/switch.vim'
-
    Plug 'terryma/vim-expand-region'
    Plug 'editorconfig/editorconfig-vim'
    Plug 'voldikss/vim-floaterm'
    Plug 'wellle/targets.vim'
    Plug 'tpope/vim-dadbod'
-
    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+   " Plug 'pangloss/vim-javascript'
+   Plug 'ap/vim-css-color'
 
    " color schemes
    Plug 'jacoborus/tender.vim'
