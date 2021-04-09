@@ -14,7 +14,7 @@ source $HOME/.config/nvim/vim-conf/vim-rest-console.vim
 source $HOME/.config/nvim/vim-conf/themes.vim
 source $HOME/.config/nvim/vim-conf/vim-airline.vim
 source $HOME/.config/nvim/vim-conf/ale.vim
-source $HOME/.config/nvim/vim-conf/undotree.vim
+" source $HOME/.config/nvim/vim-conf/undotree.vim
 source $HOME/.config/nvim/vim-conf/coc.vim
 source $HOME/.config/nvim/vim-conf/buffer.vim
 source $HOME/.config/nvim/vim-conf/window.vim

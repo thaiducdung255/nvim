@@ -25,6 +25,8 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'puremourning/vimspector'
    Plug 'tpope/vim-dadbod'
 
+   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
    " color schemes
    Plug 'mhartington/oceanic-next'
    Plug 'zanglg/nova.vim'

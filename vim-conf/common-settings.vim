@@ -67,3 +67,9 @@ endfunction
 :command! -complete=file -nargs=1 Rpdf :r !pdftotext -nopgbrk <q-args> - |fmt -csw78
 autocmd FileType json set ft=javascript
 autocmd FileType json ALEDisableBuffer
+
+nnoremap g. :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+nnoremap <LEADER>rf :source ~/.config/nvim/init.vim<CR>:echo "synced nvim config"<CR>
