@@ -3,13 +3,13 @@ vnoremap <C-v> "+p<ESC>
 vnoremap <C-c> "+y<ESC>
 
 " auto pair bracket fix
-vnoremap sk di[]<ESC>hpf[
+vnoremap sk di[]<ESC>hpF[
 vnoremap sj di()<ESC>hpF(i
 vnoremap s; di''<ESC>hpF'
 vnoremap s: di""<ESC>hpf"
 vnoremap s' di``<ESC>hpf`
 vnoremap sl di{<SPACE><SPACE>}<ESC>hhpll
-vnoremap sh di<><ESC>hpf<
+vnoremap sh di<>i<ESC>hpf<
 
 " brackets motions
 " go to brackets
@@ -65,18 +65,18 @@ nnoremap sl f{vi{
 nnoremap s; vi'
 nnoremap s: vi"
 nnoremap s' vi`
-nnoremap sh f<si<
+nnoremap sh f<vi<
 
 " brackets "/` modifications
-nnoremap :; f`r'f`r'F'
-nnoremap :' f'r`f'r`F`
-nnoremap '; f'xf'x
-nnoremap ': f"xf"x
-nnoremap '' f`xf`x
-nnoremap 'j f)xF(x
-nnoremap 'k f]xF[x
-nnoremap 'l f}hxxF{xx
-nnoremap 'h f>xF<x
+nnoremap ;c f`r'f`r'F'
+nnoremap ;v f'r`f'r`F`
+nnoremap ;; f'xf'x
+nnoremap ;: f"xf"x
+nnoremap ;' f`xf`x
+nnoremap ;j f)xF(x
+nnoremap ;k f]xF[x
+nnoremap ;l f}hxxF{xx
+nnoremap ;h f>xF<x
 
 " toggle upper/lower case
 inoremap <C-z> <ESC>vbUea

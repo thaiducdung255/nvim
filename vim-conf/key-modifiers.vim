@@ -1,9 +1,5 @@
 " js auto convert ops
 inoremap ,, ,<CR>
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
 
 " auto insert brackets alternatives
 inoremap ;j ()<ESC>i
@@ -27,39 +23,42 @@ inoremap ;g 0
 inoremap ;z -
 inoremap ;x =
 
-nnoremap <C-q> 1
-nnoremap <C-w> 2
-nnoremap <C-e> 3
-nnoremap <C-r> 4
-nnoremap <C-t> 5
-nnoremap <C-a> 6
-nnoremap <C-s> 7
-nnoremap <C-d> 8
-nnoremap <C-f> 9
-nnoremap <C-g> 0
+nnoremap ;q 1
+nnoremap ;w 2
+nnoremap ;e 3
+nnoremap ;r 4
+nnoremap ;t 5
+nnoremap ;a 6
+nnoremap ;s 7
+nnoremap ;d 8
+nnoremap ;f 9
+nnoremap ;g 0
+nnoremap ;z -
+nnoremap ;x =
 
-vnoremap <C-q> 1
-vnoremap <C-w> 2
-vnoremap <C-e> 3
-vnoremap <C-r> 4
-vnoremap <C-t> 5
-vnoremap <C-a> 6
-vnoremap <C-s> 7
-vnoremap <C-d> 8
-vnoremap <C-f> 9
-vnoremap <C-g> 0
-
+vnoremap ;q 1
+vnoremap ;w 2
+vnoremap ;e 3
+vnoremap ;r 4
+vnoremap ;t 5
+vnoremap ;a 6
+vnoremap ;s 7
+vnoremap ;d 8
+vnoremap ;f 9
+vnoremap ;g 0
+vnoremap ;z -
+vnoremap ;x =
 
 " special symbol modifiers
-inoremap ;Q !
-inoremap ;W @
-inoremap ;E #
-inoremap ;R $
-inoremap ;T %
-inoremap ;A ^
-inoremap ;S &
-inoremap ;D *
-inoremap ;F (
-inoremap ;G )
-inoremap ;Z _
-inoremap ;X +
+inoremap ;;q !
+inoremap ;;w @
+inoremap ;;e #
+inoremap ;;r $
+inoremap ;;t %
+inoremap ;;a ^
+inoremap ;;s &
+inoremap ;;d *
+inoremap ;;f (
+inoremap ;;g )
+inoremap ;;z _
+inoremap ;;x +

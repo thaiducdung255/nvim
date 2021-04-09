@@ -101,6 +101,9 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<Tab>"
 let g:coc_snippet_next = '<leader><leader>'
 let g:coc_snippet_prev = '<leader>;'
 
+" Coc explorer configs
+nnoremap <LEADER>e :CocCommand explorer<CR>
+
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
