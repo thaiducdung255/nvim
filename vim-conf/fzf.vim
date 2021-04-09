@@ -6,9 +6,9 @@ let g:fzf_action = {
 
 " Enable per-command history.
 " Border color
-let g:fzf_layout = {'up':'~95%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
+let g:fzf_layout = {'up':'~99%', 'window': { 'width': 1, 'height': 0.95,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' } }
 
-let $FZF_DEFAULT_OPTS ="--preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+let $FZF_DEFAULT_OPTS ="--preview-window 'right:50%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 let $FZF_DEFAULT_COMMAND = 'ag -g "" --hidden --ignore-case --skip-vcs-ignores --ignore ".git/*" --ignore "build/*" --ignore ".local/*" --ignore ".cache/*" --ignore ".vim/*" --ignore "package-lock.json" --ignore ".npm/*" --ignore ".idea/*" --ignore "dist/*" --ignore "node_modules/*"'
 
 " Customize fzf colors to match your color scheme

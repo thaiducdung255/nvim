@@ -19,17 +19,12 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'terryma/vim-expand-region'
    Plug 'editorconfig/editorconfig-vim'
    Plug 'voldikss/vim-floaterm'
-   Plug 'vim-scripts/Align'
    Plug 'wellle/targets.vim'
-   Plug 'maxbrunsfeld/vim-yankstack'
-   Plug 'puremourning/vimspector'
    Plug 'tpope/vim-dadbod'
 
    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
    " color schemes
-   Plug 'mhartington/oceanic-next'
-   Plug 'zanglg/nova.vim'
    Plug 'jacoborus/tender.vim'
 
    " FZF integration
@@ -46,14 +41,6 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'haya14busa/incsearch.vim'
    Plug 'haya14busa/incsearch-easymotion.vim'
    Plug 'haya14busa/incsearch-fuzzy.vim'
-
-   Plug 'HerringtonDarkholme/yats.vim'
-
-   " plugs for go
-   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-   " plugs for js
-   Plug 'pangloss/vim-javascript'
 
    " git plugs
    Plug 'mhinz/vim-signify'
