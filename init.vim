@@ -28,5 +28,5 @@ source $HOME/.config/nvim/vim-conf/fzf.vim
 source $HOME/.config/nvim/vim-conf/rnvimr.vim
 source $HOME/.config/nvim/vim-conf/editor.vim
 source $HOME/.config/nvim/vim-conf/key-modifiers.vim
-source $HOME/.config/nvim/vim-conf/treesitter.vim
+source $HOME/.config/nvim/vim-conf/vim-go.vim
 source $HOME/.config/nvim/vim-conf/themes.vim

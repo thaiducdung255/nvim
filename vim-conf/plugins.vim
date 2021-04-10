@@ -20,8 +20,8 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'voldikss/vim-floaterm'
    Plug 'wellle/targets.vim'
    Plug 'tpope/vim-dadbod'
-   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-   " Plug 'pangloss/vim-javascript'
+   Plug 'pangloss/vim-javascript'
+   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
    Plug 'ap/vim-css-color'
 
    " color schemes
