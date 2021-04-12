@@ -23,7 +23,7 @@ hi typescriptDecorator guifg=#b445f5 gui=bold
 hi typescriptAsyncFuncKeyword guifg=#b445f5 gui=bold
 hi typescriptClassName guifg=#73cef4 gui=bold
 hi typescriptFuncName guifg=#c9d05c
-hi typescriptVariableDeclaration guifg=#c9d05c
+hi typescriptVariableDeclaration guifg=#c9d05c gui=bold
 hi typescriptFuncKeyWord guifg=#b445f5
 hi typescriptStatementKeyword guifg=#b445f5 gui=bold
 hi typescriptClassKeyword guifg=#b445f5
@@ -33,8 +33,17 @@ hi typescriptConditional guifg=#b445f5 gui=bold
 hi typescriptMember guifg=#73cef4 gui=bold
 hi typescriptTypeReference guifg=#73cef4
 hi typescriptFuncCallArg guifg=#73cef4
+hi typescriptFuncName guifg=#f43753 gui=bold
 hi typescriptBlock guifg=#73cef4
 hi typescriptGlobal guifg=#73cef4 gui=bold
-hi typescriptObjectLiteral guifg=#b3deef ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi typescriptTemplateSubstitution guifg=#73cef4 ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
-hi typescriptConditionalParen guifg=#c9d05c ctermfg=153 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi typescriptObjectLiteral guifg=#b3deef
+hi typescriptObjectLiteral guifg=#b3deef
+hi typescriptTemplateSubstitution guifg=#73cef4
+hi typescriptConditionalParen guifg=#c9d05c
+hi typescriptDOMDocMethod guifg=#73cef4
+hi typescriptHeadersMethod guifg=#f43753
+hi typescriptServiceWorkerMethod guifg=#f43753
+hi typescriptArray guifg=#b3deef
+hi typescriptTypeBrackets guifg=NONE
+hi typescriptTypeBraces guifg=NONE
+hi typescriptParens guifg=NONE
