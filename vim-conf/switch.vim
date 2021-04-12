@@ -1,4 +1,4 @@
-let g:switch_mapping="<leader>c"
+let g:switch_mapping="zz"
 
 let jsAndTsOptions = 
    \[

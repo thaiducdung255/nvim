@@ -4,4 +4,5 @@
   "diagnostic.displayByAle": true,
   "coc.source.buffer.firstMatch": false,
   "coc.source.around.firstMatch": false,
+  "explorer.icon.enableVimDevicons": true,
 }
