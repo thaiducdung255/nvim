@@ -6,8 +6,10 @@ inoremap ;k \[]<ESC>i
 inoremap ;l \{}<ESC>i
 inoremap ;h <><ESC>i
 inoremap ;: ``<ESC>i
-inoremap ;c =>
+inoremap ;c => 
 inoremap ;v ${}<ESC>i
+inoremap ;or \|\| 
+inoremap ;ro && 
 
 " number modifiers
 inoremap ;q 1

@@ -42,6 +42,7 @@ hi typescriptTemplateSubstitution guifg=#73cef4
 hi typescriptConditionalParen guifg=#c9d05c
 hi typescriptDOMDocMethod guifg=#73cef4
 hi typescriptHeadersMethod guifg=#f43753
+hi typescriptTernary guifg=#f43753
 hi typescriptServiceWorkerMethod guifg=#f43753
 hi typescriptArray guifg=#b3deef
 hi typescriptTypeBrackets guifg=NONE
