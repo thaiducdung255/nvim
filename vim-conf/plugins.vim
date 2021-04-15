@@ -24,7 +24,6 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
    Plug 'ap/vim-css-color'
    Plug 'ryanoasis/vim-devicons'
-   Plug 'ryanoasis/nerd-fonts'
 
    " color schemes
    Plug 'jacoborus/tender.vim'

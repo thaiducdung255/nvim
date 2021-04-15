@@ -15,9 +15,9 @@ hi jsFuncCall guifg=#57de54
 hi jsBlock guifg=#73cef4
 
 " ts custom colorscheme
-hi typescriptIdentifierName
+hi typescriptIdentifierName guifg=#57de54
 hi typescriptImport guifg=#57de54
-hi typescriptAccessibilityModifier
+hi typescriptAccessibilityModifier guifg=#57de54
 hi typescriptExport guifg=#57de54
 hi typescriptDecorator guifg=#57de54
 hi typescriptAsyncFuncKeyword guifg=#57de54
@@ -28,6 +28,7 @@ hi typescriptFuncKeyWord guifg=#57de54
 hi typescriptStatementKeyword guifg=#57de54
 hi typescriptClassKeyword guifg=#57de54
 hi typescriptDefault guifg=#57de54
+hi typescriptCase guifg=#57de54
 hi typescriptExceptions guifg=#f43753
 hi typescriptConditional guifg=#57de54
 hi typescriptMember guifg=#73cef4

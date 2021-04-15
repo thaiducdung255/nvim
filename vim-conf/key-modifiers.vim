@@ -1,15 +1,17 @@
 " js auto convert ops
 inoremap ,, ,<CR>
 " auto insert brackets alternatives
-inoremap ;j \()<ESC>i
-inoremap ;k \[]<ESC>i
-inoremap ;l \{}<ESC>i
+inoremap ;j ()<ESC>i
+inoremap ;k []<ESC>i
+inoremap ;l {}<ESC>i
 inoremap ;h <><ESC>i
 inoremap ;: ``<ESC>i
 inoremap ;c => 
 inoremap ;v ${}<ESC>i
 inoremap ;or \|\| 
 inoremap ;ro && 
+inoremap ;qen === 
+inoremap ;neq !== 
 
 " number modifiers
 inoremap ;q 1

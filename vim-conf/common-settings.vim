@@ -37,7 +37,7 @@ set fileformat=unix
 filetype on
 filetype plugin on
 filetype indent on
-set cursorline
+set nocursorline
 set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*
 set complete-=5
 set lazyredraw
