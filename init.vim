@@ -19,6 +19,7 @@ source $HOME/.config/nvim/vim-conf/window.vim
 source $HOME/.config/nvim/vim-conf/commands.vim
 source $HOME/.config/nvim/vim-conf/tab.vim
 source $HOME/.config/nvim/vim-conf/git.vim
+source $HOME/.config/nvim/vim-conf/conflict-marker.vim
 source $HOME/.config/nvim/vim-conf/terminal.vim
 source $HOME/.config/nvim/vim-conf/auto-pairs.vim
 source $HOME/.config/nvim/vim-conf/vim-maximizer.vim

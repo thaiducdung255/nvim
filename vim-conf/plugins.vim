@@ -49,6 +49,7 @@ call plug#begin('/home/df/.vim/autoload')
    Plug 'tpope/vim-rhubarb'
    Plug 'junegunn/gv.vim'
    Plug 'APZelos/blamer.nvim'
+   Plug 'rhysd/conflict-marker.vim'
 
    call plug#end()
 
