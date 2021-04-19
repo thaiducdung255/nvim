@@ -16,6 +16,12 @@ hi jsBlock guifg=#73cef4
 
 " ts custom colorscheme
 hi typescriptIdentifierName guifg=#57de54
+hi typescriptInterfaceExtends guifg=#57de54
+hi typescriptInterfaceKeyword guifg=#57de54
+hi typescriptAliasKeyword guifg=#57de54
+hi typescriptInterfaceHeritage guifg=#c9d05c
+hi typescriptInterfaceName guifg=#c9d05c
+hi typescriptAliasDeclaration guifg=#c9d05c
 hi typescriptImport guifg=#57de54
 hi typescriptAccessibilityModifier guifg=#57de54
 hi typescriptExport guifg=#57de54
