@@ -31,8 +31,8 @@ vim.cmd([[
 -- TODO fix this
 -- resize with arrows
 vim.cmd([[
-  nnoremap <silent> <C-Up>    :resize -2<CR>
-  nnoremap <silent> <C-Down>  :resize +2<CR>
+  nnoremap <silent> <C-Up>    :resize -1<CR>
+  nnoremap <silent> <C-Down>  :resize +1<CR>
   nnoremap <silent> <C-Left>  :vertical resize -2<CR>
   nnoremap <silent> <C-Right> :vertical resize +2<CR>
 ]])
