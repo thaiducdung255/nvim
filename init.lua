@@ -1,0 +1,12 @@
+require('global')
+require('plugins')
+require('compe-conf')
+
+require('lsp')
+require('lsp.vim')
+require('lsp.go')
+require('lsp.python')
+require('lsp.bash')
+require('lsp.ts-js')
+require('lsp.json')
+require('lsp.lua')
