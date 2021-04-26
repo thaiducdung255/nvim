@@ -40,6 +40,7 @@ vim.bo.autoindent = true
 vim.bo.copyindent = true
 vim.bo.swapfile = false
 
+vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.wrap = false
---vim.wo.signcolumn = 'yes'
+vim.wo.signcolumn = 'yes'
