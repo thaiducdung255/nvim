@@ -1,6 +1,8 @@
 require('global')
 require('plugins')
 require('compe-conf')
+require('configs')
+require('mappings')
 
 require('lsp')
 require('lsp.vim')
