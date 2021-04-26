@@ -18,9 +18,18 @@ function tmap(lhs, rhs, opts)
    map(lhs, rhs, 't', opts)
 end
 
+function vmap(lhs, rhs, opts)
+   map(lhs, rhs, 'v', opts)
+end
+
 function inmap(lhs, rhs, opts)
    map(lhs, rhs, 'i', opts)
    map(lhs, rhs, 'n', opts)
+end
+
+function nvmap(lhs, rhs, opts)
+   map(lhs, rhs, 'n', opts)
+   map(lhs, rhs, 'v', opts)
 end
 
 -- window cmds
@@ -36,9 +45,37 @@ nmap('<leader>sn', ':vsplit<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- buffer cmds
+---------------------------------------------------------------------------------------------------
 
 -- tabs cmds
+---------------------------------------------------------------------------------------------------
 
 -- file cmds
 nmap('<leader>q', ':q<CR>')
 nmap('<leader>w', ':w<CR>')
+---------------------------------------------------------------------------------------------------
+
+-- system cmds
+---- use system copy/paste shortcuts
+vmap('<C-c>', '"+y<ESC>')
+vmap('<C-v>', '"+p<ESC>')
+---------------------------------------------------------------------------------------------------
+
+-- other
+imap('kk', '<ESC>la')
+imap('jj', '<ESC>i')
+
+nmap('U', '<C-r>')
+
+nmap('gn', '<C-o>')
+nmap('gm', '<C-i>')
+
+nmap('N', '<C-d>')
+nmap('M', '<C-u>')
+
+nmap('<leader>v', 'v$h')
+nmap('Y', 'y$')
+
+nvmap('ga', '^')
+nvmap('gf', '$')
+---------------------------------------------------------------------------------------------------
