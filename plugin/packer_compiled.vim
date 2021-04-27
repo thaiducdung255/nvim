@@ -76,6 +76,10 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/df/.local/share/nvim/site/pack/packer/opt/barbar.nvim"
   },
+  ["blamer.nvim"] = {
+    loaded = true,
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/blamer.nvim"
+  },
   ["dashboard-nvim"] = {
     loaded = false,
     needs_bufread = false,
@@ -95,6 +99,10 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     path = "/home/df/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim"
+  },
+  indentLine = {
+    loaded = true,
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/indentLine"
   },
   ["lspsaga.nvim"] = {
     loaded = false,
@@ -159,10 +167,38 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/df/.local/share/nvim/site/pack/packer/opt/popup.nvim"
   },
+  ["quick-scope"] = {
+    loaded = true,
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/quick-scope"
+  },
+  ["switch.vim"] = {
+    loaded = true,
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/switch.vim"
+  },
   ["telescope.nvim"] = {
     loaded = false,
     needs_bufread = false,
     path = "/home/df/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
+  },
+  undotree = {
+    loaded = true,
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/undotree"
+  },
+  ["vim-css-color"] = {
+    loaded = true,
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/vim-css-color"
+  },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/vim-floaterm"
+  },
+  ["vim-maximizer"] = {
+    loaded = true,
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/vim-maximizer"
+  },
+  ["vim-rest-console"] = {
+    loaded = true,
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/vim-rest-console"
   },
   ["vim-vsnip"] = {
     loaded = false,

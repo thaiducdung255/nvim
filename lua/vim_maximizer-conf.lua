@@ -1,0 +1,1 @@
+Nmap('m', ':MaximizerToggle<CR>')

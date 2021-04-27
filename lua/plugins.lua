@@ -3,7 +3,7 @@ local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
-    execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
+   execute('!git clone https://github.com/wbthomason/packer.nvim ' .. install_path)
     execute 'packadd packer.nvim'
 end
 
@@ -57,15 +57,24 @@ return require('packer').startup(
 
         -- Explorer
         use 'kyazdani42/nvim-tree.lua'
+        use 'mbbill/undotree'
+        use 'unblevable/quick-scope'
+        use 'Yggdroot/indentLine'
+        use 'szw/vim-maximizer'
+        use 'AndrewRadev/switch.vim'
+        use 'voldikss/vim-floaterm'
+        use 'ap/vim-css-color'
 
         -- use {'lukas-reineke/indent-blankline.nvim', opt=true, branch = 'lua'}
         use {'lewis6991/gitsigns.nvim', opt = true}
+        use 'APZelos/blamer.nvim'
+
         use {'ChristianChiarulli/dashboard-nvim', opt = true}
         use {'windwp/nvim-autopairs', opt = true}
 --        use {'terrortylor/nvim-comment', opt = true}
 --        use {'kevinhwang91/nvim-bqf', opt = true}
 
-        -- Color
+        -- Color scheme
         use {'christianchiarulli/nvcode-color-schemes.vim', opt = true}
 
         -- Icons
@@ -74,6 +83,9 @@ return require('packer').startup(
         -- Status Line and Bufferline
         use {'glepnir/galaxyline.nvim', opt = true}
         use {'romgrk/barbar.nvim', opt = true}
+
+        -- Rest api
+         use {'diepm/vim-rest-console'}
 
         require_plugin('nvim-lspconfig')
         require_plugin('lspsaga.nvim')
@@ -90,6 +102,15 @@ return require('packer').startup(
         require_plugin('gitsigns.nvim')
         require_plugin('dashboard-nvim')
         require_plugin('nvim-autopairs')
+        require_plugin('diepm/vim-rest-console')
+        require_plugin('APZelos/blamer.nvim')
+        require_plugin('mbbill/undotree')
+        require_plugin('unblevable/quick-scope')
+        require_plugin('Yggdroot/indentLine')
+        require_plugin('szw/vim-maximizer')
+        require_plugin('AndrewRadev/switch.vim')
+        require_plugin('voldikss/vim-floaterm')
+        require_plugin('ap/vim-css-color')
 --        require_plugin('nvim-comment')
 --        require_plugin('nvim-bqf')
         require_plugin('nvcode-color-schemes.vim')
