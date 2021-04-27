@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time("Luarocks path setup", true)
-local package_path_str = "/home/df/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/df/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/df/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/df/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/df/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/df/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?.lua;/home/df/.cache/nvim/packer_hererocks/2.0.5/share/lua/5.1/?/init.lua;/home/df/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?.lua;/home/df/.cache/nvim/packer_hererocks/2.0.5/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/df/.cache/nvim/packer_hererocks/2.0.5/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -158,10 +158,6 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     path = "/home/df/.local/share/nvim/site/pack/packer/opt/popup.nvim"
-  },
-  ["tabline.vim"] = {
-    loaded = true,
-    path = "/home/df/.local/share/nvim/site/pack/packer/start/tabline.vim"
   },
   ["telescope.nvim"] = {
     loaded = false,
