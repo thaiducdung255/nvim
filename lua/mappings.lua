@@ -79,3 +79,46 @@ nmap('Y', 'y$')
 nvmap('ga', '^')
 nvmap('gf', '$')
 ---------------------------------------------------------------------------------------------------
+
+-- other cmds
+---- auto pair brackets
+---- bracket navs
+nmap('gj', 'f(')
+nmap('gk', 'f[')
+nmap('gl', 'f{')
+nmap('g;', 'f\'')
+nmap('g:', 'f"')
+nmap('g\'', 'f`')
+nmap('gh', 'f<')
+
+nmap('gJ', 'f)')
+nmap('gK', 'f]')
+nmap('gL', 'f}')
+nmap('gH', 'f>')
+
+---- insert brackets
+vmap('sj', 'di()<ESC>hpF(i')
+vmap('sk', 'di[]<ESC>hpl')
+vmap('sl', 'di{<space><space>}<ESC>hhpll')
+vmap('s;', 'di\'\'<ESC>hpl')
+vmap('s:', 'di""<ESC>hpl')
+vmap('s\'', 'di``<ESC>hpl')
+vmap('sh', 'di<><ESC>hpl')
+
+---- edit brackets motion with t/T
+nmap('zj', 'ct)')
+nmap('zk', 'ct]')
+nmap('zl', 'ct}')
+nmap('z;', 'ct\'')
+nmap('z:', 'ct"')
+nmap('z\'', 'ct`')
+nmap('zh', 'ct>')
+
+nmap('zJ', 'cT)')
+nmap('zK', 'cT]')
+nmap('zL', 'cT}')
+nmap('z:', 'cT\'')
+nmap('z;', 'cT"')
+nmap('z\'', 'cT`')
+nmap('zH', 'cT>')
+---------------------------------------------------------------------------------------------------
