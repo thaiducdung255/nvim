@@ -76,10 +76,25 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/df/.local/share/nvim/site/pack/packer/opt/friendly-snippets"
   },
+  ["galaxyline.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/galaxyline.nvim"
+  },
   ["lspsaga.nvim"] = {
     loaded = false,
     needs_bufread = false,
     path = "/home/df/.local/share/nvim/site/pack/packer/opt/lspsaga.nvim"
+  },
+  ["nvcode-color-schemes.vim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/nvcode-color-schemes.vim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-autopairs"
   },
   ["nvim-compe"] = {
     after_files = { "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_buffer.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_calc.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_emoji.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_luasnip.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_nvim_lsp.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_nvim_lua.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_omni.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_path.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_snippets_nvim.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_spell.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_tags.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_treesitter.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_ultisnips.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_vim_lsc.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_vim_lsp.vim", "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-compe/after/plugin/compe_vsnip.vim" },
@@ -105,13 +120,33 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/df/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/df/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
+  ["plenary.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/plenary.nvim"
+  },
+  ["popup.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/popup.nvim"
+  },
   rnvimr = {
     loaded = true,
     path = "/home/df/.local/share/nvim/site/pack/packer/start/rnvimr"
+  },
+  ["telescope.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/telescope.nvim"
   },
   ["vim-vsnip"] = {
     loaded = false,
