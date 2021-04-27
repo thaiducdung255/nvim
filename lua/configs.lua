@@ -21,7 +21,7 @@ vim.o.cmdheight = 1
 vim.o.backup = false
 vim.o.termguicolors = true
 vim.o.writebackup = false
-vim.o.timeoutlen = 500
+vim.o.timeoutlen = 750
 vim.o.clipboard = 'unnamedplus'
 vim.o.showmode = false
 vim.o.fileformat = 'unix'
@@ -49,6 +49,7 @@ vim.o.copyindent = true
 vim.o.swapfile = false
 
 --vim.wo.number = true
+vim.wo.cursorline = true
 vim.wo.relativenumber = true
 vim.wo.wrap = false
 vim.wo.signcolumn = 'yes'

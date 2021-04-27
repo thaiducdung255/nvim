@@ -71,6 +71,16 @@ end
 time("try_loadstring definition", false)
 time("Defining packer_plugins", true)
 _G.packer_plugins = {
+  ["barbar.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/barbar.nvim"
+  },
+  ["dashboard-nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/dashboard-nvim"
+  },
   ["friendly-snippets"] = {
     loaded = false,
     needs_bufread = false,
@@ -125,6 +135,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/df/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
+  ["nvim-ts-autotag"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag"
+  },
   ["nvim-web-devicons"] = {
     loaded = false,
     needs_bufread = false,
@@ -144,9 +159,9 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/df/.local/share/nvim/site/pack/packer/opt/popup.nvim"
   },
-  rnvimr = {
+  ["tabline.vim"] = {
     loaded = true,
-    path = "/home/df/.local/share/nvim/site/pack/packer/start/rnvimr"
+    path = "/home/df/.local/share/nvim/site/pack/packer/start/tabline.vim"
   },
   ["telescope.nvim"] = {
     loaded = false,

@@ -1,0 +1,28 @@
+-- number maps
+Invmap(';q', '1')
+Invmap(';w', '2')
+Invmap(';e', '3')
+Invmap(';r', '4')
+Invmap(';t', '5')
+Invmap(';a', '6')
+Invmap(';s', '7')
+Invmap(';d', '8')
+Invmap(';f', '9')
+Invmap(';g', '0')
+Invmap(';z', '-')
+Invmap(';x', '=')
+
+-- symbol maps
+Imap(';;q', '!')
+Imap(';;w', '@')
+Imap(';;e', '#')
+Imap(';;r', '$')
+Imap(';;t', '%')
+Imap(';;a', '^')
+Imap(';;s', '&')
+Imap(';;d', '*')
+Imap(';;f', '(')
+Imap(';;g', ')')
+Imap(';;z', '_')
+Imap(';;x', '+')
+

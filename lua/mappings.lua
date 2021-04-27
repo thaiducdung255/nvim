@@ -1,37 +1,3 @@
-local function map(lhs, rhs, mode, opts)
-   local options = { noremap = true, silent = true }
-   local vimMode = mode
-   if opts then options = vim.tbl_extend('force', options, opts) end
-   if mode == nil then vimMode = 'n' end
-   vim.api.nvim_set_keymap(vimMode, lhs, rhs, options)
-end
-
-function Nmap(lhs, rhs, opts)
-   map(lhs, rhs, 'n', opts)
-end
-
-function Imap(lhs, rhs, opts)
-   map(lhs, rhs, 'i', opts)
-end
-
-function Tmap(lhs, rhs, opts)
-   map(lhs, rhs, 't', opts)
-end
-
-function Vmap(lhs, rhs, opts)
-   map(lhs, rhs, 'v', opts)
-end
-
-function Inmap(lhs, rhs, opts)
-   map(lhs, rhs, 'i', opts)
-   map(lhs, rhs, 'n', opts)
-end
-
-function Nvmap(lhs, rhs, opts)
-   map(lhs, rhs, 'n', opts)
-   map(lhs, rhs, 'v', opts)
-end
-
 -- window cmds
 ---- nav cmds
 Nmap('<leader>l', '<C-w>l')
@@ -39,49 +5,95 @@ Nmap('<leader>k', '<C-w>k')
 Nmap('<leader>j', '<C-w>j')
 Nmap('<leader>h', '<C-w>h')
 
+---- resize window cmds
+Nmap('<C-h>', ':vertical resize -2<CR>')
+Nmap('<C-j>', ':resize -2<CR>')
+Nmap('<C-k>', ':resize +2<CR>')
+Nmap('<C-l>', ':vertical resize +2<CR>')
+
 ---- split cmds
 Nmap('<leader>sm', ':split<CR>')
 Nmap('<leader>sn', ':vsplit<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- buffer cmds
+Nmap('<S-l>', ':bn<CR>')
+Nmap('<S-h>', ':bp<CR>')
+Nmap('gq', ':bd<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- tabs cmds
+Nmap('<leader>t', ':tabnew<CR>')
+Nmap('<S-j>', ':tabprev<CR>')
+Nmap('<S-k>', ':tabnext<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- file cmds
 Nmap('<leader>q', ':q<CR>')
 Nmap('<leader>w', ':w<CR>')
+
+-- terminal cmds
+Tmap('<ESC>', '<C-\\><C-n>')
+Nmap('<Tab>', ':ter<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- system cmds
 ---- use system copy/paste shortcuts
 Nmap('<C-c>', '"+y<ESC>')
 Nmap('<C-v>', '"+p<ESC>')
----------------------------------------------------------------------------------------------------
 
--- other
-Nmap('kk', '<ESC>la')
-Nmap('jj', '<ESC>i')
-
-Nmap('U', '<C-r>')
-
-Nmap('gn', '<C-o>')
-Nmap('gm', '<C-i>')
-
-Nmap('N', '<C-d>')
-Nmap('M', '<C-u>')
-
-Nmap('<leader>v', 'v$h')
-Nmap('Y', 'y$')
-
-Nvmap('ga', '^')
-Nvmap('gf', '$')
+Vmap('p', '"_dP')
 ---------------------------------------------------------------------------------------------------
 
 -- other cmds
+---- cursor nav cmds
+Imap('kk', '<ESC>la')
+Imap('jj', '<ESC>i')
+
+---- undo cmds
+Nmap('U', '<C-r>')
+
+---- mru file nav cmds
+Nmap('gn', '<C-o>')
+Nmap('gm', '<C-i>')
+
+---- scroll cmds
+Nmap('N', '<C-d>')
+Nmap('M', '<C-u>')
+
+---- custom yank/select cmds
+Nmap('<leader>v', 'v$h')
+Nmap('Y', 'y$')
+
+---- go to first/last position of a line
+Nvmap('ga', '^')
+Nvmap('gf', '$')
+
+---- toggle upper/lower/camel case
+Imap(';uu', '<ESC>vbUea')
+Imap(';ll', '<ESC>vbuea')
+Imap(';ul', '<ESC>b~ea')
+
+---- bracket fix cmds
+Nmap(';c', 'f`r\'f`r\'F\'')
+Nmap(';v', 'f\'r`f\'r`F`')
+
+---- bracket delete cmds
+Nmap(';;', 'f\'xf\'x')
+Nmap(';:', 'f"xf"x')
+Nmap(';\'', 'f`xf`x')
+Nmap(';j', 'f)xF(x')
+Nmap(';k', 'f]xF[x')
+Nmap(';l', 'f}hxxF{xx')
+Nmap(';h', 'f>xF<x')
+
 ---- auto pair brackets
+Imap(';j', '()<left>')
+Imap(';k', '[]<left>')
+Imap(';l', '{}<left>')
+Imap(';h', '<><left>')
+Imap(';;', '``<left>')
+
 ---- bracket navs
 Nmap('gj', 'f(')
 Nmap('gk', 'f[')
@@ -121,4 +133,31 @@ Nmap('z:', 'cT\'')
 Nmap('z;', 'cT"')
 Nmap('z\'', 'cT`')
 Nmap('zH', 'cT>')
+
+---- edit inside bracket cmds
+Nmap('cj', 'f(ci(')
+Nmap('ck', 'f[ci[')
+Nmap('cl', 'f{ci{')
+Nmap('c;', 'ci\'')
+Nmap('c:', 'ci"')
+Nmap('c\'', 'ci`')
+Nmap('ch', 'f<ci<')
+
+---- delete inside bracket cmds
+Nmap('dj', 'f(di(')
+Nmap('dk', 'f[di[')
+Nmap('dl', 'f{di{')
+Nmap('d;', 'di\'')
+Nmap('d:', 'di"')
+Nmap('d\'', 'di`')
+Nmap('dh', 'f<di<')
+
+---- select inside bracket cmds
+Nmap('sj', 'f(vi(')
+Nmap('sk', 'f[vi[')
+Nmap('sl', 'f{vi{')
+Nmap('s;', 'vi\'')
+Nmap('s:', 'vi"')
+Nmap('s\'', 'vi`')
+Nmap('sh', 'f<vi<')
 ---------------------------------------------------------------------------------------------------

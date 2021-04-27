@@ -1,13 +1,44 @@
-O = {
-    auto_close_tree = 0,
-    auto_complete = true,
-    colorscheme = 'lunar',
-    hidden_files = true,
-    wrap_lines = false,
-    number = true,
-    relative_number = true,
-    shell = 'bash',
+local function map(lhs, rhs, mode, opts)
+   local options = { noremap = true, silent = true }
+   local vimMode = mode
+   if opts then options = vim.tbl_extend('force', options, opts) end
+   if mode == nil then vimMode = 'n' end
+   vim.api.nvim_set_keymap(vimMode, lhs, rhs, options)
+end
 
+function Nmap(lhs, rhs, opts)
+   map(lhs, rhs, 'n', opts)
+end
+
+function Imap(lhs, rhs, opts)
+   map(lhs, rhs, 'i', opts)
+end
+
+function Tmap(lhs, rhs, opts)
+   map(lhs, rhs, 't', opts)
+end
+
+function Vmap(lhs, rhs, opts)
+   map(lhs, rhs, 'v', opts)
+end
+
+function Inmap(lhs, rhs, opts)
+   map(lhs, rhs, 'i', opts)
+   map(lhs, rhs, 'n', opts)
+end
+
+function Nvmap(lhs, rhs, opts)
+   map(lhs, rhs, 'n', opts)
+   map(lhs, rhs, 'v', opts)
+end
+
+function Invmap(lhs, rhs, opts)
+   map(lhs, rhs, 'n', opts)
+   map(lhs, rhs, 'v', opts)
+   map(lhs, rhs, 'i', opts)
+end
+
+O = {
     -- @usage pass a table with your desired languages
     treesitter = {
         ensure_installed = "all",
@@ -17,7 +48,6 @@ O = {
         rainbow = {enabled = false}
     },
 
-    database = {save_location = '~/.config/nvcode_db', auto_execute = 1},
     python = {
         linter = '',
         -- @usage can be 'yapf', 'black'
@@ -26,7 +56,6 @@ O = {
         isort = false,
         diagnostics = {virtual_text = true, signs = true, underline = true}
     },
-    dart = {sdk_path = '/usr/lib/dart/bin/snapshots/analysis_server.dart.snapshot'},
     lua = {
         -- @usage can be 'lua-format'
         formatter = '',
@@ -55,12 +84,6 @@ O = {
         autoformat = false,
         diagnostics = {virtual_text = true, signs = true, underline = true}
     },
-    tailwindls = {filetypes = {'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'}},
-    clang = {diagnostics = {virtual_text = true, signs = true, underline = true}},
-	ruby = {
-		diagnostics = {virtualtext = true, signs = true, underline = true},
-		filetypes = {'rb', 'erb', 'rakefile'}
-	}
     -- css = {formatter = '', autoformat = false, virtual_text = true},
     -- json = {formatter = '', autoformat = false, virtual_text = true}
 }
