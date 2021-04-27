@@ -192,10 +192,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/df/.local/share/nvim/site/pack/packer/start/vim-floaterm"
   },
-  ["vim-go"] = {
-    loaded = true,
-    path = "/home/df/.local/share/nvim/site/pack/packer/start/vim-go"
-  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "/home/df/.local/share/nvim/site/pack/packer/start/vim-maximizer"

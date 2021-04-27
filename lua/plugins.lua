@@ -72,7 +72,7 @@ return require('packer').startup(
 
         use {'ChristianChiarulli/dashboard-nvim', opt = true}
         use {'windwp/nvim-autopairs', opt = true}
---        use {'terrortylor/nvim-comment', opt = true}
+        use {'terrortylor/nvim-comment', opt = true}
 --        use {'kevinhwang91/nvim-bqf', opt = true}
 
         -- Color scheme
@@ -112,8 +112,8 @@ return require('packer').startup(
         require_plugin('AndrewRadev/switch.vim')
         require_plugin('voldikss/vim-floaterm')
         require_plugin('ap/vim-css-color')
+        require_plugin('nvim-comment')
 --        require_plugin('fatih/vim-go')
---        require_plugin('nvim-comment')
 --        require_plugin('nvim-bqf')
         require_plugin('nvcode-color-schemes.vim')
         require_plugin('nvim-web-devicons')
