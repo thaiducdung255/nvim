@@ -40,8 +40,8 @@ Tmap('<ESC>', '<C-\\><C-n>')
 Nmap('<Tab>', ';')
 Nmap('<S-Tab>', ',')
 ---- use system copy/paste shortcuts
-Nmap('<C-c>', '"+y<ESC>')
-Nmap('<C-v>', '"+p<ESC>')
+--Nmap('<C-c>', '"+y<ESC>')
+--Nmap('<C-v>', '"+p<ESC>')
 
 Vmap('p', '"_dP')
 ---------------------------------------------------------------------------------------------------
