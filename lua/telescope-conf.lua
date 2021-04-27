@@ -64,19 +64,19 @@ require('telescope').setup {
     }
 }
 
-nmap('<leader>ff', ':Telescope find_files<CR>')
-nmap('<leader>fr', ':Telescope oldfiles<CR>')
-nmap('<leader>fb', ':Telescope buffers<CR>')
-nmap('<leader>fS', ':Telescope grep_string<CR>')
-nmap('<leader>fs', ':Telescope live_grep<CR>')
+Nmap('<leader>ff', ':Telescope find_files<CR>')
+Nmap('<leader>fr', ':Telescope oldfiles<CR>')
+Nmap('<leader>fb', ':Telescope buffers<CR>')
+Nmap('<leader>fS', ':Telescope grep_string<CR>')
+Nmap('<leader>fs', ':Telescope live_grep<CR>')
 
-nmap('<leader>cm', ':Telescope commands<CR>')
-nmap('<leader>ch', ':Telescope command_history<CR>')
-nmap('<leader>km', ':Telescope keymaps<CR>')
+Nmap('<leader>cm', ':Telescope commands<CR>')
+Nmap('<leader>ch', ':Telescope command_history<CR>')
+Nmap('<leader>km', ':Telescope keymaps<CR>')
 
-nmap('<leader>cs', ':Telescope colorscheme<CR>')
-nmap('<leader>sc', ':Telescope hilights<CR>')
+Nmap('<leader>cs', ':Telescope colorscheme<CR>')
+Nmap('<leader>sc', ':Telescope hilights<CR>')
 
-nmap('<leader>gb', ':Telescope git_branches<CR>')
-nmap('<leader>gc', ':Telescope git_commits<CR>')
-nmap('<leader>gs', ':Telescope git_status<CR>')
+Nmap('<leader>gb', ':Telescope git_branches<CR>')
+Nmap('<leader>gc', ':Telescope git_commits<CR>')
+Nmap('<leader>gs', ':Telescope git_status<CR>')

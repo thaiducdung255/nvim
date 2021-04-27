@@ -63,4 +63,4 @@ vim.g.nvim_tree_icons = {
     folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
 }
 
-nmap('<leader>e', ':NvimTreeToggle<CR>')
+Nmap('<leader>e', ':NvimTreeToggle<CR>')

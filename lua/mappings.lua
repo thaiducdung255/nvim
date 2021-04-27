@@ -6,42 +6,42 @@ local function map(lhs, rhs, mode, opts)
    vim.api.nvim_set_keymap(vimMode, lhs, rhs, options)
 end
 
-function nmap(lhs, rhs, opts)
+function Nmap(lhs, rhs, opts)
    map(lhs, rhs, 'n', opts)
 end
 
-function imap(lhs, rhs, opts)
+function Imap(lhs, rhs, opts)
    map(lhs, rhs, 'i', opts)
 end
 
-function tmap(lhs, rhs, opts)
+function Tmap(lhs, rhs, opts)
    map(lhs, rhs, 't', opts)
 end
 
-function vmap(lhs, rhs, opts)
+function Vmap(lhs, rhs, opts)
    map(lhs, rhs, 'v', opts)
 end
 
-function inmap(lhs, rhs, opts)
+function Inmap(lhs, rhs, opts)
    map(lhs, rhs, 'i', opts)
    map(lhs, rhs, 'n', opts)
 end
 
-function nvmap(lhs, rhs, opts)
+function Nvmap(lhs, rhs, opts)
    map(lhs, rhs, 'n', opts)
    map(lhs, rhs, 'v', opts)
 end
 
 -- window cmds
 ---- nav cmds
-nmap('<leader>l', '<C-w>l')
-nmap('<leader>k', '<C-w>k')
-nmap('<leader>j', '<C-w>j')
-nmap('<leader>h', '<C-w>h')
+Nmap('<leader>l', '<C-w>l')
+Nmap('<leader>k', '<C-w>k')
+Nmap('<leader>j', '<C-w>j')
+Nmap('<leader>h', '<C-w>h')
 
 ---- split cmds
-nmap('<leader>sm', ':split<CR>')
-nmap('<leader>sn', ':vsplit<CR>')
+Nmap('<leader>sm', ':split<CR>')
+Nmap('<leader>sn', ':vsplit<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- buffer cmds
@@ -51,74 +51,74 @@ nmap('<leader>sn', ':vsplit<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- file cmds
-nmap('<leader>q', ':q<CR>')
-nmap('<leader>w', ':w<CR>')
+Nmap('<leader>q', ':q<CR>')
+Nmap('<leader>w', ':w<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- system cmds
 ---- use system copy/paste shortcuts
-vmap('<C-c>', '"+y<ESC>')
-vmap('<C-v>', '"+p<ESC>')
+Nmap('<C-c>', '"+y<ESC>')
+Nmap('<C-v>', '"+p<ESC>')
 ---------------------------------------------------------------------------------------------------
 
 -- other
-imap('kk', '<ESC>la')
-imap('jj', '<ESC>i')
+Nmap('kk', '<ESC>la')
+Nmap('jj', '<ESC>i')
 
-nmap('U', '<C-r>')
+Nmap('U', '<C-r>')
 
-nmap('gn', '<C-o>')
-nmap('gm', '<C-i>')
+Nmap('gn', '<C-o>')
+Nmap('gm', '<C-i>')
 
-nmap('N', '<C-d>')
-nmap('M', '<C-u>')
+Nmap('N', '<C-d>')
+Nmap('M', '<C-u>')
 
-nmap('<leader>v', 'v$h')
-nmap('Y', 'y$')
+Nmap('<leader>v', 'v$h')
+Nmap('Y', 'y$')
 
-nvmap('ga', '^')
-nvmap('gf', '$')
+Nvmap('ga', '^')
+Nvmap('gf', '$')
 ---------------------------------------------------------------------------------------------------
 
 -- other cmds
 ---- auto pair brackets
 ---- bracket navs
-nmap('gj', 'f(')
-nmap('gk', 'f[')
-nmap('gl', 'f{')
-nmap('g;', 'f\'')
-nmap('g:', 'f"')
-nmap('g\'', 'f`')
-nmap('gh', 'f<')
+Nmap('gj', 'f(')
+Nmap('gk', 'f[')
+Nmap('gl', 'f{')
+Nmap('g;', 'f\'')
+Nmap('g:', 'f"')
+Nmap('g\'', 'f`')
+Nmap('gh', 'f<')
 
-nmap('gJ', 'f)')
-nmap('gK', 'f]')
-nmap('gL', 'f}')
-nmap('gH', 'f>')
+Nmap('gJ', 'f)')
+Nmap('gK', 'f]')
+Nmap('gL', 'f}')
+Nmap('gH', 'f>')
 
 ---- insert brackets
-vmap('sj', 'di()<ESC>hpF(i')
-vmap('sk', 'di[]<ESC>hpl')
-vmap('sl', 'di{<space><space>}<ESC>hhpll')
-vmap('s;', 'di\'\'<ESC>hpl')
-vmap('s:', 'di""<ESC>hpl')
-vmap('s\'', 'di``<ESC>hpl')
-vmap('sh', 'di<><ESC>hpl')
+Vmap('sj', 'di()<ESC>hpF(i')
+Vmap('sk', 'di[]<ESC>hpl')
+Vmap('sl', 'di{<space><space>}<ESC>hhpll')
+Vmap('s;', 'di\'\'<ESC>hpl')
+Vmap('s:', 'di""<ESC>hpl')
+Vmap('s\'', 'di``<ESC>hpl')
+Vmap('sh', 'di<><ESC>hpl')
 
 ---- edit brackets motion with t/T
-nmap('zj', 'ct)')
-nmap('zk', 'ct]')
-nmap('zl', 'ct}')
-nmap('z;', 'ct\'')
-nmap('z:', 'ct"')
-nmap('z\'', 'ct`')
-nmap('zh', 'ct>')
+Nmap('zj', 'ct)')
+Nmap('zk', 'ct]')
+Nmap('zl', 'ct}')
+Nmap('z;', 'ct\'')
+Nmap('z:', 'ct"')
+Nmap('z\'', 'ct`')
+Nmap('zh', 'ct>')
 
-nmap('zJ', 'cT)')
-nmap('zK', 'cT]')
-nmap('zL', 'cT}')
-nmap('z:', 'cT\'')
-nmap('z;', 'cT"')
-nmap('z\'', 'cT`')
-nmap('zH', 'cT>')
+Nmap('zJ', 'cT)')
+Nmap('zK', 'cT]')
+Nmap('zL', 'cT}')
+Nmap('z:', 'cT\'')
+Nmap('z;', 'cT"')
+Nmap('z\'', 'cT`')
+Nmap('zH', 'cT>')
 ---------------------------------------------------------------------------------------------------
