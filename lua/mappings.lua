@@ -34,11 +34,11 @@ Nmap('<leader>w', ':w<CR>')
 
 -- terminal cmds
 Tmap('<ESC>', '<C-\\><C-n>')
-Nmap('<Tab>', ':ter<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- system cmds
-Nmap('\'', ';')
+Nmap('<Tab>', ';')
+Nmap('<S-Tab>', ',')
 ---- use system copy/paste shortcuts
 Nmap('<C-c>', '"+y<ESC>')
 Nmap('<C-v>', '"+p<ESC>')
