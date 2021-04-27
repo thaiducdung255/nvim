@@ -65,9 +65,10 @@ require('telescope').setup {
 }
 
 nmap('<leader>ff', ':Telescope find_files<CR>')
+nmap('<leader>fr', ':Telescope oldfiles<CR>')
 nmap('<leader>fb', ':Telescope buffers<CR>')
-nmap('<leader>gS', ':Telescope grep_string<CR>')
-nmap('<leader>gs', ':Telescope live_grep<CR>')
+nmap('<leader>fS', ':Telescope grep_string<CR>')
+nmap('<leader>fs', ':Telescope live_grep<CR>')
 
 nmap('<leader>cm', ':Telescope commands<CR>')
 nmap('<leader>ch', ':Telescope command_history<CR>')

@@ -39,8 +39,16 @@ vim.bo.smartindent = true
 vim.bo.autoindent = true
 vim.bo.copyindent = true
 vim.bo.swapfile = false
+vim.o.tabstop = 3
+vim.o.softtabstop = 3
+vim.o.shiftwidth = 3
+vim.o.expandtab = true
+vim.o.smartindent = true
+vim.o.autoindent = true
+vim.o.copyindent = true
+vim.o.swapfile = false
 
-vim.wo.number = true
+--vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.wrap = false
 vim.wo.signcolumn = 'yes'

@@ -81,6 +81,11 @@ _G.packer_plugins = {
     needs_bufread = false,
     path = "/home/df/.local/share/nvim/site/pack/packer/opt/galaxyline.nvim"
   },
+  ["gitsigns.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/df/.local/share/nvim/site/pack/packer/opt/gitsigns.nvim"
+  },
   ["lspsaga.nvim"] = {
     loaded = false,
     needs_bufread = false,

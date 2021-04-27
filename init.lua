@@ -1,6 +1,6 @@
 require('global')
-require('plugins')
 require('configs')
+require('plugins')
 require('themes')
 require('mappings')
 
@@ -20,3 +20,4 @@ require('treesitter-conf')
 require('galaxyline-conf')
 require('nvimtree-conf')
 require('gitsigns-conf')
+require('dashboard-conf')
