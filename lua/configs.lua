@@ -48,7 +48,7 @@ vim.o.autoindent = true
 vim.o.copyindent = true
 vim.o.swapfile = false
 
---vim.wo.number = true
+vim.wo.number = true
 vim.wo.cursorline = true
 vim.wo.relativenumber = true
 vim.wo.wrap = false

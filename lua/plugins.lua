@@ -50,6 +50,7 @@ return require('packer').startup(
         use {'hrsh7th/nvim-compe', opt = true}
         use {'hrsh7th/vim-vsnip', opt = true}
         use {'rafamadriz/friendly-snippets', opt = true}
+--        use {'fatih/vim-go', run = ':GoUpdateBiaries'}
 
         -- Treesitter
         use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
@@ -111,6 +112,7 @@ return require('packer').startup(
         require_plugin('AndrewRadev/switch.vim')
         require_plugin('voldikss/vim-floaterm')
         require_plugin('ap/vim-css-color')
+--        require_plugin('fatih/vim-go')
 --        require_plugin('nvim-comment')
 --        require_plugin('nvim-bqf')
         require_plugin('nvcode-color-schemes.vim')
