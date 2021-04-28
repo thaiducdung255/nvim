@@ -18,6 +18,7 @@ Nmap('<leader><leader>g', ':BufferGoto 10<CR>')
 --                          :BufferCloseBuffersRight<CR>
 -- Magic buffer-picking mode
 Nmap('<C-s>', ':BufferPick<CR>')
+
 -- Sort automatically by...
 Nmap('<leader>bd', ':BufferOrderByDirectory<CR>')
 Nmap('<leader>bl', ':BufferOrderByLanguage<CR>')

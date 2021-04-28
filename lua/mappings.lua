@@ -17,15 +17,15 @@ Nmap('<leader>sn', ':vsplit<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- buffer cmds
-Nmap('<S-l>', ':bn<CR>')
-Nmap('<S-h>', ':bp<CR>')
-Nmap('gq', ':bd<CR>')
+Nmap('<S-l>',  ':bn<CR>')
+Nmap('<S-h>',  ':bp<CR>')
+Nmap('gq',     ':bd<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- tabs cmds
 Nmap('<leader>t', ':tabnew<CR>')
-Nmap('<S-j>', ':tabprev<CR>')
-Nmap('<S-k>', ':tabnext<CR>')
+Nmap('<S-j>',     ':tabprev<CR>')
+Nmap('<S-k>',     ':tabnext<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- file cmds
@@ -37,8 +37,8 @@ Tmap('<ESC>', '<C-\\><C-n>')
 ---------------------------------------------------------------------------------------------------
 
 -- system cmds
-Nmap('<Tab>', ';')
-Nmap('<S-Tab>', ',')
+Nmap('<Tab>',     ';')
+Nmap('<S-Tab>',   ',')
 ---- use system copy/paste shortcuts
 --Nmap('<C-c>', '"+y<ESC>')
 --Nmap('<C-v>', '"+p<ESC>')
@@ -64,7 +64,7 @@ Nmap('M', '<C-u>')
 
 ---- custom yank/select cmds
 Nmap('<leader>v', 'v$h')
-Nmap('Y', 'y$')
+Nmap('Y',         'y$')
 
 ---- go to first/last position of a line
 Nvmap('ga', '^')
@@ -80,13 +80,13 @@ Nmap(';c', 'f`r\'f`r\'F\'')
 Nmap(';v', 'f\'r`f\'r`F`')
 
 ---- bracket delete cmds
-Nmap(';;', 'f\'xf\'x')
-Nmap(';:', 'f"xf"x')
+Nmap(';;',  'f\'xf\'x')
+Nmap(';:',  'f"xf"x')
 Nmap(';\'', 'f`xf`x')
-Nmap(';j', 'f)xF(x')
-Nmap(';k', 'f]xF[x')
-Nmap(';l', 'f}hxxF{xx')
-Nmap(';h', 'f>xF<x')
+Nmap(';j',  'f)xF(x')
+Nmap(';k',  'f]xF[x')
+Nmap(';l',  'f}hxxF{xx')
+Nmap(';h',  'f>xF<x')
 
 ---- auto pair brackets
 Imap(';j', '()<left>')
@@ -96,13 +96,13 @@ Imap(';h', '<><left>')
 Imap(';;', '``<left>')
 
 ---- bracket navs
-Nmap('gj', 'f(')
-Nmap('gk', 'f[')
-Nmap('gl', 'f{')
-Nmap('g;', 'f\'')
-Nmap('g:', 'f"')
+Nmap('gj',  'f(')
+Nmap('gk',  'f[')
+Nmap('gl',  'f{')
+Nmap('g;',  'f\'')
+Nmap('g:',  'f"')
 Nmap('g\'', 'f`')
-Nmap('gh', 'f<')
+Nmap('gh',  'f<')
 
 Nmap('gJ', 'f)')
 Nmap('gK', 'f]')
@@ -110,55 +110,55 @@ Nmap('gL', 'f}')
 Nmap('gH', 'f>')
 
 ---- insert brackets
-Vmap('sj', 'di()<ESC>hpF(i')
-Vmap('sk', 'di[]<ESC>hpl')
-Vmap('sl', 'di{<space><space>}<ESC>hhpll')
-Vmap('s;', 'di\'\'<ESC>hpl')
-Vmap('s:', 'di""<ESC>hpl')
+Vmap('sj',  'di()<ESC>hpF(i')
+Vmap('sk',  'di[]<ESC>hpl')
+Vmap('sl',  'di{<space><space>}<ESC>hhpll')
+Vmap('s;',  'di\'\'<ESC>hpl')
+Vmap('s:',  'di""<ESC>hpl')
 Vmap('s\'', 'di``<ESC>hpl')
-Vmap('sh', 'di<><ESC>hpl')
+Vmap('sh',  'di<><ESC>hpl')
 
 ---- edit brackets motion with t/T
-Nmap('zj', 'ct)')
-Nmap('zk', 'ct]')
-Nmap('zl', 'ct}')
-Nmap('z;', 'ct\'')
-Nmap('z:', 'ct"')
+Nmap('zj',  'ct)')
+Nmap('zk',  'ct]')
+Nmap('zl',  'ct}')
+Nmap('z;',  'ct\'')
+Nmap('z:',  'ct"')
 Nmap('z\'', 'ct`')
-Nmap('zh', 'ct>')
+Nmap('zh',  'ct>')
 
-Nmap('zJ', 'cT)')
-Nmap('zK', 'cT]')
-Nmap('zL', 'cT}')
-Nmap('z:', 'cT\'')
-Nmap('z;', 'cT"')
+Nmap('zJ',  'cT)')
+Nmap('zK',  'cT]')
+Nmap('zL',  'cT}')
+Nmap('z:',  'cT\'')
+Nmap('z;',  'cT"')
 Nmap('z\'', 'cT`')
-Nmap('zH', 'cT>')
+Nmap('zH',  'cT>')
 
 ---- edit inside bracket cmds
-Nmap('cj', 'f(ci(')
-Nmap('ck', 'f[ci[')
-Nmap('cl', 'f{ci{')
-Nmap('c;', 'ci\'')
-Nmap('c:', 'ci"')
+Nmap('cj',  'f(ci(')
+Nmap('ck',  'f[ci[')
+Nmap('cl',  'f{ci{')
+Nmap('c;',  'ci\'')
+Nmap('c:',  'ci"')
 Nmap('c\'', 'ci`')
-Nmap('ch', 'f<ci<')
+Nmap('ch',  'f<ci<')
 
 ---- delete inside bracket cmds
-Nmap('dj', 'f(di(')
-Nmap('dk', 'f[di[')
-Nmap('dl', 'f{di{')
-Nmap('d;', 'di\'')
-Nmap('d:', 'di"')
+Nmap('dj',  'f(di(')
+Nmap('dk',  'f[di[')
+Nmap('dl',  'f{di{')
+Nmap('d;',  'di\'')
+Nmap('d:',  'di"')
 Nmap('d\'', 'di`')
-Nmap('dh', 'f<di<')
+Nmap('dh',  'f<di<')
 
 ---- select inside bracket cmds
-Nmap('sj', 'f(vi(')
-Nmap('sk', 'f[vi[')
-Nmap('sl', 'f{vi{')
-Nmap('s;', 'vi\'')
-Nmap('s:', 'vi"')
+Nmap('sj',  'f(vi(')
+Nmap('sk',  'f[vi[')
+Nmap('sl',  'f{vi{')
+Nmap('s;',  'vi\'')
+Nmap('s:',  'vi"')
 Nmap('s\'', 'vi`')
-Nmap('sh', 'f<vi<')
+Nmap('sh',  'f<vi<')
 ---------------------------------------------------------------------------------------------------

@@ -1,11 +1,30 @@
 vim.g.dashboard_default_executive = 'telescope'
 vim.g.dashboard_custom_section = {
-    a = {description = {'  Find File          '}, command = 'Telescope find_files'},
-    b = {description = {'  Recently Used Files'}, command = 'Telescope oldfiles'},
---    c = {description = {'  Load Last Session  '}, command = 'SessionLoad'},
-    d = {description = {'  Grep Text          '}, command = 'Telescope live_grep'},
-    e = {description = {'  Settings           '}, command = ':e ~/.config/nvim/lua/configs.lua'}
-    -- e = {description = {'  Marks              '}, command = 'Telescope marks'}
+   a = {
+      description = {
+         '  Find File          '
+      },
+      command = 'Telescope find_files'
+   },
+   b = {
+      description = {
+         '  Recently Used Files'
+      },
+      command = 'Telescope oldfiles'
+   },
+   c = {
+      description = {
+         '  Grep Text          '
+   },
+      command = 'Telescope live_grep'
+   },
+   d = {
+      description = {
+         '  Settings           '
+   },
+      command = ':e ~/.config/nvim/lua/configs.lua'
+   }
+   -- e = {description = {'  Marks              '}, command = 'Telescope marks'}
 }
 
 -- file_browser = {description = {' File Browser'}, command = 'Telescope find_files'},
@@ -136,5 +155,3 @@ local dashboardFooters = {
 
 vim.g.dashboard_custom_header = dashboardHeaders[os.date('%A')]
 vim.g.dashboard_custom_footer = dashboardFooters[os.date('%A')]
-
-
