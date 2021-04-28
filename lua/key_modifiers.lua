@@ -26,3 +26,12 @@ Imap(';;g', ')')
 Imap(';;z', '_')
 Imap(';;x', '+')
 
+-- js maps
+Imap(',,', ',<CR>')
+Imap(';:', '``<Left>')
+Imap(';c', '=> ')
+Imap(';v', '${}<Left>')
+Imap(':or', '|| ')
+Imap(':an', '&&')
+Imap(':eq', '=== ')
+Imap(':ne', '!== ')
