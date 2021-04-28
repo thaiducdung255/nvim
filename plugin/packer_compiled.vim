@@ -1,4 +1,4 @@
-' Automatically generated packer.nvim plugin loader code
+" Automatically generated packer.nvim plugin loader code
 
 if !has('nvim-0.5')
   echohl WarningMsg
