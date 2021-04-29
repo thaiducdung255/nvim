@@ -49,9 +49,7 @@ return require('packer').startup(
       -- Autocomplete
       use {'hrsh7th/nvim-compe', opt = true}
       use {'hrsh7th/vim-vsnip', opt = true}
-      use {'rafamadriz/friendly-snippets', opt = true}
---      use {'fatih/vim-go', run = ':GoUpdateBiaries'}
-
+      use {'hrsh7th/vim-vsnip-integ', opt = true}
       -- Treesitter
       use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
       use {'windwp/nvim-ts-autotag', opt = true}
@@ -113,7 +111,8 @@ return require('packer').startup(
       require_plugin('voldikss/vim-floaterm')
       require_plugin('ap/vim-css-color')
       require_plugin('nvim-comment')
---      require_plugin('fatih/vim-go')
+      require_plugin('vim-vsnp')
+      require_plugin('vim-vsnp-integ')
 --      require_plugin('nvim-bqf')
       require_plugin('nvcode-color-schemes.vim')
       require_plugin('nvim-web-devicons')

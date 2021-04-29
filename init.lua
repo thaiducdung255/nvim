@@ -14,8 +14,10 @@ require('lsp.ts-js')
 require('lsp.json')
 require('lsp.lua')
 -- require('lsp_install-conf')
-
+--
 require('compe-conf')
+require('vsnip-conf')
+
 require('telescope-conf')
 require('auto_pairs-conf')
 require('tree_sitter-conf')
@@ -34,3 +36,4 @@ require('vim_maximizer-conf')
 require('indent_line-conf')
 require('packer-conf')
 require('comment-conf')
+vim.cmd('source ~/.config/nvim/vim/switch-conf.vim')

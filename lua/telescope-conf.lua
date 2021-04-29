@@ -4,7 +4,7 @@ local actions = require('telescope.actions')
 -- '--color=never',
 require('telescope').setup {
    defaults = {
-      find_command         = { 'rg', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case' },
+      find_command         = { 'rg', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', },
       prompt_position      = 'bottom',
       -- prompt_prefix = ' ',
       prompt_prefix        = ' ',
@@ -14,7 +14,7 @@ require('telescope').setup {
       selection_strategy   = 'reset',
       sorting_strategy     = 'descending',
       layout_strategy      = 'horizontal',
-      layout_defaults      = {horizontal = {mirror = false}, vertical = {mirror = false}},
+      layout_defaults      = { horizontal = { mirror = false }, vertical = { mirror = false } },
       file_sorter          = require'telescope.sorters'.get_fuzzy_file,
       file_ignore_patterns = {},
       generic_sorter    = require'telescope.sorters'.get_generic_fuzzy_sorter,
