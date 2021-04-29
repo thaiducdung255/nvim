@@ -71,9 +71,9 @@ Nvmap('ga', '^')
 Nvmap('gf', '$')
 
 ---- toggle upper/lower/camel case
-Imap(';uu', '<ESC>vbUea')
-Imap(';ll', '<ESC>vbuea')
-Imap(';ul', '<ESC>b~ea')
+Imap(';ii', '<ESC>vbUea')
+Imap(';uu', '<ESC>vbuea')
+Imap(';iu', '<ESC>b~ea')
 
 ---- bracket fix cmds
 Nmap(';c', 'f`r\'f`r\'F\'')
