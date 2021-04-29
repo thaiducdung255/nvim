@@ -1,0 +1,92 @@
+{
+   "Faker.randomFileName": {
+      "prefix": [":ffn"],
+      "body": [
+         "faker.system.fileName()"
+      ]
+   },
+   "Faker.randomFileType": {
+      "prefix": [":fft"],
+      "body": [
+         "faker.system.commonFileType()"
+      ]
+   },
+   "Faker.randomFilePath": {
+      "prefix": [":ffp"],
+      "body": [
+         "faker.system.filePath()"
+      ]
+   },
+   "Faker.randomDateRecent": {
+      "prefix": [":fdr"],
+      "body": [
+         "faker.date.recent()"
+      ]
+   },
+   "Faker.randomDatePast": {
+      "prefix": [":fdp"],
+      "body": [
+         "faker.date.past()"
+      ]
+   },
+   "Faker.randomDateFuture": {
+      "prefix": [":fdf"],
+      "body": [
+         "faker.date.future()"
+      ]
+   },
+   "Faker.randomDateSoon": {
+      "prefix": [":fds"],
+      "body": [
+         "faker.date.soon()"
+      ]
+   },
+   "Faker.randomEmail": {
+      "prefix": [":fem"],
+      "body": [
+         "faker.internet.email()"
+      ]
+   },
+   "Faker.randomUrl": {
+      "prefix": [":fur"],
+      "body": [
+         "faker.internet.url()"
+      ]
+   },
+   "Faker.randomUsername": {
+      "prefix": [":fus"],
+      "body": [
+         "faker.internet.userName()"
+      ]
+   },
+   "Faker.randomIP": {
+      "prefix": [":fip"],
+      "body": [
+         "faker.internet.ip()"
+      ]
+   },
+   "Faker.randomPassword": {
+      "prefix": [":fpa"],
+      "body": [
+         "faker.internet.password()"
+      ]
+   },
+   "Faker.randomColor": {
+      "prefix": [":fco"],
+      "body": [
+         "faker.internet.color()"
+      ]
+   },
+   "Faker.randomLoremWord": {
+      "prefix": [":flw"],
+      "body": [
+         "faker.lorem.word()"
+      ]
+   },
+   "Faker.randomLoremWords": {
+      "prefix": [":flws"],
+      "body": [
+         "faker.lorem.words()"
+      ]
+   }
+}
