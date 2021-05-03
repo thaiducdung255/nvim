@@ -1,5 +1,5 @@
 -- NOTE: You can use other key to expand snippet.
-vim.cmd('let g:vsnip_snipper_dirs += [\'\']')
+--vim.cmd('let g:vsnip_snipper_dirs += [\'\']')
 -- Expand
 vim.cmd([[imap <expr> <leader>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<leader>']])
 vim.cmd([[smap <expr> <leader>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<leader>']])

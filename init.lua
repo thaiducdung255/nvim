@@ -14,7 +14,7 @@ require('lsp.ts-js')
 require('lsp.json')
 require('lsp.lua')
 -- require('lsp_install-conf')
---
+
 require('compe-conf')
 require('vsnip-conf')
 
