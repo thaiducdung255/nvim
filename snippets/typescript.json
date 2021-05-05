@@ -88,5 +88,143 @@
       "body": [
          "faker.lorem.words()"
       ]
-   }
+   },
+   "Faker.randomLoremSentence": {
+      "prefix": [":fls"],
+      "body": [
+         "faker.lorem.sentence()"
+      ]
+   },
+   "Faker.randomLoremSentences": {
+      "prefix": [":flss"],
+      "body": [
+         "faker.lorem.sentences()"
+      ]
+   },
+   "Faker.randomLoremText": {
+      "prefix": [":flt"],
+      "body": [
+         "faker.lorem.text()"
+      ]
+   },
+   "Faker.randomDate": {
+      "prefix": [":frd"],
+      "body": [
+         "faker.datatype.datetime()"
+      ]
+   },
+   "Faker.randomString": {
+      "prefix": [":frs"],
+      "body": [
+         "faker.datatype.string()"
+      ]
+   },
+   "Faker.randomFloat": {
+      "prefix": [":frf"],
+      "body": [
+         "faker.datatype.float($1)"
+      ]
+   },
+   "Faker.randomNumber": {
+      "prefix": [":frn"],
+      "body": [
+         "faker.datatype.number($1)"
+      ]
+   },
+   "Faker.randomUUID": {
+      "prefix": [":fru"],
+      "body": [
+         "faker.datatype.uuid()"
+      ]
+   },
+   "Faker.randomBoolean": {
+      "prefix": [":frb"],
+      "body": [
+         "faker.datatype.boolean()"
+      ]
+   },
+   "Faker.randomHex": {
+      "prefix": [":frh"],
+      "body": [
+         "faker.random.hexaDecimal()"
+      ]
+   },
+   "Faker.randomWord": {
+      "prefix": [":frw"],
+      "body": [
+         "faker.random.word()"
+      ]
+   },
+   "Faker.randomWords": {
+      "prefix": [":frws"],
+      "body": [
+         "faker.random.words()"
+      ]
+   },
+   "Faker.randomLocale": {
+      "prefix": [":frl"],
+      "body": [
+         "faker.random.locale()"
+      ]
+   },
+   "Faker.randomPhoneNumber": {
+      "prefix": [":fpn"],
+      "body": [
+         "faker.phone.phoneNumber('0##########')"
+      ]
+   },
+   "Faker.randomLocale": {
+      "prefix": [":frl"],
+      "body": [
+         "faker.random.locale()"
+      ]
+   },
+   "Faker.randomLatitude": {
+      "prefix": [":fala"],
+      "body": [
+         "faker.address.latitude()"
+      ]
+   },
+   "Faker.randomLongtitude": {
+      "prefix": [":falo"],
+      "body": [
+         "faker.address.longtitude()"
+      ]
+   },
+   "Faker.randomCity": {
+      "prefix": [":fac"],
+      "body": [
+         "faker.address.city()"
+      ]
+   },
+   "Faker.randomZipCode": {
+      "prefix": [":faz"],
+      "body": [
+         "faker.address.zipCode()"
+      ]
+   },
+   "Faker.randomJobTitle": {
+      "prefix": [":fnj"],
+      "body": [
+         "faker.name.jobType()"
+      ]
+   },
+   "Faker.randomName": {
+      "prefix": [":fnn"],
+      "body": [
+         "faker.name.findName()"
+      ]
+   },
+   "Faker.randomGender": {
+      "prefix": [":fng"],
+      "body": [
+         "faker.name.gender()"
+      ]
+   },
+   "Faker.randomZipCode": {
+      "prefix": [":faz"],
+      "body": [
+         "faker.address.zipCode()"
+      ]
+   },
 }
