@@ -72,7 +72,7 @@ Nmap('<leader>fs', ':Telescope live_grep<CR>')
 
 Nmap('<leader>cm', ':Telescope commands<CR>')
 Nmap('<leader>ch', ':Telescope command_history<CR>')
-Nmap('<leader>km', ':Telescope keymaps<CR>')
+Nmap('<leader>mp', ':Telescope keymaps<CR>')
 
 Nmap('<leader>cs', ':Telescope colorscheme<CR>')
 Nmap('<leader>sc', ':Telescope hilights<CR>')

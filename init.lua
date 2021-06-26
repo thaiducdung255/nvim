@@ -19,6 +19,7 @@ require('compe-conf')
 require('vsnip-conf')
 
 require('telescope-conf')
+require('easymotion-conf')
 require('auto_pairs-conf')
 require('tree_sitter-conf')
 require('galaxy_line-conf')

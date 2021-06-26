@@ -42,6 +42,7 @@ return require('packer').startup(
       use {'nvim-lua/popup.nvim', opt = true}
       use {'nvim-lua/plenary.nvim', opt = true}
       use {'nvim-telescope/telescope.nvim', opt = true}
+      use {'easymotion/vim-easymotion', opt = true}
 
       -- Debugging
 --      use {'mfussenegger/nvim-dap', opt = true}
@@ -92,6 +93,7 @@ return require('packer').startup(
       require_plugin('popup.nvim')
       require_plugin('plenary.nvim')
       require_plugin('telescope.nvim')
+      require_plugin('vim-easymotion')
 --      require_plugin('nvim-dap')
       require_plugin('nvim-compe')
       require_plugin('vim-vsnip')
@@ -101,13 +103,13 @@ return require('packer').startup(
       require_plugin('gitsigns.nvim')
       require_plugin('dashboard-nvim')
       require_plugin('nvim-autopairs')
-      require_plugin('diepm/vim-rest-console')
-      require_plugin('APZelos/blamer.nvim')
-      require_plugin('mbbill/undotree')
-      require_plugin('unblevable/quick-scope')
-      require_plugin('Yggdroot/indentLine')
-      require_plugin('szw/vim-maximizer')
-      require_plugin('AndrewRadev/switch.vim')
+      require_plugin('vim-rest-console')
+      require_plugin('blamer.nvim')
+      require_plugin('undotree')
+      require_plugin('quick-scope')
+      require_plugin('indentLine')
+      require_plugin('vim-maximizer')
+      require_plugin('switch.vim')
       require_plugin('voldikss/vim-floaterm')
       require_plugin('ap/vim-css-color')
       require_plugin('nvim-comment')
