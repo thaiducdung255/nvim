@@ -44,13 +44,11 @@ return require('packer').startup(
       use {'nvim-telescope/telescope.nvim', opt = true}
       use {'easymotion/vim-easymotion', opt = true}
 
-      -- Debugging
---      use {'mfussenegger/nvim-dap', opt = true}
-
       -- Autocomplete
       use {'hrsh7th/nvim-compe', opt = true}
       use {'hrsh7th/vim-vsnip', opt = true}
       use {'hrsh7th/vim-vsnip-integ', opt = true}
+
       -- Treesitter
       use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
       use {'windwp/nvim-ts-autotag', opt = true}
@@ -65,14 +63,12 @@ return require('packer').startup(
       use 'voldikss/vim-floaterm'
       use 'ap/vim-css-color'
 
-      -- use {'lukas-reineke/indent-blankline.nvim', opt=true, branch = 'lua'}
       use {'lewis6991/gitsigns.nvim', opt = true}
       use 'APZelos/blamer.nvim'
 
       use {'ChristianChiarulli/dashboard-nvim', opt = true}
       use {'windwp/nvim-autopairs', opt = true}
       use {'terrortylor/nvim-comment', opt = true}
---      use {'kevinhwang91/nvim-bqf', opt = true}
 
       -- Color scheme
       use {'christianchiarulli/nvcode-color-schemes.vim', opt = true}
@@ -94,7 +90,6 @@ return require('packer').startup(
       require_plugin('plenary.nvim')
       require_plugin('telescope.nvim')
       require_plugin('vim-easymotion')
---      require_plugin('nvim-dap')
       require_plugin('nvim-compe')
       require_plugin('vim-vsnip')
       require_plugin('nvim-treesitter')
@@ -115,7 +110,6 @@ return require('packer').startup(
       require_plugin('nvim-comment')
       require_plugin('vim-vsnp')
       require_plugin('vim-vsnp-integ')
---      require_plugin('nvim-bqf')
       require_plugin('nvcode-color-schemes.vim')
       require_plugin('nvim-web-devicons')
       require_plugin('galaxyline.nvim')
