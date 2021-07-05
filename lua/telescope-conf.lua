@@ -79,4 +79,4 @@ Nmap('<leader>sc', ':Telescope hilights<CR>')
 
 Nmap('<leader>gb', ':Telescope git_branches<CR>')
 Nmap('<leader>gc', ':Telescope git_commits<CR>')
-Nmap('<leader>gs', ':Telescope git_status<CR>')
+Nmap('<leader>gg', ':Telescope git_status<CR>')
