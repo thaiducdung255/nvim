@@ -1,9 +1,9 @@
 -- window cmds
 ---- nav cmds
-Nmap('<leader>l', '<C-w>l')
-Nmap('<leader>k', '<C-w>k')
-Nmap('<leader>j', '<C-w>j')
-Nmap('<leader>h', '<C-w>h')
+Nmap('<LEADER>l', '<C-w>l')
+Nmap('<LEADER>k', '<C-w>k')
+Nmap('<LEADER>j', '<C-w>j')
+Nmap('<LEADER>h', '<C-w>h')
 
 ---- resize window cmds
 Nmap('<C-h>', ':vertical resize -2<CR>')
@@ -12,8 +12,8 @@ Nmap('<C-k>', ':resize +2<CR>')
 Nmap('<C-l>', ':vertical resize +2<CR>')
 
 ---- split cmds
-Nmap('<leader>sm', ':split<CR>')
-Nmap('<leader>sn', ':vsplit<CR>')
+Nmap('<LEADER>sm', ':split<CR>')
+Nmap('<LEADER>sn', ':vsplit<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- buffer cmds
@@ -23,14 +23,14 @@ Nmap('gq',     ':bd<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- tabs cmds
-Nmap('<leader>t', ':tabnew<CR>')
+Nmap('<LEADER>t', ':tabnew<CR>')
 Nmap('<S-j>',     ':tabprev<CR>')
 Nmap('<S-k>',     ':tabnext<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- file cmds
-Nmap('<leader>q', ':q<CR>')
-Nmap('<leader>w', ':w<CR>')
+Nmap('<LEADER>q', ':q<CR>')
+Nmap('<LEADER>w', ':w<CR>')
 
 -- terminal cmds
 Tmap('<ESC>', '<C-\\><C-n>')
@@ -63,7 +63,7 @@ Nmap('N', '<C-d>')
 Nmap('M', '<C-u>')
 
 ---- custom yank/select cmds
-Nmap('<leader>v', 'v$h')
+Nmap('<LEADER>v', 'v$h')
 Nmap('Y',         'y$')
 
 ---- go to first/last position of a line

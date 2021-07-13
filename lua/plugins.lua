@@ -83,6 +83,10 @@ return require('packer').startup(
       -- Rest api
       use {'diepm/vim-rest-console'}
 
+      -- Outline
+      use {'simrat39/symbols-outline.nvim', opt = true}
+
+      require_plugin('symbols-outline.nvim')
       require_plugin('nvim-lspconfig')
       require_plugin('lspsaga.nvim')
       require_plugin('nvim-lspinstall')
@@ -105,8 +109,8 @@ return require('packer').startup(
       require_plugin('indentLine')
       require_plugin('vim-maximizer')
       require_plugin('switch.vim')
-      require_plugin('voldikss/vim-floaterm')
-      require_plugin('ap/vim-css-color')
+      require_plugin('vim-floaterm')
+      require_plugin('vim-css-color')
       require_plugin('nvim-comment')
       require_plugin('vim-vsnp')
       require_plugin('vim-vsnp-integ')
