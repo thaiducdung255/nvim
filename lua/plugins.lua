@@ -33,25 +33,26 @@ return require('packer').startup(
       -- Packer can manage itself as an optional plugin
       use 'wbthomason/packer.nvim'
 
-      -- TODO refactor all of this (for now it works, but yes I know it could be wrapped in a simpler function)
-      use {'neovim/nvim-lspconfig', opt = true}
-      use {'glepnir/lspsaga.nvim', opt = true}
-      use {'kabouzeid/nvim-lspinstall', opt = true}
+      -- lsp
+      use { 'neovim/nvim-lspconfig', opt = true }
+      use { 'glepnir/lspsaga.nvim', opt = true }
+      use { 'kabouzeid/nvim-lspinstall', opt = true }
+      use { 'ray-x/lsp_signature.nvim', opt = true }
 
       -- Telescope
-      use {'nvim-lua/popup.nvim', opt = true}
-      use {'nvim-lua/plenary.nvim', opt = true}
-      use {'nvim-telescope/telescope.nvim', opt = true}
-      use {'easymotion/vim-easymotion', opt = true}
+      use { 'nvim-lua/popup.nvim', opt = true }
+      use { 'nvim-lua/plenary.nvim', opt = true }
+      use { 'nvim-telescope/telescope.nvim', opt = true }
+      use { 'easymotion/vim-easymotion', opt = true }
 
       -- Autocomplete
-      use {'hrsh7th/nvim-compe', opt = true}
-      use {'hrsh7th/vim-vsnip', opt = true}
-      use {'hrsh7th/vim-vsnip-integ', opt = true}
+      use { 'hrsh7th/nvim-compe', opt = true }
+      use { 'hrsh7th/vim-vsnip', opt = true }
+      use { 'hrsh7th/vim-vsnip-integ', opt = true }
 
       -- Treesitter
-      use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-      use {'windwp/nvim-ts-autotag', opt = true}
+      use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+      use { 'windwp/nvim-ts-autotag', opt = true }
 
       -- Explorer
       use 'kyazdani42/nvim-tree.lua'
@@ -63,30 +64,35 @@ return require('packer').startup(
       use 'voldikss/vim-floaterm'
       use 'ap/vim-css-color'
 
-      use {'lewis6991/gitsigns.nvim', opt = true}
+      use { 'lewis6991/gitsigns.nvim', opt = true }
       use 'APZelos/blamer.nvim'
 
-      use {'ChristianChiarulli/dashboard-nvim', opt = true}
+      use { 'ChristianChiarulli/dashboard-nvim', opt = true }
       use {'windwp/nvim-autopairs', opt = true}
-      use {'terrortylor/nvim-comment', opt = true}
+      use { 'terrortylor/nvim-comment', opt = true }
 
       -- Color scheme
-      use {'christianchiarulli/nvcode-color-schemes.vim', opt = true}
+      use { 'christianchiarulli/nvcode-color-schemes.vim', opt = true }
 
       -- Icons
-      use {'kyazdani42/nvim-web-devicons', opt = true}
+      use { 'kyazdani42/nvim-web-devicons', opt = true }
 
       -- Status Line and Bufferline
-      use {'glepnir/galaxyline.nvim', opt = true}
-      use {'romgrk/barbar.nvim', opt = true}
+      use { 'glepnir/galaxyline.nvim', opt = true }
+      use { 'romgrk/barbar.nvim', opt = true }
 
       -- Rest api
-      use {'diepm/vim-rest-console'}
+      use { 'diepm/vim-rest-console' }
 
       -- Outline
-      use {'simrat39/symbols-outline.nvim', opt = true}
+      use { 'simrat39/symbols-outline.nvim', opt = true }
 
+      -- Dim inactive windows
+      use { 'sunjon/shade.nvim', opt = true }
+
+      require_plugin('shade.nvim')
       require_plugin('symbols-outline.nvim')
+      require_plugin('lsp_signature.nvim')
       require_plugin('nvim-lspconfig')
       require_plugin('lspsaga.nvim')
       require_plugin('nvim-lspinstall')
