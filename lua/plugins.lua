@@ -33,7 +33,7 @@ return require('packer').startup(
       -- Packer can manage itself as an optional plugin
       use 'wbthomason/packer.nvim'
 
-      -- lsp
+      -- LSP
       use { 'neovim/nvim-lspconfig', opt = true }
       use { 'glepnir/lspsaga.nvim', opt = true }
       use { 'kabouzeid/nvim-lspinstall', opt = true }
@@ -57,15 +57,18 @@ return require('packer').startup(
       -- Explorer
       use 'kyazdani42/nvim-tree.lua'
       use 'mbbill/undotree'
-      use 'unblevable/quick-scope'
+
       use 'Yggdroot/indentLine'
+      use 'unblevable/quick-scope'
       use 'szw/vim-maximizer'
       use 'AndrewRadev/switch.vim'
       use 'voldikss/vim-floaterm'
       use 'ap/vim-css-color'
 
+      -- Git
       use { 'lewis6991/gitsigns.nvim', opt = true }
       use 'APZelos/blamer.nvim'
+      use 'tanvirtin/vgit.nvim'
 
       use { 'ChristianChiarulli/dashboard-nvim', opt = true }
       use {'windwp/nvim-autopairs', opt = true}
@@ -90,6 +93,7 @@ return require('packer').startup(
       -- Dim inactive windows
       use { 'sunjon/shade.nvim', opt = true }
 
+      require_plugin('vgit')
       require_plugin('shade.nvim')
       require_plugin('symbols-outline.nvim')
       require_plugin('lsp_signature.nvim')
