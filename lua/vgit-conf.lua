@@ -221,39 +221,19 @@ require('vgit').setup(--{
 --}
 )
 
-vim.api.nvim_set_keymap('n', '<leader>gp', ':VGit hunk_preview<CR>', {
-   noremap = true,
-   silent = true,
-})
-vim.api.nvim_set_keymap('n', '<leader>gr', ':VGit hunk_reset<CR>', {
-   noremap = true,
-   silent = true,
-})
-vim.api.nvim_set_keymap('n', '<C-k>', ':VGit hunk_up<CR>', {
-   noremap = true,
-   silent = true,
-})
-vim.api.nvim_set_keymap('n', '<C-j>', ':VGit hunk_down<CR>', {
-   noremap = true,
-   silent = true,
-})
-vim.api.nvim_set_keymap('n', '<leader>gf', ':VGit buffer_preview<CR>', {
-   noremap = true,
-   silent = true,
-})
-vim.api.nvim_set_keymap('n', '<leader>gh', ':VGit buffer_history<CR>', {
-   noremap = true,
-   silent = true,
-})
-vim.api.nvim_set_keymap('n', '<leader>gu', ':VGit buffer_reset<CR>', {
-   noremap = true,
-   silent = true,
-})
-vim.api.nvim_set_keymap('n', '<leader>gd', ':VGit diff<CR>', {
-   noremap = true,
-   silent = true,
-})
-vim.api.nvim_set_keymap('n', '<leader>gq', ':VGit hunks_quickfix_list<CR>', {
-   noremap = true,
-   silent = true,
-})
+Nmap('<LEADER>gp', ':VGit hunk_preview<CR>')
+
+Nmap('<LEADER>gr', ':VGit hunk_reset<CR>')
+
+Nmap('<C-k>', ':VGit hunk_up<CR>')
+Nmap('<C-j>', ':VGit hunk_down<CR>')
+
+Nmap('<LEADER>gf', ':VGit buffer_preview<CR>')
+
+Nmap('<LEADER>gh', ':VGit buffer_history<CR>')
+
+Nmap('<LEADER>gu', ':VGit buffer_reset<CR>')
+
+Nmap('<LEADER>gd', ':VGit diff<CR>')
+
+Nmap('<LEADER>gq', ':VGit hunks_quickfix_list<CR>')
