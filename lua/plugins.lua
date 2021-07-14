@@ -43,12 +43,23 @@ return require('packer').startup(
       use { 'nvim-lua/popup.nvim', opt = true }
       use { 'nvim-lua/plenary.nvim', opt = true }
       use { 'nvim-telescope/telescope.nvim', opt = true }
-      use { 'easymotion/vim-easymotion', opt = true }
+      -- use { 'easymotion/vim-easymotion', opt = true }
+      use {
+        'phaazon/hop.nvim',
+        as = 'hop',
+        config = function()
+          -- you can configure Hop the way you like here; see :h hop-config
+          require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+        end
+      }
 
       -- Autocomplete
       use { 'hrsh7th/nvim-compe', opt = true }
       use { 'hrsh7th/vim-vsnip', opt = true }
       use { 'hrsh7th/vim-vsnip-integ', opt = true }
+
+      -- Cursor line
+      use { 'xiyaowong/nvim-cursorword', otp = true }
 
       -- Treesitter
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -58,8 +69,8 @@ return require('packer').startup(
       use 'kyazdani42/nvim-tree.lua'
       use 'mbbill/undotree'
 
-      use 'Yggdroot/indentLine'
-      use 'unblevable/quick-scope'
+      -- use 'Yggdroot/indentLine'
+      use 'lukas-reineke/indent-blankline.nvim'
       use 'szw/vim-maximizer'
       use 'AndrewRadev/switch.vim'
       use 'voldikss/vim-floaterm'
@@ -93,6 +104,7 @@ return require('packer').startup(
       -- Dim inactive windows
       use { 'sunjon/shade.nvim', opt = true }
 
+      require_plugin('nvim-cursorword')
       require_plugin('vgit')
       require_plugin('shade.nvim')
       require_plugin('symbols-outline.nvim')
@@ -115,7 +127,6 @@ return require('packer').startup(
       require_plugin('vim-rest-console')
       require_plugin('blamer.nvim')
       require_plugin('undotree')
-      require_plugin('quick-scope')
       require_plugin('indentLine')
       require_plugin('vim-maximizer')
       require_plugin('switch.vim')
