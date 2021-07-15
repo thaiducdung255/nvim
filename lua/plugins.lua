@@ -121,7 +121,13 @@ return require('packer').startup(
       use { 'romgrk/barbar.nvim', opt = true }
 
       -- Rest api
-      use { 'diepm/vim-rest-console' }
+      use {
+          'NTBBloodbath/rest.nvim',
+          requires = { 'nvim-lua/plenary.nvim' },
+          config = function()
+              require('rest-nvim').setup()
+          end
+      }
 
       -- Outline
       use { 'simrat39/symbols-outline.nvim', opt = true }
@@ -150,7 +156,7 @@ return require('packer').startup(
       require_plugin('gitsigns.nvim')
       require_plugin('dashboard-nvim')
       require_plugin('nvim-autopairs')
-      require_plugin('vim-rest-console')
+      -- require_plugin('vim-rest-console')
       require_plugin('blamer.nvim')
       require_plugin('undotree')
       require_plugin('indentLine')
