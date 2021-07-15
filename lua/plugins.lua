@@ -81,6 +81,9 @@ return require('packer').startup(
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       use { 'windwp/nvim-ts-autotag', opt = true }
 
+      -- rainbow parentheses
+      use 'p00f/nvim-ts-rainbow'
+
       -- Explorer
       use 'kyazdani42/nvim-tree.lua'
       use 'mbbill/undotree'
