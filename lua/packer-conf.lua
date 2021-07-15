@@ -1,4 +1,4 @@
-Nmap('<leader>pi', ':PackerInstall<CR>')
-Nmap('<leader>pc', ':PackerClean<CR>')
-Nmap('<leader>pu', ':PackerSync<CR>')
-Nmap('<leader>pg', ':PackerUpdate<CR>')
+Nmap('<LEADER>pi', ':PackerInstall<CR>')
+Nmap('<LEADER>pc', ':PackerClean<CR>')
+Nmap('<LEADER>pu', ':PackerSync<CR>')
+Nmap('<LEADER>pg', ':PackerUpdate<CR>')

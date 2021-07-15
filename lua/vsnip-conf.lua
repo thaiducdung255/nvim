@@ -1,8 +1,8 @@
 -- NOTE: You can use other key to expand snippet.
 vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
 -- Expand
-vim.cmd([[imap <expr> <leader>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<leader>']])
-vim.cmd([[smap <expr> <leader>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<leader>']])
+vim.cmd([[imap <expr> <LEADER>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<LEADER>']])
+vim.cmd([[smap <expr> <LEADER>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<LEADER>']])
 
 -- Expand or jump
 -- vim.cmd([[imap <expr> <tab>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>']])

@@ -1,2 +1,2 @@
 require('nvim_comment').setup()
-Nvmap('<leader>x', ':CommentToggle<CR>')
+Nvmap('<LEADER>x', ':CommentToggle<CR>')

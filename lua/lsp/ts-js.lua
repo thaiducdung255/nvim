@@ -130,14 +130,18 @@ lspconfig.tsserver.setup {
          client.resolved_capabilities.document_formatting = not ok
       end)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach()
+      require 'lsp_signature'.on_attach({
+         hint_enable = false,
+      })
    end
 }
 
 lspconfig.gopls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach()
+      require 'lsp_signature'.on_attach({
+         hint_enable = false,
+      })
    end
 }
 

@@ -54,6 +54,18 @@ return require('packer').startup(
         end
       }
 
+      -- auto update root directory
+      use {
+        "ahmedkhalf/lsp-rooter.nvim",
+        config = function()
+          require("lsp-rooter").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+          }
+        end
+      }
+
       -- Autocomplete
       use { 'hrsh7th/nvim-compe', opt = true }
       use { 'hrsh7th/vim-vsnip', opt = true }
@@ -61,6 +73,9 @@ return require('packer').startup(
 
       -- Cursor line
       use { 'xiyaowong/nvim-cursorword', otp = true }
+
+      -- Find and replace
+      use { 'windwp/nvim-spectre', opt = true }
 
       -- Treesitter
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
@@ -105,6 +120,7 @@ return require('packer').startup(
       -- Dim inactive windows
       use { 'sunjon/shade.nvim', opt = true }
 
+      require_plugin('nvim-spectre')
       require_plugin('nvim-cursorword')
       require_plugin('vgit')
       require_plugin('shade.nvim')
