@@ -70,6 +70,9 @@ Nmap('Y',         'y$')
 Nvmap('ga', '^')
 Nvmap('gf', '$')
 
+---- register
+Nvmap('<LEADER>r', '@q')
+
 ---- toggle upper/lower/camel case
 Imap(';u', '<ESC>vbUea')
 Imap(';i', '<ESC>vbuea')

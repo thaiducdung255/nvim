@@ -87,6 +87,9 @@ return require('packer').startup(
       -- rainbow parentheses
       use 'p00f/nvim-ts-rainbow'
 
+      -- swap args
+      use 'mizlan/iswap.nvim'
+
       -- Explorer
       use 'kyazdani42/nvim-tree.lua'
       use 'mbbill/undotree'

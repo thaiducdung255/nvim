@@ -225,8 +225,8 @@ Nmap('<LEADER>gp', ':VGit hunk_preview<CR>')
 
 Nmap('<LEADER>gr', ':VGit hunk_reset<CR>')
 
-Nmap('<C-k>', ':VGit hunk_up<CR>')
-Nmap('<C-j>', ':VGit hunk_down<CR>')
+Nmap('gk', ':VGit hunk_up<CR>')
+Nmap('gj', ':VGit hunk_down<CR>')
 
 Nmap('<LEADER>gf', ':VGit buffer_preview<CR>')
 
