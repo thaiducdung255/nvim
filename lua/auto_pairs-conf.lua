@@ -14,7 +14,7 @@ MUtils.completion_confirm = function()
          return npairs.esc('')
       else
          vim.defer_fn(function()
-            vim.fn['compe#confirm']('<cr>')
+            vim.fn['compe#confirm']('<CR>')
          end, 20)
          return npairs.esc('<c-n>')
       end

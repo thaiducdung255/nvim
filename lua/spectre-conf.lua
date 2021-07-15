@@ -15,7 +15,7 @@ require('spectre').setup({
          desc = "toggle current item"
       },
       ['enter_file'] = {
-         map = "<cr>",
+         map = "<CR>",
          cmd = "<cmd>lua require('spectre.actions').select_entry()<CR>",
          desc = "goto current file"
       },
@@ -134,4 +134,4 @@ require('spectre').setup({
 
 vim.cmd('nnoremap <LEADER>S :lua require(\'spectre\').open()<CR>')
 vim.cmd('vnoremap <LEADER>W :lua require(\'spectre\').open_visual()<CR>')
-vim.cmd('nnoremap <LEADER>G viw:lua require(\'spectre\').open_file_search()<cr>')
+vim.cmd('nnoremap <LEADER>G viw:lua require(\'spectre\').open_file_search()<CR>')
