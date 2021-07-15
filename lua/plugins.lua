@@ -71,6 +71,9 @@ return require('packer').startup(
       use { 'hrsh7th/vim-vsnip', opt = true }
       use { 'hrsh7th/vim-vsnip-integ', opt = true }
 
+      -- line peek
+      use 'nacro90/numb.nvim'
+
       -- Cursor line
       use { 'xiyaowong/nvim-cursorword', otp = true }
 

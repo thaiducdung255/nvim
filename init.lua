@@ -10,7 +10,7 @@ require('lsp.ts-js')
 
 require('compe-conf')
 require('vsnip-conf')
-
+require('numb-conf')
 require('telescope-conf')
 require('hop-conf')
 require('auto_pairs-conf')
