@@ -43,7 +43,8 @@ return require('packer').startup(
       use { 'nvim-lua/popup.nvim', opt = true }
       use { 'nvim-lua/plenary.nvim', opt = true }
       use { 'nvim-telescope/telescope.nvim', opt = true }
-      -- use { 'easymotion/vim-easymotion', opt = true }
+
+      -- vim motions
       use {
         'phaazon/hop.nvim',
         as = 'hop',
