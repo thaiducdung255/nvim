@@ -9,7 +9,6 @@ require('lsp')
 require('lsp.ts-js')
 
 require('compe-conf')
-require('vsnip-conf')
 require('numb-conf')
 require('iswap-conf')
 require('telescope-conf')

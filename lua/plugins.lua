@@ -68,8 +68,6 @@ return require('packer').startup(
 
       -- Autocomplete
       use { 'hrsh7th/nvim-compe', opt = true }
-      use { 'hrsh7th/vim-vsnip', opt = true }
-      use { 'hrsh7th/vim-vsnip-integ', opt = true }
 
       -- line peek
       use 'nacro90/numb.nvim'

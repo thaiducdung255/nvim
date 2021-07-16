@@ -221,14 +221,14 @@ require('vgit').setup(--{
 --}
 )
 
-Nmap('<LEADER>gp', ':VGit hunk_preview<CR>')
+Nmap('gp', ':VGit hunk_preview<CR>')
 
 Nmap('<LEADER>gr', ':VGit hunk_reset<CR>')
 
-Nmap('gk', ':VGit hunk_up<CR>')
-Nmap('gj', ':VGit hunk_down<CR>')
+Nmap('<LEADER>gk', ':VGit hunk_up<CR>')
+Nmap('<LEADER>gj', ':VGit hunk_down<CR>')
 
-Nmap('<LEADER>gf', ':VGit buffer_preview<CR>')
+Nmap('<LEADER>gp', ':VGit buffer_preview<CR>')
 
 Nmap('<LEADER>gh', ':VGit buffer_history<CR>')
 

@@ -53,4 +53,4 @@ vim.g.nvim_tree_icons = {
 }
 
 Nmap('<LEADER>e', ':NvimTreeToggle<CR>')
-Nmap('<LEADER>re', 'NvimTreeRefresh<CR>')
+Nmap('<LEADER>E', 'NvimTreeRefresh<CR>')

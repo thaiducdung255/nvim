@@ -5,8 +5,8 @@ local actions = require('telescope.actions')
 require('telescope').setup {
    defaults = {
       find_command         = { 'rg', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', },
-      prompt_prefix        = ' ',
-      selection_caret      = ' ',
+      prompt_prefix        = '> ',
+      selection_caret      = '> ',
       entry_prefix         = '  ',
       initial_mode         = 'insert',
       selection_strategy   = 'reset',
@@ -17,14 +17,14 @@ require('telescope').setup {
       generic_sorter       = require'telescope.sorters'.get_generic_fuzzy_sorter,
       path_display         = { 'absolute' },
       winblend             = 0,
-      border            = {},
-      borderchars       = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
-      color_devicons    = true,
-      use_less          = true,
-      set_env           = { ['COLORTERM'] = 'truecolor'  }, -- default = nil,
-      file_previewer    = require'telescope.previewers'.vim_buffer_cat.new,
-      grep_previewer    = require'telescope.previewers'.vim_buffer_vimgrep.new,
-      qflist_previewer  = require'telescope.previewers'.vim_buffer_qflist.new,
+      border               = {},
+      borderchars          = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
+      color_devicons       = true,
+      use_less             = true,
+      set_env              = { ['COLORTERM'] = 'truecolor'  }, -- default = nil,
+      file_previewer       = require'telescope.previewers'.vim_buffer_cat.new,
+      grep_previewer       = require'telescope.previewers'.vim_buffer_vimgrep.new,
+      qflist_previewer     = require'telescope.previewers'.vim_buffer_qflist.new,
 
       -- Developer configurations: Not meant for general override
       buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
@@ -72,3 +72,5 @@ Nmap('<LEADER>sc', ':Telescope hilights<CR>')
 Nmap('<LEADER>gb', ':Telescope git_branches<CR>')
 Nmap('<LEADER>gc', ':Telescope git_commits<CR>')
 Nmap('<LEADER>gg', ':Telescope git_status<CR>')
+Nmap('gD', ':Telescope lsp_definitions<CR>')
+Nmap('gr', ':Telescope lsp_references<CR>')

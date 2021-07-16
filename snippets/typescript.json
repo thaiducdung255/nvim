@@ -1,230 +1,197 @@
 {
    "Faker.randomFileName": {
-      "prefix": [":ffn"],
-      "body": [
-         "faker.system.fileName()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "ffn",
+      "body": "faker.system.fileName()"
    },
    "Faker.randomFileType": {
-      "prefix": [":fft"],
-      "body": [
-         "faker.system.commonFileType()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fft",
+      "body": "faker.system.commonFileType()"
    },
    "Faker.randomFilePath": {
-      "prefix": [":ffp"],
-      "body": [
-         "faker.system.filePath()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "ffp",
+      "body": "faker.system.filePath()"
    },
    "Faker.randomDateRecent": {
-      "prefix": [":fdr"],
-      "body": [
-         "faker.date.recent()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fdr",
+      "body": "faker.date.recent()"
    },
    "Faker.randomDatePast": {
-      "prefix": [":fdp"],
-      "body": [
-         "faker.date.past()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fdp",
+      "body": "faker.date.past()"
    },
    "Faker.randomDateFuture": {
-      "prefix": [":fdf"],
-      "body": [
-         "faker.date.future()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fdf",
+      "body": "faker.date.future()"
    },
    "Faker.randomDateSoon": {
-      "prefix": [":fds"],
-      "body": [
-         "faker.date.soon()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fds",
+      "body": "faker.date.soon()"
    },
    "Faker.randomEmail": {
-      "prefix": [":fem"],
-      "body": [
-         "faker.internet.email()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fem",
+      "body": "faker.internet.email()"
    },
    "Faker.randomUrl": {
-      "prefix": [":fur"],
-      "body": [
-         "faker.internet.url()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fur",
+      "body": "faker.internet.url()"
    },
    "Faker.randomUsername": {
-      "prefix": [":fus"],
-      "body": [
-         "faker.internet.userName()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fus",
+      "body": "faker.internet.userName()"
    },
    "Faker.randomIP": {
-      "prefix": [":fip"],
-      "body": [
-         "faker.internet.ip()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fip",
+      "body": "faker.internet.ip()"
    },
    "Faker.randomPassword": {
-      "prefix": [":fpa"],
-      "body": [
-         "faker.internet.password()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fpa",
+      "body": "faker.internet.password()"
    },
    "Faker.randomColor": {
-      "prefix": [":fco"],
-      "body": [
-         "faker.internet.color()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fco",
+      "body": "faker.internet.color()"
    },
    "Faker.randomLoremWord": {
-      "prefix": [":flw"],
-      "body": [
-         "faker.lorem.word()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "flw",
+      "body": "faker.lorem.word()"
    },
    "Faker.randomLoremWords": {
-      "prefix": [":flws"],
-      "body": [
-         "faker.lorem.words()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "flws",
+      "body": "faker.lorem.words()"
    },
    "Faker.randomLoremSentence": {
-      "prefix": [":fls"],
-      "body": [
-         "faker.lorem.sentence()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fls",
+      "body": "faker.lorem.sentence()"
    },
    "Faker.randomLoremSentences": {
-      "prefix": [":flss"],
-      "body": [
-         "faker.lorem.sentences()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "flss",
+      "body": "faker.lorem.sentences()"
    },
    "Faker.randomLoremText": {
-      "prefix": [":flt"],
-      "body": [
-         "faker.lorem.text()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "flt",
+      "body": "faker.lorem.text()"
    },
    "Faker.randomDate": {
-      "prefix": [":frd"],
-      "body": [
-         "faker.datatype.datetime()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frd",
+      "body": "faker.datatype.datetime()"
    },
    "Faker.randomString": {
-      "prefix": [":frs"],
-      "body": [
-         "faker.datatype.string()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frs",
+      "body": "faker.datatype.string()"
    },
    "Faker.randomFloat": {
-      "prefix": [":frf"],
-      "body": [
-         "faker.datatype.float($1)"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frf",
+      "body": "faker.datatype.float($1)"
    },
    "Faker.randomNumber": {
-      "prefix": [":frn"],
-      "body": [
-         "faker.datatype.number($1)"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frn",
+      "body": "faker.datatype.number($1)"
    },
    "Faker.randomUUID": {
-      "prefix": [":fru"],
-      "body": [
-         "faker.datatype.uuid()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fru",
+      "body": "faker.datatype.uuid()"
    },
    "Faker.randomBoolean": {
-      "prefix": [":frb"],
-      "body": [
-         "faker.datatype.boolean()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frb",
+      "body": "faker.datatype.boolean()"
    },
    "Faker.randomHex": {
-      "prefix": [":frh"],
-      "body": [
-         "faker.random.hexaDecimal()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frh",
+      "body": "faker.random.hexaDecimal()"
    },
    "Faker.randomWord": {
-      "prefix": [":frw"],
-      "body": [
-         "faker.random.word()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frw",
+      "body": "faker.random.word()"
    },
    "Faker.randomWords": {
-      "prefix": [":frws"],
-      "body": [
-         "faker.random.words()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frws",
+      "body": "faker.random.words()"
    },
    "Faker.randomLocale": {
-      "prefix": [":frl"],
-      "body": [
-         "faker.random.locale()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frl",
+      "body": "faker.random.locale()"
    },
    "Faker.randomPhoneNumber": {
-      "prefix": [":fpn"],
-      "body": [
-         "faker.phone.phoneNumber('0##########')"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fpn",
+      "body": "faker.phone.phoneNumber('0##########')"
    },
    "Faker.randomLocale": {
-      "prefix": [":frl"],
-      "body": [
-         "faker.random.locale()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "frl",
+      "body": "faker.random.locale()"
    },
    "Faker.randomLatitude": {
-      "prefix": [":fala"],
-      "body": [
-         "faker.address.latitude()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fala",
+      "body": "faker.address.latitude()"
    },
    "Faker.randomLongtitude": {
-      "prefix": [":falo"],
-      "body": [
-         "faker.address.longtitude()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "falo",
+      "body": "faker.address.longtitude()"
    },
    "Faker.randomCity": {
-      "prefix": [":fac"],
-      "body": [
-         "faker.address.city()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fac",
+      "body": "faker.address.city()"
    },
    "Faker.randomZipCode": {
-      "prefix": [":faz"],
-      "body": [
-         "faker.address.zipCode()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "faz",
+      "body": "faker.address.zipCode()"
    },
    "Faker.randomJobTitle": {
-      "prefix": [":fnj"],
-      "body": [
-         "faker.name.jobType()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fnj",
+      "body": "faker.name.jobType()"
    },
    "Faker.randomName": {
-      "prefix": [":fnn"],
-      "body": [
-         "faker.name.findName()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fnn",
+      "body": "faker.name.findName()"
    },
    "Faker.randomGender": {
-      "prefix": [":fng"],
-      "body": [
-         "faker.name.gender()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "fng",
+      "body": "faker.name.gender()"
    },
    "Faker.randomZipCode": {
-      "prefix": [":faz"],
-      "body": [
-         "faker.address.zipCode()"
-      ]
+      "scope": "javascript,typescript,html",
+      "prefix": "faz",
+      "body": "faker.address.zipCode()"
    },
+   "cl": {
+      "scope": "javascript,typescript,html",
+      "prefix": "cl",
+      "body": "console.log($1)"
+   }
 }
