@@ -110,6 +110,7 @@ return require('packer').startup(
 
       -- Color scheme
       use { 'christianchiarulli/nvcode-color-schemes.vim', opt = true }
+      use 'sainnhe/edge'
 
       -- Icons
       use { 'kyazdani42/nvim-web-devicons', opt = true }

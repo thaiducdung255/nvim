@@ -18,7 +18,7 @@ require'compe'.setup {
       path = { kind = "  " },
       buffer = { kind = "  " },
       calc = { kind = "  " },
-      vsnip = { kind = "  " },
+      -- vsnip = { kind = "  " },
       nvim_lsp = { kind = "  " },
       -- nvim_lua = { kind = "  " },
       nvim_lua = false,
@@ -27,7 +27,7 @@ require'compe'.setup {
       vim_dadbod_completion   = true,
       -- snippets_nvim = {kind = "  "},
       -- ultisnips = {kind    = "  "},
-      treesitter = {kind   = "  "},
+      -- treesitter = {kind   = "  "},
       emoji = {
          kind = " ﲃ ",
          filetypes = {
