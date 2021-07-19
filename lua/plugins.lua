@@ -109,7 +109,6 @@ return require('packer').startup(
       use { 'terrortylor/nvim-comment', opt = true }
 
       -- Color scheme
-      use { 'christianchiarulli/nvcode-color-schemes.vim', opt = true }
       use 'sainnhe/edge'
 
       -- Icons

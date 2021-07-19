@@ -1,3 +1,2 @@
-vim.g.nvcode_termcolors = 256
---vim.g.colorscheme = 'lunar'
+vim.g.edge_style = 'aura'
 vim.cmd('colorscheme edge')
