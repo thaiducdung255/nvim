@@ -94,10 +94,10 @@ return require('packer').startup(
 
       -- use 'Yggdroot/indentLine'
       use 'lukas-reineke/indent-blankline.nvim'
+
       use 'szw/vim-maximizer'
       use 'AndrewRadev/switch.vim'
       use 'voldikss/vim-floaterm'
-      use 'ap/vim-css-color'
 
       -- Git
       use { 'lewis6991/gitsigns.nvim', opt = true }
@@ -110,6 +110,7 @@ return require('packer').startup(
 
       -- Color scheme
       use 'sainnhe/edge'
+      -- use 'norcalli/nvim-colorizer.lua'
 
       -- Icons
       use { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -154,14 +155,12 @@ return require('packer').startup(
       require_plugin('gitsigns.nvim')
       require_plugin('dashboard-nvim')
       require_plugin('nvim-autopairs')
-      -- require_plugin('vim-rest-console')
       require_plugin('blamer.nvim')
       require_plugin('undotree')
       require_plugin('indentLine')
       require_plugin('vim-maximizer')
       require_plugin('switch.vim')
       require_plugin('vim-floaterm')
-      require_plugin('vim-css-color')
       require_plugin('nvim-comment')
       require_plugin('vim-vsnp')
       require_plugin('vim-vsnp-integ')
