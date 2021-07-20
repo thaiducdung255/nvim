@@ -37,6 +37,7 @@ return require('packer').startup(
       use { 'neovim/nvim-lspconfig', opt = true }
       use { 'glepnir/lspsaga.nvim', opt = true }
       use { 'kabouzeid/nvim-lspinstall', opt = true }
+      -- signature help
       use { 'ray-x/lsp_signature.nvim', opt = true }
 
       -- Telescope
@@ -72,7 +73,7 @@ return require('packer').startup(
       -- line peek
       use 'nacro90/numb.nvim'
 
-      -- Cursor line
+      -- high all current words
       use { 'xiyaowong/nvim-cursorword', otp = true }
 
       -- Find and replace
@@ -90,13 +91,20 @@ return require('packer').startup(
 
       -- Explorer
       use 'kyazdani42/nvim-tree.lua'
+
+      -- Undo tree
       use 'mbbill/undotree'
 
-      -- use 'Yggdroot/indentLine'
+      -- indent line
       use 'lukas-reineke/indent-blankline.nvim'
 
+      -- maximize window
       use 'szw/vim-maximizer'
+
+      -- text transform
       use 'AndrewRadev/switch.vim'
+
+      -- float terminal
       use 'voldikss/vim-floaterm'
 
       -- Git
@@ -104,13 +112,18 @@ return require('packer').startup(
       use 'APZelos/blamer.nvim'
       use 'tanvirtin/vgit.nvim'
 
+      -- home page
       use { 'ChristianChiarulli/dashboard-nvim', opt = true }
+
+      -- auto backets complete
       use {'windwp/nvim-autopairs', opt = true}
+
+      -- comment
       use { 'terrortylor/nvim-comment', opt = true }
 
       -- Color scheme
       use 'sainnhe/edge'
-      -- use 'norcalli/nvim-colorizer.lua'
+      use 'norcalli/nvim-colorizer.lua'
 
       -- Icons
       use { 'kyazdani42/nvim-web-devicons', opt = true }
