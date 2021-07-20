@@ -127,15 +127,13 @@ Nmap('zk',  'ct]')
 Nmap('zl',  'ct}')
 Nmap('z;',  'ct\'')
 Nmap('z:',  'ct"')
-Nmap('z\'', 'ct`')
 Nmap('zh',  'ct>')
 
 Nmap('zJ',  'cT)')
 Nmap('zK',  'cT]')
 Nmap('zL',  'cT}')
-Nmap('z:',  'cT\'')
-Nmap('z;',  'cT"')
-Nmap('z\'', 'cT`')
+Nmap('z\'',  'cT\'')
+Nmap('z"', 'cT"')
 Nmap('zH',  'cT>')
 
 ---- edit inside bracket cmds
