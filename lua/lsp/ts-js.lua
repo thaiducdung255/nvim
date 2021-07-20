@@ -40,7 +40,7 @@ local function set_lsp_config(client, bufnr)
    set_buf_keymap(bufnr, 'n', '<C-space>', [[:lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'single' })<CR>]])
    set_buf_keymap(bufnr, 'n', ']g', [[:lua vim.lsp.diagnostic.goto_next({ popup_opts = { border = 'single' }})<CR>]])
    set_buf_keymap(bufnr, 'n', '[g', [[:lua vim.lsp.diagnostic.goto_prev({ popup_opts = { border = 'single' }})<CR>]])
-   set_buf_keymap(bufnr, 'n', '<space>d', [[:lua vim.lsp.diagnostic.set_loclist()<CR>]])
+   set_buf_keymap(bufnr, 'n', '<space>D', [[:lua vim.lsp.diagnostic.set_loclist()<CR>]])
 
    if client.resolved_capabilities.hover then
       set_buf_keymap(bufnr, 'n', 'K', [[:lua vim.lsp.buf.hover()<CR>]])
@@ -95,7 +95,6 @@ end
 local js_formatter = js_tools.get_js_formatter()
 
 local js_config = {
-   -- lintCommand = js_tools.should_use_eslint() and 'eslint_d -f unix --stdin --stdin-filename ${INPUT}' or '',
    lintCommand = js_tools.should_use_eslint() and 'eslint -f unix --stdin --stdin-filename ${INPUT}' or '',
    lintStdin = true,
    lintFormats = {'%f:%l:%c: %m'},
