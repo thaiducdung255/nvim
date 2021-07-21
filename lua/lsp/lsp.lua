@@ -95,13 +95,19 @@ end
 local js_formatter = js_tools.get_js_formatter()
 
 local js_config = {
-   lintCommand = js_tools.should_use_eslint() and 'eslint -f unix --stdin --stdin-filename ${INPUT}' or '',
+   lintCommand = js_tools.should_use_eslint() and 'eslint_d -f unix --stdin --stdin-filename ${INPUT}' or '',
    lintStdin = true,
-   lintFormats = {'%f:%l:%c: %m'},
+   lintFormats = { '%f:%l:%c: %m' },
    lintIgnoreExitCode = true,
    formatCommand = js_formatter,
    formatStdin = true,
    rootMarkers = {'package.json'}
+}
+
+local pyright_config = {
+   lintCommand = 'python3 -m pylint --output-format text --score no --msg-template {path}:{line}:{column}:{C}:{msg} ${INPUT}',
+   lintStdin = true,
+   lintFormats = { '%f:%l:%c:%t:%m' },
 }
 
 local function is_javascript(ft)
@@ -193,12 +199,13 @@ lspconfig.efm.setup {
    },
    settings = {
       languages = {
-         javascript = {js_config},
-         javascriptreact = {js_config},
-         ['javascript.jsx'] = {js_config},
-         typescript = {js_config},
-         ['typescript.tsx'] = {js_config},
-         typescriptreact = {js_config},
+         javascript           = { js_config },
+         javascriptreact      = { js_config },
+         ['javascript.jsx']   = { js_config },
+         typescript           = { js_config },
+         ['typescript.tsx']   = { js_config },
+         typescriptreact      = { js_config },
+         python               = { pyright_config },
       }
    },
    filetypes = {
