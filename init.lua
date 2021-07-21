@@ -6,7 +6,7 @@ require('mappings')
 require('key_modifiers')
 
 require('lsp')
-require('lsp.ts-js')
+require('lsp.lsp')
 
 require('compe-conf')
 require('numb-conf')

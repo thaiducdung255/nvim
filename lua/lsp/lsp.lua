@@ -144,6 +144,34 @@ lspconfig.gopls.setup {
    end
 }
 
+lspconfig.pyright.setup {
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+      require 'lsp_signature'.on_attach({
+         hint_enable = false,
+      })
+   end
+}
+
+lspconfig.bashls.setup {
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+      require 'lsp_signature'.on_attach({
+         hint_enable = false,
+      })
+   end
+}
+
+lspconfig.jsonls.setup {
+   cmd = { 'vscode-json-languageserver', '--stdio' },
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+      require 'lsp_signature'.on_attach({
+         hint_enable = false,
+      })
+   end
+}
+
 lspconfig.efm.setup {
    on_attach = function(client, bufnr)
       check_efm_formatter(function(ok)
@@ -197,4 +225,3 @@ lspconfig.efm.setup {
       }
    }
 }
--- }
