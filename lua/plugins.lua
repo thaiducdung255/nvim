@@ -134,11 +134,11 @@ return require('packer').startup(
 
       -- Rest api
       use {
-          'NTBBloodbath/rest.nvim',
-          requires = { 'nvim-lua/plenary.nvim' },
-          config = function()
-              require('rest-nvim').setup()
-          end
+         'NTBBloodbath/rest.nvim',
+         requires = { 'nvim-lua/plenary.nvim' },
+         config = function()
+            require('rest-nvim').setup()
+         end
       }
 
       -- Outline
@@ -159,9 +159,7 @@ return require('packer').startup(
       require_plugin('popup.nvim')
       require_plugin('plenary.nvim')
       require_plugin('telescope.nvim')
-      require_plugin('vim-easymotion')
       require_plugin('nvim-compe')
-      require_plugin('vim-vsnip')
       require_plugin('nvim-treesitter')
       require_plugin('nvim-ts-autotag')
       require_plugin('nvim-tree.lua')
@@ -170,14 +168,10 @@ return require('packer').startup(
       require_plugin('nvim-autopairs')
       require_plugin('blamer.nvim')
       require_plugin('undotree')
-      require_plugin('indentLine')
       require_plugin('vim-maximizer')
       require_plugin('switch.vim')
       require_plugin('vim-floaterm')
       require_plugin('nvim-comment')
-      require_plugin('vim-vsnp')
-      require_plugin('vim-vsnp-integ')
-      require_plugin('nvcode-color-schemes.vim')
       require_plugin('nvim-web-devicons')
       require_plugin('galaxyline.nvim')
       require_plugin('barbar.nvim')
