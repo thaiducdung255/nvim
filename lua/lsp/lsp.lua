@@ -158,10 +158,10 @@ elseif vim.fn.has('unix') == 1 then
 elseif vim.fn.has('win32') == 1 then
   system_name = 'Windows'
 else
-  print("Unsupported system for sumneko")
+  print('Unsupported system for sumneko')
 end
 
-local sumneko_root_path = vim.fn.stdpath('cache')..'/lspconfig/sumneko_lua/lua-language-server'
+local sumneko_root_path = '/home/df/Apps/lua-language-server'
 local sumneko_binary = sumneko_root_path..'/bin/'..system_name..'/lua-language-server'
 
 lspconfig.sumneko_lua.setup {
