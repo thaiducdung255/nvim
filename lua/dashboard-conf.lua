@@ -1,3 +1,4 @@
+vim.cmd('autocmd FileType dashboard :NvimTreeOpen')
 vim.g.dashboard_default_executive = 'telescope'
 vim.g.dashboard_custom_section = {
    a = {
@@ -24,21 +25,7 @@ vim.g.dashboard_custom_section = {
    },
       command = ':e ~/.config/nvim/lua/configs.lua'
    }
-   -- e = {description = {'  Marks              '}, command = 'Telescope marks'}
 }
-
--- file_browser = {description = {' File Browser'}, command = 'Telescope find_files'},
-
--- vim.g.dashboard_custom_shortcut = {
---     a = 'f',
---     find_word = 'SPC f a',
---     last_session = 'SPC s l',
---     new_file = 'SPC c n',
---     book_marks = 'SPC f b'
--- }
--- find_history = 'SPC f h',
-
--- vim.g.dashboard_session_directory = '~/.cache/nvim/session'
 
 local dashboardHeaders = {
    Monday = {
