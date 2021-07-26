@@ -24,6 +24,4 @@ vim.g.jsAndTsOptions = {
    {'.map', '.reduce', '.filter', '.forEach'},
 }
 
-vim.cmd('autocmd FileType javascript let g:switch_custom_definitions = jsAndTsOptions')
-vim.cmd('autocmd FileType typescript let g:switch_custom_definitions = jsAndTsOptions')
-vim.cmd('autocmd FileType typescriptreact let g:switch_custom_definitions = jsAndTsOptions')
+vim.cmd('autocmd FileType javascript,typescript,typescriptreact let g:switch_custom_definitions = jsAndTsOptions')

@@ -150,6 +150,30 @@ lspconfig.gopls.setup {
    end
 }
 
+local system_name
+if vim.fn.has('mac') == 1 then
+  system_name = 'macOS'
+elseif vim.fn.has('unix') == 1 then
+  system_name = 'Linux'
+elseif vim.fn.has('win32') == 1 then
+  system_name = 'Windows'
+else
+  print("Unsupported system for sumneko")
+end
+
+local sumneko_root_path = vim.fn.stdpath('cache')..'/lspconfig/sumneko_lua/lua-language-server'
+local sumneko_binary = sumneko_root_path..'/bin/'..system_name..'/lua-language-server'
+
+lspconfig.sumneko_lua.setup {
+   cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+      require 'lsp_signature'.on_attach({
+         hint_enable = false,
+      })
+   end
+}
+
 lspconfig.pyright.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
