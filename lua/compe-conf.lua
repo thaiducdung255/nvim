@@ -25,6 +25,7 @@ require'compe'.setup {
       spell = { kind = "  " },
       tags                    = false,
       vim_dadbod_completion   = true,
+      tabnine                 = true,
       -- snippets_nvim = {kind = "  "},
       -- ultisnips = {kind    = "  "},
       -- treesitter = {kind   = "  "},

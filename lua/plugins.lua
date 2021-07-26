@@ -70,6 +70,8 @@ return require('packer').startup(
       -- Autocomplete
       use { 'hrsh7th/nvim-compe', opt = true }
 
+      use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}
+
       -- line peek
       use 'nacro90/numb.nvim'
 
