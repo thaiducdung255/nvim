@@ -43,7 +43,7 @@ local function set_lsp_config(client, bufnr)
    set_buf_keymap(bufnr, 'n', '<space>D', [[:lua vim.lsp.diagnostic.set_loclist()<CR>]])
 
    if client.resolved_capabilities.hover then
-      set_buf_keymap(bufnr, 'n', 'K', [[:lua vim.lsp.buf.hover()<CR>]])
+      set_buf_keymap(bufnr, 'n', 'gK', [[:lua vim.lsp.buf.hover()<CR>]])
    end
 
    if client.resolved_capabilities.goto_definition then

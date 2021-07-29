@@ -228,6 +228,7 @@ local dashboardFooters = {
       "   `.----'      )|`.\\)  `-))\\-')  o88o o8boY8888o  `8'    Y88Po88o 88o",
       "                '   )     ')/",
       "                           '",
+      "",
    },
    Friday = {
       "                             _..._",
