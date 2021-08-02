@@ -69,6 +69,8 @@ return require('packer').startup(
 
       -- Autocomplete
       use { 'hrsh7th/nvim-compe', opt = true }
+      use {'hrsh7th/vim-vsnip', opt = true}
+      use {'hrsh7th/vim-vsnip-integ', opt = true}
 
       use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}
 
@@ -135,13 +137,14 @@ return require('packer').startup(
       use { 'romgrk/barbar.nvim', opt = true }
 
       -- Rest api
-      use {
-         'NTBBloodbath/rest.nvim',
-         requires = { 'nvim-lua/plenary.nvim' },
-         config = function()
-            require('rest-nvim').setup()
-         end
-      }
+      -- use {
+      --    'NTBBloodbath/rest.nvim',
+      --    requires = { 'nvim-lua/plenary.nvim' },
+      --    config = function()
+      --       require('rest-nvim').setup()
+      --    end
+      -- }
+      use {'diepm/vim-rest-console'}
 
       -- Outline
       use { 'simrat39/symbols-outline.nvim', opt = true }
@@ -149,6 +152,8 @@ return require('packer').startup(
       -- Dim inactive windows
       use { 'sunjon/shade.nvim', opt = true }
 
+      require_plugin('vim-vsnip')
+      require_plugin('vim-vsnip-integ')
       require_plugin('nvim-spectre')
       require_plugin('nvim-cursorword')
       require_plugin('vgit')
