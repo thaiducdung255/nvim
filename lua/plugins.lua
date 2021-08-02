@@ -114,6 +114,7 @@ return require('packer').startup(
       -- Git
       use { 'lewis6991/gitsigns.nvim', opt = true }
       use 'APZelos/blamer.nvim'
+      use 'kdheepak/lazygit.nvim'
       -- use 'tanvirtin/vgit.nvim'
 
       -- home page
