@@ -69,8 +69,8 @@ return require('packer').startup(
 
       -- Autocomplete
       use { 'hrsh7th/nvim-compe', opt = true }
-      use {'hrsh7th/vim-vsnip', opt = true}
-      use {'hrsh7th/vim-vsnip-integ', opt = true}
+      -- use {'hrsh7th/vim-vsnip', opt = true}
+      -- use {'hrsh7th/vim-vsnip-integ', opt = true}
 
       use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}
 
@@ -115,7 +115,6 @@ return require('packer').startup(
       use { 'lewis6991/gitsigns.nvim', opt = true }
       use 'APZelos/blamer.nvim'
       use 'kdheepak/lazygit.nvim'
-      -- use 'tanvirtin/vgit.nvim'
 
       -- home page
       use { 'ChristianChiarulli/dashboard-nvim', opt = true }
@@ -138,14 +137,14 @@ return require('packer').startup(
       use { 'romgrk/barbar.nvim', opt = true }
 
       -- Rest api
-      -- use {
-      --    'NTBBloodbath/rest.nvim',
-      --    requires = { 'nvim-lua/plenary.nvim' },
-      --    config = function()
-      --       require('rest-nvim').setup()
-      --    end
-      -- }
-      use {'diepm/vim-rest-console'}
+      use {
+         'NTBBloodbath/rest.nvim',
+         requires = { 'nvim-lua/plenary.nvim' },
+         config = function()
+            require('rest-nvim').setup()
+         end
+      }
+      -- use {'diepm/vim-rest-console'}
 
       -- Outline
       use { 'simrat39/symbols-outline.nvim', opt = true }
