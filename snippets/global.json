@@ -1,32 +1,35 @@
 {
-   "API.get": {
+   "Vsnip": {
+      "prefix": ["snip", "sn"],
+      "body": [
+         "\"$1\": {",
+         "\t\"prefix\": [\"$2\"],",
+         "\t\"body\": \"$3\"",
+         "}"
+      ]
+   },
+   "$lt": {
+      "prefix": ["lt"],
+      "body": "< "
+   },
+   "$lte": {
+      "prefix": ["le"],
+      "body": "<= "
+   },
+   "$gt": {
+      "prefix": ["gt"],
+      "body": "> "
+   },
+   "$gte": {
       "prefix": ["ge"],
-      "body": [
-         "GET /$1"
-      ]
+      "body": ">= "
    },
-   "API.post": {
-      "prefix": ["po"],
-      "body": [
-         "POST /$1"
-      ]
+   "$or": {
+      "prefix": ["or"],
+      "body": "|| "
    },
-   "API.put": {
-      "prefix": ["pu"],
-      "body": [
-         "PUT /$1"
-      ]
-   },
-   "API.patch": {
-      "prefix": ["pa"],
-      "body": [
-         "PATCH /$1"
-      ]
-   },
-   "API.delete": {
-      "prefix": ["de"],
-      "body": [
-         "DELETE /$1"
-      ]
+   "$and": {
+      "prefix": ["an"],
+      "body": "&& "
    }
 }

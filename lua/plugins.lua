@@ -69,10 +69,8 @@ return require('packer').startup(
 
       -- Autocomplete
       use { 'hrsh7th/nvim-compe', opt = true }
-      -- use {'hrsh7th/vim-vsnip', opt = true}
-      -- use {'hrsh7th/vim-vsnip-integ', opt = true}
-
-      use {'tzachar/compe-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-compe'}
+      use {'hrsh7th/vim-vsnip', opt = true}
+      use {'hrsh7th/vim-vsnip-integ', opt = true}
 
       -- line peek
       use 'nacro90/numb.nvim'
@@ -114,6 +112,7 @@ return require('packer').startup(
       -- Git
       use { 'lewis6991/gitsigns.nvim', opt = true }
       use 'APZelos/blamer.nvim'
+      use 'tanvirtin/vgit.nvim'
       use 'kdheepak/lazygit.nvim'
 
       -- home page

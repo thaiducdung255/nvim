@@ -1,197 +1,216 @@
 {
    "Faker.randomFileName": {
-      "scope": "javascript,typescript,html",
-      "prefix": "ffn",
+      "prefix": ["ffn"],
       "body": "faker.system.fileName()"
    },
    "Faker.randomFileType": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fft",
+      "prefix": ["fft"],
       "body": "faker.system.commonFileType()"
    },
    "Faker.randomFilePath": {
-      "scope": "javascript,typescript,html",
-      "prefix": "ffp",
+      "prefix": ["ffp"],
       "body": "faker.system.filePath()"
    },
    "Faker.randomDateRecent": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fdr",
+      "prefix": ["fdr"],
       "body": "faker.date.recent()"
    },
    "Faker.randomDatePast": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fdp",
+      "prefix": ["fdp"],
       "body": "faker.date.past()"
    },
    "Faker.randomDateFuture": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fdf",
+      "prefix": ["fdf"],
       "body": "faker.date.future()"
    },
    "Faker.randomDateSoon": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fds",
+      "prefix": ["fds"],
       "body": "faker.date.soon()"
    },
    "Faker.randomEmail": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fem",
+      "prefix": ["fem"],
       "body": "faker.internet.email()"
    },
    "Faker.randomUrl": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fur",
+      "prefix": ["fur"],
       "body": "faker.internet.url()"
    },
    "Faker.randomUsername": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fus",
+      "prefix": ["fus"],
       "body": "faker.internet.userName()"
    },
    "Faker.randomIP": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fip",
+      "prefix": ["fip"],
       "body": "faker.internet.ip()"
    },
    "Faker.randomPassword": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fpa",
+      "prefix": ["fpa"],
       "body": "faker.internet.password()"
    },
    "Faker.randomColor": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fco",
+      "prefix": ["fco"],
       "body": "faker.internet.color()"
    },
    "Faker.randomLoremWord": {
-      "scope": "javascript,typescript,html",
-      "prefix": "flw",
+      "prefix": ["flw"],
       "body": "faker.lorem.word()"
    },
    "Faker.randomLoremWords": {
-      "scope": "javascript,typescript,html",
-      "prefix": "flws",
+      "prefix": ["flws"],
       "body": "faker.lorem.words()"
    },
    "Faker.randomLoremSentence": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fls",
+      "prefix": ["fls"],
       "body": "faker.lorem.sentence()"
    },
    "Faker.randomLoremSentences": {
-      "scope": "javascript,typescript,html",
-      "prefix": "flss",
+      "prefix": ["flss"],
       "body": "faker.lorem.sentences()"
    },
    "Faker.randomLoremText": {
-      "scope": "javascript,typescript,html",
-      "prefix": "flt",
+      "prefix": ["flt"],
       "body": "faker.lorem.text()"
    },
    "Faker.randomDate": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frd",
+      "prefix": ["frd"],
       "body": "faker.datatype.datetime()"
    },
    "Faker.randomString": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frs",
+      "prefix": ["frs"],
       "body": "faker.datatype.string()"
    },
    "Faker.randomFloat": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frf",
+      "prefix": ["frf"],
       "body": "faker.datatype.float($1)"
    },
    "Faker.randomNumber": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frn",
+      "prefix": ["frn"],
       "body": "faker.datatype.number($1)"
    },
    "Faker.randomUUID": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fru",
+      "prefix": ["fru"],
       "body": "faker.datatype.uuid()"
    },
    "Faker.randomBoolean": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frb",
+      "prefix": ["frb"],
       "body": "faker.datatype.boolean()"
    },
    "Faker.randomHex": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frh",
+      "prefix": ["frh"],
       "body": "faker.random.hexaDecimal()"
    },
    "Faker.randomWord": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frw",
+      "prefix": ["frw"],
       "body": "faker.random.word()"
    },
    "Faker.randomWords": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frws",
+      "prefix": ["frws"],
       "body": "faker.random.words()"
    },
    "Faker.randomLocale": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frl",
+      "prefix": ["frl"],
       "body": "faker.random.locale()"
    },
    "Faker.randomPhoneNumber": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fpn",
+      "prefix": ["fpn"],
       "body": "faker.phone.phoneNumber('0##########')"
    },
-   "Faker.randomLocale": {
-      "scope": "javascript,typescript,html",
-      "prefix": "frl",
-      "body": "faker.random.locale()"
-   },
    "Faker.randomLatitude": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fala",
+      "prefix": ["fala"],
       "body": "faker.address.latitude()"
    },
    "Faker.randomLongtitude": {
-      "scope": "javascript,typescript,html",
-      "prefix": "falo",
+      "prefix": ["falo"],
       "body": "faker.address.longtitude()"
    },
    "Faker.randomCity": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fac",
+      "prefix": ["fac"],
       "body": "faker.address.city()"
    },
-   "Faker.randomZipCode": {
-      "scope": "javascript,typescript,html",
-      "prefix": "faz",
-      "body": "faker.address.zipCode()"
-   },
    "Faker.randomJobTitle": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fnj",
+      "prefix": ["fnj"],
       "body": "faker.name.jobType()"
    },
    "Faker.randomName": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fnn",
+      "prefix": ["fnn"],
       "body": "faker.name.findName()"
    },
    "Faker.randomGender": {
-      "scope": "javascript,typescript,html",
-      "prefix": "fng",
+      "prefix": ["fng"],
       "body": "faker.name.gender()"
    },
    "Faker.randomZipCode": {
-      "scope": "javascript,typescript,html",
-      "prefix": "faz",
+      "prefix": ["faz"],
       "body": "faker.address.zipCode()"
    },
-   "cl": {
-      "scope": "javascript,typescript,html",
-      "prefix": "cl",
+   "console.log": {
+      "prefix": ["cl"],
       "body": "console.log($1)"
+   },
+   "console.log_object": {
+      "prefix": ["co"],
+      "body": "console.log({ $1 })"
+   },
+   "JSON.stringify": {
+      "prefix": ["js"],
+      "body": "JSON.stringify($0)"
+   },
+   "JSON.parse": {
+      "prefix": ["jp"],
+      "body": "JSON.parse($1)"
+   },
+   "Object.keys": {
+      "prefix": ["ok"],
+      "body": "Object.keys($1)"
+   },
+   "Object.values": {
+      "prefix": ["ov"],
+      "body": "Object.values($1)"
+   },
+   "$eq": {
+      "prefix": ["eq"],
+      "body": "=== "
+   },
+   "$ne": {
+      "prefix": ["ne"],
+      "body": "!== "
+   },
+   "import_module": {
+      "prefix": ["rem"],
+      "body": "import $1 from '$1'"
+   },
+   "import_partial": {
+      "prefix": ["rep"],
+      "body": "import { $1 } from '$2'"
+   },
+   "function": {
+      "prefix": ["fn"],
+      "body": [
+         "function $1() {",
+         "\t$2",
+         "}"
+      ]
+   },
+   "arrow_function_compact": {
+      "prefix": ["aff"],
+      "body": [
+         "($1) => $2"
+      ]
+   },
+   "arrow_function_full": {
+      "prefix": ["aff"],
+      "body": [
+         "($1) => {",
+         "\t$2",
+         "}"
+      ]
+   },
+   "new_Date": {
+      "prefix": ["nd"],
+      "body": "new Date($1)"
+   },
+   "Date.now": {
+      "prefix": ["dn"],
+      "body": "Date.now()"
    }
 }

@@ -1,0 +1,32 @@
+{
+   "API.get": {
+      "prefix": ["ge"],
+      "body": [
+         "GET /$1"
+      ]
+   },
+   "API.post": {
+      "prefix": ["po"],
+      "body": [
+         "POST /$1"
+      ]
+   },
+   "API.put": {
+      "prefix": ["pu"],
+      "body": [
+         "PUT /$1"
+      ]
+   },
+   "API.patch": {
+      "prefix": ["pa"],
+      "body": [
+         "PATCH /$1"
+      ]
+   },
+   "API.delete": {
+      "prefix": ["de"],
+      "body": [
+         "DELETE /$1"
+      ]
+   }
+}
