@@ -89,10 +89,10 @@ Nmap(';l',  'f}hxxF{xx')
 Nmap(';h',  'f>xF<x')
 
 ---- auto pair brackets
-Imap(';j', '()<left>')
-Imap(';k', '[]<left>')
-Imap(';l', '{}<left>')
-Imap(';h', '<><left>')
+Imap(';j',  '()<left>')
+Imap(';k',  '[]<left>')
+Imap(';l',  '{}<left>')
+Imap(';h',  '<><left>')
 Imap(';\'', '``<left>')
 
 ---- bracket navs
@@ -129,8 +129,8 @@ Nmap('zh',  'ct>')
 Nmap('zJ',  'cT)')
 Nmap('zK',  'cT]')
 Nmap('zL',  'cT}')
-Nmap('z\'',  'cT\'')
-Nmap('z"', 'cT"')
+Nmap('z\'', 'cT\'')
+Nmap('z"',  'cT"')
 Nmap('zH',  'cT>')
 
 ---- edit inside bracket cmds

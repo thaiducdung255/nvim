@@ -23,8 +23,8 @@ vim.g.dashboard_custom_section = {
       description = {
          '  Settings           '
    },
-      command = ':e ~/.config/nvim/lua/configs.lua'
-   }
+      command = ':e ~/.config/nvim/lua/plugins.lua'
+   },
 }
 
 local dashboardHeaders = {

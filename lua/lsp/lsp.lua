@@ -77,7 +77,7 @@ local function set_lsp_config(client, bufnr)
    end
 
    if client.resolved_capabilities.signature_help then
-      set_buf_keymap(bufnr, 'i', '<C-x><C-p>', [[<C-o>:lua vim.lsp.buf.signature_help()<CR>]])
+      set_buf_keymap(bufnr, 'i', 'J', [[<C-o>:lua vim.lsp.buf.signature_help()<CR>]])
    end
 
    if client.name == 'tsserver' then
@@ -135,18 +135,18 @@ lspconfig.tsserver.setup {
          client.resolved_capabilities.document_formatting = not ok
       end)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach({
-         hint_enable = false,
-      })
+      -- require 'lsp_signature'.on_attach({
+      --    hint_enable = false,
+      -- })
    end
 }
 
 lspconfig.gopls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach({
-         hint_enable = false,
-      })
+      -- require 'lsp_signature'.on_attach({
+      --    hint_enable = false,
+      -- })
    end
 }
 
@@ -168,27 +168,27 @@ lspconfig.sumneko_lua.setup {
    cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach({
-         hint_enable = false,
-      })
+      -- require 'lsp_signature'.on_attach({
+      --    hint_enable = false,
+      -- })
    end
 }
 
 lspconfig.pyright.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach({
-         hint_enable = false,
-      })
+      -- require 'lsp_signature'.on_attach({
+      --    hint_enable = false,
+      -- })
    end
 }
 
 lspconfig.bashls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach({
-         hint_enable = false,
-      })
+      -- require 'lsp_signature'.on_attach({
+      --    hint_enable = false,
+      -- })
    end
 }
 
@@ -196,9 +196,9 @@ lspconfig.jsonls.setup {
    cmd = { 'vscode-json-languageserver', '--stdio' },
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach({
-         hint_enable = false,
-      })
+      -- require 'lsp_signature'.on_attach({
+      --    hint_enable = false,
+      -- })
    end
 }
 

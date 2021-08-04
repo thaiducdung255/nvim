@@ -38,7 +38,7 @@ return require('packer').startup(
       use { 'glepnir/lspsaga.nvim', opt = true }
       use { 'kabouzeid/nvim-lspinstall', opt = true }
       -- signature help
-      use { 'ray-x/lsp_signature.nvim', opt = true }
+      -- use { 'ray-x/lsp_signature.nvim', opt = true }
 
       -- Telescope
       use { 'nvim-lua/popup.nvim', opt = true }
@@ -111,7 +111,7 @@ return require('packer').startup(
 
       -- Git
       use { 'lewis6991/gitsigns.nvim', opt = true }
-      use 'APZelos/blamer.nvim'
+      -- use 'APZelos/blamer.nvim'
       use 'tanvirtin/vgit.nvim'
       use 'kdheepak/lazygit.nvim'
 
@@ -126,6 +126,8 @@ return require('packer').startup(
 
       -- Color scheme
       use 'sainnhe/edge'
+      use 'tomasiser/vim-code-dark'
+      use 'marko-cerovac/material.nvim'
       use 'norcalli/nvim-colorizer.lua'
 
       -- Icons
@@ -158,7 +160,7 @@ return require('packer').startup(
       require_plugin('vgit')
       require_plugin('shade.nvim')
       require_plugin('symbols-outline.nvim')
-      require_plugin('lsp_signature.nvim')
+      -- require_plugin('lsp_signature.nvim')
       require_plugin('nvim-lspconfig')
       require_plugin('lspsaga.nvim')
       require_plugin('nvim-lspinstall')
@@ -172,7 +174,6 @@ return require('packer').startup(
       require_plugin('gitsigns.nvim')
       require_plugin('dashboard-nvim')
       require_plugin('nvim-autopairs')
-      require_plugin('blamer.nvim')
       require_plugin('undotree')
       require_plugin('vim-maximizer')
       require_plugin('switch.vim')
