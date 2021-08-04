@@ -150,15 +150,11 @@ return require('packer').startup(
       -- Outline
       use { 'simrat39/symbols-outline.nvim', opt = true }
 
-      -- Dim inactive windows
-      use { 'sunjon/shade.nvim', opt = true }
-
       require_plugin('vim-vsnip')
       require_plugin('vim-vsnip-integ')
       require_plugin('nvim-spectre')
       require_plugin('nvim-cursorword')
       require_plugin('vgit')
-      require_plugin('shade.nvim')
       require_plugin('symbols-outline.nvim')
       -- require_plugin('lsp_signature.nvim')
       require_plugin('nvim-lspconfig')
