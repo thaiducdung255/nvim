@@ -9,10 +9,10 @@ vim.cmd([[imap <expr> <space>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-ju
 vim.cmd([[smap <expr> <space>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<space>']])
 
 -- Jump forward or backward
- vim.cmd([[imap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>']])
- vim.cmd([[smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>']])
- vim.cmd([[imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>']])
- vim.cmd([[smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>']])
+ vim.cmd([[imap <expr> jj   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'   : '<Left>']])
+ vim.cmd([[smap <expr> jj   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'   : '<Left>']])
+ vim.cmd([[imap <expr> kk vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'     : '<Right>']])
+ vim.cmd([[smap <expr> kk vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'     : '<Right>']])
 
 -- Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
 -- See https://github.com/hrsh7th/vim-vsnip/pull/50
