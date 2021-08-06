@@ -34,3 +34,7 @@ vim.cmd('hi httpPath guifg=#00cc66')
 -- custom highlight colorscheme
 vim.cmd('hi TabLineSel guibg=grey')
 vim.cmd('hi link TSConstructor TSVariable')
+
+-- custom LSP hilight
+vim.cmd('hi LspDiagnosticsDefaultError gui=None')
+vim.cmd('hi LspDiagnosticsDefaultWarning gui=None')
