@@ -1,9 +1,7 @@
 local gl = require('galaxyline')
--- get my theme in galaxyline repo
--- local colors = require('galaxyline.theme').default
 local colors = {
-   -- bg = '#2E2E2E',
-   bg             = '#292D38',
+   bg             = '#33355b',
+   -- bg             = '#292D38',
    yellow         = '#DCDCAA',
    dark_yellow    = '#D7BA7D',
    cyan           = '#4EC9B0',
@@ -30,25 +28,25 @@ gls.left[1] = {
       provider = function()
          -- auto change color according the vim mode
          local mode_color = {
-            n        = colors.blue,
-            i        = colors.green,
-            v        = colors.purple,
-            V        = colors.purple,
-            c        = colors.magenta,
-            no       = colors.blue,
-            s        = colors.orange,
-            S        = colors.orange,
-            ['']     = colors.orange,
-            ic       = colors.yellow,
-            R        = colors.red,
-            Rv       = colors.red,
-            cv       = colors.blue,
-            ce       = colors.blue,
-            r        = colors.cyan,
-            rm       = colors.cyan,
-            ['r?']   = colors.cyan,
-            ['!']    = colors.blue,
-            t        = colors.blue
+            n      = colors.blue,
+            i      = colors.green,
+            v      = colors.purple,
+            V      = colors.purple,
+            c      = colors.magenta,
+            no     = colors.blue,
+            s      = colors.orange,
+            S      = colors.orange,
+            ['']   = colors.orange,
+            ic     = colors.yellow,
+            R      = colors.red,
+            Rv     = colors.red,
+            cv     = colors.blue,
+            ce     = colors.blue,
+            r      = colors.cyan,
+            rm     = colors.cyan,
+            ['r?'] = colors.cyan,
+            ['!']  = colors.blue,
+            t      = colors.blue
          }
 
          vim.api.nvim_command('hi GalaxyViMode guifg=' .. mode_color[vim.fn.mode()])
@@ -95,7 +93,7 @@ gls.left[5] = {
    DiffModified = {
       provider    = 'DiffModified',
       condition   = condition.hide_in_width,
-      icon        = ' 柳',
+      icon        = '  柳',
       highlight   = {colors.blue, colors.bg}
    }
 }
@@ -104,8 +102,21 @@ gls.left[6] = {
    DiffRemove = {
       provider    = 'DiffRemove',
       condition   = condition.hide_in_width,
-      icon        = '  ',
+      icon        = '   ',
       highlight   = {colors.red, colors.bg}
+   }
+}
+
+gls.left[7] = {
+   Data = {
+      provider             = function()
+         vim.cmd([[let g:fp = fnamemodify(expand("%"), ":~:.")]])
+         return '    ' .. vim.g.fp .. ' '
+      end,
+      condition            = condition.hide_in_width,
+      separator            = ' ',
+      separator_highlight  = {'NONE', colors.bg},
+      highlight            = {colors.grey, colors.bg}
    }
 }
 
@@ -123,7 +134,7 @@ gls.right[1] = {
 gls.right[2] = {
    DiagnosticWarn = {
       provider    = 'DiagnosticWarn',
-      icon        = '  ',
+      icon        = '   ',
       highlight   = {
          colors.orange,
          colors.bg
@@ -132,6 +143,23 @@ gls.right[2] = {
 }
 
 gls.right[3] = {
+   Space = {
+      provider             = function()
+         return ' '
+      end,
+      separator            = ' ',
+      separator_highlight  = {
+         'NONE',
+         colors.bg
+      },
+      highlight            = {
+         colors.orange,
+         colors.bg
+      }
+   }
+}
+
+gls.right[4] = {
    DiagnosticHint = {
       provider    = 'DiagnosticHint',
       icon        = '  ',
@@ -142,7 +170,24 @@ gls.right[3] = {
    }
 }
 
-gls.right[4] = {
+gls.right[5] = {
+   Space = {
+      provider             = function()
+         return ' '
+      end,
+      separator            = ' ',
+      separator_highlight  = {
+         'NONE',
+         colors.bg
+      },
+      highlight            = {
+         colors.orange,
+         colors.bg
+      }
+   }
+}
+
+gls.right[6] = {
    DiagnosticInfo = {
       provider    = 'DiagnosticInfo',
       icon        = '  ',
@@ -153,7 +198,7 @@ gls.right[4] = {
    }
 }
 
-gls.right[5] = {
+gls.right[7] = {
    ShowLspClient = {
       provider       = 'GetLspClient',
       condition      = function()
@@ -174,10 +219,26 @@ gls.right[5] = {
    }
 }
 
-gls.right[6] = {
+gls.right[8] = {
+   Space = {
+      provider             = function()
+         return ' '
+      end,
+      separator            = ' ',
+      separator_highlight  = {
+         'NONE',
+         colors.bg
+      },
+      highlight            = {
+         colors.orange,
+         colors.bg
+      }
+   }
+}
+gls.right[9] = {
    LineInfo = {
       provider             = 'LineColumn',
-      separator            = '  ',
+      separator            = ' ',
       separator_highlight  = {
          'NONE',
          colors.bg
@@ -189,7 +250,7 @@ gls.right[6] = {
    }
 }
 
-gls.right[7] = {
+gls.right[10] = {
    PerCent = {
       provider = 'LinePercent',
       separator = ' ',
@@ -198,10 +259,27 @@ gls.right[7] = {
    }
 }
 
-gls.right[8] = {
-   Tabstop = {
+gls.right[11] = {
+   Space = {
       provider             = function()
-         return 'Spaces:' .. vim.api.nvim_buf_get_option(0, 'shiftwidth') .. ' '
+         return ' '
+      end,
+      separator            = ' ',
+      separator_highlight  = {
+         'NONE',
+         colors.bg
+      },
+      highlight            = {
+         colors.orange,
+         colors.bg
+      }
+   }
+}
+
+gls.right[12] = {
+   Shiftwidth = {
+      provider             = function()
+         return 'SW:' .. vim.api.nvim_buf_get_option(0, 'shiftwidth') .. ' '
       end,
       condition            = condition.hide_in_width,
       separator            = ' ',
@@ -210,7 +288,24 @@ gls.right[8] = {
    }
 }
 
-gls.right[9] = {
+gls.right[13] = {
+   Space = {
+      provider             = function()
+         return ' '
+      end,
+      separator            = ' ',
+      separator_highlight  = {
+         'NONE',
+         colors.bg
+      },
+      highlight            = {
+         colors.orange,
+         colors.bg
+      }
+   }
+}
+
+gls.right[14] = {
    BufferType = {
       provider = 'FileTypeName',
       condition = condition.hide_in_width,
@@ -220,23 +315,7 @@ gls.right[9] = {
    }
 }
 
-gls.right[10] = {
-   FileEncode = {
-      provider             = 'FileEncode',
-      condition            = condition.hide_in_width,
-      separator            = ' ',
-      separator_highlight  = {
-         'NONE',
-         colors.bg
-      },
-      highlight            = {
-         colors.grey,
-         colors.bg
-      }
-   }
-}
-
-gls.right[11] = {
+gls.right[16] = {
    Space = {
       provider             = function()
          return ' '
@@ -264,7 +343,7 @@ gls.short_line_left[1] = {
 
 gls.short_line_left[2] = {
    SFileName = {
-      provider    = 'SFileName',
+      provider    = 'FileName',
       condition   = condition.buffer_not_empty,
       highlight   = {
          colors.grey, colors.bg
