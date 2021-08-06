@@ -21,9 +21,9 @@ require('gitsigns').setup {
 
       ['n gu'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
 
-      ['n gf'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-      ['v gf'] = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
-      ['n gF'] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
+      ['n gv'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
+      ['v gv'] = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
+      ['n gV'] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
 
       ['n gp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR><C-w>w',
 
