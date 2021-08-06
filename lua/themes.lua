@@ -35,6 +35,9 @@ vim.cmd('hi httpPath guifg=#00cc66')
 vim.cmd('hi TabLineSel guibg=grey')
 vim.cmd('hi link TSConstructor TSVariable')
 
--- custom LSP hilight
-vim.cmd('hi LspDiagnosticsDefaultError gui=None')
-vim.cmd('hi LspDiagnosticsDefaultWarning gui=None')
+-- custom LSP highlight
+vim.cmd('hi LspDiagnosticsDefaultError gui=None guifg=Red')
+vim.cmd('hi LspDiagnosticsDefaultWarning gui=None guifg=Orange')
+
+-- cursor line highlight
+vim.cmd('hi CursorLine guibg=#2c2e39')
