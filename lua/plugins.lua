@@ -37,6 +37,7 @@ return require('packer').startup(
       use { 'neovim/nvim-lspconfig', opt = true }
       use { 'glepnir/lspsaga.nvim', opt = true }
       use { 'kabouzeid/nvim-lspinstall', opt = true }
+
       -- signature help
       -- use { 'ray-x/lsp_signature.nvim', opt = true }
 
@@ -112,9 +113,8 @@ return require('packer').startup(
 
       -- Git
       use { 'lewis6991/gitsigns.nvim', opt = true }
-      -- use 'APZelos/blamer.nvim'
-      -- use 'tanvirtin/vgit.nvim'
       use 'kdheepak/lazygit.nvim'
+      use 'APZelos/blamer.nvim'
 
       -- home page
       use { 'ChristianChiarulli/dashboard-nvim', opt = true }
@@ -127,8 +127,6 @@ return require('packer').startup(
 
       -- Color scheme
       use 'sainnhe/edge'
-      use 'tomasiser/vim-code-dark'
-      use 'marko-cerovac/material.nvim'
       use 'norcalli/nvim-colorizer.lua'
 
       -- icons
@@ -146,7 +144,6 @@ return require('packer').startup(
             require('rest-nvim').setup()
          end
       }
-      -- use {'diepm/vim-rest-console'}
 
       -- Outline
       use { 'simrat39/symbols-outline.nvim', opt = true }
@@ -155,7 +152,6 @@ return require('packer').startup(
       require_plugin('vim-vsnip-integ')
       require_plugin('nvim-spectre')
       require_plugin('nvim-cursorword')
-      -- require_plugin('vgit')
       require_plugin('symbols-outline.nvim')
       -- require_plugin('lsp_signature.nvim')
       require_plugin('nvim-lspconfig')
