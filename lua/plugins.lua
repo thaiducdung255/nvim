@@ -113,7 +113,7 @@ return require('packer').startup(
       -- Git
       use { 'lewis6991/gitsigns.nvim', opt = true }
       -- use 'APZelos/blamer.nvim'
-      use 'tanvirtin/vgit.nvim'
+      -- use 'tanvirtin/vgit.nvim'
       use 'kdheepak/lazygit.nvim'
 
       -- home page
@@ -131,7 +131,7 @@ return require('packer').startup(
       use 'marko-cerovac/material.nvim'
       use 'norcalli/nvim-colorizer.lua'
 
-      -- Icons
+      -- icons
       use { 'kyazdani42/nvim-web-devicons', opt = true }
 
       -- Status Line and Bufferline
@@ -155,7 +155,7 @@ return require('packer').startup(
       require_plugin('vim-vsnip-integ')
       require_plugin('nvim-spectre')
       require_plugin('nvim-cursorword')
-      require_plugin('vgit')
+      -- require_plugin('vgit')
       require_plugin('symbols-outline.nvim')
       -- require_plugin('lsp_signature.nvim')
       require_plugin('nvim-lspconfig')
