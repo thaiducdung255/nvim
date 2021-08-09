@@ -1,12 +1,12 @@
 -- NOTE: You can use other key to expand snippet.
 vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
 -- Expand
--- vim.cmd([[imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>']])
--- vim.cmd([[smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>']])
+vim.cmd([[imap <expr> <space>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<space>']])
+vim.cmd([[smap <expr> <space>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<space>']])
 
 -- Expand or jump
-vim.cmd([[imap <expr> <space>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<space>']])
-vim.cmd([[smap <expr> <space>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<space>']])
+-- vim.cmd([[imap <expr> <space>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<space>']])
+-- vim.cmd([[smap <expr> <space>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<space>']])
 
 -- Jump forward or backward
  vim.cmd([[imap <expr> jj   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'   : '<Left>']])
@@ -22,7 +22,7 @@ vim.cmd([[nmap        S   <Plug>(vsnip-cut-text)]])
 vim.cmd([[xmap        S   <Plug>(vsnip-cut-text)]])
 
 -- If you want to use snippet for multiple filetypes, you can `g:vsnip_filetypes` for it.
-vim.cmd([[let g:vsnip_filetypes = {}]])
-vim.g.vsnip_filetypes.javascriptreact = {'javascript'}
-vim.g.vsnip_filetypes.typescriptreact = {'typescript'}
-vim.g.vsnip_filetypes.javascript = {'typescript'}
+vim.cmd('let g:vsnip_filetypes = {}')
+vim.cmd('let g:vsnip_filetypes.javascriptreact = [\'javascript\']')
+vim.cmd('let g:vsnip_filetypes.typescriptreact = [\'typescript\']')
+vim.cmd('let g:vsnip_filetypes.javascript = [\'typescript\']')

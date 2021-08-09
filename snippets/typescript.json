@@ -1,4 +1,34 @@
 {
+   "import_module": {
+      "prefix": ["rem"],
+      "body": "import $1 from '$1'"
+   },
+   "import_partial": {
+      "prefix": ["rep"],
+      "body": "import { $2 } from '$1'"
+   },
+   "function": {
+      "prefix": ["fn"],
+      "body": [
+         "function $1(): $2 {",
+         "\t$3",
+         "}"
+      ]
+   },
+   "arrow_function_compact": {
+      "prefix": ["af"],
+      "body": [
+         "($1): $2 => $3"
+      ]
+   },
+   "arrow_function_full": {
+      "prefix": ["aff"],
+      "body": [
+         "($1): $2 => {",
+         "\t$3",
+         "}"
+      ]
+   },
    "Faker.randomFileName": {
       "prefix": ["ffn"],
       "body": "faker.system.fileName()"
@@ -153,7 +183,11 @@
    },
    "JSON.stringify": {
       "prefix": ["js"],
-      "body": "JSON.stringify($0)"
+      "body": "JSON.stringify($1)"
+   },
+   "JSON.stringify(pretty)": {
+      "prefix": ["jsp"],
+      "body": "JSON.stringify($1, null, 3)"
    },
    "JSON.parse": {
       "prefix": ["jp"],
@@ -175,36 +209,6 @@
       "prefix": ["ne"],
       "body": "!== "
    },
-   "import_module": {
-      "prefix": ["rem"],
-      "body": "import $1 from '$1'"
-   },
-   "import_partial": {
-      "prefix": ["rep"],
-      "body": "import { $2 } from '$1'"
-   },
-   "function": {
-      "prefix": ["fn"],
-      "body": [
-         "function $1() {",
-         "\t$2",
-         "}"
-      ]
-   },
-   "arrow_function_compact": {
-      "prefix": ["aff"],
-      "body": [
-         "($1) => $2"
-      ]
-   },
-   "arrow_function_full": {
-      "prefix": ["aff"],
-      "body": [
-         "($1) => {",
-         "\t$2",
-         "}"
-      ]
-   },
    "new_Date": {
       "prefix": ["nd"],
       "body": "new Date($1)"
@@ -212,5 +216,25 @@
    "Date.now": {
       "prefix": ["dn"],
       "body": "Date.now()"
+   },
+   "parseInt": {
+      "prefix": ["pi"],
+      "body": "parseInt($1, 10)"
+   },
+   "parseFloat": {
+      "prefix": ["pf"],
+      "body": "parseFloat($1)"
+   },
+   "parseBoolean": {
+      "prefix": ["pb"],
+      "body": "Boolean($1)"
+   },
+   "parseNmber": {
+      "prefix": ["pn"],
+      "body": "Number($1)"
+   },
+   "parseStr": {
+      "prefix": ["ps"],
+      "body": "String($1)"
    }
 }
