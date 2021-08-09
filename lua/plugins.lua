@@ -123,7 +123,7 @@ return require('packer').startup(
 
       -- editorconfig
       use 'editorconfig/editorconfig-vim'
-      use 'prettier/vim-prettier'
+      -- use 'prettier/vim-prettier'
 
       -- auto backets complete
       use {'windwp/nvim-autopairs', opt = true}
