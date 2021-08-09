@@ -121,6 +121,9 @@ return require('packer').startup(
       -- home page
       use { 'ChristianChiarulli/dashboard-nvim', opt = true }
 
+      -- editorconfig
+      use 'editorconfig/editorconfig-vim'
+
       -- auto backets complete
       use {'windwp/nvim-autopairs', opt = true}
 
