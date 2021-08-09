@@ -4,7 +4,7 @@ local actions = require('telescope.actions')
 -- '--color=never',
 require('telescope').setup {
    defaults = {
-      find_command         = { 'rg', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', },
+      find_command         = { 'ag', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', },
       prompt_prefix        = '> ',
       selection_caret      = '> ',
       entry_prefix         = '  ',
@@ -56,11 +56,11 @@ require('telescope').setup {
    }
 }
 
-Nmap('<LEADER>ff', ':Telescope find_files<CR>')
-Nmap('<LEADER>fr', ':Telescope oldfiles<CR>')
+Nmap('<LEADER>ff', ':Telescope find_files hidden=true no_ignore=true<CR>')
+Nmap('<LEADER>fr', ':Telescope oldfiles hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>fb', ':Telescope buffers<CR>')
-Nmap('<LEADER>fS', ':Telescope grep_string<CR>')
-Nmap('<LEADER>fs', ':Telescope live_grep<CR>')
+Nmap('<LEADER>fS', ':Telescope grep_strin hidden=true no_ignore=trueg<CR>')
+Nmap('<LEADER>fs', ':Telescope live_grep hidden=true no_ignore=true<CR>')
 
 Nmap('<LEADER>cm', ':Telescope commands<CR>')
 Nmap('<LEADER>ch', ':Telescope command_history<CR>')
