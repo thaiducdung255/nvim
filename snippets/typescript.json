@@ -236,5 +236,9 @@
    "parseStr": {
       "prefix": ["ps"],
       "body": "String($1)"
+   },
+   "process.env": {
+      "prefix": ["env"],
+      "body": "process.env."
    }
 }
