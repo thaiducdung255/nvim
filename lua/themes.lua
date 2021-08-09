@@ -38,6 +38,7 @@ vim.cmd('hi link TSConstructor TSVariable')
 -- custom LSP highlight
 vim.cmd('hi LspDiagnosticsDefaultError gui=None guifg=Red')
 vim.cmd('hi LspDiagnosticsDefaultWarning gui=None guifg=Orange')
+vim.cmd('hi LspDiagnosticsDefaultHint gui=None')
 
 -- cursor line highlight
 vim.cmd('hi CursorLine guibg=#2c2e39')
