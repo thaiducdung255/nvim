@@ -12,8 +12,8 @@ require('gitsigns').setup {
       -- Default keymap options
       noremap = true,
 
-      ['n gj'] = { expr = true, "&diff ? 'gj' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
-      ['n gk'] = { expr = true, "&diff ? 'gk' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
+      ['n <LEADER>gj'] = { expr = true, "&diff ? '<LEADER>gj' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
+      ['n <LEADER>gk'] = { expr = true, "&diff ? '<LEADER>gk' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"},
 
       ['n gs'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
       ['v gs'] = '<cmd>lua require"gitsigns".stage_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
