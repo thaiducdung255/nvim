@@ -1,5 +1,5 @@
 require('global')
--- require('functions')
+require('functions')
 require('configs')
 require('plugins')
 require('themes')

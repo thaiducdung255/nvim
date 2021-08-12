@@ -79,35 +79,12 @@ Imap(';o', '<ESC>b~ea')
 Nmap(';c', 'f`r\'f`r\'F\'')
 Nmap(';v', 'f\'r`f\'r`F`')
 
----- bracket delete cmds
-Nmap(';;',  'f\'xf\'x')
-Nmap(';:',  'f"xf"x')
-Nmap(';\'', 'f`xf`x')
-Nmap(';j',  'f)xF(x')
-Nmap(';k',  'f]xF[x')
-Nmap(';l',  'f}hxxF{xx')
-Nmap(';h',  'f>xF<x')
-
 ---- auto pair brackets
 Imap(';j',  '()<left>')
 Imap(';k',  '[]<left>')
 Imap(';l',  '{}<left>')
 Imap(';h',  '<><left>')
 Imap(';\'', '``<left>')
-
----- bracket navs
-Nmap('gj',  'f(')
-Nmap('gk',  'f[')
-Nmap('gl',  'f{')
-Nmap('g;',  'f\'')
-Nmap('g:',  'f"')
-Nmap('g\'', 'f`')
-Nmap('gh',  'f<')
-
-Nmap('gJ', 'f)')
-Nmap('gK', 'f]')
-Nmap('gL', 'f}')
-Nmap('gH', 'f>')
 
 ---- insert brackets
 Vmap('sj',  'di()<ESC>hpF(i')
@@ -118,46 +95,5 @@ Vmap('s:',  'di""<ESC>hpl')
 Vmap('s\'', 'di``<ESC>hpl')
 Vmap('sh',  'di<><ESC>hpl')
 
----- edit brackets motion with t/T
-Nmap('zj',  'ct)')
-Nmap('zk',  'ct]')
-Nmap('zl',  'ct}')
-Nmap('z;',  'ct\'')
-Nmap('z:',  'ct"')
-Nmap('zh',  'ct>')
-
-Nmap('zJ',  'cT)')
-Nmap('zK',  'cT]')
-Nmap('zL',  'cT}')
-Nmap('z\'', 'cT\'')
-Nmap('z"',  'cT"')
-Nmap('zH',  'cT>')
-
----- edit inside bracket cmds
-Nmap('cj',  'f(ci(')
-Nmap('ck',  'f[ci[')
-Nmap('cl',  'f{ci{')
-Nmap('c;',  'ci\'')
-Nmap('c:',  'ci"')
-Nmap('c\'', 'ci`')
-Nmap('ch',  'f<ci<')
-
----- delete inside bracket cmds
-Nmap('dj',  'f(di(')
-Nmap('dk',  'f[di[')
-Nmap('dl',  'f{di{')
-Nmap('d;',  'di\'')
-Nmap('d:',  'di"')
-Nmap('d\'', 'di`')
-Nmap('dh',  'f<di<')
-
----- select inside bracket cmds
-Nmap('sj',  'f(vi(')
-Nmap('sk',  'f[vi[')
-Nmap('sl',  'f{vi{')
-Nmap('s;',  'vi\'')
-Nmap('s:',  'vi"')
-Nmap('s\'', 'vi`')
-Nmap('sh',  'f<vi<')
 ---------------------------------------------------------------------------------------------------
 Nmap('<LEADER>c', ':<Up>')

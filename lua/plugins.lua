@@ -88,6 +88,7 @@ return require('packer').startup(
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       use 'nvim-treesitter/playground'
       use { 'windwp/nvim-ts-autotag', opt = true }
+      use 'romgrk/nvim-treesitter-context'
 
       -- rainbow parentheses
       use 'p00f/nvim-ts-rainbow'
