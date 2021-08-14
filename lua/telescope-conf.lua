@@ -64,13 +64,13 @@ Nmap('<LEADER>fs', ':Telescope live_grep hidden=true no_ignore=true<CR>')
 
 Nmap('<LEADER>cm', ':Telescope commands<CR>')
 Nmap('<LEADER>ch', ':Telescope command_history<CR>')
-Nmap('<LEADER>mp', ':Telescope keymaps<CR>')
+Nmap('<LEADER>km', ':Telescope keymaps<CR>')
 
 Nmap('<LEADER>cs', ':Telescope colorscheme<CR>')
 Nmap('<LEADER>sc', ':Telescope hilights<CR>')
 
 Nmap('<LEADER>gb', ':Telescope git_branches<CR>')
 Nmap('<LEADER>gc', ':Telescope git_commits<CR>')
-Nmap('<LEADER>gg', ':Telescope git_status<CR>')
+Nmap('<LEADER>gs', ':Telescope git_status<CR>')
 Nmap('gD', ':Telescope lsp_definitions<CR>')
 Nmap('gr', ':Telescope lsp_references<CR>')

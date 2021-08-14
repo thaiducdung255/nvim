@@ -160,7 +160,6 @@ return require('packer').startup(
       require_plugin('nvim-spectre')
       require_plugin('nvim-cursorword')
       require_plugin('symbols-outline.nvim')
-      -- require_plugin('lsp_signature.nvim')
       require_plugin('nvim-lspconfig')
       require_plugin('lspsaga.nvim')
       require_plugin('nvim-lspinstall')
