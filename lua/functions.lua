@@ -1,47 +1,79 @@
-local function findTarget(target, skipIfTargetFound)
-   local prevX = vim.api.nvim_win_get_cursor(0)[2]
-   local currentChar = vim.fn.getline('.'):sub(prevX + 1, prevX + 1)
+local targets = {
+   j      = '%(',
+   J      = ')',
+   k      = '%[',
+   K      = ']',
+   l      = '{',
+   L      = '}',
+   h      = '<',
+   H      = '>',
+   [';']  = '\'',
+   [':']  = '"',
+   ['\''] = '`',
+}
 
-   if skipIfTargetFound == true and currentChar == target then
+local function findTarget(target)
+   -- print('findTarget')
+   local prevX = vim.api.nvim_win_get_cursor(0)[2]
+   local currentLine = vim.fn.getline('.')
+   -- print(currentLine, target, prevX)
+   local nextFound, _ = currentLine:find(target, prevX+2)
+   -- print(nextFound , prevX)
+
+   if nextFound == nil then
+      nextFound, _ = currentLine:find(target, 0)
+      -- print(nextFound)
+
+      if nextFound == nil then
+         return false
+      end
+   end
+
+   local moveDiff = nextFound - 1 - prevX
+   local move = 'l'
+
+   if moveDiff < 0 then
+      move = 'h'
+      moveDiff = moveDiff * -1
+   else if moveDiff == 0 then
       return true
    end
-
-   -- print('find forward', ':normal f' .. target)
-   vim.cmd(':normal f' .. target)
-   local currentX = vim.api.nvim_win_get_cursor(0)[2]
-
-   if prevX == currentX then
-      -- print('find backward', ':normal F' .. target)
-      vim.cmd(':normal F' .. target)
-      currentX = vim.api.nvim_win_get_cursor(0)[2]
    end
 
-   if prevX == currentX then
-      return false
-   end
-
+   -- print(moveDiff, move)
+   vim.cmd(':normal ' .. moveDiff .. move)
    return true
 end
 
-local targets = {
-   j    = '(',
-   J    = ')',
-   k    = '[',
-   K    = ']',
-   l    = '{',
-   L    = '}',
-   h    = '<',
-   H    = '>',
-   [';']    = '\'',
-   [':']    = '"',
-   ['\'']    = '`',
-}
+local function reformatTarget(targetKey)
+   -- print(targetKey)
+   if targetKey == 'j' or targetKey == 'k' then
+      return string.sub(targets[targetKey], 2)
+   end
 
-function _G.insertBrackets(targetKey)
-   vim.cmd(':normal d')
-   vim.cmd(':startinsert')
-   vim.cmd(targets[targetKey])
-   vim.cmd(':normal hp')
+   return targets[targetKey]
+end
+
+function _G.deleteBrackets(targetKey, repeatCount)
+   if targetKey == ';' or targetKey == ':' or targetKey == '\'' then
+      repeatCount = repeatCount * 2 - 1
+   end
+
+   while repeatCount > 0 do
+      local isTargetFound = findTarget(targets[targetKey])
+      repeatCount = repeatCount - 1
+
+      if isTargetFound == false then
+         return
+      end
+   end
+
+   vim.cmd(':normal di' .. reformatTarget(targetKey))
+   local prevX = vim.api.nvim_win_get_cursor(0)[2]
+   vim.cmd(':normal p')
+   local currentX = vim.api.nvim_win_get_cursor(0)[2]
+   local contentLength = currentX - prevX
+   vim.cmd(':normal ' .. contentLength + 1 .. 'hxx')
 end
 
 function _G.customMotions(motionKey, targetKey, repeatCount)
@@ -61,14 +93,8 @@ function _G.customMotions(motionKey, targetKey, repeatCount)
       end
    end
 
-   local skipIfTargetFound = true
-
-   if repeatCount > 1 then
-      skipIfTargetFound = false
-   end
-
    while (motionKey ~= 'Z' and motionKey ~= 'z' and repeatCount > 0) do
-      local isTargetFound = findTarget(targets[targetKey], skipIfTargetFound)
+      local isTargetFound = findTarget(targets[targetKey])
 
       if isTargetFound == false then
          -- print('target not found')
@@ -78,36 +104,57 @@ function _G.customMotions(motionKey, targetKey, repeatCount)
       repeatCount = repeatCount - 1
    end
 
-   if motionKey ~= 'g' then
-      -- print('exec motion', ':normal ' .. motions[motionKey] .. targets[targetKey])
-      vim.cmd(':normal ' .. motions[motionKey] .. targets[targetKey])
+   if motionKey == 'g' then
+      return
+   end
 
-      if motionKey == 'c' or motionKey == 'z' then
+   -- print('exec motion', ':normal ' .. motions[motionKey] .. target)
+   local target = reformatTarget(targetKey)
+   vim.cmd(':normal ' .. motions[motionKey] .. target)
 
-         if motionKey == 'z' then
-            local prevX = vim.api.nvim_win_get_cursor(0)[2]
-            vim.cmd('normal f'..targets[targetKey])
-            local currentX = vim.api.nvim_win_get_cursor(0)[2]
+   if motionKey == 'c' or motionKey == 'z' or motionKey == 'Z' then
 
-            if prevX == currentX then
-               return
-            end
+      if motionKey == 'z' then
+         local prevX = vim.api.nvim_win_get_cursor(0)[2]
+         vim.cmd('normal f'..target)
+         local currentX = vim.api.nvim_win_get_cursor(0)[2]
 
-            else if motionKey == 'Z' then
-               local prevX = vim.api.nvim_win_get_cursor(0)[2]
-               vim.cmd('normal F'..targets[targetKey])
-               local currentX = vim.api.nvim_win_get_cursor(0)[2]
-
-               if prevX == currentX then
-                  return
-               end
-
-            end
+         if prevX == currentX then
+            return
          end
 
-         -- print('insert')
-         vim.cmd(':startinsert')
+      else if motionKey == 'Z' then
+         local prevX = vim.api.nvim_win_get_cursor(0)[2]
+         vim.cmd('normal F'..target)
+         local currentX = vim.api.nvim_win_get_cursor(0)[2]
+
+         if prevX == currentX then
+            return
+         end
+
       end
+      end
+
+      -- print('insert')
+      vim.cmd(':startinsert')
+   end
+end
+
+local function serialMap(fnName, motion, keymap, times)
+   local postKey = keymap
+
+   if keymap == '\'' then
+      postKey = '\\\''
+   end
+
+   local mappingPrefix = ''
+   for mappingLv = 1, times, 1 do
+      if motion ~= '' then
+         Nmap(mappingPrefix .. motion .. keymap, ':lua ' .. fnName .. '(\'' .. motion .. '\', \'' .. postKey .. '\', ' .. mappingLv .. ')<CR>')
+      else
+         Nmap(mappingPrefix .. ';' .. keymap, ':lua ' .. fnName .. '(\'' .. postKey .. '\', ' .. mappingLv .. ')<CR>')
+      end
+      mappingPrefix = mappingLv + 1
    end
 end
 
@@ -117,28 +164,14 @@ local motions = { 'g', 's', 'd', 'c', 'z', 'Z' }
 for _, motion in ipairs(motions) do
    for _, key in ipairs(bracketKeys) do
       if motion == 'g' and (key == 'J' or key == 'H' or key == 'L') then
+      else
+         serialMap('customMotions', motion, key, 5)
       end
-
-      local postKey = key
-
-      if key == '\'' then
-         postKey = '\\\''
-      end
-
-      Nmap(motion .. key, ':lua customMotions(\'' .. motion .. '\', \'' .. postKey .. '\', 1)<CR>')
-      Nmap('2' .. motion .. key, ':lua customMotions(\'' .. motion .. '\', \'' .. postKey .. '\', 2)<CR>')
-      Nmap('3' .. motion .. key, ':lua customMotions(\'' .. motion .. '\', \'' .. postKey .. '\', 3)<CR>')
    end
 end
 
 local openBracketKeys = { 'j', 'k', 'l', 'h', ';', ':', '\'' }
 
 for _, key in ipairs(openBracketKeys) do
-   local postKey = key
-
-   if key == '\'' then
-      postKey = '\\\''
-   end
-
-   Nmap(';' .. key, ':lua deleteBrackets(\'' .. postKey .. '\')<CR>')
+   serialMap('deleteBrackets', '', key, 5)
 end
