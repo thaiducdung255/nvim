@@ -10,8 +10,8 @@
    "function": {
       "prefix": ["fn"],
       "body": [
-         "function $1() {",
-         "\t$2",
+         "function $1($2) {",
+         "\t$3",
          "}"
       ]
    },

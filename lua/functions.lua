@@ -15,33 +15,21 @@ local targets = {
 local function findTarget(target)
    -- print('findTarget')
    local prevX = vim.api.nvim_win_get_cursor(0)[2]
+   local prevY = vim.api.nvim_win_get_cursor(0)[1]
    local currentLine = vim.fn.getline('.')
    -- print(currentLine, target, prevX)
-   local nextFound, _ = currentLine:find(target, prevX+2)
-   -- print(nextFound , prevX)
+   local nextFound = currentLine:find(target, prevX+2)
+   -- print(nextFound , prevX, prevY)
 
    if nextFound == nil then
-      nextFound, _ = currentLine:find(target, 0)
-      -- print(nextFound)
+      nextFound = currentLine:find(target, 0)
 
       if nextFound == nil then
          return false
       end
    end
 
-   local moveDiff = nextFound - 1 - prevX
-   local move = 'l'
-
-   if moveDiff < 0 then
-      move = 'h'
-      moveDiff = moveDiff * -1
-   else if moveDiff == 0 then
-      return true
-   end
-   end
-
-   -- print(moveDiff, move)
-   vim.cmd(':normal ' .. moveDiff .. move)
+   vim.fn.cursor(prevY, nextFound)
    return true
 end
 
@@ -163,7 +151,7 @@ local motions = { 'g', 's', 'd', 'c', 'z', 'Z' }
 
 for _, motion in ipairs(motions) do
    for _, key in ipairs(bracketKeys) do
-      if motion == 'g' and (key == 'J' or key == 'H' or key == 'L') then
+      if motion ~= 'g' and (key == 'J' or key == 'H' or key == 'L') then
       else
          serialMap('customMotions', motion, key, 5)
       end
