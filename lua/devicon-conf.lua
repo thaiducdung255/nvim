@@ -55,7 +55,22 @@ require'nvim-web-devicons'.setup {
          color = '#428850',
          name = 'Env'
       },
-      ['.eslintrc'] = {
+      ['.eslintrc.json'] = {
+         icon = '',
+         color = '#428850',
+         name = 'Env'
+      },
+      ['.eslintrc.yml'] = {
+         icon = '',
+         color = '#428850',
+         name = 'Env'
+      },
+      ['.eslintrc.cjs'] = {
+         icon = '',
+         color = '#428850',
+         name = 'Env'
+      },
+      ['.eslintrc.js'] = {
          icon = '',
          color = '#428850',
          name = 'Env'

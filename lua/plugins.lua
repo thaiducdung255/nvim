@@ -180,5 +180,6 @@ return require('packer').startup(
       require_plugin('vim-maximizer')
       require_plugin('switch.vim')
       require_plugin('nvim-comment')
+      require_plugin('symbols-outline.nvim')
    end
 )
