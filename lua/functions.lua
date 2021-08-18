@@ -18,6 +18,7 @@ local function findTarget(target)
    local prevY = vim.api.nvim_win_get_cursor(0)[1]
    local currentLine = vim.fn.getline('.')
    -- print(currentLine, target, prevX)
+
    local nextFound = currentLine:find(target, prevX+2)
    -- print(nextFound , prevX, prevY)
 

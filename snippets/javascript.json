@@ -1,4 +1,8 @@
 {
+   "require_common": {
+      "prefix": ["re"],
+      "body": "const $2 = require('$1')"
+   },
    "require_module": {
       "prefix": ["rem"],
       "body": "const $1 = require('$1')"

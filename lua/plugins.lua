@@ -37,6 +37,7 @@ return require('packer').startup(
       use { 'neovim/nvim-lspconfig', opt = true }
       use { 'glepnir/lspsaga.nvim', opt = true }
       use { 'kabouzeid/nvim-lspinstall', opt = true }
+      use { 'alexaandru/nvim-lspupdate', opt = true }
 
       -- signature help
       -- use { 'ray-x/lsp_signature.nvim', opt = true }
@@ -72,8 +73,8 @@ return require('packer').startup(
       use { 'hrsh7th/nvim-compe', opt = true }
       use 'tzachar/compe-tabnine'
 
-      use {'hrsh7th/vim-vsnip', opt = true}
-      use {'hrsh7th/vim-vsnip-integ', opt = true}
+      use { 'hrsh7th/vim-vsnip', opt = true }
+      use { 'hrsh7th/vim-vsnip-integ', opt = true }
 
       -- line peek
       use 'nacro90/numb.nvim'
@@ -155,31 +156,29 @@ return require('packer').startup(
       -- Outline
       use { 'simrat39/symbols-outline.nvim', opt = true }
 
-      require_plugin('vim-vsnip')
+      require_plugin('nvim-web-devicons')
       require_plugin('vim-vsnip-integ')
-      require_plugin('nvim-spectre')
-      require_plugin('nvim-cursorword')
-      require_plugin('symbols-outline.nvim')
+      require_plugin('telescope.nvim')
       require_plugin('nvim-lspconfig')
+      require_plugin('nvim-lspupdate')
+      require_plugin('plenary.nvim')
+      require_plugin('nvim-ts-autotag')
+      require_plugin('popup.nvim')
+      require_plugin('barbar.nvim')
+      require_plugin('nvim-autopairs')
+      require_plugin('nvim-web-devicons')
+      require_plugin('nvim-compe')
+      require_plugin('nvim-spectre')
+      require_plugin('gitsigns.nvim')
+      require_plugin('galaxyline.nvim')
+      require_plugin('dashboard-nvim')
+      require_plugin('vim-vsnip')
       require_plugin('lspsaga.nvim')
       require_plugin('nvim-lspinstall')
       require_plugin('popup.nvim')
-      require_plugin('plenary.nvim')
-      require_plugin('telescope.nvim')
-      require_plugin('nvim-compe')
-      require_plugin('nvim-treesitter')
-      require_plugin('nvim-ts-autotag')
-      require_plugin('nvim-tree.lua')
-      require_plugin('gitsigns.nvim')
-      require_plugin('dashboard-nvim')
-      require_plugin('nvim-autopairs')
       require_plugin('undotree')
       require_plugin('vim-maximizer')
       require_plugin('switch.vim')
-      require_plugin('vim-floaterm')
       require_plugin('nvim-comment')
-      require_plugin('nvim-web-devicons')
-      require_plugin('galaxyline.nvim')
-      require_plugin('barbar.nvim')
    end
 )
