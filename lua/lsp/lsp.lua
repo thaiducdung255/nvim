@@ -37,9 +37,9 @@ local function set_lsp_config(client, bufnr)
 
    vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-   set_buf_keymap(bufnr, 'n', '<C-space>', [[:lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'single' })<CR>]])
-   set_buf_keymap(bufnr, 'n', ']g', [[:lua vim.lsp.diagnostic.goto_next({ popup_opts = { border = 'single' }})<CR>]])
-   set_buf_keymap(bufnr, 'n', '[g', [[:lua vim.lsp.diagnostic.goto_prev({ popup_opts = { border = 'single' }})<CR>]])
+   -- set_buf_keymap(bufnr, 'n', '<C-space>', [[:lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'single' })<CR>]])
+   set_buf_keymap(bufnr, 'n', 'J', [[:lua vim.lsp.diagnostic.goto_next({ popup_opts = { border = 'single' }})<CR>]])
+   set_buf_keymap(bufnr, 'n', 'K', [[:lua vim.lsp.diagnostic.goto_prev({ popup_opts = { border = 'single' }})<CR>]])
    set_buf_keymap(bufnr, 'n', '<space>D', [[:lua vim.lsp.diagnostic.set_loclist()<CR>]])
 
    if client.resolved_capabilities.hover then
@@ -47,27 +47,27 @@ local function set_lsp_config(client, bufnr)
    end
 
    if client.resolved_capabilities.goto_definition then
-      set_buf_keymap(bufnr, 'n', '[d', [[:lua require'lsp/utils/lsp'.definition_sync()<CR>]])
-      set_buf_keymap(bufnr, 'n', '[<C-d>', [[:lua require'lsp/utils/lsp'.definition_sync()<CR>]])
-      set_buf_keymap(bufnr, 'n', '<C-w><C-d>', [[:split <bar> lua require'lsp/utils/lsp'.definition_sync('split')<CR>]])
-      set_buf_keymap(bufnr, 'n', '<C-c><C-p>', [[:lua require'lsp/utils/lsp'.peek_definition()<CR>]])
+      -- set_buf_keymap(bufnr, 'n', '[d', [[:lua require'lsp/utils/lsp'.definition_sync()<CR>]])
+      -- set_buf_keymap(bufnr, 'n', '[<C-d>', [[:lua require'lsp/utils/lsp'.definition_sync()<CR>]])
+      -- set_buf_keymap(bufnr, 'n', '<C-w><C-d>', [[:split <bar> lua require'lsp/utils/lsp'.definition_sync('split')<CR>]])
+      -- set_buf_keymap(bufnr, 'n', '<C-c><C-p>', [[:lua require'lsp/utils/lsp'.peek_definition()<CR>]])
    end
 
-   if client.resolved_capabilities.type_definition then
-      set_buf_keymap(bufnr, 'n', '[t', [[:lua vim.lsp.buf.type_definition()<CR>]])
-   end
+   -- if client.resolved_capabilities.type_definition then
+   --    set_buf_keymap(bufnr, 'n', '[t', [[:lua vim.lsp.buf.type_definition()<CR>]])
+   -- end
 
    if client.resolved_capabilities.find_references then
       vim.cmd [[command! -buffer References lua vim.lsp.buf.references()]]
    end
 
-   if client.resolved_capabilities.rename then
-      set_buf_keymap(bufnr, 'n', 'gR', [[:lua vim.lsp.buf.rename()<CR>]])
-   end
+   -- if client.resolved_capabilities.rename then
+   --    set_buf_keymap(bufnr, 'n', 'gR', [[:lua vim.lsp.buf.rename()<CR>]])
+   -- end
 
-   if client.resolved_capabilities.code_action then
-      set_buf_keymap(bufnr, 'n', '<M-CR>', [[:lua vim.lsp.buf.code_action()<CR>]])
-   end
+   -- if client.resolved_capabilities.code_action then
+   --    set_buf_keymap(bufnr, 'n', '<M-CR>', [[:lua vim.lsp.buf.code_action()<CR>]])
+   -- end
 
    if client.resolved_capabilities.document_formatting then
       vim.cmd [[command! -buffer Fmt lua vim.lsp.buf.formatting_sync(nil, 1000)]]
