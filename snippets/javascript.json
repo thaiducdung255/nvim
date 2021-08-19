@@ -1,4 +1,5 @@
 {
+
    "require_common": {
       "prefix": ["re"],
       "body": "const $2 = require('$1')"
