@@ -1,5 +1,4 @@
 local M = {}
-
 local function exists_package_json_field(field)
    if vim.fn.filereadable("package.json") == 1 then
       local package_json = vim.fn.json_decode(vim.fn.readfile("package.json"))

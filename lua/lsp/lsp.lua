@@ -202,6 +202,16 @@ lspconfig.jsonls.setup {
    end
 }
 
+lspconfig.denols.setup {
+   cmd = { 'vscode-json-languageserver', '--stdio' },
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+      -- require 'lsp_signature'.on_attach({
+      --    hint_enable = false,
+      -- })
+   end
+}
+
 lspconfig.vimls.setup {
    cmd = { 'vscode-json-languageserver', '--stdio' },
    on_attach = function(client, bufnr)
