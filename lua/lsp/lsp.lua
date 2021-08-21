@@ -38,8 +38,8 @@ local function set_lsp_config(client, bufnr)
    vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
 
    -- set_buf_keymap(bufnr, 'n', '<C-space>', [[:lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'single' })<CR>]])
-   set_buf_keymap(bufnr, 'n', 'J', [[:lua vim.lsp.diagnostic.goto_next({ popup_opts = { border = 'single' }})<CR>]])
-   set_buf_keymap(bufnr, 'n', 'K', [[:lua vim.lsp.diagnostic.goto_prev({ popup_opts = { border = 'single' }})<CR>]])
+   set_buf_keymap(bufnr, 'n', '<space>fj', [[:lua vim.lsp.diagnostic.goto_next({ popup_opts = { border = 'single' }})<CR>]])
+   set_buf_keymap(bufnr, 'n', '<space>fk', [[:lua vim.lsp.diagnostic.goto_prev({ popup_opts = { border = 'single' }})<CR>]])
    set_buf_keymap(bufnr, 'n', '<space>D', [[:lua vim.lsp.diagnostic.set_loclist()<CR>]])
 
    if client.resolved_capabilities.hover then

@@ -194,11 +194,11 @@
       "body": "JSON.parse($1)"
    },
    "Object.keys": {
-      "prefix": ["ok"],
+      "prefix": ["obk"],
       "body": "Object.keys($1)"
    },
    "Object.values": {
-      "prefix": ["ov"],
+      "prefix": ["obv"],
       "body": "Object.values($1)"
    },
    "$eq": {
@@ -238,7 +238,7 @@
       "body": "String($1)"
    },
    "process.env": {
-      "prefix": ["env"],
+      "prefix": ["pe"],
       "body": "process.env."
    }
 }
