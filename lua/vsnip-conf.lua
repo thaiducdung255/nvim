@@ -9,10 +9,10 @@ vim.cmd([[smap <expr> <space>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'    
 -- vim.cmd([[smap <expr> <space>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<space>']])
 
 -- Jump forward or backward
- vim.cmd([[imap <expr> ll vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)' : 'll']])
- vim.cmd([[smap <expr> ll vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)' : 'll']])
- vim.cmd([[imap <expr> hh vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)' : 'hh']])
- vim.cmd([[smap <expr> hh vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)' : 'hh']])
+ vim.cmd([[imap <expr> KK vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)' : 'KK']])
+ vim.cmd([[smap <expr> KK vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)' : 'KK']])
+ vim.cmd([[imap <expr> JJ vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)' : 'JJ']])
+ vim.cmd([[smap <expr> JJ vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)' : 'JJ']])
 
 -- Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
 -- See https://github.com/hrsh7th/vim-vsnip/pull/50

@@ -77,7 +77,7 @@ local function set_lsp_config(client, bufnr)
    end
 
    if client.resolved_capabilities.signature_help then
-      set_buf_keymap(bufnr, 'i', 'JJ', [[<C-o>:lua vim.lsp.buf.signature_help()<CR>]])
+      set_buf_keymap(bufnr, 'i', 'HH', [[<C-o>:lua vim.lsp.buf.signature_help()<CR>]])
    end
 
    if client.name == 'tsserver' then
