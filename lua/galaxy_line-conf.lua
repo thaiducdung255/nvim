@@ -110,8 +110,8 @@ gls.left[6] = {
 gls.left[7] = {
    Data = {
       provider             = function()
-         vim.cmd([[let g:fp = fnamemodify(expand("%"), ":~:.")]])
-         return '    ' .. vim.g.fp .. ' '
+         local cwdLen      = vim.fn.getcwd():len()
+         return '    ' .. vim.api.nvim_buf_get_name(0):sub(cwdLen+2) .. ' '
       end,
       condition            = condition.hide_in_width,
       separator            = ' ',
