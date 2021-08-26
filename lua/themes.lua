@@ -40,5 +40,14 @@ vim.cmd('hi LspDiagnosticsDefaultError gui=None guifg=Red')
 vim.cmd('hi LspDiagnosticsDefaultWarning gui=None guifg=Orange')
 vim.cmd('hi LspDiagnosticsDefaultHint gui=None')
 
+-- custom LSP virtual text highlight
+vim.cmd('hi VirtualTextError gui=None guifg=Red')
+vim.cmd('hi VirtualTextWarning gui=None guifg=Orange')
+vim.cmd('hi VirtualTextInfo gui=None guifg=White')
+vim.cmd('hi VirtualTextHint gui=None guifg=White')
+
+-- tsserver custom highlight
+vim.cmd('hi TSBoolean guifg=Orange')
+
 -- cursor line highlight
 vim.cmd('hi CursorLine guibg=#2c2e39')
