@@ -47,7 +47,7 @@ vim.cmd('hi VirtualTextInfo gui=None guifg=White')
 vim.cmd('hi VirtualTextHint gui=None guifg=White')
 
 -- tsserver custom highlight
-vim.cmd('hi TSBoolean guifg=Orange')
+vim.cmd('hi TSBoolean guifg=#deb974')
 
 -- cursor line highlight
 vim.cmd('hi CursorLine guibg=#2c2e39')
