@@ -71,7 +71,7 @@ return require('packer').startup(
 
       -- Autocomplete
       use { 'hrsh7th/nvim-compe', opt = true }
-      use 'tzachar/compe-tabnine'
+      -- use 'tzachar/compe-tabnine'
 
       use { 'hrsh7th/vim-vsnip', opt = true }
       use { 'hrsh7th/vim-vsnip-integ', opt = true }
