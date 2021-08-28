@@ -12,12 +12,6 @@ endfunc
 nnoremap si :call SynStack()<CR>
 ]]
 
--- custom highlight
--- highlight .http files
--- vim.cmd('hi httpComment gui=italic guifg=#7f8490')
--- vim.cmd('hi httpMethod gui=bold guifg=#cc6600')
--- vim.cmd('hi httpPath guifg=#00cc66')
-
 -- custom highlight colorscheme
 vim.cmd('hi TabLineSel guibg=grey')
 vim.cmd('hi link TSConstructor TSVariable')
