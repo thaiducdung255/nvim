@@ -52,5 +52,6 @@ vim.g.nvim_tree_icons = {
    folder  = { default   = '', open    = '', empty      = '', empty_open = '', symlink    = '' }
 }
 
+vim.cmd([[hi link NvimTreeGitMerge Red]])
 Nmap('<LEADER>e', ':NvimTreeToggle<CR>')
 Nmap('<LEADER>E', 'NvimTreeRefresh<CR>')
