@@ -97,6 +97,9 @@ return require('packer').startup(
       -- swap args
       use 'mizlan/iswap.nvim'
 
+      -- align text
+      use 'junegunn/vim-easy-align'
+
       -- Explorer
       use 'kyazdani42/nvim-tree.lua'
 
@@ -181,5 +184,6 @@ return require('packer').startup(
       require_plugin('switch.vim')
       require_plugin('nvim-comment')
       require_plugin('symbols-outline.nvim')
+      require_plugin('vim-easy-align')
    end
 )

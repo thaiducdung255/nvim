@@ -35,12 +35,12 @@ function M.should_use_prettier()
 end
 
 function M.get_js_formatter()
-   if M.should_use_prettier() then
-      return "prettier_d_slim --parser=typescript --stdin --stdin-filepath ${INPUT}"
-   end
-
    if M.should_use_eslint() then
       return "eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}"
+   end
+
+   if M.should_use_prettier() then
+      return "prettier_d_slim --parser=typescript --stdin --stdin-filepath ${INPUT}"
    end
 
    return ""
