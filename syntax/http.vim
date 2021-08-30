@@ -16,8 +16,8 @@ let s:cpo_save = &cpo
 set cpo&vim
 
 syn keyword    httpMethod         GET PUT POST PATCH DELETE
-syn match      httpBraces         "[{}]"
-syn match      httpPath           "\/\w\+"
+syn match      httpBraces         "[{}\[\]]"
+syn match      httpPath           "\/[a-zA-Z0-9-_\.]\+"
 syn match      httpQuery          "?[0-9a-zA-Z-_=&\.]\+"
 syn match      httpUrl2           "\s[a-zA-Z0-9\._-]\+"
 syn match      httpUrl            "\s[a-zA-Z0-9\.]\+:[0-9]\+"
@@ -34,7 +34,7 @@ hi def         httpUrl            guifg=#d38aea
 hi def         httpUrl2           guifg=#d38aea
 hi def link    httpQuery          String
 hi def link    httpBodyValStr     String
-hi def         httpBraces         guifg=#deb974
+hi def         httpBraces         guifg=#ec7279
 hi def         httpPath           guifg=#deb974
 hi def         httpBodyKey        guifg=#deb974
 hi def         httpBodyValNumber  guifg=#d38aea
