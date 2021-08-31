@@ -1,1 +1,1 @@
-au BufRead,BufNewFile env.sample set filetype=sh
+au BufRead,BufNewFile env.sample set filetype=env
