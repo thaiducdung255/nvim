@@ -91,6 +91,9 @@ return require('packer').startup(
       use { 'windwp/nvim-ts-autotag', opt = true }
       use 'romgrk/nvim-treesitter-context'
 
+      -- debugger
+      use 'puremourning/vimspector'
+
       -- rainbow parentheses
       use 'p00f/nvim-ts-rainbow'
 

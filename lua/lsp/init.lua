@@ -24,7 +24,7 @@ vim.cmd('nnoremap <silent> ca :Lspsaga code_action<CR>')
 vim.cmd('nnoremap <silent> gR :Lspsaga rename<CR>')
 vim.cmd('nnoremap <silent> g. :Lspsaga hover_doc<CR>')
 vim.cmd('nnoremap <silent> dp :Lspsaga preview_definition<CR>')
-vim.cmd('nnoremap <silent> H <cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.cmd('nnoremap <silent> ? <cmd>lua vim.lsp.buf.signature_help()<CR>')
 -- vim.cmd('nnoremap <silent> <C-p> :Lspsaga diagnostic_jump_prev<CR>')
 -- vim.cmd('nnoremap <silent> <C-n> :Lspsaga diagnostic_jump_next<CR>')
 -- scroll down hover doc or scroll in definition preview
