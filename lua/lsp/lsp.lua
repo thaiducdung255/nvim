@@ -1,5 +1,8 @@
 vim.lsp.set_log_level('debug')
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 local lspconfig = require 'lspconfig'
 local js_tools = require 'lsp/utils/js_tools'
 
@@ -130,6 +133,7 @@ local function check_efm_formatter(set_document_formatting)
 end
 
 lspconfig.tsserver.setup {
+   capabilities = capabilities,
    on_attach = function(client, bufnr)
       check_efm_formatter(function(ok)
          client.resolved_capabilities.document_formatting = not ok

@@ -70,15 +70,26 @@ return require('packer').startup(
       }
 
       -- Autocomplete
-      use { 'hrsh7th/nvim-compe', opt = true }
-      use {
-         'tzachar/compe-tabnine',
-         run='./install.sh',
-         requires = 'hrsh7th/nvim-compe'
-      }
+      -- use { 'hrsh7th/nvim-compe', opt = true }
+      -- use {
+         -- 'tzachar/compe-tabnine',
+         -- run='./install.sh',
+         -- requires = 'hrsh7th/nvim-compe'
+      -- }
 
       use { 'hrsh7th/vim-vsnip', opt = true }
-      use { 'hrsh7th/vim-vsnip-integ', opt = true }
+      -- use { 'hrsh7th/vim-vsnip-integ', opt = true }
+      use {
+         'hrsh7th/nvim-cmp',
+         requires = {
+            'hrsh7th/cmp-vsnip',
+            'hrsh7th/cmp-buffer',
+            'tzachar/cmp-tabnine',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-nvim-lua',
+         }
+      }
 
       -- line peek
       use 'nacro90/numb.nvim'
@@ -135,10 +146,6 @@ return require('packer').startup(
 
       -- editorconfig
       use 'editorconfig/editorconfig-vim'
-      -- use 'prettier/vim-prettier'
-
-      -- auto backets complete
-      use {'windwp/nvim-autopairs', opt = true}
 
       -- comment
       use { 'terrortylor/nvim-comment', opt = true }
