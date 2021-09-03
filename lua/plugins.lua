@@ -59,26 +59,16 @@ return require('packer').startup(
 
       -- auto update root directory
       use {
-        "ahmedkhalf/lsp-rooter.nvim",
-        config = function()
-          require("lsp-rooter").setup {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-          }
-        end
+         "ahmedkhalf/lsp-rooter.nvim",
+         config = function()
+            require("lsp-rooter").setup {}
+         end
       }
 
       -- Autocomplete
-      -- use { 'hrsh7th/nvim-compe', opt = true }
-      -- use {
-         -- 'tzachar/compe-tabnine',
-         -- run='./install.sh',
-         -- requires = 'hrsh7th/nvim-compe'
-      -- }
-
+      use 'kristijanhusak/vim-dadbod-completion'
       use { 'hrsh7th/vim-vsnip', opt = true }
-      -- use { 'hrsh7th/vim-vsnip-integ', opt = true }
+      use 'windwp/nvim-autopairs'
       use {
          'hrsh7th/nvim-cmp',
          requires = {
@@ -108,6 +98,10 @@ return require('packer').startup(
 
       -- debugger
       use 'puremourning/vimspector'
+
+      -- db ui
+      use 'tpope/vim-dadbod'
+      use 'kristijanhusak/vim-dadbod-ui'
 
       -- rainbow parentheses
       use 'p00f/nvim-ts-rainbow'
