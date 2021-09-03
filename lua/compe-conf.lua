@@ -1,4 +1,4 @@
-vim.o.completeopt = "menuone,noselect"
+vim.o.completeopt = 'menuone,noselect'
 
 require'compe'.setup {
    enabled           = true,
@@ -15,25 +15,39 @@ require'compe'.setup {
    documentation     = true,
 
    source = {
-      path = { kind = "  " },
-      buffer = { kind = "  " },
-      calc = { kind = "  " },
-      vsnip = { kind = "  " },
-      nvim_lsp = { kind = "  " },
-      -- nvim_lua = { kind = "  " },
-      nvim_lua = false,
-      -- spell = { kind = "  " },
-      tags                    = false,
-      vim_dadbod_completion   = true,
-      tabnine                 = true,
-      -- snippets_nvim = {kind = "  "},
-      -- ultisnips = {kind    = "  "},
-      -- treesitter = {kind   = "  "},
+      calc                  = { kind = '  ' },
+      nvim_lua              = false,
+      tags                  = false,
+      vim_dadbod_completion = true,
+      vsnip                 = {
+         kind = '  ',
+         priority = 10
+      },
+      buffer                = {
+         kind = '  ',
+         priority = 6
+      },
+      nvim_lsp              = {
+         kind = '  ',
+         priority = 9
+      },
+      path                  = {
+         kind = '  ',
+         priority = 7
+      },
+      tabnine = {
+         max_line                 = 1000,
+         max_num_results          = 5,
+         priority                 = 8,
+         sort                     = false,
+         show_prediction_strength = true,
+         ignore_pattern           = '[(),[]]'
+      },
       emoji = {
-         kind = " ﲃ ",
+         kind      = ' ﲃ ',
          filetypes = {
-            "markdown",
-            "text"
+            'markdown',
+            'text'
          }
       }
    }
@@ -58,9 +72,9 @@ end
 --
 _G.tab_complete = function()
    if vim.fn.pumvisible() == 1 then
-      return t "<C-n>"
+      return t '<C-n>'
    elseif check_back_space() then
-      return t "<Tab>"
+      return t '<Tab>'
    else
       return vim.fn['compe#complete']()
    end
@@ -68,13 +82,13 @@ end
 
 _G.s_tab_complete = function()
    if vim.fn.pumvisible() == 1 then
-      return t "<C-p>"
+      return t '<C-p>'
    else
-      return t "<S-Tab>"
+      return t '<S-Tab>'
    end
 end
 
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+vim.api.nvim_set_keymap('i', '<Tab>', 'v:lua.tab_complete()', {expr = true})
+vim.api.nvim_set_keymap('s', '<Tab>', 'v:lua.tab_complete()', {expr = true})
+vim.api.nvim_set_keymap('i', '<S-Tab>', 'v:lua.s_tab_complete()', {expr = true})
+vim.api.nvim_set_keymap('s', '<S-Tab>', 'v:lua.s_tab_complete()', {expr = true})
