@@ -19,7 +19,7 @@ syn match      envEqual          "="
 syn region     envComment        start="#" end="\n"
 syn match      envName           "^[A-Z_]\+"
 syn keyword    envBool           true false
-syn match      envStr            "\s\+\([a-zA-Z\-:;_*\.\/\\]\|[0-9]\)\+[a-zA-Z0-9]\+$"
+syn match      envStr            "\s\+\([a-zA-Z\-:;_*=\.\/\\]\|[0-9]\)\+[a-zA-Z0-9]\+$"
 syn match      envNum            "\s\+\d\+\.\=\d*$"
 
 hi def         envComment        guifg=#7f8490 gui=italic
