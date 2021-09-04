@@ -38,6 +38,11 @@ telescope.setup {
       file_previewer       = require'telescope.previewers'.vim_buffer_cat.new,
       grep_previewer       = require'telescope.previewers'.vim_buffer_vimgrep.new,
       qflist_previewer     = require'telescope.previewers'.vim_buffer_qflist.new,
+      layout_config        = {
+         preview_width = 0.7,
+         width         = 0.98,
+         height        = 0.95,
+      },
 
       -- Developer configurations: Not meant for general override
       buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
