@@ -46,6 +46,7 @@ return require('packer').startup(
       use { 'nvim-lua/popup.nvim', opt = true }
       use { 'nvim-lua/plenary.nvim', opt = true }
       use { 'nvim-telescope/telescope.nvim', opt = true }
+      use {'nvim-telescope/telescope-hop.nvim'}
 
       -- vim motions
       use {
