@@ -20,7 +20,7 @@ telescope.setup {
       find_command         = { 'ag', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', },
       prompt_prefix        = '> ',
       selection_caret      = '> ',
-      entry_prefix         = '    ',
+      entry_prefix         = '  ',
       initial_mode         = 'insert',
       selection_strategy   = 'reset',
       sorting_strategy     = 'descending',
