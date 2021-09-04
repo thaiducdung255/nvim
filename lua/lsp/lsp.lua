@@ -41,20 +41,20 @@ local function set_lsp_config(client, bufnr)
    vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
 
    -- set_buf_keymap(bufnr, 'n', '<C-space>', [[:lua vim.lsp.diagnostic.show_line_diagnostics({ border = 'single' })<CR>]])
-   set_buf_keymap(bufnr, 'n', '<space>fj', [[:lua vim.lsp.diagnostic.goto_next({ popup_opts = { border = 'single' }})<CR>]])
-   set_buf_keymap(bufnr, 'n', '<space>fk', [[:lua vim.lsp.diagnostic.goto_prev({ popup_opts = { border = 'single' }})<CR>]])
+   -- set_buf_keymap(bufnr, 'n', '<space>fj', [[:lua vim.lsp.diagnostic.goto_next({ popup_opts = { border = 'single' }})<CR>]])
+   -- set_buf_keymap(bufnr, 'n', '<space>fk', [[:lua vim.lsp.diagnostic.goto_prev({ popup_opts = { border = 'single' }})<CR>]])
    -- set_buf_keymap(bufnr, 'n', '<space>D', [[:lua vim.lsp.diagnostic.set_loclist()<CR>]])
 
-   if client.resolved_capabilities.hover then
-      set_buf_keymap(bufnr, 'n', 'g.', [[:lua vim.lsp.buf.hover()<CR>]])
-   end
+   -- if client.resolved_capabilities.hover then
+      -- set_buf_keymap(bufnr, 'n', 'g.', [[:lua vim.lsp.buf.hover()<CR>]])
+   -- end
 
-   if client.resolved_capabilities.goto_definition then
+   -- if client.resolved_capabilities.goto_definition then
       -- set_buf_keymap(bufnr, 'n', '[d', [[:lua require'lsp/utils/lsp'.definition_sync()<CR>]])
       -- set_buf_keymap(bufnr, 'n', '[<C-d>', [[:lua require'lsp/utils/lsp'.definition_sync()<CR>]])
       -- set_buf_keymap(bufnr, 'n', '<C-w><C-d>', [[:split <bar> lua require'lsp/utils/lsp'.definition_sync('split')<CR>]])
       -- set_buf_keymap(bufnr, 'n', '<C-c><C-p>', [[:lua require'lsp/utils/lsp'.peek_definition()<CR>]])
-   end
+   -- end
 
    -- if client.resolved_capabilities.type_definition then
    --    set_buf_keymap(bufnr, 'n', '[t', [[:lua vim.lsp.buf.type_definition()<CR>]])
