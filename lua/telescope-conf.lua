@@ -110,12 +110,12 @@ Nmap('<LEADER>mp', ':Telescope keymaps<CR>')
 Nmap('<LEADER>cs', ':Telescope colorscheme<CR>')
 Nmap('<LEADER>sc', ':Telescope highlights<CR>')
 
-Nmap('<LEADER>gb', ':Telescope git_branches<CR>')
+Nmap('gb', ':Telescope git_branches<CR>')
 Nmap('gr', ':Telescope lsp_references<CR>')
 Nmap('gD', ':Telescope lsp_document_diagnostics<CR>')
 
 
-Nmap('<Leader>gd', [[<cmd>lua require('telescope_delta-conf').delta_git_diff()<CR>]])
-Nmap('<Leader>gv', [[<cmd>lua require('telescope_delta-conf').delta_git_bcommits()<CR>]])
+Nmap('gd', [[<cmd>lua require('telescope_delta-conf').delta_git_diff()<CR>]])
+Nmap('gv', [[<cmd>lua require('telescope_delta-conf').delta_git_bcommits()<CR>]])
 Nmap('gc', [[<cmd>lua require('telescope_delta-conf').delta_git_commits()<CR>]])
-Nmap('<Leader>gs', [[<cmd>lua require('telescope_delta-conf').delta_git_status()<CR>]])
+Nmap('gs', [[<cmd>lua require('telescope_delta-conf').delta_git_status()<CR>]])

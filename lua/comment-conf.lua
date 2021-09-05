@@ -1,2 +1,7 @@
-require('nvim_comment').setup()
-Nvmap('<LEADER>x', ':CommentToggle<CR>')
+require('nvim_comment').setup({
+   comment_empty   = false,
+   marker_padding  = true,
+   create_mappings = false,
+})
+
+Nvmap('cm', ':CommentToggle<CR>')
