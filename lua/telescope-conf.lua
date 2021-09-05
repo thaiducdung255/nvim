@@ -116,6 +116,6 @@ Nmap('gD', ':Telescope lsp_document_diagnostics<CR>')
 
 
 Nmap('<Leader>gd', [[<cmd>lua require('telescope_delta-conf').delta_git_diff()<CR>]])
-Nmap('<Leader>gf', [[<cmd>lua require('telescope_delta-conf').delta_git_bcommits()<CR>]])
-Nmap('<Leader>gc', [[<cmd>lua require('telescope_delta-conf').delta_git_commits()<CR>]])
+Nmap('<Leader>gv', [[<cmd>lua require('telescope_delta-conf').delta_git_bcommits()<CR>]])
+Nmap('gc', [[<cmd>lua require('telescope_delta-conf').delta_git_commits()<CR>]])
 Nmap('<Leader>gs', [[<cmd>lua require('telescope_delta-conf').delta_git_status()<CR>]])
