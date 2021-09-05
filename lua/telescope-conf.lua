@@ -2,17 +2,17 @@ local actions = require('telescope.actions')
 local telescope = require('telescope')
 
 P = function(v)
-  print(vim.inspect(v))
-  return v
+   print(vim.inspect(v))
+   return v
 end
 
 if pcall(require, 'plenary') then
-  RELOAD = require('plenary.reload').reload_module
+   RELOAD = require('plenary.reload').reload_module
 
-  R = function(name)
-    RELOAD(name)
-    return require(name)
-  end
+   R = function(name)
+      RELOAD(name)
+      return require(name)
+   end
 end
 
 telescope.setup {
@@ -26,7 +26,7 @@ telescope.setup {
       sorting_strategy     = 'descending',
       layout_strategy      = 'horizontal',
       file_sorter          = require'telescope.sorters'.get_fuzzy_file,
-      file_ignore_patterns = { 'git', 'node_modules', '.package-lock.json', 'dist' },
+      file_ignore_patterns = { '.git/', 'node_modules/', '.package-lock.json', 'dist/' },
       generic_sorter       = require'telescope.sorters'.get_generic_fuzzy_sorter,
       path_display         = { 'absolute' },
       winblend             = 0,
