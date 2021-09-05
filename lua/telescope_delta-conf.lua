@@ -42,7 +42,7 @@ end
 
 E.delta_git_bcommits = function(opts)
    opts = opts or {}
-   opts.previewer = get_delta_previewer('diff')
+   opts.previewer = get_delta_previewer('commit')
    opts.layout_config = layout_config
    opts.layout_strategy = 'vertical'
 
