@@ -72,6 +72,8 @@ telescope.setup {
          'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
          'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
          'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/',
+         'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':',
+         'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
       },
 
       -- Highlight groups to link to signs and lines; the below configuration refers to demo
@@ -100,7 +102,7 @@ telescope.load_extension('hop')
 Nmap('<LEADER>ff', ':Telescope find_files hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>fr', ':Telescope oldfiles hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>fb', ':Telescope buffers<CR>')
-Nmap('<LEADER>fS', ':Telescope grep_strin hidden=true no_ignore=trueg<CR>')
+Nmap('<LEADER>fS', ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
 Nmap('<LEADER>fs', ':Telescope live_grep hidden=true no_ignore=true<CR>')
 
 Nmap('<LEADER>cm', ':Telescope commands<CR>')
