@@ -4,4 +4,4 @@ require('nvim_comment').setup({
    create_mappings = false,
 })
 
-Nvmap('cm', ':CommentToggle<CR>')
+Nvmap('gc', ':CommentToggle<CR>')
