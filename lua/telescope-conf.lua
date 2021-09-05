@@ -39,7 +39,7 @@ telescope.setup {
       grep_previewer       = require'telescope.previewers'.vim_buffer_vimgrep.new,
       qflist_previewer     = require'telescope.previewers'.vim_buffer_qflist.new,
       layout_config        = {
-         preview_width = 0.7,
+         -- preview_width = 0.7,
          width         = 0.98,
          height        = 0.95,
       },
@@ -111,8 +111,11 @@ Nmap('<LEADER>cs', ':Telescope colorscheme<CR>')
 Nmap('<LEADER>sc', ':Telescope highlights<CR>')
 
 Nmap('<LEADER>gb', ':Telescope git_branches<CR>')
-Nmap('<LEADER>gc', ':Telescope git_commits<CR>')
-Nmap('<LEADER>gf', ':Telescope git_bcommits<CR>')
-Nmap('<LEADER>gs', ':Telescope git_status<CR>')
 Nmap('gr', ':Telescope lsp_references<CR>')
 Nmap('gD', ':Telescope lsp_document_diagnostics<CR>')
+
+
+Nmap('<Leader>gd', [[<cmd>lua require('telescope_delta-conf').delta_git_diff()<CR>]])
+Nmap('<Leader>gf', [[<cmd>lua require('telescope_delta-conf').delta_git_bcommits()<CR>]])
+Nmap('<Leader>gc', [[<cmd>lua require('telescope_delta-conf').delta_git_commits()<CR>]])
+Nmap('<Leader>gs', [[<cmd>lua require('telescope_delta-conf').delta_git_status()<CR>]])
