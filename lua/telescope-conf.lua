@@ -15,6 +15,19 @@ if pcall(require, 'plenary') then
    end
 end
 
+local vertical_default_conf = {
+   layout_strategy = 'vertical',
+   layout_config   = {
+      preview_height = 0.7,
+   },
+}
+
+local horizontal_default_conf = {
+   layout_config = {
+      preview_width = 0.75,
+   },
+}
+
 telescope.setup {
    defaults = {
       find_command         = { 'ag', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', },
@@ -39,7 +52,6 @@ telescope.setup {
       grep_previewer       = require'telescope.previewers'.vim_buffer_vimgrep.new,
       qflist_previewer     = require'telescope.previewers'.vim_buffer_qflist.new,
       layout_config        = {
-         -- preview_width = 0.7,
          width         = 0.98,
          height        = 0.95,
       },
@@ -63,6 +75,16 @@ telescope.setup {
             ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
          }
       }
+   },
+   pickers = {
+      lsp_references           = vertical_default_conf,
+      lsp_document_diagnostics = vertical_default_conf,
+      find_files               = horizontal_default_conf,
+      oldfiles                 = horizontal_default_conf,
+      buffers                  = horizontal_default_conf,
+      lsp_definitions          = {
+         file_ignore_patterns = { '.git/', '.dist/' },
+      },
    },
    extensions = {
     hop = {
@@ -112,10 +134,10 @@ Nmap('<LEADER>mp', ':Telescope keymaps<CR>')
 Nmap('<LEADER>cs', ':Telescope colorscheme<CR>')
 Nmap('<LEADER>sc', ':Telescope highlights<CR>')
 
-Nmap('gr', ':Telescope lsp_references<CR>')
+
+
 Nmap('gD', ':Telescope lsp_document_diagnostics<CR>')
-
-
+Nmap('gr', ':Telescope lsp_references<CR>')
 Nmap('<LEADER>gb', ':Telescope git_branches<CR>')
 Nmap('<LEADER>gd', [[<cmd>lua require('telescope_delta-conf').delta_git_diff()<CR>]])
 Nmap('<LEADER>gv', [[<cmd>lua require('telescope_delta-conf').delta_git_bcommits()<CR>]])
