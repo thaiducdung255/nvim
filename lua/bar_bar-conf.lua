@@ -10,7 +10,7 @@ vim.g.bufferline = {
    icons            = false,
    insert_at_end    = true,
    maximum_padding  = 1,
-   maximum_length   = 20,
+   maximum_length   = 40,
    semantic_letters = true,
    no_name_title    = '<unnamed>',
 }
