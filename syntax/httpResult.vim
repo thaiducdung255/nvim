@@ -16,6 +16,7 @@ let s:cpo_save = &cpo
 set cpo&vim
 
 syn keyword    httpMethod         GET PUT POST PATCH DELETE
+syn keyword    httpProtocol       HTTP HTTPS
 syn match      httpBraces         "[{}\[\]]"
 syn match      httpPath           "\/[a-zA-Z0-9-_\.]\+"
 syn match      httpQuery          "?[0-9a-zA-Z-_=&\.:]\+"
@@ -30,6 +31,7 @@ syn match      httpColon          ",$"
 
 hi def         httpMethod         guifg=Red gui=bold,italic
 hi def         httpHeader         guifg=#5dbbc1 gui=italic
+hi def         httpProtocol       guifg=#5dbbc1 gui=italic
 hi def         httpComment        guifg=#7f8490 gui=italic
 hi def         httpUrl            guifg=#d38aea
 hi def         httpBraces         guifg=#ec7279
