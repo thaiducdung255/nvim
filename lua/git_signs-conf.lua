@@ -1,13 +1,15 @@
 require('gitsigns').setup {
    signs = {
     -- TODO add hl to colorscheme
-      add            = { hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn' },
-      change         = { hl = 'GitSignsChange', text = '│', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
-      changedelete   = { hl = 'GitSignsChange', text = '│', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
-      delete         = { hl = 'GitSignsDelete', text = '│', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
+      add            = { hl = 'GitSignsAdd'   , text = ' ▎', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn' },
+      change         = { hl = 'GitSignsChange', text = ' ▎', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
+      changedelete   = { hl = 'GitSignsChange', text = ' ▎', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
+      delete         = { hl = 'GitSignsDelete', text = ' ▎', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
    },
    numhl             = false,
    linehl            = false,
+   word_diff         = false,
+   signcolumn        = true,
    keymaps           = {
       -- Default keymap options
       noremap = true,
