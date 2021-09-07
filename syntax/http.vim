@@ -15,29 +15,27 @@ endif
 let s:cpo_save = &cpo
 set cpo&vim
 
-syn keyword    httpMethod         GET PUT POST PATCH DELETE
+syn keyword    httpMethod         GET HEAD PUT POST PATCH DELETE CONNECT OPTIONS TRACE
+syn keyword    httpProtocol       HTTP HTTPS
 syn match      httpBraces         "[{}\[\]]"
+syn match      httpUrl            "\s[htps:\/]*[a-zA-Z0-9\.]\+[0-9:]*"
 syn match      httpPath           "\/[a-zA-Z0-9-_\.]\+"
 syn match      httpQuery          "?[0-9a-zA-Z-_=&\.:]\+"
-syn match      httpUrl            "\s[htps:\/]*[a-zA-Z0-9\.]\+[0-9:]*"
 syn match      httpHeader         "^[a-zA-Z-0-9]\+:\s[a-zA-Z0-9\/\.,-;=\*\s:]\+"
 syn region     httpComment        start="#" end="\n"
 syn match      httpBodyValStr	    "\".\+\"" 
 syn match      httpBodyKey	       "\s\{2,200}\"\w\+\":" 
-syn match      httpBodyValNumber  "\d\+"
-syn match      httpBodyValBoolean "\(true\|false\)\{1}"
 syn match      httpColon          ",$"
 
-hi def         httpMethod         guifg=Red gui=bold,italic
-hi def         httpHeader         guifg=#5dbbc1 gui=italic
-hi def         httpComment        guifg=#7f8490 gui=italic
-hi def         httpUrl            guifg=#d38aea
-hi def         httpBraces         guifg=#ec7279
-hi def         httpPath           guifg=#deb974
-hi def         httpColon          guifg=#deb974
-hi def         httpBodyKey        guifg=#deb974
-hi def         httpBodyValNumber  guifg=#d38aea
-hi def         httpBodyValBoolean guifg=#d38aea
+hi def         httpMethod         guifg   =Red      gui=bold,italic
+hi def         httpProtocol       guifg   =#5dbbc1  gui=italic
+hi def         httpHeader         guifg   =#5dbbc1  gui=italic
+hi def         httpComment        guifg   =#7f8490  gui=italic
+hi def         httpUrl            guifg   =#d38aea
+hi def         httpBraces         guifg   =#ec7279
+hi def         httpPath           guifg   =#deb974
+hi def         httpColon          guifg   =#deb974
+hi def         httpBodyKey        guifg   =#deb974
 hi def link    httpQuery          String
 hi def link    httpBodyValStr     String
 
