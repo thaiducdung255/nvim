@@ -67,7 +67,7 @@ return require('packer').startup(
       }
 
       -- Autocomplete
-      use 'kristijanhusak/vim-dadbod-completion'
+      -- use 'kristijanhusak/vim-dadbod-completion'
       use { 'hrsh7th/vim-vsnip', opt = true }
       use 'windwp/nvim-autopairs'
       use {
