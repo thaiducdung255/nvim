@@ -18,7 +18,7 @@ set cpo&vim
 syn match      mongodbString          "\('\|\"\)[a-zA-Z0-9_]\+\('\|\"\)"
 syn match      mongodbField           "\(\$[a-zA-Z0-9_-]\+\|[a-zA-Z0-9_-]\+:*\)"
 syn match      mongodbSubField        "\.[a-zA-Z0-9_]\+"
-syn match      mongodbKeyword         "\(show\|use\)"
+syn match      mongodbKeyword         "\(show\|use\|dbs\|collections\)"
 syn match      mongodbNumber          "\s\{1}-*\d\+\.*\d*"
 syn match      mongodbBoolean         "\s\{1}\(true\|false\|null\)"
 syn match      mongodbOperator        "[;\=><\(\){}\*\[\],]"
