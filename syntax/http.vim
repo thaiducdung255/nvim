@@ -17,24 +17,26 @@ set cpo&vim
 
 syn keyword    httpMethod         GET HEAD PUT POST PATCH DELETE CONNECT OPTIONS TRACE
 syn match      httpBraces         "[{}\[\]]"
-syn match      httpUrl            "\s[htps:\/]*[a-zA-Z0-9\.-=]\+[0-9:]*"
 syn match      httpPath           "\/[a-zA-Z0-9-_\.]\+"
+syn match      httpUrl            "[a-zA-Z0-9-_]\+[:0-9]*"
+syn match      httpProtocol       "\shttps*://"
 syn match      httpQuery          "?[0-9a-zA-Z-_=&\.:]\+"
 syn match      httpHeader         "^[a-zA-Z-0-9]\+:\s[a-zA-Z0-9\/\.,-;=\*\s:\"]\+"
 syn region     httpComment        start="#" end="\n"
-syn match      httpBodyValStr	    "\".*\"" 
+syn keyword    httpBoolean        true false
+syn match      httpBodyValStr	    "\"[^{}]*\"" 
 syn match      httpBodyKey	       "[\s]\{0,200}\"\w\+\":" 
 syn match      httpColon          ",$"
-syn match      httpNumber         "-*\d\+\.*\d*"
-syn keyword    httpBoolean        true false
 syn region     httpResComment     start="HTTP" end="[\n\r]\{2}"
+syn match      httpEnv            "{{[a-zA-Z0-9-_]\+}}"
 
 hi def         httpMethod         guifg   =Red      gui=bold,italic
 hi def         httpHeader         guifg   =#5dbbc1  gui=italic
 hi def         httpUrl            guifg   =#d38aea
-hi def         httpNumber         guifg   =#d38aea
+hi def         httpProtocol       guifg   =#d38aea
 hi def         httpBoolean        guifg   =#d38aea
 hi def         httpBraces         guifg   =#ec7279
+hi def         httpEnv            guifg   =#ec7279 gui=italic,bold
 hi def         httpPath           guifg   =#deb974
 hi def         httpColon          guifg   =#deb974
 hi def         httpBodyKey        guifg   =#deb974
