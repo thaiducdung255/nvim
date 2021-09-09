@@ -34,8 +34,8 @@ cmp.setup {
       end
    },
    sources = {
-      { name = 'vsnip' },
       { name = 'nvim_lsp' },
+      { name = 'vsnip' },
       { name = 'nvim_lua' },
       { name = 'cmp_tabnine' },
       { name = 'path' },
