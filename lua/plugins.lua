@@ -98,7 +98,8 @@ return require('packer').startup(
       use 'romgrk/nvim-treesitter-context'
 
       -- debugger
-      use 'puremourning/vimspector'
+      -- use 'puremourning/vimspector'
+      use 'mfussenegger/nvim-dap'
 
       -- db ui
       use 'tpope/vim-dadbod'
