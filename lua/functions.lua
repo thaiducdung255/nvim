@@ -72,6 +72,7 @@ function _G.customMotions(motionKey, targetKey, repeatCount)
       s    = 'vi',
       d    = 'di',
       c    = 'di',
+      y    = 'yi',
       z    = 'dt',
       Z    = 'dT',
    }
@@ -95,35 +96,20 @@ function _G.customMotions(motionKey, targetKey, repeatCount)
 
    if motionKey == 'g' then
       return
+   else if motionKey == 'z' or motionKey == 'Z' then
+
+   end
    end
 
-   -- print('exec motion', ':normal ' .. motions[motionKey] .. target)
+   if motionKey == 'z' then
+      targetKey = targetKey:upper()
+   end
+
    local target = reformatTarget(targetKey)
+   -- print('exec motion: ' .. ':normal ' .. motions[motionKey] .. target)
    vim.cmd(':normal ' .. motions[motionKey] .. target)
 
    if motionKey == 'c' or motionKey == 'z' or motionKey == 'Z' then
-
-      if motionKey == 'z' then
-         local prevX = vim.api.nvim_win_get_cursor(0)[2]
-         vim.cmd('normal f'..target)
-         local currentX = vim.api.nvim_win_get_cursor(0)[2]
-
-         if prevX == currentX then
-            return
-         end
-
-      else if motionKey == 'Z' then
-         local prevX = vim.api.nvim_win_get_cursor(0)[2]
-         vim.cmd('normal F'..target)
-         local currentX = vim.api.nvim_win_get_cursor(0)[2]
-
-         if prevX == currentX then
-            return
-         end
-
-      end
-      end
-
       -- print('insert')
       vim.cmd(':startinsert')
    end
@@ -148,7 +134,7 @@ local function serialMap(fnName, motion, keymap, times)
 end
 
 local bracketKeys = { 'j', 'k', 'l', 'h', 'J', 'K', 'L', 'H', ';', ':', '\'' }
-local motions = { 'g', 's', 'd', 'c', 'z', 'Z' }
+local motions = { 'g', 's', 'd', 'c', 'y', 'z', 'Z' }
 
 for _, motion in ipairs(motions) do
    for _, key in ipairs(bracketKeys) do
