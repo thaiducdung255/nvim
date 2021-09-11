@@ -40,7 +40,7 @@ return require('packer').startup(
       use { 'alexaandru/nvim-lspupdate', opt = true }
 
       -- signature help
-      -- use { 'ray-x/lsp_signature.nvim', opt = true }
+      use 'ray-x/lsp_signature.nvim'
 
       -- Telescope
       use { 'nvim-lua/popup.nvim', opt = true }
@@ -195,5 +195,6 @@ return require('packer').startup(
       require_plugin('nvim-comment')
       require_plugin('symbols-outline.nvim')
       require_plugin('vim-easy-align')
+      require_plugin('lsp_signature')
    end
 )

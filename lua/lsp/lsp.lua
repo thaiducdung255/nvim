@@ -100,6 +100,11 @@ local function check_efm_formatter(set_document_formatting)
    return set_document_formatting(true)
 end
 
+local lsp_signature_conf = {
+   bind = false,
+   use_lspsaga = true,
+}
+
 lspconfig.tsserver.setup {
    capabilities = capabilities,
    on_attach = function(client, bufnr)
@@ -107,18 +112,14 @@ lspconfig.tsserver.setup {
          client.resolved_capabilities.document_formatting = not ok
       end)
       set_lsp_config(client, bufnr)
-      -- require 'lsp_signature'.on_attach({
-      --    hint_enable = false,
-      -- })
+      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
 lspconfig.gopls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      -- require 'lsp_signature'.on_attach({
-      --    hint_enable = false,
-      -- })
+      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
@@ -140,27 +141,21 @@ lspconfig.sumneko_lua.setup {
    cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      -- require 'lsp_signature'.on_attach({
-      --    hint_enable = false,
-      -- })
+      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
 lspconfig.pyright.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      -- require 'lsp_signature'.on_attach({
-      --    hint_enable = false,
-      -- })
+      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
 lspconfig.bashls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      -- require 'lsp_signature'.on_attach({
-      --    hint_enable = false,
-      -- })
+      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
@@ -168,18 +163,14 @@ lspconfig.jsonls.setup {
    cmd = { 'vscode-json-languageserver', '--stdio' },
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      -- require 'lsp_signature'.on_attach({
-      --    hint_enable = false,
-      -- })
+      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
 lspconfig.vimls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      -- require 'lsp_signature'.on_attach({
-      --    hint_enable = false,
-      -- })
+      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
