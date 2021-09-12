@@ -28,24 +28,24 @@ end
 
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
 
-return require('packer').startup(
+return require('packer').startup({
    function(use)
       -- Packer can manage itself as an optional plugin
       use 'wbthomason/packer.nvim'
 
       -- LSP
-      use { 'neovim/nvim-lspconfig', opt = true }
-      use { 'glepnir/lspsaga.nvim', opt = true }
-      use { 'kabouzeid/nvim-lspinstall', opt = true }
-      use { 'alexaandru/nvim-lspupdate', opt = true }
+      use { 'neovim/nvim-lspconfig' }
+      use { 'glepnir/lspsaga.nvim' }
+      use { 'kabouzeid/nvim-lspinstall' }
+      use { 'alexaandru/nvim-lspupdate' }
 
       -- signature help
       use 'ray-x/lsp_signature.nvim'
 
       -- Telescope
-      use { 'nvim-lua/popup.nvim', opt = true }
-      use { 'nvim-lua/plenary.nvim', opt = true }
-      use { 'nvim-telescope/telescope.nvim', opt = true }
+      use { 'nvim-lua/popup.nvim' }
+      use { 'nvim-lua/plenary.nvim' }
+      use { 'nvim-telescope/telescope.nvim' }
       use {'nvim-telescope/telescope-hop.nvim'}
 
       -- vim motions
@@ -68,7 +68,7 @@ return require('packer').startup(
 
       -- Autocomplete
       -- use 'kristijanhusak/vim-dadbod-completion'
-      use { 'hrsh7th/vim-vsnip', opt = true }
+      use { 'hrsh7th/vim-vsnip' }
       use 'windwp/nvim-autopairs'
       use {
          'hrsh7th/nvim-cmp',
@@ -89,12 +89,12 @@ return require('packer').startup(
       use { 'xiyaowong/nvim-cursorword', otp = true }
 
       -- Find and replace
-      use { 'windwp/nvim-spectre', opt = true }
+      use { 'windwp/nvim-spectre' }
 
       -- Treesitter
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       use 'nvim-treesitter/playground'
-      use { 'windwp/nvim-ts-autotag', opt = true }
+      use { 'windwp/nvim-ts-autotag' }
       use 'romgrk/nvim-treesitter-context'
 
       -- debugger
@@ -133,29 +133,29 @@ return require('packer').startup(
       use 'voldikss/vim-floaterm'
 
       -- Git
-      use { 'lewis6991/gitsigns.nvim', opt = true }
+      use { 'lewis6991/gitsigns.nvim' }
       use 'kdheepak/lazygit.nvim'
       use 'APZelos/blamer.nvim'
 
       -- home page
-      use { 'ChristianChiarulli/dashboard-nvim', opt = true }
+      use { 'ChristianChiarulli/dashboard-nvim' }
 
       -- editorconfig
       use 'editorconfig/editorconfig-vim'
 
       -- comment
-      use { 'terrortylor/nvim-comment', opt = true }
+      use { 'terrortylor/nvim-comment' }
 
       -- Color scheme
       use 'sainnhe/edge'
       use 'norcalli/nvim-colorizer.lua'
 
       -- icons
-      use { 'kyazdani42/nvim-web-devicons', opt = true }
+      use { 'kyazdani42/nvim-web-devicons' }
 
       -- Status Line and Bufferline
-      use { 'glepnir/galaxyline.nvim', opt = true }
-      use { 'romgrk/barbar.nvim', opt = true }
+      use { 'glepnir/galaxyline.nvim' }
+      use { 'romgrk/barbar.nvim' }
 
       -- Rest api
       use {
@@ -165,36 +165,10 @@ return require('packer').startup(
             require('rest-nvim').setup()
          end
       }
-
-      -- Outline
-      use { 'simrat39/symbols-outline.nvim', opt = true }
-
-      require_plugin('nvim-web-devicons')
-      require_plugin('vim-vsnip-integ')
-      require_plugin('telescope.nvim')
-      require_plugin('nvim-lspconfig')
-      require_plugin('nvim-lspupdate')
-      require_plugin('plenary.nvim')
-      require_plugin('nvim-ts-autotag')
-      require_plugin('popup.nvim')
-      require_plugin('barbar.nvim')
-      require_plugin('nvim-autopairs')
-      require_plugin('nvim-web-devicons')
-      require_plugin('nvim-compe')
-      require_plugin('nvim-spectre')
-      require_plugin('gitsigns.nvim')
-      require_plugin('galaxyline.nvim')
-      require_plugin('dashboard-nvim')
-      require_plugin('vim-vsnip')
-      require_plugin('lspsaga.nvim')
-      require_plugin('nvim-lspinstall')
-      require_plugin('popup.nvim')
-      require_plugin('undotree')
-      require_plugin('vim-maximizer')
-      require_plugin('switch.vim')
-      require_plugin('nvim-comment')
-      require_plugin('symbols-outline.nvim')
-      require_plugin('vim-easy-align')
-      require_plugin('lsp_signature')
-   end
-)
+   end,
+   config = {
+      display = {
+         open_fn = require('packer.util').float,
+      }
+   }
+})
