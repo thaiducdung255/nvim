@@ -1,4 +1,3 @@
--- vim.cmd('autocmd FileType dashboard :NvimTreeOpen')
 vim.g.dashboard_default_executive = 'telescope'
 vim.g.dashboard_custom_section = {
    a = {

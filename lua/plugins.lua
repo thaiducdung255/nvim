@@ -41,6 +41,7 @@ return require('packer').startup({
 
       -- signature help
       use 'ray-x/lsp_signature.nvim'
+      use 'simrat39/symbols-outline.nvim'
 
       -- Telescope
       use { 'nvim-lua/popup.nvim' }
