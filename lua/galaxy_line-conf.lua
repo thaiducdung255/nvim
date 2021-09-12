@@ -114,7 +114,13 @@ gls.left[7] = {
    Data = {
       provider             = function()
          local cwdLen      = vim.fn.getcwd():len()
-         return '    ' .. vim.api.nvim_buf_get_name(0):sub(cwdLen+2) .. ' '
+         local file_path    = vim.api.nvim_buf_get_name(0):sub(cwdLen+2)
+
+         if file_path:len() == 0 then
+            return '   '
+         end
+
+         return '    ' .. file_path .. ' '
       end,
       condition            = condition.hide_in_width,
       separator            = ' ',
@@ -327,7 +333,13 @@ gls.short_line_left[1] = {
    Data = {
       provider             = function()
          local cwdLen      = vim.fn.getcwd():len()
-         return '   ' .. vim.api.nvim_buf_get_name(0):sub(cwdLen+2) .. ' '
+         local file_path    = vim.api.nvim_buf_get_name(0):sub(cwdLen+2)
+
+         if file_path:len() == 0 then
+            return '   '
+         end
+
+         return '    ' .. file_path .. '  '
       end,
       condition            = condition.hide_in_width,
       separator            = ' ',
