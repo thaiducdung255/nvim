@@ -1,7 +1,0 @@
-vim.cmd([[nmap dr <Plug>VimspectorRestart]])
-vim.cmd([[nmap dc <Plug>VimspectorContinue]])
-vim.cmd([[nmap ds <Plug>VimspectorStop]])
-vim.cmd([[nmap db <Plug>VimspectorToggleBreakpoint]])
-vim.cmd([[nmap dn <Plug>VimspectorStepOver]])
-vim.cmd([[nmap dm <Plug>VimspectorStepOut]])
-vim.cmd([[nmap d. <Plug>VimspectorStepInto]])
