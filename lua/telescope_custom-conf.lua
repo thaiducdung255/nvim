@@ -63,7 +63,7 @@ local function reformat_eslint_diagnostics(str, delimiter)
    local line_diagnostics = {}
    local index = 1
 
-   for diagnostic_record in (str):gmatch("(.-)"..delimiter) do
+   for diagnostic_record in (str):gmatch('(.-)'..delimiter) do
       local pre = diagnostic_record:sub(0, 1)
 
       if pre == '\n' or pre == '/' then
@@ -98,7 +98,7 @@ E.eslint_diagnostics = function()
          get_command = function(entry)
             local index = entry.index
 
-            return { "echo", lines[index] }
+            return { 'echo', lines[index] }
          end
       },
       finder = finders.new_table{

@@ -1,7 +1,8 @@
 local gl = require('galaxyline')
+local gps = require('nvim-gps')
+
 local colors = {
    bg             = '#33355b',
-   -- bg             = '#292D38',
    yellow         = '#DCDCAA',
    dark_yellow    = '#D7BA7D',
    cyan           = '#4EC9B0',
@@ -19,6 +20,7 @@ local colors = {
    error_red      = '#F44747',
    info_yellow    = '#FFCC66'
 }
+
 local condition      = require('galaxyline.condition')
 local gls            = gl.section
 gl.short_line_list   = {'NvimTree', 'vista', 'dbui', 'packer'}
@@ -55,8 +57,9 @@ gls.left[1] = {
       highlight      = {colors.red, colors.bg}
    }
 }
-print(vim.fn.getbufvar(0, 'ts'))
-vim.fn.getbufvar(0, 'ts')
+
+-- print(vim.fn.getbufvar(0, 'ts'))
+-- vim.fn.getbufvar(0, 'ts')
 
 gls.left[2] = {
    GitIcon = {
@@ -76,7 +79,7 @@ gls.left[3] = {
       condition            = condition.check_git_workspace,
       separator            = ' ',
       separator_highlight  = {'NONE', colors.bg},
-      highlight            = {colors.grey, colors.bg}
+      highlight            = {colors.orange, colors.bg}
    }
 }
 
@@ -118,6 +121,21 @@ gls.left[7] = {
       separator_highlight  = {'NONE', colors.bg},
       highlight            = {colors.grey, colors.bg}
    }
+}
+
+gls.left[8] = {
+	nvimGPS = {
+		provider = function()
+			return gps.get_location()
+		end,
+		condition = function()
+			return gps.is_available()
+		end,
+      highlight            = {
+         colors.blue,
+         colors.bg
+      }
+	}
 }
 
 gls.right[1] = {
@@ -213,7 +231,7 @@ gls.right[7] = {
       end,
       icon        = ' ',
       highlight   = {
-         colors.grey,
+         colors.yellow,
          colors.bg
       }
    }
@@ -244,7 +262,7 @@ gls.right[9] = {
          colors.bg
       },
       highlight            = {
-         colors.grey,
+         colors.yellow,
          colors.bg
       }
    }
@@ -255,7 +273,7 @@ gls.right[10] = {
       provider = 'LinePercent',
       separator = ' ',
       separator_highlight= {'NONE', colors.bg},
-      highlight = {colors.grey, colors.bg}
+      highlight = {colors.yellow, colors.bg}
    }
 }
 
@@ -264,7 +282,7 @@ gls.right[11] = {
       provider             = function()
          return ' '
       end,
-      separator            = ' ',
+      separator            = '',
       separator_highlight  = {
          'NONE',
          colors.bg
@@ -284,34 +302,7 @@ gls.right[12] = {
       condition            = condition.hide_in_width,
       separator            = ' ',
       separator_highlight  = {'NONE', colors.bg},
-      highlight            = {colors.grey, colors.bg}
-   }
-}
-
-gls.right[13] = {
-   Space = {
-      provider             = function()
-         return ' '
-      end,
-      separator            = ' ',
-      separator_highlight  = {
-         'NONE',
-         colors.bg
-      },
-      highlight            = {
-         colors.orange,
-         colors.bg
-      }
-   }
-}
-
-gls.right[14] = {
-   BufferType = {
-      provider = 'FileTypeName',
-      condition = condition.hide_in_width,
-      separator = ' ',
-      separator_highlight = {'NONE', colors.bg},
-      highlight = {colors.grey, colors.bg}
+      highlight            = {colors.yellow, colors.bg}
    }
 }
 
@@ -333,30 +324,14 @@ gls.right[16] = {
 }
 
 gls.short_line_left[1] = {
-   BufferType = {
-      provider = 'FileTypeName',
-      separator = ' ',
-      separator_highlight = {'NONE', colors.bg},
-      highlight = {colors.grey, colors.bg}
+   Data = {
+      provider             = function()
+         local cwdLen      = vim.fn.getcwd():len()
+         return '   ' .. vim.api.nvim_buf_get_name(0):sub(cwdLen+2) .. ' '
+      end,
+      condition            = condition.hide_in_width,
+      separator            = ' ',
+      separator_highlight  = {'NONE', colors.bg},
+      highlight            = {colors.grey, colors.bg}
    }
 }
-
-gls.short_line_left[2] = {
-   SFileName = {
-      provider    = 'FileName',
-      condition   = condition.buffer_not_empty,
-      highlight   = {
-         colors.grey, colors.bg
-      }
-   }
-}
-
-gls.short_line_right[1] = {
-   BufferIcon = {
-      provider    = 'BufferIcon',
-      highlight   = {
-         colors.grey,
-         colors.bg
-      }
-   }
-} 

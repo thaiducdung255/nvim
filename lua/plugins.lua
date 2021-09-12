@@ -61,9 +61,9 @@ return require('packer').startup({
 
       -- auto update root directory
       use {
-         "ahmedkhalf/lsp-rooter.nvim",
+         'ahmedkhalf/lsp-rooter.nvim',
          config = function()
-            require("lsp-rooter").setup {}
+            require('lsp-rooter').setup {}
          end
       }
 
@@ -87,7 +87,11 @@ return require('packer').startup({
       use 'nacro90/numb.nvim'
 
       -- high all current words
-      use { 'xiyaowong/nvim-cursorword', otp = true }
+      use { 'xiyaowong/nvim-cursorword' }
+      use {
+         'SmiteshP/nvim-gps',
+         requires = 'nvim-treesitter/nvim-treesitter'
+      }
 
       -- Find and replace
       use { 'windwp/nvim-spectre' }
