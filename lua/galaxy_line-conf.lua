@@ -58,9 +58,6 @@ gls.left[1] = {
    }
 }
 
--- print(vim.fn.getbufvar(0, 'ts'))
--- vim.fn.getbufvar(0, 'ts')
-
 gls.left[2] = {
    GitIcon = {
       provider = function()
@@ -329,7 +326,7 @@ gls.right[16] = {
    }
 }
 
-gls.short_line_left[1] = {
+gls.short_line_left[0] = {
    Data = {
       provider             = function()
          local cwdLen      = vim.fn.getcwd():len()

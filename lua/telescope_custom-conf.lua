@@ -63,6 +63,10 @@ local function reformat_eslint_diagnostics(str, delimiter)
    local line_diagnostics = {}
    local index = 1
 
+   if str:sub(0, 6) == '\nOops!' then
+      return str, nil, nil
+   end
+
    for diagnostic_record in (str):gmatch('(.-)'..delimiter) do
       local pre = diagnostic_record:sub(0, 1)
 
@@ -79,12 +83,16 @@ local function reformat_eslint_diagnostics(str, delimiter)
       end
    end
 
-   return filenames, line_diagnostics
+   return nil, filenames, line_diagnostics
 end
 
 E.eslint_diagnostics = function()
    local raw_eslint_diagnostics = vim.fn.system('eslint .')
-   local filenames, lines = reformat_eslint_diagnostics(raw_eslint_diagnostics, '\n\n')
+   local err, filenames, lines = reformat_eslint_diagnostics(raw_eslint_diagnostics, '\n\n')
+
+   if err ~= nil then
+      return print(err)
+   end
 
    local otps = {
       layout_config = {
