@@ -10,6 +10,10 @@ function Nmap(lhs, rhs, opts)
    map(lhs, rhs, 'n', opts)
 end
 
+function Cmap(lhs, rhs, opts)
+   map(lhs, rhs, 'c', opts)
+end
+
 function Imap(lhs, rhs, opts)
    map(lhs, rhs, 'i', opts)
 end
@@ -32,11 +36,14 @@ function Nvmap(lhs, rhs, opts)
    map(lhs, rhs, 'v', opts)
 end
 
-function Invcmap(lhs, rhs, opts)
-   map(lhs, rhs, 'i', opts)
-   map(lhs, rhs, 'n', opts)
-   map(lhs, rhs, 'v', opts)
-   map(lhs, rhs, 'c', opts)
+function Invmap(lhs, rhs, opts)
+   Inmap(lhs, rhs, opts)
+   Vmap(lhs, rhs, opts)
+end
+
+function Map(lhs, rhs, opts)
+   Invmap(lhs, rhs, opts)
+   Cmap(lhs, rhs, opts)
 end
 
 DATA_PATH   = vim.fn.stdpath('data')
