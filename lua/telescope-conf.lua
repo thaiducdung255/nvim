@@ -1,5 +1,6 @@
 local actions = require('telescope.actions')
 local telescope = require('telescope')
+local action_state = require('telescope.actions.state')
 
 P = function(v)
    print(vim.inspect(v))
@@ -27,6 +28,23 @@ local horizontal_default_conf = {
       preview_width = 0.75,
    },
 }
+
+local function fzf_multi_select(prompt_bufnr)
+   local picker = action_state.get_current_picker(prompt_bufnr)
+   local num_selections = table.getn(picker:get_multi_selection())
+
+   if num_selections > 1 then
+      picker = action_state.get_current_picker(prompt_bufnr)
+
+      for _, entry in ipairs(picker:get_multi_selection()) do
+         vim.cmd(string.format("%s %s", ":e!", entry.value))
+      end
+
+      vim.cmd('stopinsert')
+   else
+      actions.file_edit(prompt_bufnr)
+   end
+end
 
 telescope.setup {
    defaults = {
@@ -64,15 +82,16 @@ telescope.setup {
             ['<C-k>'] = actions.move_selection_previous,
             ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
             ['<ESC>'] = actions.close,
-            ['<Tab>'] = R('telescope').extensions.hop.hop,
+            ['<C-h>'] = R('telescope').extensions.hop.hop,
 
             -- Add up multiple actions
-            ['<CR>'] = actions.select_default + actions.center
+            -- ['<CR>'] = actions.select_default + actions.center
+            ['<CR>'] = fzf_multi_select,
          },
          n = {
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
-            ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
+            ['<C-o>'] = actions.smart_send_to_qflist + actions.open_qflist,
          }
       }
    },
