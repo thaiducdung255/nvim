@@ -88,10 +88,6 @@ return require('packer').startup({
 
       -- high all current words
       use { 'xiyaowong/nvim-cursorword' }
-      use {
-         'SmiteshP/nvim-gps',
-         requires = 'nvim-treesitter/nvim-treesitter'
-      }
 
       -- Find and replace
       use { 'windwp/nvim-spectre' }
@@ -112,9 +108,6 @@ return require('packer').startup({
 
       -- rainbow parentheses
       use 'p00f/nvim-ts-rainbow'
-
-      -- swap args
-      use 'mizlan/iswap.nvim'
 
       -- align text
       use 'junegunn/vim-easy-align'
@@ -141,9 +134,6 @@ return require('packer').startup({
       use { 'lewis6991/gitsigns.nvim' }
       use 'kdheepak/lazygit.nvim'
       use 'APZelos/blamer.nvim'
-
-      -- home page
-      use { 'ChristianChiarulli/dashboard-nvim' }
 
       -- editorconfig
       use 'editorconfig/editorconfig-vim'
