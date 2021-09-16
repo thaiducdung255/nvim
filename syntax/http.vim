@@ -25,7 +25,7 @@ syn match      httpHeader         "^[a-zA-Z-0-9]\+:\s[a-zA-Z0-9\/\.,-;=\*\s:\"]\
 syn region     httpComment        start="#" end="\n"
 syn keyword    httpBoolean        true false
 syn match      httpBodyValStr	    "\"[^{}]*\"" 
-syn match      httpBodyKey	       "[\s]\{0,200}\"\w\+\":" 
+syn match      httpBodyKey	       "[\s]\{0,200}\".\+\":" 
 syn match      httpColon          ",$"
 syn region     httpResComment     start="HTTP" end="[\n\r]\{2}"
 syn match      httpEnv            "{{[a-zA-Z0-9-_]\+}}"
