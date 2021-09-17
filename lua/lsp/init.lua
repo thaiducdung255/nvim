@@ -25,9 +25,7 @@ vim.cmd('nnoremap <silent> dp :Lspsaga preview_definition<CR>')
 vim.cmd('nnoremap <silent> <Leader>fj :Lspsaga diagnostic_jump_next<CR>')
 vim.cmd('nnoremap <silent> <Leader>fk :Lspsaga diagnostic_jump_prev<CR>')
 vim.cmd('nnoremap <silent> sH  :Lspsaga signature_help<CR>')
--- scroll down hover doc or scroll in definition preview
 vim.cmd('nnoremap <silent> N <cmd>lua require("lspsaga.action").smart_scroll_with_saga(1)<CR>')
--- scroll up hover doc
 vim.cmd('nnoremap <silent> M <cmd>lua require("lspsaga.action").smart_scroll_with_saga(-1)<CR>')
 vim.cmd('command! -nargs=0 LspVirtualTextToggle lua require("lsp/virtual_text").toggle()')
 
@@ -68,7 +66,6 @@ autocmd BufWritePre *.lua lua vim.lsp.buf.formatting_sync(nil, 100) ]]
 -- autocmd FileType java nnoremap ca <Cmd>lua require('jdtls').code_action()<CR>
 
 local function documentHighlight(client, bufnr)
-   -- Set autocommands conditional on server_capabilities
    if client.resolved_capabilities.document_highlight then
       vim.api.nvim_exec(
          [[
@@ -97,8 +94,4 @@ function lsp_config.tsserver_on_attach(client, bufnr)
    client.resolved_capabilities.document_formatting = false
 end
 
--- Use a loop to conveniently both setup defined servers
--- and map buffer local keybindings when the language server attaches
--- local servers = {'pyright', 'tsserver'}
--- for _, lsp in ipairs(servers) do nvim_lsp[lsp].setup {on_attach = on_attach} end
 return lsp_config

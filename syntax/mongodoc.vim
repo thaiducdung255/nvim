@@ -3,7 +3,6 @@
 " Maintainer:	dungtd10
 
 if !exists("main_syntax")
-   " quit when a syntax file was already loaded
    if exists("b:current_syntax")
       finish
    endif

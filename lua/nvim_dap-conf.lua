@@ -3,7 +3,7 @@ local dap = require('dap')
 dap.adapters.node2 = {
    type    = 'executable',
    command = 'node',
-   args    = {os.getenv('HOME') .. '/.config/nvim/debug-adapters/vscode-node-debug2/out/src/nodeDebug.js'},
+   args    = { os.getenv('HOME') .. '/.config/nvim/debug-adapters/vscode-node-debug2/out/src/nodeDebug.js' },
 }
 
 dap.configurations.javascript = {
@@ -15,10 +15,10 @@ dap.configurations.javascript = {
       sourceMaps = true,
       protocol   = 'inspector',
       console    = 'integratedTerminal',
-   },
+   }
 }
 
-vim.fn.sign_define('DapBreakpoint', { text = '', texthl = '', linehl = '', numhl = '' })
+vim.fn.sign_define('DapBreakpoint', { text = '',  texthl = '', linehl = '', numhl = '' })
 vim.fn.sign_define('DapStopped',    { text = '壟', texthl = '', linehl = '', numhl = '' })
 dap.defaults.fallback.terminal_win_cmd = '80vsplit new'
 

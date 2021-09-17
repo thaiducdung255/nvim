@@ -1,7 +1,7 @@
 require('nvim-autopairs').setup()
-local npairs = require('nvim-autopairs')
 
-_G.MUtils = {}
+local npairs = require('nvim-autopairs')
+_G.MUtils    = {}
 
 MUtils.completion_confirm = function()
    if vim.fn.pumvisible() ~= 0 then

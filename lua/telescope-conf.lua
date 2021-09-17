@@ -20,6 +20,7 @@ end
 
 local vertical_default_conf = {
    layout_strategy = 'vertical',
+
    layout_config   = {
       preview_height = 0.7,
    },
@@ -76,15 +77,13 @@ telescope.setup {
 
       mappings = {
          i = {
+            -- ['<CR>'] = actions.select_default + actions.center
+            ['<CR>'] = fzf_multi_select,
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
             ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
             ['<ESC>'] = actions.close,
             ['<C-h>'] = R('telescope').extensions.hop.hop,
-
-            -- Add up multiple actions
-            -- ['<CR>'] = actions.select_default + actions.center
-            ['<CR>'] = fzf_multi_select,
          },
 
          n = {

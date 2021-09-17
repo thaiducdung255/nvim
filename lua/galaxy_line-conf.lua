@@ -1,6 +1,7 @@
-local gl = require('galaxyline')
-local gls = gl.section
-local fileinfo = require('galaxyline.provider_fileinfo')
+local gl        = require('galaxyline')
+local gls       = gl.section
+local condition = require('galaxyline.condition')
+local fileinfo  = require('galaxyline.provider_fileinfo')
 
 gl.short_line_list = {'plug', 'fugitive', 'NvimTree', 'vista', 'dbui', 'packer', 'startify', 'coc'}
 
@@ -111,43 +112,13 @@ local function highlight2(group, bg, fg, gui)
    vim.cmd(cmd)
 end
 
-local function get_coc_lsp()
-   local f, status = pcall(vim.api.nvim_get_var, 'coc_status')
-   if not f or status == '' then
-      return nil
-   else
-      return status
-   end
-end
-
-local function get_diagnostic_info()
-   if vim.fn.exists('*coc#rpc#start_server') == 1 then
-      return get_coc_lsp()
-   end
-   return nil
-end
-
-local function get_current_func()
-   local has_func, func_name = pcall(vim.api.nvim_buf_get_var, 0, 'coc_current_function')
-   if not has_func then return nil end
-   return func_name
-end
-
-local function get_function_info()
-   if vim.fn.exists('*coc#rpc#start_server') == 1 then
-      return get_current_func()
-   end
-   return ''
-end
-
-CocStatus = get_diagnostic_info
-CocFunc = get_function_info
-
 local checkwidth = function()
    local squeeze_width  = vim.fn.winwidth(0) / 2
+
    if squeeze_width > 40 then
       return true
    end
+
    return false
 end
 
@@ -165,7 +136,7 @@ local function file_name(is_active, highlight_group)
 
    local fname = fileinfo.get_current_file_name(icons.file.modified, icons.file.read_only)
 
-   if (require('galaxyline.condition').check_git_workspace()) and checkwidth() then
+   if (condition.check_git_workspace()) and checkwidth() then
       local git_dir = require('galaxyline.provider_vcs').get_git_dir(vim.fn.expand('%:p'))
       local current_dir = vim.fn.expand('%:p:h')
 
@@ -193,7 +164,7 @@ local function trailing_whitespace()
 end
 
 local function is_filetype_exist()
-   local tbl = {['dashboard'] = true,['']=true}
+   local tbl = { ['dashboard'] = true, [''] = true }
 
    if tbl[vim.bo.filetype] then
       return false
@@ -205,11 +176,11 @@ end
 local TrailingWhiteSpace = trailing_whitespace
 
 local check_git_width = function()
-   return checkwidth() and require('galaxyline.condition').check_git_workspace()
+   return checkwidth() and condition.check_git_workspace()
 end
 
 local check_git_terminal_workspace = function()
-   return not (vim.fn.mode() == 't') and require('galaxyline.condition').check_git_workspace()
+   return not (vim.fn.mode() == 't') and condition.check_git_workspace()
 end
 
 ----------------------------=== Components ===--------------------------
@@ -223,6 +194,7 @@ gls.left[i] = {
       provider = function()
          return ''
       end,
+
       highlight = 'GalaxyViModeInv'
    }
 }
@@ -253,19 +225,19 @@ gls.left[i] = {
 i = i + 1
 gls.left[i] = {
 	FileIcon = {
-      provider = 'FileIcon',
-      separator_highlight = {colors.white, colors.white},
-      condition = require('galaxyline.condition').buffer_not_empty,
-      highlight = {colors.creamydark, colors.white}
+      provider            = 'FileIcon',
+      separator_highlight = { colors.white, colors.white },
+      condition           = condition.buffer_not_empty,
+      highlight           = { colors.creamydark, colors.white }
    }
 }
 
 i = i + 1
 gls.left[i] = {
    FileName = {
-      provider = function() return file_name(true, 'GalaxyFileName') end,
-      condition = require('galaxyline.condition').buffer_not_empty,
-      highlight = {colors.creamydark, colors.white},
+      provider  = function() return file_name(true, 'GalaxyFileName') end,
+      condition = condition.buffer_not_empty,
+      highlight = { colors.creamydark, colors.white },
    }
 }
 
@@ -277,44 +249,45 @@ gls.left[i] = {
       end,
 
       separator = '',
-      highlight = {colors.white, colors.main_bg}
+      highlight = { colors.white, colors.main_bg }
    }
 }
 
 i = i + 1
 gls.left[i] = {
    Space = {
-      provider = white_space,
-      highlight = {colors.bg, colors.main_bg}
+      provider  = white_space,
+      highlight = { colors.bg, colors.main_bg }
    }
 }
 
 i = i + 1
 gls.left[i] = {
 	ShowLspClient = {
-		provider = 'GetLspClient',
-		separator = ' ',
-		icon = '⚹ ',
-		condition = is_filetype_exist,
-		highlight = {colors.white,colors.main_bg,'italic'},
-		separator_highlight = {colors.grey,colors.main_bg},
+		provider            = 'GetLspClient',
+		separator           = ' ',
+		icon                = '⚹ ',
+		condition           = is_filetype_exist,
+		highlight           = { colors.white,colors.main_bg, 'italic' },
+		separator_highlight = { colors.grey,colors.main_bg },
 	}
 }
 i = i + 1
 
 gls.left[i] = {
    DiagnosticError = {
-      provider = 'DiagnosticError',
-      icon = '  ✕ ',
-      highlight = {colors.red, colors.main_bg}
+      provider  = 'DiagnosticError',
+      icon      = '  ✕ ',
+      highlight = { colors.red, colors.main_bg }
    }
 }
 
 i = i + 1
 gls.left[i] = {
    Space = {
-      provider = white_space,
-      highlight = {colors.bg, colors.main_bg},
+      provider  = white_space,
+      highlight = { colors.bg, colors.main_bg },
+
       condition = function()
          return require('galaxyline.provider_diagnostic').get_diagnostic_error() ~= ''
       end
@@ -324,18 +297,18 @@ gls.left[i] = {
 i = i + 1
 gls.left[i] = {
    DiagnosticWarn = {
-      provider = 'DiagnosticWarn',
-      icon = '  ⚠ ',
-      -- icon = '  ' .. icons.diagnostic.warn .. '  ',
-      highlight = {colors.yellow, colors.main_bg}
+      provider  = 'DiagnosticWarn',
+      icon      = '  ⚠ ',
+      highlight = { colors.yellow, colors.main_bg }
    }
 }
 
 i = i + 1
 gls.left[i] = {
    Space = {
-      provider = white_space,
-      highlight = {colors.bg, colors.main_bg},
+      provider  = white_space,
+      highlight = { colors.bg, colors.main_bg },
+
       condition = function()
          return require('galaxyline.provider_diagnostic').get_diagnostic_warn() ~= ''
       end
@@ -345,27 +318,26 @@ gls.left[i] = {
 i = i + 1
 gls.left[i] = {
    DiagnosticInfo = {
-      provider = 'DiagnosticInfo',
-      icon = '   ',
-      -- icon = '  ' .. icons.diagnostic.info .. '  ',
-      highlight = {colors.blue, colors.main_bg}
+      provider  = 'DiagnosticInfo',
+      icon      = '   ',
+      highlight = { colors.blue, colors.main_bg }
    }
 }
 
 i = i + 1
 gls.left[i] = {
    DiagnosticHint = {
-      provider = 'DiagnosticHint',
-      icon = '   ',
-      highlight = {colors.blue, colors.main_bg}
+      provider  = 'DiagnosticHint',
+      icon      = '   ',
+      highlight = { colors.blue, colors.main_bg }
    }
 }
 
 i = i + 1
 gls.left[i] = {
 	LspCloseSign = {
-      provider = function() return '' end,
-		highlight = {colors.main_bg,colors.grey},
+      provider  = function() return '' end,
+		highlight = { colors.main_bg,colors.grey },
 	}
 }
 
@@ -374,49 +346,49 @@ i = 1
 
 gls.right[i] = {
 	LspOpenSign = {
-      provider = function() return '' end,
-		highlight = {colors.main_bg,colors.grey},
+      provider  = function() return '' end,
+		highlight = { colors.main_bg,colors.grey },
 	}
 }
 
 i = i + 1
 gls.right[i] = {
    DiffAdd = {
-      provider = 'DiffAdd',
+      provider  = 'DiffAdd',
       condition = check_git_width,
-      icon = '  ' .. icons.diff.added .. '',
-      highlight = {colors.teal, colors.main_bg}
+      icon      = '  ' .. icons.diff.added .. '',
+      highlight = { colors.teal, colors.main_bg }
    }
 }
 
 i = i + 1
 gls.right[i] = {
    DiffModified = {
-      provider = 'DiffModified',
+      provider  = 'DiffModified',
       condition = check_git_width,
-      icon = '  ' .. icons.diff.modified .. '',
-      highlight = {colors.creamyorange, colors.main_bg}
+      icon      = '  ' .. icons.diff.modified .. '',
+      highlight = { colors.creamyorange, colors.main_bg }
    }
 }
 
 i = i + 1
 gls.right[i] = {
    DiffRemove = {
-      provider = 'DiffRemove',
+      provider  = 'DiffRemove',
       condition = check_git_width,
-      icon = '  ' .. icons.diff.removed .. '',
-      highlight = {colors.crimsonRed2, colors.main_bg}
+      icon      = '  ' .. icons.diff.removed .. '',
+      highlight = { colors.crimsonRed2, colors.main_bg }
    }
 }
 
 i = i + 1
 gls.right[i] = {
    right_LeftRounded1 = {
-		separator = ' ',
+		separator           = ' ',
       separator_highlight = {colors.main_bg, colors.main_bg},
-      provider = function() return '' end,
-      condition = require('galaxyline.condition').check_git_workspace,
-      highlight = {colors.blue2, colors.main_bg}
+      provider            = function() return '' end,
+      condition           = condition.check_git_workspace,
+      highlight           = { colors.blue2, colors.main_bg }
    }
 }
 
@@ -428,25 +400,25 @@ gls.right[i] = {
       end,
 
       condition = check_git_terminal_workspace,
-      highlight = {colors.greenYel, colors.blue2}
+      highlight = { colors.greenYel, colors.blue2 }
    }
 }
 
 i = i + 1
 gls.right[i] = {
    GitBranch = {
-      provider = 'GitBranch',
-      condition = require('galaxyline.condition').check_git_workspace,
-      highlight = {colors.greenYel, colors.blue2},
+      provider  = 'GitBranch',
+      condition = condition.check_git_workspace,
+      highlight = { colors.greenYel, colors.blue2 },
    }
 }
 
 i = i + 1
 gls.right[i] = {
    Space2 = {
-      provider = white_space,
-      condition = require('galaxyline.condition').check_git_workspace,
-      highlight = {colors.blue2, colors.blue2},
+      provider  = white_space,
+      condition = condition.check_git_workspace,
+      highlight = { colors.blue2, colors.blue2 },
    }
 }
 
@@ -458,7 +430,7 @@ gls.right[i] = {
       end,
 
       highlight = function()
-         if require('galaxyline.condition').check_git_workspace() then
+         if condition.check_git_workspace() then
             return {colors.grey, colors.blue2}
          else
             return {colors.grey, colors.main_bg}
@@ -470,19 +442,19 @@ gls.right[i] = {
 i = i + 1
 gls.right[i] = {
    LineInfo = {
-      provider = 'LineColumn',
-      icon = '  ',
-      highlight = {colors.white, colors.grey}
+      provider  = 'LineColumn',
+      icon      = '  ',
+      highlight = { colors.white, colors.grey }
    }
 }
 
 i = i + 1
 gls.right[i] = {
    PerCent = {
-      provider = 'LinePercent',
-      separator = ' ',
-      separator_highlight = {colors.white, colors.grey},
-      highlight = {colors.white, colors.grey}
+      provider            = 'LinePercent',
+      separator           = ' ',
+      separator_highlight = { colors.white, colors.grey },
+      highlight           = { colors.white, colors.grey }
    }
 }
 
@@ -493,7 +465,7 @@ gls.right[i] = {
          return ''
       end,
 
-      highlight = {colors.grey, colors.bg}
+      highlight = { colors.grey, colors.bg }
    }
 }
 
@@ -502,7 +474,7 @@ gls.right[i] = {
 local k = 1
 gls.short_line_left[k] = {
   SFirstElement = {
-   provider = function() return icons.sep.right end,
+   provider  = function() return icons.sep.right end,
    highlight = { colors.grey, 'NONE' },
   },
 }
@@ -510,7 +482,7 @@ gls.short_line_left[k] = {
 k = k + 1
 gls.short_line_left[k] ={
   SFileIcon = {
-   provider = 'FileIcon',
+   provider  = 'FileIcon',
    highlight = { colors.icon_inactive, colors.grey },
   },
 }
@@ -518,9 +490,9 @@ gls.short_line_left[k] ={
 k = k + 1
 gls.short_line_left[k] = {
   SMyFileName = {
-   provider = function() return file_name(false, 'GalaxySMyFileName') end,
-   highlight = {colors.red, colors.grey},
-   separator = icons.sep.left,
-   separator_highlight = {colors.grey, colors.main_bg}
+   provider            = function() return file_name(false, 'GalaxySMyFileName') end,
+   highlight           = { colors.red, colors.grey },
+   separator           = icons.sep.left,
+   separator_highlight = { colors.grey, colors.main_bg }
   }
 }
