@@ -41,11 +41,11 @@ cmp.setup {
       { name = 'path' },
       {
          name = 'buffer',
-         opts = {
-            get_bufnrs = function()
-               return vim.api.nvim_list_bufs()
-            end
-         }
+         -- opts = {
+         --    get_bufnrs = function()
+         --       return vim.api.nvim_list_bufs()
+         --    end
+         -- }
       },
    },
 }
