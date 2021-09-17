@@ -3,11 +3,12 @@
 " Maintainer:	dungtd10
 
 if !exists("main_syntax")
-  " quit when a syntax file was already loaded
-  if exists("b:current_syntax")
-    finish
-  endif
-  let main_syntax = 'mongodb'
+   " quit when a syntax file was already loaded
+   if exists("b:current_syntax")
+   finish
+   endif
+
+   let main_syntax = 'mongodb'
 elseif exists("b:current_syntax") && b:current_syntax == "mongodb"
   finish
 endif
@@ -27,17 +28,19 @@ syn match      mongodbQueryOperator   "\(\$eq\|$gt\|$gte\|$in\|$lt\|$lte\|$ne\|$
 
 hi def         mongodbKeyword         guifg   =#d38aea  gui=bold,italic
 hi def         mongodbQueryOperator   guifg   =#d38aea  gui=italic
+hi def         mongodbOperator        guifg   =#deb974  gui=italic
 hi def         mongodbField           guifg   =#5dbbc1
 hi def         mongodbKey             guifg   =#5dbbc1
 hi def         mongodbSubField        guifg   =#deb974
-hi def link    mongodbString          String
 hi def         mongodbBoolean         guifg   =#d38aea
 hi def         mongodbNumber          guifg   =#d38aea
-hi def         mongodbOperator        guifg   =#deb974  gui=italic
+hi def link    mongodbString          String
 
 let b:current_syntax = "mongodb"
+
 if main_syntax == 'mongodb'
   unlet main_syntax
 endif
+
 let &cpo = s:cpo_save
 unlet s:cpo_save

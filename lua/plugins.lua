@@ -54,7 +54,6 @@ return require('packer').startup({
         'phaazon/hop.nvim',
         as = 'hop',
         config = function()
-          -- you can configure Hop the way you like here; see :h hop-config
           require'hop'.setup { keys = 'asdfghjkl;qwertyuiop' }
         end
       }
@@ -99,7 +98,6 @@ return require('packer').startup({
       use 'romgrk/nvim-treesitter-context'
 
       -- debugger
-      -- use 'puremourning/vimspector'
       use 'mfussenegger/nvim-dap'
 
       -- db ui
@@ -161,6 +159,7 @@ return require('packer').startup({
          end
       }
    end,
+
    config = {
       display = {
          open_fn = require('packer.util').float,

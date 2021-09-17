@@ -1,6 +1,8 @@
-local actions = require('telescope.actions')
-local telescope = require('telescope')
+local actions      = require('telescope.actions')
+local previewers   = require('telescope.previewers')
+local telescope    = require('telescope')
 local action_state = require('telescope.actions.state')
+local sorters      = require('telescope.sorters')
 
 P = function(v)
    print(vim.inspect(v))
@@ -48,34 +50,30 @@ end
 
 telescope.setup {
    defaults = {
-      find_command         = { 'ag', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case', },
-      prompt_prefix        = '> ',
-      selection_caret      = '> ',
-      entry_prefix         = '  ',
-      initial_mode         = 'insert',
-      selection_strategy   = 'reset',
-      sorting_strategy     = 'descending',
-      layout_strategy      = 'horizontal',
-      file_sorter          = require'telescope.sorters'.get_fuzzy_file,
-      file_ignore_patterns = { '.git/', 'node_modules/', '.package-lock.json', 'dist/' },
-      generic_sorter       = require'telescope.sorters'.get_generic_fuzzy_sorter,
-      path_display         = { 'absolute' },
-      winblend             = 0,
-      border               = {},
-      borderchars          = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
-      color_devicons       = true,
-      use_less             = true,
-      set_env              = { ['COLORTERM'] = 'truecolor'  }, -- default = nil,
-      file_previewer       = require'telescope.previewers'.vim_buffer_cat.new,
-      grep_previewer       = require'telescope.previewers'.vim_buffer_vimgrep.new,
-      qflist_previewer     = require'telescope.previewers'.vim_buffer_qflist.new,
-      layout_config        = {
-         width         = 0.98,
-         height        = 0.95,
-      },
+      find_command           = { 'ag', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case' },
+      file_ignore_patterns   = { '.git/', 'node_modules/', '.package-lock.json', 'dist/' },
+      prompt_prefix          = '> ',
+      selection_caret        = '> ',
+      entry_prefix           = '  ',
+      initial_mode           = 'insert',
+      selection_strategy     = 'reset',
+      sorting_strategy       = 'descending',
+      layout_strategy        = 'horizontal',
+      file_sorter            = sorters.get_fuzzy_file,
+      generic_sorter         = sorters.get_generic_fuzzy_sorter,
+      path_display           = { 'absolute' },
+      winblend               = 0,
+      border                 = {},
+      borderchars            = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
+      color_devicons         = true,
+      use_less               = true,
+      set_env                = { ['COLORTERM'] = 'truecolor'  },
+      file_previewer         = previewers.vim_buffer_cat.new,
+      grep_previewer         = previewers.vim_buffer_vimgrep.new,
+      qflist_previewer       = previewers.vim_buffer_qflist.new,
+      layout_config          = { width  = 0.98, height = 0.95 },
+      buffer_previewer_maker = previewers.buffer_previewer_maker,
 
-      -- Developer configurations: Not meant for general override
-      buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
       mappings = {
          i = {
             ['<C-j>'] = actions.move_selection_next,
@@ -88,6 +86,7 @@ telescope.setup {
             -- ['<CR>'] = actions.select_default + actions.center
             ['<CR>'] = fzf_multi_select,
          },
+
          n = {
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
@@ -106,36 +105,22 @@ telescope.setup {
       },
    },
    extensions = {
-    hop = {
-      -- keys define your hop keys in order; defaults to roughly lower- and uppercased home row
-      -- shown keys here are only subset of defaults!
-      keys = {
-         'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
-         'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
-         'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/',
-         'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':',
-         'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
-      },
+      hop = {
+         keys = {
+            'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
+            'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
+            'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/',
+            'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':',
+            'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
+         },
 
-      -- Highlight groups to link to signs and lines; the below configuration refers to demo
-      -- sign_hl typically only defines foreground to possibly be combined with line_hl
-      sign_hl = { 'WarningMsg', 'Title' },
-
-      -- optional, typically a table of two highlight groups that are alternated between
-      line_hl = { 'CursorLine', 'Normal' },
-
-      -- options specific to `hop_loop`
-      -- true temporarily disables Telescope selection highlighting
-      clear_selection_hl = false,
-
-      -- highlight hopped to entry with telescope selection highlight
-      -- note: mutually exclusive with `clear_selection_hl`
-      trace_entry = true,
-
-      -- jump to entry where hoop loop was started from
-      reset_selection = true,
-    },
-  }
+         sign_hl            = { 'WarningMsg', 'Title' },
+         line_hl            = { 'CursorLine', 'Normal' },
+         clear_selection_hl = false,
+         trace_entry        = true,
+         reset_selection    = true,
+      }
+   }
 }
 
 telescope.load_extension('hop')
@@ -149,17 +134,14 @@ Nmap('<LEADER>fs', ':Telescope live_grep hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>cm', ':Telescope commands<CR>')
 Nmap('<LEADER>ch', ':Telescope command_history<CR>')
 Nmap('<LEADER>mp', ':Telescope keymaps<CR>')
-
 Nmap('<LEADER>cs', ':Telescope colorscheme<CR>')
 Nmap('<LEADER>sc', ':Telescope highlights<CR>')
 
-
-
-Nmap('gD', ':Telescope lsp_document_diagnostics<CR>')
-Nmap('gr', ':Telescope lsp_references<CR>')
-Nmap('<LEADER>gb', ':Telescope git_branches<CR>')
-Nmap('<LEADER>gd', [[<cmd>lua require('telescope_custom-conf').delta_git_diff()<CR>]])
-Nmap('<LEADER>gv', [[<cmd>lua require('telescope_custom-conf').delta_git_bcommits()<CR>]])
-Nmap('<LEADER>gc', [[<cmd>lua require('telescope_custom-conf').delta_git_commits()<CR>]])
-Nmap('<LEADER>gs', [[<cmd>lua require('telescope_custom-conf').delta_git_status()<CR>]])
-Nmap('<LEADER>zz', [[<cmd>lua require('telescope_custom-conf').eslint_diagnostics()<CR>]])
+Nmap('gD',           ':Telescope lsp_document_diagnostics<CR>')
+Nmap('gr',           ':Telescope lsp_references<CR>')
+Nmap('<LEADER>gb',   ':Telescope git_branches<CR>')
+Nmap('<LEADER>gd',   [[<cmd>lua require('telescope_custom-conf').delta_git_diff()<CR>]])
+Nmap('<LEADER>gv',   [[<cmd>lua require('telescope_custom-conf').delta_git_bcommits()<CR>]])
+Nmap('<LEADER>gc',   [[<cmd>lua require('telescope_custom-conf').delta_git_commits()<CR>]])
+Nmap('<LEADER>gs',   [[<cmd>lua require('telescope_custom-conf').delta_git_status()<CR>]])
+Nmap('<LEADER>zz',   [[<cmd>lua require('telescope_custom-conf').eslint_diagnostics()<CR>]])

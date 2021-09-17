@@ -1,19 +1,20 @@
 local previewers = require('telescope.previewers')
-local pickers = require('telescope.pickers')
-local sorters = require('telescope.sorters')
-local finders = require('telescope.finders')
-local builtin = require('telescope.builtin')
+local pickers    = require('telescope.pickers')
+local sorters    = require('telescope.sorters')
+local finders    = require('telescope.finders')
+local builtin    = require('telescope.builtin')
+
 local E = {}
 
 local function get_delta_previewer(action)
    return previewers.new_termopen_previewer {
       get_command = function(entry)
+
       if action == 'diff' then
          return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=true', 'diff', entry.value }
       end
 
       return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=true', 'diff', entry.value .. '^!' }
-
       end
    }
 end
@@ -23,45 +24,45 @@ local layout_config = {
 }
 
 E.delta_git_diff = function(opts)
-   opts = opts or {}
-   opts.previewer = get_delta_previewer('diff')
-   opts.layout_config = layout_config
+   opts                 = opts or {}
+   opts.previewer       = get_delta_previewer('diff')
+   opts.layout_config   = layout_config
    opts.layout_strategy = 'vertical'
 
    builtin.git_commits(opts)
 end
 
 E.delta_git_commits = function(opts)
-   opts = opts or {}
-   opts.previewer = get_delta_previewer('commit')
-   opts.layout_config = layout_config
+   opts                 = opts or {}
+   opts.previewer       = get_delta_previewer('commit')
+   opts.layout_config   = layout_config
    opts.layout_strategy = 'vertical'
 
    builtin.git_commits(opts)
 end
 
 E.delta_git_bcommits = function(opts)
-   opts = opts or {}
-   opts.previewer = get_delta_previewer('commit')
-   opts.layout_config = layout_config
+   opts                 = opts or {}
+   opts.previewer       = get_delta_previewer('commit')
+   opts.layout_config   = layout_config
    opts.layout_strategy = 'vertical'
 
    builtin.git_bcommits(opts)
 end
 
 E.delta_git_status = function(opts)
-   opts = opts or {}
-   opts.previewer = get_delta_previewer('diff')
-   opts.layout_config = layout_config
+   opts                 = opts or {}
+   opts.previewer       = get_delta_previewer('diff')
+   opts.layout_config   = layout_config
    opts.layout_strategy = 'vertical'
 
    builtin.git_status(opts)
 end
 
 local function reformat_eslint_diagnostics(str, delimiter)
-   local filenames = {}
+   local filenames        = {}
    local line_diagnostics = {}
-   local index = 1
+   local index            = 1
 
    if str:sub(0, 6) == '\nOops!' then
       return str, nil, nil
@@ -102,6 +103,7 @@ E.eslint_diagnostics = function()
 
    pickers.new(otps, {
       prompt_title = 'Eslint diagnostics',
+
       previewer = previewers.new_termopen_previewer{
          get_command = function(entry)
             local index = entry.index
@@ -109,9 +111,11 @@ E.eslint_diagnostics = function()
             return { 'echo', lines[index] }
          end
       },
+
       finder = finders.new_table{
          results = filenames,
       },
+
       sorter = sorters.fuzzy_with_index_bias(),
    }):find(otps)
 end

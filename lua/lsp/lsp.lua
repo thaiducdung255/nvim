@@ -103,6 +103,7 @@ end
 local lsp_signature_conf = {
    bind = false,
    use_lspsaga = true,
+   hint_enable = false,
 }
 
 lspconfig.tsserver.setup {

@@ -1,17 +1,16 @@
 require('gitsigns').setup {
    signs = {
     -- TODO add hl to colorscheme
-      add            = { hl = 'GitSignsAdd'   , text = ' ▎', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn' },
-      change         = { hl = 'GitSignsChange', text = ' ▎', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
-      changedelete   = { hl = 'GitSignsChange', text = ' ▎', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
-      delete         = { hl = 'GitSignsDelete', text = ' ▎', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
+      add            = { hl = 'GitSignsAdd'   , text = ' ▎', numhl = 'GitSignsAddNr'   , linehl = 'GitSignsAddLn' },
+      change         = { hl = 'GitSignsChange', text = ' ▎', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+      changedelete   = { hl = 'GitSignsChange', text = ' ▎', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+      delete         = { hl = 'GitSignsDelete', text = ' ▎', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
    },
    numhl             = false,
    linehl            = false,
    word_diff         = false,
    signcolumn        = true,
    keymaps           = {
-      -- Default keymap options
       noremap = true,
 
       ['n <LEADER>gj'] = { expr = true, "&diff ? '<LEADER>gj' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"},
@@ -32,11 +31,8 @@ require('gitsigns').setup {
       ['o ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
       ['x ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
    },
-   watch_index      = {
-      interval      = 1000
-   },
+   watch_index      = { interval = 1000 },
    sign_priority    = 6,
    update_debounce  = 200,
-   status_formatter = nil, -- Use default
-   -- use_decoration_api = false
+   status_formatter = nil,
 }

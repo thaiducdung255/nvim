@@ -1,15 +1,18 @@
-vim.g.edge_style = 'default'
-vim.g.edge_enable_italic = 1
+vim.g.edge_style                  = 'default'
+vim.g.edge_enable_italic          = 1
 vim.g.edge_disable_italic_comment = 1
+
 vim.cmd('colorscheme edge')
 
 vim.cmd[[function! SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
-nnoremap si :call SynStack()<CR>
+   if !exists("*synstack")
+      return
+   endif
+
+   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+   endfunc
+
+   nnoremap si :call SynStack()<CR>
 ]]
 
 -- custom highlight colorscheme

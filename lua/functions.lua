@@ -13,14 +13,11 @@ local targets = {
 }
 
 local function findTarget(target)
-   -- print('findTarget')
    local prevX = vim.api.nvim_win_get_cursor(0)[2]
    local prevY = vim.api.nvim_win_get_cursor(0)[1]
    local currentLine = vim.fn.getline('.')
-   -- print(currentLine, target, prevX)
 
    local nextFound = currentLine:find(target, prevX+2)
-   -- print(nextFound , prevX, prevY)
 
    if nextFound == nil then
       nextFound = currentLine:find(target, 0)
@@ -35,7 +32,6 @@ local function findTarget(target)
 end
 
 local function reformatTarget(targetKey)
-   -- print(targetKey)
    if targetKey == 'j' or targetKey == 'k' then
       return string.sub(targets[targetKey], 2)
    end
@@ -66,7 +62,6 @@ function _G.deleteBrackets(targetKey, repeatCount)
 end
 
 function _G.customMotions(motionKey, targetKey, repeatCount)
-   -- print(repeatCount)
    local motions = {
       g    = 'f',
       s    = 'vi',
@@ -87,7 +82,6 @@ function _G.customMotions(motionKey, targetKey, repeatCount)
       local isTargetFound = findTarget(targets[targetKey])
 
       if isTargetFound == false then
-         -- print('target not found')
          return
       end
 
@@ -96,9 +90,6 @@ function _G.customMotions(motionKey, targetKey, repeatCount)
 
    if motionKey == 'g' then
       return
-   else if motionKey == 'z' or motionKey == 'Z' then
-
-   end
    end
 
    if motionKey == 'z' then
@@ -106,11 +97,9 @@ function _G.customMotions(motionKey, targetKey, repeatCount)
    end
 
    local target = reformatTarget(targetKey)
-   -- print('exec motion: ' .. ':normal ' .. motions[motionKey] .. target)
    vim.cmd(':normal ' .. motions[motionKey] .. target)
 
    if motionKey == 'c' or motionKey == 'z' or motionKey == 'Z' then
-      -- print('insert')
       vim.cmd(':startinsert')
    end
 end
@@ -123,12 +112,14 @@ local function serialMap(fnName, motion, keymap, times)
    end
 
    local mappingPrefix = ''
+
    for mappingLv = 1, times, 1 do
       if motion ~= '' then
          Nmap(mappingPrefix .. motion .. keymap, ':lua ' .. fnName .. '(\'' .. motion .. '\', \'' .. postKey .. '\', ' .. mappingLv .. ')<CR>')
       else
          Nmap(mappingPrefix .. ';' .. keymap, ':lua ' .. fnName .. '(\'' .. postKey .. '\', ' .. mappingLv .. ')<CR>')
       end
+
       mappingPrefix = mappingLv + 1
    end
 end

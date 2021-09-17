@@ -2,14 +2,18 @@ local M = {}
 
 local function preview_location(location)
    local uri = location.targetUri or location.uri
+
    if uri == nil then return end
    local bufnr = vim.uri_to_bufnr(uri)
+
    if not vim.api.nvim_buf_is_loaded(bufnr) then
       vim.fn.bufload(bufnr)
    end
+
    local range = location.targetRange or location.range
-   local contents = vim.api.nvim_buf_get_lines(bufnr, range.start.line, range["end"].line+1, false)
+   local contents = vim.api.nvim_buf_get_lines(bufnr, range.start.line, range["end"].line + 1, false)
    local syntax = vim.api.nvim_buf_get_option(bufnr, 'syntax')
+
    return vim.lsp.util.open_floating_preview(contents, syntax, { border = "single" })
 end
 
@@ -17,6 +21,7 @@ local function preview_location_callback(_, _, result)
    if result == nil or vim.tbl_isempty(result) then
       return
    end
+
    if vim.tbl_islist(result) then
       preview_location(result[1])
    else
@@ -61,11 +66,14 @@ end
 
 function M.import_after_completion()
    local completed_item = vim.v.completed_item
-   if
-      not (completed_item and completed_item.user_data and completed_item.user_data.nvim and
-         completed_item.user_data.nvim.lsp and
-         completed_item.user_data.nvim.lsp.completion_item)
-    then
+
+   if not (
+      completed_item and
+      completed_item.user_data and
+      completed_item.user_data.nvim and
+      completed_item.user_data.nvim.lsp and
+      completed_item.user_data.nvim.lsp.completion_item
+   ) then
       return
    end
 
@@ -76,6 +84,7 @@ function M.import_after_completion()
       bufnr,
       "completionItem/resolve",
       item,
+
       function(_, _, result)
          if result and result.additionalTextEdits then
             vim.lsp.util.apply_text_edits(result.additionalTextEdits, bufnr)

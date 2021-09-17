@@ -19,7 +19,7 @@ local icons = {
       modified = ' ',
       removed  = ' '
    },
-   git = '',
+   git     = '',
    line_nr = '||',
    file = {
      modified  = '✎',
@@ -81,7 +81,7 @@ local mode_map = {
    cv     = { icons.command   .. ' CMD  ',   colors.orange },
    v      = { icons.visual    .. ' VIS  ',   colors.lightblue },
    V      = { icons.visual    .. ' VIS  ',   colors.lightblue },
-   [''] = { icons.visual    .. ' VIS  ' .. icons.visual_block .. ' ', colors.brown },
+   [''] = { icons.visual    .. ' VIS  '    .. icons.visual_block .. ' ', colors.brown },
    R      = { icons.replace   .. ' REP  ',   colors.crimsonRed2 },
    ['r?'] = { icons.replace   .. ' REP  ',   colors.lightblue },
    Rv     = { icons.replace   .. ' REP  ',   colors.crimsonRed2 },
@@ -90,8 +90,8 @@ local mode_map = {
    s      = { icons.selection .. ' SEL  ',   colors.greenYelenYel },
    S      = { icons.selection .. ' SEL  ',   colors.greenYelenYel },
    [''] = { icons.selection .. ' SEL  ',   colors.greenYelenYel },
-   t      = { icons.terminal  .. ' TER  ',  colors.magenta },
-   ['!']  = {              '  !      ',         colors.crimsonRed }
+   t      = { icons.terminal  .. ' TER  ',   colors.magenta },
+   ['!']  = {              '  !      ',     colors.crimsonRed }
 }
 
 ----------------------------=== Funcs ===--------------------------

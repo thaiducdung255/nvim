@@ -3,11 +3,12 @@
 " Maintainer:	dungtd10
 
 if !exists("main_syntax")
-  " quit when a syntax file was already loaded
   if exists("b:current_syntax")
     finish
   endif
+
   let main_syntax = 'http'
+
 elseif exists("b:current_syntax") && b:current_syntax == "http"
   finish
 endif
@@ -46,8 +47,10 @@ hi def link    httpComment        Comment
 hi def link    httpResComment        Comment
 
 let b:current_syntax = "http"
+
 if main_syntax == 'http'
   unlet main_syntax
 endif
+
 let &cpo = s:cpo_save
 unlet s:cpo_save
