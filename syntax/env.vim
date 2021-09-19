@@ -17,17 +17,17 @@ set cpo&vim
 
 syn match      envEqual   "="
 syn region     envComment start="#" end="\n"
+syn match      envStr     "\w\+.*"
 syn match      envName    "^[A-Z_]\+"
-syn keyword    envBool    true false
-syn match      envStr     "\s\+\([a-zA-Z\-:;_*=\.\/\\]\|[0-9]\)\+[a-zA-Z0-9]\+$"
-syn match      envNum     "\s\+\d\+\.\=\d*$"
+syn match      envBool    "\(true\|false\)\+"
+syn match      envNum     "-\?\d\+\.\=\d*$"
 
 hi def         envComment guifg=#7f8490 gui=italic
-hi def link    envName    Identifier
 hi def         envEqual   guifg=#7f8490 gui=italic
+hi def link    envName    Identifier
 hi def link    envStr     String
-hi def link    envNum     Type
-hi def link    envBool    Variable
+hi def link    envNum     Variable
+hi def link    envBool    Operator
 
 let b:current_syntax = "env"
 
