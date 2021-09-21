@@ -1,15 +1,15 @@
 require'nvim-treesitter.configs'.setup {
-   ensure_installed = false, -- one of 'all', 'maintained' (parsers with maintainers), or a list of languages
+   ensure_installed = false,
    ignore_install   = true,
-   highlight        = {
+   highlight = {
       enable = true,
    },
-   indent           = {
+   indent = {
       enable = {
          'javascriptreact'
       }
    },
-   autotag          = {
+   autotag = {
       enable = true
    },
    rainbow = {

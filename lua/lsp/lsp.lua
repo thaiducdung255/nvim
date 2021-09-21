@@ -1,5 +1,14 @@
 vim.lsp.set_log_level('debug')
 
+local lsp_signature_conf = {
+   bind = true,
+   use_lspsaga = true,
+   hint_enable = false,
+   floating_window_above_cur_line = true,
+   zindex = 10,
+   fix_post = false
+}
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
@@ -14,22 +23,6 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] =
       update_in_insert = false
    }
 )
-
--- vim.lsp.handlers['textDocument/hover'] =
---    vim.lsp.with(
---    vim.lsp.handlers.hover,
---    {
---       border = 'single'
---    }
--- )
-
--- vim.lsp.handlers['textDocument/signatureHelp'] =
---    vim.lsp.with(
---    vim.lsp.handlers.signature_help,
---    {
---       border = 'single'
---    }
--- )
 
 local function set_buf_keymap(bufnr, mode, lhs, rhs)
    vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, {noremap = true, silent = true})
@@ -99,12 +92,6 @@ local function check_efm_formatter(set_document_formatting)
 
    return set_document_formatting(true)
 end
-
-local lsp_signature_conf = {
-   bind = false,
-   use_lspsaga = true,
-   hint_enable = false,
-}
 
 lspconfig.tsserver.setup {
    capabilities = capabilities,
