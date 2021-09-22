@@ -37,10 +37,8 @@ return require('packer').startup({
       use { 'neovim/nvim-lspconfig' }
       use { 'glepnir/lspsaga.nvim' }
       use { 'kabouzeid/nvim-lspinstall' }
-      use { 'alexaandru/nvim-lspupdate' }
 
       -- signature help
-      use 'ray-x/lsp_signature.nvim'
       use 'simrat39/symbols-outline.nvim'
 
       -- Telescope
@@ -50,25 +48,12 @@ return require('packer').startup({
       use { 'nvim-telescope/telescope-hop.nvim' }
 
       -- vim motions
-      use {
-        'phaazon/hop.nvim',
-        -- as = 'hop',
-        -- config = function()
-        --   require'hop'.setup { keys = 'asdfghjkl;qwertyuiop' }
-        -- end
-      }
+      use { 'phaazon/hop.nvim' }
 
       -- auto update root directory
-      use {
-         'ahmedkhalf/lsp-rooter.nvim',
-         -- config = function()
-            -- require('lsp-rooter').setup {}
-         -- end
-      }
+      use { 'ahmedkhalf/lsp-rooter.nvim' }
 
       -- Autocomplete
-      -- use { 'hrsh7th/nvim-compe' }
-      -- use 'nvim-lua/completion-nvim'
       use { 'hrsh7th/vim-vsnip' }
       use 'windwp/nvim-autopairs'
       use {
@@ -76,10 +61,8 @@ return require('packer').startup({
          requires = {
             'hrsh7th/cmp-vsnip',
             'hrsh7th/cmp-buffer',
-            'tzachar/cmp-tabnine',
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-nvim-lua',
          }
       }
 
@@ -155,9 +138,6 @@ return require('packer').startup({
       use {
          'NTBBloodbath/rest.nvim',
          requires = { 'nvim-lua/plenary.nvim' },
-         -- config = function()
-         --    require('rest-nvim').setup()
-         -- end
       }
    end,
 

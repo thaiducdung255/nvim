@@ -1,4 +1,5 @@
 local cmp = require 'cmp'
+vim.opt.completeopt = 'menuone,noselect'
 
 cmp.setup {
    snippet = {
@@ -19,16 +20,10 @@ cmp.setup {
       format = function(entry, vim_item)
          vim_item.menu = ({
             nvim_lsp    = '[LS]',
-            nvim_lua    = '[LS]',
             path        = '[DIR]',
             vsnip       = '[SNP]',
             buffer      = '[BUF]',
-            cmp_tabnine = '[TN]'
          })[entry.source.name]
-
-         if entry.source.name == 'nvim_lsp' then
-            vim_item.dup = 0
-         end
 
          return vim_item
       end
@@ -36,8 +31,6 @@ cmp.setup {
    sources = {
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
-      { name = 'nvim_lua' },
-      { name = 'cmp_tabnine' },
       { name = 'path' },
       {
          name = 'buffer',

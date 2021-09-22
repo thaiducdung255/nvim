@@ -1,14 +1,5 @@
 vim.lsp.set_log_level('debug')
 
-local lsp_signature_conf = {
-   bind = true,
-   use_lspsaga = true,
-   hint_enable = false,
-   floating_window_above_cur_line = true,
-   zindex = 10,
-   fix_post = false
-}
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
@@ -42,17 +33,6 @@ local function set_lsp_config(client, bufnr)
 
    if client.resolved_capabilities.signature_help then
       set_buf_keymap(bufnr, 'i', 'HH', [[<C-o>:lua vim.lsp.buf.signature_help()<CR>]])
-   end
-
-   if client.name == 'tsserver' then
-      vim.cmd [[nnoremap <silent> <S-M-o> :lua require'lsp/utils/tsserver'.organize_imports()<CR>]]
-
-      vim.cmd [[augroup LspImportAfterCompletion]]
-      vim.cmd [[   au!]]
-      vim.cmd [[   autocmd CompleteDone <buffer> lua require'lsp/utils/lsp'.import_after_completion()]]
-      vim.cmd [[augroup END]]
-
-      _G.rename_hook = require 'lsp/utils/tsserver'.rename
    end
 end
 
@@ -100,14 +80,12 @@ lspconfig.tsserver.setup {
          client.resolved_capabilities.document_formatting = not ok
       end)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
 lspconfig.gopls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
@@ -129,21 +107,18 @@ lspconfig.sumneko_lua.setup {
    cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
 lspconfig.pyright.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
 lspconfig.bashls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
@@ -151,14 +126,12 @@ lspconfig.jsonls.setup {
    cmd = { 'vscode-json-languageserver', '--stdio' },
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
 lspconfig.vimls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      require 'lsp_signature'.on_attach(lsp_signature_conf)
    end
 }
 
