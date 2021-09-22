@@ -47,27 +47,28 @@ return require('packer').startup({
       use { 'nvim-lua/popup.nvim' }
       use { 'nvim-lua/plenary.nvim' }
       use { 'nvim-telescope/telescope.nvim' }
-      use {'nvim-telescope/telescope-hop.nvim'}
+      use { 'nvim-telescope/telescope-hop.nvim' }
 
       -- vim motions
       use {
         'phaazon/hop.nvim',
-        as = 'hop',
-        config = function()
-          require'hop'.setup { keys = 'asdfghjkl;qwertyuiop' }
-        end
+        -- as = 'hop',
+        -- config = function()
+        --   require'hop'.setup { keys = 'asdfghjkl;qwertyuiop' }
+        -- end
       }
 
       -- auto update root directory
       use {
          'ahmedkhalf/lsp-rooter.nvim',
-         config = function()
-            require('lsp-rooter').setup {}
-         end
+         -- config = function()
+            -- require('lsp-rooter').setup {}
+         -- end
       }
 
       -- Autocomplete
-      -- use 'kristijanhusak/vim-dadbod-completion'
+      -- use { 'hrsh7th/nvim-compe' }
+      -- use 'nvim-lua/completion-nvim'
       use { 'hrsh7th/vim-vsnip' }
       use 'windwp/nvim-autopairs'
       use {
@@ -154,9 +155,9 @@ return require('packer').startup({
       use {
          'NTBBloodbath/rest.nvim',
          requires = { 'nvim-lua/plenary.nvim' },
-         config = function()
-            require('rest-nvim').setup()
-         end
+         -- config = function()
+         --    require('rest-nvim').setup()
+         -- end
       }
    end,
 
