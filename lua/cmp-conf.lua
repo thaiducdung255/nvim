@@ -25,6 +25,10 @@ cmp.setup {
             buffer      = '[BUF]',
          })[entry.source.name]
 
+         if entry.source.name == 'nvim_lsp' then
+            vim_item.dup = 0
+         end
+         
          return vim_item
       end
    },

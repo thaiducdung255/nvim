@@ -74,6 +74,14 @@ local function check_efm_formatter(set_document_formatting)
 end
 
 lspconfig.tsserver.setup {
+   init_options = {
+      hostInfo = 'neovim',
+      maxTsServerMemory = 2048,
+      preferences = {
+         includeCompletionForImportStatements = false,
+         includeCompletionsForModuleExports = false
+      }
+   },
    capabilities = capabilities,
    on_attach = function(client, bufnr)
       check_efm_formatter(function(ok)
