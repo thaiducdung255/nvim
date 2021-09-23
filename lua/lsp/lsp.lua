@@ -137,6 +137,12 @@ lspconfig.jsonls.setup {
    end
 }
 
+lspconfig.dockerls.setup {
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+   end
+}
+
 lspconfig.vimls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)

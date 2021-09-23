@@ -18,3 +18,7 @@ require'nvim-treesitter.configs'.setup {
       max_file_lines = 1000,
    }
 }
+
+-- local query = require('vim.treesitter.query')
+-- local indentifier_query = '(identifier) @operator'
+-- query.set_query('javascript', 'highlights', indentifier_query)

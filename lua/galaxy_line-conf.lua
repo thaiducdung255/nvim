@@ -173,8 +173,6 @@ local function is_filetype_exist()
    return true
 end
 
-local TrailingWhiteSpace = trailing_whitespace
-
 local check_git_width = function()
    return checkwidth() and condition.check_git_workspace()
 end
