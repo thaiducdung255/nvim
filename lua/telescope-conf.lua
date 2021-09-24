@@ -118,13 +118,26 @@ telescope.setup {
          clear_selection_hl = false,
          trace_entry        = true,
          reset_selection    = true,
+      },
+      fzf = {
+         fuzzy                   = true,
+         override_generic_sorter = true,
+         override_file_sorter    = true,
+         case_mode               = 'smart_case',
+      },
+      media_files = {
+         find_cmd = 'ag',
+         filetypes = { 'png', 'webp', 'jpg', 'jpeg', 'pdf' },
       }
    }
 }
 
 telescope.load_extension('hop')
+telescope.load_extension('fzf')
+telescope.load_extension('media_files')
 
 Nmap('<LEADER>ff', ':Telescope find_files hidden=true no_ignore=true<CR>')
+Nmap('<LEADER>fm', ':lua require(\'telescope\').extensions.media_files.media_files()<CR>')
 Nmap('<LEADER>fr', ':Telescope oldfiles hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>fb', ':Telescope buffers<CR>')
 Nmap('<LEADER>fS', ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
