@@ -7,7 +7,7 @@ if !exists("main_syntax")
    finish
    endif
 
-   let main_syntax = 'env'
+   let main_syntax = "env"
 elseif exists("b:current_syntax") && b:current_syntax == "env"
    finish
 endif
@@ -31,7 +31,7 @@ hi def link    envBool    Operator
 
 let b:current_syntax = "env"
 
-if main_syntax == 'env'
+if main_syntax == "env"
    unlet main_syntax
 endif
 

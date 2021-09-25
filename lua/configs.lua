@@ -53,6 +53,3 @@ vim.wo.cursorline       = true
 vim.wo.relativenumber   = true
 vim.wo.wrap             = false
 vim.wo.signcolumn       = 'yes'
-
-vim.cmd[[autocmd FileType dashboard set nornu nonumber]]
-vim.cmd[[autocmd FileType lua,javascript,typescript,go,python,json set number relativenumber]]

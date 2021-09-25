@@ -83,7 +83,7 @@ telescope.setup {
             ['<C-k>'] = actions.move_selection_previous,
             ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
             ['<ESC>'] = actions.close,
-            ['<C-h>'] = R('telescope').extensions.hop.hop,
+            ['HH'] = R('telescope').extensions.hop.hop,
          },
 
          n = {
@@ -137,7 +137,6 @@ telescope.load_extension('fzf')
 telescope.load_extension('media_files')
 
 Nmap('<LEADER>ff', ':Telescope find_files hidden=true no_ignore=true<CR>')
-Nmap('<LEADER>fm', ':lua require(\'telescope\').extensions.media_files.media_files()<CR>')
 Nmap('<LEADER>fr', ':Telescope oldfiles hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>fb', ':Telescope buffers<CR>')
 Nmap('<LEADER>fS', ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
@@ -157,3 +156,4 @@ Nmap('<LEADER>gv',   [[<cmd>lua require('telescope_custom-conf').delta_git_bcomm
 Nmap('<LEADER>gc',   [[<cmd>lua require('telescope_custom-conf').delta_git_commits()<CR>]])
 Nmap('<LEADER>gs',   [[<cmd>lua require('telescope_custom-conf').delta_git_status()<CR>]])
 Nmap('<LEADER>zz',   [[<cmd>lua require('telescope_custom-conf').eslint_diagnostics()<CR>]])
+Nmap('<LEADER>fm',   [[:lua require('telescope').extensions.media_files.media_files()<CR>]])

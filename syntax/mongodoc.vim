@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language:	mongodoc DOCUMENT
+" Language:	MONGODB DOCUMENT
 " Maintainer:	dungtd10
 
 if !exists("main_syntax")
@@ -7,7 +7,7 @@ if !exists("main_syntax")
       finish
    endif
 
-   let main_syntax = 'mongodoc'
+   let main_syntax = "mongodoc"
 elseif exists("b:current_syntax") && b:current_syntax == "mongodoc"
   finish
 endif
@@ -31,7 +31,7 @@ hi def         mongodocOperator   guifg   =#deb974  gui=italic
 
 let b:current_syntax = "mongodoc"
 
-if main_syntax == 'mongodoc'
+if main_syntax == "mongodoc"
   unlet main_syntax
 endif
 

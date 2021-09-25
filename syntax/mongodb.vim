@@ -7,7 +7,7 @@ if !exists("main_syntax")
    finish
    endif
 
-   let main_syntax = 'mongodb'
+   let main_syntax = "mongodb"
 elseif exists("b:current_syntax") && b:current_syntax == "mongodb"
   finish
 endif
@@ -37,7 +37,7 @@ hi def link    mongodbString          String
 
 let b:current_syntax = "mongodb"
 
-if main_syntax == 'mongodb'
+if main_syntax == "mongodb"
   unlet main_syntax
 endif
 

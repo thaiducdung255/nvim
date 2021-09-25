@@ -7,7 +7,7 @@ if !exists("main_syntax")
     finish
   endif
 
-  let main_syntax = 'http'
+  let main_syntax = "http"
 
 elseif exists("b:current_syntax") && b:current_syntax == "http"
   finish
@@ -48,7 +48,7 @@ hi def link    httpResComment        Comment
 
 let b:current_syntax = "http"
 
-if main_syntax == 'http'
+if main_syntax == "http"
   unlet main_syntax
 endif
 

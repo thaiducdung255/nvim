@@ -125,6 +125,6 @@ require('spectre').setup({
    is_insert_mode     = false,   -- start open panel on is_insert_mode
 })
 
-vim.cmd('nnoremap <LEADER>S :lua require(\'spectre\').open()<CR>')
-vim.cmd('vnoremap <LEADER>W :lua require(\'spectre\').open_visual()<CR>')
-vim.cmd('nnoremap <LEADER>G viw:lua require(\'spectre\').open_file_search()<CR>')
+Nmap('<LEADER>S', [[:lua require('spectre').open()<CR>]])
+Vmap('<LEADER>W', [[:lua require('spectre').open_visual()<CR>]])
+Nmap('<LEADER>G', [[viw:lua require('spectre').open_file_search()<CR>]])
