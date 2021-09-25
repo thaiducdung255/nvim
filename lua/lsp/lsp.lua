@@ -84,9 +84,11 @@ lspconfig.tsserver.setup {
    },
    capabilities = capabilities,
    on_attach = function(client, bufnr)
-      check_efm_formatter(function(ok)
-         client.resolved_capabilities.document_formatting = not ok
-      end)
+      check_efm_formatter(
+         function(ok)
+            client.resolved_capabilities.document_formatting = not ok
+         end
+      )
       set_lsp_config(client, bufnr)
    end
 }
@@ -151,9 +153,12 @@ lspconfig.vimls.setup {
 
 lspconfig.efm.setup {
    on_attach = function(client, bufnr)
-      check_efm_formatter(function(ok)
-         client.resolved_capabilities.document_formatting = ok
-      end)
+      check_efm_formatter(
+         function(ok)
+            client.resolved_capabilities.document_formatting = ok
+         end
+      )
+
       set_lsp_config(client, bufnr)
    end,
    root_dir = function(client, bufnr)
