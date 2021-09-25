@@ -117,7 +117,6 @@ return require('packer').startup({
       -- Git
       use { 'lewis6991/gitsigns.nvim' }
       use 'kdheepak/lazygit.nvim'
-      use 'APZelos/blamer.nvim'
 
       -- editorconfig
       use 'editorconfig/editorconfig-vim'
