@@ -27,6 +27,9 @@ require('gitsigns').setup {
       ['n gV'] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
 
       ['n gp'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
+      ['n gP'] = '<cmd>lua require"gitsigns".diffthis()<CR>',
+
+      ['n gz'] = '<cmd>lua require"gitsigns".setloclist()<CR>',
 
       ['o ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
       ['x ih'] = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
