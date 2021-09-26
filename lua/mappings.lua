@@ -87,12 +87,12 @@ Imap(';h',  '<><left>')
 Imap(';\'', '``<left>')
 
 ---- insert brackets
-Vmap('sj',  'di()<ESC>hpF(i')
-Vmap('sk',  'di[]<ESC>hpl')
-Vmap('sl',  'di{<space><space>}<ESC>hhpll')
-Vmap('s;',  'di\'\'<ESC>hpl')
-Vmap('s:',  'di""<ESC>hpl')
-Vmap('s\'', 'di``<ESC>hpl')
-Vmap('sh',  'di<><ESC>hpl')
+Vmap('sj',  'da()<ESC>hpF(i')
+Vmap('sk',  'da[]<ESC>hpl')
+Vmap('sl',  'da{<space><space>}<ESC>hhpll')
+Vmap('s;',  'da\'\'<ESC>hpl')
+Vmap('s:',  'da""<ESC>hpl')
+Vmap('s\'', 'da``<ESC>hpl')
+Vmap('sh',  'da<><ESC>hpl')
 
 ---------------------------------------------------------------------------------------------------
