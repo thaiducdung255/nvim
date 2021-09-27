@@ -1,17 +1,15 @@
-vim.g.nvim_tree_disable_netrw    = 0
-vim.g.nvim_tree_hide_dotfiles    = 0
-vim.g.nvim_tree_indent_markers   = 1
-vim.g.nvim_tree_follow           = 1
-vim.g.nvim_tree_auto_close       = true
-vim.g.nvim_tree_auto_ignore_ft   = 'startify'
-vim.g.nvim_tree_git_hl           = 1
-vim.g.nvim_tree_update_cwd       = 1
-vim.g.nvim_tree_ignore           = {'node_modules', '.git', 'package-lock.json'}
-vim.g.nvim_tree_lsp_diagnostics  = 1
+vim.g.nvim_tree_hide_dotfiles          = 0
+vim.g.nvim_tree_indent_markers         = 1
+vim.g.nvim_tree_auto_ignore_ft         = 'startify'
+vim.g.nvim_tree_git_hl                 = 1
+vim.g.nvim_tree_ignore                 = {'node_modules', '.git', 'package-lock.json'}
+vim.g.nvim_tree_gitignore              = 1
+vim.g.nvim_tree_highlight_opened_files = 1
+vim.g.nvim_tree_icon_symlink_arrow     = '->'
 
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
--- default mappings
-vim.g.nvim_tree_bindings = {
+
+local list = {
    { key = { '<CR>', 'o', 'l' },          cb = tree_cb('edit') },
    { key = { '<2-RightMouse>', '<C-]>' }, cb = tree_cb('cd') },
    { key = '<C-v>',                       cb = tree_cb('vsplit') },
@@ -45,7 +43,8 @@ vim.g.nvim_tree_bindings = {
 }
 
 vim.cmd([[hi link NvimTreeGitMerge Red]])
-vim.g.nvim_tree_show_icons = { git = 1, folders = 1, files = 1 }
+vim.cmd([[hi link NvimTreeFolderIcon Blue]])
+vim.g.nvim_tree_show_icons = { git = 1, folders = 1, files = 1, folder_arrows = 1 }
 
 vim.g.nvim_tree_icons = {
    default = '',
@@ -55,4 +54,34 @@ vim.g.nvim_tree_icons = {
 }
 
 Nmap('<LEADER>e', ':NvimTreeToggle<CR>')
-Nmap('<LEADER>E', 'NvimTreeRefresh<CR>')
+Nmap('<LEADER>E', ':NvimTreeRefresh<CR>')
+
+require'nvim-tree'.setup {
+   disable_netrw       = true,
+   hijack_netrw        = true,
+   open_on_setup       = false,
+   ignore_ft_on_setup  = {},
+   auto_close          = true,
+   open_on_tab         = false,
+   hijack_cursor       = false,
+   update_cwd          = true,
+   lsp_diagnostics     = true,
+   update_focused_file = {
+      enable      = false,
+      update_cwd  = false,
+      ignore_list = {}
+   },
+   system_open = {
+      cmd  = nil,
+      args = {}
+   },
+   view = {
+      width = 30,
+      side = 'left',
+      auto_resize = false,
+      mappings = {
+         custom_only = false,
+         list = list
+      }
+   }
+}
