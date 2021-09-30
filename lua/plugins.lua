@@ -36,6 +36,7 @@ return require('packer').startup({
       -- LSP
       use { 'neovim/nvim-lspconfig' }
       use { 'kabouzeid/nvim-lspinstall' }
+      -- use 'mfussenegger/nvim-lint'
 
       -- signature help
       use 'simrat39/symbols-outline.nvim'

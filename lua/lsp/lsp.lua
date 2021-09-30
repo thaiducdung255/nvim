@@ -1,10 +1,11 @@
-vim.lsp.set_log_level('debug')
+local lspconfig = require 'lspconfig'
+local log = require('vim.lsp.log')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-local lspconfig = require 'lspconfig'
-local js_tools = require 'lsp/utils/js_tools'
+-- vim.lsp.set_log_level('debug')
+-- log.set_format_func(vim.inspect)
 
 vim.lsp.handlers['textDocument/publishDiagnostics'] =
    vim.lsp.with(
@@ -36,59 +37,18 @@ local function set_lsp_config(client, bufnr)
    end
 end
 
-local js_formatter = js_tools.get_js_formatter()
-
-local js_config = {
-   lintCommand = js_tools.should_use_eslint() and 'eslint_d -f unix --stdin --stdin-filename ${INPUT}' or '',
-   lintStdin = true,
-   lintFormats = { '%f:%l:%c: %m' },
-   lintIgnoreExitCode = true,
-   formatCommand = js_formatter,
-   formatStdin = true,
-   rootMarkers = {'package.json'}
-}
-
-local pyright_config = {
-   lintCommand = 'python3 -m pylint --output-format text --score no --msg-template {path}:{line}:{column}:{C}:{msg} ${INPUT}',
-   lintStdin = true,
-   lintFormats = { '%f:%l:%c:%t:%m' },
-}
-
-local function is_javascript(ft)
-   return vim.startswith(ft, 'javascript') or vim.startswith(ft, 'typescript')
-end
-
-local function check_efm_formatter(set_document_formatting)
-   if is_javascript(vim.bo.filetype) then
-      if vim.startswith(js_formatter, 'eslint') then
-         js_tools.check_eslint_config(function(exit_code)
-            set_document_formatting(exit_code == 0)
-         end)
-         return
-      end
-
-      set_document_formatting(js_formatter ~= '')
-   end
-
-   return set_document_formatting(true)
-end
-
 lspconfig.tsserver.setup {
-   init_options = {
-      hostInfo = 'neovim',
-      maxTsServerMemory = 2048,
-      preferences = {
-         includeCompletionForImportStatements = false,
-         includeCompletionsForModuleExports = false
-      }
-   },
+   -- init_options = {
+   --    hostInfo = 'neovim',
+   --    maxTsServerMemory = 2048,
+   --    preferences = {
+   --       includeCompletionForImportStatements = false,
+   --       includeCompletionsForModuleExports = false
+   --    }
+   -- },
    capabilities = capabilities,
    on_attach = function(client, bufnr)
-      check_efm_formatter(
-         function(ok)
-            client.resolved_capabilities.document_formatting = not ok
-         end
-      )
+      client.resolved_capabilities.document_formatting = false
       set_lsp_config(client, bufnr)
    end
 }
@@ -151,60 +111,69 @@ lspconfig.vimls.setup {
    end
 }
 
-lspconfig.efm.setup {
-   on_attach = function(client, bufnr)
-      check_efm_formatter(
-         function(ok)
-            client.resolved_capabilities.document_formatting = ok
-         end
-      )
+local eslint = {
+   lintCommand = 'eslint_d --stdin --stdin-filename ${INPUT} -f unix',
+   lintStdin = true,
+   lintIgnoreExitCode = true,
+   lintFormats = { '%f:%l:%c: %m' },
+   formatCommand = 'eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}',
+   formatStdin = true,
+   rootMarkers = {'package.json'}
+}
 
-      set_lsp_config(client, bufnr)
-   end,
-   root_dir = function(client, bufnr)
-      if vim.api.nvim_buf_get_name(bufnr):match('node_modules') == nil then
-         return vim.fn.getcwd()
-      end
-   end,
-   default_config = {
-      cmd = {
-         'efm-langserver',
-         '-c',
-         [['$HOME/.config/efm-langserver/config.yaml']]
-      }
+local prettier = {
+   formatCommand = 'prettier_d --find-config-path --stdin-filepath ${INPUT}',
+   formatStdin = true
+}
+
+local efm_config = os.getenv('HOME') .. '/.config/nvim/lua/lsp/efm-config.yaml'
+-- local efm_log_dir = os.getenv('HOME') .. '/.cache/nvim/'
+local efm_root_markers = { 'package.json', '.git/', '.zshrc' }
+local efm_languages = {
+   yaml            = { prettier },
+   json            = { prettier },
+   markdown        = { prettier },
+   javascript      = { eslint },
+   javascriptreact = { eslint },
+   typescript      = { eslint },
+   typescriptreact = { eslint },
+   css             = { prettier },
+   scss            = { prettier },
+   sass            = { prettier },
+   less            = { prettier },
+   graphql         = { prettier },
+   vue             = { prettier },
+   html            = { prettier }
+}
+
+lspconfig.efm.setup({
+   cmd = {
+      'efm-langserver',
+      '-c',
+      efm_config,
+      -- '-logfile',
+      -- efm_log_dir .. 'efm-lsp.log'
    },
-   settings = {
-      languages = {
-         javascript           = { js_config },
-         javascriptreact      = { js_config },
-         ['javascript.jsx']   = { js_config },
-         typescript           = { js_config },
-         ['typescript.tsx']   = { js_config },
-         typescriptreact      = { js_config },
-         python               = { pyright_config },
-      }
-   },
-   filetypes = {
+   filetype = {
       'javascript',
       'javascriptreact',
-      'javascript.jsx',
       'typescript',
-      'typescript.tsx',
-      'typescriptreact',
-      'markdown'
+      'typescriptreact'
    },
-   commands = {
-      EfmLog = {
-         function()
-            local logfile = '$HOME/efmlangserver.log'
-            local cmd = string.format('tail -1000 %s | grep -E \'^[0-9]{4}/[0-9]{2}/[0-9]{2}\'', logfile)
-            vim.cmd('split new')
-            vim.cmd('10wincmd _')
-            vim.cmd('set bt=nofile')
-            vim.cmd('setlocal nowrap')
-            vim.cmd('setlocal bufhidden=wipe')
-            vim.cmd(string.format('r ++edit !%s', cmd))
-         end
-      }
+   on_attach = function(client)
+      if client.resolved_capabilities.document_formatting then
+         vim.cmd('augroup Format')
+         vim.cmd('autocmd! * <buffer>')
+         vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)')
+         vim.cmd('augroup END')
+      end
+   end,
+   -- root_dir = lspconfig.util.root_pattern(unpack(efm_root_markers)),
+   init_options = {
+      documentFormatting = true
+   },
+   settings = {
+      rootMarkers = efm_root_markers,
+      languages = efm_languages
    }
-}
+})
