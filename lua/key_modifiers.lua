@@ -9,8 +9,10 @@ Icmap(';s', '&')
 Icmap(';d', '*')
 Icmap(';f', '(')
 Icmap(';g', ')')
-Icmap(';z', '_')
-Icmap(';x', '+')
+Icmap(';z', '-')
+Icmap(';x', '=')
+Icmap(';;z', '_')
+Icmap(';;x', '+')
 
 -- essential maps
 Imap(',,', ',<CR>')

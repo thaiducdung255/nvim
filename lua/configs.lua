@@ -30,6 +30,7 @@ vim.o.undofile          = true
 vim.o.incsearch         = true
 vim.o.autoread          = true
 vim.o.hlsearch          = false
+vim.o.history           = 100 
 
 vim.bo.tabstop          = 3
 vim.bo.softtabstop      = 3
