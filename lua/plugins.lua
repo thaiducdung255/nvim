@@ -35,10 +35,10 @@ return require('packer').startup({
 
       -- LSP
       use { 'neovim/nvim-lspconfig' }
-      use { 'kabouzeid/nvim-lspinstall' }
+      -- use { 'kabouzeid/nvim-lspinstall' }
       -- use 'mfussenegger/nvim-lint'
 
-      -- signature help
+      -- outline
       use 'simrat39/symbols-outline.nvim'
 
       -- Telescope
@@ -71,7 +71,7 @@ return require('packer').startup({
       -- line peek
       use 'nacro90/numb.nvim'
 
-      -- high all current words
+      -- highlight current words
       use { 'xiyaowong/nvim-cursorword' }
 
       -- Find and replace
@@ -87,7 +87,7 @@ return require('packer').startup({
       -- debugger
       use 'mfussenegger/nvim-dap'
 
-      -- db ui
+      -- db management
       use 'tpope/vim-dadbod'
       use 'kristijanhusak/vim-dadbod-ui'
 
@@ -127,6 +127,8 @@ return require('packer').startup({
 
       -- Color scheme
       use 'sainnhe/edge'
+
+      -- highlight color value
       use 'norcalli/nvim-colorizer.lua'
 
       -- icons

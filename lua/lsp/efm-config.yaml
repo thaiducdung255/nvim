@@ -1,6 +1,6 @@
 version: 2
-# log-file: "~/.cache/nvim/efm-lsp.log"
-# log-level: 4
+# log-file: '~/.cache/nvim/efm-lsp.log'
+log-level: 4
 lint-debounce: 1s
 root-markers:
    - .git/

@@ -83,7 +83,7 @@ telescope.setup {
             ['<C-k>'] = actions.move_selection_previous,
             ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
             ['<ESC>'] = actions.close,
-            ['HH'] = R('telescope').extensions.hop.hop,
+            ['<M-\'>'] = R('telescope').extensions.hop.hop,
          },
 
          n = {

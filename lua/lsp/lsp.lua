@@ -1,5 +1,5 @@
 local lspconfig = require 'lspconfig'
-local log = require('vim.lsp.log')
+-- local log = require('vim.lsp.log')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
@@ -129,6 +129,7 @@ local prettier = {
 local efm_config = os.getenv('HOME') .. '/.config/nvim/lua/lsp/efm-config.yaml'
 -- local efm_log_dir = os.getenv('HOME') .. '/.cache/nvim/'
 local efm_root_markers = { 'package.json', '.git/', '.zshrc' }
+
 local efm_languages = {
    yaml            = { prettier },
    json            = { prettier },
@@ -164,7 +165,7 @@ lspconfig.efm.setup({
       if client.resolved_capabilities.document_formatting then
          vim.cmd('augroup Format')
          vim.cmd('autocmd! * <buffer>')
-         vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)')
+         vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 300)')
          vim.cmd('augroup END')
       end
    end,

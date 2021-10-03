@@ -26,6 +26,18 @@ function Vmap(lhs, rhs, opts)
    map(lhs, rhs, 'v', opts)
 end
 
+function Icmap(lhs, rhs, opts)
+   map(lhs, rhs, 'i', opts)
+   map(lhs, rhs, 'c', opts)
+end
+
+function Map(lhs, rhs, opts)
+   map(lhs, rhs, 'i', opts)
+   map(lhs, rhs, 'n', opts)
+   map(lhs, rhs, 'v', opts)
+   map(lhs, rhs, 'c', opts)
+end
+
 function Inmap(lhs, rhs, opts)
    map(lhs, rhs, 'i', opts)
    map(lhs, rhs, 'n', opts)
