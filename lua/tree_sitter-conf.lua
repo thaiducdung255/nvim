@@ -31,7 +31,7 @@ require'nvim-treesitter.configs'.setup {
          }
       },
       navigation = {
-         enable = true,
+         enable = false,
          keymaps = {
             -- goto_definition = 'gnd',
             -- list_definitions = 'gnD',

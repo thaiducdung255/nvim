@@ -1,38 +1,15 @@
-require('nvim-autopairs').setup()
+require('nvim-autopairs').setup({
+   enable_check_bracket_line = false,
+   ignored_next_char         = '[%w%.]'
+})
 
-local npairs = require('nvim-autopairs')
-_G.MUtils    = {}
-
-MUtils.completion_confirm = function()
-   if vim.fn.pumvisible() ~= 0 then
-      if vim.fn.complete_info()['selected'] ~= -1 then
-         return npairs.esc('')
-      else
-         vim.api.nvim_select_popupmenu_item(0, false, false, {})
-         return npairs.esc('<c-n>')
-      end
-   else
-      return npairs.check_break_line_char()
-   end
-end
-
-MUtils.tab = function()
-   if vim.fn.pumvisible() ~= 0 then
-      return npairs.esc('<C-n>')
-   else
-      return npairs.esc('<Tab>')
-   end
-end
-
-MUtils.s_tab = function()
-   if vim.fn.pumvisible() ~= 0 then
-      return npairs.esc('<C-p>')
-   else
-         return npairs.esc('<C-h>')
-   end
-end
-
--- Autocompletion and snippets
-Imap('<CR>',      'v:lua.MUtils.completion_confirm()', { noremap = true, expr = true})
-Imap('<Tab>',     'v:lua.MUtils.tab()', { noremap = true, expr = true})
-Imap('<S-Tab>',   'v:lua.MUtils.s_tab()', { noremap = true, expr = true})
+require("nvim-autopairs.completion.cmp").setup({
+   map_cr       = true, --  map <CR> on insert mode
+   map_complete = true, -- it will auto insert `(` (map_char) after select function or method item
+   auto_select  = true, -- automatically select the first item
+   insert       = false, -- use insert confirm behavior instead of replace
+   map_char = { -- modifies the function or method delimiter by filetypes
+      all = '(',
+      tex = '{'
+   }
+})
