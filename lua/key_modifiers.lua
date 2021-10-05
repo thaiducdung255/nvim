@@ -19,7 +19,7 @@ Icmap(';;x', '+', true)
 vim.cmd('inoremap ,, ,<CR>')
 Imap(';c', '``<Left>')
 Imap(';v', '${}<Left>')
-Nmap('<Space>lc', ':<Up>', true)
+Nmap('<Space>cc', ':<Up>', true)
 
 Cmap('<M-u>', '<Left>', true)
 Cmap('<M-i>', '<C-n>', true)

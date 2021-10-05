@@ -147,6 +147,7 @@ Nmap('<LEADER>ch', ':Telescope command_history<CR>')
 Nmap('<LEADER>mp', ':Telescope keymaps<CR>')
 Nmap('<LEADER>cs', ':Telescope colorscheme<CR>')
 Nmap('<LEADER>sc', ':Telescope highlights<CR>')
+Nmap('<LEADER>/',  ':Telescope current_buffer_fuzzy_find<CR>')
 
 Nmap('gD',           ':Telescope lsp_document_diagnostics<CR>')
 Nmap('gr',           ':Telescope lsp_references<CR>')
