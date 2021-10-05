@@ -7,7 +7,7 @@ require'nvim-web-devicons'.setup {
       },
       http = {
          icon = '黎',
-         color = '#428850',
+         color = '#571275',
          name = 'Http'
       },
       ['env.sample'] = {
@@ -20,105 +20,115 @@ require'nvim-web-devicons'.setup {
          color = '#428850',
          name = 'Env'
       },
-      ['package.json'] = {
-         icon = '',
-         color = '#428850',
-         name = 'Env'
-      },
-      ['package-lock.json'] = {
-         icon = '',
-         color = '#428850',
-         name = 'Env'
-      },
-      ['yarn.lock'] = {
-         icon = '',
-         color = '#428850',
-         name = 'Env'
-      },
       ['.env'] = {
          icon = '',
          color = '#428850',
          name = 'Env'
       },
+      ['package.json'] = {
+         icon = '',
+         color = '#a85813',
+         name = 'npm'
+      },
+      ['package-lock.json'] = {
+         icon = '',
+         color = '#a85813',
+         name = 'npm'
+      },
+      ['yarn.lock'] = {
+         icon = '',
+         color = '#a85813',
+         name = 'npm'
+      },
+      ['pnpm-lock.yaml'] = {
+         icon = '',
+         color = '#a85813',
+         name = 'npm'
+      },
       ['tsconfig.tsbuildinfo'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#0e67cc',
+         name = 'build'
       },
       ['tsconfig.json'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#0e67cc',
+         name = 'build'
       },
       ['.editorconfig'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#0e67cc',
+         name = 'build'
       },
       ['.eslintrc.json'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#0e67cc',
+         name = 'build'
       },
       ['.eslintrc.yml'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#0e67cc',
+         name = 'build'
       },
       ['.eslintrc.cjs'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#0e67cc',
+         name = 'build'
       },
       ['.eslintrc.js'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#0e67cc',
+         name = 'build'
       },
       ['.prettierignore'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#0e67cc',
+         name = 'build'
       },
       ['.prettierrc'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#0e67cc',
+         name = 'build'
       },
       ['readme.md'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#11bfb7',
+         name = 'readme'
+      },
+      ['README.md'] = {
+         icon = '',
+         color = '#11bfb7',
+         name = 'readme'
       },
       ['index.js'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#11bfb7',
+         name = 'index'
       },
       ['index.ts'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#11bfb7',
+         name = 'index'
       },
       ['main.js'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#11bfb7',
+         name = 'index'
       },
       ['main.ts'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#11bfb7',
+         name = 'index'
       },
       ['app.js'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#11bfb7',
+         name = 'index'
       },
       ['app.ts'] = {
          icon = '',
-         color = '#428850',
-         name = 'Env'
+         color = '#11bfb7',
+         name = 'index'
       },
    };
    default = true;
