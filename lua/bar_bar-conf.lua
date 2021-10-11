@@ -17,11 +17,11 @@ vim.g.bufferline = {
 
 vim.cmd([[hi BufferCurrent guibg=#002966]])
 vim.cmd([[hi BufferCurrentSign guibg=#002966]])
-vim.cmd([[hi BufferCurrentMod guibg=#002966 gui=bold,italic guifg=none]])
+vim.cmd([[hi BufferCurrentMod guibg=#002966 gui=bold,italic guifg=#deb974]])
 
 vim.cmd([[hi BufferVisible guibg=#808080]])
 vim.cmd([[hi BufferVisibleSign guibg=#808080]])
 vim.cmd([[hi BufferVisibleMod guibg=#808080 gui=bold,italic guifg=#2c2e34]])
 
-vim.cmd([[hi BufferInactiveMod gui=bold,italic]])
+vim.cmd([[hi BufferInactiveMod gui=bold,italic guifg=#deb974]])
 vim.cmd([[hi BufferInactive gui=none]])
