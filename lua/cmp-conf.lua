@@ -9,12 +9,53 @@ cmp.setup {
    },
    sorting = {
       priority_weight = 2.,
-      comparators = {},
+      comparators = {
+         function(e1, e2)
+            local diff
+            diff = cmp.config.compare.offset(e1, e2)
+            print()
+
+            if diff ~= nil then
+               return diff
+            end
+
+            diff = cmp.config.compare.exact(e1, e2)
+            if diff ~= nil then
+               return diff
+            end
+
+            diff = cmp.config.compare.score(e1, e2)
+
+            if diff ~= nil then
+               return diff
+            end
+
+            diff = cmp.config.compare.kind(e1, e2)
+
+            if diff ~= nil then
+               return diff
+            end
+
+            diff = cmp.config.compare.sort_text(e1, e2)
+
+            if diff ~= nil then
+               return diff
+            end
+
+            diff = cmp.config.compare.length(e1, e2)
+
+            if diff ~= nil then
+               return diff
+            end
+
+            return cmp.config.compare.order(e1, e2)
+         end,
+      },
    },
    mapping = {
-      ['<CR>'] = cmp.mapping.confirm({ select = true }),
-      ['<Tab>'] = cmp.mapping.select_next_item(),
-      ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+      ['<Tab>']   = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+      ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+      ['<CR>']    = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
    },
    formatting = {
       format = function(entry, vim_item)
@@ -25,17 +66,16 @@ cmp.setup {
             buffer      = '[BUF]',
          })[entry.source.name]
 
-         if entry.source.name == 'nvim_lsp' then
+         if entry.source.name == 'buffer' then
             vim_item.dup = 0
          end
-         
          return vim_item
       end
    },
    sources = {
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
-      { name = 'path' },
+      -- { name = 'path' },
       {
          name = 'buffer',
          opts = {
