@@ -25,7 +25,7 @@ require'nvim-treesitter.configs'.setup {
          enable = false
       },
       smart_rename = {
-         enable = true,
+         enable = false,
          keymaps = {
             smart_rename = 'gR'
          }
@@ -33,11 +33,11 @@ require'nvim-treesitter.configs'.setup {
       navigation = {
          enable = false,
          keymaps = {
-            -- goto_definition = 'gnd',
-            -- list_definitions = 'gnD',
-            -- list_definitions_toc = 'gO',
-            -- goto_next_usage = 'grn',
-            -- goto_previous_usage = 'grm',
+            goto_definition = 'gnd',
+            list_definitions = 'gnD',
+            list_definitions_toc = 'gO',
+            goto_next_usage = 'grj',
+            goto_previous_usage = 'grk',
          }
       }
    }
