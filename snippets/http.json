@@ -35,7 +35,7 @@
       "prefix": ["de"],
       "body": [
          "# $1",
-         "DELETE /${2:localhost}:$3",
+         "DELETE ${2:localhost}:$3",
          ""
       ]
    },

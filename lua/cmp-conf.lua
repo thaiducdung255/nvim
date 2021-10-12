@@ -1,6 +1,8 @@
 local cmp = require 'cmp'
 vim.opt.completeopt = 'menuone,noselect'
 
+local lspkind = require('lspkind')
+
 cmp.setup {
    snippet = {
       expand = function(args)
@@ -58,24 +60,24 @@ cmp.setup {
       ['<CR>']    = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
    },
    formatting = {
-      format = function(entry, vim_item)
-         vim_item.menu = ({
-            nvim_lsp    = '[LS]',
-            path        = '[DIR]',
-            vsnip       = '[SNP]',
-            buffer      = '[BUF]',
-         })[entry.source.name]
+      format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+--       format = function(entry, vim_item)
+--          vim_item.menu = ({
+--             nvim_lsp    = '[LS]',
+--             vsnip       = '[SNP]',
+--             buffer      = '[BUF]',
+--          })[entry.source.name]
 
-         if entry.source.name == 'buffer' then
-            vim_item.dup = 0
-         end
-         return vim_item
-      end
+--          if entry.source.name == 'buffer' or entry.source.name == 'nvim_lsp' then
+--             vim_item.dup = 0
+--          end
+
+--          return vim_item
+--       end
    },
    sources = {
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
-      -- { name = 'path' },
       {
          name = 'buffer',
          opts = {
