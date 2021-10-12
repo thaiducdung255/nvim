@@ -3,6 +3,16 @@ vim.opt.completeopt = 'menuone,noselect'
 
 local lspkind = require('lspkind')
 
+local tabnine = require('cmp_tabnine.config')
+
+local source_mapping = {
+   buffer      = '[Buf]',
+   nvim_lsp    = '[Lsp]',
+   nvim_lua    = '[Lua]',
+   cmp_tabnine = '[Tab]',
+   vsnip       = '[Snp]'
+}
+
 cmp.setup {
    snippet = {
       expand = function(args)
@@ -60,20 +70,24 @@ cmp.setup {
       ['<CR>']    = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
    },
    formatting = {
-      format = lspkind.cmp_format({with_text = false, maxwidth = 50})
---       format = function(entry, vim_item)
---          vim_item.menu = ({
---             nvim_lsp    = '[LS]',
---             vsnip       = '[SNP]',
---             buffer      = '[BUF]',
---          })[entry.source.name]
+      format = function(entry, vim_item)
+			vim_item.kind = lspkind.presets.default[vim_item.kind]
+			local menu = source_mapping[entry.source.name]
 
---          if entry.source.name == 'buffer' or entry.source.name == 'nvim_lsp' then
---             vim_item.dup = 0
---          end
+			if entry.source.name == 'cmp_tabnine' then
+				-- if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+				-- 	menu = entry.completion_item.data.detail .. ' ' .. menu
+				-- end
 
---          return vim_item
---       end
+				vim_item.kind = ''
+         elseif entry.source.name == 'buffer' or entry.source.name == 'nvim_lsp' then
+            vim_item.dup = 0
+         end
+
+			vim_item.menu = menu
+
+			return vim_item
+		end
    },
    sources = {
       { name = 'nvim_lsp' },
@@ -86,5 +100,15 @@ cmp.setup {
             end
          }
       },
+      { name = 'cmp_tabnine' },
+      { name = 'nvim_lua' },
    },
 }
+
+tabnine:setup({
+   max_lines              = 1000;
+   max_num_results        = 10;
+   sort                   = true;
+	run_on_every_keystroke = true;
+	snippet_placeholder    = '..';
+})
