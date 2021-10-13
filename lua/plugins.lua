@@ -83,7 +83,7 @@ return require('packer').startup({
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       use 'nvim-treesitter/playground'
       use { 'windwp/nvim-ts-autotag' }
-      use 'romgrk/nvim-treesitter-context'
+      -- use 'romgrk/nvim-treesitter-context'
       use 'nvim-treesitter/nvim-treesitter-refactor'
 
       -- debugger
@@ -138,6 +138,7 @@ return require('packer').startup({
 
       -- Status Line and Bufferline
       use { 'glepnir/galaxyline.nvim' }
+      use { 'SmiteshP/nvim-gps' }
       use { 'romgrk/barbar.nvim' }
 
       -- Rest api

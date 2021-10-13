@@ -1,39 +1,56 @@
 local gl        = require('galaxyline')
-local gls       = gl.section
 local condition = require('galaxyline.condition')
 local fileinfo  = require('galaxyline.provider_fileinfo')
+local gps       = require('nvim-gps')
+local gls       = gl.section
+
+gps.setup({
+	icons = {
+		['class-name']     = '  ',
+		['function-name']  = '  ',
+		['method-name']    = '  ',
+		['container-name'] = ' ⛶ ',
+		['tag-name']       = ' 炙'
+	},
+	languages = {},
+	separator = ' > ',
+})
 
 gl.short_line_list = {'plug', 'fugitive', 'NvimTree', 'vista', 'dbui', 'packer', 'startify', 'coc'}
 
 local icons = {
+   lsp_client = '⚹ ',
    sep = {
-      right = '',
-      left  = ''
+      right = '',
+      left  = '',
+      -- right = '',
+      -- left  = ''
    },
    diagnostic = {
-      error = ' ',
-      warn  = ' ',
-      info  = ' '
+      error = ' ✕ ',
+      warn  = ' ⚠ ',
+      info  = '  ',
+      hint  = '  '
    },
    diff = {
       added    = ' ',
       modified = ' ',
       removed  = ' '
    },
-   git     = '',
-   line_nr = '||',
+   git          = '',
+   line_percent = ' ',
    file = {
-     modified  = '✎',
-     read_only = '',
+      modified  = '✎',
+      read_only = '',
    },
-   normal       = '',
-   insert       = '',
-   command      = '',
-   visual       = '',
-   replace      = '',
-   selection    = '',
-   terminal     = '',
-   visual_block = ''
+   normal       = '',
+   insert       = '',
+   command      = '',
+   visual       = '',
+   replace      = '',
+   selection    = '',
+   terminal     = '',
+   visual_block = ''
 }
 
 local colors = {
@@ -43,7 +60,7 @@ local colors = {
    lightbg       = '#21252B',
    commented     = '#5c6370',
    grey          = '#3c4048',
-   line_bg       = '#282c34',
+   line_bg       = '#282c40',
    creamydark    = '#282c34',
    purple        = '#252930',
    cyan          = '#00FFFF',
@@ -190,7 +207,7 @@ local i = 1
 gls.left[i] = {
    leftRounded = {
       provider = function()
-         return ''
+         return icons.sep.left
       end,
 
       highlight = 'GalaxyViModeInv'
@@ -215,7 +232,7 @@ gls.left[i] = {
          highlight2('SecondGalaxyViMode', mode_hl(), colors.white, 'bold')
       end,
 
-      separator = '',
+      separator = icons.sep.left,
       separator_highlight = 'SecondGalaxyViMode'
    }
 }
@@ -243,7 +260,7 @@ i = i + 1
 gls.left[i] = {
    teech = {
       provider = function()
-         return ''
+         return icons.sep.right
       end,
 
       separator = '',
@@ -264,10 +281,10 @@ gls.left[i] = {
 	ShowLspClient = {
 		provider            = 'GetLspClient',
 		separator           = ' ',
-		icon                = '⚹ ',
+		icon                = icons.lsp_client,
 		condition           = is_filetype_exist,
 		highlight           = { colors.white,colors.main_bg, 'italic' },
-		separator_highlight = { colors.grey,colors.main_bg },
+		separator_highlight = { colors.grey, colors.main_bg },
 	}
 }
 i = i + 1
@@ -275,7 +292,7 @@ i = i + 1
 gls.left[i] = {
    DiagnosticError = {
       provider  = 'DiagnosticError',
-      icon      = '  ✕ ',
+      icon      = icons.diagnostic.error,
       highlight = { colors.red, colors.main_bg }
    }
 }
@@ -296,7 +313,7 @@ i = i + 1
 gls.left[i] = {
    DiagnosticWarn = {
       provider  = 'DiagnosticWarn',
-      icon      = '  ⚠ ',
+      icon      = icons.diagnostic.warn,
       highlight = { colors.yellow, colors.main_bg }
    }
 }
@@ -306,7 +323,6 @@ gls.left[i] = {
    Space = {
       provider  = white_space,
       highlight = { colors.bg, colors.main_bg },
-
       condition = function()
          return require('galaxyline.provider_diagnostic').get_diagnostic_warn() ~= ''
       end
@@ -317,7 +333,7 @@ i = i + 1
 gls.left[i] = {
    DiagnosticInfo = {
       provider  = 'DiagnosticInfo',
-      icon      = '   ',
+      icon      = icons.diagnostic.info,
       highlight = { colors.blue, colors.main_bg }
    }
 }
@@ -326,7 +342,7 @@ i = i + 1
 gls.left[i] = {
    DiagnosticHint = {
       provider  = 'DiagnosticHint',
-      icon      = '   ',
+      icon      = icons.diagnostic.hint,
       highlight = { colors.blue, colors.main_bg }
    }
 }
@@ -334,9 +350,45 @@ gls.left[i] = {
 i = i + 1
 gls.left[i] = {
 	LspCloseSign = {
-      provider  = function() return '' end,
-		highlight = { colors.main_bg,colors.grey },
+      provider  = function() return icons.sep.right end,
+		highlight = { colors.main_bg, colors.green },
 	}
+}
+
+i = i + 1
+gls.left[i] = {
+	emptySep = {
+      provider  = function() return ' ' end,
+		highlight = { colors.main_bg, colors.green },
+	}
+}
+
+i = i + 1
+gls.left[i] = {
+	nvimGPS = {
+		provider = function()
+			return gps.get_location()
+		end,
+		condition = function()
+			return gps.is_available()
+		end,
+      highlight = { colors.crimsonRed, colors.green },
+	}
+}
+
+i = i + 1
+gls.left[i] = {
+	gpsCloseSign = {
+      provider  = function() return icons.sep.right end,
+		highlight = { colors.green, colors.main_bg },
+	}
+}
+
+gls.mid[1] = {
+   none = {
+      provider = function() return '' end,
+      highlight = { colors.main_bg, colors.grey },
+   }
 }
 
 ----------------------------=== Right ===--------------------------
@@ -344,8 +396,8 @@ i = 1
 
 gls.right[i] = {
 	LspOpenSign = {
-      provider  = function() return '' end,
-		highlight = { colors.main_bg,colors.grey },
+      provider  = function() return icons.sep.left end,
+		highlight = { colors.main_bg, colors.grey },
 	}
 }
 
@@ -384,7 +436,7 @@ gls.right[i] = {
    right_LeftRounded1 = {
 		separator           = ' ',
       separator_highlight = {colors.main_bg, colors.main_bg},
-      provider            = function() return '' end,
+      provider            = function() return icons.sep.left end,
       condition           = condition.check_git_workspace,
       highlight           = { colors.blue2, colors.main_bg }
    }
@@ -424,7 +476,7 @@ i = i + 1
 gls.right[i] = {
    right_LeftRounded = {
       provider = function()
-         return ''
+         return icons.sep.left
       end,
 
       highlight = function()
@@ -450,7 +502,7 @@ i = i + 1
 gls.right[i] = {
    PerCent = {
       provider            = 'LinePercent',
-      separator           = ' ',
+      separator           = icons.line_percent,
       separator_highlight = { colors.white, colors.grey },
       highlight           = { colors.white, colors.grey }
    }
@@ -460,7 +512,7 @@ i = i + 1
 gls.right[i] = {
    rightRounded = {
       provider = function()
-         return ''
+         return icons.sep.right
       end,
 
       highlight = { colors.grey, colors.bg }
