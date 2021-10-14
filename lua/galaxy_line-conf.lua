@@ -9,7 +9,7 @@ gps.setup({
 		['class-name']     = '  ',
 		['function-name']  = '  ',
 		['method-name']    = '  ',
-		['container-name'] = ' ⛶ ',
+		['container-name'] = '  ',
 		['tag-name']       = ' 炙'
 	},
 	languages = {},
@@ -302,7 +302,6 @@ gls.left[i] = {
    Space = {
       provider  = white_space,
       highlight = { colors.bg, colors.main_bg },
-
       condition = function()
          return require('galaxyline.provider_diagnostic').get_diagnostic_error() ~= ''
       end
@@ -352,6 +351,13 @@ gls.left[i] = {
 	LspCloseSign = {
       provider  = function() return icons.sep.right end,
 		highlight = { colors.main_bg, colors.green },
+		condition = function()
+         local warn = require('galaxyline.provider_diagnostic').get_diagnostic_warn() ~= ''
+         local error = require('galaxyline.provider_diagnostic').get_diagnostic_error() ~= ''
+         local hint = require('galaxyline.provider_diagnostic').get_diagnostic_hint() ~= ''
+         local info = require('galaxyline.provider_diagnostic').get_diagnostic_info() ~= ''
+         return warn or error or hint or info
+      end
 	}
 }
 
@@ -360,6 +366,9 @@ gls.left[i] = {
 	emptySep = {
       provider  = function() return ' ' end,
 		highlight = { colors.main_bg, colors.green },
+		condition = function()
+			return gps.is_available()
+		end,
 	}
 }
 
@@ -381,6 +390,9 @@ gls.left[i] = {
 	gpsCloseSign = {
       provider  = function() return icons.sep.right end,
 		highlight = { colors.green, colors.main_bg },
+		condition = function()
+			return gps.is_available()
+		end,
 	}
 }
 
@@ -398,6 +410,7 @@ gls.right[i] = {
 	LspOpenSign = {
       provider  = function() return icons.sep.left end,
 		highlight = { colors.main_bg, colors.grey },
+      condition = check_git_width,
 	}
 }
 
