@@ -66,6 +66,7 @@ return require('packer').startup({
             'hrsh7th/cmp-nvim-lsp',
             'onsails/lspkind-nvim',
             'hrsh7th/cmp-nvim-lua',
+            'hrsh7th/cmp-path'
          }
       }
       use { 'tzachar/cmp-tabnine', run = './install.sh' }

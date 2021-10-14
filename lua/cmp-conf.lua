@@ -100,6 +100,7 @@ cmp.setup {
             end
          }
       },
+      { name = 'path' },
       { name = 'cmp_tabnine' },
       { name = 'nvim_lua' },
    },
