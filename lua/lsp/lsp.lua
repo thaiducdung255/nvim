@@ -1,4 +1,13 @@
 local lspconfig = require 'lspconfig'
+local lsp_signature = require('lsp_signature')
+
+local signature_conf = {
+   bind = true,
+   handle_opts = {
+      border = 'single'
+   },
+   hint_enable = false,
+}
 -- local log = require('vim.lsp.log')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -38,24 +47,18 @@ local function set_lsp_config(client, bufnr)
 end
 
 lspconfig.tsserver.setup {
-   -- init_options = {
-   --    hostInfo = 'neovim',
-   --    maxTsServerMemory = 2048,
-   --    preferences = {
-   --       includeCompletionForImportStatements = false,
-   --       includeCompletionsForModuleExports = false
-   --    }
-   -- },
    capabilities = capabilities,
    on_attach = function(client, bufnr)
       client.resolved_capabilities.document_formatting = false
       set_lsp_config(client, bufnr)
+      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
 lspconfig.gopls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
+      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
@@ -77,18 +80,21 @@ lspconfig.sumneko_lua.setup {
    cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
+      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
 lspconfig.pyright.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
+      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
 lspconfig.bashls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
+      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
@@ -108,73 +114,76 @@ lspconfig.dockerls.setup {
 lspconfig.vimls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
+      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
-local eslint = {
-   lintCommand = 'eslint_d --stdin --stdin-filename ${INPUT} -f unix',
-   lintStdin = true,
-   lintIgnoreExitCode = true,
-   lintFormats = { '%f:%l:%c: %m' },
-   formatCommand = 'eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}',
-   formatStdin = true,
-   rootMarkers = {'package.json'}
-}
+lspconfig.eslint.setup {}
+vim.cmd('autocmd BufWritePre *.[tj]s* EslintFixAll')
 
-local prettier = {
-   formatCommand = 'prettier_d --find-config-path --stdin-filepath ${INPUT}',
-   formatStdin = true
-}
+-- local eslint = {
+--    lintCommand = 'eslint_d --stdin --stdin-filename ${INPUT} -f unix',
+--    lintStdin = true,
+--    lintIgnoreExitCode = true,
+--    lintFormats = { '%f:%l:%c: %m' },
+--    formatCommand = 'eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}',
+--    formatStdin = true,
+--    rootMarkers = {'package.json'}
+-- }
 
-local efm_config = os.getenv('HOME') .. '/.config/nvim/lua/lsp/efm-config.yaml'
--- local efm_log_dir = os.getenv('HOME') .. '/.cache/nvim/'
-local efm_root_markers = { 'package.json', '.git/', '.zshrc' }
+-- local prettier = {
+--    formatCommand = 'prettier_d --find-config-path --stdin-filepath ${INPUT}',
+--    formatStdin = true
+-- }
 
-local efm_languages = {
-   yaml            = { prettier },
-   json            = { prettier },
-   markdown        = { prettier },
-   javascript      = { eslint },
-   javascriptreact = { eslint },
-   typescript      = { eslint },
-   typescriptreact = { eslint },
-   css             = { prettier },
-   scss            = { prettier },
-   sass            = { prettier },
-   less            = { prettier },
-   graphql         = { prettier },
-   vue             = { prettier },
-   html            = { prettier }
-}
+-- local efm_config = os.getenv('HOME') .. '/.config/nvim/lua/lsp/efm-config.yaml'
+-- local efm_root_markers = { 'package.json', '.git/', '.zshrc' }
 
-lspconfig.efm.setup({
-   cmd = {
-      'efm-langserver',
-      '-c',
-      efm_config,
-      -- '-logfile',
-      -- efm_log_dir .. 'efm-lsp.log'
-   },
-   filetype = {
-      'javascript',
-      'javascriptreact',
-      'typescript',
-      'typescriptreact'
-   },
-   on_attach = function(client)
-      if client.resolved_capabilities.document_formatting then
-         vim.cmd('augroup Format')
-         vim.cmd('autocmd! * <buffer>')
-         vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 300)')
-         vim.cmd('augroup END')
-      end
-   end,
-   -- root_dir = lspconfig.util.root_pattern(unpack(efm_root_markers)),
-   init_options = {
-      documentFormatting = true
-   },
-   settings = {
-      rootMarkers = efm_root_markers,
-      languages = efm_languages
-   }
-})
+-- local efm_languages = {
+--    yaml            = { prettier },
+--    json            = { prettier },
+--    markdown        = { prettier },
+--    javascript      = { eslint },
+--    javascriptreact = { eslint },
+--    typescript      = { eslint },
+--    typescriptreact = { eslint },
+--    css             = { prettier },
+--    scss            = { prettier },
+--    sass            = { prettier },
+--    less            = { prettier },
+--    graphql         = { prettier },
+--    vue             = { prettier },
+--    html            = { prettier }
+-- }
+
+-- lspconfig.efm.setup({
+--    cmd = {
+--       'efm-langserver',
+--       '-c',
+--       efm_config,
+--       -- '-logfile',
+--       -- efm_log_dir .. 'efm-lsp.log'
+--    },
+--    filetype = {
+--       'javascript',
+--       'javascriptreact',
+--       'typescript',
+--       'typescriptreact'
+--    },
+--    on_attach = function(client)
+--       if client.resolved_capabilities.document_formatting then
+--          vim.cmd('augroup Format')
+--          vim.cmd('autocmd! * <buffer>')
+--          vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 300)')
+--          vim.cmd('augroup END')
+--       end
+--    end,
+--    -- root_dir = lspconfig.util.root_pattern(unpack(efm_root_markers)),
+--    init_options = {
+--       documentFormatting = true
+--    },
+--    settings = {
+--       rootMarkers = efm_root_markers,
+--       languages = efm_languages
+--    }
+-- })

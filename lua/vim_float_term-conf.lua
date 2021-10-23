@@ -1,5 +1,5 @@
 vim.g.floaterm_width    = 0.90
-vim.g.floaterm_height   = 0.90
+vim.g.floaterm_height   = 0.80
 
 vim.cmd('let g:floaterm_autoinsert = v:false')
 vim.cmd('hi Floaterm guibg=#0d0d0d')
