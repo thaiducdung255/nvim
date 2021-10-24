@@ -104,6 +104,10 @@ cmp.setup {
       { name = 'cmp_tabnine' },
       { name = 'nvim_lua' },
    },
+   experimental = {
+      native_menu = false,
+      ghost_text  = true
+   }
 }
 
 tabnine:setup({
