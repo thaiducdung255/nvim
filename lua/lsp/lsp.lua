@@ -2,11 +2,15 @@ local lspconfig = require 'lspconfig'
 local lsp_signature = require('lsp_signature')
 
 local signature_conf = {
-   bind = true,
+   bind            = true,
+   hint_enable     = true,
+   floating_window = false,
+   fix_pos         = true,
+   hint_prefix     = '  ',
+   hint_scheme     = 'TSField',
    handle_opts = {
       border = 'single'
    },
-   hint_enable = false,
 }
 -- local log = require('vim.lsp.log')
 
