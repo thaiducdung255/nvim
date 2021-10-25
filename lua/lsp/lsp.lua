@@ -2,6 +2,7 @@ local lspconfig = require 'lspconfig'
 local lsp_signature = require('lsp_signature')
 
 local signature_conf = {
+   use_lspsaga     = true,
    bind            = true,
    hint_enable     = true,
    floating_window = false,

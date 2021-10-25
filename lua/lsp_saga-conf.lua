@@ -32,7 +32,7 @@ saga.init_lsp_saga {
    },
 }
 
-Nmap('gd', ':Lspsaga preview_definition<CR>')
+Nmap('dp', ':Lspsaga preview_definition<CR>')
 Nmap('gi', ':Lspsaga lsp_finder<CR>')
 Nmap('fj', ':Lspsaga diagnostic_jump_next<CR>')
 Nmap('fk', ':Lspsaga diagnostic_jump_prev<CR>')

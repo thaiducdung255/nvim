@@ -37,7 +37,6 @@ return require('packer').startup({
       use { 'neovim/nvim-lspconfig' }
       use { 'glepnir/lspsaga.nvim' }
       -- use { 'kabouzeid/nvim-lspinstall' }
-      -- use 'mfussenegger/nvim-lint'
       use 'ray-x/lsp_signature.nvim'
 
       -- outline
