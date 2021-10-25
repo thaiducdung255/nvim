@@ -232,6 +232,7 @@ gls.left[i] = {
          highlight2('SecondGalaxyViMode', mode_hl(), colors.white, 'bold')
       end,
 
+      condition = condition.buffer_not_empty,
       separator = icons.sep.left,
       separator_highlight = 'SecondGalaxyViMode'
    }
@@ -260,11 +261,12 @@ i = i + 1
 gls.left[i] = {
    teech = {
       provider = function()
-         return icons.sep.right
+         return icons.sep.left
       end,
 
+		condition = is_filetype_exist,
       separator = '',
-      highlight = { colors.white, colors.main_bg }
+      highlight = { colors.main_bg, colors.white }
    }
 }
 
@@ -272,6 +274,7 @@ i = i + 1
 gls.left[i] = {
    Space = {
       provider  = white_space,
+		condition = is_filetype_exist,
       highlight = { colors.bg, colors.main_bg }
    }
 }
@@ -349,15 +352,11 @@ gls.left[i] = {
 i = i + 1
 gls.left[i] = {
 	LspCloseSign = {
-      provider  = function() return icons.sep.right end,
-		highlight = { colors.main_bg, colors.green },
+      provider  = function() return icons.sep.left end,
+		highlight = { colors.green, colors.main_bg },
 		condition = function()
-         local warn = require('galaxyline.provider_diagnostic').get_diagnostic_warn() ~= ''
-         local error = require('galaxyline.provider_diagnostic').get_diagnostic_error() ~= ''
-         local hint = require('galaxyline.provider_diagnostic').get_diagnostic_hint() ~= ''
-         local info = require('galaxyline.provider_diagnostic').get_diagnostic_info() ~= ''
-         return warn or error or hint or info
-      end
+			return gps.is_available()
+		end,
 	}
 }
 
@@ -365,7 +364,7 @@ i = i + 1
 gls.left[i] = {
 	emptySep = {
       provider  = function() return ' ' end,
-		highlight = { colors.main_bg, colors.green },
+		highlight = { colors.bg, colors.green },
 		condition = function()
 			return gps.is_available()
 		end,
@@ -389,7 +388,7 @@ i = i + 1
 gls.left[i] = {
 	gpsCloseSign = {
       provider  = function() return icons.sep.right end,
-		highlight = { colors.green, colors.main_bg },
+		highlight = { colors.green, colors.grey },
 		condition = function()
 			return gps.is_available()
 		end,
@@ -407,10 +406,9 @@ gls.mid[1] = {
 i = 1
 
 gls.right[i] = {
-	LspOpenSign = {
+	lsp_open_sign = {
       provider  = function() return icons.sep.left end,
 		highlight = { colors.main_bg, colors.grey },
-      condition = check_git_width,
 	}
 }
 
