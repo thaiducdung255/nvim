@@ -122,7 +122,7 @@ telescope.setup {
       fzf = {
          fuzzy                   = true,
          override_generic_sorter = true,
-         override_file_sorter    = true,
+         override_file_sorter    = false,
          case_mode               = 'smart_case',
       },
       media_files = {
@@ -148,6 +148,7 @@ Nmap('<LEADER>mp', ':Telescope keymaps<CR>')
 Nmap('<LEADER>cs', ':Telescope colorscheme<CR>')
 Nmap('<LEADER>sc', ':Telescope highlights<CR>')
 Nmap('<LEADER>/',  ':Telescope current_buffer_fuzzy_find<CR>')
+Nmap('<LEADER>ds',  ':Telescope lsp_document_symbols<CR>')
 
 Nmap('gD',           ':Telescope lsp_document_diagnostics<CR>')
 Nmap('gr',           ':Telescope lsp_references<CR>')
