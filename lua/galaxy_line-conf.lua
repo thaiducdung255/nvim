@@ -12,7 +12,7 @@ gps.setup({
 		['container-name'] = '  ',
 		['tag-name']       = ' 炙'
 	},
-	languages = {},
+	languages = { 'javascript', 'typescript', 'go', 'python' },
 	separator = ' > ',
 })
 
@@ -90,26 +90,26 @@ local colors = {
 }
 
 local mode_map = {
-   n      = { icons.normal    .. ' NOR  ',   colors.crimsonRed2 },
-   no     = { icons.normal    .. ' NOR  ',   colors.crimsonRed2 },
-   i      = { icons.insert    .. ' INS  ',   colors.green },
-   ic     = { icons.insert    .. ' INS  ',   colors.green },
-   c      = { icons.command   .. ' CMD  ',   colors.orange },
-   ce     = { icons.command   .. ' CMD  ',   colors.orange },
-   cv     = { icons.command   .. ' CMD  ',   colors.orange },
-   v      = { icons.visual    .. ' VIS  ',   colors.lightblue },
-   V      = { icons.visual    .. ' VIS  ',   colors.lightblue },
-   [''] = { icons.visual    .. ' VIS  '    .. icons.visual_block .. ' ', colors.lightblue },
-   R      = { icons.replace   .. ' REP  ',   colors.teal },
-   ['r?'] = { icons.replace   .. ' REP  ',   colors.teal },
-   Rv     = { icons.replace   .. ' REP  ',   colors.teal },
-   r      = { icons.replace   .. ' REP  ',   colors.teal },
-   rm     = { icons.replace   .. ' REP  ',   colors.teal },
-   s      = { icons.selection .. ' SEL  ',   colors.greenYelenYel },
-   S      = { icons.selection .. ' SEL  ',   colors.greenYelenYel },
-   [''] = { icons.selection .. ' SEL  ',   colors.greenYelenYel },
-   t      = { icons.terminal  .. ' TER  ',   colors.magenta },
-   ['!']  = {              '  !      ',     colors.crimsonRed }
+   n      = { icons.normal    .. ' NOR ',   colors.crimsonRed2 },
+   no     = { icons.normal    .. ' NOR ',   colors.crimsonRed2 },
+   i      = { icons.insert    .. ' INS ',   colors.green },
+   ic     = { icons.insert    .. ' INS ',   colors.green },
+   c      = { icons.command   .. ' CMD ',   colors.orange },
+   ce     = { icons.command   .. ' CMD ',   colors.orange },
+   cv     = { icons.command   .. ' CMD ',   colors.orange },
+   v      = { icons.visual    .. ' VIS ',   colors.lightblue },
+   V      = { icons.visual    .. ' VIS ',   colors.lightblue },
+   [''] = { icons.visual    .. ' VIS '    .. icons.visual_block .. ' ', colors.lightblue },
+   R      = { icons.replace   .. ' REP ',   colors.teal },
+   ['r?'] = { icons.replace   .. ' REP ',   colors.teal },
+   Rv     = { icons.replace   .. ' REP ',   colors.teal },
+   r      = { icons.replace   .. ' REP ',   colors.teal },
+   rm     = { icons.replace   .. ' REP ',   colors.teal },
+   s      = { icons.selection .. ' SEL ',   colors.greenYelenYel },
+   S      = { icons.selection .. ' SEL ',   colors.greenYelenYel },
+   [''] = { icons.selection .. ' SEL ',   colors.greenYelenYel },
+   t      = { icons.terminal  .. ' TER ',   colors.magenta },
+   ['!']  = { '  !      ',   colors.crimsonRed }
 }
 
 ----------------------------=== Funcs ===--------------------------
