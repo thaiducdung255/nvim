@@ -30,7 +30,6 @@ Nmap('<S-k>',     ':tabnext<CR>')
 
 -- file cmds
 Nmap('<LEADER>q', ':q<CR>')
-Nmap('ss',   ':w<CR>')
 
 -- terminal cmds
 Tmap('<ESC>', '<C-\\><C-n>')

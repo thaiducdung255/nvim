@@ -51,10 +51,26 @@ local function set_lsp_config(client, bufnr)
    end
 end
 
+local function isEslintrcFound()
+   if vim.fn.filereadable('./.eslintrc.json') == 1 then
+      return true
+   end
+
+   if vim.fn.filereadable('./.eslintrc.js') == 1 then
+      return true
+   end
+
+   if vim.fn.filereadable('./.eslintrc.yaml') == 1 then
+      return true
+   end
+
+   return false
+end
+
 lspconfig.tsserver.setup {
    capabilities = capabilities,
    on_attach = function(client, bufnr)
-      client.resolved_capabilities.document_formatting = false
+      client.resolved_capabilities.document_formatting = not isEslintrcFound()
       set_lsp_config(client, bufnr)
       lsp_signature.on_attach(signature_conf, bufnr)
    end
@@ -123,72 +139,15 @@ lspconfig.vimls.setup {
    end
 }
 
+function _G.eslintFixAll()
+   if isEslintrcFound() then
+      vim.cmd('EslintFixAll')
+      return vim.cmd('call timer_start(200, { tid -> execute(\'write\')})')
+   end
+
+   return vim.cmd('write')
+end
+
 lspconfig.eslint.setup {}
-vim.cmd('autocmd BufWritePre *.[tj]s* EslintFixAll')
 
--- local eslint = {
---    lintCommand = 'eslint_d --stdin --stdin-filename ${INPUT} -f unix',
---    lintStdin = true,
---    lintIgnoreExitCode = true,
---    lintFormats = { '%f:%l:%c: %m' },
---    formatCommand = 'eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}',
---    formatStdin = true,
---    rootMarkers = {'package.json'}
--- }
-
--- local prettier = {
---    formatCommand = 'prettier_d --find-config-path --stdin-filepath ${INPUT}',
---    formatStdin = true
--- }
-
--- local efm_config = os.getenv('HOME') .. '/.config/nvim/lua/lsp/efm-config.yaml'
--- local efm_root_markers = { 'package.json', '.git/', '.zshrc' }
-
--- local efm_languages = {
---    yaml            = { prettier },
---    json            = { prettier },
---    markdown        = { prettier },
---    javascript      = { eslint },
---    javascriptreact = { eslint },
---    typescript      = { eslint },
---    typescriptreact = { eslint },
---    css             = { prettier },
---    scss            = { prettier },
---    sass            = { prettier },
---    less            = { prettier },
---    graphql         = { prettier },
---    vue             = { prettier },
---    html            = { prettier }
--- }
-
--- lspconfig.efm.setup({
---    cmd = {
---       'efm-langserver',
---       '-c',
---       efm_config,
---       -- '-logfile',
---       -- efm_log_dir .. 'efm-lsp.log'
---    },
---    filetype = {
---       'javascript',
---       'javascriptreact',
---       'typescript',
---       'typescriptreact'
---    },
---    on_attach = function(client)
---       if client.resolved_capabilities.document_formatting then
---          vim.cmd('augroup Format')
---          vim.cmd('autocmd! * <buffer>')
---          vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 300)')
---          vim.cmd('augroup END')
---       end
---    end,
---    -- root_dir = lspconfig.util.root_pattern(unpack(efm_root_markers)),
---    init_options = {
---       documentFormatting = true
---    },
---    settings = {
---       rootMarkers = efm_root_markers,
---       languages = efm_languages
---    }
--- })
+Nmap('ss', ':lua eslintFixAll()<CR>')
