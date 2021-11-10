@@ -60,7 +60,7 @@ local function isEslintrcFound()
       return true
    end
 
-   if vim.fn.filereadable('./.eslintrc.yaml') == 1 then
+   if vim.fn.filereadable('./.eslintrc.yml') == 1 then
       return true
    end
 

@@ -16,7 +16,7 @@ vim.cmd[[function! SynStack()
 ]]
 
 -- custom highlight colorscheme
-vim.cmd('hi TabLineSel guibg=grey')
+-- vim.cmd('hi TabLineSel guibg=grey')
 vim.cmd('hi link TSConstructor TSVariable')
 
 -- custom LSP highlight
