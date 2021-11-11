@@ -408,6 +408,7 @@ i = 1
 gls.right[i] = {
 	lsp_open_sign = {
       provider  = function() return icons.sep.left end,
+      condition = check_git_width,
 		highlight = { colors.main_bg, colors.grey },
 	}
 }
@@ -448,7 +449,7 @@ gls.right[i] = {
 		separator           = ' ',
       separator_highlight = {colors.main_bg, colors.main_bg},
       provider            = function() return icons.sep.left end,
-      condition           = condition.check_git_workspace,
+      condition = check_git_width,
       highlight           = { colors.fg, colors.main_bg }
    }
 }
