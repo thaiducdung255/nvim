@@ -1,8 +1,4 @@
-local hop = require('hop')
-
-hop.setup({
-   keys = 'asdfghjkl;zxcvnm,.qweruiop'
-})
+require('hop').setup({})
 
 Nmap('<Leader>s',        ':HopChar1<CR>')
 Nmap('<Leader>w',        ':HopWord<CR>')

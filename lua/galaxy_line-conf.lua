@@ -229,7 +229,7 @@ i = i + 1
 gls.left[i] = {
    WhiteSpace = {
       provider = function()
-         highlight2('SecondGalaxyViMode', mode_hl(), colors.white, 'bold')
+         highlight2('SecondGalaxyViMode', mode_hl(), colors.fg, 'bold')
       end,
 
       condition = condition.buffer_not_empty,
@@ -242,9 +242,9 @@ i = i + 1
 gls.left[i] = {
 	FileIcon = {
       provider            = 'FileIcon',
-      separator_highlight = { colors.white, colors.white },
+      separator_highlight = { colors.fg, colors.fg },
       condition           = condition.buffer_not_empty,
-      highlight           = { colors.creamydark, colors.white }
+      highlight           = { colors.creamydark, colors.fg }
    }
 }
 
@@ -253,7 +253,7 @@ gls.left[i] = {
    FileName = {
       provider  = function() return file_name(true, 'GalaxyFileName') end,
       condition = condition.buffer_not_empty,
-      highlight = { colors.creamydark, colors.white },
+      highlight = { colors.creamydark, colors.fg },
    }
 }
 
@@ -266,7 +266,7 @@ gls.left[i] = {
 
 		condition = is_filetype_exist,
       separator = '',
-      highlight = { colors.main_bg, colors.white }
+      highlight = { colors.main_bg, colors.fg }
    }
 }
 
@@ -286,12 +286,12 @@ gls.left[i] = {
 		separator           = ' ',
 		icon                = icons.lsp_client,
 		condition           = is_filetype_exist,
-		highlight           = { colors.white,colors.main_bg, 'italic' },
+		highlight           = { colors.fg,colors.main_bg, 'italic' },
 		separator_highlight = { colors.grey, colors.main_bg },
 	}
 }
-i = i + 1
 
+i = i + 1
 gls.left[i] = {
    DiagnosticError = {
       provider  = 'DiagnosticError',
@@ -353,7 +353,7 @@ i = i + 1
 gls.left[i] = {
 	LspCloseSign = {
       provider  = function() return icons.sep.left end,
-		highlight = { colors.green, colors.main_bg },
+		highlight = { colors.fg, colors.creamydark },
 		condition = function()
 			return gps.is_available()
 		end,
@@ -364,7 +364,7 @@ i = i + 1
 gls.left[i] = {
 	emptySep = {
       provider  = function() return ' ' end,
-		highlight = { colors.bg, colors.green },
+		highlight = { colors.creamydark, colors.fg },
 		condition = function()
 			return gps.is_available()
 		end,
@@ -380,7 +380,7 @@ gls.left[i] = {
 		condition = function()
 			return gps.is_available()
 		end,
-      highlight = { colors.crimsonRed, colors.green },
+      highlight = { colors.crimsonRed, colors.fg },
 	}
 }
 
@@ -388,7 +388,7 @@ i = i + 1
 gls.left[i] = {
 	gpsCloseSign = {
       provider  = function() return icons.sep.right end,
-		highlight = { colors.green, colors.grey },
+		highlight = { colors.fg, colors.grey },
 		condition = function()
 			return gps.is_available()
 		end,
@@ -449,7 +449,7 @@ gls.right[i] = {
       separator_highlight = {colors.main_bg, colors.main_bg},
       provider            = function() return icons.sep.left end,
       condition           = condition.check_git_workspace,
-      highlight           = { colors.blue2, colors.main_bg }
+      highlight           = { colors.fg, colors.main_bg }
    }
 }
 
@@ -461,7 +461,7 @@ gls.right[i] = {
       end,
 
       condition = check_git_terminal_workspace,
-      highlight = { colors.greenYel, colors.blue2 }
+      highlight = { colors.crimsonRed, colors.fg }
    }
 }
 
@@ -470,7 +470,7 @@ gls.right[i] = {
    GitBranch = {
       provider  = 'GitBranch',
       condition = condition.check_git_workspace,
-      highlight = { colors.greenYel, colors.blue2 },
+      highlight = { colors.crimsonRed, colors.fg },
    }
 }
 
@@ -479,7 +479,7 @@ gls.right[i] = {
    Space2 = {
       provider  = white_space,
       condition = condition.check_git_workspace,
-      highlight = { colors.blue2, colors.blue2 },
+      highlight = { colors.crimsonRed, colors.fg },
    }
 }
 
@@ -492,9 +492,9 @@ gls.right[i] = {
 
       highlight = function()
          if condition.check_git_workspace() then
-            return {colors.grey, colors.blue2}
+            return {colors.creamydark, colors.fg}
          else
-            return {colors.grey, colors.main_bg}
+            return {colors.creamydark, colors.fg}
          end
       end
    }
@@ -505,7 +505,7 @@ gls.right[i] = {
    LineInfo = {
       provider  = 'LineColumn',
       icon      = '  ',
-      highlight = { colors.white, colors.grey }
+      highlight = { colors.fg, colors.creamydark }
    }
 }
 
@@ -514,8 +514,8 @@ gls.right[i] = {
    PerCent = {
       provider            = 'LinePercent',
       separator           = icons.line_percent,
-      separator_highlight = { colors.white, colors.grey },
-      highlight           = { colors.white, colors.grey }
+      separator_highlight = { colors.fg, colors.creamydark },
+      highlight           = { colors.fg, colors.creamydark }
    }
 }
 
@@ -526,7 +526,7 @@ gls.right[i] = {
          return icons.sep.right
       end,
 
-      highlight = { colors.grey, colors.bg }
+      highlight = { colors.creamydark, colors.grey }
    }
 }
 
