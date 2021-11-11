@@ -18,7 +18,7 @@ set cpo&vim
 syn match      envEqual   "="
 syn region     envComment start="#" end="\n"
 syn match      envStr     "\w\+.*"
-syn match      envName    "^[A-Z_]\+"
+syn match      envName    "^[A-Z_0-9]\+"
 syn match      envBool    "\(true\|false\)\+"
 syn match      envNum     "-\?\d\+\.\=\d*$"
 
