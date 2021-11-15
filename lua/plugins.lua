@@ -36,7 +36,6 @@ return require('packer').startup({
       -- LSP
       use { 'neovim/nvim-lspconfig' }
       use { 'glepnir/lspsaga.nvim' }
-      -- use { 'kabouzeid/nvim-lspinstall' }
       use 'ray-x/lsp_signature.nvim'
 
       -- outline
@@ -85,7 +84,6 @@ return require('packer').startup({
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       use 'nvim-treesitter/playground'
       use { 'windwp/nvim-ts-autotag' }
-      -- use 'romgrk/nvim-treesitter-context'
       use 'nvim-treesitter/nvim-treesitter-refactor'
 
       -- debugger
@@ -141,7 +139,7 @@ return require('packer').startup({
       -- Status Line and Bufferline
       use { 'glepnir/galaxyline.nvim' }
       use { 'SmiteshP/nvim-gps' }
-      use { 'romgrk/barbar.nvim' }
+      use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
       -- Rest api
       use {
