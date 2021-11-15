@@ -32,7 +32,7 @@ local offsets = {
 
 require('bufferline').setup {
    options = {
-      numbers                 = numbers,
+      -- numbers                 = numbers,
       indicator_icon          = '▎',
       modified_icon           = '●',
       left_trunc_marker       = '',
