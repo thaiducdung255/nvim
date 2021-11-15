@@ -28,6 +28,3 @@ require('toggleterm').setup{
       }
    }
 }
-
-Nmap([[<Space>']], [[<cmd> exe v:count1 . 'ToggleTerm'<CR>]])
-Imap([[<Space>']], [[<cmd> exe v:count1 . 'ToggleTerm'<CR>]])
