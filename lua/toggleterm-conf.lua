@@ -28,3 +28,5 @@ require('toggleterm').setup{
       }
    }
 }
+
+Nmap('<Space>:', ':ToggleTerm direction=vertical<CR>')

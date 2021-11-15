@@ -11,6 +11,7 @@ vim.cmd('set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*')
 vim.cmd('set complete-=5')
 
 vim.o.shell             = 'zsh'
+vim.o.hidden            = true
 vim.o.encoding          = 'utf-8'
 vim.o.lazyredraw        = true
 vim.o.updatetime        = 200
