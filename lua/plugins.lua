@@ -117,7 +117,7 @@ return require('packer').startup({
       use 'AndrewRadev/switch.vim'
 
       -- float terminal
-      use 'voldikss/vim-floaterm'
+      use {'akinsho/toggleterm.nvim'}
 
       -- Git
       use { 'lewis6991/gitsigns.nvim' }
