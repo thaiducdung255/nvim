@@ -36,7 +36,7 @@ return require('packer').startup({
       -- LSP
       use { 'neovim/nvim-lspconfig' }
       use { 'glepnir/lspsaga.nvim' }
-      use 'ray-x/lsp_signature.nvim'
+      use { 'ray-x/lsp_signature.nvim' }
 
       -- outline
       use 'simrat39/symbols-outline.nvim'
@@ -69,6 +69,8 @@ return require('packer').startup({
             'hrsh7th/cmp-path'
          }
       }
+
+      -- AI code assistant
       use { 'tzachar/cmp-tabnine', run = './install.sh' }
 
       -- line peek
