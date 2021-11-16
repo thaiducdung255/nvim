@@ -140,7 +140,10 @@ lspconfig.vimls.setup {
 }
 
 function _G.eslintFixAll()
-   if isEslintrcFound() then
+   local ext = vim.fn.expand('%:e')
+   local is_tsserver_ft = ext == 'ts' or ext == 'js' or ext == 'tsx' or ext == 'jsx'
+
+   if isEslintrcFound() and is_tsserver_ft == true then
       vim.cmd('EslintFixAll')
       return vim.cmd('call timer_start(200, { tid -> execute(\'write\')})')
    end
