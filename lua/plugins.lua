@@ -137,8 +137,7 @@ return require('packer').startup({
       use { 'kyazdani42/nvim-web-devicons' }
 
       -- Status Line and Bufferline
-      -- use { 'glepnir/galaxyline.nvim' }
-      -- use { 'SmiteshP/nvim-gps' }
+      use { 'SmiteshP/nvim-gps' }
       use { 'nvim-lualine/lualine.nvim' }
       use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
