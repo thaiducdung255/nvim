@@ -19,7 +19,11 @@ local function custom_filter(buf_number)
 end
 
 local function format_name(buf)
-   if buf.name:match('%.env') then
+   if buf.name:match('%.sample') then
+      return
+   end
+
+   if buf.name:match('%.example') then
       return
    end
 
