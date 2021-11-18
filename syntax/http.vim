@@ -19,7 +19,7 @@ set cpo&vim
 syn keyword    httpMethod         GET HEAD PUT POST PATCH DELETE CONNECT OPTIONS TRACE
 syn match      httpBraces         "[{}\[\]]"
 syn match      httpPath           "\/[a-zA-Z0-9-_\.]\+"
-syn match      httpUrl            "[a-zA-Z0-9-_]\+[:0-9]*"
+syn match      httpUrl            "[a-zA-Z0-9-_\.]\+[:0-9]*"
 syn match      httpProtocol       "\shttps*://"
 syn match      httpQuery          "?[0-9a-zA-Z-_=&\.:]\+"
 syn match      httpHeader         "^[a-zA-Z-0-9]\+:\s[a-zA-Z0-9\/\.,-;=\*\s:\"]\+"

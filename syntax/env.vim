@@ -15,12 +15,12 @@ endif
 let s:cpo_save = &cpo
 set cpo&vim
 
-syn match      envEqual   "="
+syn match      envStr     ".*"
+syn match      envEqual   "\s\?=\s\?"
 syn region     envComment start="#" end="\n"
-syn match      envStr     "\w\+.*"
-syn match      envName    "^[A-Z_0-9]\+"
+syn match      envNum     "-\?\d\+\.\?\d*$"
 syn match      envBool    "\(true\|false\)\+"
-syn match      envNum     "-\?\d\+\.\=\d*$"
+syn match      envName    "^[A-Z_0-9]\+"
 
 hi def         envComment guifg=#7f8490 gui=italic
 hi def         envEqual   guifg=#7f8490 gui=italic
