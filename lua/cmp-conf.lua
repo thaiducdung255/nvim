@@ -6,11 +6,13 @@ local lspkind = require('lspkind')
 local tabnine = require('cmp_tabnine.config')
 
 local source_mapping = {
-   buffer      = '[Buf]',
-   nvim_lsp    = '[Lsp]',
-   nvim_lua    = '[Lua]',
-   cmp_tabnine = '[Tab]',
-   vsnip       = '[Snp]'
+   buffer          = '[Buf]',
+   nvim_lsp        = '[Lsp]',
+   nvim_lua        = '[Lua]',
+   cmp_tabnine     = '[Tab]',
+   vsnip           = '[Snp]',
+   cmdline         = '[Cmd]',
+   cmdline_history = '[His]',
 }
 
 cmp.setup {
@@ -22,46 +24,54 @@ cmp.setup {
    sorting = {
       priority_weight = 2.,
       comparators = {
-         function(e1, e2)
-            local diff
-            diff = cmp.config.compare.offset(e1, e2)
-            print()
+         cmp.config.compare.offset,
+         cmp.config.compare.exact,
+         cmp.config.compare.score,
+         require 'cmp-under-comparator'.under,
+         cmp.config.compare.kind,
+         cmp.config.compare.sort_text,
+         cmp.config.compare.length,
+         cmp.config.compare.order,
+--          function(e1, e2)
+--             local diff
+--             diff = cmp.config.compare.offset(e1, e2)
+--             print()
 
-            if diff ~= nil then
-               return diff
-            end
+--             if diff ~= nil then
+--                return diff
+--             end
 
-            diff = cmp.config.compare.exact(e1, e2)
-            if diff ~= nil then
-               return diff
-            end
+--             diff = cmp.config.compare.exact(e1, e2)
+--             if diff ~= nil then
+--                return diff
+--             end
 
-            diff = cmp.config.compare.score(e1, e2)
+--             diff = cmp.config.compare.score(e1, e2)
 
-            if diff ~= nil then
-               return diff
-            end
+--             if diff ~= nil then
+--                return diff
+--             end
 
-            diff = cmp.config.compare.kind(e1, e2)
+--             diff = cmp.config.compare.kind(e1, e2)
 
-            if diff ~= nil then
-               return diff
-            end
+--             if diff ~= nil then
+--                return diff
+--             end
 
-            diff = cmp.config.compare.sort_text(e1, e2)
+--             diff = cmp.config.compare.sort_text(e1, e2)
 
-            if diff ~= nil then
-               return diff
-            end
+--             if diff ~= nil then
+--                return diff
+--             end
 
-            diff = cmp.config.compare.length(e1, e2)
+--             diff = cmp.config.compare.length(e1, e2)
 
-            if diff ~= nil then
-               return diff
-            end
+--             if diff ~= nil then
+--                return diff
+--             end
 
-            return cmp.config.compare.order(e1, e2)
-         end,
+--             return cmp.config.compare.order(e1, e2)
+--          end,
       },
    },
    mapping = {
@@ -94,7 +104,7 @@ cmp.setup {
       { name = 'vsnip' },
       {
          name = 'buffer',
-         opts = {
+         option = {
             get_bufnrs = function()
                return vim.api.nvim_list_bufs()
             end
@@ -103,12 +113,29 @@ cmp.setup {
       { name = 'path' },
       { name = 'cmp_tabnine' },
       { name = 'nvim_lua' },
+      { name = 'cmdline' },
    },
    experimental = {
       native_menu = false,
       ghost_text  = true
-   }
+   },
 }
+
+-- cmp.setup.cmdline(':', {
+--    sources = {
+--       { name = 'cmdline_history' },
+--       { name = 'cmdline' },
+--    }
+-- })
+
+for _, cmd_type in ipairs({':', '/', '?', '@', '='}) do
+  cmp.setup.cmdline(cmd_type, {
+    sources = {
+      { name = 'cmdline_history' },
+      { name = 'cmdline' },
+    },
+  })
+end
 
 tabnine:setup({
    max_lines              = 1000;

@@ -66,7 +66,10 @@ return require('packer').startup({
             'hrsh7th/cmp-nvim-lsp',
             'onsails/lspkind-nvim',
             'hrsh7th/cmp-nvim-lua',
-            'hrsh7th/cmp-path'
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-cmdline',
+            'dmitmel/cmp-cmdline-history',
+            'lukas-reineke/cmp-under-comparator'
          }
       }
 
