@@ -32,46 +32,6 @@ cmp.setup {
          cmp.config.compare.sort_text,
          cmp.config.compare.length,
          cmp.config.compare.order,
---          function(e1, e2)
---             local diff
---             diff = cmp.config.compare.offset(e1, e2)
---             print()
-
---             if diff ~= nil then
---                return diff
---             end
-
---             diff = cmp.config.compare.exact(e1, e2)
---             if diff ~= nil then
---                return diff
---             end
-
---             diff = cmp.config.compare.score(e1, e2)
-
---             if diff ~= nil then
---                return diff
---             end
-
---             diff = cmp.config.compare.kind(e1, e2)
-
---             if diff ~= nil then
---                return diff
---             end
-
---             diff = cmp.config.compare.sort_text(e1, e2)
-
---             if diff ~= nil then
---                return diff
---             end
-
---             diff = cmp.config.compare.length(e1, e2)
-
---             if diff ~= nil then
---                return diff
---             end
-
---             return cmp.config.compare.order(e1, e2)
---          end,
       },
    },
    mapping = {
@@ -85,10 +45,6 @@ cmp.setup {
 			local menu = source_mapping[entry.source.name]
 
 			if entry.source.name == 'cmp_tabnine' then
-				-- if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
-				-- 	menu = entry.completion_item.data.detail .. ' ' .. menu
-				-- end
-
 				vim_item.kind = ''
          elseif entry.source.name == 'buffer' or entry.source.name == 'nvim_lsp' then
             vim_item.dup = 0
@@ -121,20 +77,22 @@ cmp.setup {
    },
 }
 
--- cmp.setup.cmdline(':', {
---    sources = {
---       { name = 'cmdline_history' },
---       { name = 'cmdline' },
---    }
--- })
-
 for _, cmd_type in ipairs({':', '/', '?', '@', '='}) do
-  cmp.setup.cmdline(cmd_type, {
-    sources = {
-      { name = 'cmdline_history' },
-      { name = 'cmdline' },
-    },
-  })
+
+   if (cmd_type == ':') then
+      cmp.setup.cmdline(cmd_type, {
+         sources = {
+            { name = 'cmdline_history' },
+            { name = 'cmdline' },
+         },
+      })
+   else
+      cmp.setup.cmdline(cmd_type, {
+         sources = {
+            { name = 'cmdline_history' },
+         },
+      })
+   end
 end
 
 tabnine:setup({
