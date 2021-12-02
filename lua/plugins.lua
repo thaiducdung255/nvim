@@ -35,7 +35,7 @@ return require('packer').startup({
 
       -- LSP
       use { 'neovim/nvim-lspconfig' }
-      use { 'glepnir/lspsaga.nvim' }
+      use { 'tami5/lspsaga.nvim' }
       use { 'ray-x/lsp_signature.nvim' }
 
       -- outline
