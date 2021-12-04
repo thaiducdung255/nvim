@@ -80,11 +80,11 @@ Nmap(';c', 'f`r\'f`r\'F\'')
 Nmap(';v', 'f\'r`f\'r`F`')
 
 ---- auto pair brackets
-Imap(';j',  '()<left>')
-Imap(';k',  '[]<left>')
-Imap(';l',  '{}<left>')
-Imap(';h',  '<><left>')
-Imap(';\'', '``<left>')
+Icmap(';j',  '()<left>')
+Icmap(';k',  '[]<left>')
+Icmap(';l',  '{}<left>')
+Icmap(';h',  '<><left>')
+Icmap(';\'', '``<left>')
 
 ---- insert brackets
 Vmap('sj',  'di()<ESC>hpF(i')
