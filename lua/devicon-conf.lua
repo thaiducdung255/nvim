@@ -25,6 +25,11 @@ require'nvim-web-devicons'.setup {
          color = '#428850',
          name = 'Env'
       },
+      ['.env.local'] = {
+         icon = '',
+         color = '#428850',
+         name = 'Env'
+      },
       ['package.json'] = {
          icon = '',
          color = '#a85813',
