@@ -3,14 +3,14 @@
 " Maintainer:	dungtd10
 
 if !exists("main_syntax")
-  if exists("b:current_syntax")
-    finish
-  endif
+   if exists("b:current_syntax")
+      finish
+   endif
 
   let main_syntax = "http"
 
 elseif exists("b:current_syntax") && b:current_syntax == "http"
-  finish
+   finish
 endif
 
 let s:cpo_save = &cpo
@@ -49,7 +49,7 @@ hi def link    httpResComment        Comment
 let b:current_syntax = "http"
 
 if main_syntax == "http"
-  unlet main_syntax
+   unlet main_syntax
 endif
 
 let &cpo = s:cpo_save

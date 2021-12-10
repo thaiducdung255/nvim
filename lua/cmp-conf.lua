@@ -46,8 +46,8 @@ cmp.setup {
 
 			if entry.source.name == 'cmp_tabnine' then
 				vim_item.kind = ''
-         elseif entry.source.name == 'buffer' or entry.source.name == 'nvim_lsp' then
-            vim_item.dup = 0
+         -- elseif entry.source.name == 'buffer' or entry.source.name == 'nvim_lsp' then
+            -- vim_item.dup = 0
          end
 
 			vim_item.menu = menu

@@ -37,7 +37,7 @@ local file_format = {
 
 local diagnostics = {
    'diagnostics',
-   sources = { 'nvim_lsp' },
+   sources = { 'nvim_diagnostic' },
    colored = false
 }
 
