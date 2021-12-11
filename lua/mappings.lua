@@ -61,7 +61,6 @@ Nvmap('M', '<C-u>')
 
 ---- custom yank/select cmds
 Nmap('<LEADER>v', 'v$h')
-Nmap('Y',         'y$')
 
 ---- go to first/last position of a line
 Nvmap('ga', '^')
