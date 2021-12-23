@@ -21,7 +21,7 @@ syn match      httpBraces         "[{}\[\]]"
 syn match      httpPath           "\/[a-zA-Z0-9-_\.]\+"
 syn match      httpUrl            "[a-zA-Z0-9-_\.]\+[:0-9]*"
 syn match      httpProtocol       "\shttps*://"
-syn match      httpQuery          "?[0-9a-zA-Z-_=&\.:,]\+"
+syn match      httpQuery          "?[0-9a-zA-Z-_=&\.:,%]\+"
 syn match      httpHeader         "^[a-zA-Z-0-9]\+:\s[a-zA-Z0-9\/\.,-;=\*\s:\"]\+"
 syn region     httpComment        start="#" end="\n"
 syn keyword    httpBoolean        true false
