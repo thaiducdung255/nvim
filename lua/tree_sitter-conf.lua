@@ -3,6 +3,7 @@ require'nvim-treesitter.configs'.setup {
    ignore_install   = true,
    highlight = {
       enable = true,
+      disable = { 'http' },
    },
    indent = {
       enable = {
