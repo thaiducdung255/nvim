@@ -130,7 +130,7 @@ return require('packer').startup({
       use 'editorconfig/editorconfig-vim'
 
       -- comment
-      use { 'terrortylor/nvim-comment' }
+      use { 'numToStr/Comment.nvim' }
 
       -- Color scheme
       use 'sainnhe/edge'
