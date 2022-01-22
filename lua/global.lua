@@ -53,6 +53,10 @@ function Invmap(lhs, rhs, isSilentOff)
    Vmap(lhs, rhs, isSilentOff)
 end
 
+function Omap(lhs, rhs, isSilentOff)
+   map(lhs, rhs, 'o', isSilentOff)
+end
+
 function Map(lhs, rhs, isSilentOff)
    Invmap(lhs, rhs, isSilentOff)
    Cmap(lhs, rhs, isSilentOff)

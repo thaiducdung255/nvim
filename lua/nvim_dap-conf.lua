@@ -28,7 +28,7 @@ Nmap('do', [[:lua require'dap'.step_over()<CR>]])
 Nmap('dn', [[:lua require'dap'.step_into()<CR>]])
 Nmap('dm', [[:lua require'dap'.step_out()<CR>]])
 
-Nmap('ds',       ':lua require"dap".disconnect({ terminateDebuggee = true });require"dap".close()<CR>')
+Nmap('dt',       ':lua require"dap".disconnect({ terminateDebuggee = true });require"dap".close()<CR>')
 Nmap('d<CR>',    ':lua require"dap".repl.open()<CR>')
 Nmap('d<SPACE>', ':lua require"dap.ui.widgets".hover()<CR>')
 Nmap('d<SPACE>', [[:lua require"dap.ui.variables".visual_hover()<CR>]])
