@@ -60,5 +60,5 @@ require('bufferline').setup {
    }
 }
 
-Nmap('gb', ':BufferLinePick<CR>')
-Nmap('gB', ':BufferLinePickClose<CR>')
+Nmap('<LEADER>b', ':BufferLinePick<CR>')
+Nmap('<LEADER>B', ':BufferLinePickClose<CR>')
