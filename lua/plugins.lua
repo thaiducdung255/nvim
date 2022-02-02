@@ -7,30 +7,10 @@ if fn.empty(fn.glob(install_path)) > 0 then
    execute 'packadd packer.nvim'
 end
 
---- Check if a file or directory exists in this path
-local function require_plugin(plugin)
-   local plugin_prefix = fn.stdpath('data') .. '/site/pack/packer/opt/'
-   local plugin_path = plugin_prefix .. plugin .. '/'
-   local ok, err, code = os.rename(plugin_path, plugin_path)
-
-   if not ok then
-      if code == 13 then
-         return true
-      end
-   end
-
-   if ok then
-      vim.cmd('packadd ' .. plugin)
-   end
-
-   return ok, err, code
-end
-
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
+vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 
 return require('packer').startup({
    function(use)
-      -- Packer can manage itself as an optional plugin
       use 'wbthomason/packer.nvim'
 
       -- LSP
@@ -41,7 +21,7 @@ return require('packer').startup({
       -- outline
       use 'simrat39/symbols-outline.nvim'
 
-      -- Telescope
+      -- telescope
       use { 'nvim-lua/popup.nvim' }
       use { 'nvim-lua/plenary.nvim' }
       use { 'nvim-telescope/telescope.nvim' }
@@ -55,7 +35,7 @@ return require('packer').startup({
       -- auto update root directory
       use { 'ahmedkhalf/lsp-rooter.nvim' }
 
-      -- Autocomplete
+      -- autocomplete
       use { 'hrsh7th/vim-vsnip' }
       use 'windwp/nvim-autopairs'
       use {
@@ -82,10 +62,10 @@ return require('packer').startup({
       -- highlight current words
       use { 'xiyaowong/nvim-cursorword' }
 
-      -- Find and replace
+      -- find and replace
       use { 'windwp/nvim-spectre' }
 
-      -- Treesitter
+      -- treesitter
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       use 'nvim-treesitter/playground'
       use { 'windwp/nvim-ts-autotag' }
@@ -104,10 +84,10 @@ return require('packer').startup({
       -- align text
       use 'junegunn/vim-easy-align'
 
-      -- Explorer
+      -- explorer
       use 'kyazdani42/nvim-tree.lua'
 
-      -- Undo tree
+      -- undo tree
       use 'mbbill/undotree'
 
       -- indent line
@@ -122,7 +102,7 @@ return require('packer').startup({
       -- float terminal
       use {'akinsho/toggleterm.nvim'}
 
-      -- Git
+      -- git
       use { 'lewis6991/gitsigns.nvim' }
       use 'kdheepak/lazygit.nvim'
 
@@ -144,13 +124,33 @@ return require('packer').startup({
       -- Status Line and Bufferline
       use { 'SmiteshP/nvim-gps' }
       use { 'nvim-lualine/lualine.nvim' }
-      use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
 
-      -- Rest api
+      use {
+         'akinsho/bufferline.nvim',
+         requires = 'kyazdani42/nvim-web-devicons'
+      }
+
+      -- rest api
       use {
          'NTBBloodbath/rest.nvim',
          requires = { 'nvim-lua/plenary.nvim' },
       }
+
+      -- scrollbar
+      use {
+         'petertriho/nvim-scrollbar',
+         -- requires = 'kevinhwang91/nvim-hlslens'
+      }
+
+      -- smart fold
+      use {
+         'anuvyklack/pretty-fold.nvim',
+         config = function()
+            require('pretty-fold').setup{}
+            require('pretty-fold.preview').setup()
+         end
+      }
+
    end,
 
    config = {
