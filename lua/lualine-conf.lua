@@ -29,9 +29,9 @@ local diff = {
 local file_format = {
    'fileformat',
    symbols = {
-      unix = 'Unix',
-      dos  = 'Dos',
-      mac  = 'Mac',
+      unix = 'unix',
+      dos  = 'dos',
+      mac  = 'mac',
    }
 }
 
