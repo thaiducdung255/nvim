@@ -92,6 +92,6 @@ require'nvim-tree'.setup {
       custom   = { '.gitignore', 'node_modules/', 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml' }
    },
    git = {
-      ignore = true,
+      ignore = false,
    },
 }
