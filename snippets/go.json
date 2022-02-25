@@ -1,0 +1,16 @@
+{
+   "assignment": {
+      "prefix": ["as"],
+      "body": ":= "
+   },
+   "init_main": {
+      "prefix": ["init"],
+      "body": [
+         "package main",
+         "",
+         "func main() {",
+         "   $1",
+         "}"
+      ]
+   }
+}

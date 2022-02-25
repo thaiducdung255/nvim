@@ -84,6 +84,7 @@ lspconfig.gopls.setup {
 }
 
 local system_name
+
 if vim.fn.has('mac') == 1 then
   system_name = 'macOS'
 elseif vim.fn.has('unix') == 1 then
@@ -94,7 +95,7 @@ else
   print('Unsupported system for sumneko')
 end
 
-local sumneko_root_path = '/home/df/Apps/lua-language-server'
+local sumneko_root_path = '/home/dh/Apps/lua-language-server'
 local sumneko_binary = sumneko_root_path..'/bin/'..system_name..'/lua-language-server'
 
 lspconfig.sumneko_lua.setup {
@@ -120,10 +121,13 @@ lspconfig.bashls.setup {
 }
 
 lspconfig.jsonls.setup {
+   capabilities = capabilities,
    cmd = { 'vscode-json-languageserver', '--stdio' },
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
+   settings = {
+      json = {
+         schemas = require('schemastore').json.schemas(),
+      }
+   }
 }
 
 lspconfig.dockerls.setup {
