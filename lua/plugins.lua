@@ -17,6 +17,7 @@ return require('packer').startup({
       use { 'neovim/nvim-lspconfig' }
       use { 'tami5/lspsaga.nvim' }
       use { 'ray-x/lsp_signature.nvim' }
+      use { 'b0o/schemastore.nvim' }
 
       -- outline
       use 'simrat39/symbols-outline.nvim'

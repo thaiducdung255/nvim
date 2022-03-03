@@ -14,7 +14,7 @@ vim.g.jsAndTsOptions = {
    { 'new Date()',  'Date.now()' },
    { 'resolve',     'reject' },
    { '||',          '&&' },
-   { '==',          '!==' },
+   { '===',          '!==' },
    { ' >',          ' <' },
    { 'let ',        'const ' },
    { '++',          ' += 1' },
