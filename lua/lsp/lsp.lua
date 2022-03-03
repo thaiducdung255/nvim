@@ -153,4 +153,8 @@ end
 
 lspconfig.eslint.setup {}
 
+lspconfig.html.setup {
+   capabilities = capabilities
+}
+
 Nmap('ss', ':lua eslintFixAll()<CR>')
