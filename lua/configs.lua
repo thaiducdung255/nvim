@@ -27,12 +27,12 @@ vim.o.timeoutlen        = 750
 vim.o.clipboard         = 'unnamedplus'
 vim.o.showmode          = false
 vim.o.fileformat        = 'unix'
-vim.o.undodir           = '/home/df/.vim/undodir'
+vim.o.undodir           = os.getenv('HOME') .. '/.vim/undodir'
 vim.o.undofile          = true
 vim.o.incsearch         = true
 vim.o.autoread          = true
 vim.o.hlsearch          = false
-vim.o.history           = 100 
+vim.o.history           = 100
 
 vim.bo.tabstop          = 3
 vim.bo.softtabstop      = 3
