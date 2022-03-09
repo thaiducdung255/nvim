@@ -161,4 +161,12 @@ lspconfig.html.setup {
    capabilities = capabilities
 }
 
+lspconfig.cssls.setup {
+   capabilities = capabilities
+}
+
+lspconfig.emmet_ls.setup {
+   capabilities = capabilities
+}
+
 Nmap('ss', ':lua eslintFixAll()<CR>')
