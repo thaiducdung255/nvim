@@ -71,6 +71,7 @@ return require('packer').startup({
       use 'nvim-treesitter/playground'
       use { 'windwp/nvim-ts-autotag' }
       use 'nvim-treesitter/nvim-treesitter-refactor'
+      use 'nvim-treesitter/nvim-treesitter-textobjects'
 
       -- debugger
       use 'mfussenegger/nvim-dap'
