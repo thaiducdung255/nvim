@@ -55,7 +55,7 @@ return require('packer').startup({
       }
 
       -- AI code assistant
-      use { 'tzachar/cmp-tabnine', run = './install.sh' }
+      -- use { 'tzachar/cmp-tabnine', run = './install.sh' }
 
       -- line peek
       use 'nacro90/numb.nvim'

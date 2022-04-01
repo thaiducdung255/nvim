@@ -35,6 +35,6 @@
    },
    "module.exports": {
       "prefix": ["me"],
-      "body": "module.exports = {$1}"
+      "body": "module.exports = { $1 }"
    }
 }

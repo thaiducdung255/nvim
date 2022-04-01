@@ -96,5 +96,13 @@
    "process.env": {
       "prefix": ["pe"],
       "body": "process.env."
+   },
+   "destructuringObj": {
+      "prefix": ["dso"],
+      "body": "const { $2 } = $1"
+   },
+   "destructuringArr": {
+      "prefix": ["dsa"],
+      "body": "const [$2] = $1"
    }
 }
