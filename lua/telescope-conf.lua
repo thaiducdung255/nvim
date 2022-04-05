@@ -77,8 +77,8 @@ telescope.setup {
 
       mappings = {
          i = {
-            -- ['<CR>'] = actions.select_default + actions.center
-            ['<CR>'] = fzf_multi_select,
+            -- ['<CR>'] = actions.select_default + actions.center,
+            -- ['<CR>'] = fzf_multi_select,
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
             ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
@@ -133,7 +133,6 @@ telescope.setup {
 
 telescope.load_extension('hop')
 telescope.load_extension('fzf')
-telescope.load_extension('media_files')
 
 Nmap('<LEADER>ff', ':Telescope find_files hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>fr', ':Telescope oldfiles hidden=true no_ignore=true<CR>')
@@ -143,7 +142,7 @@ Nmap('<LEADER>fs', ':Telescope live_grep hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>f;', ':Telescope tele_tabby list<CR>')
 
 Nmap('<LEADER>ss', ':Telescope current_buffer_fuzzy_find<CR>')
-Nmap('<LEADER>td', ':Telescope lsp_type_definitions<CR>')
+Nmap('td', ':Telescope lsp_type_definitions<CR>')
 
 Nmap('<LEADER>cm', ':Telescope commands<CR>')
 Nmap('<LEADER>ch', ':Telescope command_history<CR>')
