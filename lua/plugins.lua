@@ -29,6 +29,7 @@ return require('packer').startup({
       use { 'nvim-telescope/telescope-hop.nvim' }
       use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
       use { 'nvim-telescope/telescope-media-files.nvim' }
+      use {'TC72/telescope-tele-tabby.nvim'}
 
       -- vim motions
       use { 'phaazon/hop.nvim' }

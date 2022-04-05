@@ -125,9 +125,8 @@ telescope.setup {
          override_file_sorter    = false,
          case_mode               = 'smart_case',
       },
-      media_files = {
-         find_cmd = 'ag',
-         filetypes = { 'png', 'webp', 'jpg', 'jpeg', 'pdf' },
+      tele_taby = {
+         use_highlighter = true
       }
    }
 }
@@ -141,21 +140,20 @@ Nmap('<LEADER>fr', ':Telescope oldfiles hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>fb', ':Telescope buffers<CR>')
 Nmap('<LEADER>fS', ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
 Nmap('<LEADER>fs', ':Telescope live_grep hidden=true no_ignore=true<CR>')
+Nmap('<LEADER>f;', ':Telescope tele_tabby list<CR>')
 
 Nmap('<LEADER>cm', ':Telescope commands<CR>')
 Nmap('<LEADER>ch', ':Telescope command_history<CR>')
 Nmap('<LEADER>mp', ':Telescope keymaps<CR>')
-Nmap('<LEADER>cs', ':Telescope colorscheme<CR>')
 Nmap('<LEADER>sc', ':Telescope highlights<CR>')
 Nmap('<LEADER>/',  ':Telescope current_buffer_fuzzy_find<CR>')
-Nmap('<LEADER>ds',  ':Telescope lsp_document_symbols<CR>')
+Nmap('<LEADER>ds', ':Telescope lsp_document_symbols<CR>')
+Nmap('gD',         ':Telescope lsp_document_diagnostics<CR>')
+Nmap('gr',         ':Telescope lsp_references<CR>')
+Nmap('<LEADER>gb', ':Telescope git_branches<CR>')
 
-Nmap('gD',           ':Telescope lsp_document_diagnostics<CR>')
-Nmap('gr',           ':Telescope lsp_references<CR>')
-Nmap('<LEADER>gb',   ':Telescope git_branches<CR>')
 Nmap('<LEADER>gd',   [[<cmd>lua require('telescope_custom-conf').delta_git_diff()<CR>]])
 Nmap('<LEADER>gv',   [[<cmd>lua require('telescope_custom-conf').delta_git_bcommits()<CR>]])
 Nmap('<LEADER>gc',   [[<cmd>lua require('telescope_custom-conf').delta_git_commits()<CR>]])
 Nmap('<LEADER>gs',   [[<cmd>lua require('telescope_custom-conf').delta_git_status()<CR>]])
 Nmap('<LEADER>zz',   [[<cmd>lua require('telescope_custom-conf').eslint_diagnostics()<CR>]])
-Nmap('<LEADER>fm',   [[:lua require('telescope').extensions.media_files.media_files()<CR>]])
