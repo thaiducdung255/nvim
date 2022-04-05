@@ -142,6 +142,9 @@ Nmap('<LEADER>fS', ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
 Nmap('<LEADER>fs', ':Telescope live_grep hidden=true no_ignore=true<CR>')
 Nmap('<LEADER>f;', ':Telescope tele_tabby list<CR>')
 
+Nmap('<LEADER>ss', ':Telescope current_buffer_fuzzy_find<CR>')
+Nmap('<LEADER>td', ':Telescope lsp_type_definitions<CR>')
+
 Nmap('<LEADER>cm', ':Telescope commands<CR>')
 Nmap('<LEADER>ch', ':Telescope command_history<CR>')
 Nmap('<LEADER>mp', ':Telescope keymaps<CR>')
