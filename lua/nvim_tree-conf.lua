@@ -1,4 +1,3 @@
-vim.g.nvim_tree_indent_markers         = 1
 vim.g.nvim_tree_auto_ignore_ft         = 'startify'
 vim.g.nvim_tree_git_hl                 = 1
 vim.g.nvim_tree_highlight_opened_files = 1
@@ -54,6 +53,7 @@ Nmap('<LEADER>e', ':NvimTreeToggle<CR>')
 Nmap('<LEADER>E', ':NvimTreeRefresh<CR>')
 
 require'nvim-tree'.setup {
+   nvim_tree_indent_markers = 1,
    disable_netrw      = true,
    hijack_netrw       = true,
    open_on_setup      = false,
