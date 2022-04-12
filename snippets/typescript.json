@@ -15,6 +15,14 @@
          "}"
       ]
    },
+   "async_function": {
+      "prefix": ["afn"],
+      "body": [
+         "async function $1(): $2 {",
+         "\t$3",
+         "}"
+      ]
+   },
    "arrow_function_compact": {
       "prefix": ["af"],
       "body": [
