@@ -1,6 +1,6 @@
 require('rest-nvim').setup({
    result_split_horizontal = false,
-   skip_ssl_verifycation = true,
+   skip_ssl_verification = true,
    highlight = {
       enabled = false,
       timeout = 150,
