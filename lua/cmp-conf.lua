@@ -3,13 +3,10 @@ vim.opt.completeopt = 'menuone,noselect'
 
 local lspkind = require('lspkind')
 
--- local tabnine = require('cmp_tabnine.config')
-
 local source_mapping = {
    buffer          = '[Buf]',
    nvim_lsp        = '[Lsp]',
    nvim_lua        = '[Lua]',
-   -- cmp_tabnine     = '[Tab]',
    vsnip           = '[Snp]',
    cmdline         = '[Cmd]',
    cmdline_history = '[His]',
@@ -56,6 +53,7 @@ cmp.setup {
 		end
    },
    sources = {
+      { name = 'nvim_lsp_signature_help' },
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
       {
@@ -67,7 +65,6 @@ cmp.setup {
          }
       },
       { name = 'path' },
-      -- { name = 'cmp_tabnine' },
       { name = 'nvim_lua' },
       { name = 'cmdline' },
    },
@@ -94,11 +91,3 @@ for _, cmd_type in ipairs({':', '/', '?', '@', '='}) do
       })
    end
 end
-
--- tabnine:setup({
---    max_lines              = 1000;
---    max_num_results        = 10;
---    sort                   = true;
--- 	run_on_every_keystroke = true;
--- 	snippet_placeholder    = '..';
--- })

@@ -16,7 +16,6 @@ return require('packer').startup({
       -- LSP
       use { 'neovim/nvim-lspconfig' }
       use { 'tami5/lspsaga.nvim' }
-      use { 'ray-x/lsp_signature.nvim' }
       use { 'b0o/schemastore.nvim' }
 
       -- outline
@@ -51,7 +50,8 @@ return require('packer').startup({
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-cmdline',
             'dmitmel/cmp-cmdline-history',
-            'lukas-reineke/cmp-under-comparator'
+            'lukas-reineke/cmp-under-comparator',
+            'hrsh7th/cmp-nvim-lsp-signature-help'
          }
       }
 

@@ -1,18 +1,5 @@
 local lspconfig = require 'lspconfig'
-local lsp_signature = require('lsp_signature')
 
-local signature_conf = {
-   use_lspsaga     = true,
-   bind            = true,
-   hint_enable     = true,
-   floating_window = false,
-   fix_pos         = true,
-   hint_prefix     = '  ',
-   hint_scheme     = 'TSField',
-   handle_opts = {
-      border = 'single'
-   },
-}
 -- local log = require('vim.lsp.log')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -45,10 +32,6 @@ local function set_lsp_config(client, bufnr)
       vim.cmd [[   autocmd! BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 500)]]
       vim.cmd [[augroup END]]
    end
-
-   if client.resolved_capabilities.signature_help then
-      set_buf_keymap(bufnr, 'i', 'HH', [[<C-o>:lua vim.lsp.buf.signature_help()<CR>]])
-   end
 end
 
 local function isEslintrcFound()
@@ -72,14 +55,12 @@ lspconfig.tsserver.setup {
    on_attach = function(client, bufnr)
       client.resolved_capabilities.document_formatting = not isEslintrcFound()
       set_lsp_config(client, bufnr)
-      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
 lspconfig.gopls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
@@ -102,21 +83,18 @@ lspconfig.sumneko_lua.setup {
    cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
 lspconfig.pyright.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
 lspconfig.bashls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
@@ -139,7 +117,6 @@ lspconfig.dockerls.setup {
 lspconfig.vimls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
-      lsp_signature.on_attach(signature_conf, bufnr)
    end
 }
 
