@@ -4,10 +4,10 @@ vim.opt.completeopt = 'menuone,noselect'
 local lspkind = require('lspkind')
 
 local source_mapping = {
+   vsnip           = '[Snp]',
    buffer          = '[Buf]',
    nvim_lsp        = '[Lsp]',
    nvim_lua        = '[Lua]',
-   vsnip           = '[Snp]',
    cmdline         = '[Cmd]',
    cmdline_history = '[His]',
 }
