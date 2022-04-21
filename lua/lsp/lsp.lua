@@ -143,7 +143,13 @@ lspconfig.cssls.setup {
 }
 
 lspconfig.emmet_ls.setup {
-   capabilities = capabilities
+   capabilities = capabilities,
+   filetypes = {
+      'html',
+      'css',
+      'typescriptreact',
+      'javascriptreact'
+   }
 }
 
 Nmap('ss', ':lua eslintFixAll()<CR>')
