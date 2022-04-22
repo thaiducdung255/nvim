@@ -55,9 +55,6 @@ return require('packer').startup({
          }
       }
 
-      -- AI code assistant
-      -- use { 'tzachar/cmp-tabnine', run = './install.sh' }
-
       -- line peek
       use 'nacro90/numb.nvim'
 
@@ -143,7 +140,6 @@ return require('packer').startup({
       -- scrollbar
       use {
          'petertriho/nvim-scrollbar',
-         -- requires = 'kevinhwang91/nvim-hlslens'
       }
 
       -- smart fold
