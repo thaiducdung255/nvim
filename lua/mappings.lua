@@ -1,9 +1,9 @@
 -- window cmds
 ---- nav cmds
-Nmap('<LEADER>l', '<C-w>l')
-Nmap('<LEADER>k', '<C-w>k')
-Nmap('<LEADER>j', '<C-w>j')
-Nmap('<LEADER>h', '<C-w>h')
+Nmap(Keycodes.mappings.nav_right, '<C-w>l')
+Nmap(Keycodes.mappings.nav_up, '<C-w>k')
+Nmap(Keycodes.mappings.nav_down, '<C-w>j')
+Nmap(Keycodes.mappings.nav_left, '<C-w>h')
 
 ---- resize window cmds
 Nmap('<C-h>', ':vertical resize -2<CR>')

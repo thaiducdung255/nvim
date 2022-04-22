@@ -1,8 +1,19 @@
 local function map(lhs, rhs, mode, isSilentOff)
    local options = { noremap = true, silent = true }
-   if  isSilentOff == true then options.silent = false end
    local vimMode = 'n'
+
+   if lhs.ascii and lhs.colemak then
+      if os.getenv('KEYBOARD_LAYOUT') == 'colemak' then
+         lhs = lhs.colemak
+      else
+         lhs = lhs.ascii
+      end
+   end
+
+   if  isSilentOff == true then options.silent = false end
+
    if mode then vimMode = mode end
+
    vim.api.nvim_set_keymap(vimMode, lhs, rhs, options)
 end
 
@@ -64,3 +75,36 @@ end
 
 DATA_PATH   = vim.fn.stdpath('data')
 CACHE_PATH  = vim.fn.stdpath('cache')
+
+Keycodes = {
+   mappings = {
+      nav_right = {
+         ascii   = '<LEADER>l',
+         colemak = '<LEADER>o',
+      },
+      nav_up = {
+         ascii   = '<LEADER>k',
+         colemak = '<LEADER>u',
+      },
+      nav_left = {
+         ascii   = '<LEADER>h',
+         colemak = '<LEADER>h',
+      },
+      nav_down = {
+         ascii   = '<LEADER>j',
+         colemak = '<LEADER>n',
+      },
+      v_inc_win_size = {
+
+      },
+      v_desc_win_size = {
+
+      },
+      h_inc_win_size = {
+
+      },
+      h_desc_win_size = {
+
+      },
+   },
+}

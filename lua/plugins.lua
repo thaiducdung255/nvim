@@ -51,7 +51,7 @@ return require('packer').startup({
             'hrsh7th/cmp-cmdline',
             'dmitmel/cmp-cmdline-history',
             'lukas-reineke/cmp-under-comparator',
-            'hrsh7th/cmp-nvim-lsp-signature-help'
+            'hrsh7th/cmp-nvim-lsp-signature-help',
          }
       }
 
