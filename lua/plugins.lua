@@ -37,11 +37,23 @@ return require('packer').startup({
       use { 'ahmedkhalf/lsp-rooter.nvim' }
 
       -- autocomplete
-      use { 'hrsh7th/vim-vsnip' }
       use 'windwp/nvim-autopairs'
+--      use{
+--         'zbirenbaum/copilot.lua',
+--         requires = {
+--            'github/copilot.vim',
+--         },
+--         event = {'VimEnter'},
+--         config = function()
+--            vim.defer_fn(function()
+--               require('copilot').setup()
+--            end, 100)
+--         end,
+--      }
       use {
          'hrsh7th/nvim-cmp',
          requires = {
+            'hrsh7th/vim-vsnip',
             'hrsh7th/cmp-vsnip',
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-nvim-lsp',

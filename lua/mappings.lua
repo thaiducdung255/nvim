@@ -12,8 +12,8 @@ Nmap('<C-k>', ':resize +2<CR>')
 Nmap('<C-l>', ':vertical resize +2<CR>')
 
 ---- split cmds
-Nmap('<LEADER>sm', ':split<CR>')
-Nmap('<LEADER>sn', ':vsplit<CR>')
+Nmap('<LEADER>sj', ':split<CR>')
+Nmap('<LEADER>sk', ':vsplit<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- buffer cmds
@@ -56,8 +56,8 @@ Nmap('gn', '<C-o>')
 Nmap('gm', '<C-i>')
 
 ---- scroll cmds
-Nvmap('N', '<C-d>')
-Nvmap('M', '<C-u>')
+Nvmap('J', '<C-d>')
+Nvmap('K', '<C-u>')
 
 ---- custom yank/select cmds
 Nmap('<LEADER>v', 'v$h')
