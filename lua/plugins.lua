@@ -38,18 +38,6 @@ return require('packer').startup({
 
       -- autocomplete
       use 'windwp/nvim-autopairs'
---      use{
---         'zbirenbaum/copilot.lua',
---         requires = {
---            'github/copilot.vim',
---         },
---         event = {'VimEnter'},
---         config = function()
---            vim.defer_fn(function()
---               require('copilot').setup()
---            end, 100)
---         end,
---      }
       use {
          'hrsh7th/nvim-cmp',
          requires = {
