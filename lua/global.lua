@@ -14,7 +14,7 @@ local function map(lhs, rhs, mode, isSilentOff)
 
    if mode then vimMode = mode end
 
-   vim.api.nvim_set_keymap(vimMode, lhs, rhs, options)
+   vim.keymap.set(vimMode, lhs, rhs, options)
 end
 
 function Nmap(lhs, rhs, isSilentOff)
@@ -38,39 +38,27 @@ function Vmap(lhs, rhs, isSilentOff)
 end
 
 function Icmap(lhs, rhs, isSilentOff)
-   map(lhs, rhs, 'i', isSilentOff)
-   map(lhs, rhs, 'c', isSilentOff)
+   map(lhs, rhs, { 'i', 'c' }, isSilentOff)
 end
 
 function Map(lhs, rhs, isSilentOff)
-   map(lhs, rhs, 'i', isSilentOff)
-   map(lhs, rhs, 'n', isSilentOff)
-   map(lhs, rhs, 'v', isSilentOff)
-   map(lhs, rhs, 'c', isSilentOff)
+   map(lhs, rhs, { 'i', 'n', 'c', 'v' }, isSilentOff)
 end
 
 function Inmap(lhs, rhs, isSilentOff)
-   map(lhs, rhs, 'i', isSilentOff)
-   map(lhs, rhs, 'n', isSilentOff)
+   map(lhs, rhs, { 'i', 'n' }, isSilentOff)
 end
 
 function Nvmap(lhs, rhs, isSilentOff)
-   map(lhs, rhs, 'n', isSilentOff)
-   map(lhs, rhs, 'v', isSilentOff)
+   map(lhs, rhs, { 'n', 'v' }, isSilentOff)
 end
 
 function Invmap(lhs, rhs, isSilentOff)
-   Inmap(lhs, rhs, isSilentOff)
-   Vmap(lhs, rhs, isSilentOff)
+   map(lhs, rhs, { 'i', 'n', 'v' }, isSilentOff)
 end
 
 function Omap(lhs, rhs, isSilentOff)
    map(lhs, rhs, 'o', isSilentOff)
-end
-
-function Map(lhs, rhs, isSilentOff)
-   Invmap(lhs, rhs, isSilentOff)
-   Cmap(lhs, rhs, isSilentOff)
 end
 
 DATA_PATH   = vim.fn.stdpath('data')
