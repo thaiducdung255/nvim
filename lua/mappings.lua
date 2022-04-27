@@ -56,8 +56,8 @@ Nmap('gn', '<C-o>')
 Nmap('gm', '<C-i>')
 
 ---- scroll cmds
-Nvmap('J', '<C-d>')
-Nvmap('K', '<C-u>')
+Nvmap('N', '<C-d>')
+Nvmap('M', '<C-u>')
 
 ---- custom yank/select cmds
 Nmap('<LEADER>v', 'v$h')
