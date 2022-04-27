@@ -53,7 +53,7 @@ Nmap('<LEADER>e', ':NvimTreeToggle<CR>')
 Nmap('<LEADER>E', ':NvimTreeRefresh<CR>')
 
 require'nvim-tree'.setup {
-   nvim_tree_indent_markers = 1,
+   -- nvim_tree_indent_markers = 1,
    disable_netrw      = true,
    hijack_netrw       = true,
    open_on_setup      = false,
@@ -61,10 +61,10 @@ require'nvim-tree'.setup {
    open_on_tab        = false,
    hijack_cursor      = false,
    update_cwd         = true,
-   update_to_buf_dir = {
-      enable    = true,
-      auto_open = true,
-   },
+   -- update_to_buf_dir = {
+   --    enable    = true,
+   --    auto_open = true,
+   -- },
    diagnostics         = {
       enable = true,
    },
@@ -80,16 +80,16 @@ require'nvim-tree'.setup {
    view = {
       width       = 30,
       side        = 'left',
-      auto_resize = true,
+      -- auto_resize = true,
       mappings = {
          custom_only = false,
          list        = list
       }
    },
-   filter = {
-      dotfiles = true,
-      custom   = { '.gitignore', 'node_modules/', 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml' }
-   },
+   -- filter = {
+   --    dotfiles = true,
+   --    custom   = { '.gitignore', 'node_modules/', 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml' }
+   -- },
    git = {
       ignore = false,
    },
