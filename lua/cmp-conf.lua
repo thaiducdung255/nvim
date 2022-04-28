@@ -6,7 +6,6 @@ local lspkind = require('lspkind')
 local source_mapping = {
    vsnip                   = '[Snp]',
    buffer                  = '[Buf]',
-   nvim_lsp                = '[Lsp]',
    nvim_lua                = '[Lua]',
    cmdline                 = '[Cmd]',
    cmdline_history         = '[His]',
@@ -55,7 +54,6 @@ cmp.setup {
    },
    sources = {
       { name = 'nvim_lsp_signature_help' },
-      { name = 'nvim_lsp' },
       { name = 'vsnip' },
       {
          name = 'buffer',

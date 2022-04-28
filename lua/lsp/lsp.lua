@@ -17,10 +17,6 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] =
    }
 )
 
-local function set_buf_keymap(bufnr, mode, lhs, rhs)
-   vim.api.nvim_buf_set_keymap(bufnr, mode, lhs, rhs, {noremap = true, silent = true})
-end
-
 local function set_lsp_config(client, bufnr)
    vim.cmd [[setlocal signcolumn=yes]]
 
@@ -34,16 +30,23 @@ local function set_lsp_config(client, bufnr)
    end
 end
 
+vim.api.nvim_create_autocmd(
+   'BufWritePre',
+   {
+      pattern = '*.tsx,*.ts,*.jsx,*.js',
+
+      callback = function()
+         vim.cmd[[EslintFixAll]]
+      end
+   }
+)
+
 local function isEslintrcFound()
-   if vim.fn.filereadable('./.eslintrc.json') == 1 then
-      return true
-   end
+   local is_json_file_found = vim.fn.filereadable('./.eslintrc.json') == 1
+   local is_js_file_found = vim.fn.filereadable('./.eslintrc.js') == 1
+   local is_yml_file_found = vim.fn.filereadable('./.eslintrc.yml') == 1
 
-   if vim.fn.filereadable('./.eslintrc.js') == 1 then
-      return true
-   end
-
-   if vim.fn.filereadable('./.eslintrc.yml') == 1 then
+   if is_json_file_found or is_js_file_found or is_yml_file_found == 1 then
       return true
    end
 
@@ -120,18 +123,6 @@ lspconfig.vimls.setup {
    end
 }
 
-function _G.eslintFixAll()
-   local ext = vim.fn.expand('%:e')
-   local is_tsserver_ft = ext == 'ts' or ext == 'js' or ext == 'tsx' or ext == 'jsx'
-
-   if isEslintrcFound() and is_tsserver_ft == true then
-      vim.cmd('EslintFixAll')
-      return vim.cmd('call timer_start(200, { tid -> execute(\'write\')})')
-   end
-
-   return vim.cmd('write')
-end
-
 lspconfig.eslint.setup {}
 
 lspconfig.html.setup {
@@ -151,5 +142,3 @@ lspconfig.emmet_ls.setup {
       'javascriptreact'
    }
 }
-
-Nmap('ss', ':lua eslintFixAll()<CR>')
