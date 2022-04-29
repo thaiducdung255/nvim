@@ -1,9 +1,7 @@
 require('hop').setup({})
 
-Nmap('f',                ':HopChar1CurrentLine<CR>')
-Omap('f',                ':HopChar1CurrentLine<CR>')
-
-Nmap('<Leader>w',        ':HopWord<CR>')
-Nmap('<Leader>d',        ':HopChar2<CR>')
-Nmap('<Leader><Esc>',    ':HopLine<CR>')
-Nmap('<Leader><Leader>', ':HopPattern<CR>')
+NOmap(Keycodes.hop.char1_line, ':HopChar1CurrentLine<CR>')
+Nmap(Keycodes.hop.word,        ':HopWord<CR>')
+Nmap(Keycodes.hop.word,        ':HopChar2<CR>')
+Nmap(Keycodes.hop.word,        ':HopLine<CR>')
+Nmap(Keycodes.hop.word,        ':HopPattern<CR>')

@@ -4,4 +4,4 @@ vim.g.lazygit_floating_window_corner_chars   = {'╭', '╮', '╰', '╯'}
 vim.g.lazygit_floating_window_use_plenary    = 1
 vim.g.lazygit_use_neovim_remote              = 1
 
-Nmap('<LEADER>gg', ':LazyGit<CR>')
+Nmap(Keycodes.lazy_git.exec, ':LazyGit<CR>')

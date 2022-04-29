@@ -6,14 +6,14 @@ commentConf.setup({
    sticky = true,
    ignore = nil,
    toggler = {
-      line = ';;',
+      line = Get_key_code(Keycodes.comment.line),
    },
    opleader = {
-      line = 'zz'
+      line = Get_key_code(Keycodes.comment.v_mode),
    },
    mappings = {
       basic = true,
-   }
+   },
 })
 
 commentFt.set('env', '#%s')

@@ -5,11 +5,11 @@ gps.setup {
 	depth                 = 0,
 	depth_limit_indicator = '..',
    icons = {
-      ["class-name"]     = ' ',
-      ["function-name"]  = ' ',
-      ["method-name"]    = ' ',
-      ["container-name"] = ' ',
-      ["tag-name"]       = '炙'
+      ['class-name']     = ' ',
+      ['function-name']  = ' ',
+      ['method-name']    = ' ',
+      ['container-name'] = ' ',
+      ['tag-name']       = '炙'
    },
 }
 
@@ -60,13 +60,5 @@ require'lualine'.setup {
       lualine_x = {},
       lualine_y = { 'branch', diff, file_format },
       lualine_z = { 'location', 'progress' }
-   },
-   inactive_sections = {
-      lualine_a = {},
-      lualine_b = {},
-      lualine_c = { 'filename' },
-      lualine_x = {},
-      lualine_y = {},
-      lualine_z = {}
    },
 }

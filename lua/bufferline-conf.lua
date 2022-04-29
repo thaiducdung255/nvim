@@ -60,5 +60,5 @@ require('bufferline').setup {
    }
 }
 
-Nmap('<LEADER>b', ':BufferLinePick<CR>')
-Nmap('<LEADER>B', ':BufferLinePickClose<CR>')
+Nmap(Keycodes.bufferline.buf_pick, ':BufferLinePick<CR>')
+Nmap(Keycodes.bufferline.buf_del, ':BufferLinePickClose<CR>')

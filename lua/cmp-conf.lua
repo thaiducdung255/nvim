@@ -10,6 +10,7 @@ local source_mapping = {
    cmdline                 = '[Cmd]',
    cmdline_history         = '[His]',
    nvim_lsp_signature_help = '[Arg]',
+   nvim_lsp                = '[Nvim]'
 }
 
 cmp.setup {
@@ -47,6 +48,10 @@ cmp.setup {
             vim_item.dup = 0
          end
 
+         if entry.source.name == 'nvim_lsp' or entry.source.name == 'nvim_lua' then
+            vim_item.dup = 0
+         end
+
 			vim_item.menu = menu
 
 			return vim_item
@@ -55,6 +60,7 @@ cmp.setup {
    sources = {
       { name = 'nvim_lsp_signature_help' },
       { name = 'vsnip' },
+      { name = 'nvim_lsp' },
       {
          name = 'buffer',
          option = {
