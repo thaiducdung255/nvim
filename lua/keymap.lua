@@ -344,20 +344,18 @@ Keycodes = {
       },
       unstage_hunk = {
          ascii = '<LEADER>gu',
-         colemak = '<LEADER>gl'
       },
       reset_hunk = {
          ascii = 'gv',
       },
       reset_buf = {
-         ascii = '<LEADER>gV',
+         ascii = 'gV',
       },
       preview_hunk = {
          ascii = 'gp',
       },
       diff_this = {
          ascii = 'gP',
-         colemak = 'd:'
       },
       set_loc_list = {
          ascii = 'gz',
