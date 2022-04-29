@@ -7,7 +7,7 @@ vim.cmd('syntax enable')
 vim.cmd('filetype on')
 vim.cmd('filetype plugin on')
 vim.cmd('filetype indent on')
-vim.cmd('set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*')
+vim.cmd('set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*,*/debug-adapters/*')
 vim.cmd('set complete-=5')
 
 vim.o.shell             = 'zsh'

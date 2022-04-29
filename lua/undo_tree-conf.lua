@@ -1,1 +1,1 @@
-Nmap('<LEADER>u', ':UndotreeShow<CR>')
+Nmap(Keycodes.undo_tree.show, ':UndotreeShow<CR>')

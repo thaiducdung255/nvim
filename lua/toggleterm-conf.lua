@@ -1,5 +1,5 @@
 require('toggleterm').setup{
-   open_mapping    = [[<Space>;]],
+   open_mapping    = Get_key_code(Keycodes.toggle_term.h_open),
    hide_numbers    = true,
    shade_filetypes = {},
    shade_terminals = true,
@@ -29,4 +29,4 @@ require('toggleterm').setup{
    }
 }
 
-Nmap('<Space>:', ':ToggleTerm direction=vertical<CR>')
+Nmap(Keycodes.toggle_term.v_open, ':ToggleTerm direction=vertical<CR>')

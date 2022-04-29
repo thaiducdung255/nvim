@@ -15,8 +15,8 @@ require('rest-nvim').setup({
    custom_dynamic_variables = {},
 })
 
-Nmap('<LEADER><CR>', [[:lua require('rest-nvim').run()<CR>]])
-Nmap('<LEADER><TAB>', [[:lua require('rest-nvim').run(true)<CR>]])
+Nmap(Keycodes.rest.run, [[:lua require('rest-nvim').run()<CR>]])
+Nmap(Keycodes.rest.curl, [[:lua require('rest-nvim').run(true)<CR>]])
 
 vim.api.nvim_create_autocmd(
    'FileType',

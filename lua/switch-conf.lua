@@ -1,4 +1,4 @@
-vim.g.switch_mapping = '<CR>'
+vim.g.switch_mapping = Get_key_code(Keycodes.switch.exec)
 
 
 vim.api.nvim_create_autocmd(

@@ -1,4 +1,4 @@
-Nmap('<LEADER>pi', ':PackerInstall<CR>')
-Nmap('<LEADER>pc', ':PackerClean<CR>')
-Nmap('<LEADER>ps', ':PackerSync<CR>')
-Nmap('<LEADER>pg', ':PackerUpdate<CR>')
+Nmap(Keycodes.packer.install, ':PackerInstall<CR>')
+Nmap(Keycodes.packer.clean, ':PackerClean<CR>')
+Nmap(Keycodes.packer.sync, ':PackerSync<CR>')
+Nmap(Keycodes.packer.update, ':PackerUpdate<CR>')

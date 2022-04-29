@@ -8,17 +8,17 @@ local refactor_config = {
    smart_rename = {
       enable = false,
       keymaps = {
-         smart_rename = 'gR'
+         smart_rename = Get_key_code(Keycodes.ts.rename)
       }
    },
    navigation = {
       enable = false,
       keymaps = {
-         goto_definition = 'gnd',
-         list_definitions = 'gnD',
-         list_definitions_toc = 'gO',
-         goto_next_usage = 'grj',
-         goto_previous_usage = 'grk',
+         goto_definition = Get_key_code(Keycodes.ts.def_nav),
+         list_definitions = Get_key_code(Keycodes.ts.list_defs),
+         list_definitions_toc = Get_key_code(Keycodes.ts.list_defs_toc),
+         goto_next_usage = Get_key_code(Keycodes.ts.usage_next),
+         goto_previous_usage = Get_key_code(Keycodes.ts.usage_prev),
       }
    }
 }
@@ -28,10 +28,10 @@ local text_objects_config = {
       enable = true,
       lookahead = true,
       keymaps = {
-         ['<LEADER>bo'] = '@block.outer',
-         ['<LEADER>bi'] = '@block.inner',
-         ['<LEADER>co'] = '@class.outer',
-         ['<LEADER>ci'] = '@class.inner',
+         [Get_key_code(Keycodes.ts.outer_block)] = '@block.outer',
+         [Get_key_code(Keycodes.ts.inner_block)] = '@block.inner',
+         [Get_key_code(Keycodes.ts.outer_class)] = '@class.inner',
+         [Get_key_code(Keycodes.ts.inner_class)] = '@class.outer',
       },
    },
 }

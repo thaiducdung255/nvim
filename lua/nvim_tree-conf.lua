@@ -49,8 +49,8 @@ local list = {
 vim.cmd([[hi link NvimTreeGitMerge Red]])
 vim.cmd([[hi link NvimTreeFolderIcon Blue]])
 
-Nmap('<LEADER>e', ':NvimTreeToggle<CR>')
-Nmap('<LEADER>E', ':NvimTreeRefresh<CR>')
+Nmap(Keycodes.nvim_tree.toggle_open, ':NvimTreeToggle<CR>')
+Nmap(Keycodes.nvim_tree.toggle_refresh, ':NvimTreeRefresh<CR>')
 
 require'nvim-tree'.setup {
    -- nvim_tree_indent_markers = 1,

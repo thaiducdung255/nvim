@@ -125,6 +125,6 @@ require('spectre').setup({
    is_insert_mode     = false,   -- start open panel on is_insert_mode
 })
 
-Nmap('<LEADER>S', [[:lua require('spectre').open()<CR>]])
-Vmap('<LEADER>W', [[:lua require('spectre').open_visual()<CR>]])
-Nmap('<LEADER>G', [[viw:lua require('spectre').open_file_search()<CR>]])
+Nmap(Keycodes.spectre.n_open, [[:lua require('spectre').open()<CR>]])
+Vmap(Keycodes.spectre.v_open, [[:lua require('spectre').open_visual()<CR>]])
+Nmap(Keycodes.spectre.open_file_search, [[viw:lua require('spectre').open_file_search()<CR>]])

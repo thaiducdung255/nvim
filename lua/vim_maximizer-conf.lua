@@ -1,1 +1,1 @@
-Nmap('m', ':MaximizerToggle<CR>')
+Nmap(Keycodes.maximizer.toggle_max, ':MaximizerToggle<CR>')

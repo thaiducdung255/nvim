@@ -1,3 +1,4 @@
+require('keymap')
 require('global')
 require('functions')
 require('configs')
