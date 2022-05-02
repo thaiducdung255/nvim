@@ -79,13 +79,13 @@ DATA_PATH   = vim.fn.stdpath('data')
 CACHE_PATH  = vim.fn.stdpath('cache')
 
 if keyboard_layout == 'colemak' then
-   Nmap('s', 'd')
-   Nmap('j', 'y')
-   Nmap('k', 'i')
-   Nmap('i', 'o')
-   Nmap(';', 'p')
+   Nvmap('s', 'd')
+   Nvmap('j', 'y')
+   Nvmap('k', 'i')
+   Nvmap('i', 'o')
+   Nvmap(';', 'p')
 
-   Nmap('n', 'j')
-   Nmap('e', 'k')
-   Nmap('i', 'l')
+   Nvmap('n', 'j')
+   Nvmap('e', 'k')
+   Nvmap('i', 'l')
 end

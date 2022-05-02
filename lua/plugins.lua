@@ -146,6 +146,7 @@ return require('packer').startup({
       -- smart fold
       use {
          'anuvyklack/pretty-fold.nvim',
+         requires = { 'anuvyklack/nvim-keymap-amend' },
          config = function()
             require('pretty-fold').setup()
             require('pretty-fold.preview').setup()

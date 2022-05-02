@@ -82,7 +82,6 @@ Keycodes = {
          },
          l = {
             ascii = '<LEADER>h',
-            colemak = '<LEADER>h'
          },
          u = {
             ascii = '<LEADER>k',
@@ -100,7 +99,6 @@ Keycodes = {
          },
          v_desc = {
             ascii = '<C-h>',
-            colemak = '<C-h>'
          },
          h_inc = {
             ascii = '<C-k>',
@@ -128,11 +126,9 @@ Keycodes = {
          },
          prev = {
             ascii = 'H',
-            colemak = 'H',
          },
          del = {
             ascii = 'gq',
-            colemak = 'dq',
          },
       },
       tab = {
@@ -202,7 +198,7 @@ Keycodes = {
             ascii = 'M',
          },
          d = {
-            ascii = 'N',
+            ascii = 'K',
          },
       },
       custom_V = {
@@ -551,6 +547,7 @@ Keycodes = {
       },
       toggle_open = {
          ascii = '<LEADER>e',
+         colemak = 'T',
       },
       toggle_refresh = {
          ascii = '<LEADER>E',
