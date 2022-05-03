@@ -239,7 +239,7 @@ Keycodes = {
          },
          curly = {
             ascii = ';l',
-            colemkak = ';i'
+            colemak = ';i'
          },
          angle = {
             ascii = ';h',
@@ -428,124 +428,97 @@ Keycodes = {
    },
    nvim_tree = {
       edit = {
-         ascii = '',
-         colemak = ''
+         ascii = { '<CR>', 'o', 'l' },
+         colemak = { '<CR>', 'i' },
       },
       cd = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       vsplit = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       split = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       tabnew = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       prev_sibling = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       next_sibling = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       parent_node = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       close_node = {
-         ascii = '',
-         colemak = ''
+         ascii = { 'h' },
       },
       preview = {
-         ascii = '',
-         colemak = ''
+         ascii = '<Tab>',
       },
       first_sibling = {
-         ascii = '',
-         colemak = ''
+         ascii = 'K',
+         colemak = 'E'
       },
       last_sibling = {
-         ascii = '',
-         colemak = ''
+         ascii = 'J',
+         colemak = 'N'
       },
       toggle_ignored = {
-         ascii = '',
-         colemak = ''
+         ascii = 'I',
       },
       toggle_dotfiles = {
-         ascii = '',
-         colemak = ''
+         ascii = 'H',
       },
       refresh = {
-         ascii = '',
-         colemak = ''
+         ascii = 'R',
       },
       create = {
-         ascii = '',
-         colemak = ''
+         ascii = 'a',
       },
       remove = {
-         ascii = '',
-         colemak = ''
+         ascii = 'd',
       },
       rename = {
-         ascii = '',
-         colemak = ''
+         ascii = 'r',
       },
       full_rename = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       cut = {
-         ascii = '',
-         colemak = ''
+         ascii = 'x',
       },
       copy = {
-         ascii = '',
-         colemak = ''
+         ascii = 'c',
       },
       paste = {
-         ascii = '',
-         colemak = ''
+         ascii = 'p',
       },
       copy_name = {
-         ascii = '',
-         colemak = ''
+         ascii = 'y',
       },
       copy_path = {
-         ascii = '',
-         colemak = ''
+         ascii = 'Y',
       },
       copy_absolute_path = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       prev_git_item = {
-         ascii = '',
-         colemak = ''
+         ascii = { 'ge' },
       },
       next_git_item = {
-         ascii = '',
-         colemak = ''
+         ascii = { 'gn' },
       },
       dir_up = {
-         ascii = '',
-         colemak = ''
+         ascii = {},
       },
       close = {
-         ascii = '',
-         colemak = ''
+         ascii = 'q',
       },
       toggle_help = {
-         ascii = '',
-         colemak = ''
+         ascii = '?',
       },
       toggle_open = {
          ascii = '<LEADER>e',

@@ -10,7 +10,7 @@ local source_mapping = {
    cmdline                 = '[Cmd]',
    cmdline_history         = '[His]',
    nvim_lsp_signature_help = '[Arg]',
-   nvim_lsp                = '[Nvim]'
+   nvim_lsp                = '[Lsp]'
 }
 
 cmp.setup {

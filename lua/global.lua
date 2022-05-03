@@ -82,8 +82,7 @@ if keyboard_layout == 'colemak' then
    Nvmap('s', 'd')
    Nvmap('j', 'y')
    Nvmap('k', 'i')
-   Nvmap('i', 'o')
-   Nvmap(';', 'p')
+   Nvmap('l', 'e')
 
    Nvmap('n', 'j')
    Nvmap('e', 'k')
