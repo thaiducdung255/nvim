@@ -182,9 +182,11 @@ Keycodes = {
       cursor_nav = {
          l = {
             ascii = 'jj',
+            colemak = 'NN',
          },
          r = {
             ascii = 'kk',
+            colemak = 'EE',
          },
          first = {
             ascii = 'ga',
@@ -215,7 +217,7 @@ Keycodes = {
             ascii = ';u',
          },
          lower = {
-            ascii = ';i',
+            ascii = ';y',
          },
       },
       quote_mod = {
