@@ -156,6 +156,7 @@ Keycodes = {
          },
          next_pos = {
             ascii = 'gn',
+            colemak = 'gk',
          },
          prev_pos = {
             ascii = 'gm',
@@ -359,7 +360,7 @@ Keycodes = {
          ascii = 'gz',
       },
       select_hunk = {
-         ascii = 'ih',
+         ascii = '<LEADER>ih',
       },
    },
    hop = {

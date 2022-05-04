@@ -1,3 +1,5 @@
+local keyboard_layout = os.getenv('KEYBOARD_LAYOUT')
+
 local targets = {
    j      = '%(',
    J      = ')',
@@ -11,6 +13,22 @@ local targets = {
    [':']  = '"',
    ['\''] = '`',
 }
+
+if keyboard_layout == 'colemak' then
+   targets = {
+      n      = '%(',
+      N      = ')',
+      e      = '%[',
+      E      = ']',
+      k      = '{',
+      K      = '}',
+      h      = '<',
+      H      = '>',
+      [';']  = '\'',
+      [':']  = '"',
+      ['\''] = '`',
+   }
+end
 
 local function findTarget(target)
    local prevX = vim.api.nvim_win_get_cursor(0)[2]
@@ -32,7 +50,7 @@ local function findTarget(target)
 end
 
 local function reformatTarget(targetKey)
-   if targetKey == 'j' or targetKey == 'k' then
+   if targetKey == 'j' or targetKey == 'k' or targetKey == 'n' or targetKey == 'e' then
       return string.sub(targets[targetKey], 2)
    end
 
@@ -125,6 +143,11 @@ local function serialMap(fnName, motion, keymap, times)
 end
 
 local bracketKeys = { 'j', 'k', 'l', 'h', 'J', 'K', 'L', 'H', ';', ':', '\'' }
+
+if keyboard_layout == 'colemak' then
+   bracketKeys = { 'n', 'e', 'y', 'h', 'N', 'E', 'I', 'H', ';', ':', '\'' }
+end
+
 local motions = { 'g', 's', 'd', 'c', 'y', 'z', 'Z' }
 
 for _, motion in ipairs(motions) do
@@ -137,6 +160,10 @@ for _, motion in ipairs(motions) do
 end
 
 local openBracketKeys = { 'j', 'k', 'l', 'h', ';', ':', '\'' }
+
+if keyboard_layout == 'colemak' then
+   openBracketKeys = { 'n', 'e', 'y', 'h', ';', ':', '\'' }
+end
 
 for _, key in ipairs(openBracketKeys) do
    serialMap('deleteBrackets', '', key, 5)
