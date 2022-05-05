@@ -95,18 +95,18 @@ Keycodes = {
       w_resize = {
          v_inc = {
             ascii = '<C-l>',
-            colemak = '<C-i>'
+            colemak = '<C-o>'
          },
          v_desc = {
             ascii = '<C-h>',
          },
          h_inc = {
-            ascii = '<C-k>',
-            colemak = '<C-e>'
-         },
-         h_desc = {
             ascii = '<C-j>',
             colemak = '<C-n>'
+         },
+         h_desc = {
+            ascii = '<C-k>',
+            colemak = '<C-e>'
          },
       },
       w_split = {
