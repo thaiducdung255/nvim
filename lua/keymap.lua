@@ -410,6 +410,7 @@ Keycodes = {
       },
       step_over = {
          ascii = 'do',
+         colemak = ';o',
       },
       step_into = {
          ascii = 'dn',
@@ -659,7 +660,7 @@ Keycodes = {
          ascii = 'gnD',
       },
       list_defs_toc = {
-         ascii = 'gO',
+         ascii = 'gt',
       },
       outer_block = {
          ascii = '<LEADER>bo',

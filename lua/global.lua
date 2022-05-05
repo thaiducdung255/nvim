@@ -34,6 +34,10 @@ function NOmap(lhs, rhs, isSilentOff)
    map(lhs, rhs, { 'n', 'o' }, isSilentOff)
 end
 
+function NVOmap(lhs, rhs, isSilentOff)
+   map(lhs, rhs, { 'n', 'v', 'o' }, isSilentOff)
+end
+
 function Cmap(lhs, rhs, isSilentOff)
    map(lhs, rhs, 'c', isSilentOff)
 end
@@ -79,10 +83,7 @@ DATA_PATH   = vim.fn.stdpath('data')
 CACHE_PATH  = vim.fn.stdpath('cache')
 
 if keyboard_layout == 'colemak' then
-   Nvmap('s', 'd')
-   Nvmap('j', 'y')
-   Nvmap('k', 'i')
-   Nvmap('l', 'e')
+   NVOmap('k', 'i')
 
    Nvmap('n', 'j')
    Nvmap('e', 'k')

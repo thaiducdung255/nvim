@@ -20,8 +20,8 @@ if keyboard_layout == 'colemak' then
       N      = ')',
       e      = '%[',
       E      = ']',
-      k      = '{',
-      K      = '}',
+      o      = '{',
+      O      = '}',
       h      = '<',
       H      = '>',
       [';']  = '\'',
@@ -145,7 +145,7 @@ end
 local bracketKeys = { 'j', 'k', 'l', 'h', 'J', 'K', 'L', 'H', ';', ':', '\'' }
 
 if keyboard_layout == 'colemak' then
-   bracketKeys = { 'n', 'e', 'y', 'h', 'N', 'E', 'I', 'H', ';', ':', '\'' }
+   bracketKeys = { 'n', 'e', 'o', 'h', 'N', 'E', 'I', 'H', ';', ':', '\'' }
 end
 
 local motions = { 'g', 's', 'd', 'c', 'y', 'z', 'Z' }
@@ -162,7 +162,7 @@ end
 local openBracketKeys = { 'j', 'k', 'l', 'h', ';', ':', '\'' }
 
 if keyboard_layout == 'colemak' then
-   openBracketKeys = { 'n', 'e', 'y', 'h', ';', ':', '\'' }
+   openBracketKeys = { 'n', 'e', 'o', 'h', ';', ':', '\'' }
 end
 
 for _, key in ipairs(openBracketKeys) do
