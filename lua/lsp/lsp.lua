@@ -61,6 +61,15 @@ lspconfig.tsserver.setup {
    end
 }
 
+-- vim.g.markdown_fenced_languages = { 'ts=typescript' }
+-- lspconfig.denols.setup {
+--    init_options = {
+--       enable = true,
+--       lint = false,
+--       unstable = false
+--    }
+-- }
+
 lspconfig.gopls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)

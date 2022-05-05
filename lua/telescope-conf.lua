@@ -79,11 +79,11 @@ telescope.setup {
          i = {
             -- ['<CR>'] = actions.select_default + actions.center,
             -- ['<CR>'] = fzf_multi_select,
-            ['<C-j>'] = actions.move_selection_next,
-            ['<C-k>'] = actions.move_selection_previous,
+            ['<C-n>'] = actions.move_selection_next,
+            ['<C-e>'] = actions.move_selection_previous,
             ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
             ['<ESC>'] = actions.close,
-            ['<M-\'>'] = R('telescope').extensions.hop.hop,
+            ['<M-h>'] = R('telescope').extensions.hop.hop,
          },
 
          n = {
