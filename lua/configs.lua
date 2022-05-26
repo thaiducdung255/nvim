@@ -1,7 +1,7 @@
 vim.g.mapleader            = ' '
 vim.g.python_host_prog     = '/usr/bin/python2'
 vim.g.python3_host_prog    = '/usr/bin/python3'
-vim.g.ruby_host_prog       = '~/.gem/ruby/2.7.0/bin/neovim-ruby-host'
+vim.g.ruby_host_prog       = '/usr/bin/neovim-ruby-host'
 
 vim.cmd('syntax enable')
 vim.cmd('filetype on')
