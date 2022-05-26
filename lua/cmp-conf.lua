@@ -48,9 +48,9 @@ cmp.setup {
             vim_item.dup = 0
          end
 
-         if entry.source.name == 'nvim_lsp' or entry.source.name == 'nvim_lua' then
-            vim_item.dup = 0
-         end
+         -- if entry.source.name == 'nvim_lsp' or entry.source.name == 'nvim_lua' then
+            -- vim_item.dup = 0
+         -- end
 
 			vim_item.menu = menu
 

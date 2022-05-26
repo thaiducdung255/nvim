@@ -156,7 +156,6 @@ Keycodes = {
          },
          next_pos = {
             ascii = 'gn',
-            colemak = 'gk',
          },
          prev_pos = {
             ascii = 'gm',
@@ -271,11 +270,9 @@ Keycodes = {
          },
          s_quote = {
             ascii = 's;',
-            colemak = 's;'
          },
          d_quote = {
             ascii = 'sO',
-            colemak = 'sO'
          },
          temp_quote = {
             ascii = 's\'',
