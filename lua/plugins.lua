@@ -28,7 +28,7 @@ return require('packer').startup({
       use { 'nvim-telescope/telescope-hop.nvim' }
       use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
       use { 'nvim-telescope/telescope-media-files.nvim' }
-      use {'TC72/telescope-tele-tabby.nvim'}
+      use { 'TC72/telescope-tele-tabby.nvim' }
 
       -- vim motions
       use { 'phaazon/hop.nvim' }
@@ -38,6 +38,8 @@ return require('packer').startup({
 
       -- autocomplete
       use 'windwp/nvim-autopairs'
+      use 'github/copilot.vim'
+
       use {
          'hrsh7th/nvim-cmp',
          requires = {
@@ -52,7 +54,8 @@ return require('packer').startup({
             'dmitmel/cmp-cmdline-history',
             'lukas-reineke/cmp-under-comparator',
             'hrsh7th/cmp-nvim-lsp-signature-help',
-            'hrsh7th/cmp-nvim-lsp'
+            'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-copilot'
          }
       }
 
@@ -102,7 +105,7 @@ return require('packer').startup({
       use 'AndrewRadev/switch.vim'
 
       -- float terminal
-      use {'akinsho/toggleterm.nvim'}
+      use { 'akinsho/toggleterm.nvim' }
 
       -- git
       use { 'lewis6991/gitsigns.nvim' }

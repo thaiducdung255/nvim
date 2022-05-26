@@ -10,7 +10,8 @@ local source_mapping = {
    cmdline                 = '[Cmd]',
    cmdline_history         = '[His]',
    nvim_lsp_signature_help = '[Arg]',
-   nvim_lsp                = '[Lsp]'
+   nvim_lsp                = '[Lsp]',
+   copilot                 = '[AI]'
 }
 
 cmp.setup {
@@ -41,21 +42,21 @@ cmp.setup {
    },
    formatting = {
       format = function(entry, vim_item)
-			vim_item.kind = lspkind.presets.default[vim_item.kind]
-			local menu = source_mapping[entry.source.name]
+         vim_item.kind = lspkind.presets.default[vim_item.kind]
+         local menu = source_mapping[entry.source.name]
 
          if entry.source.name == 'cmdline' or entry.source.name == 'cmdline_history' then
             vim_item.dup = 0
          end
 
          -- if entry.source.name == 'nvim_lsp' or entry.source.name == 'nvim_lua' then
-            -- vim_item.dup = 0
+         -- vim_item.dup = 0
          -- end
 
-			vim_item.menu = menu
+         vim_item.menu = menu
 
-			return vim_item
-		end
+         return vim_item
+      end
    },
    sources = {
       { name = 'nvim_lsp_signature_help' },
@@ -79,7 +80,7 @@ cmp.setup {
    },
 }
 
-for _, cmd_type in ipairs({':', '/', '?', '@', '='}) do
+for _, cmd_type in ipairs({ ':', '/', '?', '@', '=' }) do
 
    if (cmd_type == ':') then
       cmp.setup.cmdline(cmd_type, {
