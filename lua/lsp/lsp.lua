@@ -8,8 +8,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 -- vim.lsp.set_log_level('debug')
 -- log.set_format_func(vim.inspect)
 
-vim.lsp.handlers['textDocument/publishDiagnostics'] =
-   vim.lsp.with(
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
    vim.lsp.diagnostic.on_publish_diagnostics,
    {
       underline = false,
@@ -36,7 +35,7 @@ vim.api.nvim_create_autocmd(
       pattern = '*.tsx,*.ts,*.jsx,*.js',
 
       callback = function()
-         vim.cmd[[EslintFixAll]]
+         vim.cmd [[EslintFixAll]]
       end
    }
 )
@@ -76,23 +75,7 @@ lspconfig.gopls.setup {
    end
 }
 
-local system_name
-
-if vim.fn.has('mac') == 1 then
-  system_name = 'macOS'
-elseif vim.fn.has('unix') == 1 then
-  system_name = 'Linux'
-elseif vim.fn.has('win32') == 1 then
-  system_name = 'Windows'
-else
-  print('Unsupported system for sumneko')
-end
-
-local sumneko_root_path = os.getenv('HOME') .. '/Apps/lua-language-server'
-local sumneko_binary = sumneko_root_path..'/bin/'..system_name..'/lua-language-server'
-
 lspconfig.sumneko_lua.setup {
-   cmd = { sumneko_binary, '-E', sumneko_root_path .. '/main.lua' },
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
    end
