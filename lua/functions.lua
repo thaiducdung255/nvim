@@ -17,7 +17,7 @@ local function findTarget(target)
    local prevY = vim.api.nvim_win_get_cursor(0)[1]
    local currentLine = vim.fn.getline('.')
 
-   local nextFound = currentLine:find(target, prevX+2)
+   local nextFound = currentLine:find(target, prevX + 2)
 
    if nextFound == nil then
       nextFound = currentLine:find(target, 0)
@@ -63,13 +63,13 @@ end
 
 function _G.customMotions(motionKey, targetKey, repeatCount)
    local motions = {
-      g    = 'f',
-      s    = 'vi',
-      d    = 'di',
-      c    = 'di',
-      y    = 'yi',
-      z    = 'dt',
-      Z    = 'dT',
+      g = 'f',
+      s = 'vi',
+      d = 'di',
+      c = 'di',
+      y = 'yi',
+      z = 'dt',
+      Z = 'dT',
    }
 
    if targetKey == ';' or targetKey == ':' or targetKey == '\'' then
@@ -97,7 +97,9 @@ function _G.customMotions(motionKey, targetKey, repeatCount)
    end
 
    local target = reformatTarget(targetKey)
-   vim.cmd(':normal ' .. motions[motionKey] .. target)
+   local execCmd = ':normal ' .. motions[motionKey] .. target
+   print(execCmd)
+   vim.cmd(execCmd)
 
    if motionKey == 'c' or motionKey == 'z' or motionKey == 'Z' then
       vim.cmd(':startinsert')

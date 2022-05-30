@@ -200,7 +200,8 @@ Keycodes = {
             ascii = 'M',
          },
          d = {
-            ascii = 'K',
+            ascii = 'N',
+            colemak = 'm',
          },
       },
       custom_V = {
@@ -688,6 +689,7 @@ Keycodes = {
    maximizer = {
       toggle_max = {
          ascii = 'm',
+         colemak = 'l',
       },
    },
    vsnip = {

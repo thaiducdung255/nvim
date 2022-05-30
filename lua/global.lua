@@ -5,7 +5,7 @@ local function map(lhs, rhs, mode, isSilentOff)
 
    lhs = Get_key_code(lhs)
 
-   if  isSilentOff == true then options.silent = false end
+   if isSilentOff == true then options.silent = false end
 
    vim.keymap.set(mode, lhs, rhs, options)
 end
@@ -79,11 +79,12 @@ function Omap(lhs, rhs, isSilentOff)
 
 end
 
-DATA_PATH   = vim.fn.stdpath('data')
-CACHE_PATH  = vim.fn.stdpath('cache')
+DATA_PATH  = vim.fn.stdpath('data')
+CACHE_PATH = vim.fn.stdpath('cache')
 
 if keyboard_layout == 'colemak' then
    NVOmap('k', 'i')
+   NVOmap('K', 'I')
 
    Nvmap('n', 'j')
    Nvmap('e', 'k')
