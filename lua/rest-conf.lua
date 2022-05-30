@@ -1,18 +1,18 @@
 require('rest-nvim').setup({
-   result_split_horizontal = false,
-   skip_ssl_verification = true,
-   highlight = {
+   result_split_horizontal  = false,
+   skip_ssl_verification    = true,
+   jump_to_request          = true,
+   env_file                 = '.env',
+   custom_dynamic_variables = {},
+   highlight                = {
       enabled = false,
       timeout = 150,
    },
-   result = {
-      show_url = true,
+   result                   = {
+      show_url       = true,
       show_http_info = true,
-      show_header = false,
+      show_header    = false,
    },
-   jump_to_request = true,
-   env_file = '.env',
-   custom_dynamic_variables = {},
 })
 
 Nmap(Keycodes.rest.run, [[:lua require('rest-nvim').run()<CR>]])

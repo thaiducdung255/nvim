@@ -9,4 +9,4 @@ install:
 	python3 -m pip install pynvim
 	npm i -g neovim
 	gem install neovim
-   # sudo ln -s ~/.local/share/gem/ruby/3.0.0/bin/neovim-ruby-host /usr/bin/neovim-ruby-host
+   # sudo ln -fs ~/.local/share/gem/ruby/3.0.0/bin/neovim-ruby-host /usr/bin/neovim-ruby-host

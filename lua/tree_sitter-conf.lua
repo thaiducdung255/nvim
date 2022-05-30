@@ -14,11 +14,11 @@ local refactor_config = {
    navigation = {
       enable = false,
       keymaps = {
-         goto_definition = Get_key_code(Keycodes.ts.def_nav),
-         list_definitions = Get_key_code(Keycodes.ts.list_defs),
+         goto_definition      = Get_key_code(Keycodes.ts.def_nav),
+         list_definitions     = Get_key_code(Keycodes.ts.list_defs),
          list_definitions_toc = Get_key_code(Keycodes.ts.list_defs_toc),
-         goto_next_usage = Get_key_code(Keycodes.ts.usage_next),
-         goto_previous_usage = Get_key_code(Keycodes.ts.usage_prev),
+         goto_next_usage      = Get_key_code(Keycodes.ts.usage_next),
+         goto_previous_usage  = Get_key_code(Keycodes.ts.usage_prev),
       }
    }
 }
@@ -36,24 +36,24 @@ local text_objects_config = {
    },
 }
 
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
    ensure_installed = false,
    ignore_install   = true,
    refactor         = refactor_config,
    textobjects      = text_objects_config,
-   highlight = {
+   highlight        = {
       enable  = true,
       disable = { 'http' },
    },
-   indent = {
+   indent           = {
       enable = {
          'javascriptreact'
       }
    },
-   autotag = {
+   autotag          = {
       enable = true
    },
-   rainbow = {
+   rainbow          = {
       enable         = true,
       extended_mode  = true,
       max_file_lines = 1000,

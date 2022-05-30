@@ -1,140 +1,140 @@
-require'nvim-web-devicons'.setup {
+require 'nvim-web-devicons'.setup {
    override = {
       zsh = {
-         icon = '',
+         icon  = '',
          color = '#428850',
-         name = 'Zsh'
+         name  = 'Zsh'
       },
       http = {
-         icon = '黎',
+         icon  = '黎',
          color = '#571275',
-         name = 'Http'
+         name  = 'Http'
       },
       ['env.sample'] = {
-         icon = '',
+         icon  = '',
          color = '#428850',
-         name = 'Env'
+         name  = 'Env'
       },
       ['.env.sample'] = {
-         icon = '',
+         icon  = '',
          color = '#428850',
-         name = 'Env'
+         name  = 'Env'
       },
       ['.env'] = {
-         icon = '',
+         icon  = '',
          color = '#428850',
-         name = 'Env'
+         name  = 'Env'
       },
       ['.env.local'] = {
-         icon = '',
+         icon  = '',
          color = '#428850',
-         name = 'Env'
+         name  = 'Env'
       },
       ['package.json'] = {
-         icon = '',
+         icon  = '',
          color = '#a85813',
-         name = 'npm'
+         name  = 'npm'
       },
       ['package-lock.json'] = {
-         icon = '',
+         icon  = '',
          color = '#a85813',
-         name = 'npm'
+         name  = 'npm'
       },
       ['yarn.lock'] = {
-         icon = '',
+         icon  = '',
          color = '#a85813',
-         name = 'npm'
+         name  = 'npm'
       },
       ['pnpm-lock.yaml'] = {
-         icon = '',
+         icon  = '',
          color = '#a85813',
-         name = 'npm'
+         name  = 'npm'
       },
       ['tsconfig.tsbuildinfo'] = {
-         icon = '',
+         icon  = '',
          color = '#0e67cc',
-         name = 'build'
+         name  = 'build'
       },
       ['tsconfig.json'] = {
-         icon = '',
+         icon  = '',
          color = '#0e67cc',
-         name = 'build'
+         name  = 'build'
       },
       ['.editorconfig'] = {
-         icon = '',
+         icon  = '',
          color = '#0e67cc',
-         name = 'build'
+         name  = 'build'
       },
       ['.eslintrc.json'] = {
-         icon = '',
+         icon  = '',
          color = '#0e67cc',
-         name = 'build'
+         name  = 'build'
       },
       ['.eslintrc.yml'] = {
-         icon = '',
+         icon  = '',
          color = '#0e67cc',
-         name = 'build'
+         name  = 'build'
       },
       ['.eslintrc.cjs'] = {
-         icon = '',
+         icon  = '',
          color = '#0e67cc',
-         name = 'build'
+         name  = 'build'
       },
       ['.eslintrc.js'] = {
-         icon = '',
+         icon  = '',
          color = '#0e67cc',
-         name = 'build'
+         name  = 'build'
       },
       ['.prettierignore'] = {
-         icon = '',
+         icon  = '',
          color = '#0e67cc',
-         name = 'build'
+         name  = 'build'
       },
       ['.prettierrc'] = {
-         icon = '',
+         icon  = '',
          color = '#0e67cc',
-         name = 'build'
+         name  = 'build'
       },
       ['readme.md'] = {
-         icon = '',
+         icon  = '',
          color = '#11bfb7',
-         name = 'readme'
+         name  = 'readme'
       },
       ['README.md'] = {
-         icon = '',
+         icon  = '',
          color = '#11bfb7',
-         name = 'readme'
+         name  = 'readme'
       },
       ['index.js'] = {
-         icon = '',
+         icon  = '',
          color = '#11bfb7',
-         name = 'index'
+         name  = 'index'
       },
       ['index.ts'] = {
-         icon = '',
+         icon  = '',
          color = '#11bfb7',
-         name = 'index'
+         name  = 'index'
       },
       ['main.js'] = {
-         icon = '',
+         icon  = '',
          color = '#11bfb7',
-         name = 'index'
+         name  = 'index'
       },
       ['main.ts'] = {
-         icon = '',
+         icon  = '',
          color = '#11bfb7',
-         name = 'index'
+         name  = 'index'
       },
       ['app.js'] = {
-         icon = '',
+         icon  = '',
          color = '#11bfb7',
-         name = 'index'
+         name  = 'index'
       },
       ['app.ts'] = {
-         icon = '',
+         icon  = '',
          color = '#11bfb7',
-         name = 'index'
+         name  = 'index'
       },
    };
-   default = true;
+   default  = true;
 }

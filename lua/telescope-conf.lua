@@ -1,8 +1,7 @@
-local actions      = require('telescope.actions')
-local previewers   = require('telescope.previewers')
-local telescope    = require('telescope')
-local action_state = require('telescope.actions.state')
-local sorters      = require('telescope.sorters')
+local actions    = require('telescope.actions')
+local previewers = require('telescope.previewers')
+local telescope  = require('telescope')
+local sorters    = require('telescope.sorters')
 
 P = function(v)
    print(vim.inspect(v))
@@ -21,7 +20,7 @@ end
 local vertical_default_conf = {
    layout_strategy = 'vertical',
 
-   layout_config   = {
+   layout_config = {
       preview_height = 0.7,
    },
 }
@@ -32,27 +31,10 @@ local horizontal_default_conf = {
    },
 }
 
-local function fzf_multi_select(prompt_bufnr)
-   local picker = action_state.get_current_picker(prompt_bufnr)
-   local num_selections = table.getn(picker:get_multi_selection())
-
-   if num_selections > 1 then
-      picker = action_state.get_current_picker(prompt_bufnr)
-
-      for _, entry in ipairs(picker:get_multi_selection()) do
-         vim.cmd(string.format("%s %s", ":e!", entry.value))
-      end
-
-      vim.cmd('stopinsert')
-   else
-      actions.file_edit(prompt_bufnr)
-   end
-end
-
 telescope.setup {
    defaults = {
       find_command           = { 'ag', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case' },
-      file_ignore_patterns   = { '.git/', 'node_modules/', '.package-lock.json','.pnpm-lock.yaml','.yarn-lock.json', 'dist/', 'debug-adapters/', '.next/' },
+      file_ignore_patterns   = { '.git/', 'node_modules/', '.package-lock.json', '.pnpm-lock.yaml', '.yarn-lock.json', 'dist/', 'debug-adapters/', '.next/' },
       prompt_prefix          = '> ',
       selection_caret        = '> ',
       entry_prefix           = '  ',
@@ -68,11 +50,11 @@ telescope.setup {
       borderchars            = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
       color_devicons         = true,
       use_less               = true,
-      set_env                = { ['COLORTERM'] = 'truecolor'  },
+      set_env                = { ['COLORTERM'] = 'truecolor' },
       file_previewer         = previewers.vim_buffer_cat.new,
       grep_previewer         = previewers.vim_buffer_vimgrep.new,
       qflist_previewer       = previewers.vim_buffer_qflist.new,
-      layout_config          = { width  = 0.98, height = 0.95 },
+      layout_config          = { width = 0.98, height = 0.95 },
       buffer_previewer_maker = previewers.buffer_previewer_maker,
 
       mappings = {
@@ -134,27 +116,27 @@ telescope.setup {
 telescope.load_extension('hop')
 telescope.load_extension('fzf')
 
-Nmap(Keycodes.telescope.files,          ':Telescope find_files hidden=true no_ignore=true<CR>')
-Nmap(Keycodes.telescope.old_files,      ':Telescope oldfiles hidden=true no_ignore=true<CR>')
-Nmap(Keycodes.telescope.bufs,           ':Telescope buffers<CR>')
-Nmap(Keycodes.telescope.str_grep,    ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
-Nmap(Keycodes.telescope.live_grep,      ':Telescope live_grep hidden=true no_ignore=true<CR>')
-Nmap(Keycodes.telescope.tele_taby,      ':Telescope tele_tabby list<CR>')
+Nmap(Keycodes.telescope.files, ':Telescope find_files hidden=true no_ignore=true<CR>')
+Nmap(Keycodes.telescope.old_files, ':Telescope oldfiles hidden=true no_ignore=true<CR>')
+Nmap(Keycodes.telescope.bufs, ':Telescope buffers<CR>')
+Nmap(Keycodes.telescope.str_grep, ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
+Nmap(Keycodes.telescope.live_grep, ':Telescope live_grep hidden=true no_ignore=true<CR>')
+Nmap(Keycodes.telescope.tele_taby, ':Telescope tele_tabby list<CR>')
 
 Nmap(Keycodes.telescope.buf_fuzzy_find, ':Telescope current_buffer_fuzzy_find<CR>')
-Nmap(Keycodes.telescope.lsp_type_def,   ':Telescope lsp_type_definitions<CR>')
+Nmap(Keycodes.telescope.lsp_type_def, ':Telescope lsp_type_definitions<CR>')
 
-Nmap(Keycodes.telescope.cmd,            ':Telescope commands<CR>')
-Nmap(Keycodes.telescope.cmd_his,        ':Telescope command_history<CR>')
-Nmap(Keycodes.telescope.keymap,         ':Telescope keymaps<CR>')
-Nmap(Keycodes.telescope.highlight,      ':Telescope highlights<CR>')
-Nmap(Keycodes.telescope.lsp_doc_sym,    ':Telescope lsp_document_symbols<CR>')
-Nmap(Keycodes.telescope.lsp_doc_diag,   ':Telescope lsp_document_diagnostics<CR>')
-Nmap(Keycodes.telescope.lsp_ref,        ':Telescope lsp_references<CR>')
-Nmap(Keycodes.telescope.git_branch,     ':Telescope git_branches<CR>')
+Nmap(Keycodes.telescope.cmd, ':Telescope commands<CR>')
+Nmap(Keycodes.telescope.cmd_his, ':Telescope command_history<CR>')
+Nmap(Keycodes.telescope.keymap, ':Telescope keymaps<CR>')
+Nmap(Keycodes.telescope.highlight, ':Telescope highlights<CR>')
+Nmap(Keycodes.telescope.lsp_doc_sym, ':Telescope lsp_document_symbols<CR>')
+Nmap(Keycodes.telescope.lsp_doc_diag, ':Telescope lsp_document_diagnostics<CR>')
+Nmap(Keycodes.telescope.lsp_ref, ':Telescope lsp_references<CR>')
+Nmap(Keycodes.telescope.git_branch, ':Telescope git_branches<CR>')
 
-Nmap(Keycodes.telescope.git_diff,       [[<cmd>lua require('telescope_custom-conf').delta_git_diff()<CR>]])
-Nmap(Keycodes.telescope.git_bcommit,    [[<cmd>lua require('telescope_custom-conf').delta_git_bcommits()<CR>]])
-Nmap(Keycodes.telescope.git_commit,     [[<cmd>lua require('telescope_custom-conf').delta_git_commits()<CR>]])
-Nmap(Keycodes.telescope.git_status,     [[<cmd>lua require('telescope_custom-conf').delta_git_status()<CR>]])
-Nmap(Keycodes.telescope.eslint_diag,    [[<cmd>lua require('telescope_custom-conf').eslint_diagnostics()<CR>]])
+Nmap(Keycodes.telescope.git_diff, [[<cmd>lua require('telescope_custom-conf').delta_git_diff()<CR>]])
+Nmap(Keycodes.telescope.git_bcommit, [[<cmd>lua require('telescope_custom-conf').delta_git_bcommits()<CR>]])
+Nmap(Keycodes.telescope.git_commit, [[<cmd>lua require('telescope_custom-conf').delta_git_commits()<CR>]])
+Nmap(Keycodes.telescope.git_status, [[<cmd>lua require('telescope_custom-conf').delta_git_status()<CR>]])
+Nmap(Keycodes.telescope.eslint_diag, [[<cmd>lua require('telescope_custom-conf').eslint_diagnostics()<CR>]])

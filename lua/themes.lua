@@ -7,7 +7,7 @@ vim.g.edge_better_performance     = 1
 
 vim.cmd('colorscheme edge')
 
-vim.cmd[[function! SynStack()
+vim.cmd [[function! SynStack()
    if !exists("*synstack")
       return
    endif

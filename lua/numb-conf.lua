@@ -1,5 +1,5 @@
-require('numb').setup{
-   show_numbers = true,
+require('numb').setup {
+   show_numbers    = true,
    show_cursorline = true,
-   number_only = true,
+   number_only     = true,
 }

@@ -15,20 +15,20 @@ saga.init_lsp_saga {
    border_style             = "single",
    rename_prompt_prefix     = '➤',
    server_filetype_map      = {},
-   finder_action_keys = {
-     open = '<CR>', vsplit = 'sn',split = 'sm',quit = '<ESC>',scroll_down = 'n', scroll_up = 'm'
+   finder_action_keys       = {
+      open = '<CR>', vsplit = 'sn', split = 'sm', quit = '<ESC>', scroll_down = 'n', scroll_up = 'm'
    },
-   code_action_keys = {
-     quit = 'q',exec = '<CR>'
+   code_action_keys         = {
+      quit = 'q', exec = '<CR>'
    },
-   rename_action_keys = {
-     quit = '<C-c>',exec = '<CR>'
+   rename_action_keys       = {
+      quit = '<C-c>', exec = '<CR>'
    },
-   code_action_prompt = {
-     enable = true,
-     sign = true,
-     sign_priority = 20,
-     virtual_text = true,
+   code_action_prompt       = {
+      enable        = true,
+      sign          = true,
+      sign_priority = 20,
+      virtual_text  = true,
    },
 }
 
