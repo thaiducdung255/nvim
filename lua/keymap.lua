@@ -391,12 +391,12 @@ Keycodes = {
          ascii = 'gi',
       },
       lsp_diag_next = {
-         ascii = 'fj',
-         colemak = 'fn'
+         ascii = '<LEADER>fj',
+         colemak = '<LEADER>fn'
       },
       lsp_diag_prev = {
-         ascii = 'fk',
-         colemak = 'fe'
+         ascii = '<LEADER>fk',
+         colemak = '<LEADER>fe'
       },
    },
    dap = {
