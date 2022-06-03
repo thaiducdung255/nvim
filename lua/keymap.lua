@@ -158,10 +158,10 @@ Keycodes = {
             ascii = 'U',
          },
          next_pos = {
-            ascii = 'gn',
+            ascii = '<LEADER>gn',
          },
          prev_pos = {
-            ascii = 'gm',
+            ascii = '<LEADER>gm',
          },
       },
       term = {
@@ -391,7 +391,7 @@ Keycodes = {
          ascii = 'dp',
       },
       lsp_finder = {
-         ascii = 'gi',
+         ascii = '<LEADER>gi',
       },
       lsp_diag_next = {
          ascii = '<LEADER>fj',

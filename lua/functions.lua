@@ -14,6 +14,22 @@ local targets = {
    ['\''] = '`',
 }
 
+if keyboard_layout == 'colemak' then
+   targets = {
+      n      = '%(',
+      N      = ')',
+      e      = '%[',
+      E      = ']',
+      i      = '{',
+      I      = '}',
+      h      = '<',
+      H      = '>',
+      [';']  = '\'',
+      [':']  = '"',
+      ['\''] = '`',
+   }
+end
+
 local function find_target(target)
    local prev_x = vim.api.nvim_win_get_cursor(0)[2]
    local prev_y = vim.api.nvim_win_get_cursor(0)[1]
@@ -34,11 +50,13 @@ local function find_target(target)
 end
 
 local function reformat_target(target_key)
-   if target_key == 'j' or target_key == 'k' then
-      return string.sub(targets[target_key], 2)
+   local result = targets[target_key]
+
+   if #(result) > 1 then
+      return string.sub(result, 2)
    end
 
-   return targets[target_key]
+   return result
 end
 
 function _G.delete_brackets(target_key, repeat_count)
@@ -55,7 +73,13 @@ function _G.delete_brackets(target_key, repeat_count)
       end
    end
 
-   vim.cmd(':normal di' .. reformat_target(target_key))
+   local norm_cmd = ':normal di'
+
+   if keyboard_layout == 'colemak' then
+      norm_cmd = ':normal dk'
+   end
+
+   vim.cmd(norm_cmd .. reformat_target(target_key))
    local prev_x = vim.api.nvim_win_get_cursor(0)[2]
    vim.cmd(':normal p')
    local current_x = vim.api.nvim_win_get_cursor(0)[2]
@@ -73,6 +97,18 @@ function _G.custom_motions(motion_key, target_key, repeat_count)
       z = 'dt',
       Z = 'dT',
    }
+
+   if keyboard_layout == 'colemak' then
+      motions = {
+         g = 'f',
+         s = 'vk',
+         d = 'dk',
+         c = 'dk',
+         y = 'yk',
+         z = 'dt',
+         Z = 'dT',
+      }
+   end
 
    if target_key == ';' or target_key == ':' or target_key == '\'' then
       if motion_key == 's' or motion_key == 'd' or motion_key == 'c' then
@@ -99,8 +135,9 @@ function _G.custom_motions(motion_key, target_key, repeat_count)
    end
 
    local target = reformat_target(target_key)
+   print('target', target)
    local exec_cmd = ':normal ' .. motions[motion_key] .. target
-   print(exec_cmd)
+   print('exec_cmd', exec_cmd)
    vim.cmd(exec_cmd)
 
    if motion_key == 'c' or motion_key == 'z' or motion_key == 'Z' then
@@ -130,6 +167,10 @@ end
 
 local bracket_keys = { 'j', 'k', 'l', 'h', 'J', 'K', 'L', 'H', ';', ':', '\'' }
 
+if keyboard_layout == 'colemak' then
+   bracket_keys = { 'n', 'e', 'i', 'h', 'N', 'E', 'I', 'H', ';', ':', '\'' }
+end
+
 local motions = { 'g', 's', 'd', 'c', 'y', 'z', 'Z' }
 
 for _, motion in ipairs(motions) do
@@ -142,6 +183,10 @@ for _, motion in ipairs(motions) do
 end
 
 local open_bracket_keys = { 'j', 'k', 'l', 'h', ';', ':', '\'' }
+
+if keyboard_layout == 'colemak' then
+   open_bracket_keys = { 'n', 'e', 'i', 'h', ';', ':', '\'' }
+end
 
 for _, key in ipairs(open_bracket_keys) do
    serial_map('delete_brackets', '', key, 5)
