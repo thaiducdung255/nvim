@@ -85,6 +85,8 @@ CACHE_PATH = vim.fn.stdpath('cache')
 if keyboard_layout == 'colemak' then
    NVOmap('k', 'i')
    NVOmap('K', 'I')
+   NVOmap('W', 'w')
+   NVOmap('w', 'e')
 
    Nvmap('n', 'j')
    Nvmap('e', 'k')

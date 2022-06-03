@@ -22,6 +22,9 @@ Keycodes = {
                colemak = '<M-;>',
             },
          },
+         open_cmd = {
+            ascii = '<CR>',
+         },
          nl = {
             ascii = ',,',
          },
@@ -315,7 +318,7 @@ Keycodes = {
          ascii = ';;',
       },
       v_mode = {
-         ascii = 'zz',
+         ascii = 'cm',
       }
    },
    easy_align = {
@@ -563,7 +566,7 @@ Keycodes = {
    },
    switch = {
       exec = {
-         ascii = '<CR>',
+         ascii = 'S',
       },
    },
    telescope = {

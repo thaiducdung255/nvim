@@ -1,3 +1,5 @@
+local keyboard_layout = os.getenv('KEYBOARD_LAYOUT')
+
 local targets = {
    j      = '%(',
    J      = ')',
@@ -12,56 +14,56 @@ local targets = {
    ['\''] = '`',
 }
 
-local function findTarget(target)
-   local prevX = vim.api.nvim_win_get_cursor(0)[2]
-   local prevY = vim.api.nvim_win_get_cursor(0)[1]
-   local currentLine = vim.fn.getline('.')
+local function find_target(target)
+   local prev_x = vim.api.nvim_win_get_cursor(0)[2]
+   local prev_y = vim.api.nvim_win_get_cursor(0)[1]
+   local current_line = vim.fn.getline('.')
 
-   local nextFound = currentLine:find(target, prevX + 2)
+   local next_found = current_line:find(target, prev_x + 2)
 
-   if nextFound == nil then
-      nextFound = currentLine:find(target, 0)
+   if next_found == nil then
+      next_found = current_line:find(target, 0)
 
-      if nextFound == nil then
+      if next_found == nil then
          return false
       end
    end
 
-   vim.fn.cursor(prevY, nextFound)
+   vim.fn.cursor(prev_y, next_found)
    return true
 end
 
-local function reformatTarget(targetKey)
-   if targetKey == 'j' or targetKey == 'k' then
-      return string.sub(targets[targetKey], 2)
+local function reformat_target(target_key)
+   if target_key == 'j' or target_key == 'k' then
+      return string.sub(targets[target_key], 2)
    end
 
-   return targets[targetKey]
+   return targets[target_key]
 end
 
-function _G.deleteBrackets(targetKey, repeatCount)
-   if targetKey == ';' or targetKey == ':' or targetKey == '\'' then
-      repeatCount = repeatCount * 2 - 1
+function _G.delete_brackets(target_key, repeat_count)
+   if target_key == ';' or target_key == ':' or target_key == '\'' then
+      repeat_count = repeat_count * 2 - 1
    end
 
-   while repeatCount > 0 do
-      local isTargetFound = findTarget(targets[targetKey])
-      repeatCount = repeatCount - 1
+   while repeat_count > 0 do
+      local isTargetFound = find_target(targets[target_key])
+      repeat_count = repeat_count - 1
 
       if isTargetFound == false then
          return
       end
    end
 
-   vim.cmd(':normal di' .. reformatTarget(targetKey))
-   local prevX = vim.api.nvim_win_get_cursor(0)[2]
+   vim.cmd(':normal di' .. reformat_target(target_key))
+   local prev_x = vim.api.nvim_win_get_cursor(0)[2]
    vim.cmd(':normal p')
-   local currentX = vim.api.nvim_win_get_cursor(0)[2]
-   local contentLength = currentX - prevX
-   vim.cmd(':normal ' .. contentLength + 1 .. 'hxx')
+   local current_x = vim.api.nvim_win_get_cursor(0)[2]
+   local content_length = current_x - prev_x
+   vim.cmd(':normal ' .. content_length + 1 .. 'hxx')
 end
 
-function _G.customMotions(motionKey, targetKey, repeatCount)
+function _G.custom_motions(motion_key, target_key, repeat_count)
    local motions = {
       g = 'f',
       s = 'vi',
@@ -72,75 +74,75 @@ function _G.customMotions(motionKey, targetKey, repeatCount)
       Z = 'dT',
    }
 
-   if targetKey == ';' or targetKey == ':' or targetKey == '\'' then
-      if motionKey == 's' or motionKey == 'd' or motionKey == 'c' then
-         repeatCount = repeatCount * 2 - 1
+   if target_key == ';' or target_key == ':' or target_key == '\'' then
+      if motion_key == 's' or motion_key == 'd' or motion_key == 'c' then
+         repeat_count = repeat_count * 2 - 1
       end
    end
 
-   while (motionKey ~= 'Z' and motionKey ~= 'z' and repeatCount > 0) do
-      local isTargetFound = findTarget(targets[targetKey])
+   while (motion_key ~= 'Z' and motion_key ~= 'z' and repeat_count > 0) do
+      local isTargetFound = find_target(targets[target_key])
 
       if isTargetFound == false then
          return
       end
 
-      repeatCount = repeatCount - 1
+      repeat_count = repeat_count - 1
    end
 
-   if motionKey == 'g' then
+   if motion_key == 'g' then
       return
    end
 
-   if motionKey == 'z' then
-      targetKey = targetKey:upper()
+   if motion_key == 'z' then
+      target_key = target_key:upper()
    end
 
-   local target = reformatTarget(targetKey)
-   local execCmd = ':normal ' .. motions[motionKey] .. target
-   print(execCmd)
-   vim.cmd(execCmd)
+   local target = reformat_target(target_key)
+   local exec_cmd = ':normal ' .. motions[motion_key] .. target
+   print(exec_cmd)
+   vim.cmd(exec_cmd)
 
-   if motionKey == 'c' or motionKey == 'z' or motionKey == 'Z' then
+   if motion_key == 'c' or motion_key == 'z' or motion_key == 'Z' then
       vim.cmd(':startinsert')
    end
 end
 
-local function serialMap(fnName, motion, keymap, times)
-   local postKey = keymap
+local function serial_map(fn_name, motion, keymap, times)
+   local post_key = keymap
 
    if keymap == '\'' then
-      postKey = '\\\''
+      post_key = '\\\''
    end
 
-   local mappingPrefix = ''
+   local mapping_prefix = ''
 
-   for mappingLv = 1, times, 1 do
+   for mapping_lv = 1, times, 1 do
       if motion ~= '' then
-         Nmap(mappingPrefix .. motion .. keymap, ':lua ' .. fnName .. '(\'' .. motion .. '\', \'' .. postKey .. '\', ' .. mappingLv .. ')<CR>')
+         Nmap(mapping_prefix .. motion .. keymap, ':lua ' .. fn_name .. '(\'' .. motion .. '\', \'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
       else
-         Nmap(mappingPrefix .. ';' .. keymap, ':lua ' .. fnName .. '(\'' .. postKey .. '\', ' .. mappingLv .. ')<CR>')
+         Nmap(mapping_prefix .. ';' .. keymap, ':lua ' .. fn_name .. '(\'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
       end
 
-      mappingPrefix = mappingLv + 1
+      mapping_prefix = mapping_lv + 1
    end
 end
 
-local bracketKeys = { 'j', 'k', 'l', 'h', 'J', 'K', 'L', 'H', ';', ':', '\'' }
+local bracket_keys = { 'j', 'k', 'l', 'h', 'J', 'K', 'L', 'H', ';', ':', '\'' }
 
 local motions = { 'g', 's', 'd', 'c', 'y', 'z', 'Z' }
 
 for _, motion in ipairs(motions) do
-   for _, key in ipairs(bracketKeys) do
+   for _, key in ipairs(bracket_keys) do
       if motion ~= 'g' and (key == 'J' or key == 'H' or key == 'L') then
       else
-         serialMap('customMotions', motion, key, 5)
+         serial_map('custom_motions', motion, key, 5)
       end
    end
 end
 
-local openBracketKeys = { 'j', 'k', 'l', 'h', ';', ':', '\'' }
+local open_bracket_keys = { 'j', 'k', 'l', 'h', ';', ':', '\'' }
 
-for _, key in ipairs(openBracketKeys) do
-   serialMap('deleteBrackets', '', key, 5)
+for _, key in ipairs(open_bracket_keys) do
+   serial_map('delete_brackets', '', key, 5)
 end
