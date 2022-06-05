@@ -70,3 +70,15 @@ vim.api.nvim_create_autocmd(
       end
    }
 )
+
+
+vim.api.nvim_create_autocmd(
+   'filetype',
+   {
+      pattern = 'make',
+
+      callback = function()
+         vim.o.expandtab = false
+      end
+   }
+)
