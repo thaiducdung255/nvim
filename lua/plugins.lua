@@ -69,7 +69,7 @@ return require('packer').startup({
       use { 'windwp/nvim-spectre' }
 
       -- treesitter
-      use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+      use { 'nvim-treesitter/nvim-treesitter', run = ':TSInstall lua python go http css typescript javascript tsx make dockerfile css html json bash rasi' }
       use 'nvim-treesitter/playground'
       use { 'windwp/nvim-ts-autotag' }
       use 'nvim-treesitter/nvim-treesitter-refactor'
