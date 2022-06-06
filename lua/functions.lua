@@ -135,9 +135,7 @@ function _G.custom_motions(motion_key, target_key, repeat_count)
    end
 
    local target = reformat_target(target_key)
-   print('target', target)
    local exec_cmd = ':normal ' .. motions[motion_key] .. target
-   print('exec_cmd', exec_cmd)
    vim.cmd(exec_cmd)
 
    if motion_key == 'c' or motion_key == 'z' or motion_key == 'Z' then

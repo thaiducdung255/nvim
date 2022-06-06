@@ -422,10 +422,11 @@ Keycodes = {
       },
       step_over = {
          ascii = 'do',
-         colemak = ';o',
+         colemak = '<LEADER>do',
       },
       step_into = {
          ascii = 'dn',
+         colemak = '<LEADER>dn',
       },
       step_out = {
          ascii = 'dm',
