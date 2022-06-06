@@ -158,10 +158,12 @@ Keycodes = {
             ascii = 'U',
          },
          next_pos = {
-            ascii = '<LEADER>gn',
+            ascii = 'gn',
+            colemak = 'gk',
          },
          prev_pos = {
-            ascii = '<LEADER>gm',
+            ascii = 'gm',
+            colemak = 'gm',
          },
       },
       term = {
@@ -208,7 +210,10 @@ Keycodes = {
          },
       },
       custom_V = {
-         ascii = '<LEADER>v',
+         ascii = 'V',
+      },
+      custom_super_v = {
+         ascii = '<LEADER>v'
       },
       register = {
          ascii = '<LEADER>r',
@@ -307,26 +312,32 @@ Keycodes = {
    },
    bufferline = {
       buf_pick = {
-         ascii = '<LEADER>gb',
+         ascii = 'gb',
       },
       buf_del = {
-         ascii = '<LEADER>gB',
+         ascii = 'gB',
       },
    },
    comment = {
       line = {
          ascii = ';;',
       },
-      v_mode = {
+      vline = {
          ascii = 'cm',
+      },
+      block = {
+         ascii = '*',
+      },
+      vblock = {
+         ascii = '*',
       }
    },
    easy_align = {
       eq_align = {
-         ascii = 'ge',
+         ascii = 'ae',
       },
       align = {
-         ascii = 'ga',
+         ascii = 'aa',
       },
    },
    custom_fns = {
@@ -375,10 +386,10 @@ Keycodes = {
          ascii = '<LEADER>d',
       },
       pattern = {
-         ascii = '<LEADER><LEADER>',
+         ascii = '<LEADER><ESC>',
       },
       line = {
-         ascii = '<LEADER><ESC>',
+         ascii = '<LEADER><LEADER>',
       },
    },
    lazy_git = {
@@ -647,7 +658,7 @@ Keycodes = {
          ascii = 'gR',
       },
       def_nav = {
-         ascii = 'gnd',
+         ascii = 'gdn',
       },
       usage_next = {
          ascii = 'grj',
@@ -658,7 +669,7 @@ Keycodes = {
          colemak = 'gre'
       },
       list_defs = {
-         ascii = 'gnD',
+         ascii = 'gdN',
       },
       list_defs_toc = {
          ascii = 'gt',

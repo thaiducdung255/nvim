@@ -7,12 +7,16 @@ commentConf.setup({
    ignore   = nil,
    toggler  = {
       line = Get_key_code(Keycodes.comment.line),
+      block = Get_key_code(Keycodes.comment.block),
    },
    opleader = {
-      line = Get_key_code(Keycodes.comment.v_mode),
+      line = Get_key_code(Keycodes.comment.vline),
+      block = Get_key_code(Keycodes.comment.vblock),
    },
    mappings = {
       basic = true,
+      extended = false,
+      extra = false
    },
 })
 

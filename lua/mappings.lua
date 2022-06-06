@@ -65,6 +65,7 @@ Nvmap(Keycodes.sys.scroll.d, '<C-d>')
 Nvmap(Keycodes.sys.scroll.u, '<C-u>')
 
 ---- custom select cmds
+Nmap(Keycodes.sys.custom_super_v, 'V')
 Nmap(Keycodes.sys.custom_V, 'v$h')
 
 ---- register
