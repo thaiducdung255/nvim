@@ -15,7 +15,7 @@ vim.cmd [[function! SynStack()
    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
    endfunc
 
-   nnoremap si :call SynStack()<CR>
+   nnoremap <LEADER>sy :call SynStack()<CR>
 ]]
 
 -- custom highlight colorscheme

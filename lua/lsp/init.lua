@@ -1,4 +1,3 @@
--- lsp sign diagnostic for nvim 0.6
 local signs = { Error = '✕', Warn = '⚠', Hint = '', Info = '' }
 
 for type, icon in pairs(signs) do
@@ -20,14 +19,17 @@ vim.fn.sign_define(
    'LspDiagnosticsSignError',
    { texthl = 'LspDiagnosticsSignError', text = '', numhl = 'LspDiagnosticsSignError' }
 )
+
 vim.fn.sign_define(
    'LspDiagnosticsSignWarning',
    { texthl = 'LspDiagnosticsSignWarning', text = '', numhl = 'LspDiagnosticsSignWarning' }
 )
+
 vim.fn.sign_define(
    'LspDiagnosticsSignHint',
    { texthl = 'LspDiagnosticsSignHint', text = '', numhl = 'LspDiagnosticsSignHint' }
 )
+
 vim.fn.sign_define(
    'LspDiagnosticsSignInformation',
    { texthl = 'LspDiagnosticsSignInformation', text = '', numhl = 'LspDiagnosticsSignInformation' }

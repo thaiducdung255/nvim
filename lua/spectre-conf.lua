@@ -1,14 +1,14 @@
 require('spectre').setup({
-   color_devicons = true,
-   line_sep_start = '┌-----------------------------------------',
-   result_padding = '¦   ',
-   line_sep       = '└-----------------------------------------',
-   highlight = {
+   color_devicons     = true,
+   line_sep_start     = '┌-----------------------------------------',
+   result_padding     = '¦   ',
+   line_sep           = '└-----------------------------------------',
+   highlight          = {
       ui      = 'String',
       search  = 'DiffChange',
       replace = 'DiffDelete'
    },
-   mapping={
+   mapping            = {
       ['toggle_line'] = {
          map  = 'dd',
          cmd  = '<cmd>lua require(\'spectre\').toggle_line()<CR>',
@@ -55,7 +55,7 @@ require('spectre').setup({
          desc = 'toggle search hidden'
       },
    },
-   find_engine = {
+   find_engine        = {
       ['rg'] = {
          cmd = 'rg',
          args = {
@@ -64,7 +64,7 @@ require('spectre').setup({
             '--with-filename',
             '--line-number',
             '--column',
-         } ,
+         },
          options = {
             ['ignore-case'] = {
                value = '--ignore-case',
@@ -83,7 +83,7 @@ require('spectre').setup({
          args = {
             '--vimgrep',
             '-s'
-         } ,
+         },
          options = {
             ['ignore-case'] = {
                value = '-i',
@@ -98,7 +98,7 @@ require('spectre').setup({
          },
       },
    },
-   replace_engine = {
+   replace_engine     = {
       ['sed'] = {
          cmd  = 'sed',
          args = nil
@@ -111,10 +111,10 @@ require('spectre').setup({
          },
       }
    },
-   default = {
+   default            = {
       find = {
          cmd     = 'rg',
-         options = {'ignore-case'}
+         options = { 'ignore-case' }
       },
       replace = {
          cmd = 'sed'
@@ -122,7 +122,7 @@ require('spectre').setup({
    },
    replace_vim_cmd    = 'cdo',
    is_open_target_win = true, --open file on opener window
-   is_insert_mode     = false,   -- start open panel on is_insert_mode
+   is_insert_mode     = false, -- start open panel on is_insert_mode
 })
 
 Nmap(Keycodes.spectre.n_open, [[:lua require('spectre').open()<CR>]])

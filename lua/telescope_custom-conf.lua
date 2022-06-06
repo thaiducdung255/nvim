@@ -10,11 +10,11 @@ local function get_delta_previewer(action)
    return previewers.new_termopen_previewer {
       get_command = function(entry)
 
-      if action == 'diff' then
-         return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=true', 'diff', entry.value }
-      end
+         if action == 'diff' then
+            return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=true', 'diff', entry.value }
+         end
 
-      return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=true', 'diff', entry.value .. '^!' }
+         return { 'git', '-c', 'core.pager=delta', '-c', 'delta.side-by-side=true', 'diff', entry.value .. '^!' }
       end
    }
 end
@@ -68,7 +68,7 @@ local function reformat_eslint_diagnostics(str, delimiter)
       return str, nil, nil
    end
 
-   for diagnostic_record in (str):gmatch('(.-)'..delimiter) do
+   for diagnostic_record in (str):gmatch('(.-)' .. delimiter) do
       local pre = diagnostic_record:sub(0, 1)
 
       if pre == '\n' or pre == '/' then
@@ -76,7 +76,7 @@ local function reformat_eslint_diagnostics(str, delimiter)
             diagnostic_record = diagnostic_record:sub(2)
          end
 
-         local file_name = diagnostic_record:match('^[a-zA-Z0-9\\s/%.%-_]+'):sub(vim.fn.getcwd():len()+2)
+         local file_name = diagnostic_record:match('^[a-zA-Z0-9\\s/%.%-_]+'):sub(vim.fn.getcwd():len() + 2)
          local file_diagnostics = diagnostic_record:match('\n.*'):sub(2)
          table.insert(filenames, file_name)
          line_diagnostics[index] = file_diagnostics
@@ -104,7 +104,7 @@ E.eslint_diagnostics = function()
    pickers.new(otps, {
       prompt_title = 'Eslint diagnostics',
 
-      previewer = previewers.new_termopen_previewer{
+      previewer = previewers.new_termopen_previewer {
          get_command = function(entry)
             local index = entry.index
 
@@ -112,7 +112,7 @@ E.eslint_diagnostics = function()
          end
       },
 
-      finder = finders.new_table{
+      finder = finders.new_table {
          results = filenames,
       },
 

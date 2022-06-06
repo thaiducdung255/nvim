@@ -2,9 +2,9 @@ local gps = require('nvim-gps')
 
 gps.setup {
    separator             = ' > ',
-	depth                 = 0,
-	depth_limit_indicator = '..',
-   icons = {
+   depth                 = 0,
+   depth_limit_indicator = '..',
+   icons                 = {
       ['class-name']     = ' ',
       ['function-name']  = ' ',
       ['method-name']    = ' ',
@@ -41,10 +41,10 @@ local diagnostics = {
    colored = false
 }
 
-require'lualine'.setup {
+require 'lualine'.setup {
    tabline    = {},
    extensions = {},
-   options = {
+   options    = {
       icons_enabled        = true,
       theme                = 'auto',
       component_separators = { left = '|', right = '|' },
@@ -52,7 +52,7 @@ require'lualine'.setup {
       disabled_filetypes   = { 'NvimTree', 'toggleterm', 'Outline' },
       always_divide_middle = true,
    },
-   sections = {
+   sections   = {
       lualine_a = { 'mode' },
       lualine_b = { file_name, { gps.get_location, cond = gps.is_available } },
       lualine_c = { diagnostics },

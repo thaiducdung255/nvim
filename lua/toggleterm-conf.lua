@@ -1,4 +1,4 @@
-require('toggleterm').setup{
+require('toggleterm').setup {
    open_mapping    = Get_key_code(Keycodes.toggle_term.h_open),
    hide_numbers    = true,
    shade_filetypes = {},
@@ -10,18 +10,18 @@ require('toggleterm').setup{
    direction       = 'horizontal',
    close_on_exit   = true,
    shell           = vim.o.shell,
-   size = function(term)
+   size            = function(term)
       if term.direction == 'horizontal' then
          return 15
       elseif term.direction == 'vertical' then
          return vim.o.columns * 0.4
       end
    end,
-   float_opts = {
-      border   = 'single',
-      width    = 200,
-      height   = 100,
-      winblend = 3,
+   float_opts      = {
+      border     = 'single',
+      width      = 200,
+      height     = 100,
+      winblend   = 3,
       highlights = {
          border     = 'Normal',
          background = 'Normal',
