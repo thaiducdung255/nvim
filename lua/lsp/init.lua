@@ -5,14 +5,12 @@ for type, icon in pairs(signs) do
    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
-vim.cmd('nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>')
--- vim.cmd('nnoremap <silent> g. <cmd>lua vim.lsp.buf.hover()<CR>')
--- vim.cmd('nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>')
-vim.cmd('nnoremap <silent> gR <cmd>lua vim.lsp.buf.rename()<CR>')
--- vim.cmd('nnoremap <silent> ca <cmd>lua vim.lsp.buf.code_action()<CR>')
--- vim.cmd('nnoremap <silent> sH <cmd>lua vim.lsp.buf.signature_help()<CR>')
--- vim.cmd('nnoremap <silent> <Leader>fj <cmd>lua vim.lsp.diagnostic.goto_next()<CR>')
--- vim.cmd('nnoremap <silent> <Leader>fk <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>')
+Nmap(Keycodes.lsp.def_nav, vim.lsp.buf.definition)
+Nmap(Keycodes.lsp.hover, vim.lsp.buf.hover)
+Nmap(Keycodes.lsp.code_action, vim.lsp.buf.code_action)
+Nmap(Keycodes.lsp.signature_help, vim.lsp.buf.signature_help)
+-- Nmap('gi', vim.lsp.buf.implementation)
+Nmap(Keycodes.lsp.rename, vim.lsp.buf.rename)
 
 -- lsp sign diagnostic for nvim 0.5
 vim.fn.sign_define(

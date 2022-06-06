@@ -385,6 +385,9 @@ Keycodes = {
       char2 = {
          ascii = '<LEADER>d',
       },
+      word_line = {
+         ascii = 'F',
+      },
       pattern = {
          ascii = '<LEADER><ESC>',
       },
@@ -395,6 +398,23 @@ Keycodes = {
    lazy_git = {
       exec = {
          ascii = '<LEADER>gg',
+      },
+   },
+   lsp = {
+      def_nav = {
+         ascii = 'gd',
+      },
+      signature_help = {
+         ascii = '<LEADER>sh',
+      },
+      hover = {
+         ascii = 'g.',
+      },
+      code_action = {
+         ascii = 'ca',
+      },
+      rename = {
+         ascii = 'gr',
       },
    },
    lsp_saga = {
@@ -625,7 +645,7 @@ Keycodes = {
          ascii = 'gD',
       },
       lsp_ref = {
-         ascii = 'gr',
+         ascii = 'gR',
       },
       git_branch = {
          ascii = '<LEADER>gb',
@@ -656,7 +676,7 @@ Keycodes = {
    },
    ts = {
       rename = {
-         ascii = 'gR',
+         ascii = 'gr',
       },
       def_nav = {
          ascii = 'gdn',
