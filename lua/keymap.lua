@@ -323,7 +323,7 @@ Keycodes = {
          ascii = ';;',
       },
       vline = {
-         ascii = 'cm',
+         ascii = 'go',
       },
       block = {
          ascii = '*',
