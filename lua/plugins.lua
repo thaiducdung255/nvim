@@ -119,6 +119,7 @@ return require('packer').startup({
 
       -- Color scheme
       use 'sainnhe/edge'
+      use 'marko-cerovac/material.nvim'
 
       -- highlight color value
       use 'norcalli/nvim-colorizer.lua'
