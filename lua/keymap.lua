@@ -458,7 +458,7 @@ Keycodes = {
          ascii = 'd<CR>',
       },
       hover = {
-         ascii = 'd<LEADER>',
+         ascii = 'd<ESC>',
       },
    },
    nvim_tree = {

@@ -115,8 +115,8 @@ Imap(Keycodes.sys.symbol.equal, '=')
 Imap(Keycodes.sys.symbol.dangle, '_')
 Imap(Keycodes.sys.symbol.plus, '+')
 Imap(Keycodes.sys.symbol.nl, ',<CR>')
--- Nmap(Keycodes.sys.symbol.open_cmd, ':')
 vim.cmd [[nnoremap <CR> :]]
+vim.cmd [[vnoremap <CR> :]]
 
 Nmap(Keycodes.sys.cmd_nav.mru, ':<Up>')
 Cmap(Keycodes.sys.cmd_nav.l, '<Left>')
