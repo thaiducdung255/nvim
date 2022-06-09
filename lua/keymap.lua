@@ -97,19 +97,20 @@ return {
       },
       w_resize = {
          v_inc = {
+            ascii = '<C-k>',
+            colemak = '<C-e>'
+         },
+         v_desc = {
+            ascii = '<C-j>',
+            colemak = '<C-n>',
+         },
+         h_inc = {
             ascii = '<C-l>',
             colemak = '<C-o>'
          },
-         v_desc = {
-            ascii = '<C-h>',
-         },
-         h_inc = {
-            ascii = '<C-j>',
-            colemak = '<C-n>'
-         },
          h_desc = {
-            ascii = '<C-k>',
-            colemak = '<C-e>'
+            ascii = '<C-h>',
+            colemak = '<C-h>'
          },
       },
       w_split = {

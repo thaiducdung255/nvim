@@ -112,5 +112,17 @@
    "destructuringArr": {
       "prefix": ["dsa"],
       "body": "const [$2] = $1"
+   },
+   "process.env.number": {
+      "prefix": ["pen"],
+      "body": "Number(process.env.$1 || '${2:unknown}')"
+   },
+   "process.env.array": {
+      "prefix": ["pea"],
+      "body": "process.env.$1 || '${2:[]}'"
+   },
+   "process.env.string": {
+      "prefix": ["pes"],
+      "body": "process.env.$1 || '${2:unknown}'"
    }
 }

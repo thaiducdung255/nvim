@@ -11,6 +11,7 @@ vim.cmd('filetype indent on')
 vim.cmd('set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*,*/debug-adapters/*')
 vim.cmd('set complete-=5')
 
+vim.o.laststatus    = 3
 vim.o.shell         = 'zsh'
 vim.o.hidden        = true
 vim.o.encoding      = 'utf-8'

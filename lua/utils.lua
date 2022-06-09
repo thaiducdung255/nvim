@@ -33,6 +33,8 @@ function M.map(mode_str, lhsDict, rhs, isSilent)
       silent = isSilent == true
    }
 
+   if (isSilent == nil) then opts.silent = true end
+
    vim.keymap.set(modes, lhs, rhs, opts)
 end
 

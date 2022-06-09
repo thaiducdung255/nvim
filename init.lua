@@ -36,4 +36,3 @@ require('nvim_dap-conf')
 require('scrollbar-conf')
 require('hlargs-conf')
 require('hop-conf')
-vim.o.laststatus = 3

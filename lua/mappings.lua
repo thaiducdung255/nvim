@@ -9,10 +9,10 @@ map('n', keycodes.sys.nav.d, '<C-w>j')
 map('n', keycodes.sys.nav.l, '<C-w>h')
 
 ---- resize window cmds
-map('n', keycodes.sys.w_resize.v_desc, ':vertical resize -2<CR>')
-map('n', keycodes.sys.w_resize.h_desc, ':resize -2<CR>')
-map('n', keycodes.sys.w_resize.h_inc, ':resize +2<CR>')
-map('n', keycodes.sys.w_resize.v_inc, ':vertical resize +2<CR>')
+map('n', keycodes.sys.w_resize.h_desc, ':vertical resize -2<CR>')
+map('n', keycodes.sys.w_resize.h_inc, ':vertical resize +2<CR>')
+map('n', keycodes.sys.w_resize.v_desc, ':resize -2<CR>')
+map('n', keycodes.sys.w_resize.v_inc, ':resize +2<CR>')
 
 ---- split cmds
 map('n', keycodes.sys.w_split.h, ':split<CR>')
