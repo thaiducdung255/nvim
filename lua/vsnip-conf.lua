@@ -1,17 +1,24 @@
-vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
+local keycodes = require('keymap')
+local get_key_code = require('utils').get_key_code
 
-vim.cmd([[imap <expr> <space> vsnip#expandable() ? '<Plug>(vsnip-expand)' : '<space>']])
-vim.cmd([[smap <expr> <space> vsnip#expandable() ? '<Plug>(vsnip-expand)' : '<space>']])
+vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
+local jump_next = get_key_code(keycodes.vsnip.jump_next)
+local jump_prev = get_key_code(keycodes.vsnip.jump_prev)
+local expand = get_key_code(keycodes.vsnip.expand)
+
+vim.cmd('imap <expr> ' .. expand .. ' vsnip#expandable()  ? \'<Plug>(vsnip-expand)\' : \'' .. expand .. '\'')
+vim.cmd('smap <expr> ' .. expand .. ' vsnip#expandable()  ? \'<Plug>(vsnip-expand)\' : \'' .. expand .. '\'')
 
 -- Expand or jump
 -- vim.cmd([[imap <expr> <space>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<space>']])
 -- vim.cmd([[smap <expr> <space>   vsnip#available(1)  ? '<Plug>(vsnip-expand-or-jump)' : '<space>']])
 
 -- Jump forward or backward
-vim.cmd([[imap <expr> KK vsnip#jumpable(1)  ? '<Plug>(vsnip-jump-next)' : 'KK']])
-vim.cmd([[smap <expr> KK vsnip#jumpable(1)  ? '<Plug>(vsnip-jump-next)' : 'KK']])
-vim.cmd([[imap <expr> JJ vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : 'JJ']])
-vim.cmd([[smap <expr> JJ vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : 'JJ']])
+vim.cmd('imap <expr> ' .. jump_next .. ' vsnip#jumpable(1)  ? \'<Plug>(vsnip-jump-next)\' : \'' .. jump_next .. '\'')
+vim.cmd('smap <expr> ' .. jump_next .. ' vsnip#jumpable(1)  ? \'<Plug>(vsnip-jump-next)\' : \'' .. jump_next .. '\'')
+
+vim.cmd('smap <expr> ' .. jump_prev .. ' vsnip#jumpable(1)  ? \'<Plug>(vsnip-jump-prev)\' : \'' .. jump_prev .. '\'')
+vim.cmd('imap <expr> ' .. jump_prev .. ' vsnip#jumpable(1)  ? \'<Plug>(vsnip-jump-prev)\' : \'' .. jump_prev .. '\'')
 
 -- Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
 vim.cmd([[nmap s <Plug>(vsnip-select-text)]])

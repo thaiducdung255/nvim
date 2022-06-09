@@ -1,4 +1,6 @@
 local map = require('utils').map
+local get_key_code = require('utils').get_key_code
+
 local keycodes = require('keymap')
 
 -- window cmds
@@ -126,10 +128,10 @@ map('i', keycodes.sys.symbol.equal, '=')
 map('i', keycodes.sys.symbol.dangle, '_')
 map('i', keycodes.sys.symbol.plus, '+')
 map('i', keycodes.sys.symbol.nl, ',<CR>')
-vim.cmd [[nnoremap <CR> :]]
-vim.cmd [[vnoremap <CR> :]]
+vim.cmd('nnoremap ' .. get_key_code(keycodes.sys.symbol.cmd_nav.open) .. ' :')
+vim.cmd('vnoremap ' .. get_key_code(keycodes.sys.symbol.cmd_nav.open) .. ' :')
 
-map('n', keycodes.sys.cmd_nav.mru, ':<Up>')
+vim.cmd('nnoremap ' .. get_key_code(keycodes.sys.cmd_nav.mru) .. ' :<Up>')
 map('c', keycodes.sys.cmd_nav.l, '<Left>')
 map('c', keycodes.sys.cmd_nav.next, '<C-n>')
 map('c', keycodes.sys.cmd_nav.prev, '<C-p>')

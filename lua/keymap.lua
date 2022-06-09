@@ -2,24 +2,27 @@ return {
    sys = {
       symbol = {
          cmd_nav = {
+            open = {
+               ascii = '<CR>'
+            },
             mru = {
                ascii = '<LEADER>cc',
             },
             l = {
                ascii = '<M-u>',
-               colemak = '<M-l>',
+               colemak = '<C-h>',
             },
             next = {
                ascii = '<M-i>',
-               colemak = '<M-u>',
+               colemak = '<C-n>',
             },
             prev = {
                ascii = '<M-o>',
-               colemak = '<M-y>',
+               colemak = '<C-e>',
             },
             r = {
                ascii = '<M-p>',
-               colemak = '<M-;>',
+               colemak = '<C-i>',
             },
          },
          open_cmd = {
@@ -756,16 +759,15 @@ return {
    },
    vsnip = {
       expand = {
-         ascii = '',
-         colemak = ''
+         ascii = '<Space>',
       },
       jump_next = {
-         ascii = '',
-         colemak = ''
+         ascii = 'KK',
+         colemak = 'EE'
       },
       jump_prev = {
-         ascii = '',
-         colemak = ''
+         ascii = 'JJ',
+         colemak = 'NN'
       },
       select_text = {
          ascii = '',
