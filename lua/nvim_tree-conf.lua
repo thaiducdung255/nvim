@@ -1,46 +1,52 @@
+local utils = require('utils')
+local keycodes = require('keymap')
+
+local map = utils.map
+local get_key_code = utils.get_key_code
+
 vim.g.nvim_tree_auto_ignore_ft     = 'startify'
 vim.g.nvim_tree_icon_symlink_arrow = '->'
 
 local tree_cb = require 'nvim-tree.config'.nvim_tree_callback
 
 local list = {
-   { key = Get_key_code(Keycodes.nvim_tree.edit), cb = tree_cb('edit') },
-   { key = Get_key_code(Keycodes.nvim_tree.cd), cb = tree_cb('cd') },
-   { key = Get_key_code(Keycodes.nvim_tree.vsplit), cb = tree_cb('vsplit') },
-   { key = Get_key_code(Keycodes.nvim_tree.split), cb = tree_cb('split') },
-   { key = Get_key_code(Keycodes.nvim_tree.tabnew), cb = tree_cb('tabnew') },
-   { key = Get_key_code(Keycodes.nvim_tree.prev_sibling), cb = tree_cb('prev_sibling') },
-   { key = Get_key_code(Keycodes.nvim_tree.next_sibling), cb = tree_cb('next_sibling') },
-   { key = Get_key_code(Keycodes.nvim_tree.parent_node), cb = tree_cb('parent_node') },
-   { key = Get_key_code(Keycodes.nvim_tree.close_node), cb = tree_cb('close_node') },
-   { key = Get_key_code(Keycodes.nvim_tree.preview), cb = tree_cb('preview') },
-   { key = Get_key_code(Keycodes.nvim_tree.first_sibling), cb = tree_cb('first_sibling') },
-   { key = Get_key_code(Keycodes.nvim_tree.last_sibling), cb = tree_cb('last_sibling') },
-   { key = Get_key_code(Keycodes.nvim_tree.toggle_ignored), cb = tree_cb('toggle_ignored') },
-   { key = Get_key_code(Keycodes.nvim_tree.toggle_dotfiles), cb = tree_cb('toggle_dotfiles') },
-   { key = Get_key_code(Keycodes.nvim_tree.refresh), cb = tree_cb('refresh') },
-   { key = Get_key_code(Keycodes.nvim_tree.create), cb = tree_cb('create') },
-   { key = Get_key_code(Keycodes.nvim_tree.remove), cb = tree_cb('remove') },
-   { key = Get_key_code(Keycodes.nvim_tree.rename), cb = tree_cb('rename') },
-   { key = Get_key_code(Keycodes.nvim_tree.full_rename), cb = tree_cb('full_rename') },
-   { key = Get_key_code(Keycodes.nvim_tree.cut), cb = tree_cb('cut') },
-   { key = Get_key_code(Keycodes.nvim_tree.copy), cb = tree_cb('copy') },
-   { key = Get_key_code(Keycodes.nvim_tree.paste), cb = tree_cb('paste') },
-   { key = Get_key_code(Keycodes.nvim_tree.copy_name), cb = tree_cb('copy_name') },
-   { key = Get_key_code(Keycodes.nvim_tree.copy_path), cb = tree_cb('copy_path') },
-   { key = Get_key_code(Keycodes.nvim_tree.copy_absolute_path), cb = tree_cb('copy_absolute_path') },
-   { key = Get_key_code(Keycodes.nvim_tree.prev_git_item), cb = tree_cb('prev_git_item') },
-   { key = Get_key_code(Keycodes.nvim_tree.next_git_item), cb = tree_cb('next_git_item') },
-   { key = Get_key_code(Keycodes.nvim_tree.dir_up), cb = tree_cb('dir_up') },
-   { key = Get_key_code(Keycodes.nvim_tree.close), cb = tree_cb('close') },
-   { key = Get_key_code(Keycodes.nvim_tree.toggle_help), cb = tree_cb('toggle_help') },
+   { key = get_key_code(keycodes.nvim_tree.edit), cb = tree_cb('edit') },
+   { key = get_key_code(keycodes.nvim_tree.cd), cb = tree_cb('cd') },
+   { key = get_key_code(keycodes.nvim_tree.vsplit), cb = tree_cb('vsplit') },
+   { key = get_key_code(keycodes.nvim_tree.split), cb = tree_cb('split') },
+   { key = get_key_code(keycodes.nvim_tree.tabnew), cb = tree_cb('tabnew') },
+   { key = get_key_code(keycodes.nvim_tree.prev_sibling), cb = tree_cb('prev_sibling') },
+   { key = get_key_code(keycodes.nvim_tree.next_sibling), cb = tree_cb('next_sibling') },
+   { key = get_key_code(keycodes.nvim_tree.parent_node), cb = tree_cb('parent_node') },
+   { key = get_key_code(keycodes.nvim_tree.close_node), cb = tree_cb('close_node') },
+   { key = get_key_code(keycodes.nvim_tree.preview), cb = tree_cb('preview') },
+   { key = get_key_code(keycodes.nvim_tree.first_sibling), cb = tree_cb('first_sibling') },
+   { key = get_key_code(keycodes.nvim_tree.last_sibling), cb = tree_cb('last_sibling') },
+   { key = get_key_code(keycodes.nvim_tree.toggle_ignored), cb = tree_cb('toggle_ignored') },
+   { key = get_key_code(keycodes.nvim_tree.toggle_dotfiles), cb = tree_cb('toggle_dotfiles') },
+   { key = get_key_code(keycodes.nvim_tree.refresh), cb = tree_cb('refresh') },
+   { key = get_key_code(keycodes.nvim_tree.create), cb = tree_cb('create') },
+   { key = get_key_code(keycodes.nvim_tree.remove), cb = tree_cb('remove') },
+   { key = get_key_code(keycodes.nvim_tree.rename), cb = tree_cb('rename') },
+   { key = get_key_code(keycodes.nvim_tree.full_rename), cb = tree_cb('full_rename') },
+   { key = get_key_code(keycodes.nvim_tree.cut), cb = tree_cb('cut') },
+   { key = get_key_code(keycodes.nvim_tree.copy), cb = tree_cb('copy') },
+   { key = get_key_code(keycodes.nvim_tree.paste), cb = tree_cb('paste') },
+   { key = get_key_code(keycodes.nvim_tree.copy_name), cb = tree_cb('copy_name') },
+   { key = get_key_code(keycodes.nvim_tree.copy_path), cb = tree_cb('copy_path') },
+   { key = get_key_code(keycodes.nvim_tree.copy_absolute_path), cb = tree_cb('copy_absolute_path') },
+   { key = get_key_code(keycodes.nvim_tree.prev_git_item), cb = tree_cb('prev_git_item') },
+   { key = get_key_code(keycodes.nvim_tree.next_git_item), cb = tree_cb('next_git_item') },
+   { key = get_key_code(keycodes.nvim_tree.dir_up), cb = tree_cb('dir_up') },
+   { key = get_key_code(keycodes.nvim_tree.close), cb = tree_cb('close') },
+   { key = get_key_code(keycodes.nvim_tree.toggle_help), cb = tree_cb('toggle_help') },
 }
 
 vim.cmd([[hi link NvimTreeGitMerge Red]])
 vim.cmd([[hi link NvimTreeFolderIcon Blue]])
 
-Nmap(Keycodes.nvim_tree.toggle_open, ':NvimTreeToggle<CR>')
-Nmap(Keycodes.nvim_tree.toggle_refresh, ':NvimTreeRefresh<CR>')
+map('n', keycodes.nvim_tree.toggle_open, ':NvimTreeToggle<CR>')
+map('n', keycodes.nvim_tree.toggle_refresh, ':NvimTreeRefresh<CR>')
 
 require 'nvim-tree'.setup {
    auto_reload_on_write = true,

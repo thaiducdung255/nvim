@@ -1,5 +1,11 @@
+local keycodes = require('keymap')
+local utils = require('utils')
+
+local map = utils.map
+local get_key_code = utils.get_key_code
+
 require('toggleterm').setup {
-   open_mapping    = Get_key_code(Keycodes.toggle_term.h_open),
+   open_mapping    = get_key_code(keycodes.toggle_term.h_open),
    hide_numbers    = true,
    shade_filetypes = {},
    shade_terminals = true,
@@ -29,4 +35,4 @@ require('toggleterm').setup {
    }
 }
 
-Nmap(Keycodes.toggle_term.v_open, ':ToggleTerm direction=vertical<CR>')
+map('n', keycodes.toggle_term.v_open, ':ToggleTerm direction=vertical<CR>')

@@ -1,3 +1,6 @@
+local get_key_code = require('utils').get_key_code
+local keycodes = require('keymap')
+
 local refactor_config = {
    highlight_definitions = {
       enable = false
@@ -8,17 +11,17 @@ local refactor_config = {
    smart_rename = {
       enable = false,
       keymaps = {
-         smart_rename = Get_key_code(Keycodes.ts.rename)
+         smart_rename = get_key_code(keycodes.ts.rename)
       }
    },
    navigation = {
       enable = false,
       keymaps = {
-         goto_definition      = Get_key_code(Keycodes.ts.def_nav),
-         list_definitions     = Get_key_code(Keycodes.ts.list_defs),
-         list_definitions_toc = Get_key_code(Keycodes.ts.list_defs_toc),
-         goto_next_usage      = Get_key_code(Keycodes.ts.usage_next),
-         goto_previous_usage  = Get_key_code(Keycodes.ts.usage_prev),
+         goto_definition      = get_key_code(keycodes.ts.def_nav),
+         list_definitions     = get_key_code(keycodes.ts.list_defs),
+         list_definitions_toc = get_key_code(keycodes.ts.list_defs_toc),
+         goto_next_usage      = get_key_code(keycodes.ts.usage_next),
+         goto_previous_usage  = get_key_code(keycodes.ts.usage_prev),
       }
    }
 }
@@ -28,10 +31,10 @@ local text_objects_config = {
       enable = true,
       lookahead = true,
       keymaps = {
-         [Get_key_code(Keycodes.ts.outer_block)] = '@block.outer',
-         [Get_key_code(Keycodes.ts.inner_block)] = '@block.inner',
-         [Get_key_code(Keycodes.ts.outer_class)] = '@class.inner',
-         [Get_key_code(Keycodes.ts.inner_class)] = '@class.outer',
+         [get_key_code(keycodes.ts.outer_block)] = '@block.outer',
+         [get_key_code(keycodes.ts.inner_block)] = '@block.inner',
+         [get_key_code(keycodes.ts.outer_class)] = '@class.inner',
+         [get_key_code(keycodes.ts.inner_class)] = '@class.outer',
       },
    },
 }

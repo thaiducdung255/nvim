@@ -1,4 +1,7 @@
-local keyboard_layout = os.getenv('KEYBOARD_LAYOUT')
+local utils = require('utils')
+
+local map             = utils.map
+local keyboard_layout = utils.keyboard_layout
 
 local targets = {
    j      = '%(',
@@ -154,9 +157,9 @@ local function serial_map(fn_name, motion, keymap, times)
 
    for mapping_lv = 1, times, 1 do
       if motion ~= '' then
-         Nmap(mapping_prefix .. motion .. keymap, ':lua ' .. fn_name .. '(\'' .. motion .. '\', \'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
+         map('n', mapping_prefix .. motion .. keymap, ':lua ' .. fn_name .. '(\'' .. motion .. '\', \'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
       else
-         Nmap(mapping_prefix .. ';' .. keymap, ':lua ' .. fn_name .. '(\'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
+         map('n', mapping_prefix .. ';' .. keymap, ':lua ' .. fn_name .. '(\'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
       end
 
       mapping_prefix = mapping_lv + 1

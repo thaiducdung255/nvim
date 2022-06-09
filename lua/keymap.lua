@@ -1,4 +1,4 @@
-Keycodes = {
+return {
    sys = {
       symbol = {
          cmd_nav = {
@@ -216,7 +216,33 @@ Keycodes = {
          ascii = '<LEADER>v'
       },
       register = {
-         ascii = '<LEADER>r',
+         q = {
+            ascii = '<LEADER>rq',
+         },
+         w = {
+            ascii = '<LEADER>rw',
+         },
+         f = {
+            ascii = '<LEADER>rf',
+         },
+         p = {
+            ascii = '<LEADER>rp',
+         },
+         g = {
+            ascii = '<LEADER>rg',
+         },
+         a = {
+            ascii = '<LEADER>ra',
+         },
+         r = {
+            ascii = '<LEADER>rr',
+         },
+         s = {
+            ascii = '<LEADER>rs',
+         },
+         d = {
+            ascii = '<LEADER>rd',
+         },
       },
       case_mod = {
          pascal = {
@@ -435,24 +461,24 @@ Keycodes = {
    },
    dap = {
       continue = {
-         ascii = 'dc',
+         ascii = '<LEADER>dc',
       },
       toggle_break_point = {
-         ascii = 'db',
+         ascii = '<LEADER>db',
       },
       step_over = {
-         ascii = 'do',
+         ascii = '<LEADER>do',
          colemak = '<LEADER>do',
       },
       step_into = {
-         ascii = 'dn',
+         ascii = '<LEADER>dn',
          colemak = '<LEADER>dn',
       },
       step_out = {
-         ascii = 'dm',
+         ascii = '<LEADER>dm',
       },
       disconnect = {
-         ascii = 'dt',
+         ascii = '<LEADER>dt',
       },
       open_repl = {
          ascii = 'd<CR>',

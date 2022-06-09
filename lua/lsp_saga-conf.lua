@@ -1,3 +1,6 @@
+local map = require('utils').map
+local keycodes = require('keymap')
+
 local saga = require 'lspsaga'
 
 saga.init_lsp_saga {
@@ -32,7 +35,7 @@ saga.init_lsp_saga {
    },
 }
 
-Nmap(Keycodes.lsp_saga.preview_def, ':Lspsaga preview_definition<CR>')
-Nmap(Keycodes.lsp_saga.lsp_finder, ':Lspsaga lsp_finder<CR>')
-Nmap(Keycodes.lsp_saga.lsp_diag_next, ':Lspsaga diagnostic_jump_next<CR>')
-Nmap(Keycodes.lsp_saga.lsp_diag_prev, ':Lspsaga diagnostic_jump_prev<CR>')
+map('n', keycodes.lsp_saga.preview_def, ':Lspsaga preview_definition<CR>')
+map('n', keycodes.lsp_saga.lsp_finder, ':Lspsaga lsp_finder<CR>')
+map('n', keycodes.lsp_saga.lsp_diag_next, ':Lspsaga diagnostic_jump_next<CR>')
+map('n', keycodes.lsp_saga.lsp_diag_prev, ':Lspsaga diagnostic_jump_prev<CR>')

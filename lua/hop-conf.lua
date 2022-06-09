@@ -1,3 +1,6 @@
+local map = require('utils').map
+local keycodes = require('keymap')
+
 local hop = require('hop')
 
 hop.setup({
@@ -14,9 +17,9 @@ local function word_line()
    )
 end
 
-NOmap(Keycodes.hop.char1_line, ':HopChar1CurrentLine<CR>')
-NOmap(Keycodes.hop.word, ':HopWord<CR>')
-NOmap(Keycodes.hop.char2, ':HopChar2<CR>')
-NOmap(Keycodes.hop.line, ':HopLine<CR>')
-NOmap(Keycodes.hop.pattern, ':HopPattern<CR>')
--- Nmap(Keycodes.hop.word_line, word_line)
+map('no', keycodes.hop.char1_line, ':HopChar1CurrentLine<CR>')
+map('no', keycodes.hop.word, ':HopWord<CR>')
+map('no', keycodes.hop.char2, ':HopChar2<CR>')
+map('no', keycodes.hop.line, ':HopLine<CR>')
+map('no', keycodes.hop.pattern, ':HopPattern<CR>')
+-- Nmap('no', keycodes.hop.word_line, word_line)

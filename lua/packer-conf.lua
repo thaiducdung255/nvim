@@ -1,4 +1,7 @@
-Nmap(Keycodes.packer.install, ':PackerInstall<CR>')
-Nmap(Keycodes.packer.clean, ':PackerClean<CR>')
-Nmap(Keycodes.packer.sync, ':PackerSync<CR>')
-Nmap(Keycodes.packer.update, ':PackerUpdate<CR>')
+local keycodes = require('keymap')
+local map = require('utils').map
+
+map('n', keycodes.packer.install, ':PackerInstall<CR>')
+map('n', keycodes.packer.clean, ':PackerClean<CR>')
+map('n', keycodes.packer.sync, ':PackerSync<CR>')
+map('n', keycodes.packer.update, ':PackerUpdate<CR>')

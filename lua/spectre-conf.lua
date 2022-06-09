@@ -1,3 +1,6 @@
+local map = require('utils').map
+local keycodes = require('keymap')
+
 require('spectre').setup({
    color_devicons     = true,
    line_sep_start     = '┌-----------------------------------------',
@@ -125,6 +128,6 @@ require('spectre').setup({
    is_insert_mode     = false, -- start open panel on is_insert_mode
 })
 
-Nmap(Keycodes.spectre.n_open, [[:lua require('spectre').open()<CR>]])
-Vmap(Keycodes.spectre.v_open, [[:lua require('spectre').open_visual()<CR>]])
-Nmap(Keycodes.spectre.open_file_search, [[viw:lua require('spectre').open_file_search()<CR>]])
+map('n', keycodes.spectre.n_open, [[:lua require('spectre').open()<CR>]])
+map('v', keycodes.spectre.v_open, [[:lua require('spectre').open_visual()<CR>]])
+map('n', keycodes.spectre.open_file_search, [[viw:lua require('spectre').open_file_search()<CR>]])
