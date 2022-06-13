@@ -191,11 +191,11 @@ return {
       cursor_nav = {
          l = {
             ascii = 'jj',
-            colemak = 'NN',
+            colemak = 'hh',
          },
          r = {
             ascii = 'kk',
-            colemak = 'EE',
+            colemak = 'ii',
          },
          first = {
             ascii = 'ga',
