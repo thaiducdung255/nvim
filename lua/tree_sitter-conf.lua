@@ -3,10 +3,10 @@ local keycodes = require('keymap')
 
 local refactor_config = {
    highlight_definitions = {
-      enable = false
+      enable = true
    },
    highlight_current_scope = {
-      enable = false
+      enable = true
    },
    smart_rename = {
       enable = false,
@@ -26,24 +26,10 @@ local refactor_config = {
    }
 }
 
-local text_objects_config = {
-   select = {
-      enable = true,
-      lookahead = true,
-      keymaps = {
-         [get_key_code(keycodes.ts.outer_block)] = '@block.outer',
-         [get_key_code(keycodes.ts.inner_block)] = '@block.inner',
-         [get_key_code(keycodes.ts.outer_class)] = '@class.inner',
-         [get_key_code(keycodes.ts.inner_class)] = '@class.outer',
-      },
-   },
-}
-
 require 'nvim-treesitter.configs'.setup {
    ensure_installed = false,
    ignore_install   = true,
    refactor         = refactor_config,
-   textobjects      = text_objects_config,
    highlight        = {
       enable  = true,
       disable = { 'http' },
