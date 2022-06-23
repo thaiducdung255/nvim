@@ -1,6 +1,6 @@
 lsp:
 	sudo pacman -S --noconfirm lua-language-server
-	npm i -g bash-language-server typescript-language-server vscode-langservers-extracted vscode-json-languageserver pyright emmet-ls vim-language-server typescript
+	npm i -g bash-language-server typescript-language-server vscode-langservers-extracted vscode-json-languageserver pyright emmet-ls vim-language-server typescript dockerfile-language-server-nodejs
 
 install:
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
