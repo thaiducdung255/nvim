@@ -1,6 +1,6 @@
 local M = {}
 
-M.keyboard_layout = os.getenv('KEYBOARD_LAYOUT')
+M.keyboard_layout = 'colemak'
 
 function M.get_key_code(lhsDict)
    if lhsDict.ascii and lhsDict.colemak then
