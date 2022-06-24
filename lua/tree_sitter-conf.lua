@@ -6,7 +6,7 @@ local refactor_config = {
       enable = true
    },
    highlight_current_scope = {
-      enable = true
+      enable = false
    },
    smart_rename = {
       enable = false,
