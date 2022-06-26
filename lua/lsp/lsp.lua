@@ -131,6 +131,6 @@ lspconfig.emmet_ls.setup {
       'html',
       'css',
       'typescriptreact',
-      'javascriptreact'
+      'javascriptreact',
    }
 }
