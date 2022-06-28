@@ -75,7 +75,7 @@ vim.api.nvim_create_autocmd(
 
 
 vim.api.nvim_create_autocmd(
-   'filetype',
+   'FileType',
    {
       pattern = 'make',
 

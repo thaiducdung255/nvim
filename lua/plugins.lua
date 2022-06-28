@@ -151,7 +151,9 @@ return require('packer').startup({
 
       -- rest api
       use {
-         'NTBBloodbath/rest.nvim',
+         -- 'NTBBloodbath/rest.nvim',
+         'teto/rest.nvim',
+         branch = 'always-send-string',
          requires = { 'nvim-lua/plenary.nvim' },
       }
 

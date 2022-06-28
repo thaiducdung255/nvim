@@ -23,6 +23,7 @@ vim.cmd('hi LspDiagnosticsDefaultHint gui=None')
 -- custom LSP virtual text highlight
 vim.cmd('hi VirtualTextError gui=None guifg=Red')
 vim.cmd('hi VirtualTextWarning gui=None guifg=Orange')
+vim.cmd('hi Visual gui=None guibg=#838383')
 vim.cmd('hi VirtualTextInfo gui=italic guifg=#dfe4ed')
 vim.cmd('hi VirtualTextHint gui=None guifg=#dfe4ed')
 
