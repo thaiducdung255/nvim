@@ -33,6 +33,7 @@ vim.o.undodir       = os.getenv('HOME') .. '/.vim/undodir'
 vim.o.undofile      = true
 vim.o.incsearch     = true
 vim.o.autoread      = true
+vim.o.autowrite     = true
 vim.o.hlsearch      = false
 vim.o.history       = 100
 
