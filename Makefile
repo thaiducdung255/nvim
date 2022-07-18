@@ -12,3 +12,4 @@ install:
 	gem install neovim
 	sudo ln -fs ~/.local/share/gem/ruby/3.0.0/bin/neovim-ruby-host /usr/bin/neovim-ruby-host
 	sudo ln -fs /usr/bin/nvim /usr/bin/vi
+	sudo ln -fs ~/.config/nvim /root/.config/nvim
