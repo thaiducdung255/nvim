@@ -38,7 +38,6 @@ return require('packer').startup({
 
       -- autocomplete
       use 'windwp/nvim-autopairs'
-      use 'github/copilot.vim'
 
       use {
          'hrsh7th/nvim-cmp',
@@ -55,7 +54,6 @@ return require('packer').startup({
             'lukas-reineke/cmp-under-comparator',
             'hrsh7th/cmp-nvim-lsp-signature-help',
             'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-copilot'
          }
       }
 

@@ -25,9 +25,6 @@ return {
                colemak = '<C-i>',
             },
          },
-         open_cmd = {
-            ascii = '<CR>',
-         },
          nl = {
             ascii = ',,',
          },

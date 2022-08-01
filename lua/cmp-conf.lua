@@ -11,7 +11,6 @@ local source_mapping = {
    cmdline_history         = '[His]',
    nvim_lsp_signature_help = '[Arg]',
    nvim_lsp                = '[Lsp]',
-   copilot                 = '[AI]'
 }
 
 cmp.setup {
@@ -49,17 +48,12 @@ cmp.setup {
             vim_item.dup = 0
          end
 
-         -- if entry.source.name == 'nvim_lsp' or entry.source.name == 'nvim_lua' then
-         -- vim_item.dup = 0
-         -- end
-
          vim_item.menu = menu
 
          return vim_item
       end
    },
    sources = {
-      -- { name = 'copilot' },
       { name = 'nvim_lsp_signature_help' },
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
