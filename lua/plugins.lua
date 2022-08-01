@@ -38,6 +38,10 @@ return require('packer').startup({
 
       -- autocomplete
       use 'windwp/nvim-autopairs'
+      use {
+         'tzachar/cmp-tabnine',
+         run = './install.sh'
+      }
 
       use {
          'hrsh7th/nvim-cmp',
