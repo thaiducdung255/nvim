@@ -81,6 +81,22 @@
       "prefix": ["dn"],
       "body": "Date.now()"
    },
+   "typeString": {
+      "prefix": ["ts"],
+      "body": "string"
+   },
+   "typeNumber": {
+      "prefix": ["tn"],
+      "body": "number"
+   },
+   "typeBoolean": {
+      "prefix": ["tb"],
+      "body": "boolean"
+   },
+   "typeVoid": {
+      "prefix": ["tv"],
+      "body": "void"
+   },
    "parseInt": {
       "prefix": ["pi"],
       "body": "parseInt($1, 10)"
