@@ -1,6 +1,8 @@
 lsp:
-	sudo pacman -S --noconfirm lua-language-server
+	sudo pacman -S --noconfirm lua-language-server go
 	npm i -g bash-language-server typescript-language-server vscode-langservers-extracted vscode-json-languageserver pyright emmet-ls vim-language-server typescript dockerfile-language-server-nodejs
+	go install golang.org/x/tools/gopls@latest
+	sudo ln -fs ~/go/bin/gopls /usr/bin/gopls
 
 install:
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
