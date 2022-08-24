@@ -5,5 +5,5 @@ vim.g.edge_disable_italic_comment  = 1
 vim.g.edge_better_performance      = 1
 vim.g.edge_disable_terminal_colors = 1
 
-vim.cmd [[let g:edge_colors_override = { 'black': ['#333333', '232'], 'bg0': ['#202120', '235'], 'bg2': ['#1e1e1e', '236'] }]]
+vim.cmd [[let g:edge_colors_override = { 'black': ['#333333', '232'], 'bg0': ['#0a0a0a', '235'], 'bg2': ['#1e1e1e', '236'] }]]
 vim.cmd('colorscheme edge')
