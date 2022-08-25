@@ -36,12 +36,12 @@ require('material').setup({
       eob_lines      = true -- Hide the end-of-buffer lines
    },
 
-   lualine_style = 'default', -- Lualine style ( can be 'stealth' or 'default' )
+   lualine_style = 'darker', -- Lualine style ( can be 'stealth' or 'default' )
 
    async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
    custom_highlights = {} -- Overwrite highlights with your own
 })
 
-vim.g.material_style = 'oceanic'
+vim.g.material_style = 'darker'
 vim.cmd('colorscheme material')
