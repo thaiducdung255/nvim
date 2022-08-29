@@ -153,9 +153,27 @@ lspconfig.pylsp.setup {
    settings = {
       pylsp = {
          plugins = {
+            pyflakes = {
+               enabled = false,
+            },
             pycodestyle = {
-               ignore = { 'W391' },
-               maxLineLength = 100
+               enabled = false
+            },
+            autopep8 = {
+               enabled = false
+            },
+            yapf = {
+               enabled = true
+            },
+            pydocstyle = {
+               enabled = true
+            },
+            pylint = {
+               enabled = true,
+               args = { '--load-plugins pylint_quotes' }
+            },
+            flake8 = {
+               enabled = true
             }
          }
       }
