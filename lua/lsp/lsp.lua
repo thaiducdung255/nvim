@@ -81,12 +81,6 @@ lspconfig.sumneko_lua.setup {
    end
 }
 
-lspconfig.pyright.setup {
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
-}
-
 lspconfig.bashls.setup {
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
@@ -104,6 +98,7 @@ lspconfig.jsonls.setup {
 }
 
 lspconfig.yamlls.setup {
+   capabilities = capabilities,
    settings = {
       yaml = {
          schemas = {
@@ -116,25 +111,55 @@ lspconfig.yamlls.setup {
 }
 
 lspconfig.dockerls.setup {
+   capabilities = capabilities,
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
    end
 }
 
 lspconfig.vimls.setup {
+   capabilities = capabilities,
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)
    end
 }
 
-lspconfig.eslint.setup {}
+lspconfig.eslint.setup {
+   capabilities = capabilities,
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+   end
+}
 
 lspconfig.html.setup {
-   capabilities = capabilities
+   capabilities = capabilities,
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+   end
 }
 
 lspconfig.cssls.setup {
-   capabilities = capabilities
+   capabilities = capabilities,
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+   end
+}
+
+lspconfig.pylsp.setup {
+   capabilities = capabilities,
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+   end,
+   settings = {
+      pylsp = {
+         plugins = {
+            pycodestyle = {
+               ignore = { 'W391' },
+               maxLineLength = 100
+            }
+         }
+      }
+   }
 }
 
 lspconfig.emmet_ls.setup {
