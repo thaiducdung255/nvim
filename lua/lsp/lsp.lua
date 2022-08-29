@@ -153,6 +153,9 @@ lspconfig.pylsp.setup {
    settings = {
       pylsp = {
          plugins = {
+            mccabe = {
+               enabled = false
+            },
             pyflakes = {
                enabled = false,
             },
@@ -170,10 +173,11 @@ lspconfig.pylsp.setup {
             },
             pylint = {
                enabled = true,
-               args = { '--load-plugins pylint_quotes' }
+               args = { '--load-plugins pylint_quotes' },
             },
             flake8 = {
-               enabled = true
+               enabled = false,
+               ignore = { 'F821', 'F401' }
             }
          }
       }

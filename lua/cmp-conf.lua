@@ -11,7 +11,6 @@ local source_mapping = {
    cmdline_history         = '[His]',
    nvim_lsp_signature_help = '[Arg]',
    nvim_lsp                = '[Lsp]',
-   cmp_tabnine             = '[AI]'
 }
 
 cmp.setup {
@@ -69,7 +68,6 @@ cmp.setup {
       { name = 'path' },
       { name = 'nvim_lua' },
       { name = 'cmdline' },
-      { name = 'cmp_tabnine' },
    },
    experimental = {
       native_menu = false,
