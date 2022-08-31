@@ -35,5 +35,5 @@ vim.cmd('hi VirtualTextHint gui=None guifg=#dfe4ed')
 vim.cmd('hi TSBoolean guifg=#deb974')
 
 -- cursor line highlight
-vim.cmd('hi CursorLineNr guifg=Blue')
+vim.cmd('hi CursorLineNr guifg=Red')
 vim.cmd('hi CursorLine guibg=#0a0a0a')
