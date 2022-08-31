@@ -45,5 +45,5 @@ vim.cmd('hi BufferLineBufferSelected guifg=White') -- bufferline selected
 
 vim.cmd('hi BufferLineTab guibg=#202023 guifg=#33353f') -- buffer tab index indicator
 vim.cmd('hi BufferLineTabSeparator guibg=#33353f guifg=#202023') -- buffer tab index indicator
-vim.cmd('hi BufferLineTabSeparatorSelected guibg=#33353f guifg=Black') -- buffer tab index indicator
+vim.cmd('hi BufferLineTabSeparatorSelected guibg=#33353f guifg=#0a0a0a') -- buffer tab index indicator
 vim.cmd('hi BufferLineTabSelected guifg=White') -- buffer tab index indicator

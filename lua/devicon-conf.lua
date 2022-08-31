@@ -18,123 +18,129 @@ require 'nvim-web-devicons'.setup {
       ['.env.sample'] = {
          icon  = '',
          color = '#428850',
-         name  = 'Env'
+         name  = 'Env1'
       },
       ['.env'] = {
          icon  = '',
          color = '#428850',
-         name  = 'Env'
+         name  = 'Env2'
       },
       ['.env.local'] = {
          icon  = '',
          color = '#428850',
-         name  = 'Env'
+         name  = 'Env3'
       },
       ['package.json'] = {
          icon  = '',
          color = '#a85813',
-         name  = 'npm'
+         name  = 'Npm'
       },
       ['package-lock.json'] = {
          icon  = '',
          color = '#a85813',
-         name  = 'npm'
+         name  = 'Npm1'
       },
       ['yarn.lock'] = {
          icon  = '',
          color = '#a85813',
-         name  = 'npm'
+         name  = 'Npm2'
       },
       ['pnpm-lock.yaml'] = {
          icon  = '',
          color = '#a85813',
-         name  = 'npm'
+         name  = 'Npm3'
       },
       ['tsconfig.tsbuildinfo'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'build'
+         name  = 'Build'
       },
       ['tsconfig.json'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'build'
+         name  = 'Build1'
       },
       ['.editorconfig'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'build'
+         name  = 'Build2'
       },
       ['.eslintrc.json'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'build'
+         name  = 'Build3'
       },
       ['.eslintrc.yml'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'build'
+         name  = 'Build4'
       },
       ['.eslintrc.cjs'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'build'
+         name  = 'Build5'
       },
       ['.eslintrc.js'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'build'
+         name  = 'Build6'
       },
       ['.prettierignore'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'build'
+         name  = 'Build7'
       },
       ['.prettierrc'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'build'
+         name  = 'Build8'
       },
       ['readme.md'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'readme'
+         name  = 'Readme'
       },
       ['README.md'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'readme'
+         name  = 'Readme1'
       },
       ['index.js'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'index'
+         name  = 'Index'
       },
       ['index.ts'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'index'
+         name  = 'Index1'
       },
       ['main.js'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'index'
+         name  = 'Index2'
       },
       ['main.ts'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'index'
+         name  = 'Index3'
       },
       ['app.js'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'index'
+         name  = 'Index4'
       },
       ['app.ts'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'index'
+         name  = 'Index5'
       },
    };
    default  = true;
 }
+
+vim.cmd('hi BufferLineDevIconEnvInactive guibg=#202023') -- buffer tab index indicator
+vim.cmd('hi BufferLineDevIconEnv1Inactive guibg=#202023') -- buffer tab index indicator
+vim.cmd('hi BufferLineDevIconEnv2Inactive guibg=#202023') -- buffer tab index indicator
+vim.cmd('hi BufferLineDevIconIndexInactive guibg=#202023') -- buffer tab index indicator
+vim.cmd('hi BufferLineDevIconIndexInactive guibg=#202023') -- buffer tab index indicator
