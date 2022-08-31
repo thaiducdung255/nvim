@@ -155,11 +155,6 @@ return require('packer').startup({
          requires = { 'nvim-lua/plenary.nvim' },
       }
 
-      -- scrollbar
-      use {
-         'petertriho/nvim-scrollbar',
-      }
-
       -- smart fold
       use {
          'anuvyklack/pretty-fold.nvim',

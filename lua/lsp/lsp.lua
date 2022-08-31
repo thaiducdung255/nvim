@@ -157,7 +157,7 @@ lspconfig.pylsp.setup {
                enabled = false
             },
             pyflakes = {
-               enabled = false,
+               enabled = true,
             },
             pycodestyle = {
                enabled = false

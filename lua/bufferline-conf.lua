@@ -41,7 +41,7 @@ require('bufferline').setup {
    options = {
       -- numbers                 = numbers,
       indicator               = {
-         icon = '▎',
+         icon = '',
          -- style = ''
       },
       modified_icon           = '●',
