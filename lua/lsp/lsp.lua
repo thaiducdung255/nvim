@@ -169,7 +169,7 @@ lspconfig.pylsp.setup {
                enabled = true
             },
             pyflakes = {
-               enabled = true,
+               enabled = false,
             },
             pycodestyle = {
                enabled = false
@@ -188,8 +188,8 @@ lspconfig.pylsp.setup {
                args = { '--load-plugins pylint_quotes' },
             },
             flake8 = {
-               enabled = false,
-               ignore = { 'F821', 'F401' }
+               enabled = true,
+               -- ignore = { 'F821', 'F401' }
             }
          }
       }
