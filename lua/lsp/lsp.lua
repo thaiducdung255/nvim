@@ -184,7 +184,7 @@ lspconfig.pylsp.setup {
                enabled = true
             },
             pylint = {
-               enabled = true,
+               enabled = false,
                args = { '--load-plugins pylint_quotes' },
             },
             flake8 = {
