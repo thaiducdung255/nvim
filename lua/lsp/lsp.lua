@@ -156,6 +156,18 @@ lspconfig.pylsp.setup {
             mccabe = {
                enabled = false
             },
+            mypy = {
+               enabled = true
+            },
+            isort = {
+               enabled = true
+            },
+            black = {
+               enabled = true
+            },
+            memestra = {
+               enabled = true
+            },
             pyflakes = {
                enabled = true,
             },
@@ -166,7 +178,7 @@ lspconfig.pylsp.setup {
                enabled = false
             },
             yapf = {
-               enabled = true
+               enabled = false
             },
             pydocstyle = {
                enabled = true
