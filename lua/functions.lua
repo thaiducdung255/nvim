@@ -157,12 +157,14 @@ local function serial_map(fn_name, motion, keymap, times)
 
    for mapping_lv = 1, times, 1 do
       if motion ~= '' then
-         map('n', mapping_prefix .. motion .. keymap, ':lua ' .. fn_name .. '(\'' .. motion .. '\', \'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
+         map('n', mapping_prefix .. motion .. keymap,
+            ':lua ' .. fn_name .. '(\'' .. motion .. '\', \'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
       else
-         map('n', mapping_prefix .. ';' .. keymap, ':lua ' .. fn_name .. '(\'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
+         map('n', mapping_prefix .. ';' .. keymap,
+            ':lua ' .. fn_name .. '(\'' .. post_key .. '\', ' .. mapping_lv .. ')<CR>')
       end
 
-      mapping_prefix = mapping_lv + 1
+      mapping_prefix = mapping_lv .. 1
    end
 end
 

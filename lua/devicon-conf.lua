@@ -53,47 +53,47 @@ require 'nvim-web-devicons'.setup {
       ['tsconfig.tsbuildinfo'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Build'
+         name  = 'TsconfBuild'
       },
       ['tsconfig.json'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Build1'
+         name  = 'Tsconf'
       },
       ['.editorconfig'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Build2'
+         name  = 'Ediconf'
       },
       ['.eslintrc.json'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Build3'
+         name  = 'Eslint'
       },
       ['.eslintrc.yml'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Build4'
+         name  = 'Eslint1'
       },
       ['.eslintrc.cjs'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Build5'
+         name  = 'Eslint2'
       },
       ['.eslintrc.js'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Build6'
+         name  = 'Eslint3'
       },
       ['.prettierignore'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Build7'
+         name  = 'Prettyignore'
       },
       ['.prettierrc'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Build8'
+         name  = 'Pretty'
       },
       ['readme.md'] = {
          icon  = '',
@@ -139,8 +139,26 @@ require 'nvim-web-devicons'.setup {
    default  = true;
 }
 
-vim.cmd('hi BufferLineDevIconEnvInactive guibg=#202023') -- buffer tab index indicator
-vim.cmd('hi BufferLineDevIconEnv1Inactive guibg=#202023') -- buffer tab index indicator
-vim.cmd('hi BufferLineDevIconEnv2Inactive guibg=#202023') -- buffer tab index indicator
-vim.cmd('hi BufferLineDevIconIndexInactive guibg=#202023') -- buffer tab index indicator
-vim.cmd('hi BufferLineDevIconIndexInactive guibg=#202023') -- buffer tab index indicator
+local dev_icon_groups = {
+   'Ts',
+   'Js',
+   'Go',
+   'Py',
+   'Zsh',
+   'Http',
+   'Yml',
+   'GitlabCI',
+   'Dockerfile',
+   'Ediconf',
+   'Env', 'Env1', 'Env2', 'Env3',
+   'Npm', 'Npm1', 'Npm2', 'Npm3',
+   'TsconfBuild', 'Tsconf',
+   'Eslint', 'Eslint1', 'Eslint2', 'Eslint3',
+   'Prettyignore', 'Pretty',
+   'Readme', 'Readme1',
+   'Index', 'Index1', 'Index2', 'Index3', 'Index4', 'Index5',
+}
+
+for _, dev_icon_group in ipairs(dev_icon_groups) do
+   vim.cmd('hi BufferLineDevIcon' .. dev_icon_group .. 'Inactive guibg=#202023')
+end
