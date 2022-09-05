@@ -153,9 +153,6 @@ lspconfig.pylsp.setup {
    settings = {
       pylsp = {
          plugins = {
-            mccabe = {
-               enabled = false
-            },
             mypy = {
                enabled = true
             },
@@ -163,6 +160,9 @@ lspconfig.pylsp.setup {
                enabled = true
             },
             black = {
+               enabled = true
+            },
+            pydocstyle = {
                enabled = true
             },
             memestra = {
@@ -177,11 +177,11 @@ lspconfig.pylsp.setup {
             autopep8 = {
                enabled = false
             },
-            yapf = {
+            mccabe = {
                enabled = false
             },
-            pydocstyle = {
-               enabled = true
+            yapf = {
+               enabled = false
             },
             pylint = {
                enabled = false,
