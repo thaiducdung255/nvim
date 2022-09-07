@@ -153,20 +153,34 @@ lspconfig.pylsp.setup {
    settings = {
       pylsp = {
          plugins = {
-            mypy = {
+            pylsp_mypy = {
+               enabled = true,
+               args = { '--strict' },
+            },
+            pyls_isort = {
                enabled = true
             },
-            isort = {
-               enabled = true
-            },
-            black = {
+            pyls_memestra = {
                enabled = true
             },
             pydocstyle = {
                enabled = true
             },
-            memestra = {
-               enabled = true
+            flake8 = {
+               enabled = true,
+            },
+            pylint = {
+               enabled = true,
+               -- args = { '--load-plugins pylint_quotes' },
+            },
+            python_lsp_black = {
+               enabled = false
+            },
+            pylsp_rope = {
+               enabled = false
+            },
+            rope_completion = {
+               enabled = false
             },
             pyflakes = {
                enabled = false,
@@ -183,14 +197,6 @@ lspconfig.pylsp.setup {
             yapf = {
                enabled = false
             },
-            pylint = {
-               enabled = false,
-               args = { '--load-plugins pylint_quotes' },
-            },
-            flake8 = {
-               enabled = true,
-               -- ignore = { 'F821', 'F401' }
-            }
          }
       }
    }

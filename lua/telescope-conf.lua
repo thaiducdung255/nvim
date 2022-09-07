@@ -38,7 +38,7 @@ telescope.setup {
       find_command           = { 'ag', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number',
          '--column', '--smart-case' },
       file_ignore_patterns   = { '.git/', 'node_modules/', '.package-lock.json', '.pnpm-lock.yaml', '.yarn-lock.json',
-         'dist/', 'debug-adapters/', '.next/', '.cache/', '.cargo/', '.gnupg/', '.oh-my-zsh/plugins/' },
+         'dist/', 'debug-adapters/', '.next/', '.cache/', '.cargo/', '.gnupg/', '.oh-my-zsh/plugins/', '__init__.py' },
       prompt_prefix          = '> ',
       selection_caret        = '> ',
       entry_prefix           = '  ',
