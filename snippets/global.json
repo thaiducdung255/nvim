@@ -23,13 +23,5 @@
    "$gte": {
       "prefix": ["ge"],
       "body": ">= "
-   },
-   "$or": {
-      "prefix": ["or"],
-      "body": "|| "
-   },
-   "$and": {
-      "prefix": ["an"],
-      "body": "&& "
    }
 }

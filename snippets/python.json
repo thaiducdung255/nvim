@@ -1,0 +1,60 @@
+{
+   "doc_string": {
+      "prefix": ["doc"],
+      "body": "\"\"\"$1.\"\"\""
+   },
+   "import": {
+      "prefix": ["rep"],
+      "body": "from $1 import $2"
+   },
+   "init_attr": {
+      "prefix": ["sa"],
+      "body": [
+         "self.$1 = $1"
+      ]
+   },
+   "type": {
+      "prefix": ["ct"],
+      "body": [
+         "class $1:",
+         "\t\"\"\"${2:$1}.\"\"\"",
+         "\t",
+         "\tdef __init__(self, $3: $4):",
+         "\t\t\"\"\"${5:Initialize method}.\"\"\"",
+         "\t\t$6"
+      ]
+   },
+   "pydantic_type": {
+      "prefix": ["pt"],
+      "body": [
+         "class $1(${2:BaseModel}):",
+         "\t\"\"\"${3:$1}.\"\"\"",
+         "\t",
+         "\t$4: $5"
+      ]
+   },
+   "f_string": {
+      "prefix": ["fs"],
+      "body": "f\"$1\""
+   },
+   "key_value": {
+      "prefix": ["kv"],
+      "body": "\"$1\":${2:$1}"
+   },
+   "type_string": {
+      "prefix": ["ts"],
+      "body": "$1: str"
+   },
+   "type_int": {
+      "prefix": ["ti"],
+      "body": "$1: int"
+   },
+   "type_bool": {
+      "prefix": ["tb"],
+      "body": "$1: bool"
+   },
+   "type_none": {
+      "prefix": ["tn"],
+      "body": "$1: None"
+   }
+}

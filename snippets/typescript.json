@@ -1,4 +1,12 @@
 {
+   "$or": {
+      "prefix": ["or"],
+      "body": "|| "
+   },
+   "$and": {
+      "prefix": ["an"],
+      "body": "&& "
+   },
    "import_module": {
       "prefix": ["rem"],
       "body": "import $1 from '$1'"
@@ -81,21 +89,33 @@
       "prefix": ["dn"],
       "body": "Date.now()"
    },
+   "typeStringObject": {
+      "prefix": ["tS"],
+      "body": "$1: String"
+   },
+   "typeNumberObject": {
+      "prefix": ["tN"],
+      "body": "$1: Number"
+   },
+   "typeBooleanObject": {
+      "prefix": ["tB"],
+      "body": "$1: Boolean"
+   },
    "typeString": {
       "prefix": ["ts"],
-      "body": "string"
+      "body": "$1: string"
    },
    "typeNumber": {
       "prefix": ["tn"],
-      "body": "number"
+      "body": "$1: number"
    },
    "typeBoolean": {
       "prefix": ["tb"],
-      "body": "boolean"
+      "body": "$1: boolean"
    },
    "typeVoid": {
       "prefix": ["tv"],
-      "body": "void"
+      "body": "$1: void"
    },
    "parseInt": {
       "prefix": ["pi"],
