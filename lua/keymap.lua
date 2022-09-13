@@ -759,12 +759,12 @@ return {
          ascii = '<Space>',
       },
       jump_next = {
-         ascii = 'KK',
-         colemak = 'EE'
+         ascii = '<C-k>',
+         colemak = '<C-e>'
       },
       jump_prev = {
-         ascii = 'JJ',
-         colemak = 'NN'
+         ascii = '<C-j>',
+         colemak = '<C-n>'
       },
       select_text = {
          ascii = '',
