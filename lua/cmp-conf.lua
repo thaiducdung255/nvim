@@ -67,7 +67,6 @@ cmp.setup {
       },
       { name = 'path' },
       { name = 'nvim_lua' },
-      { name = 'cmdline' },
    },
    experimental = {
       native_menu = false,
