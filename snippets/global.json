@@ -23,5 +23,9 @@
    "$gte": {
       "prefix": ["ge"],
       "body": ">= "
+   },
+   "environment_variable": {
+      "prefix": ["ev"],
+      "body": "{{$1}}"
    }
 }
