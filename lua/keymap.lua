@@ -410,7 +410,7 @@ return {
          ascii = '<LEADER>w',
       },
       char2 = {
-         ascii = '<LEADER>d',
+         ascii = '<LEADER>W',
       },
       word_line = {
          ascii = 'F',
