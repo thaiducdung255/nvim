@@ -19,7 +19,7 @@ return require('packer').startup({
       use { 'b0o/schemastore.nvim' }
 
       -- outline
-      use 'simrat39/symbols-outline.nvim'
+      -- use 'simrat39/symbols-outline.nvim'
 
       -- telescope
       use { 'nvim-lua/popup.nvim' }
