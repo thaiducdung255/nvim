@@ -3,15 +3,15 @@ vim.opt.completeopt = 'menuone,noselect'
 
 local lspkind = require('lspkind')
 
-local source_mapping = {
-   vsnip                   = '[Snp]',
-   buffer                  = '[Buf]',
-   nvim_lua                = '[Lua]',
-   cmdline                 = '[Cmd]',
-   cmdline_history         = '[His]',
-   nvim_lsp_signature_help = '[Arg]',
-   nvim_lsp                = '[Lsp]',
-}
+-- local source_mapping = {
+--    vsnip                   = '[Snp]',
+--    buffer                  = '[Buf]',
+--    nvim_lua                = '[Lua]',
+--    cmdline                 = '[Cmd]',
+--    cmdline_history         = '[His]',
+--    nvim_lsp_signature_help = '[Arg]',
+--    nvim_lsp                = '[Lsp]',
+-- }
 
 cmp.setup {
    snippet = {
@@ -42,35 +42,58 @@ cmp.setup {
    formatting = {
       format = function(entry, vim_item)
          vim_item.kind = lspkind.presets.default[vim_item.kind]
-         local menu = source_mapping[entry.source.name]
+         -- local menu = source_mapping[entry.source.name]
 
          if entry.source.name == 'cmdline' or entry.source.name == 'cmdline_history' then
             vim_item.dup = 0
          end
 
-         vim_item.menu = menu
+         -- vim_item.menu = menu
 
          return vim_item
       end
    },
    sources = {
-      { name = 'nvim_lsp_signature_help' },
-      { name = 'vsnip' },
-      { name = 'nvim_lsp' },
+      {
+         name = 'nvim_lsp_signature_help',
+         max_item_count = 15,
+      },
+      {
+         name = 'vsnip',
+         max_item_count = 10,
+      },
+      {
+         name = 'nvim_lsp',
+         max_item_count = 20,
+      },
       {
          name = 'buffer',
          option = {
             get_bufnrs = function()
                return vim.api.nvim_list_bufs()
             end
-         }
+         },
+         max_item_count = 5,
       },
-      { name = 'path' },
-      { name = 'nvim_lua' },
+      {
+         name = 'path',
+         max_item_count = 5,
+      },
+      {
+         name = 'nvim_lua',
+         max_item_count = 20,
+      },
+   },
+   view = {
+      -- entries = "native"
    },
    experimental = {
-      native_menu = false,
-      ghost_text  = true
+      ghost_text = true
+   },
+   performance = {
+      debounce = 200,
+      throttle = 100,
+      fetching_timeout = 400,
    },
 }
 
