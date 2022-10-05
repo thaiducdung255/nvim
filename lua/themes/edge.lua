@@ -41,9 +41,11 @@ vim.cmd('hi BufferLineSeparatorSelected guifg=#33353f') -- bufferline sep select
 vim.cmd('hi BufferLineSeparatorVisible guifg=#33353f guibg=#070707') -- bufferline sep selected
 
 vim.cmd('hi BufferLineBufferVisible guibg=#070707 guifg=White') -- bufferline visible
-vim.cmd('hi BufferLineBufferSelected guifg=Red') -- bufferline selected
+vim.cmd('hi BufferLineBufferSelected guifg=#6cb6eb') -- bufferline selected
 
 vim.cmd('hi BufferLineTab guibg=#202023 guifg=#33353f') -- buffer tab index indicator
 vim.cmd('hi BufferLineTabSeparator guibg=#33353f guifg=#202023') -- buffer tab index indicator
 vim.cmd('hi BufferLineTabSeparatorSelected guibg=#33353f guifg=#0a0a0a') -- buffer tab index indicator
-vim.cmd('hi BufferLineTabSelected guifg=Red') -- buffer tab index indicator
+vim.cmd('hi BufferLineTabSelected guifg=#6cb6eb') -- buffer tab index indicator
+
+vim.cmd('hi PmenuSel guibg=#33353f') -- completion menu custom
