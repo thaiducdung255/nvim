@@ -1,5 +1,5 @@
-local get_key_code = require('utils').get_key_code
-local keycodes = require('keymap')
+local get_key_code = require('_utils').get_key_code
+local keycodes = require('_keymap')
 
 local commentConf = require('Comment')
 local commentFt = require('Comment.ft')

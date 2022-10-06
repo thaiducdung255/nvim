@@ -1,5 +1,5 @@
-local keycodes = require('keymap')
-local get_key_code = require('utils').get_key_code
+local keycodes = require('_keymap')
+local get_key_code = require('_utils').get_key_code
 
 vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
 local jump_next = get_key_code(keycodes.vsnip.jump_next)

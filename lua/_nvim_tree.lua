@@ -1,5 +1,5 @@
-local utils = require('utils')
-local keycodes = require('keymap')
+local utils = require('_utils')
+local keycodes = require('_keymap')
 
 local map = utils.map
 local get_key_code = utils.get_key_code

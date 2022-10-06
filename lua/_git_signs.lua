@@ -1,5 +1,5 @@
-local get_key_code = require('utils').get_key_code
-local keycodes = require('keymap')
+local get_key_code = require('_utils').get_key_code
+local keycodes = require('_keymap')
 
 require('gitsigns').setup {
    numhl                             = false,
@@ -24,8 +24,10 @@ require('gitsigns').setup {
    keymaps = {
       noremap = true,
 
-      ['n ' .. get_key_code(keycodes.git_signs.next_hunk)] = { expr = true, "&diff ? '' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'" },
-      ['n ' .. get_key_code(keycodes.git_signs.prev_hunk)] = { expr = true, "&diff ? '' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'" },
+      ['n ' .. get_key_code(keycodes.git_signs.next_hunk)] = { expr = true,
+         "&diff ? '' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'" },
+      ['n ' .. get_key_code(keycodes.git_signs.prev_hunk)] = { expr = true,
+         "&diff ? '' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'" },
 
       ['n ' .. get_key_code(keycodes.git_signs.reset_hunk)] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
       ['v ' .. get_key_code(keycodes.git_signs.reset_hunk)] = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',

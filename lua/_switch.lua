@@ -1,5 +1,5 @@
-local get_key_code = require('utils').get_key_code
-local keycodes = require('keymap')
+local get_key_code = require('_utils').get_key_code
+local keycodes = require('_keymap')
 
 vim.g.switch_mapping = get_key_code(keycodes.switch.exec)
 

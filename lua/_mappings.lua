@@ -1,7 +1,7 @@
-local map = require('utils').map
-local get_key_code = require('utils').get_key_code
+local map = require('_utils').map
+local get_key_code = require('_utils').get_key_code
 
-local keycodes = require('keymap')
+local keycodes = require('_keymap')
 
 -- window cmds
 ---- nav cmds

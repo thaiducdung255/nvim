@@ -1,9 +1,9 @@
-local map        = require('utils').map
+local map        = require('_utils').map
 local actions    = require('telescope.actions')
 local previewers = require('telescope.previewers')
 local telescope  = require('telescope')
 local sorters    = require('telescope.sorters')
-local keycodes   = require('keymap')
+local keycodes   = require('_keymap')
 
 P = function(v)
    print(vim.inspect(v))

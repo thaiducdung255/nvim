@@ -121,6 +121,7 @@ return require('packer').startup({
       -- git
       use { 'lewis6991/gitsigns.nvim' }
       use 'kdheepak/lazygit.nvim'
+      use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
       -- editorconfig
       use 'editorconfig/editorconfig-vim'

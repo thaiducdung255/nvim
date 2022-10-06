@@ -1,5 +1,5 @@
-local map = require('utils').map
-local keycodes = require('keymap')
+local map = require('_utils').map
+local keycodes = require('_keymap')
 
 vim.g.lazygit_floating_window_winblend       = 0
 vim.g.lazygit_floating_window_scaling_factor = 0.92

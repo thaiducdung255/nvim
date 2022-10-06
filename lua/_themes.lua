@@ -1,3 +1,5 @@
+require('_themes/' .. vim.g.theme)
+
 vim.cmd [[function! SynStack()
    if !exists("*synstack")
       return
@@ -8,8 +10,6 @@ vim.cmd [[function! SynStack()
 
    nnoremap <LEADER>sy :call SynStack()<CR>
 ]]
-
-require('themes/' .. vim.g.theme)
 
 -- custom highlight colorscheme
 -- vim.cmd('hi TabLineSel guibg=grey')
