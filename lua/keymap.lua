@@ -404,16 +404,16 @@ return {
    },
    hop = {
       char1_line = {
-         ascii = 'f',
+         ascii = 'F',
       },
       word = {
          ascii = '<LEADER>w',
       },
       char2 = {
-         ascii = '<LEADER>W',
+         ascii = '<LEADER>o',
       },
       word_line = {
-         ascii = 'F',
+         ascii = 'f',
       },
       pattern = {
          ascii = '<LEADER><ESC>',

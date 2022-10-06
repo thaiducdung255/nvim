@@ -8,18 +8,14 @@ hop.setup({
    keys = 'arstdhneioqwfpluy'
 })
 
-local function word_line()
-   return hop.hint_char2(
-      {
-         current_line_only = true,
-         inclusive_jump = true
-      }
-   )
-end
-
 map('no', keycodes.hop.char1_line, ':HopChar1CurrentLine<CR>')
-map('no', keycodes.hop.word, ':HopWord<CR>')
-map('no', keycodes.hop.char2, ':HopChar2<CR>')
-map('no', keycodes.hop.line, ':HopLine<CR>')
-map('no', keycodes.hop.pattern, ':HopPattern<CR>')
--- Nmap('no', keycodes.hop.word_line, word_line)
+map('no', keycodes.hop.word, ':HopWordMW<CR>')
+map('no', keycodes.hop.char2, ':HopChar2MW<CR>')
+map('no', keycodes.hop.line, ':HopLineMW<CR>')
+map('no', keycodes.hop.word_line, ':HopWordCurrentLine<CR>')
+map('no', keycodes.hop.pattern, ':HopPatternMW<CR>')
+
+-- custom highlights
+vim.cmd('hi HopNextKey guifg=Red')
+vim.cmd('hi HopNextKey1 guifg=Red')
+vim.cmd('hi HopNextKey2 guifg=Red')
