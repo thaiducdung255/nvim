@@ -186,14 +186,6 @@ return {
          },
       },
       cursor_nav = {
-         l = {
-            ascii = 'jj',
-            colemak = 'hh',
-         },
-         r = {
-            ascii = 'kk',
-            colemak = 'ii',
-         },
          first = {
             ascii = 'ga',
          },
@@ -424,7 +416,169 @@ return {
    },
    lazy_git = {
       exec = {
-         ascii = '<LEADER>gg',
+         ascii = '<LEADER>lg',
+      },
+   },
+   diff_view = {
+      open = {
+         ascii = '<LEADER>gg'
+      },
+      common = {
+         select_next_entry = {
+            ascii = '<TAB>'
+         },
+         select_prev_entry = {
+            ascii = '<S-TAB>'
+         },
+         next_entry = {
+            ascii = 'j',
+         },
+         prev_entry = {
+            ascii = 'k',
+         },
+         goto_file = {
+            ascii = 'o',
+         },
+         goto_file_split = {
+            ascii = 'O',
+         },
+         goto_file_tab = {
+            ascii = '<C-o>',
+         },
+         scroll_view_up = {
+            ascii = 'M'
+         },
+         scroll_view_down = {
+            ascii = 'm'
+         },
+         focus_files = {
+            ascii = '<LEADER>e'
+         },
+         toggle_files = {
+            ascii = '<LEADER>b'
+         },
+         cycle_layout = {
+            ascii = 'i'
+         },
+      },
+      view = {
+         focus_files = {
+            ascii = '<LEADER>e',
+         },
+         toggle_files = {
+            ascii = '<LEADER>b',
+         },
+         cycle_layout = {
+            ascii = '<LEADER>cl',
+         },
+         prev_conflict = {
+            ascii = '<LEADER>cn',
+         },
+         next_conflict = {
+            ascii = '<LEADER>ce',
+         },
+         conflict_choose_ours = {
+            ascii = '<LEADER>co',
+         },
+         conflict_choose_theirs = {
+            ascii = '<LEADER>ct',
+         },
+         conflict_choose_base = {
+            ascii = '<LEADER>cb',
+         },
+         conflict_choose_all = {
+            ascii = '<LEADER>ca',
+         },
+         conflict_choose_none = {
+            ascii = '<LEADER>cc',
+         },
+      },
+      diff1 = {},
+      diff2 = {},
+      diff3 = {
+         diff_get_ours = {
+            ascii = '2do',
+         },
+         diff_get_theirs = {
+            ascii = '3do',
+         },
+      },
+      diff4 = {
+         diff_get_base = {
+            ascii = '1do',
+         },
+         diff_get_ours = {
+            ascii = '2do',
+         },
+         diff_get_theirs = {
+            ascii = '3do',
+         },
+      },
+      fp = {
+         select_entry = {
+            ascii = '<CR>',
+         },
+         toggle_stage_entry = {
+            ascii = 's',
+         },
+         stage_all = {
+            ascii = 'S',
+         },
+         unstage_all = {
+            ascii = 'u',
+         },
+         restore_entry = {
+            ascii = 'x',
+         },
+         open_commit_log = {
+            ascii = 'l',
+         },
+         listing_style = {
+            ascii = '<LEADER>ls',
+         },
+         toggle_flatten_dirs = {
+            ascii = '<LEADER>fd',
+         },
+         refresh_files = {
+            ascii = 'r',
+         },
+         prev_conflict = {
+            ascii = '<LEADER>cn',
+         },
+         next_conflict = {
+            ascii = '<LEADER>ce',
+         },
+      },
+      fhp = {
+         opions = {
+            ascii = '?'
+         },
+         open_in_diffview = {
+            ascii = 'o'
+         },
+         copy_hash = {
+            ascii = 'y'
+         },
+         open_commit_log = {
+            ascii = 'l'
+         },
+         open_all_folds = {
+            ascii = 'za'
+         },
+         close_all_folds = {
+            ascii = 'zf'
+         },
+         select_entry = {
+            ascii = '<CR>'
+         },
+      },
+      op = {
+         select_entry = {
+            ascii = '<Tab>'
+         },
+         close = {
+            ascii = 'q'
+         }
       },
    },
    lsp = {
@@ -654,7 +808,7 @@ return {
          ascii = 'td',
       },
       cmd = {
-         ascii = '<LEADER>cm',
+         ascii = 'cm',
       },
       cmd_his = {
          ascii = '<LEADER>ch',
