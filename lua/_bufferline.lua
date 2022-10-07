@@ -1,5 +1,5 @@
 local map = require('_utils').map
-local keycodes = require('_keymap')
+local keycodes = require('_keymap').bufferline
 
 local function numbers(opts)
    return string.format('%s.', opts.ordinal)
@@ -66,5 +66,5 @@ require('bufferline').setup {
    }
 }
 
-map('n', keycodes.bufferline.buf_pick, ':BufferLinePick<CR>')
-map('n', keycodes.bufferline.buf_del, ':BufferLinePickClose<CR>')
+map('n', keycodes.buf_pick, ':BufferLinePick<CR>')
+map('n', keycodes.buf_del, ':BufferLinePickClose<CR>')

@@ -1,4 +1,4 @@
 local map = require('_utils').map
-local keycodes = require('_keymap')
+local keycodes = require('_keymap').maximizer
 
-map('n', keycodes.maximizer.toggle_max, ':MaximizerToggle<CR>')
+map('n', keycodes.toggle_max, ':MaximizerToggle<CR>')

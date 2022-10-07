@@ -1,7 +1,7 @@
-local keycodes = require('_keymap')
 local map = require('_utils').map
+local keycodes = require('_keymap').packer
 
-map('n', keycodes.packer.install, ':PackerInstall<CR>')
-map('n', keycodes.packer.clean, ':PackerClean<CR>')
-map('n', keycodes.packer.sync, ':PackerSync<CR>')
-map('n', keycodes.packer.update, ':PackerUpdate<CR>')
+map('n', keycodes.install, ':PackerInstall<CR>')
+map('n', keycodes.clean, ':PackerClean<CR>')
+map('n', keycodes.sync, ':PackerSync<CR>')
+map('n', keycodes.update, ':PackerUpdate<CR>')

@@ -1,5 +1,5 @@
 local get_key_code = require('_utils').get_key_code
-local keycodes = require('_keymap')
+local keycodes = require('_keymap').git_signs
 
 require('gitsigns').setup {
    numhl                             = false,
@@ -24,21 +24,21 @@ require('gitsigns').setup {
    keymaps = {
       noremap = true,
 
-      ['n ' .. get_key_code(keycodes.git_signs.next_hunk)] = { expr = true,
+      ['n ' .. get_key_code(keycodes.next_hunk)] = { expr = true,
          "&diff ? '' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'" },
-      ['n ' .. get_key_code(keycodes.git_signs.prev_hunk)] = { expr = true,
+      ['n ' .. get_key_code(keycodes.prev_hunk)] = { expr = true,
          "&diff ? '' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'" },
 
-      ['n ' .. get_key_code(keycodes.git_signs.reset_hunk)] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-      ['v ' .. get_key_code(keycodes.git_signs.reset_hunk)] = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
-      ['n ' .. get_key_code(keycodes.git_signs.reset_buf)] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
+      ['n ' .. get_key_code(keycodes.reset_hunk)] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
+      ['v ' .. get_key_code(keycodes.reset_hunk)] = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
+      ['n ' .. get_key_code(keycodes.reset_buf)] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
 
-      ['n ' .. get_key_code(keycodes.git_signs.preview_hunk)] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-      ['n ' .. get_key_code(keycodes.git_signs.diff_this)] = '<cmd>lua require"gitsigns".diffthis()<CR>',
+      ['n ' .. get_key_code(keycodes.preview_hunk)] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
+      ['n ' .. get_key_code(keycodes.diff_this)] = '<cmd>lua require"gitsigns".diffthis()<CR>',
 
-      ['n ' .. get_key_code(keycodes.git_signs.set_loc_list)] = '<cmd>lua require"gitsigns".setloclist()<CR>',
+      ['n ' .. get_key_code(keycodes.set_loc_list)] = '<cmd>lua require"gitsigns".setloclist()<CR>',
 
-      ['o ' .. get_key_code(keycodes.git_signs.select_hunk)] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
-      ['x ' .. get_key_code(keycodes.git_signs.select_hunk)] = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
+      ['o ' .. get_key_code(keycodes.select_hunk)] = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
+      ['x ' .. get_key_code(keycodes.select_hunk)] = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
    },
 }

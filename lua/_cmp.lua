@@ -44,9 +44,9 @@ cmp.setup {
          vim_item.kind = lspkind.presets.default[vim_item.kind]
          -- local menu = source_mapping[entry.source.name]
 
-         if entry.source.name == 'cmdline' or entry.source.name == 'cmdline_history' then
-            vim_item.dup = 0
-         end
+         -- if entry.source.name == 'cmdline' or entry.source.name == 'cmdline_history' then
+         -- vim_item.dup = 0
+         -- end
 
          -- vim_item.menu = menu
 
@@ -82,6 +82,14 @@ cmp.setup {
       {
          name = 'nvim_lua',
          max_item_count = 20,
+      },
+      {
+         name = 'cmdline',
+         max_item_count = 20,
+      },
+      {
+         name = 'cmdline_history',
+         max_item_count = 5,
       },
    },
    view = {

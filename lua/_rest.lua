@@ -1,5 +1,5 @@
 local map = require('_utils').map
-local keycodes = require('_keymap')
+local keycodes = require('_keymap').rest
 
 require('rest-nvim').setup({
    result_split_horizontal  = false,
@@ -18,8 +18,8 @@ require('rest-nvim').setup({
    },
 })
 
-map('n', keycodes.rest.run, [[:lua require('rest-nvim').run()<CR>]])
-map('n', keycodes.rest.curl, [[:lua require('rest-nvim').run(true)<CR>]])
+map('n', keycodes.run, [[:lua require('rest-nvim').run()<CR>]])
+map('n', keycodes.curl, [[:lua require('rest-nvim').run(true)<CR>]])
 
 vim.api.nvim_create_autocmd(
    'FileType',

@@ -1,7 +1,7 @@
 local get_key_code = require('_utils').get_key_code
-local keycodes = require('_keymap')
+local keycodes = require('_keymap').switch
 
-vim.g.switch_mapping = get_key_code(keycodes.switch.exec)
+vim.g.switch_mapping = get_key_code(keycodes.exec)
 
 
 vim.api.nvim_create_autocmd(

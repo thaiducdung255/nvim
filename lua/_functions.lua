@@ -1,4 +1,6 @@
-local utils = require('_utils')
+local utils        = require('_utils')
+local get_key_code = require('_utils').get_key_code
+local keycodes     = require('_keymap').sys
 
 local map             = utils.map
 local keyboard_layout = utils.keyboard_layout

@@ -1,4 +1,4 @@
 local map = require('_utils').map
-local keycodes = require('_keymap')
+local keycodes = require('_keymap').undo_tree
 
-map('n', keycodes.undo_tree.show, ':UndotreeShow<CR>')
+map('n', keycodes.show, ':UndotreeShow<CR>')
