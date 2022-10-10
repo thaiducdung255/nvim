@@ -130,7 +130,7 @@ require 'nvim-tree'.setup {
    },
    filters              = {
       dotfiles = false,
-      custom   = { '.gitignore', 'node_modules/', 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml' },
+      custom   = { '.gitignore', 'node_modules/', 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml', '__init__.py' },
       exclude  = {},
    },
    git                  = {
