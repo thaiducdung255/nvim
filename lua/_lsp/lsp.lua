@@ -21,12 +21,23 @@ local function set_lsp_config(client, bufnr)
 
    vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-   if client.resolved_capabilities.document_formatting then
+   if client.server_capabilities.documentFormattingProvider then
       vim.cmd [[command! -buffer Fmt lua vim.lsp.buf.formatting_sync(nil, 1000)]]
       vim.cmd [[augroup LspFormatOnSave]]
       vim.cmd [[autocmd! BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 500)]]
       vim.cmd [[augroup END]]
    end
+end
+
+local base_servers = { 'dockerls', 'vimls', 'eslint', 'html', 'cssls', 'bashls', 'sumneko_lua', 'gopls' }
+
+for _, lsp_server in ipairs(base_servers) do
+   lspconfig[lsp_server].setup {
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+         set_lsp_config(client, bufnr)
+      end
+   }
 end
 
 vim.api.nvim_create_autocmd(
@@ -60,24 +71,6 @@ lspconfig.tsserver.setup {
    end
 }
 
-lspconfig.gopls.setup {
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
-}
-
-lspconfig.sumneko_lua.setup {
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
-}
-
-lspconfig.bashls.setup {
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
-}
-
 lspconfig.jsonls.setup {
    capabilities = capabilities,
    cmd = { 'vscode-json-languageserver', '--stdio' },
@@ -99,41 +92,6 @@ lspconfig.yamlls.setup {
          },
       },
    }
-}
-
-lspconfig.dockerls.setup {
-   capabilities = capabilities,
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
-}
-
-lspconfig.vimls.setup {
-   capabilities = capabilities,
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
-}
-
-lspconfig.eslint.setup {
-   capabilities = capabilities,
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
-}
-
-lspconfig.html.setup {
-   capabilities = capabilities,
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
-}
-
-lspconfig.cssls.setup {
-   capabilities = capabilities,
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end
 }
 
 lspconfig.pylsp.setup {
@@ -195,6 +153,9 @@ lspconfig.pylsp.setup {
 
 lspconfig.emmet_ls.setup {
    capabilities = capabilities,
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+   end,
    filetypes = {
       'html',
       'css',

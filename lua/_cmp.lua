@@ -60,7 +60,7 @@ cmp.setup {
       },
       {
          name = 'vsnip',
-         max_item_count = 10,
+         max_item_count = 5,
       },
       {
          name = 'nvim_lsp',
@@ -73,7 +73,7 @@ cmp.setup {
                return vim.api.nvim_list_bufs()
             end
          },
-         max_item_count = 5,
+         max_item_count = 3,
       },
       {
          name = 'path',
@@ -83,14 +83,14 @@ cmp.setup {
          name = 'nvim_lua',
          max_item_count = 20,
       },
-      {
-         name = 'cmdline',
-         max_item_count = 20,
-      },
-      {
-         name = 'cmdline_history',
-         max_item_count = 5,
-      },
+      -- {
+      --    name = 'cmdline',
+      --    max_item_count = 20,
+      -- },
+      -- {
+      --    name = 'cmdline_history',
+      --    max_item_count = 5,
+      -- },
    },
    view = {
       -- entries = "native"
