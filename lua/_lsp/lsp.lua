@@ -66,7 +66,7 @@ end
 lspconfig.tsserver.setup {
    capabilities = capabilities,
    on_attach = function(client, bufnr)
-      client.resolved_capabilities.document_formatting = not isEslintrcFound()
+      client.server_capabilities.documentFormattingProvider = not isEslintrcFound()
       set_lsp_config(client, bufnr)
    end
 }
