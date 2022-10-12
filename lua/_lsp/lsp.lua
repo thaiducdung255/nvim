@@ -24,7 +24,7 @@ local function set_lsp_config(client, bufnr)
    if client.server_capabilities.documentFormattingProvider then
       vim.cmd [[command! -buffer Fmt lua vim.lsp.buf.formatting_sync(nil, 1000)]]
       vim.cmd [[augroup LspFormatOnSave]]
-      vim.cmd [[autocmd! BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 500)]]
+      vim.cmd [[autocmd! BufWritePre <buffer> lua vim.lsp.buf.format()]]
       vim.cmd [[augroup END]]
    end
 end
