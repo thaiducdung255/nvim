@@ -423,6 +423,9 @@ return {
       open = {
          ascii = '<LEADER>gg'
       },
+      close = {
+         ascii = 'qq'
+      },
       common = {
          select_next_entry = {
             ascii = '<TAB>'

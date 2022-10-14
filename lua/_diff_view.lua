@@ -166,4 +166,5 @@ require('diffview').setup({
    },
 })
 
-map('n', keycodes.open, ':DiffviewOpen<CR>')
+map('n', keycodes.open, ':DiffviewOpen<CR><C-w>w')
+map('n', keycodes.close, ':DiffviewClose<CR>')
