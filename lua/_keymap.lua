@@ -852,10 +852,10 @@ return {
    },
    toggle_term = {
       h_open = {
-         ascii = '<LEADER>;',
+         ascii = '<C-Enter>',
       },
       v_open = {
-         ascii = '<LEADER>:',
+         ascii = '<S-Enter>',
       },
    },
    ts = {
