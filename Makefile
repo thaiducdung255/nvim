@@ -5,6 +5,9 @@ lsp:
 	pip install python-lsp-server mypy black isort memestra flake8 pylint
 	go install golang.org/x/tools/gopls@latest
 	sudo ln -fs ~/go/bin/gopls /usr/bin/gopls
+	curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+	yay -S --noconfirm rust-analyzer
+
 
 install:
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
