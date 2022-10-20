@@ -163,3 +163,14 @@ lspconfig.emmet_ls.setup {
       'javascriptreact',
    }
 }
+
+lspconfig.rust_analyzer.setup {
+   capabilities = capabilities,
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+   end,
+   filetypes = {
+      'rust',
+   },
+
+}
