@@ -15,10 +15,30 @@ require('gitsigns').setup {
 
    signs = {
       -- TODO add hl to colorscheme
-      add          = { hl = 'GitSignsAdd', text = ' ▎', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
-      change       = { hl = 'GitSignsChange', text = ' ▎', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
-      changedelete = { hl = 'GitSignsChange', text = ' ▎', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
-      delete       = { hl = 'GitSignsDelete', text = ' ▎', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+      add          = {
+         hl     = 'GitSignsAdd',
+         text   = ' ▎',
+         numhl  = 'GitSignsAddNr',
+         linehl = 'GitSignsAddLn',
+      },
+      change       = {
+         hl     = 'GitSignsChange',
+         text   = ' ▎',
+         numhl  = 'GitSignsChangeNr',
+         linehl = 'GitSignsChangeLn',
+      },
+      changedelete = {
+         hl     = 'GitSignsChange',
+         text   = ' ▎',
+         numhl  = 'GitSignsChangeNr',
+         linehl = 'GitSignsChangeLn',
+      },
+      delete       = {
+         hl     = 'GitSignsDelete',
+         text   = ' ▎',
+         numhl  = 'GitSignsDeleteNr',
+         linehl = 'GitSignsDeleteLn',
+      },
    },
 
    keymaps = {
@@ -31,10 +51,10 @@ require('gitsigns').setup {
 
       ['n ' .. get_key_code(keycodes.reset_hunk)] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
       ['v ' .. get_key_code(keycodes.reset_hunk)] = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
-      ['n ' .. get_key_code(keycodes.reset_buf)] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
+      ['n ' .. get_key_code(keycodes.reset_buf)]  = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
 
       ['n ' .. get_key_code(keycodes.preview_hunk)] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-      ['n ' .. get_key_code(keycodes.diff_this)] = '<cmd>lua require"gitsigns".diffthis()<CR>',
+      ['n ' .. get_key_code(keycodes.diff_this)]    = '<cmd>lua require"gitsigns".diffthis()<CR>',
 
       ['n ' .. get_key_code(keycodes.set_loc_list)] = '<cmd>lua require"gitsigns".setloclist()<CR>',
 

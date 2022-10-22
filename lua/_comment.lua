@@ -9,17 +9,17 @@ commentConf.setup({
    sticky   = true,
    ignore   = nil,
    toggler  = {
-      line = get_key_code(keycodes.line),
+      line  = get_key_code(keycodes.line),
       block = get_key_code(keycodes.block),
    },
    opleader = {
-      line = get_key_code(keycodes.vline),
+      line  = get_key_code(keycodes.vline),
       block = get_key_code(keycodes.vblock),
    },
    mappings = {
-      basic = true,
+      basic    = true,
+      extra    = false,
       extended = false,
-      extra = false
    },
 })
 

@@ -44,7 +44,7 @@ hi def         httpBodyKey        guifg   =#deb974
 hi def link    httpQuery          String
 hi def link    httpBodyValStr     String
 hi def link    httpComment        Comment
-hi def link    httpResComment        Comment
+hi def link    httpResComment     Comment
 
 let b:current_syntax = "http"
 

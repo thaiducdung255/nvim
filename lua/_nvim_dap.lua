@@ -5,8 +5,8 @@ local dap = require('dap')
 
 dap.adapters.node2 = {
    type    = 'executable',
-   command = 'node',
    args    = { os.getenv('HOME') .. '/.config/nvim/debug-adapters/vscode-node-debug2/out/src/nodeDebug.js' },
+   command = 'node',
 }
 
 dap.configurations.javascript = {

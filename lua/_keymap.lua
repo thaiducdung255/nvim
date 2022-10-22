@@ -600,6 +600,9 @@ return {
       rename = {
          ascii = 'gr',
       },
+      goto_impl = {
+         ascii = 'gi',
+      },
    },
    lsp_saga = {
       preview_def = {
