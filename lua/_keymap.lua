@@ -608,6 +608,9 @@ return {
       preview_def = {
          ascii = 'dp',
       },
+      hover_doc = {
+         ascii = 'd.',
+      },
       lsp_finder = {
          ascii = '<LEADER>gi',
       },

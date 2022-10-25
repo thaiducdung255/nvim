@@ -36,6 +36,7 @@ saga.init_lsp_saga {
 }
 
 map('n', keycodes.preview_def, ':Lspsaga preview_definition<CR>')
+map('n', keycodes.hover_doc, ':Lspsaga hover_doc<CR>')
 map('n', keycodes.lsp_finder, ':Lspsaga lsp_finder<CR>')
 map('n', keycodes.lsp_diag_next, ':Lspsaga diagnostic_jump_next<CR>')
 map('n', keycodes.lsp_diag_prev, ':Lspsaga diagnostic_jump_prev<CR>')
