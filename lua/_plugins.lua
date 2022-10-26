@@ -66,7 +66,7 @@ return require('packer').startup({
       -- treesitter
       use {
          'nvim-treesitter/nvim-treesitter',
-         -- run = ':TSInstall lua python go http css typescript javascript tsx make dockerfile css html json bash rasi yaml'
+         -- run = ':TSInstall lua python go http css typescript javascript tsx make dockerfile css html json bash rasi yaml rust'
          run = ':TSUpdateSync'
       }
       use 'nvim-treesitter/playground'
