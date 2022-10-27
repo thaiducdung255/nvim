@@ -1,4 +1,8 @@
 {
+   "shebang": {
+      "prefix": ["sb"],
+      "body": "#!/usr/bin/go"
+   },
    "assignment": {
       "prefix": ["as"],
       "body": ":= "

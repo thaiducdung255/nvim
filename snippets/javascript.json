@@ -1,4 +1,8 @@
 {
+   "shebang": {
+      "prefix": ["sb"],
+      "body": "#!/usr/bin/node"
+   },
    "require_common": {
       "prefix": ["re"],
       "body": "const $2 = require('$1')"

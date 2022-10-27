@@ -1,4 +1,8 @@
 {
+   "shebang": {
+      "prefix": ["sb"],
+      "body": "#!/usr/bin/python3"
+   },
    "doc_string": {
       "prefix": ["doc"],
       "body": "\"\"\"$1.\"\"\""
@@ -56,5 +60,13 @@
    "type_none": {
       "prefix": ["tn"],
       "body": "$1: None"
+   },
+   "function": {
+      "prefix": ["fn"],
+      "body": [
+         "def ${1:func_name}(${2:param}) -> ${3:return_type}:",
+         "\t\"\"\"${4:$1}.\"\"\"",
+         "\t${5:body}"
+      ]
    }
 }
