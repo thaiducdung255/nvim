@@ -1,7 +1,7 @@
 {
    "shebang": {
       "prefix": ["sb"],
-      "body": "#!/usr/bin/node"
+      "body": "#!/usr/bin/node\n\n"
    },
    "require_common": {
       "prefix": ["re"],

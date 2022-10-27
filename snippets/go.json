@@ -1,7 +1,7 @@
 {
    "shebang": {
       "prefix": ["sb"],
-      "body": "#!/usr/bin/go"
+      "body": "#!/usr/bin/go\n\n"
    },
    "assignment": {
       "prefix": ["as"],
