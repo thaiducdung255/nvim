@@ -73,11 +73,11 @@ cmp.setup {
                return vim.api.nvim_list_bufs()
             end
          },
-         max_item_count = 3,
+         max_item_count = 6,
       },
       {
          name = 'path',
-         max_item_count = 5,
+         max_item_count = 10,
       },
       {
          name = 'nvim_lua',
