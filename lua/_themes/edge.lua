@@ -40,8 +40,8 @@ vim.cmd('hi BufferLineSeparator guibg=#070707 guifg=#33353f') -- bufferline sep 
 vim.cmd('hi BufferLineSeparatorSelected guifg=#33353f') -- bufferline sep selected
 vim.cmd('hi BufferLineSeparatorVisible guifg=#33353f guibg=#070707') -- bufferline sep selected
 
-vim.cmd('hi BufferLineBufferVisible guibg=#070707 guifg=White') -- bufferline visible
-vim.cmd('hi BufferLineBufferSelected guifg=#6cb6eb') -- bufferline selected
+vim.cmd('hi BufferLineBufferVisible guibg=#070707 guifg=#57e1ed') -- bufferline visible
+vim.cmd('hi BufferLineBufferSelected guifg=#dfe4ed') -- bufferline selected
 
 vim.cmd('hi BufferLineTab guibg=#202023 guifg=#33353f') -- buffer tab index indicator
 vim.cmd('hi BufferLineTabSeparator guibg=#33353f guifg=#202023') -- buffer tab index indicator

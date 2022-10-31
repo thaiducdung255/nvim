@@ -41,7 +41,7 @@ telescope.setup {
       file_ignore_patterns   = {
          '.git/', 'node_modules/', '.package-lock.json', '.pnpm-lock.yaml', '.yarn-lock.json',
          'dist/', 'debug-adapters/', '.next/', '.cache/', '.cargo/', '.gnupg/', '.oh-my-zsh/plugins/',
-         '__init__.py', 'target/debug',
+         '__init__.py', 'target',
       },
       prompt_prefix          = '> ',
       selection_caret        = '> ',

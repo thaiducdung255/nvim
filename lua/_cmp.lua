@@ -41,7 +41,12 @@ cmp.setup {
    },
    formatting = {
       format = function(entry, vim_item)
+
          vim_item.kind = lspkind.presets.default[vim_item.kind]
+
+         -- if entry.source.name == 'buffer' then
+         -- vim_item.dup = 0
+         -- end
          -- local menu = source_mapping[entry.source.name]
 
          -- if entry.source.name == 'cmdline' or entry.source.name == 'cmdline_history' then
