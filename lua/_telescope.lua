@@ -21,13 +21,13 @@ end
 
 local vertical_default_conf = {
    layout_strategy = 'vertical',
-
    layout_config = {
-      preview_height = 0.7,
+      preview_height = 0.75,
    },
 }
 
 local horizontal_default_conf = {
+   layout_strategy = 'horizontal',
    layout_config = {
       preview_width = 0.75,
    },
@@ -43,9 +43,9 @@ telescope.setup {
          'dist/', 'debug-adapters/', '.next/', '.cache/', '.cargo/', '.gnupg/', '.oh-my-zsh/plugins/',
          '__init__.py', 'target',
       },
-      prompt_prefix          = '> ',
-      selection_caret        = '> ',
-      entry_prefix           = '  ',
+      prompt_prefix          = '-> ',
+      selection_caret        = '-> ',
+      entry_prefix           = '   ',
       initial_mode           = 'insert',
       selection_strategy     = 'reset',
       sorting_strategy       = 'descending',
@@ -62,7 +62,7 @@ telescope.setup {
       file_previewer         = previewers.vim_buffer_cat.new,
       grep_previewer         = previewers.vim_buffer_vimgrep.new,
       qflist_previewer       = previewers.vim_buffer_qflist.new,
-      layout_config          = { width = 0.98, height = 0.95 },
+      layout_config          = { width = 0.999, height = 0.999 },
       buffer_previewer_maker = previewers.buffer_previewer_maker,
 
       mappings = {
@@ -73,7 +73,7 @@ telescope.setup {
             ['<C-e>'] = actions.move_selection_previous,
             ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
             ['<ESC>'] = actions.close,
-            ['<M-h>'] = R('telescope').extensions.hop.hop,
+            ['<C-i>'] = R('telescope').extensions.hop.hop,
          },
 
          n = {
@@ -117,12 +117,24 @@ telescope.setup {
       },
       tele_taby = {
          use_highlighter = true
-      }
+      },
+      -- repo = {
+      --    list = {
+      --       fd_opts = {
+      --          '--no-ignore-vcs',
+      --       },
+      --       search_dirs = {
+      --          '~/Projects',
+      --          '~/.config',
+      --       },
+      --    },
+      -- },
    }
 }
 
 telescope.load_extension('hop')
 telescope.load_extension('fzf')
+telescope.load_extension('repo')
 
 map('n', keycodes.files, ':Telescope find_files hidden=true no_ignore=true<CR>')
 map('n', keycodes.old_files, ':Telescope oldfiles hidden=true no_ignore=true<CR>')
@@ -143,8 +155,14 @@ map('n', keycodes.lsp_doc_diag, ':Telescope lsp_document_diagnostics<CR>')
 map('n', keycodes.lsp_ref, ':Telescope lsp_references<CR>')
 map('n', keycodes.git_branch, ':Telescope git_branches<CR>')
 
-map('n', keycodes.git_diff, [[<cmd>lua require('telescope_custom-conf').delta_git_diff()<CR>]])
-map('n', keycodes.git_bcommit, [[<cmd>lua require('telescope_custom-conf').delta_git_bcommits()<CR>]])
-map('n', keycodes.git_commit, [[<cmd>lua require('telescope_custom-conf').delta_git_commits()<CR>]])
-map('n', keycodes.git_status, [[<cmd>lua require('telescope_custom-conf').delta_git_status()<CR>]])
-map('n', keycodes.eslint_diag, [[<cmd>lua require('telescope_custom-conf').eslint_diagnostics()<CR>]])
+map('n', keycodes.git_diff, [[<cmd>lua require('_telescope_custom').delta_git_diff()<CR>]])
+map('n', keycodes.git_bcommit, [[<cmd>lua require('_telescope_custom').delta_git_bcommits()<CR>]])
+map('n', keycodes.git_commit, [[<cmd>lua require('_telescope_custom').delta_git_commits()<CR>]])
+map('n', keycodes.git_status, [[<cmd>lua require('_telescope_custom').delta_git_status()<CR>]])
+map('n', keycodes.eslint_diag, [[<cmd>lua require('_telescope_custom').eslint_diagnostics()<CR>]])
+
+local repo_dirs = [[{'~/Projects','~/Downloads','~/.config'}]]
+
+map('n', keycodes.repo,
+   [[:lua require'telescope'.extensions.repo.list{fd_opts={'--no-ignore-vcs'},search_dirs=]] .. repo_dirs .. [[}<CR>]]
+)

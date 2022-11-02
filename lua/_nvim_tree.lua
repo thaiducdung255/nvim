@@ -49,6 +49,8 @@ map('n', keycodes.toggle_open, ':NvimTreeToggle<CR>')
 map('n', keycodes.toggle_refresh, ':NvimTreeRefresh<CR>')
 
 require 'nvim-tree'.setup {
+   sync_root_with_cwd   = true,
+   respect_buf_cwd      = true,
    auto_reload_on_write = true,
    sort_by              = 'modification_time',
    disable_netrw        = true,
@@ -112,6 +114,7 @@ require 'nvim-tree'.setup {
       show_on_dirs = true,
    },
    update_focused_file  = {
+      update_root = true,
       enable      = true,
       update_cwd  = true,
       ignore_list = {}

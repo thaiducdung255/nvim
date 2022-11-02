@@ -855,6 +855,9 @@ return {
       eslint_diag = {
          ascii = '<LEADER>zz',
       },
+      repo = {
+         ascii = '<LEADER>.',
+      }
    },
    toggle_term = {
       h_open = {
@@ -915,6 +918,10 @@ return {
       toggle_max = {
          ascii = 'm',
          colemak = 'l',
+      },
+      toggle_max_vertical = {
+         ascii = 'M',
+         colemak = 'L',
       },
    },
    vsnip = {

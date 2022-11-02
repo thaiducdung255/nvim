@@ -11,7 +11,9 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 
 return require('packer').startup({
    function(use)
-      use 'wbthomason/packer.nvim'
+      use { 'wbthomason/packer.nvim' }
+      use { 'nvim-lua/popup.nvim' }
+      use { 'nvim-lua/plenary.nvim' }
 
       -- LSP
       use { 'neovim/nvim-lspconfig' }
@@ -19,13 +21,12 @@ return require('packer').startup({
       use { 'b0o/schemastore.nvim' }
 
       -- telescope
-      use { 'nvim-lua/popup.nvim' }
-      use { 'nvim-lua/plenary.nvim' }
       use { 'nvim-telescope/telescope.nvim' }
       use { 'nvim-telescope/telescope-hop.nvim' }
       use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
       use { 'nvim-telescope/telescope-media-files.nvim' }
       use { 'TC72/telescope-tele-tabby.nvim' }
+      use { 'cljoly/telescope-repo.nvim' }
 
       -- vim motions
       use { 'phaazon/hop.nvim' }

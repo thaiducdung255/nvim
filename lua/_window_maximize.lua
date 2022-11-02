@@ -14,4 +14,6 @@ require('windows').setup({
       easing = 'in_out_sine',
    }
 })
+
 map('n', keycodes.toggle_max, ':WindowsMaximize<CR>')
+map('n', keycodes.toggle_max_vertical, ':WindowsMaximizeVertically<CR>')
