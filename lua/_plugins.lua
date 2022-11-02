@@ -110,7 +110,12 @@ return require('packer').startup({
       use 'lukas-reineke/indent-blankline.nvim'
 
       -- maximize window
-      use 'szw/vim-maximizer'
+      use { "anuvyklack/windows.nvim",
+         requires = {
+            "anuvyklack/middleclass",
+            "anuvyklack/animation.nvim"
+         },
+      }
 
       -- text transform
       use 'AndrewRadev/switch.vim'
