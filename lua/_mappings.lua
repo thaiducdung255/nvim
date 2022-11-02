@@ -62,8 +62,8 @@ map('nv', keycodes.cursor_nav.first, '^')
 map('nv', keycodes.cursor_nav.last, '$')
 
 ---- scroll cmds
-map('nv', keycodes.scroll.d, '<C-d>')
-map('nv', keycodes.scroll.u, '<C-u>')
+-- map('nv', keycodes.scroll.d, '<C-d>')
+-- map('nv', keycodes.scroll.u, '<C-u>')
 
 ---- custom select cmds
 map('n', keycodes.custom_super_v, 'V')

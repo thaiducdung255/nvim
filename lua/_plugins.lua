@@ -63,6 +63,9 @@ return require('packer').startup({
       -- find and replace
       use { 'windwp/nvim-spectre' }
 
+      -- smooth scroll
+      use 'karb94/neoscroll.nvim'
+
       -- treesitter
       use {
          'nvim-treesitter/nvim-treesitter',
