@@ -6,7 +6,7 @@ local sorters    = require('telescope.sorters')
 local keycodes   = require('_keymap').telescope
 
 P = function(v)
-   print(vim.inspect(v))
+   -- print(vim.inspect(v))
    return v
 end
 
