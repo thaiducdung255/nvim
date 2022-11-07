@@ -45,6 +45,7 @@ vim.o.smartindent = true
 vim.o.autoindent  = true
 vim.o.copyindent  = true
 vim.o.swapfile    = false
+vim.o.cmdheight   = 0
 
 vim.wo.number         = true
 vim.wo.cursorline     = true

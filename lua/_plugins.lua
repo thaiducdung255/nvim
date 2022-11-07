@@ -111,10 +111,10 @@ return require('packer').startup({
       use 'lukas-reineke/indent-blankline.nvim'
 
       -- maximize window
-      use { "anuvyklack/windows.nvim",
+      use { 'anuvyklack/windows.nvim',
          requires = {
-            "anuvyklack/middleclass",
-            "anuvyklack/animation.nvim"
+            'anuvyklack/middleclass',
+            'anuvyklack/animation.nvim'
          },
       }
 
