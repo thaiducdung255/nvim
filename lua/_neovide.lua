@@ -12,6 +12,9 @@ if vim.g.neovide then
 
    vim.g.maximizer_set_default_mapping = false
    map('n', keycodes.toggle_max, ':MaximizerToggle<CR>')
+
+   -- local cmd = [[lua require'telescope'.extensions.repo.list{fd_opts={'--no-ignore-vcs'},search_dirs={'~/Projects','~/Downloads','~/.config'}}]]
+   -- vim.cmd(cmd)
 else
    require('_window_maximize')
 end
