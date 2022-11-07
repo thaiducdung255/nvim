@@ -118,6 +118,8 @@ return require('packer').startup({
          },
       }
 
+      use { 'szw/vim-maximizer' }
+
       -- text transform
       use 'AndrewRadev/switch.vim'
 
