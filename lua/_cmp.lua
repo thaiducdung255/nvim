@@ -61,7 +61,7 @@ cmp.setup {
    sources = {
       {
          name = 'nvim_lsp_signature_help',
-         max_item_count = 15,
+         max_item_count = 13,
       },
       {
          name = 'vsnip',
@@ -78,11 +78,11 @@ cmp.setup {
                return vim.api.nvim_list_bufs()
             end
          },
-         max_item_count = 6,
+         max_item_count = 7,
       },
       {
          name = 'path',
-         max_item_count = 10,
+         max_item_count = 25,
       },
       {
          name = 'nvim_lua',
