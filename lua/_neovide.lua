@@ -9,11 +9,16 @@ if vim.g.neovide then
    vim.g.neovide_refresh_rate_idle       = 5
    vim.g.neovide_refresh_rate            = 60
    vim.g.neovide_cursor_antialiasing     = true
+   vim.g.maximizer_set_default_mapping   = false
+
    vim.cmd([[set guifont=FiraCode\ Nerd\ Font\ Mono:h11.8]])
 
-   vim.g.maximizer_set_default_mapping = false
    map('n', keycodes.maximizer.toggle_max, ':MaximizerToggle<CR>')
    map('n', keycodes.toggle_term.neovide_v_open, ':ToggleTerm direction=vertical<CR>')
+
+   map('nv', keycodes.sys.scroll.d, '<C-d>')
+   map('nv', keycodes.sys.scroll.u, '<C-u>')
 else
    require('_window_maximize')
+   require('_neo_scroll')
 end
