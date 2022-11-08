@@ -36,16 +36,15 @@ vim.o.autoread      = true
 vim.o.autowrite     = true
 vim.o.hlsearch      = false
 vim.o.history       = 100
-
-vim.o.tabstop     = 3
-vim.o.softtabstop = 3
-vim.o.shiftwidth  = 3
-vim.o.expandtab   = true
-vim.o.smartindent = true
-vim.o.autoindent  = true
-vim.o.copyindent  = true
-vim.o.swapfile    = false
-vim.o.cmdheight   = 0
+vim.o.tabstop       = 3
+vim.o.softtabstop   = 3
+vim.o.shiftwidth    = 3
+vim.o.expandtab     = true
+vim.o.smartindent   = true
+vim.o.autoindent    = true
+vim.o.copyindent    = true
+vim.o.swapfile      = false
+vim.o.cmdheight     = 0
 
 vim.wo.number         = true
 vim.wo.cursorline     = true
