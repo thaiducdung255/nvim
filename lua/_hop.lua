@@ -5,7 +5,7 @@ local hop = require('hop')
 
 hop.setup({
    multi_windows = true,
-   -- keys = 'arstdhneioqwfpluy'
+   case_insensitive = true,
 })
 
 map('no', keycodes.char1_line, ':HopChar1CurrentLine<CR>')

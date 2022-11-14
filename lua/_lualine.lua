@@ -1,6 +1,6 @@
-local gps = require('nvim-gps')
+local _gps = require('nvim-gps')
 
-gps.setup {
+_gps.setup {
    separator             = ' > ',
    depth                 = 0,
    depth_limit_indicator = '..',
@@ -11,6 +11,11 @@ gps.setup {
       ['container-name'] = ' ',
       ['tag-name']       = '炙'
    },
+}
+
+local gps = {
+   _gps.get_location,
+   cond = _gps.is_available,
 }
 
 local file_name = {
@@ -26,14 +31,14 @@ local diff = {
    symbols = { added = ' ', modified = ' ', removed = ' ' },
 }
 
-local file_format = {
-   'fileformat',
-   symbols = {
-      unix = 'unix',
-      dos  = 'dos',
-      mac  = 'mac',
-   }
-}
+-- local file_format = {
+--    'fileformat',
+--    symbols = {
+--       unix = 'unix',
+--       dos  = 'dos',
+--       mac  = 'mac',
+--    }
+-- }
 
 local diagnostics = {
    'diagnostics',
@@ -54,11 +59,11 @@ require 'lualine'.setup {
    },
    sections   = {
       lualine_a = { 'mode' },
-      lualine_b = { file_name, { gps.get_location, cond = gps.is_available } },
+      lualine_b = { file_name, gps },
       lualine_c = { diagnostics },
 
       lualine_x = {},
-      lualine_y = { 'branch', diff, file_format },
-      lualine_z = { 'location', 'progress' }
+      lualine_y = { 'branch', diff, 'filetype' },
+      lualine_z = { 'location', 'progress', 'searchcount' }
    },
 }
