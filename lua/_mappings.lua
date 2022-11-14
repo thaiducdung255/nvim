@@ -105,20 +105,6 @@ map('v', keycodes.bracket_ins.angle, 'di<><ESC>hpl')
 ---------------------------------------------------------------------------------------------------
 -- key mods
 ---- symbol maps
-map('i', keycodes.symbol.exclamation, '!')
-map('i', keycodes.symbol.at_sign, '@')
-map('i', keycodes.symbol.sharp, '#')
-map('i', keycodes.symbol.dollar, '$')
-map('i', keycodes.symbol.percent, '%')
-map('i', keycodes.symbol.power, '^')
-map('i', keycodes.symbol._and, '&')
-map('i', keycodes.symbol.star, '*')
-map('i', keycodes.symbol.open_parent, '(')
-map('i', keycodes.symbol.close_parent, ')')
-map('i', keycodes.symbol.minus, '-')
-map('i', keycodes.symbol.equal, '=')
-map('i', keycodes.symbol.dangle, '_')
-map('i', keycodes.symbol.plus, '+')
 map('i', keycodes.symbol.nl, ',<CR>')
 
 vim.cmd('nnoremap ' .. get_key_code(keycodes.symbol.cmd_nav.open) .. ' :')

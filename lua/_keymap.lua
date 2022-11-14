@@ -28,55 +28,6 @@ return {
          nl = {
             ascii = ',,',
          },
-         exclamation = {
-            ascii = ';q',
-         },
-         at_sign = {
-            ascii = ';w',
-         },
-         sharp = {
-            ascii = ';e',
-            colemak = ';f',
-         },
-         dollar = {
-            ascii = ';r',
-            colemak = ';p',
-         },
-         percent = {
-            ascii = ';t',
-            colemak = ';g',
-         },
-         power = {
-            ascii = ';a',
-         },
-         _and = {
-            ascii = ';s',
-            colemak = ';r',
-         },
-         star = {
-            ascii = ';d',
-            colemak = ';s',
-         },
-         open_parent = {
-            ascii = ';f',
-            colemak = ';t',
-         },
-         close_parent = {
-            ascii = ';g',
-            colemak = ';d',
-         },
-         minus = {
-            ascii = ';z',
-         },
-         equal = {
-            ascii = ';x',
-         },
-         dangle = {
-            ascii = ';;z',
-         },
-         plus = {
-            ascii = ';;x',
-         },
       },
       nav = {
          r = {
@@ -566,10 +517,10 @@ return {
             ascii = 'l'
          },
          open_all_folds = {
-            ascii = 'za'
+            ascii = 'zA'
          },
          close_all_folds = {
-            ascii = 'zf'
+            ascii = 'zF'
          },
          select_entry = {
             ascii = '<CR>'
@@ -947,5 +898,13 @@ return {
          ascii = '',
          colemak = ''
       },
-   }
+   },
+   ufo = {
+      open_all = {
+         ascii = 'zA'
+      },
+      close_all = {
+         ascii = 'zF'
+      },
+   },
 }
