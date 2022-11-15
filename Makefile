@@ -11,7 +11,7 @@ lsp:
 
 install:
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-	sudo pacman -S --noconfirm neovim ruby fzf fd xclip the_silver_searcher ripgrep bat lazygit git-delta
+	sudo pacman -S --noconfirm neovim ruby fzf fd xclip the_silver_searcher ripgrep bat lazygit git-delta neovide
 	wget https://bootstrap.pypa.io/get-pip.py
 	sudo python3 get-pip.py
 	python3 -m pip install pynvim

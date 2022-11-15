@@ -11,3 +11,9 @@ ufo.setup({
       return { 'treesitter', 'indent' }
    end
 })
+
+vim.cmd('hi default link UfoPreviewSbar PmenuSbar')
+vim.cmd('hi default link UfoPreviewThumb PmenuThumb')
+vim.cmd('hi default link UfoPreviewWinBar UfoFoldedBg')
+vim.cmd('hi default link UfoPreviewCursorLine Visual')
+vim.cmd('hi default link UfoFoldedEllipsis Comment')
