@@ -1,5 +1,10 @@
 return {
    sys = {
+      config = {
+         hot_reload = {
+            ascii = 'so',
+         },
+      },
       symbol = {
          cmd_nav = {
             open = {
@@ -375,7 +380,7 @@ return {
          ascii = '<LEADER>gg'
       },
       close = {
-         ascii = 'qq'
+         ascii = '<C-q>'
       },
       common = {
          select_next_entry = {

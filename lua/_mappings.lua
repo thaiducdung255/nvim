@@ -3,6 +3,9 @@ local get_key_code = require('_utils').get_key_code
 
 local keycodes = require('_keymap').sys
 
+-- hot reload config
+map('n', keycodes.config.hot_reload, ':luafile %<CR>')
+
 -- window cmds
 ---- nav cmds
 map('n', keycodes.nav.r, '<C-w>l')
