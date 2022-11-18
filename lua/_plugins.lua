@@ -52,6 +52,7 @@ return require('packer').startup({
             'lukas-reineke/cmp-under-comparator',
             'hrsh7th/cmp-nvim-lsp-signature-help',
             'hrsh7th/cmp-nvim-lsp',
+            'tamago324/cmp-zsh',
          }
       }
 

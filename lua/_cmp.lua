@@ -88,6 +88,10 @@ cmp.setup {
          name = 'nvim_lua',
          max_item_count = 20,
       },
+      {
+         name = 'zsh',
+         max_item_count = 10,
+      },
       -- {
       --    name = 'cmdline',
       --    max_item_count = 20,
