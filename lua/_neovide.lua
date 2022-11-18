@@ -14,7 +14,6 @@ if vim.g.neovide then
    vim.cmd([[set guifont=FiraCode\ Nerd\ Font\ Mono:h11.8]])
 
    map('n', keycodes.maximizer.toggle_max, ':MaximizerToggle<CR>')
-   map('n', keycodes.toggle_term.neovide_v_open, ':ToggleTerm direction=vertical<CR>')
 
    map('nv', keycodes.sys.scroll.d, '<C-d>')
    map('nv', keycodes.sys.scroll.u, '<C-u>')

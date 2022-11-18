@@ -822,9 +822,6 @@ return {
       v_open = {
          ascii = '<S-Enter>',
       },
-      neovide_v_open = {
-         ascii = 'tt',
-      }
    },
    ts = {
       rename = {
