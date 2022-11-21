@@ -23,7 +23,12 @@ return require('packer').startup({
       -- telescope
       use { 'nvim-telescope/telescope.nvim' }
       use { 'nvim-telescope/telescope-hop.nvim' }
-      use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+      use {
+         'nvim-telescope/telescope-fzf-native.nvim',
+         run = 'make'
+      }
+
       use { 'nvim-telescope/telescope-media-files.nvim' }
       use { 'TC72/telescope-tele-tabby.nvim' }
       use { 'cljoly/telescope-repo.nvim' }
@@ -130,7 +135,11 @@ return require('packer').startup({
       -- git
       use { 'lewis6991/gitsigns.nvim' }
       use 'kdheepak/lazygit.nvim'
-      use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+      use {
+         'sindrets/diffview.nvim',
+         requires = 'nvim-lua/plenary.nvim'
+      }
 
       -- editorconfig
       use 'editorconfig/editorconfig-vim'
@@ -139,7 +148,11 @@ return require('packer').startup({
       use { 'numToStr/Comment.nvim' }
 
       -- Color scheme
-      use 'sainnhe/edge'
+      use {
+         'sainnhe/edge',
+         commit = 'd48ab6039d0f0e4170f921f5e48f4d3e9f0898db'
+      }
+
       use 'marko-cerovac/material.nvim'
 
       -- highlight color value
@@ -159,19 +172,17 @@ return require('packer').startup({
 
       -- rest api
       use {
-         -- 'NTBBloodbath/rest.nvim',
-         'teto/rest.nvim',
-         branch = 'always-send-string',
+         'rest-nvim/rest.nvim',
          requires = { 'nvim-lua/plenary.nvim' },
       }
 
       -- smart fold
       use {
          'kevinhwang91/nvim-ufo',
-         requires = 'kevinhwang91/promise-async',
-      }
-      use {
-         'anuvyklack/pretty-fold.nvim',
+         requires = {
+            'kevinhwang91/promise-async',
+            'anuvyklack/pretty-fold.nvim',
+         }
       }
 
    end,
