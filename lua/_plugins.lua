@@ -76,7 +76,7 @@ return require('packer').startup({
       -- treesitter
       use {
          'nvim-treesitter/nvim-treesitter',
-         -- run = ':TSInstall lua python go http css typescript javascript tsx make dockerfile css html json bash rasi yaml rust'
+         -- run = ':TSInstall lua python go http css typescript javascript tsx make dockerfile css html json bash rasi yaml rust prisma'
          run = ':TSUpdateSync'
       }
       use 'nvim-treesitter/playground'
@@ -171,8 +171,14 @@ return require('packer').startup({
       }
 
       -- rest api
+      -- use {
+      --    'rest-nvim/rest.nvim',
+      --    requires = { 'nvim-lua/plenary.nvim' },
+      -- }
+
       use {
-         'rest-nvim/rest.nvim',
+         'teto/rest.nvim',
+         branch = 'always-send-string',
          requires = { 'nvim-lua/plenary.nvim' },
       }
 
