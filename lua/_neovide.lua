@@ -10,6 +10,7 @@ if vim.g.neovide then
    vim.g.neovide_refresh_rate            = 60
    vim.g.neovide_cursor_antialiasing     = true
    vim.g.maximizer_set_default_mapping   = false
+   vim.g.neovide_scale_factor            = 0.6
 
    vim.cmd([[set guifont=FiraCode\ Nerd\ Font\ Mono:h11.8]])
 
