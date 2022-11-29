@@ -27,5 +27,18 @@
    "environment_variable": {
       "prefix": ["ev"],
       "body": "{{$1}}"
+   },
+   ".editorconfig": {
+      "prefix": ["ecf"],
+      "body": [
+         "root = true",
+         "",
+         "[*]",
+         "end_of_line = lf",
+         "insert_final_newline = false",
+         "charset = utf-8",
+         "indent_size = 3",
+         "indent_style = space"
+      ]
    }
 }
