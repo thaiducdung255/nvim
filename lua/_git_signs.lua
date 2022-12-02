@@ -17,28 +17,40 @@ require('gitsigns').setup {
       -- TODO add hl to colorscheme
       add          = {
          hl     = 'GitSignsAdd',
-         text   = ' ▎',
+         text   = '▎',
          numhl  = 'GitSignsAddNr',
          linehl = 'GitSignsAddLn',
       },
       change       = {
          hl     = 'GitSignsChange',
-         text   = ' ▎',
+         text   = '▎',
          numhl  = 'GitSignsChangeNr',
          linehl = 'GitSignsChangeLn',
       },
+      topdelete    = {
+         hl     = 'GitSignsDelete',
+         text   = '▎',
+         numhl  = 'GitSignsDeleteNr',
+         linehl = 'GitSignsDeleteNr',
+      },
       changedelete = {
          hl     = 'GitSignsChange',
-         text   = ' ▎',
+         text   = '▎',
          numhl  = 'GitSignsChangeNr',
          linehl = 'GitSignsChangeLn',
       },
       delete       = {
          hl     = 'GitSignsDelete',
-         text   = ' ▎',
+         text   = '▎',
          numhl  = 'GitSignsDeleteNr',
          linehl = 'GitSignsDeleteLn',
       },
+      untracked    = {
+         hl     = 'Grey',
+         text   = '▎',
+         numhl  = 'Grey',
+         linehl = 'Grey',
+      }
    },
 
    keymaps = {
