@@ -13,47 +13,47 @@ require('spectre').setup({
    },
    mapping            = {
       ['toggle_line'] = {
-         map  = 'dd',
+         map  = keycodes.toggle_line,
          cmd  = '<cmd>lua require(\'spectre\').toggle_line()<CR>',
          desc = 'toggle current item'
       },
       ['enter_file'] = {
-         map  = '<CR>',
+         map  = keycodes.enter_file,
          cmd  = '<cmd>lua require(\'spectre.actions\').select_entry()<CR>',
          desc = 'goto current file'
       },
       ['send_to_qf'] = {
-         map  = '<LEADER>q',
+         map  = keycodes.send_to_qf,
          cmd  = '<cmd>lua require(\'spectre.actions\').send_to_qf()<CR>',
          desc = 'send all item to quickfix'
       },
       ['replace_cmd'] = {
-         map  = '<LEADER>c',
+         map  = keycodes.replace_cmd,
          cmd  = '<cmd>lua require(\'spectre.actions\').replace_cmd()<CR>',
          desc = 'input replace vim command'
       },
       ['show_option_menu'] = {
-         map  = '<LEADER>o',
+         map  = keycodes.show_option_menu,
          cmd  = '<cmd>lua require(\'spectre\').show_options()<CR>',
          desc = 'show option'
       },
       ['run_replace'] = {
-         map  = '<LEADER>R',
+         map  = keycodes.run_replace,
          cmd  = '<cmd>lua require(\'spectre.actions\').run_replace()<CR>',
          desc = 'replace all'
       },
       ['change_view_mode'] = {
-         map  = '<LEADER>v',
+         map  = keycodes.change_view_mode,
          cmd  = '<cmd>lua require(\'spectre\').change_view()<CR>',
          desc = 'change result view mode'
       },
       ['toggle_ignore_case'] = {
-         map  = 'ti',
+         map  = keycodes.toggle_ignore_case,
          cmd  = '<cmd>lua require(\'spectre\').change_options(\'ignore-case\')<CR>',
          desc = 'toggle ignore case'
       },
       ['toggle_ignore_hidden'] = {
-         map  = 'th',
+         map  = keycodes.toggle_ignore_hidden,
          cmd  = '<cmd>lua require(\'spectre\').change_options(\'hidden\')<CR>',
          desc = 'toggle search hidden'
       },

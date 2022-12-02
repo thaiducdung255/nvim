@@ -4,13 +4,13 @@ vim.opt.completeopt = 'menuone,noselect'
 local lspkind = require('lspkind')
 
 -- local source_mapping = {
---    vsnip                   = '[Snp]',
---    buffer                  = '[Buf]',
---    nvim_lua                = '[Lua]',
---    cmdline                 = '[Cmd]',
---    cmdline_history         = '[His]',
---    nvim_lsp_signature_help = '[Arg]',
---    nvim_lsp                = '[Lsp]',
+--    vsnip                   = 'ﬕ',
+--    buffer                  = '',
+--    nvim_lua                = '',
+--    cmdline                 = '',
+--    cmdline_history         = '',
+--    nvim_lsp_signature_help = '',
+--    nvim_lsp                = '',
 -- }
 
 cmp.setup {
@@ -92,14 +92,6 @@ cmp.setup {
          name = 'zsh',
          max_item_count = 10,
       },
-      -- {
-      --    name = 'cmdline',
-      --    max_item_count = 20,
-      -- },
-      -- {
-      --    name = 'cmdline_history',
-      --    max_item_count = 5,
-      -- },
    },
    view = {
       -- entries = "native"

@@ -741,11 +741,41 @@ return {
       open_file_search = {
          ascii = '<LEADER>G',
       },
+      toggle_line = {
+         ascii = 'dd'
+      },
+      enter_file = {
+         ascii = '<CR>'
+      },
+      send_to_qf = {
+         ascii = '<LEADER>q'
+      },
+      replace_cmd = {
+         ascii = '<LEADER>c'
+      },
+      show_option_menu = {
+         ascii = '<LEADER>o'
+      },
+      run_replace = {
+         ascii = '<LEADER>R'
+      },
+      change_view_mode = {
+         ascii = '<LEADER>v'
+      },
+      toggle_ignore_case = {
+         ascii = 'ti'
+      },
+      toggle_ignore_hidden = {
+         ascii = 'th'
+      },
    },
    switch = {
       exec = {
          ascii = 'S',
       },
+   },
+   cmp = {
+
    },
    telescope = {
       files = {
