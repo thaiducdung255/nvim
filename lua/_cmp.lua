@@ -1,5 +1,6 @@
 local cmp = require 'cmp'
-vim.opt.completeopt = 'menuone,noselect'
+local get_key_code = require('_utils').get_key_code
+local keycodes = require('_keymap').cmp
 
 local lspkind = require('lspkind')
 
@@ -33,11 +34,23 @@ cmp.setup {
       },
    },
    mapping = {
-      ['<Tab>']   = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
-      ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
-      ['<C-k>']   = cmp.mapping.scroll_docs(-4),
-      ['<C-j>']   = cmp.mapping.scroll_docs(4),
-      ['<CR>']    = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+      [get_key_code(keycodes.select_next_item)] = cmp.mapping(
+         cmp.mapping.select_next_item(),
+         { 'i', 'c' }
+      ),
+
+      [get_key_code(keycodes.select_prev_item)] = cmp.mapping(
+         cmp.mapping.select_prev_item(),
+         { 'i', 'c' }
+      ),
+
+      [get_key_code(keycodes.scroll_docs_up)]   = cmp.mapping.scroll_docs(-4),
+      [get_key_code(keycodes.scroll_docs_down)] = cmp.mapping.scroll_docs(4),
+
+      [get_key_code(keycodes.confirm)] = cmp.mapping.confirm({
+         behavior = cmp.ConfirmBehavior.Replace,
+         select = true
+      }),
    },
    formatting = {
       format = function(entry, vim_item)

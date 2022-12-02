@@ -14,19 +14,19 @@ return {
                ascii = '<LEADER>cc',
             },
             l = {
-               ascii = '<M-u>',
+               ascii   = '<M-u>',
                colemak = '<C-h>',
             },
             next = {
-               ascii = '<M-i>',
+               ascii   = '<M-i>',
                colemak = '<C-n>',
             },
             prev = {
-               ascii = '<M-o>',
+               ascii   = '<M-o>',
                colemak = '<C-e>',
             },
             r = {
-               ascii = '<M-p>',
+               ascii   = '<M-p>',
                colemak = '<C-i>',
             },
          },
@@ -36,52 +36,52 @@ return {
       },
       nav = {
          r = {
-            ascii = '<LEADER>l',
+            ascii   = '<LEADER>l',
             colemak = '<LEADER>i'
          },
          l = {
             ascii = '<LEADER>h',
          },
          u = {
-            ascii = '<LEADER>k',
+            ascii   = '<LEADER>k',
             colemak = '<LEADER>e'
          },
          d = {
-            ascii = '<LEADER>j',
+            ascii   = '<LEADER>j',
             colemak = '<LEADER>n'
          },
       },
       w_resize = {
          v_inc = {
-            ascii = '<C-k>',
+            ascii   = '<C-k>',
             colemak = '<C-e>'
          },
          v_desc = {
-            ascii = '<C-j>',
+            ascii   = '<C-j>',
             colemak = '<C-n>',
          },
          h_inc = {
-            ascii = '<C-l>',
+            ascii   = '<C-l>',
             colemak = '<C-o>'
          },
          h_desc = {
-            ascii = '<C-h>',
+            ascii   = '<C-h>',
             colemak = '<C-h>'
          },
       },
       w_split = {
          v = {
-            ascii = '<LEADER>sk',
+            ascii   = '<LEADER>sk',
             colemak = '<LEADER>se'
          },
          h = {
-            ascii = '<LEADER>sj',
+            ascii   = '<LEADER>sj',
             colemak = '<LEADER>sn'
          },
       },
       buf = {
          next = {
-            ascii = 'L',
+            ascii   = 'L',
             colemak = 'I',
          },
          prev = {
@@ -96,11 +96,11 @@ return {
             ascii = '<LEADER>t',
          },
          prev = {
-            ascii = 'J',
+            ascii   = 'J',
             colemak = 'N'
          },
          next = {
-            ascii = 'K',
+            ascii   = 'K',
             colemak = 'E'
          },
       },
@@ -115,11 +115,11 @@ return {
             ascii = 'U',
          },
          next_pos = {
-            ascii = 'gn',
+            ascii   = 'gn',
             colemak = 'gk',
          },
          prev_pos = {
-            ascii = 'gm',
+            ascii   = 'gm',
             colemak = 'gm',
          },
       },
@@ -154,7 +154,7 @@ return {
             ascii = 'M',
          },
          d = {
-            ascii = 'N',
+            ascii   = 'N',
             colemak = 'm',
          },
       },
@@ -214,15 +214,15 @@ return {
       },
       auto_pair = {
          parent = {
-            ascii = ';j',
+            ascii   = ';j',
             colemak = ';n'
          },
          square = {
-            ascii = ';k',
+            ascii   = ';k',
             colemak = ';e'
          },
          curly = {
-            ascii = ';l',
+            ascii   = ';l',
             colemak = ';i'
          },
          angle = {
@@ -237,19 +237,19 @@ return {
       },
       bracket_ins = {
          parent = {
-            ascii = 'sj',
+            ascii   = 'sj',
             colemak = 'sn'
          },
          square = {
-            ascii = 'sk',
+            ascii   = 'sk',
             colemak = 'se'
          },
          curly = {
-            ascii = 'sl',
+            ascii   = 'sl',
             colemak = 'si'
          },
          angle = {
-            ascii = 'sh',
+            ascii   = 'sh',
             colemak = 'sh'
          },
          s_quote = {
@@ -259,25 +259,25 @@ return {
             ascii = 'sO',
          },
          temp_quote = {
-            ascii = 's\'',
+            ascii   = 's\'',
             colemak = 's\''
          },
       },
       cmd_nav = {
          l = {
-            ascii = '<M-u>',
+            ascii   = '<M-u>',
             colemak = '<M-l>',
          },
          r = {
-            ascii = '<M-p>',
+            ascii   = '<M-p>',
             colemak = '<M-;>',
          },
          next = {
-            ascii = '<M-i>',
+            ascii   = '<M-i>',
             colemak = '<M-u>',
          },
          prev = {
-            ascii = '<M-o>',
+            ascii   = '<M-o>',
             colemak = '<M-y>',
          },
          mru = {
@@ -316,16 +316,16 @@ return {
       },
    },
    custom_fns = {
-      ascii = '',
+      ascii   = '',
       colemak = ''
    },
    git_signs = {
       next_hunk = {
-         ascii = '<LEADER>gj',
+         ascii   = '<LEADER>gj',
          colemak = '<LEADER>gn'
       },
       prev_hunk = {
-         ascii = '<LEADER>gk',
+         ascii   = '<LEADER>gk',
          colemak = '<LEADER>ge'
       },
       unstage_hunk = {
@@ -571,11 +571,11 @@ return {
          ascii = '<LEADER>gi',
       },
       lsp_diag_next = {
-         ascii = '<LEADER>fj',
+         ascii   = '<LEADER>fj',
          colemak = '<LEADER>fn'
       },
       lsp_diag_prev = {
-         ascii = '<LEADER>fk',
+         ascii   = '<LEADER>fk',
          colemak = '<LEADER>fe'
       },
    },
@@ -587,11 +587,11 @@ return {
          ascii = '<LEADER>db',
       },
       step_over = {
-         ascii = '<LEADER>do',
+         ascii   = '<LEADER>do',
          colemak = '<LEADER>do',
       },
       step_into = {
-         ascii = '<LEADER>dn',
+         ascii   = '<LEADER>dn',
          colemak = '<LEADER>dn',
       },
       step_out = {
@@ -609,7 +609,7 @@ return {
    },
    nvim_tree = {
       edit = {
-         ascii = { '<CR>', 'o', 'l' },
+         ascii   = { '<CR>', 'o', 'l' },
          colemak = { '<CR>', 'i' },
       },
       cd = {
@@ -640,11 +640,11 @@ return {
          ascii = '<Tab>',
       },
       first_sibling = {
-         ascii = 'K',
+         ascii   = 'K',
          colemak = 'E'
       },
       last_sibling = {
-         ascii = 'J',
+         ascii   = 'J',
          colemak = 'N'
       },
       toggle_ignored = {
@@ -702,7 +702,7 @@ return {
          ascii = '?',
       },
       toggle_open = {
-         ascii = '<LEADER>e',
+         ascii   = '<LEADER>e',
          colemak = 'T',
       },
       toggle_refresh = {
@@ -775,7 +775,23 @@ return {
       },
    },
    cmp = {
-
+      select_next_item = {
+         ascii = '<Tab>'
+      },
+      select_prev_item = {
+         ascii = '<S-Tab>'
+      },
+      scroll_docs_up = {
+         ascii   = '<C-k>',
+         colemak = '<C-e>'
+      },
+      scroll_docs_down = {
+         ascii   = '<C-j>',
+         colemak = '<C-n>'
+      },
+      confirm = {
+         ascii = '<CR>'
+      },
    },
    telescope = {
       files = {
@@ -861,11 +877,11 @@ return {
          ascii = 'gdn',
       },
       usage_next = {
-         ascii = 'grj',
+         ascii   = 'grj',
          colemak = 'grn'
       },
       usage_prev = {
-         ascii = 'grk',
+         ascii   = 'grk',
          colemak = 'gre'
       },
       list_defs = {
@@ -902,11 +918,11 @@ return {
    },
    maximizer = {
       toggle_max = {
-         ascii = 'm',
+         ascii   = 'm',
          colemak = 'l',
       },
       toggle_max_vertical = {
-         ascii = 'M',
+         ascii   = 'M',
          colemak = 'L',
       },
    },
@@ -915,19 +931,19 @@ return {
          ascii = '<Space>',
       },
       jump_next = {
-         ascii = '<C-k>',
+         ascii   = '<C-k>',
          colemak = '<C-e>'
       },
       jump_prev = {
-         ascii = '<C-j>',
+         ascii   = '<C-j>',
          colemak = '<C-n>'
       },
       select_text = {
-         ascii = '',
+         ascii   = '',
          colemak = ''
       },
       cut_text = {
-         ascii = '',
+         ascii   = '',
          colemak = ''
       },
    },

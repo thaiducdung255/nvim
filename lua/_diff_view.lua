@@ -4,21 +4,21 @@ local get_key_code = require('_utils').get_key_code
 local keycodes     = require('_keymap').diff_view
 
 require('diffview').setup({
-   diff_binaries = false, -- Show diffs for binaries
-   enhanced_diff_hl = false, -- See ':h diffview-config-enhanced_diff_hl'
-   git_cmd = { 'git' }, -- The git executable followed by default args.
-   use_icons = true, -- Requires nvim-web-devicons
-   watch_index = true, -- Update views and index buffers when the git index changes.
-   icons = { -- Only applies when use_icons is true.
+   diff_binaries      = false, -- Show diffs for binaries
+   enhanced_diff_hl   = false, -- See ':h diffview-config-enhanced_diff_hl'
+   git_cmd            = { 'git' }, -- The git executable followed by default args.
+   use_icons          = true, -- Requires nvim-web-devicons
+   watch_index        = true, -- Update views and index buffers when the git index changes.
+   icons              = { -- Only applies when use_icons is true.
       folder_closed = '',
-      folder_open = '',
+      folder_open   = '',
    },
-   signs = {
+   signs              = {
       fold_closed = '',
-      fold_open = '',
-      done = '✓',
+      fold_open   = '',
+      done        = '✓',
    },
-   view = {
+   view               = {
       -- Configure the layout and behavior of different types of views.
       -- Available layouts:
       --  'diff1_plain'
@@ -35,7 +35,7 @@ require('diffview').setup({
       },
       merge_tool = {
          -- Config for conflicted files in diff views during a merge or rebase.
-         layout = 'diff3_horizontal',
+         layout              = 'diff3_horizontal',
          disable_diagnostics = true, -- Temporarily disable diagnostics for conflict buffers while in the view.
       },
       file_history = {
@@ -43,15 +43,15 @@ require('diffview').setup({
          layout = 'diff2_horizontal',
       },
    },
-   file_panel = {
+   file_panel         = {
       listing_style = 'tree', -- One of 'list' or 'tree'
-      tree_options = { -- Only applies when listing_style is 'tree'
-         flatten_dirs = true, -- Flatten dirs that only contain one single dir
+      tree_options  = { -- Only applies when listing_style is 'tree'
+         flatten_dirs    = true, -- Flatten dirs that only contain one single dir
          folder_statuses = 'only_folded', -- One of 'never', 'only_folded' or 'always'.
       },
-      win_config = { -- See ':h diffview-config-win_config'
+      win_config    = { -- See ':h diffview-config-win_config'
          position = 'left',
-         width = 35,
+         width    = 35,
          win_opts = {}
       },
    },
@@ -60,27 +60,27 @@ require('diffview').setup({
          single_file = {
             diff_merges = 'combined',
          },
-         multi_file = {
+         multi_file  = {
             diff_merges = 'first-parent',
          },
       },
-      win_config = { -- See ':h diffview-config-win_config'
+      win_config  = { -- See ':h diffview-config-win_config'
          position = 'bottom',
-         height = 16,
+         height   = 16,
          win_opts = {}
       },
    },
-   commit_log_panel = {
+   commit_log_panel   = {
       win_config = { -- See ':h diffview-config-win_config'
          win_opts = {},
       }
    },
-   default_args = { -- Default args prepended to the arg-list for the listed commands
-      DiffviewOpen = {},
+   default_args       = { -- Default args prepended to the arg-list for the listed commands
+      DiffviewOpen        = {},
       DiffviewFileHistory = {},
    },
-   hooks = {}, -- See ':h diffview-config-hooks'
-   keymaps = {
+   hooks              = {}, -- See ':h diffview-config-hooks'
+   keymaps            = {
       disable_defaults = true, -- Disable the default keymaps
       view = {
          -- The `view` bindings are active in the diff buffers, only when the current

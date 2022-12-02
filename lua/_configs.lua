@@ -13,6 +13,7 @@ vim.cmd('filetype indent on')
 vim.cmd('set wildignore+=*/tmp/*,*/node_modules/*,*/.git/*,*/dist/*,*/debug-adapters/*')
 vim.cmd('set complete-=5')
 
+vim.o.completeopt     = 'menuone,noselect'
 vim.o.foldcolumn      = '0'
 vim.o.foldlevel       = 99
 vim.o.foldlevelstart  = 99
