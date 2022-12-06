@@ -88,6 +88,13 @@ local mode = {
    end,
 }
 
+local date = {
+   'date',
+   fmt = function()
+      return os.date("%a, %H:%M:%S (%d/%m)")
+   end
+}
+
 local diff = {
    'diff',
    colored = false,
@@ -119,7 +126,7 @@ local windows = {
 
 require 'lualine'.setup {
    tabline    = {
-      lualine_a = { windows },
+      lualine_a = { date, windows },
       lualine_b = {},
       lualine_c = {},
 
