@@ -165,11 +165,6 @@ return require('packer').startup({
       use { 'SmiteshP/nvim-gps' }
       use { 'nvim-lualine/lualine.nvim' }
 
-      use {
-         'akinsho/bufferline.nvim',
-         requires = 'kyazdani42/nvim-web-devicons'
-      }
-
       -- rest api
       -- use {
       --    'rest-nvim/rest.nvim',
