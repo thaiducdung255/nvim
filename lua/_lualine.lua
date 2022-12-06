@@ -126,7 +126,7 @@ local windows = {
 
 require 'lualine'.setup {
    tabline    = {
-      lualine_a = { date, windows },
+      lualine_a = { windows },
       lualine_b = {},
       lualine_c = {},
 
@@ -149,6 +149,6 @@ require 'lualine'.setup {
 
       lualine_x = {},
       lualine_y = { diff },
-      lualine_z = { branch, progress }
+      lualine_z = { branch, date, progress }
    },
 }
