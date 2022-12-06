@@ -1,5 +1,15 @@
 require 'nvim-web-devicons'.setup {
    override = {
+      ['docker-compose.yml'] = {
+         icon  = '',
+         color = '#a85813',
+         name  = 'Dockerfile'
+      },
+      Dockerfile = {
+         icon  = '',
+         color = '#0e67cc',
+         name  = 'Dockerfile'
+      },
       zsh = {
          icon  = '',
          color = '#428850',
