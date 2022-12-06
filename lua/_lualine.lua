@@ -33,6 +33,9 @@ local theme = {
    inactive = {
       a = { bg = colors.bg1, fg = colors.comment },
    },
+   terminal = {
+      a = { bg = colors.bg1, fg = colors.cyan },
+   },
 }
 
 _gps.setup {
@@ -111,6 +114,7 @@ local windows = {
    show_modified_status = true,
    mode                 = 0,
    fmt                  = shorten_filename,
+   disabled_buftypes    = { 'terminal', 'nofile' }
 }
 
 require 'lualine'.setup {
@@ -129,7 +133,6 @@ require 'lualine'.setup {
       theme                = theme,
       component_separators = { left = '|', right = '|' },
       section_separators   = { left = '', right = '' },
-      disabled_filetypes   = { 'NvimTree', 'toggleterm', 'Outline' },
       always_divide_middle = true,
    },
    sections   = {

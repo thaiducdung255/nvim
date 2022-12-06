@@ -62,8 +62,6 @@ telescope.setup {
 
       mappings = {
          i = {
-            -- ['<CR>'] = actions.select_default + actions.center,
-            -- ['<CR>'] = fzf_multi_select,
             ['<C-n>'] = actions.move_selection_next,
             ['<C-e>'] = actions.move_selection_previous,
             ['<C-q>'] = actions.smart_send_to_qflist + actions.open_qflist,
@@ -113,17 +111,6 @@ telescope.setup {
       tele_taby = {
          use_highlighter = true
       },
-      -- repo = {
-      --    list = {
-      --       fd_opts = {
-      --          '--no-ignore-vcs',
-      --       },
-      --       search_dirs = {
-      --          '~/Projects',
-      --          '~/.config',
-      --       },
-      --    },
-      -- },
    }
 }
 
