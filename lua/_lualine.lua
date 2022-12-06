@@ -4,12 +4,12 @@ local colors = {
    bg1     = "#101010",
    bg2     = "#202020",
    bg3     = "#303030",
-   fg      = "#d0d0d0",
+   fg      = "#e0e0e0",
    green   = "Green",
    orange  = 'Orange',
    red     = "Red",
    cyan    = "Cyan",
-   comment = "Grey",
+   comment = "#444444",
 }
 
 local theme = {
@@ -48,6 +48,16 @@ _gps.setup {
    },
 }
 
+local shorten_filename = function(str)
+   local last_index = str:find("%.", 0)
+
+   if last_index == nil or last_index == 1 then
+      return str
+   end
+
+   return str:sub(1, last_index - 1)
+end
+
 local gps = {
    _gps.get_location,
    cond = _gps.is_available,
@@ -63,15 +73,7 @@ local file_name = {
 local tabs = {
    'tabs',
    mode = 1,
-   fmt  = function(str)
-      local last_index = str:find("%.", 0)
-
-      if last_index == nil or last_index == 1 then
-         return str
-      end
-
-      return str:sub(1, last_index - 1)
-   end,
+   fmt  = shorten_filename,
 }
 
 local mode = {
@@ -103,10 +105,24 @@ local progress = {
    'progress',
 }
 
-local test = ""
+local windows = {
+   'windows',
+   show_filename_only   = true,
+   show_modified_status = true,
+   mode                 = 0,
+   fmt                  = shorten_filename,
+}
 
 require 'lualine'.setup {
-   tabline    = {},
+   tabline    = {
+      lualine_a = { windows },
+      lualine_b = {},
+      lualine_c = {},
+
+      lualine_x = {},
+      lualine_y = {},
+      lualine_z = { tabs }
+   },
    extensions = {},
    options    = {
       icons_enabled        = true,
@@ -118,11 +134,11 @@ require 'lualine'.setup {
    },
    sections   = {
       lualine_a = { mode },
-      lualine_b = { file_name, branch },
+      lualine_b = { file_name },
       lualine_c = { diagnostics, gps },
 
       lualine_x = {},
       lualine_y = { diff },
-      lualine_z = { tabs, progress }
+      lualine_z = { branch, progress }
    },
 }
