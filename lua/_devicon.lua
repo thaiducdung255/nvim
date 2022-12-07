@@ -3,9 +3,9 @@ require 'nvim-web-devicons'.setup {
       ['docker-compose.yml'] = {
          icon  = '',
          color = '#a85813',
-         name  = 'Dockerfile'
+         name  = 'DockerCompose'
       },
-      Dockerfile = {
+      ['Dockerfile'] = {
          icon  = '',
          color = '#0e67cc',
          name  = 'Dockerfile'
@@ -43,22 +43,22 @@ require 'nvim-web-devicons'.setup {
       ['package.json'] = {
          icon  = '',
          color = '#a85813',
-         name  = 'Npm'
+         name  = 'PackageJson'
       },
       ['package-lock.json'] = {
          icon  = '',
          color = '#a85813',
-         name  = 'Npm1'
+         name  = 'PackageLockJson'
       },
       ['yarn.lock'] = {
          icon  = '',
          color = '#a85813',
-         name  = 'Npm2'
+         name  = 'YarnLock'
       },
       ['pnpm-lock.yaml'] = {
          icon  = '',
          color = '#a85813',
-         name  = 'Npm3'
+         name  = 'PnpmLock'
       },
       ['tsconfig.tsbuildinfo'] = {
          icon  = '',
@@ -71,34 +71,34 @@ require 'nvim-web-devicons'.setup {
          name  = 'Tsconf'
       },
       ['.editorconfig'] = {
-         icon  = '',
+         icon  = '',
          color = '#0e67cc',
          name  = 'Ediconf'
       },
       ['.eslintrc.json'] = {
-         icon  = '',
+         icon  = '',
          color = '#0e67cc',
          name  = 'Eslint'
       },
       ['.eslintrc.yml'] = {
-         icon  = '',
+         icon  = '',
          color = '#0e67cc',
          name  = 'Eslint1'
       },
       ['.eslintrc.cjs'] = {
-         icon  = '',
+         icon  = '',
          color = '#0e67cc',
          name  = 'Eslint2'
       },
       ['.eslintrc.js'] = {
-         icon  = '',
+         icon  = '',
          color = '#0e67cc',
          name  = 'Eslint3'
       },
       ['.prettierignore'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Prettyignore'
+         name  = 'PrettyIgnore'
       },
       ['.prettierrc'] = {
          icon  = '',
@@ -128,22 +128,32 @@ require 'nvim-web-devicons'.setup {
       ['main.js'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'Index2'
+         name  = 'MainJs'
       },
       ['main.ts'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'Index3'
+         name  = 'MainTs'
       },
       ['app.js'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'Index4'
+         name  = 'AppJs'
       },
       ['app.ts'] = {
          icon  = '',
          color = '#11bfb7',
-         name  = 'Index5'
+         name  = 'AppTs'
+      },
+      prisma = {
+         icon  = '',
+         color = '#571275',
+         name  = 'Prisma'
+      },
+      ['nest-cli.json'] = {
+         icon  = '',
+         color = '#Ff005d',
+         name  = 'NestCli'
       },
    };
    default  = true;

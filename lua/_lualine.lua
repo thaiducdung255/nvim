@@ -121,7 +121,11 @@ local windows = {
    show_modified_status = true,
    mode                 = 0,
    fmt                  = shorten_filename,
-   disabled_buftypes    = { 'terminal', 'nofile' }
+   disabled_buftypes    = { 'terminal', 'nofile' },
+   filetype_names       = {
+      NvimTree   = 'NTree',
+      toggleterm = 'term',
+   }
 }
 
 require 'lualine'.setup {
