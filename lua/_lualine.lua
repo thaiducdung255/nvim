@@ -52,13 +52,20 @@ _gps.setup {
 }
 
 local shorten_filename = function(str)
-   local last_index = str:find("%.", 0)
+   local found_current_idx = str:find("%.", 1)
 
-   if last_index == nil or last_index == 1 then
+   if found_current_idx == nil or found_current_idx == 1 then
       return str
    end
 
-   return str:sub(1, last_index - 1)
+   local last_found_idx = found_current_idx
+
+   while found_current_idx ~= nil do
+      last_found_idx = found_current_idx
+      found_current_idx = str:find("%.", last_found_idx + 1)
+   end
+
+   return str:sub(1, last_found_idx - 1)
 end
 
 local gps = {
