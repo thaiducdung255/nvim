@@ -18,15 +18,23 @@ require('rest-nvim').setup({
    },
 })
 
-map('n', keycodes.run, [[:lua require('rest-nvim').run()<CR>]])
-map('n', keycodes.curl, [[:lua require('rest-nvim').run(true)<CR>]])
-
 vim.api.nvim_create_autocmd(
    'FileType',
    {
-      pattern  = 'httpResult,tsplayground',
+      pattern  = 'httpResult',
       callback = function()
          vim.bo.sw = 2
+      end
+   }
+)
+
+vim.api.nvim_create_autocmd(
+   'BufEnter',
+   {
+      pattern  = '*.http',
+      callback = function()
+         map('n', keycodes.run, [[:lua require('rest-nvim').run()<CR>]])
+         map('n', keycodes.curl, [[:lua require('rest-nvim').run(true)<CR>]])
       end
    }
 )

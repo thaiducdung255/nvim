@@ -48,3 +48,13 @@ require 'nvim-treesitter.configs'.setup {
       max_file_lines = 1000,
    },
 }
+
+vim.api.nvim_create_autocmd(
+   'FileType',
+   {
+      pattern  = 'tsplayground',
+      callback = function()
+         vim.bo.sw = 2
+      end
+   }
+)
