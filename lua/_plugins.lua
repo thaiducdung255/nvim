@@ -100,6 +100,7 @@ return require('packer').startup({
       -- db management
       use 'tpope/vim-dadbod'
       use 'kristijanhusak/vim-dadbod-ui'
+      use 'kristijanhusak/vim-dadbod-completion'
 
       -- rainbow parentheses
       use 'p00f/nvim-ts-rainbow'

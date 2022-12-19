@@ -25,9 +25,9 @@ cmp.setup {
       comparators = {
          cmp.config.compare.offset,
          cmp.config.compare.exact,
+         cmp.config.compare.kind,
          cmp.config.compare.score,
          require 'cmp-under-comparator'.under,
-         cmp.config.compare.kind,
          cmp.config.compare.sort_text,
          cmp.config.compare.length,
          cmp.config.compare.order,
@@ -75,6 +75,10 @@ cmp.setup {
       {
          name = 'nvim_lsp_signature_help',
          max_item_count = 13,
+      },
+      {
+         name = 'vim-dadbod-completion',
+         max_item_count = 10,
       },
       {
          name = 'vsnip',
