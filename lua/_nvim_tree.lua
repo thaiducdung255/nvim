@@ -28,6 +28,7 @@ local list = {
    { key = get_key_code(keycodes.create), cb = tree_cb('create') },
    { key = get_key_code(keycodes.remove), cb = tree_cb('remove') },
    { key = get_key_code(keycodes.rename), cb = tree_cb('rename') },
+   { key = get_key_code(keycodes.rename), cb = tree_cb('rename_basename') },
    { key = get_key_code(keycodes.full_rename), cb = tree_cb('full_rename') },
    { key = get_key_code(keycodes.cut), cb = tree_cb('cut') },
    { key = get_key_code(keycodes.copy), cb = tree_cb('copy') },
@@ -70,8 +71,8 @@ require 'nvim-tree'.setup {
          enable = true,
          icons = {
             corner = '└ ',
-            edge = '│ ',
-            none = '  ',
+            edge   = '│ ',
+            none   = '  ',
          },
       },
       icons                  = {
@@ -127,7 +128,7 @@ require 'nvim-tree'.setup {
       width    = 30,
       side     = 'left',
       mappings = {
-         custom_only = false,
+         custom_only = true,
          list        = list
       }
    },
