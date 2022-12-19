@@ -58,6 +58,7 @@ local shorten_filename = function(str)
       return str
    end
 
+   -- remove file's extensions
    local last_found_idx = found_current_idx
 
    while found_current_idx ~= nil do
