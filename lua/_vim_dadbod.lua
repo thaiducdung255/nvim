@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd(
 vim.api.nvim_create_autocmd(
    'BufEnter',
    {
-      pattern = '(*-query-*|*.sql)',
+      pattern = '(*-query-*|*.query)',
       callback = function()
          vim.cmd([[nmap <Space><CR> <Space>v <Plug>(DBUI_ExecuteQuery)]])
          vim.cmd([[nmap <Space><Tab> <Plug>(DBUI_SaveQuery)]])
