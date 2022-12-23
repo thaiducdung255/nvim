@@ -1,4 +1,5 @@
 local _gps = require('nvim-gps')
+local _recorder = require('recorder')
 
 local colors = {
    bg1     = "#101010",
@@ -160,7 +161,7 @@ require 'lualine'.setup {
       lualine_c = { diagnostics, gps },
 
       lualine_x = {},
-      lualine_y = { diff },
+      lualine_y = { _recorder.recordingStatus, _recorder.displaySlots, diff },
       lualine_z = { branch, date, progress }
    },
 }

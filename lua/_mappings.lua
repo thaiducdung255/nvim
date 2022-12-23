@@ -68,17 +68,6 @@ map('nv', keycodes.cursor_nav.last, '$')
 map('n', keycodes.custom_super_v, 'V')
 map('n', keycodes.custom_V, 'v$h')
 
----- register
-map('nv', keycodes.register.a, '@a')
-map('nv', keycodes.register.d, '@d')
-map('nv', keycodes.register.f, '@f')
-map('nv', keycodes.register.g, '@g')
-map('nv', keycodes.register.p, '@p')
-map('nv', keycodes.register.q, '@q')
-map('nv', keycodes.register.r, '@r')
-map('nv', keycodes.register.s, '@s')
-map('nv', keycodes.register.w, '@w')
-
 ---- toggle upper/lower/camel case
 map('i', keycodes.case_mod.upper, '<ESC>vbUea')
 map('i', keycodes.case_mod.lower, '<ESC>vbuea')

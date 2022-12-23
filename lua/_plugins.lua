@@ -30,8 +30,8 @@ return require('packer').startup({
       }
 
       use { 'nvim-telescope/telescope-media-files.nvim' }
-      use { 'TC72/telescope-tele-tabby.nvim' }
       use { 'cljoly/telescope-repo.nvim' }
+      use { 'debugloop/telescope-undo.nvim' }
 
       -- vim motions
       use { 'phaazon/hop.nvim' }
@@ -111,9 +111,6 @@ return require('packer').startup({
       -- explorer
       use 'kyazdani42/nvim-tree.lua'
 
-      -- undo tree
-      use 'mbbill/undotree'
-
       -- indent line
       use 'lukas-reineke/indent-blankline.nvim'
 
@@ -145,6 +142,9 @@ return require('packer').startup({
       -- editorconfig
       use 'editorconfig/editorconfig-vim'
 
+      -- macro
+      use 'chrisgrieser/nvim-recorder'
+
       -- comment
       use { 'numToStr/Comment.nvim' }
 
@@ -165,12 +165,6 @@ return require('packer').startup({
       -- Status Line and Bufferline
       use { 'SmiteshP/nvim-gps' }
       use { 'nvim-lualine/lualine.nvim' }
-
-      -- rest api
-      -- use {
-      --    'rest-nvim/rest.nvim',
-      --    requires = { 'nvim-lua/plenary.nvim' },
-      -- }
 
       use {
          'teto/rest.nvim',

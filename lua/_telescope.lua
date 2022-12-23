@@ -87,6 +87,21 @@ telescope.setup {
       },
    },
    extensions = {
+      undo = {
+         use_delta = true,
+         layout_strategy = 'vertical',
+         layout_config = {
+            preview_height = 0.8
+         },
+         side_by_side = true,
+         mappings = {
+            i = {
+               -- ['<C-cr>'] = require('telescope-undo.actions').yank_additions,
+               -- ['<S-cr>'] = require('telescope-undo.actions').yank_deletions,
+               ['<cr>'] = require('telescope-undo.actions').restore,
+            }
+         }
+      },
       hop = {
          keys = {
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
@@ -108,22 +123,19 @@ telescope.setup {
          override_file_sorter    = false,
          case_mode               = 'smart_case',
       },
-      tele_taby = {
-         use_highlighter = true
-      },
    }
 }
 
 telescope.load_extension('hop')
 telescope.load_extension('fzf')
 telescope.load_extension('repo')
+telescope.load_extension('undo')
 
 map('n', keycodes.files, ':Telescope find_files hidden=true no_ignore=true<CR>')
 map('n', keycodes.old_files, ':Telescope oldfiles hidden=true no_ignore=true<CR>')
 map('n', keycodes.bufs, ':Telescope buffers<CR>')
 map('n', keycodes.str_grep, ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
 map('n', keycodes.live_grep, ':Telescope live_grep hidden=true no_ignore=true<CR>')
-map('n', keycodes.tele_taby, ':Telescope tele_tabby list<CR>')
 
 map('n', keycodes.buf_fuzzy_find, ':Telescope current_buffer_fuzzy_find<CR>')
 map('n', keycodes.lsp_type_def, ':Telescope lsp_type_definitions<CR>')
@@ -148,3 +160,5 @@ local repo_dirs = [[{'~/Projects','~/Downloads','~/.config'}]]
 map('n', keycodes.repo,
    [[:lua require'telescope'.extensions.repo.list{fd_opts={'--no-ignore-vcs'},search_dirs=]] .. repo_dirs .. [[}<CR>]]
 )
+
+map('n', keycodes.undo, [[:lua require'telescope'.extensions.undo.undo()<CR>]])

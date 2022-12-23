@@ -164,35 +164,6 @@ return {
       custom_super_v = {
          ascii = '<LEADER>v'
       },
-      register = {
-         q = {
-            ascii = '<LEADER>rq',
-         },
-         w = {
-            ascii = '<LEADER>rw',
-         },
-         f = {
-            ascii = '<LEADER>rf',
-         },
-         p = {
-            ascii = '<LEADER>rp',
-         },
-         g = {
-            ascii = '<LEADER>rg',
-         },
-         a = {
-            ascii = '<LEADER>ra',
-         },
-         r = {
-            ascii = '<LEADER>rr',
-         },
-         s = {
-            ascii = '<LEADER>rs',
-         },
-         d = {
-            ascii = '<LEADER>rd',
-         },
-      },
       case_mod = {
          pascal = {
             ascii = ';o',
@@ -809,9 +780,6 @@ return {
       live_grep = {
          ascii = '<LEADER>fs',
       },
-      tele_taby = {
-         ascii = '<LEADER>f;',
-      },
       buf_fuzzy_find = {
          ascii = '<LEADER>ss',
       },
@@ -859,7 +827,10 @@ return {
       },
       repo = {
          ascii = '<LEADER>.',
-      }
+      },
+      undo = {
+         ascii = '<LEADER>u',
+      },
    },
    toggle_term = {
       h_open = {
@@ -901,11 +872,6 @@ return {
       },
       outer_class = {
          ascii = '<LEADER>co',
-      },
-   },
-   undo_tree = {
-      show = {
-         ascii = '<LEADER>u',
       },
    },
    dadbod = {
