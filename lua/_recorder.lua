@@ -1,6 +1,6 @@
 require('recorder').setup {
    slots    = { 'a', 'b' },
-   clear    = false,
+   clear    = true,
    logLevel = vim.log.levels.OFF,
    mapping  = {
       startStopRecording = 'q',
