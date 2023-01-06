@@ -619,7 +619,7 @@ return {
          colemak = 'N'
       },
       toggle_ignored = {
-         ascii = 'I',
+         ascii = 'Z',
       },
       toggle_dotfiles = {
          ascii = 'H',

@@ -96,6 +96,7 @@ cmp.setup {
             end
          },
          max_item_count = 7,
+         keyword_length = 3,
       },
       {
          name = 'path',

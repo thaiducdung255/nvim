@@ -1,14 +1,39 @@
 require 'nvim-web-devicons'.setup {
    override = {
+      ['nodemon.json'] = {
+         icon  = '',
+         color = '#428850',
+         name  = 'Nodemon'
+      },
+      ['Makefile'] = {
+         icon  = '',
+         color = '#428850',
+         name  = 'Makefile'
+      },
+      ['.node-version'] = {
+         icon  = '',
+         color = '#a85813',
+         name  = 'NodeVersion'
+      },
       ['docker-compose.yml'] = {
          icon  = '',
          color = '#a85813',
          name  = 'DockerCompose'
       },
+      ['gitlab-ci.yml'] = {
+         icon  = '',
+         color = '#a85813',
+         name  = 'GitLabCi'
+      },
+      ['.dockerignore'] = {
+         icon  = '',
+         color = '#515151',
+         name  = 'DockerIgnore'
+      },
       ['Dockerfile'] = {
          icon  = '',
          color = '#0e67cc',
-         name  = 'Dockerfile'
+         name  = 'DockerFile'
       },
       zsh = {
          icon  = '',
