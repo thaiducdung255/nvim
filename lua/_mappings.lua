@@ -78,11 +78,12 @@ map('n', keycodes.quote_mod.single, 'f`r\'f`r\'F\'')
 map('n', keycodes.quote_mod.template, 'f\'r`f\'r`F`')
 
 ---- auto pairs cmds
-map('ic', keycodes.auto_pair.parent, '()<left>')
-map('ic', keycodes.auto_pair.square, '[]<left>')
-map('ic', keycodes.auto_pair.curly, '{}<left>')
-map('ic', keycodes.auto_pair.angle, '<><left>')
-map('ic', keycodes.auto_pair.temp_quote, '``<left>')
+map('i', keycodes.auto_pair.parent, '()<left>')
+map('i', keycodes.auto_pair.square, '[]<left>')
+map('i', keycodes.auto_pair.curly, '{}<ESC>i')
+map('i', keycodes.auto_pair.angle, '<><left>')
+map('i', keycodes.auto_pair.temp_quote, '``<left>')
+map('i', keycodes.auto_pair.double_quote, '""<left>')
 map('i', keycodes.auto_pair.temp_val, '${}<Left>')
 
 ---- insert brackets

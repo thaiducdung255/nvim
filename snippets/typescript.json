@@ -85,37 +85,49 @@
       "prefix": ["nd"],
       "body": "new Date($1)"
    },
+   "let": {
+      "prefix": ["let"],
+      "body": "let $1: $2 = $3"
+   },
+   "const": {
+      "prefix": ["con"],
+      "body": "const $1: $2 = $3"
+   },
    "Date.now": {
       "prefix": ["dn"],
       "body": "Date.now()"
    },
    "typeStringObject": {
       "prefix": ["tS"],
-      "body": "$1: String"
+      "body": "String"
    },
    "typeNumberObject": {
       "prefix": ["tN"],
-      "body": "$1: Number"
+      "body": "Number"
    },
    "typeBooleanObject": {
       "prefix": ["tB"],
-      "body": "$1: Boolean"
+      "body": "Boolean"
    },
    "typeString": {
       "prefix": ["ts"],
-      "body": "$1: string"
+      "body": "string"
    },
    "typeNumber": {
       "prefix": ["tn"],
-      "body": "$1: number"
+      "body": "number"
    },
    "typeBoolean": {
       "prefix": ["tb"],
-      "body": "$1: boolean"
+      "body": "boolean"
    },
    "typeVoid": {
       "prefix": ["tv"],
-      "body": "$1: void"
+      "body": "void"
+   },
+   "typePromise": {
+      "prefix": ["tp"],
+      "body": "Promise"
    },
    "parseInt": {
       "prefix": ["pi"],

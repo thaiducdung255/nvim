@@ -3,10 +3,6 @@
       "prefix": ["sb"],
       "body": "#!/usr/bin/go\n\n"
    },
-   "assignment": {
-      "prefix": ["as"],
-      "body": ":= "
-   },
    "init_main": {
       "prefix": ["init"],
       "body": [
@@ -16,5 +12,70 @@
          "   $1",
          "}"
       ]
+   },
+   "range": {
+      "prefix": ["ran"],
+      "body": [
+         "for ${1:i}, ${2:val} := range(${3:arr}) {",
+         "   $4",
+         "}",
+         "$0"
+      ]
+   },
+   "slim_print": {
+      "prefix": ["cl"],
+      "body": "fmt.Println($0)"
+   },
+   "pretty_print": {
+      "prefix": ["co"],
+      "body": "fmt.Println(\"$1\", $1)"
+   },
+   "int8": {
+      "prefix": ["i"],
+      "body": "int8"
+   },
+   "var": {
+      "prefix": ["va"],
+      "body": "var ${1:name} ${2:type} = ${3:value}"
+   },
+   "array": {
+      "prefix": ["ar"],
+      "body": "var ${1:name} = []${2:type}{${3:...values}}"
+   },
+   "int16": {
+      "prefix": ["2i"],
+      "body": "int16"
+   },
+   "int32": {
+      "prefix": ["3i"],
+      "body": "int32"
+   },
+   "int64": {
+      "prefix": ["4i"],
+      "body": "int64"
+   },
+   "uint8": {
+      "prefix": ["u"],
+      "body": "int8"
+   },
+   "uint16": {
+      "prefix": ["2u"],
+      "body": "int16"
+   },
+   "uint32": {
+      "prefix": ["3u"],
+      "body": "int32"
+   },
+   "uint64": {
+      "prefix": ["4u"],
+      "body": "int64"
+   },
+   "float32": {
+      "prefix": ["f"],
+      "body": "float32"
+   },
+   "float64": {
+      "prefix": ["ff"],
+      "body": "float64"
    }
 }

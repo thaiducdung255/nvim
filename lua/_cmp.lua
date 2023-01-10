@@ -1,18 +1,8 @@
 local cmp = require 'cmp'
-local get_key_code = require('_utils').get_key_code
-local keycodes = require('_keymap').cmp
-
 local lspkind = require('lspkind')
 
--- local source_mapping = {
---    vsnip                   = 'ﬕ',
---    buffer                  = '',
---    nvim_lua                = '',
---    cmdline                 = '',
---    cmdline_history         = '',
---    nvim_lsp_signature_help = '',
---    nvim_lsp                = '',
--- }
+local get_key_code = require('_utils').get_key_code
+local keycodes = require('_keymap').cmp
 
 cmp.setup {
    snippet = {

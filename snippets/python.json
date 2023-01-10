@@ -45,22 +45,6 @@
       "prefix": ["kv"],
       "body": "\"$1\":${2:$1}"
    },
-   "type_string": {
-      "prefix": ["ts"],
-      "body": "$1: str"
-   },
-   "type_int": {
-      "prefix": ["ti"],
-      "body": "$1: int"
-   },
-   "type_bool": {
-      "prefix": ["tb"],
-      "body": "$1: bool"
-   },
-   "type_none": {
-      "prefix": ["tn"],
-      "body": "$1: None"
-   },
    "function": {
       "prefix": ["fn"],
       "body": [

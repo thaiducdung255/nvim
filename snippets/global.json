@@ -24,9 +24,29 @@
       "prefix": ["ge"],
       "body": ">= "
    },
-   "environment_variable": {
-      "prefix": ["ev"],
-      "body": "{{$1}}"
+   "$eq": {
+      "prefix": ["eq"],
+      "body": "== "
+   },
+   "$ne": {
+      "prefix": ["ne"],
+      "body": "!= "
+   },
+   "$or": {
+      "prefix": ["or"],
+      "body": "|| "
+   },
+   "$and": {
+      "prefix": ["an"],
+      "body": "&& "
+   },
+   "true": {
+      "prefix": ["t"],
+      "body": "true"
+   },
+   "false": {
+      "prefix": ["f"],
+      "body": "false"
    },
    ".editorconfig": {
       "prefix": ["ecf"],

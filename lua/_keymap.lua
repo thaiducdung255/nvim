@@ -202,6 +202,9 @@ return {
          temp_quote = {
             ascii = ';c',
          },
+         double_quote = {
+            ascii = ';;',
+         },
          temp_val = {
             ascii = ';v',
          }
