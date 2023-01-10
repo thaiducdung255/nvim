@@ -40,8 +40,6 @@ return require('packer').startup({
       use { 'ahmedkhalf/lsp-rooter.nvim' }
 
       -- autocomplete
-      -- use 'windwp/nvim-autopairs'
-
       use {
          'hrsh7th/nvim-cmp',
          requires = {

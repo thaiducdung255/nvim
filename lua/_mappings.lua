@@ -84,6 +84,8 @@ map('i', keycodes.auto_pair.curly, '{}<ESC>i')
 map('i', keycodes.auto_pair.angle, '<><left>')
 map('i', keycodes.auto_pair.temp_quote, '``<left>')
 map('i', keycodes.auto_pair.double_quote, '""<left>')
+map('i', keycodes.auto_pair.alt_double_quote, '""<left>')
+map('i', keycodes.auto_pair.single_quote, '\'\'<left>')
 map('i', keycodes.auto_pair.temp_val, '${}<Left>')
 
 ---- insert brackets

@@ -205,6 +205,12 @@ return {
          double_quote = {
             ascii = ';;',
          },
+         alt_double_quote = {
+            ascii = '"'
+         },
+         single_quote = {
+            ascii = '\'',
+         },
          temp_val = {
             ascii = ';v',
          }
