@@ -35,6 +35,11 @@ require 'nvim-web-devicons'.setup {
          color = '#0e67cc',
          name  = 'DockerFile'
       },
+      ['go.mod'] = {
+         icon  = '',
+         color = '#0e67cc',
+         name  = 'GoMod'
+      },
       zsh = {
          icon  = '',
          color = '#428850',
