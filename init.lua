@@ -36,3 +36,8 @@ require('_neovide')
 require('_pretty_fold')
 require('_ufo')
 require('_nvim_tree')
+
+vim.keymap.set('i', '<C-CR>', function() return vim.fn['codeium#Accept']() end, { expr = true })
+vim.keymap.set('i', '<C-n>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
+vim.keymap.set('i', '<C-p>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
+vim.keymap.set('i', '<C-q>', function() return vim.fn['codeium#Clear']() end, { expr = true })

@@ -28,7 +28,7 @@
    },
    "pretty_print": {
       "prefix": ["co"],
-      "body": "fmt.Println(\"$1\", $1)"
+      "body": "fmt.Println(\"$1$2\", $1)"
    },
    "var": {
       "prefix": ["va"],

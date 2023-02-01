@@ -41,11 +41,11 @@
       "body": "&& "
    },
    "true": {
-      "prefix": ["t"],
+      "prefix": [".t"],
       "body": "true"
    },
    "false": {
-      "prefix": ["f"],
+      "prefix": [".f"],
       "body": "false"
    },
    ".editorconfig": {
