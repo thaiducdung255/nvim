@@ -112,6 +112,7 @@ local diff = {
 
 local branch = {
    'branch',
+   icon = ''
 }
 
 local diagnostics = {

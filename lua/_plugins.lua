@@ -17,8 +17,8 @@ return require('packer').startup({
 
       -- LSP
       use { 'neovim/nvim-lspconfig' }
-      use { 'tami5/lspsaga.nvim' }
       use { 'b0o/schemastore.nvim' }
+      use { 'dnlhc/glance.nvim' }
 
       -- telescope
       use { 'nvim-telescope/telescope.nvim' }
@@ -42,12 +42,6 @@ return require('packer').startup({
       -- autocomplete
       use {
          'Exafunction/codeium.vim',
-         -- config = function()
-         --    vim.keymap.set('i', '<C-CR>', function() return vim.fn['codeium#Accept']() end, { expr = true })
-         --    vim.keymap.set('i', '<C-n>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true })
-         --    vim.keymap.set('i', '<C-p>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true })
-         --    vim.keymap.set('i', '<C-q>', function() return vim.fn['codeium#Clear']() end, { expr = true })
-         -- end
       }
 
       use {

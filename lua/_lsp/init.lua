@@ -8,12 +8,12 @@ for type, icon in pairs(signs) do
    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl, })
 end
 
-map('n', keycodes.def_nav, vim.lsp.buf.definition)
 map('n', keycodes.hover, vim.lsp.buf.hover)
 map('n', keycodes.code_action, vim.lsp.buf.code_action)
 map('n', keycodes.signature_help, vim.lsp.buf.signature_help)
 map('n', keycodes.rename, vim.lsp.buf.rename)
--- map('n', keycodes.goto_impl, vim.lsp.buf.implementation)
+map('n', keycodes.n_diag, vim.diagnostic.goto_next)
+map('n', keycodes.p_diag, vim.diagnostic.goto_prev)
 
 -- lsp sign diagnostic for nvim 0.5
 vim.fn.sign_define(

@@ -521,14 +521,11 @@ return {
       },
    },
    lsp = {
-      def_nav = {
-         ascii = 'gd',
-      },
       signature_help = {
          ascii = '<LEADER>sh',
       },
       hover = {
-         ascii = 'g.',
+         ascii = 'dp'
       },
       code_action = {
          ascii = 'ca',
@@ -536,28 +533,12 @@ return {
       rename = {
          ascii = 'gr',
       },
-      goto_impl = {
-         ascii = 'gi',
+      n_diag = {
+         ascii = '<LEADER>dn',
       },
-   },
-   lsp_saga = {
-      preview_def = {
-         ascii = 'dp',
-      },
-      hover_doc = {
-         ascii = 'd.',
-      },
-      lsp_finder = {
-         ascii = '<LEADER>gi',
-      },
-      lsp_diag_next = {
-         ascii   = '<LEADER>fj',
-         colemak = '<LEADER>fn'
-      },
-      lsp_diag_prev = {
-         ascii   = '<LEADER>fk',
-         colemak = '<LEADER>fe'
-      },
+      p_diag = {
+         ascii = '<LEADER>de',
+      }
    },
    dap = {
       continue = {
@@ -571,8 +552,8 @@ return {
          colemak = '<LEADER>do',
       },
       step_into = {
-         ascii   = '<LEADER>dn',
-         colemak = '<LEADER>dn',
+         ascii   = '<LEADER>di',
+         colemak = '<LEADER>di',
       },
       step_out = {
          ascii = '<LEADER>dm',
@@ -930,4 +911,73 @@ return {
          ascii = 'zF'
       },
    },
+   glance = {
+      go_to_def = {
+         ascii = 'gd'
+      },
+      go_to_impl = {
+         ascii = 'gi'
+      },
+      go_to_ref = {
+         ascii = 'gR'
+      },
+      go_to_type_def = {
+         ascii = 'gt'
+      },
+      actions = {
+         next = {
+            ascii = 'n',
+         },
+         prev = {
+            ascii = 'e',
+         },
+         n_loc = {
+            ascii = '<Tab>',
+         },
+         p_loc = {
+            ascii = '<S-Tab>',
+         },
+         scroll_up_win = {
+            ascii = 'E',
+         },
+         scroll_down_win = {
+            ascii = 'N',
+         },
+         close_win = {
+            ascii = '<ESC>',
+         },
+         close_win_alt = {
+            ascii = 'q',
+         },
+         enter_win = {
+            ascii = '<C-CR>',
+         },
+         open_vsplit = {
+            ascii = 'se',
+         },
+         open_hsplit = {
+            ascii = 'sn',
+         },
+         open_tab = {
+            ascii = 't',
+         },
+         open = {
+            ascii = '<CR>',
+         }
+      },
+   },
+   codeium = {
+      accept = {
+         ascii = '<C-CR>',
+      },
+      cycle_next = {
+         ascii = '<C-n>',
+      },
+      cycle_prev = {
+         ascii = '<C-p>',
+      },
+      clear = {
+         ascii = '<C-q>',
+      }
+   }
 }
