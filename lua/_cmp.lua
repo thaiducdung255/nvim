@@ -47,14 +47,11 @@ cmp.setup {
 
          vim_item.kind = lspkind.presets.default[vim_item.kind]
 
-         -- if entry.source.name == 'buffer' then
-         -- vim_item.dup = 0
-         -- end
-         -- local menu = source_mapping[entry.source.name]
+         if entry.source.name == 'nvim_lsp' or entry.source.name == 'cmdline' then
+            vim_item.dup = 0
+         end
 
-         -- if entry.source.name == 'cmdline' or entry.source.name == 'cmdline_history' then
-         -- vim_item.dup = 0
-         -- end
+         -- local menu = source_mapping[entry.source.name]
 
          -- vim_item.menu = menu
 
@@ -105,7 +102,7 @@ cmp.setup {
       -- entries = "native"
    },
    experimental = {
-      ghost_text = true
+      ghost_text = false
    },
    performance = {
       debounce = 200,

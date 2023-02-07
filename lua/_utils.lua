@@ -31,6 +31,7 @@ function M.map(mode_str, lhsDict, rhs, isSilent)
    local opts = {
       noremap = true,
       silent  = isSilent == true,
+      -- expr    = true
    }
 
    if (isSilent == nil) then opts.silent = true end
