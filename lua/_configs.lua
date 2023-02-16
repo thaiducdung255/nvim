@@ -6,6 +6,7 @@ vim.g.ruby_host_prog     = '/usr/bin/neovim-ruby-host'
 vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.cmd('set mouse=')
 vim.cmd('syntax enable')
 vim.cmd('filetype on')
 vim.cmd('filetype plugin on')
