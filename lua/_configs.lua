@@ -43,9 +43,9 @@ vim.o.autoread        = true
 vim.o.autowrite       = true
 vim.o.hlsearch        = false
 vim.o.history         = 100
-vim.o.tabstop         = 3
-vim.o.softtabstop     = 3
-vim.o.shiftwidth      = 3
+vim.o.tabstop         = 2
+vim.o.softtabstop     = 2
+vim.o.shiftwidth      = 2
 vim.o.expandtab       = true
 vim.o.smartindent     = true
 vim.o.autoindent      = true
@@ -62,7 +62,6 @@ vim.api.nvim_create_autocmd(
    'InsertEnter',
    {
       pattern = '*',
-
       callback = function()
          vim.wo.relativenumber = false
       end
@@ -73,7 +72,6 @@ vim.api.nvim_create_autocmd(
    'InsertLeave',
    {
       pattern = '*',
-
       callback = function()
          vim.wo.relativenumber = true
       end
@@ -85,7 +83,6 @@ vim.api.nvim_create_autocmd(
    'FileType',
    {
       pattern = 'make',
-
       callback = function()
          vim.o.expandtab = false
       end
