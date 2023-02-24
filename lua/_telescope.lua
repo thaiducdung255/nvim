@@ -60,7 +60,7 @@ telescope.setup {
       layout_config          = { width = 0.999, height = 0.999 },
       buffer_previewer_maker = previewers.buffer_previewer_maker,
 
-      mappings = {
+      mappings               = {
          i = {
             ['<C-n>'] = actions.move_selection_next,
             ['<C-e>'] = actions.move_selection_previous,
@@ -96,14 +96,12 @@ telescope.setup {
          side_by_side = true,
          mappings = {
             i = {
-               -- ['<C-cr>'] = require('telescope-undo.actions').yank_additions,
-               -- ['<S-cr>'] = require('telescope-undo.actions').yank_deletions,
                ['<cr>'] = require('telescope-undo.actions').restore,
             }
          }
       },
       hop = {
-         keys = {
+         keys               = {
             'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', ';',
             'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p',
             'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/',
@@ -117,21 +115,19 @@ telescope.setup {
          trace_entry        = true,
          reset_selection    = true,
       },
-      fzf = {
-         fuzzy                   = true,
+      fzy_native = {
          override_generic_sorter = true,
          override_file_sorter    = false,
-         case_mode               = 'smart_case',
       },
    }
 }
 
 telescope.load_extension('hop')
-telescope.load_extension('fzf')
+telescope.load_extension('fzy_native')
 telescope.load_extension('repo')
 telescope.load_extension('undo')
 
-map('n', keycodes.files, ':Telescope find_files hidden=true no_ignore=true<CR>')
+map('n', keycodes.files, ':Telescope find_files hidden=true<CR>')
 map('n', keycodes.old_files, ':Telescope oldfiles hidden=true no_ignore=true<CR>')
 map('n', keycodes.bufs, ':Telescope buffers<CR>')
 map('n', keycodes.str_grep, ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
@@ -148,12 +144,6 @@ map('n', keycodes.lsp_doc_sym, ':Telescope lsp_document_symbols<CR>')
 map('n', keycodes.lsp_doc_diag, ':Telescope lsp_document_diagnostics<CR>')
 map('n', keycodes.lsp_ref, ':Telescope lsp_references<CR>')
 map('n', keycodes.git_branch, ':Telescope git_branches<CR>')
-
-map('n', keycodes.git_diff, [[<cmd>lua require('_telescope_custom').delta_git_diff()<CR>]])
-map('n', keycodes.git_bcommit, [[<cmd>lua require('_telescope_custom').delta_git_bcommits()<CR>]])
-map('n', keycodes.git_commit, [[<cmd>lua require('_telescope_custom').delta_git_commits()<CR>]])
-map('n', keycodes.git_status, [[<cmd>lua require('_telescope_custom').delta_git_status()<CR>]])
-map('n', keycodes.eslint_diag, [[<cmd>lua require('_telescope_custom').eslint_diagnostics()<CR>]])
 
 local repo_dirs = [[{'~/Projects','~/Downloads','~/.config'}]]
 

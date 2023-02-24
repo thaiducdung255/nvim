@@ -1,4 +1,4 @@
-require('_themes/' .. vim.g.theme)
+require('_themes/edge')
 
 vim.cmd [[function! SynStack()
    if !exists("*synstack")

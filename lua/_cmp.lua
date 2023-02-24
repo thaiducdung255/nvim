@@ -34,17 +34,16 @@ cmp.setup {
          { 'i', 'c' }
       ),
 
-      [get_key_code(keycodes.scroll_docs_up)]   = cmp.mapping.scroll_docs(-4),
+      [get_key_code(keycodes.scroll_docs_up)]   = cmp.mapping.scroll_docs( -4),
       [get_key_code(keycodes.scroll_docs_down)] = cmp.mapping.scroll_docs(4),
 
-      [get_key_code(keycodes.confirm)] = cmp.mapping.confirm({
+      [get_key_code(keycodes.confirm)]          = cmp.mapping.confirm({
          behavior = cmp.ConfirmBehavior.Replace,
          select = true
       }),
    },
    formatting = {
       format = function(entry, vim_item)
-
          vim_item.kind = lspkind.presets.default[vim_item.kind]
 
          if entry.source.name == 'nvim_lsp' or entry.source.name == 'cmdline' then
@@ -93,10 +92,6 @@ cmp.setup {
          name = 'nvim_lua',
          max_item_count = 20,
       },
-      {
-         name = 'zsh',
-         max_item_count = 10,
-      },
    },
    view = {
       -- entries = "native"
@@ -112,7 +107,6 @@ cmp.setup {
 }
 
 for _, cmd_type in ipairs({ ':', '/', '?', '@', '=' }) do
-
    if (cmd_type == ':') then
       cmp.setup.cmdline(cmd_type, {
          sources = {

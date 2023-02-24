@@ -1,9 +1,9 @@
-local utils = require('_utils')
+local utils           = require('_utils')
 
 local map             = utils.map
 local keyboard_layout = utils.keyboard_layout
 
-local targets = {
+local targets         = {
    j      = '%(',
    J      = ')',
    k      = '%[',
@@ -180,7 +180,7 @@ for _, motion in ipairs(motions) do
    for _, key in ipairs(bracket_keys) do
       if motion ~= 'g' and (key == 'J' or key == 'H' or key == 'L') then
       else
-         serial_map('custom_motions', motion, key, 5)
+         serial_map('custom_motions', motion, key, 3)
       end
    end
 end
@@ -192,5 +192,5 @@ if keyboard_layout == 'colemak' then
 end
 
 for _, key in ipairs(open_bracket_keys) do
-   serial_map('delete_brackets', '', key, 5)
+   serial_map('delete_brackets', '', key, 3)
 end

@@ -25,7 +25,7 @@ return require('packer').startup({
       use { 'nvim-telescope/telescope-hop.nvim' }
 
       use {
-         'nvim-telescope/telescope-fzf-native.nvim',
+         'nvim-telescope/telescope-fzy-native.nvim',
          run = 'make'
       }
 
@@ -59,15 +59,11 @@ return require('packer').startup({
             'lukas-reineke/cmp-under-comparator',
             'hrsh7th/cmp-nvim-lsp-signature-help',
             'hrsh7th/cmp-nvim-lsp',
-            'tamago324/cmp-zsh',
          }
       }
 
       -- line peek
       use 'nacro90/numb.nvim'
-
-      -- highlight current words
-      use { 'xiyaowong/nvim-cursorword' }
 
       -- find and replace
       use { 'windwp/nvim-spectre' }
@@ -81,7 +77,6 @@ return require('packer').startup({
          -- run = ':TSInstall lua python go http css typescript javascript tsx make dockerfile css html json bash rasi yaml rust prisma'
          run = ':TSUpdateSync'
       }
-      use 'nvim-treesitter/playground'
       use { 'windwp/nvim-ts-autotag' }
       use 'nvim-treesitter/nvim-treesitter-refactor'
       use 'm-demare/hlargs.nvim'
@@ -182,9 +177,7 @@ return require('packer').startup({
             'anuvyklack/pretty-fold.nvim',
          }
       }
-
    end,
-
    config = {
       display = {
          open_fn = require('packer.util').float,
