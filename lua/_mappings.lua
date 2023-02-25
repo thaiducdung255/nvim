@@ -1,6 +1,4 @@
 local map = require('_utils').map
-local get_key_code = require('_utils').get_key_code
-
 local keycodes = require('_keymap').sys
 
 -- hot reload config
@@ -102,10 +100,10 @@ map('v', keycodes.bracket_ins.angle, 'di<><ESC>hpl')
 ---- symbol maps
 map('i', keycodes.symbol.nl, ',<CR>')
 
-vim.cmd('nnoremap ' .. get_key_code(keycodes.symbol.cmd_nav.open) .. ' :')
-vim.cmd('vnoremap ' .. get_key_code(keycodes.symbol.cmd_nav.open) .. ' :')
+vim.cmd('nnoremap ' .. keycodes.symbol.cmd_nav.open .. ' :')
+vim.cmd('vnoremap ' .. keycodes.symbol.cmd_nav.open .. ' :')
 
-vim.cmd('nnoremap ' .. get_key_code(keycodes.cmd_nav.mru) .. ' :<Up>')
+vim.cmd('nnoremap ' .. keycodes.cmd_nav.mru .. ' :<Up>')
 
 map('c', keycodes.cmd_nav.l, '<Left>')
 map('c', keycodes.cmd_nav.next, '<C-n>')

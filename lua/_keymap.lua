@@ -1,925 +1,379 @@
 return {
    sys = {
       config = {
-         hot_reload = {
-            ascii = 'so',
-         },
+         hot_reload = 'so',
       },
       symbol = {
          cmd_nav = {
-            open = {
-               ascii = '<CR>'
-            },
-            mru = {
-               ascii = '<LEADER>cc',
-            },
-            l = {
-               ascii = '<C-h>',
-            },
-            next = {
-               ascii = '<C-n>',
-            },
-            prev = {
-               ascii = '<C-e>',
-            },
-            r = {
-               ascii = '<C-i>',
-            },
+            open = '<CR>',
+            mru = '<LEADER>cc',
+            l = '<C-h>',
+            next = '<C-n>',
+            prev = '<C-e>',
+            r = '<C-i>',
          },
-         nl = {
-            ascii = ',,',
-         },
+         nl = ',,',
       },
       nav = {
-         r = {
-            ascii = '<LEADER>i'
-         },
-         l = {
-            ascii = '<LEADER>h',
-         },
-         u = {
-            ascii = '<LEADER>e'
-         },
-         d = {
-            ascii = '<LEADER>n'
-         },
+         r = '<LEADER>i',
+         l = '<LEADER>h',
+         u = '<LEADER>e',
+         d = '<LEADER>n'
       },
       w_resize = {
-         v_inc = {
-            ascii = '<C-e>'
-         },
-         v_desc = {
-            ascii = '<C-n>',
-         },
-         h_inc = {
-            ascii = '<C-o>'
-         },
-         h_desc = {
-            ascii = '<C-h>'
-         },
+         v_inc = '<C-e>',
+         v_desc = '<C-n>',
+         h_inc = '<C-o>',
+         h_desc = '<C-h>'
       },
       w_split = {
-         v = {
-            ascii = '<LEADER>se'
-         },
-         h = {
-            ascii = '<LEADER>sn'
-         },
+         v = '<LEADER>se',
+         h = '<LEADER>sn'
       },
       buf = {
-         next = {
-            ascii = 'I',
-         },
-         prev = {
-            ascii = 'H',
-         },
-         del = {
-            ascii = 'gq',
-         },
+         next = 'I',
+         prev = 'H',
+         del = 'gq',
       },
       tab = {
-         new = {
-            ascii = '<LEADER>t',
-         },
-         prev = {
-            ascii = 'N'
-         },
-         next = {
-            ascii = 'E'
-         },
+         new = '<LEADER>t',
+         prev = 'N',
+         next = 'E'
       },
       file = {
-         quit = {
-            ascii = '<LEADER>q',
-         },
-         write = {
-            ascii = 'ss',
-         },
-         undo = {
-            ascii = 'U',
-         },
-         next_pos = {
-            ascii = 'gk',
-         },
-         prev_pos = {
-            ascii = 'gm',
-         },
+         quit = '<LEADER>q',
+         write = 'ss',
+         undo = 'U',
+         next_pos = 'gk',
+         prev_pos = 'gm',
       },
       term = {
-         esc = {
-            ascii = '<ESC>',
-         },
+         esc = '<ESC>',
       },
       search_nav = {
-         next = {
-            ascii = '<Tab>',
-         },
-         prev = {
-            ascii = '<S-Tab>',
-         },
+         next = '<Tab>',
+         prev = '<S-Tab>',
       },
       clipboard = {
-         paste = {
-            ascii = 'p',
-         },
+         paste = 'p',
       },
       cursor_nav = {
-         first = {
-            ascii = 'ga',
-         },
-         last = {
-            ascii = 'gf',
-         },
+         first = 'ga',
+         last = 'gf',
       },
       scroll = {
-         u = {
-            ascii = 'M',
-         },
-         d = {
-            ascii = 'm',
-         },
+         u = 'M',
+         d = 'm',
       },
-      custom_V = {
-         ascii = 'V',
-      },
-      custom_super_v = {
-         ascii = '<LEADER>v'
-      },
+      custom_V = 'V',
+      custom_super_v = '<LEADER>v',
       case_mod = {
-         pascal = {
-            ascii = ';o',
-         },
-         upper = {
-            ascii = ';u',
-         },
-         lower = {
-            ascii = ';y',
-         },
+         pascal = ';o',
+         upper = ';u',
+         lower = ';y',
       },
       quote_mod = {
-         single = {
-            ascii = ';c',
-         },
-         template = {
-            ascii = ';v',
-         },
+         single = ';c',
+         template = ';v',
       },
       auto_pair = {
-         parent = {
-            ascii = ';n'
-         },
-         square = {
-            ascii = ';e'
-         },
-         curly = {
-            ascii = ';i'
-         },
-         angle = {
-            ascii = ';h',
-         },
-         temp_quote = {
-            ascii = ';c',
-         },
-         double_quote = {
-            ascii = ';;',
-         },
-         alt_double_quote = {
-            ascii = '"'
-         },
-         single_quote = {
-            ascii = '\'',
-         },
-         temp_val = {
-            ascii = ';v',
-         }
+         parent = ';n',
+         square = ';e',
+         curly = ';i',
+         angle = ';h',
+         temp_quote = ';c',
+         double_quote = ';;',
+         alt_double_quote = '"',
+         single_quote = '\'',
+         temp_val = ';v',
       },
       bracket_ins = {
-         parent = {
-            ascii = 'sn'
-         },
-         square = {
-            ascii = 'se'
-         },
-         curly = {
-            ascii = 'si'
-         },
-         angle = {
-            ascii = 'sh'
-         },
-         s_quote = {
-            ascii = 's;',
-         },
-         d_quote = {
-            ascii = 'sO',
-         },
-         temp_quote = {
-            ascii = 's\''
-         },
+         parent = 'sn',
+         square = 'se',
+         curly = 'si',
+         angle = 'sh',
+         s_quote = 's;',
+         d_quote = 'sO',
+         temp_quote = 's\''
       },
       cmd_nav = {
-         l = {
-            ascii = '<M-l>',
-         },
-         r = {
-            ascii = '<M-;>',
-         },
-         next = {
-            ascii = '<M-u>',
-         },
-         prev = {
-            ascii = '<M-y>',
-         },
-         mru = {
-            ascii = '<LEADER>cc',
-         },
+         l = '<M-l>',
+         r = '<M-;>',
+         next = '<M-u>',
+         prev = '<M-y>',
+         mru = '<LEADER>cc',
       },
    },
    bufferline = {
-      buf_pick = {
-         ascii = 'gb',
-      },
-      buf_del = {
-         ascii = 'gB',
-      },
+      buf_pick = 'gb',
+      buf_del = 'gB',
    },
    comment = {
-      line = {
-         ascii = ';;',
-      },
-      vline = {
-         ascii = 'go',
-      },
-      block = {
-         ascii = '*',
-      },
-      vblock = {
-         ascii = '*',
-      }
+      line = ';;',
+      vline = 'go',
+      block = '*',
+      vblock = '*',
    },
    easy_align = {
-      eq_align = {
-         ascii = 'ae',
-      },
-      align = {
-         ascii = 'aa',
-      },
+      eq_align = 'ae',
+      align = 'aa',
    },
    git_signs = {
-      next_hunk = {
-         ascii = '<LEADER>gn'
-      },
-      prev_hunk = {
-         ascii = '<LEADER>ge'
-      },
-      unstage_hunk = {
-         ascii = '<LEADER>gu',
-      },
-      reset_hunk = {
-         ascii = 'gv',
-      },
-      reset_buf = {
-         ascii = 'gV',
-      },
-      preview_hunk = {
-         ascii = 'gp',
-      },
-      diff_this = {
-         ascii = 'gP',
-      },
-      set_loc_list = {
-         ascii = 'gz',
-      },
-      select_hunk = {
-         ascii = '<LEADER>ih',
-      },
+      next_hunk = '<LEADER>gn',
+      prev_hunk = '<LEADER>ge',
+      unstage_hunk = '<LEADER>gu',
+      reset_hunk = 'gv',
+      reset_buf = 'gV',
+      preview_hunk = 'gp',
+      diff_this = 'gP',
+      set_loc_list = 'gz',
+      select_hunk = '<LEADER>ih',
    },
    hop = {
-      char1_line = {
-         ascii = 'F',
-      },
-      word = {
-         ascii = '<LEADER>w',
-      },
-      char2 = {
-         ascii = '<LEADER>o',
-      },
-      word_line = {
-         ascii = 'f',
-      },
-      pattern = {
-         ascii = '<LEADER><ESC>',
-      },
-      line = {
-         ascii = '<LEADER><LEADER>',
-      },
+      char1_line = 'F',
+      word = '<LEADER>w',
+      char2 = '<LEADER>o',
+      word_line = 'f',
+      pattern = '<LEADER><ESC>',
+      line = '<LEADER><LEADER>',
    },
    lazy_git = {
-      exec = {
-         ascii = '<LEADER>lg',
-      },
+      exec = '<LEADER>lg',
    },
    diff_view = {
-      open = {
-         ascii = '<LEADER>gg'
-      },
-      close = {
-         ascii = '<C-q>'
-      },
+      open = '<LEADER>gg',
+      close = '<C-q>',
       common = {
-         select_next_entry = {
-            ascii = '<TAB>'
-         },
-         select_prev_entry = {
-            ascii = '<S-TAB>'
-         },
-         next_entry = {
-            ascii = 'j',
-         },
-         prev_entry = {
-            ascii = 'k',
-         },
-         goto_file = {
-            ascii = 'o',
-         },
-         goto_file_split = {
-            ascii = 'O',
-         },
-         goto_file_tab = {
-            ascii = '<C-o>',
-         },
-         scroll_view_up = {
-            ascii = 'M'
-         },
-         scroll_view_down = {
-            ascii = 'm'
-         },
-         focus_files = {
-            ascii = '<LEADER>e'
-         },
-         toggle_files = {
-            ascii = '<LEADER>b'
-         },
-         cycle_layout = {
-            ascii = 'i'
-         },
+         select_next_entry = '<TAB>',
+         select_prev_entry = '<S-TAB>',
+         next_entry = 'j',
+         prev_entry = 'k',
+         goto_file = 'o',
+         goto_file_split = 'O',
+         goto_file_tab = '<C-o>',
+         scroll_view_up = 'M',
+         scroll_view_down = 'm',
+         focus_files = '<LEADER>e',
+         toggle_files = '<LEADER>b',
+         cycle_layout = 'i'
       },
       view = {
-         focus_files = {
-            ascii = '<LEADER>e',
-         },
-         toggle_files = {
-            ascii = '<LEADER>b',
-         },
-         cycle_layout = {
-            ascii = '<LEADER>cl',
-         },
-         prev_conflict = {
-            ascii = '<LEADER>cn',
-         },
-         next_conflict = {
-            ascii = '<LEADER>ce',
-         },
-         conflict_choose_ours = {
-            ascii = '<LEADER>co',
-         },
-         conflict_choose_theirs = {
-            ascii = '<LEADER>ct',
-         },
-         conflict_choose_base = {
-            ascii = '<LEADER>cb',
-         },
-         conflict_choose_all = {
-            ascii = '<LEADER>ca',
-         },
-         conflict_choose_none = {
-            ascii = '<LEADER>cc',
-         },
+         focus_files = '<LEADER>e',
+         toggle_files = '<LEADER>b',
+         cycle_layout = '<LEADER>cl',
+         prev_conflict = '<LEADER>cn',
+         next_conflict = '<LEADER>ce',
+         conflict_choose_ours = '<LEADER>co',
+         conflict_choose_theirs = '<LEADER>ct',
+         conflict_choose_base = '<LEADER>cb',
+         conflict_choose_all = '<LEADER>ca',
+         conflict_choose_none = '<LEADER>cc',
       },
       diff1 = {},
       diff2 = {},
       diff3 = {
-         diff_get_ours = {
-            ascii = '2do',
-         },
-         diff_get_theirs = {
-            ascii = '3do',
-         },
+         diff_get_ours = '2do',
+         diff_get_theirs = '3do',
       },
       diff4 = {
-         diff_get_base = {
-            ascii = '1do',
-         },
-         diff_get_ours = {
-            ascii = '2do',
-         },
-         diff_get_theirs = {
-            ascii = '3do',
-         },
+         diff_get_base = '1do',
+         diff_get_ours = '2do',
+         diff_get_theirs = '3do',
       },
       fp = {
-         select_entry = {
-            ascii = '<CR>',
-         },
-         toggle_stage_entry = {
-            ascii = 's',
-         },
-         stage_all = {
-            ascii = 'S',
-         },
-         unstage_all = {
-            ascii = 'u',
-         },
-         restore_entry = {
-            ascii = 'x',
-         },
-         open_commit_log = {
-            ascii = 'l',
-         },
-         listing_style = {
-            ascii = '<LEADER>ls',
-         },
-         toggle_flatten_dirs = {
-            ascii = '<LEADER>fd',
-         },
-         refresh_files = {
-            ascii = 'r',
-         },
-         prev_conflict = {
-            ascii = '<LEADER>cn',
-         },
-         next_conflict = {
-            ascii = '<LEADER>ce',
-         },
+         select_entry = '<CR>',
+         toggle_stage_entry = 's',
+         stage_all = 'S',
+         unstage_all = 'u',
+         restore_entry = 'x',
+         open_commit_log = 'l',
+         listing_style = '<LEADER>ls',
+         toggle_flatten_dirs = '<LEADER>fd',
+         refresh_files = 'r',
+         prev_conflict = '<LEADER>cn',
+         next_conflict = '<LEADER>ce',
       },
       fhp = {
-         opions = {
-            ascii = '?'
-         },
-         open_in_diffview = {
-            ascii = 'o'
-         },
-         copy_hash = {
-            ascii = 'y'
-         },
-         open_commit_log = {
-            ascii = 'l'
-         },
-         open_all_folds = {
-            ascii = 'zA'
-         },
-         close_all_folds = {
-            ascii = 'zF'
-         },
-         select_entry = {
-            ascii = '<CR>'
-         },
+         opions = '?',
+         open_in_diffview = 'o',
+         copy_hash = 'y',
+         open_commit_log = 'l',
+         open_all_folds = 'zA',
+         close_all_folds = 'zF',
+         select_entry = '<CR>'
       },
       op = {
-         select_entry = {
-            ascii = '<Tab>'
-         },
-         close = {
-            ascii = 'q'
-         }
+         select_entry = '<Tab>',
+         close = 'q'
       },
    },
    lsp = {
-      signature_help = {
-         ascii = '<LEADER>sh',
-      },
-      hover = {
-         ascii = 'dp'
-      },
-      code_action = {
-         ascii = 'ca',
-      },
-      rename = {
-         ascii = 'gr',
-      },
-      n_diag = {
-         ascii = '<LEADER>dn',
-      },
-      p_diag = {
-         ascii = '<LEADER>de',
-      }
+      signature_help = '<LEADER>sh',
+      hover = 'dp',
+      code_action = 'ca',
+      rename = 'gr',
+      n_diag = '<LEADER>dn',
+      p_diag = '<LEADER>de',
    },
    dap = {
-      continue = {
-         ascii = '<LEADER>dc',
-      },
-      toggle_break_point = {
-         ascii = '<LEADER>db',
-      },
-      step_over = {
-         ascii = '<LEADER>do',
-      },
-      step_into = {
-         ascii = '<LEADER>di',
-      },
-      step_out = {
-         ascii = '<LEADER>dm',
-      },
-      disconnect = {
-         ascii = '<LEADER>dt',
-      },
-      open_repl = {
-         ascii = 'd<CR>',
-      },
-      hover = {
-         ascii = 'd<ESC>',
-      },
+      continue = '<LEADER>dc',
+      toggle_break_point = '<LEADER>db',
+      step_over = '<LEADER>do',
+      step_into = '<LEADER>di',
+      step_out = '<LEADER>dm',
+      disconnect = '<LEADER>dt',
+      open_repl = 'd<CR>',
+      hover = 'd<ESC>',
    },
    nvim_tree = {
-      edit = {
-         ascii = { '<CR>', 'i' },
-      },
-      cd = {
-         ascii = {},
-      },
-      vsplit = {
-         ascii = {},
-      },
-      split = {
-         ascii = {},
-      },
-      tabnew = {
-         ascii = {},
-      },
-      prev_sibling = {
-         ascii = {},
-      },
-      next_sibling = {
-         ascii = {},
-      },
-      parent_node = {
-         ascii = {},
-      },
-      close_node = {
-         ascii = { 'h' },
-      },
-      preview = {
-         ascii = '<Tab>',
-      },
-      first_sibling = {
-         ascii = 'E'
-      },
-      last_sibling = {
-         ascii = 'N'
-      },
-      toggle_ignored = {
-         ascii = 'Z',
-      },
-      toggle_dotfiles = {
-         ascii = 'H',
-      },
-      refresh = {
-         ascii = 'R',
-      },
-      create = {
-         ascii = 'a',
-      },
-      remove = {
-         ascii = 'd',
-      },
-      rename = {
-         ascii = 'r',
-      },
-      full_rename = {
-         ascii = {},
-      },
-      cut = {
-         ascii = 'x',
-      },
-      copy = {
-         ascii = 'c',
-      },
-      paste = {
-         ascii = 'p',
-      },
-      copy_name = {
-         ascii = 'y',
-      },
-      copy_path = {
-         ascii = 'Y',
-      },
-      copy_absolute_path = {
-         ascii = {},
-      },
-      prev_git_item = {
-         ascii = { 'ge' },
-      },
-      next_git_item = {
-         ascii = { 'gn' },
-      },
-      dir_up = {
-         ascii = {},
-      },
-      close = {
-         ascii = 'q',
-      },
-      toggle_help = {
-         ascii = '?',
-      },
-      toggle_open = {
-         ascii = 'T',
-      },
-      toggle_refresh = {
-         ascii = '<LEADER>E',
-      },
+      edit = { '<CR>', 'i' },
+      cd = {},
+      vsplit = {},
+      split = {},
+      tabnew = {},
+      prev_sibling = {},
+      next_sibling = {},
+      parent_node = {},
+      close_node = { 'h' },
+      preview = '<Tab>',
+      first_sibling = 'E',
+      last_sibling = 'N',
+      toggle_ignored = 'Z',
+      toggle_dotfiles = 'H',
+      refresh = 'R',
+      create = 'a',
+      remove = 'd',
+      rename = 'r',
+      full_rename = {},
+      cut = 'x',
+      copy = 'c',
+      paste = 'p',
+      copy_name = 'y',
+      copy_path = 'Y',
+      copy_absolute_path = {},
+      prev_git_item = 'ge',
+      next_git_item = 'gn',
+      dir_up = {},
+      close = 'q',
+      toggle_help = '?',
+      toggle_open = 'T',
+      toggle_refresh = '<LEADER>E',
    },
    packer = {
-      install = {
-         ascii = '<LEADER>pi',
-      },
-      clean = {
-         ascii = '<LEADER>pc',
-      },
-      sync = {
-         ascii = '<LEADER>ps',
-      },
-      update = {
-         ascii = '<LEADER>pu',
-      },
+      install = '<LEADER>pi',
+      clean = '<LEADER>pc',
+      sync = '<LEADER>ps',
+      update = '<LEADER>pu',
    },
    rest = {
-      run = {
-         ascii = '<LEADER><CR>',
-      },
-      curl = {
-         ascii = '<LEADER><TAB>',
-      },
+      run = '<LEADER><CR>',
+      curl = '<LEADER><TAB>',
    },
    spectre = {
-      n_open = {
-         ascii = '<LEADER>S',
-      },
-      v_open = {
-         ascii = '<LEADER>W',
-      },
-      open_file_search = {
-         ascii = '<LEADER>G',
-      },
-      toggle_line = {
-         ascii = 'dd'
-      },
-      enter_file = {
-         ascii = '<CR>'
-      },
-      send_to_qf = {
-         ascii = '<LEADER>q'
-      },
-      replace_cmd = {
-         ascii = '<LEADER>c'
-      },
-      show_option_menu = {
-         ascii = '<LEADER>o'
-      },
-      run_replace = {
-         ascii = '<LEADER>R'
-      },
-      change_view_mode = {
-         ascii = '<LEADER>v'
-      },
-      toggle_ignore_case = {
-         ascii = 'ti'
-      },
-      toggle_ignore_hidden = {
-         ascii = 'th'
-      },
+      n_open = '<LEADER>S',
+      v_open = '<LEADER>W',
+      open_file_search = '<LEADER>G',
+      toggle_line = 'dd',
+      enter_file = '<CR>',
+      send_to_qf = '<LEADER>q',
+      replace_cmd = '<LEADER>c',
+      show_option_menu = '<LEADER>o',
+      run_replace = '<LEADER>R',
+      change_view_mode = '<LEADER>v',
+      toggle_ignore_case = 'ti',
+      toggle_ignore_hidden = 'th'
    },
    cmp = {
-      select_next_item = {
-         ascii = '<Tab>'
-      },
-      select_prev_item = {
-         ascii = '<S-Tab>'
-      },
-      scroll_docs_up = {
-         ascii = '<C-e>'
-      },
-      scroll_docs_down = {
-         ascii = '<C-n>'
-      },
-      confirm = {
-         ascii = '<CR>'
-      },
+      select_next_item = '<Tab>',
+      select_prev_item = '<S-Tab>',
+      scroll_docs_up = '<C-e>',
+      scroll_docs_down = '<C-n>',
+      confirm = '<CR>'
    },
    telescope = {
-      files = {
-         ascii = '<LEADER>ff',
-      },
-      old_files = {
-         ascii = '<LEADER>fr',
-      },
-      bufs = {
-         ascii = '<LEADER>fb',
-      },
-      str_grep = {
-         ascii = '<LEADER>fS',
-      },
-      live_grep = {
-         ascii = '<LEADER>fs',
-      },
-      buf_fuzzy_find = {
-         ascii = '<LEADER>ss',
-      },
-      lsp_type_def = {
-         ascii = 'td',
-      },
-      cmd = {
-         ascii = 'cm',
-      },
-      cmd_his = {
-         ascii = '<LEADER>ch',
-      },
-      keymap = {
-         ascii = '<LEADER>mp',
-      },
-      highlight = {
-         ascii = '<LEADER>sc',
-      },
-      lsp_doc_sym = {
-         ascii = '<LEADER>ds',
-      },
-      lsp_doc_diag = {
-         ascii = 'gD',
-      },
-      lsp_ref = {
-         ascii = 'gR',
-      },
-      git_branch = {
-         ascii = '<LEADER>gb',
-      },
-      git_diff = {
-         ascii = '<LEADER>gd',
-      },
-      git_bcommit = {
-         ascii = '<LEADER>gv',
-      },
-      git_commit = {
-         ascii = '<LEADER>gc',
-      },
-      git_status = {
-         ascii = '<LEADER>gs',
-      },
-      eslint_diag = {
-         ascii = '<LEADER>zz',
-      },
-      repo = {
-         ascii = '<LEADER>.',
-      },
-      undo = {
-         ascii = '<LEADER>u',
-      },
+      files = '<LEADER>ff',
+      old_files = '<LEADER>fr',
+      bufs = '<LEADER>fb',
+      str_grep = '<LEADER>fS',
+      live_grep = '<LEADER>fs',
+      buf_fuzzy_find = '<LEADER>ss',
+      lsp_type_def = 'td',
+      cmd = 'cm',
+      cmd_his = '<LEADER>ch',
+      keymap = '<LEADER>mp',
+      highlight = '<LEADER>sc',
+      lsp_doc_sym = '<LEADER>ds',
+      lsp_doc_diag = 'gD',
+      lsp_ref = 'gR',
+      git_branch = '<LEADER>gb',
+      git_diff = '<LEADER>gd',
+      git_bcommit = '<LEADER>gv',
+      git_commit = '<LEADER>gc',
+      git_status = '<LEADER>gs',
+      eslint_diag = '<LEADER>zz',
+      repo = '<LEADER>.',
+      undo = '<LEADER>u',
    },
    toggle_term = {
-      h_open = {
-         ascii = '<C-Enter>',
-      },
-      v_open = {
-         ascii = '<S-Enter>',
-      },
+      h_open = '<C-Enter>',
+      v_open = '<S-Enter>',
    },
    ts = {
-      rename = {
-         ascii = 'gr',
-      },
-      def_nav = {
-         ascii = 'gdn',
-      },
-      usage_next = {
-         ascii = 'grn'
-      },
-      usage_prev = {
-         ascii = 'gre'
-      },
-      list_defs = {
-         ascii = 'gdN',
-      },
-      list_defs_toc = {
-         ascii = 'gt',
-      },
-      outer_block = {
-         ascii = '<LEADER>bo',
-      },
-      inner_block = {
-         ascii = '<LEADER>bi',
-      },
-      inner_class = {
-         ascii = '<LEADER>ci',
-      },
-      outer_class = {
-         ascii = '<LEADER>co',
-      },
+      rename = 'gr',
+      def_nav = 'gdn',
+      usage_next = 'grn',
+      usage_prev = 'gre',
+      list_defs = 'gdN',
+      list_defs_toc = 'gt',
+      outer_block = '<LEADER>bo',
+      inner_block = '<LEADER>bi',
+      inner_class = '<LEADER>ci',
+      outer_class = '<LEADER>co',
    },
    dadbod = {
-      exec_query = {
-         ascii = '',
-      },
-      save_query = {
-         ascii = '',
-      },
+      exec_query = '',
+      save_query = '',
    },
    maximizer = {
-      toggle_max = {
-         ascii = 'l',
-      },
-      toggle_max_vertical = {
-         ascii = 'L',
-      },
+      toggle_max = 'l',
+      toggle_max_vertical = 'L',
    },
    vsnip = {
-      expand = {
-         ascii = '<Space>',
-      },
-      jump_next = {
-         ascii = '<C-e>'
-      },
-      jump_prev = {
-         ascii = '<C-n>'
-      },
-      select_text = {
-         ascii = ''
-      },
-      cut_text = {
-         ascii = ''
-      },
+      expand = '<Space>',
+      jump_next = '<C-e>',
+      jump_prev = '<C-n>',
+      select_text = '',
+      cut_text = ''
    },
    ufo = {
-      open_all = {
-         ascii = 'zA'
-      },
-      close_all = {
-         ascii = 'zF'
-      },
+      open_all = 'zA',
+      close_all = 'zF'
    },
    glance = {
-      go_to_def = {
-         ascii = 'gd'
-      },
-      go_to_impl = {
-         ascii = 'gi'
-      },
-      go_to_ref = {
-         ascii = 'gR'
-      },
-      go_to_type_def = {
-         ascii = 'gt'
-      },
+      go_to_def = 'gd',
+      go_to_impl = 'gi',
+      go_to_ref = 'gR',
+      go_to_type_def = 'gt',
       actions = {
-         next = {
-            ascii = 'n',
-         },
-         prev = {
-            ascii = 'e',
-         },
-         n_loc = {
-            ascii = '<Tab>',
-         },
-         p_loc = {
-            ascii = '<S-Tab>',
-         },
-         scroll_up_win = {
-            ascii = 'E',
-         },
-         scroll_down_win = {
-            ascii = 'N',
-         },
-         close_win = {
-            ascii = '<ESC>',
-         },
-         close_win_alt = {
-            ascii = 'q',
-         },
-         enter_win = {
-            ascii = '<C-CR>',
-         },
-         open_vsplit = {
-            ascii = 'se',
-         },
-         open_hsplit = {
-            ascii = 'sn',
-         },
-         open_tab = {
-            ascii = 't',
-         },
-         open = {
-            ascii = '<CR>',
-         }
+         next = 'n',
+         prev = 'e',
+         n_loc = '<Tab>',
+         p_loc = '<S-Tab>',
+         scroll_up_win = 'E',
+         scroll_down_win = 'N',
+         close_win = '<ESC>',
+         close_win_alt = 'q',
+         enter_win = '<C-CR>',
+         open_vsplit = 'se',
+         open_hsplit = 'sn',
+         open_tab = 't',
+         open = '<CR>',
       },
    },
    codeium = {
-      accept = {
-         ascii = '<C-CR>',
-      },
-      cycle_next = {
-         ascii = '<C-n>',
-      },
-      cycle_prev = {
-         ascii = '<C-p>',
-      },
-      clear = {
-         ascii = '<C-q>',
-      }
+      accept = '<C-CR>',
+      cycle_next = '<C-n>',
+      cycle_prev = '<C-p>',
+      clear = '<C-q>',
    }
 }

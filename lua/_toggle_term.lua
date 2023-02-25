@@ -1,11 +1,8 @@
 local keycodes = require('_keymap').toggle_term
-local utils = require('_utils')
-
-local map = utils.map
-local get_key_code = utils.get_key_code
+local map = require('_utils').map
 
 require('toggleterm').setup {
-   open_mapping    = get_key_code(keycodes.h_open),
+   open_mapping    = keycodes.h_open,
    hide_numbers    = true,
    shade_filetypes = {},
    shade_terminals = true,

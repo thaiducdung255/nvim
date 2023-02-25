@@ -97,13 +97,6 @@ local mode = {
    end,
 }
 
-local date = {
-   'date',
-   fmt = function()
-      return os.date("%a, %H:%M:%S (%d/%m)")
-   end
-}
-
 local diff = {
    'diff',
    colored = false,
@@ -163,6 +156,6 @@ require 'lualine'.setup {
 
       lualine_x = {},
       lualine_y = { _recorder.recordingStatus, _recorder.displaySlots, diff },
-      lualine_z = { branch, date, progress }
+      lualine_z = { branch, progress }
    },
 }

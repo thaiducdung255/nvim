@@ -1,4 +1,3 @@
-local get_key_code = require('_utils').get_key_code
 local keycodes = require('_keymap').comment
 
 local commentConf = require('Comment')
@@ -9,12 +8,12 @@ commentConf.setup({
    sticky   = true,
    ignore   = nil,
    toggler  = {
-      line  = get_key_code(keycodes.line),
-      block = get_key_code(keycodes.block),
+      line  = keycodes.line,
+      block = keycodes.block,
    },
    opleader = {
-      line  = get_key_code(keycodes.vline),
-      block = get_key_code(keycodes.vblock),
+      line  = keycodes.vline,
+      block = keycodes.vblock,
    },
    mappings = {
       basic    = true,

@@ -1,7 +1,6 @@
 local cmp = require 'cmp'
 local lspkind = require('lspkind')
 
-local get_key_code = require('_utils').get_key_code
 local keycodes = require('_keymap').cmp
 
 cmp.setup {
@@ -24,20 +23,20 @@ cmp.setup {
       },
    },
    mapping = {
-      [get_key_code(keycodes.select_next_item)] = cmp.mapping(
+      [keycodes.select_next_item] = cmp.mapping(
          cmp.mapping.select_next_item(),
          { 'i', 'c' }
       ),
 
-      [get_key_code(keycodes.select_prev_item)] = cmp.mapping(
+      [keycodes.select_prev_item] = cmp.mapping(
          cmp.mapping.select_prev_item(),
          { 'i', 'c' }
       ),
 
-      [get_key_code(keycodes.scroll_docs_up)]   = cmp.mapping.scroll_docs( -4),
-      [get_key_code(keycodes.scroll_docs_down)] = cmp.mapping.scroll_docs(4),
+      [keycodes.scroll_docs_up]   = cmp.mapping.scroll_docs( -4),
+      [keycodes.scroll_docs_down] = cmp.mapping.scroll_docs(4),
 
-      [get_key_code(keycodes.confirm)]          = cmp.mapping.confirm({
+      [keycodes.confirm]          = cmp.mapping.confirm({
          behavior = cmp.ConfirmBehavior.Replace,
          select = true
       }),
@@ -100,9 +99,9 @@ cmp.setup {
       ghost_text = false
    },
    performance = {
-      debounce = 200,
-      throttle = 100,
-      fetching_timeout = 400,
+      debounce = 500,
+      throttle = 300,
+      fetching_timeout = 500,
    },
 }
 

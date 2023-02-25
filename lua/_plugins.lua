@@ -127,6 +127,9 @@ return require('packer').startup({
       -- float terminal
       use { 'akinsho/toggleterm.nvim' }
 
+      -- split/join lines
+      use { 'bennypowers/splitjoin.nvim' }
+
       -- git
       use { 'lewis6991/gitsigns.nvim' }
       use 'kdheepak/lazygit.nvim'

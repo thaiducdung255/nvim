@@ -1,7 +1,6 @@
-local map          = require('_utils').map
-local actions      = require('diffview.actions')
-local get_key_code = require('_utils').get_key_code
-local keycodes     = require('_keymap').diff_view
+local map      = require('_utils').map
+local actions  = require('diffview.actions')
+local keycodes = require('_keymap').diff_view
 
 require('diffview').setup({
    diff_binaries      = false, -- Show diffs for binaries
@@ -87,83 +86,83 @@ require('diffview').setup({
       view = {
          -- The `view` bindings are active in the diff buffers, only when the current
          -- tabpage is a Diffview.
-         [get_key_code(keycodes.common.select_next_entry)]    = actions.select_next_entry, -- Open the diff for the next file
-         [get_key_code(keycodes.common.select_prev_entry)]    = actions.select_prev_entry, -- Open the diff for the previous file
-         [get_key_code(keycodes.common.goto_file)]            = actions.goto_file, -- Open the file in a new split in the previous tabpage
-         [get_key_code(keycodes.common.goto_file_split)]      = actions.goto_file_split, -- Open the file in a new split
-         [get_key_code(keycodes.common.goto_file_tab)]        = actions.goto_file_tab, -- Open the file in a new tabpage
-         [get_key_code(keycodes.common.focus_files)]          = actions.focus_files, -- Bring focus to the file panel
-         [get_key_code(keycodes.common.toggle_files)]         = actions.toggle_files, -- Toggle the file panel.
-         [get_key_code(keycodes.common.cycle_layout)]         = actions.cycle_layout, -- Cycle through available layouts.
-         [get_key_code(keycodes.view.prev_conflict)]          = actions.prev_conflict, -- In the merge_tool: jump to the previous conflict
-         [get_key_code(keycodes.view.next_conflict)]          = actions.next_conflict, -- In the merge_tool: jump to the next conflict
-         [get_key_code(keycodes.view.conflict_choose_ours)]   = actions.conflict_choose('ours'), -- Choose the OURS version of a conflict
-         [get_key_code(keycodes.view.conflict_choose_theirs)] = actions.conflict_choose('theirs'), -- Choose the THEIRS version of a conflict
-         [get_key_code(keycodes.view.conflict_choose_base)]   = actions.conflict_choose('base'), -- Choose the BASE version of a conflict
-         [get_key_code(keycodes.view.conflict_choose_all)]    = actions.conflict_choose('all'), -- Choose all the versions of a conflict
-         [get_key_code(keycodes.view.conflict_choose_none)]   = actions.conflict_choose('none'), -- Delete the conflict region
+         [keycodes.common.select_next_entry]    = actions.select_next_entry, -- Open the diff for the next file
+         [keycodes.common.select_prev_entry]    = actions.select_prev_entry, -- Open the diff for the previous file
+         [keycodes.common.goto_file]            = actions.goto_file, -- Open the file in a new split in the previous tabpage
+         [keycodes.common.goto_file_split]      = actions.goto_file_split, -- Open the file in a new split
+         [keycodes.common.goto_file_tab]        = actions.goto_file_tab, -- Open the file in a new tabpage
+         [keycodes.common.focus_files]          = actions.focus_files, -- Bring focus to the file panel
+         [keycodes.common.toggle_files]         = actions.toggle_files, -- Toggle the file panel.
+         [keycodes.common.cycle_layout]         = actions.cycle_layout, -- Cycle through available layouts.
+         [keycodes.view.prev_conflict]          = actions.prev_conflict, -- In the merge_tool: jump to the previous conflict
+         [keycodes.view.next_conflict]          = actions.next_conflict, -- In the merge_tool: jump to the next conflict
+         [keycodes.view.conflict_choose_ours]   = actions.conflict_choose('ours'), -- Choose the OURS version of a conflict
+         [keycodes.view.conflict_choose_theirs] = actions.conflict_choose('theirs'), -- Choose the THEIRS version of a conflict
+         [keycodes.view.conflict_choose_base]   = actions.conflict_choose('base'), -- Choose the BASE version of a conflict
+         [keycodes.view.conflict_choose_all]    = actions.conflict_choose('all'), -- Choose all the versions of a conflict
+         [keycodes.view.conflict_choose_none]   = actions.conflict_choose('none'), -- Delete the conflict region
       },
       diff1 = { --[[ Mappings in single window diff layouts ]] },
       diff2 = { --[[ Mappings in 2-way diff layouts ]] },
       diff3 = {
          -- Mappings in 3-way diff layouts
-         { { 'n', 'x' }, get_key_code(keycodes.diff3.diff_get_ours), actions.diffget('ours') }, -- Obtain the diff hunk from the OURS version of the file
-         { { 'n', 'x' }, get_key_code(keycodes.diff3.diff_get_theirs), actions.diffget('theirs') }, -- Obtain the diff hunk from the THEIRS version of the file
+         { { 'n', 'x' }, keycodes.diff3.diff_get_ours,   actions.diffget('ours') }, -- Obtain the diff hunk from the OURS version of the file
+         { { 'n', 'x' }, keycodes.diff3.diff_get_theirs, actions.diffget('theirs') }, -- Obtain the diff hunk from the THEIRS version of the file
       },
       diff4 = {
          -- Mappings in 4-way diff layouts
-         { { 'n', 'x' }, get_key_code(keycodes.diff4.diff_get_base), actions.diffget('base') }, -- Obtain the diff hunk from the BASE version of the file
-         { { 'n', 'x' }, get_key_code(keycodes.diff4.diff_get_ours), actions.diffget('ours') }, -- Obtain the diff hunk from the OURS version of the file
-         { { 'n', 'x' }, get_key_code(keycodes.diff4.diff_get_theirs), actions.diffget('theirs') }, -- Obtain the diff hunk from the THEIRS version of the file
+         { { 'n', 'x' }, keycodes.diff4.diff_get_base,   actions.diffget('base') }, -- Obtain the diff hunk from the BASE version of the file
+         { { 'n', 'x' }, keycodes.diff4.diff_get_ours,   actions.diffget('ours') }, -- Obtain the diff hunk from the OURS version of the file
+         { { 'n', 'x' }, keycodes.diff4.diff_get_theirs, actions.diffget('theirs') }, -- Obtain the diff hunk from the THEIRS version of the file
       },
       file_panel = {
-         [get_key_code(keycodes.common.next_entry)]        = actions.next_entry, -- Bring the cursor to the next file entry
-         [get_key_code(keycodes.common.prev_entry)]        = actions.prev_entry, -- Bring the cursor to the previous file entry.
-         [get_key_code(keycodes.fp.select_entry)]          = actions.select_entry, -- Open the diff for the selected entry.
-         [get_key_code(keycodes.fp.toggle_stage_entry)]    = actions.toggle_stage_entry, -- Stage / unstage the selected entry.
-         [get_key_code(keycodes.fp.stage_all)]             = actions.stage_all, -- Stage all entries.
-         [get_key_code(keycodes.fp.unstage_all)]           = actions.unstage_all, -- Unstage all entries.
-         [get_key_code(keycodes.fp.restore_entry)]         = actions.restore_entry, -- Restore entry to the state on the left side.
-         [get_key_code(keycodes.fp.open_commit_log)]       = actions.open_commit_log, -- Open the commit log panel.
-         [get_key_code(keycodes.common.scroll_view_up)]    = actions.scroll_view(-0.25), -- Scroll the view up
-         [get_key_code(keycodes.common.scroll_view_down)]  = actions.scroll_view(0.25), -- Scroll the view down
-         [get_key_code(keycodes.common.select_next_entry)] = actions.select_next_entry,
-         [get_key_code(keycodes.common.select_prev_entry)] = actions.select_prev_entry,
-         [get_key_code(keycodes.common.goto_file)]         = actions.goto_file,
-         [get_key_code(keycodes.common.goto_file_split)]   = actions.goto_file_split,
-         [get_key_code(keycodes.common.goto_file_tab)]     = actions.goto_file_tab,
-         [get_key_code(keycodes.fp.listing_style)]         = actions.listing_style, -- Toggle between 'list' and 'tree' views
-         [get_key_code(keycodes.fp.toggle_flatten_dirs)]   = actions.toggle_flatten_dirs, -- Flatten empty subdirectories in tree listing style.
-         [get_key_code(keycodes.fp.refresh_files)]         = actions.refresh_files, -- Update stats and entries in the file list.
-         [get_key_code(keycodes.common.focus_files)]       = actions.focus_files,
-         [get_key_code(keycodes.common.toggle_files)]      = actions.toggle_files,
-         [get_key_code(keycodes.common.cycle_layout)]      = actions.cycle_layout,
-         [get_key_code(keycodes.fp.next_conflict)]         = actions.next_conflict,
+         [keycodes.common.next_entry]        = actions.next_entry, -- Bring the cursor to the next file entry
+         [keycodes.common.prev_entry]        = actions.prev_entry, -- Bring the cursor to the previous file entry.
+         [keycodes.fp.select_entry]          = actions.select_entry, -- Open the diff for the selected entry.
+         [keycodes.fp.toggle_stage_entry]    = actions.toggle_stage_entry, -- Stage / unstage the selected entry.
+         [keycodes.fp.stage_all]             = actions.stage_all, -- Stage all entries.
+         [keycodes.fp.unstage_all]           = actions.unstage_all, -- Unstage all entries.
+         [keycodes.fp.restore_entry]         = actions.restore_entry, -- Restore entry to the state on the left side.
+         [keycodes.fp.open_commit_log]       = actions.open_commit_log, -- Open the commit log panel.
+         [keycodes.common.scroll_view_up]    = actions.scroll_view( -0.25), -- Scroll the view up
+         [keycodes.common.scroll_view_down]  = actions.scroll_view(0.25), -- Scroll the view down
+         [keycodes.common.select_next_entry] = actions.select_next_entry,
+         [keycodes.common.select_prev_entry] = actions.select_prev_entry,
+         [keycodes.common.goto_file]         = actions.goto_file,
+         [keycodes.common.goto_file_split]   = actions.goto_file_split,
+         [keycodes.common.goto_file_tab]     = actions.goto_file_tab,
+         [keycodes.fp.listing_style]         = actions.listing_style, -- Toggle between 'list' and 'tree' views
+         [keycodes.fp.toggle_flatten_dirs]   = actions.toggle_flatten_dirs, -- Flatten empty subdirectories in tree listing style.
+         [keycodes.fp.refresh_files]         = actions.refresh_files, -- Update stats and entries in the file list.
+         [keycodes.common.focus_files]       = actions.focus_files,
+         [keycodes.common.toggle_files]      = actions.toggle_files,
+         [keycodes.common.cycle_layout]      = actions.cycle_layout,
+         [keycodes.fp.next_conflict]         = actions.next_conflict,
       },
       file_history_panel = {
-         [get_key_code(keycodes.fhp.opions)]               = actions.options, -- Open the option panel
-         [get_key_code(keycodes.fhp.open_in_diffview)]     = actions.open_in_diffview, -- Open the entry under the cursor in a diffview
-         [get_key_code(keycodes.fhp.copy_hash)]            = actions.copy_hash, -- Copy the commit hash of the entry under the cursor
-         [get_key_code(keycodes.fhp.open_commit_log)]      = actions.open_commit_log,
-         [get_key_code(keycodes.fhp.open_all_folds)]       = actions.open_all_folds,
-         [get_key_code(keycodes.fhp.close_all_folds)]      = actions.close_all_folds,
-         [get_key_code(keycodes.common.next_entry)]        = actions.next_entry,
-         [get_key_code(keycodes.common.prev_entry)]        = actions.prev_entry,
-         [get_key_code(keycodes.fhp.select_entry)]         = actions.select_entry,
-         [get_key_code(keycodes.common.scroll_view_up)]    = actions.scroll_view(-0.25),
-         [get_key_code(keycodes.common.scroll_view_down)]  = actions.scroll_view(0.25),
-         [get_key_code(keycodes.common.select_next_entry)] = actions.select_next_entry,
-         [get_key_code(keycodes.common.select_prev_entry)] = actions.select_prev_entry,
-         [get_key_code(keycodes.common.goto_file)]         = actions.goto_file,
-         [get_key_code(keycodes.common.goto_file_split)]   = actions.goto_file_split,
-         [get_key_code(keycodes.common.goto_file_tab)]     = actions.goto_file_tab,
-         [get_key_code(keycodes.common.focus_files)]       = actions.focus_files,
-         [get_key_code(keycodes.common.toggle_files)]      = actions.toggle_files,
-         [get_key_code(keycodes.common.cycle_layout)]      = actions.cycle_layout,
+         [keycodes.fhp.opions]               = actions.options, -- Open the option panel
+         [keycodes.fhp.open_in_diffview]     = actions.open_in_diffview, -- Open the entry under the cursor in a diffview
+         [keycodes.fhp.copy_hash]            = actions.copy_hash, -- Copy the commit hash of the entry under the cursor
+         [keycodes.fhp.open_commit_log]      = actions.open_commit_log,
+         [keycodes.fhp.open_all_folds]       = actions.open_all_folds,
+         [keycodes.fhp.close_all_folds]      = actions.close_all_folds,
+         [keycodes.common.next_entry]        = actions.next_entry,
+         [keycodes.common.prev_entry]        = actions.prev_entry,
+         [keycodes.fhp.select_entry]         = actions.select_entry,
+         [keycodes.common.scroll_view_up]    = actions.scroll_view( -0.25),
+         [keycodes.common.scroll_view_down]  = actions.scroll_view(0.25),
+         [keycodes.common.select_next_entry] = actions.select_next_entry,
+         [keycodes.common.select_prev_entry] = actions.select_prev_entry,
+         [keycodes.common.goto_file]         = actions.goto_file,
+         [keycodes.common.goto_file_split]   = actions.goto_file_split,
+         [keycodes.common.goto_file_tab]     = actions.goto_file_tab,
+         [keycodes.common.focus_files]       = actions.focus_files,
+         [keycodes.common.toggle_files]      = actions.toggle_files,
+         [keycodes.common.cycle_layout]      = actions.cycle_layout,
       },
       option_panel = {
-         [get_key_code(keycodes.op.select_entry)] = actions.select_entry,
-         [get_key_code(keycodes.op.close)]        = actions.close,
+         [keycodes.op.select_entry] = actions.select_entry,
+         [keycodes.op.close]        = actions.close,
       },
    },
 })

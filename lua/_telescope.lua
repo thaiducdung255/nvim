@@ -17,7 +17,7 @@ end
 local vertical_default_conf = {
    layout_strategy = 'vertical',
    layout_config = {
-      preview_height = 0.75,
+      preview_height = 0.65,
    },
 }
 
@@ -78,9 +78,11 @@ telescope.setup {
    },
    pickers = {
       lsp_references           = vertical_default_conf,
+      grep_string              = vertical_default_conf,
+      live_grep                = vertical_default_conf,
       lsp_document_diagnostics = vertical_default_conf,
       find_files               = horizontal_default_conf,
-      oldfiles                 = horizontal_default_conf,
+      oldfiles                 = vertical_default_conf,
       buffers                  = horizontal_default_conf,
       lsp_definitions          = {
          file_ignore_patterns = { '.git/', '.dist/' },

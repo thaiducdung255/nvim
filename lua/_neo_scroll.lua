@@ -1,5 +1,4 @@
-local keycodes     = require('_keymap').sys
-local get_key_code = require('_utils').get_key_code
+local keycodes       = require('_keymap').sys
 
 local neoscroll      = require('neoscroll')
 local neoscroll_conf = require('neoscroll.config')
@@ -17,8 +16,8 @@ neoscroll.setup({
 })
 
 local mappings = {
-   [get_key_code(keycodes.scroll.d)] = { 'scroll', { 'vim.wo.scroll', 'true', '180' } },
-   [get_key_code(keycodes.scroll.u)] = { 'scroll', { '-vim.wo.scroll', 'true', '180' } },
+   [keycodes.scroll.d] = { 'scroll', { 'vim.wo.scroll', 'true', '180' } },
+   [keycodes.scroll.u] = { 'scroll', { '-vim.wo.scroll', 'true', '180' } },
 }
 
 neoscroll_conf.set_mappings(mappings)

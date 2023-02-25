@@ -1,5 +1,4 @@
 local map = require('_utils').map
-local get_key_code = require('_utils').get_key_code
 local keycodes = require('_keymap').spectre
 
 require('spectre').setup({
@@ -14,47 +13,47 @@ require('spectre').setup({
    },
    mapping            = {
       ['toggle_line'] = {
-         map  = get_key_code(keycodes.toggle_line),
+         map  = keycodes.toggle_line,
          cmd  = '<cmd>lua require(\'spectre\').toggle_line()<CR>',
          desc = 'toggle current item'
       },
       ['enter_file'] = {
-         map  = get_key_code(keycodes.enter_file),
+         map  = keycodes.enter_file,
          cmd  = '<cmd>lua require(\'spectre.actions\').select_entry()<CR>',
          desc = 'goto current file'
       },
       ['send_to_qf'] = {
-         map  = get_key_code(keycodes.send_to_qf),
+         map  = keycodes.send_to_qf,
          cmd  = '<cmd>lua require(\'spectre.actions\').send_to_qf()<CR>',
          desc = 'send all item to quickfix'
       },
       ['replace_cmd'] = {
-         map  = get_key_code(keycodes.replace_cmd),
+         map  = keycodes.replace_cmd,
          cmd  = '<cmd>lua require(\'spectre.actions\').replace_cmd()<CR>',
          desc = 'input replace vim command'
       },
       ['show_option_menu'] = {
-         map  = get_key_code(keycodes.show_option_menu),
+         map  = keycodes.show_option_menu,
          cmd  = '<cmd>lua require(\'spectre\').show_options()<CR>',
          desc = 'show option'
       },
       ['run_replace'] = {
-         map  = get_key_code(keycodes.run_replace),
+         map  = keycodes.run_replace,
          cmd  = '<cmd>lua require(\'spectre.actions\').run_replace()<CR>',
          desc = 'replace all'
       },
       ['change_view_mode'] = {
-         map  = get_key_code(keycodes.change_view_mode),
+         map  = keycodes.change_view_mode,
          cmd  = '<cmd>lua require(\'spectre\').change_view()<CR>',
          desc = 'change result view mode'
       },
       ['toggle_ignore_case'] = {
-         map  = get_key_code(keycodes.toggle_ignore_case),
+         map  = keycodes.toggle_ignore_case,
          cmd  = '<cmd>lua require(\'spectre\').change_options(\'ignore-case\')<CR>',
          desc = 'toggle ignore case'
       },
       ['toggle_ignore_hidden'] = {
-         map  = get_key_code(keycodes.toggle_ignore_hidden),
+         map  = keycodes.toggle_ignore_hidden,
          cmd  = '<cmd>lua require(\'spectre\').change_options(\'hidden\')<CR>',
          desc = 'toggle search hidden'
       },

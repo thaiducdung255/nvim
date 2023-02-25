@@ -1,10 +1,9 @@
 local keycodes = require('_keymap').vsnip
-local get_key_code = require('_utils').get_key_code
 
 vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
-local jump_next = get_key_code(keycodes.jump_next)
-local jump_prev = get_key_code(keycodes.jump_prev)
-local expand = get_key_code(keycodes.expand)
+local jump_next = keycodes.jump_next
+local jump_prev = keycodes.jump_prev
+local expand = keycodes.expand
 
 vim.cmd('imap <expr> ' .. expand .. ' vsnip#expandable()  ? \'<Plug>(vsnip-expand)\' : \'' .. expand .. '\'')
 vim.cmd('smap <expr> ' .. expand .. ' vsnip#expandable()  ? \'<Plug>(vsnip-expand)\' : \'' .. expand .. '\'')

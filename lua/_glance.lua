@@ -2,7 +2,6 @@ local glance = require('glance')
 local actions = glance.actions
 local keycodes = require('_keymap').glance
 local map = require('_utils').map
-local get_key_code = require('_utils').get_key_code
 
 glance.setup({
    height = 18, -- Height of the window
@@ -27,26 +26,26 @@ glance.setup({
    },
    mappings = {
       list = {
-         [get_key_code(keycodes.actions.next)]            = actions.next,
-         [get_key_code(keycodes.actions.prev)]            = actions.previous,
-         [get_key_code(keycodes.actions.n_loc)]           = actions.next_location,
-         [get_key_code(keycodes.actions.p_loc)]           = actions.previous_location,
-         [get_key_code(keycodes.actions.enter_win)]       = actions.enter_win('preview'),
-         [get_key_code(keycodes.actions.close_win)]       = actions.close,
-         [get_key_code(keycodes.actions.close_win_alt)]   = actions.close,
-         [get_key_code(keycodes.actions.open_vsplit)]     = actions.jump_vsplit,
-         [get_key_code(keycodes.actions.open_hsplit)]     = actions.jump_hsplit,
-         [get_key_code(keycodes.actions.open_tab)]        = actions.jump_tab,
-         [get_key_code(keycodes.actions.open)]            = actions.jump,
-         [get_key_code(keycodes.actions.scroll_down_win)] = actions.preview_scroll_win(-5),
-         [get_key_code(keycodes.actions.scroll_up_win)]   = actions.preview_scroll_win(5),
+         [keycodes.actions.next]            = actions.next,
+         [keycodes.actions.prev]            = actions.previous,
+         [keycodes.actions.n_loc]           = actions.next_location,
+         [keycodes.actions.p_loc]           = actions.previous_location,
+         [keycodes.actions.enter_win]       = actions.enter_win('preview'),
+         [keycodes.actions.close_win]       = actions.close,
+         [keycodes.actions.close_win_alt]   = actions.close,
+         [keycodes.actions.open_vsplit]     = actions.jump_vsplit,
+         [keycodes.actions.open_hsplit]     = actions.jump_hsplit,
+         [keycodes.actions.open_tab]        = actions.jump_tab,
+         [keycodes.actions.open]            = actions.jump,
+         [keycodes.actions.scroll_down_win] = actions.preview_scroll_win( -5),
+         [keycodes.actions.scroll_up_win]   = actions.preview_scroll_win(5),
       },
       preview = {
-         [get_key_code(keycodes.actions.close_win_alt)] = actions.close,
-         [get_key_code(keycodes.actions.close_win)]     = actions.close,
-         [get_key_code(keycodes.actions.n_loc)]         = actions.next_location,
-         [get_key_code(keycodes.actions.p_loc)]         = actions.previous_location,
-         [get_key_code(keycodes.actions.enter_win)]     = actions.enter_win('preview'),
+         [keycodes.actions.close_win_alt] = actions.close,
+         [keycodes.actions.close_win]     = actions.close,
+         [keycodes.actions.n_loc]         = actions.next_location,
+         [keycodes.actions.p_loc]         = actions.previous_location,
+         [keycodes.actions.enter_win]     = actions.enter_win('preview'),
       },
    },
    hooks = {},
