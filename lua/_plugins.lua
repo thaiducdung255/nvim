@@ -166,6 +166,7 @@ return require('packer').startup({
       use { 'SmiteshP/nvim-gps' }
       use { 'nvim-lualine/lualine.nvim' }
 
+      -- Rest client
       use {
          'teto/rest.nvim',
          branch = 'always-send-string',

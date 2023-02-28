@@ -4,40 +4,38 @@ local keycodes                     = require('_keymap').nvim_tree
 vim.g.nvim_tree_auto_ignore_ft     = 'startify'
 vim.g.nvim_tree_icon_symlink_arrow = '->'
 
-local tree_cb                      = require 'nvim-tree.config'.nvim_tree_callback
-
-local list                         = {
-   { key = keycodes.edit,               cb = tree_cb('edit') },
-   { key = keycodes.cd,                 cb = tree_cb('cd') },
-   { key = keycodes.vsplit,             cb = tree_cb('vsplit') },
-   { key = keycodes.split,              cb = tree_cb('split') },
-   { key = keycodes.tabnew,             cb = tree_cb('tabnew') },
-   { key = keycodes.prev_sibling,       cb = tree_cb('prev_sibling') },
-   { key = keycodes.next_sibling,       cb = tree_cb('next_sibling') },
-   { key = keycodes.parent_node,        cb = tree_cb('parent_node') },
-   { key = keycodes.close_node,         cb = tree_cb('close_node') },
-   { key = keycodes.preview,            cb = tree_cb('preview') },
-   { key = keycodes.first_sibling,      cb = tree_cb('first_sibling') },
-   { key = keycodes.last_sibling,       cb = tree_cb('last_sibling') },
-   { key = keycodes.toggle_ignored,     cb = tree_cb('toggle_ignored') },
-   { key = keycodes.toggle_dotfiles,    cb = tree_cb('toggle_dotfiles') },
-   { key = keycodes.refresh,            cb = tree_cb('refresh') },
-   { key = keycodes.create,             cb = tree_cb('create') },
-   { key = keycodes.remove,             cb = tree_cb('remove') },
-   { key = keycodes.rename,             cb = tree_cb('rename') },
-   { key = keycodes.rename,             cb = tree_cb('rename_basename') },
-   { key = keycodes.full_rename,        cb = tree_cb('full_rename') },
-   { key = keycodes.cut,                cb = tree_cb('cut') },
-   { key = keycodes.copy,               cb = tree_cb('copy') },
-   { key = keycodes.paste,              cb = tree_cb('paste') },
-   { key = keycodes.copy_name,          cb = tree_cb('copy_name') },
-   { key = keycodes.copy_path,          cb = tree_cb('copy_path') },
-   { key = keycodes.copy_absolute_path, cb = tree_cb('copy_absolute_path') },
-   { key = keycodes.prev_git_item,      cb = tree_cb('prev_git_item') },
-   { key = keycodes.next_git_item,      cb = tree_cb('next_git_item') },
-   { key = keycodes.dir_up,             cb = tree_cb('dir_up') },
-   { key = keycodes.close,              cb = tree_cb('close') },
-   { key = keycodes.toggle_help,        cb = tree_cb('toggle_help') },
+local mappings                     = {
+   { key = keycodes.edit,               action = 'edit' },
+   { key = keycodes.cd,                 action = 'cd' },
+   { key = keycodes.vsplit,             action = 'vsplit' },
+   { key = keycodes.split,              action = 'split' },
+   { key = keycodes.tabnew,             action = 'tabnew' },
+   { key = keycodes.prev_sibling,       action = 'prev_sibling' },
+   { key = keycodes.next_sibling,       action = 'next_sibling' },
+   { key = keycodes.parent_node,        action = 'parent_node' },
+   { key = keycodes.close_node,         action = 'close_node' },
+   { key = keycodes.preview,            action = 'preview' },
+   { key = keycodes.first_sibling,      action = 'first_sibling' },
+   { key = keycodes.last_sibling,       action = 'last_sibling' },
+   { key = keycodes.toggle_ignored,     action = 'toggle_ignored' },
+   { key = keycodes.toggle_dotfiles,    action = 'toggle_dotfiles' },
+   { key = keycodes.refresh,            action = 'refresh' },
+   { key = keycodes.create,             action = 'create' },
+   { key = keycodes.remove,             action = 'remove' },
+   { key = keycodes.rename,             action = 'rename' },
+   { key = keycodes.rename,             action = 'rename_basename' },
+   { key = keycodes.full_rename,        action = 'full_rename' },
+   { key = keycodes.cut,                action = 'cut' },
+   { key = keycodes.copy,               action = 'copy' },
+   { key = keycodes.paste,              action = 'paste' },
+   { key = keycodes.copy_name,          action = 'copy_name' },
+   { key = keycodes.copy_path,          action = 'copy_path' },
+   { key = keycodes.copy_absolute_path, action = 'copy_absolute_path' },
+   { key = keycodes.prev_git_item,      action = 'prev_git_item' },
+   { key = keycodes.next_git_item,      action = 'next_git_item' },
+   { key = keycodes.dir_up,             action = 'dir_up' },
+   { key = keycodes.close,              action = 'close' },
+   { key = keycodes.toggle_help,        action = 'toggle_help' },
 }
 
 vim.cmd([[hi link NvimTreeGitMerge Red]])
@@ -122,11 +120,11 @@ require 'nvim-tree'.setup {
       args = {}
    },
    view                 = {
-      width    = 30,
+      width    = 45,
       side     = 'left',
       mappings = {
          custom_only = true,
-         list        = list
+         list        = mappings
       }
    },
    filters              = {
