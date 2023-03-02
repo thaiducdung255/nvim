@@ -24,7 +24,7 @@ local vertical_default_conf = {
 local horizontal_default_conf = {
    layout_strategy = 'horizontal',
    layout_config = {
-      preview_width = 0.75,
+      preview_width = 0.45,
    },
 }
 

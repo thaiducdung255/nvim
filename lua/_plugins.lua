@@ -154,8 +154,6 @@ return require('packer').startup({
          commit = 'd48ab6039d0f0e4170f921f5e48f4d3e9f0898db'
       }
 
-      use 'marko-cerovac/material.nvim'
-
       -- highlight color value
       use 'norcalli/nvim-colorizer.lua'
 

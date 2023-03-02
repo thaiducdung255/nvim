@@ -142,7 +142,7 @@ return {
    },
    diff_view = {
       open = '<LEADER>gg',
-      close = '<C-q>',
+      close = '<C-x>',
       common = {
          select_next_entry = '<TAB>',
          select_prev_entry = '<S-TAB>',
@@ -331,8 +331,8 @@ return {
       outer_class = '<LEADER>co',
    },
    dadbod = {
-      exec_query = '',
-      save_query = '',
+      exec_query = '<Space><CR>',
+      save_query = '<Space><Tab>',
    },
    maximizer = {
       toggle_max = 'l',
@@ -364,8 +364,8 @@ return {
          close_win = '<ESC>',
          close_win_alt = 'q',
          enter_win = '<C-CR>',
-         open_vsplit = 'se',
-         open_hsplit = 'sn',
+         open_vsplit = 'v',
+         open_hsplit = 's',
          open_tab = 't',
          open = '<CR>',
       },

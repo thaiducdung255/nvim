@@ -12,13 +12,13 @@ glance.setup({
       wrap       = true,
    },
    border = {
-      enable = false, -- Show window borders. Only horizontal borders allowed
-      top_char = '―',
+      enable      = false, -- Show window borders. Only horizontal borders allowed
+      top_char    = '―',
       bottom_char = '―',
    },
    list = {
       position = 'right', -- Position of the list window 'left'|'right'
-      width = 0.3, -- 30% width relative to the active window, min 0.1, max 0.5
+      width    = 0.3, -- 30% width relative to the active window, min 0.1, max 0.5
    },
    theme = { -- This feature might not work properly in nvim-0.7.2
       enable = true, -- Will generate colors for the plugin based on your current colorscheme
