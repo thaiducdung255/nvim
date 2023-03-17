@@ -13,6 +13,7 @@ function M.map(mode_str, lhs, rhs, isSilent)
    local opts = {
       noremap = true,
       silent  = isSilent == true,
+      nowait  = true,
    }
 
    if (isSilent == nil) then opts.silent = true end

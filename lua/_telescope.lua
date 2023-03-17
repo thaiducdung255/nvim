@@ -132,7 +132,6 @@ telescope.load_extension('undo')
 map('n', keycodes.files, ':Telescope find_files hidden=true<CR>')
 map('n', keycodes.old_files, ':Telescope oldfiles hidden=true no_ignore=true<CR>')
 map('n', keycodes.bufs, ':Telescope buffers<CR>')
-map('n', keycodes.str_grep, ':Telescope grep_string hidden=true no_ignore=trueg<CR>')
 map('n', keycodes.live_grep, ':Telescope live_grep hidden=true no_ignore=true<CR>')
 
 map('n', keycodes.buf_fuzzy_find, ':Telescope current_buffer_fuzzy_find<CR>')

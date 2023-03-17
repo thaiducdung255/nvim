@@ -131,9 +131,9 @@ return {
    },
    hop = {
       char1_line = 'F',
+      word_line = 'f',
       word = '<LEADER>w',
       char2 = '<LEADER>o',
-      word_line = 'f',
       pattern = '<LEADER><ESC>',
       line = '<LEADER><LEADER>',
    },
@@ -142,7 +142,7 @@ return {
    },
    diff_view = {
       open = '<LEADER>gg',
-      close = '<C-x>',
+      close = '<ESC>',
       common = {
          select_next_entry = '<TAB>',
          select_prev_entry = '<S-TAB>',
@@ -217,11 +217,11 @@ return {
    },
    dap = {
       continue = '<LEADER>dc',
-      toggle_break_point = '<LEADER>db',
+      toggle_break_point = '<LEADER>dB',
       step_over = '<LEADER>do',
       step_into = '<LEADER>di',
       step_out = '<LEADER>dm',
-      disconnect = '<LEADER>dt',
+      disconnect = '<LEADER>dT',
       open_repl = 'd<CR>',
       hover = 'd<ESC>',
    },
@@ -294,7 +294,6 @@ return {
       files = '<LEADER>ff',
       old_files = '<LEADER>r',
       bufs = '<LEADER>fb',
-      str_grep = '<LEADER>fS',
       live_grep = '<LEADER>fs',
       buf_fuzzy_find = '<LEADER>ss',
       lsp_type_def = 'g.',
@@ -333,6 +332,11 @@ return {
    dadbod = {
       exec_query = '<Space><CR>',
       save_query = '<Space><Tab>',
+   },
+   vim_database = {
+      toggle_query    = '<LEADER>dq',
+      toggle_db       = '<LEADER>db',
+      list_tables_fzf = '<LEADER>dt',
    },
    maximizer = {
       toggle_max = 'l',

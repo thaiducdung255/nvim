@@ -27,18 +27,15 @@ cmp.setup {
          cmp.mapping.select_next_item(),
          { 'i', 'c' }
       ),
-
       [keycodes.select_prev_item] = cmp.mapping(
          cmp.mapping.select_prev_item(),
          { 'i', 'c' }
       ),
-
-      [keycodes.scroll_docs_up]   = cmp.mapping.scroll_docs( -4),
+      [keycodes.scroll_docs_up]   = cmp.mapping.scroll_docs(-4),
       [keycodes.scroll_docs_down] = cmp.mapping.scroll_docs(4),
-
       [keycodes.confirm]          = cmp.mapping.confirm({
          behavior = cmp.ConfirmBehavior.Replace,
-         select = true
+         select   = true
       }),
    },
    formatting = {
@@ -58,19 +55,19 @@ cmp.setup {
    },
    sources = {
       {
-         name = 'nvim_lsp_signature_help',
+         name           = 'nvim_lsp_signature_help',
          max_item_count = 13,
       },
       {
-         name = 'vim-dadbod-completion',
+         name           = 'vim-dadbod-completion',
          max_item_count = 10,
       },
       {
-         name = 'vsnip',
+         name           = 'vsnip',
          max_item_count = 5,
       },
       {
-         name = 'nvim_lsp',
+         name           = 'nvim_lsp',
          max_item_count = 20,
       },
       {
@@ -84,11 +81,11 @@ cmp.setup {
          keyword_length = 3,
       },
       {
-         name = 'path',
+         name           = 'path',
          max_item_count = 25,
       },
       {
-         name = 'nvim_lua',
+         name           = 'nvim_lua',
          max_item_count = 20,
       },
    },
@@ -99,9 +96,9 @@ cmp.setup {
       ghost_text = false
    },
    performance = {
-      debounce = 500,
-      throttle = 300,
-      fetching_timeout = 500,
+      debounce         = 300,
+      throttle         = 200,
+      fetching_timeout = 400,
    },
 }
 

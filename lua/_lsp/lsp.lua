@@ -16,7 +16,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
    }
 )
 
-local function set_lsp_config(client, bufnr)
+local function set_lsp_config(client, _)
    vim.cmd [[setlocal signcolumn=yes]]
 
    vim.bo.omnifunc = 'v:lua.vim.lsp.omnifunc'
@@ -29,7 +29,7 @@ local function set_lsp_config(client, bufnr)
    end
 end
 
-local base_servers = { 'dockerls', 'vimls', 'eslint', 'html', 'cssls', 'bashls', 'lua_ls', 'gopls' }
+local base_servers = { 'dockerls', 'vimls', 'html', 'cssls', 'bashls', 'lua_ls', 'gopls' }
 
 for _, lsp_server in ipairs(base_servers) do
    lspconfig[lsp_server].setup {
@@ -40,35 +40,25 @@ for _, lsp_server in ipairs(base_servers) do
    }
 end
 
-vim.api.nvim_create_autocmd(
-   'BufWritePre',
-   {
-      pattern = '*.tsx,*.ts,*.jsx,*.js',
-
-      callback = function()
-         vim.cmd [[EslintFixAll]]
-      end
-   }
-)
-
-local function isEslintrcFound()
-   local is_json_file_found = vim.fn.filereadable('./.eslintrc.json') == 1
-   local is_js_file_found = vim.fn.filereadable('./.eslintrc.js') == 1
-   local is_yml_file_found = vim.fn.filereadable('./.eslintrc.yml') == 1
-
-   if is_json_file_found or is_js_file_found or is_yml_file_found == 1 then
-      return true
-   end
-
-   return false
-end
+lspconfig.eslint.setup({
+   on_attach = function(_, bufnr)
+      vim.api.nvim_create_autocmd('BufWritePre', {
+         buffer = bufnr,
+         command = 'EslintFixAll',
+      })
+   end,
+})
 
 lspconfig.tsserver.setup {
    capabilities = capabilities,
-   on_attach = function(client, bufnr)
-      client.server_capabilities.documentFormattingProvider = not isEslintrcFound()
-      set_lsp_config(client, bufnr)
-   end
+   init_options = {
+      preferences = {
+         quotesPreference = 'single',
+         includeCompletionsForModuleExports = false,
+         includeAutomaticOptionalChainCompletion = true,
+         includeCompletionsForImportStatements = false
+      }
+   },
 }
 
 lspconfig.jsonls.setup {
@@ -86,9 +76,9 @@ lspconfig.yamlls.setup {
    settings = {
       yaml = {
          schemas = {
-            ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
-            ["../path/relative/to/file.yml"] = "/.github/workflows/*",
-            ["/path/from/root/of/project"] = "/.github/workflows/*"
+            ['/path/from/root/of/project']                        = '/.github/workflows/*',
+            ['../path/relative/to/file.yml']                      = '/.github/workflows/*',
+            ['https://json.schemastore.org/github-workflow.json'] = '/.github/workflows/*',
          },
       },
    }

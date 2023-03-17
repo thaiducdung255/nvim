@@ -1,6 +1,6 @@
 vim.g.mapleader          = ' '
 vim.g.python_host_prog   = '/usr/bin/python2'
-vim.g.python3_host_prog  = '/usr/bin/python3'
+vim.g.python3_host_prog  = '/opt/homebrew/bin/python3.11'
 vim.g.ruby_host_prog     = '/usr/bin/neovim-ruby-host'
 vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
@@ -52,6 +52,7 @@ vim.o.autoindent      = true
 vim.o.copyindent      = true
 vim.o.swapfile        = false
 vim.o.cmdheight       = 0
+vim.wo.cc             = 0
 vim.wo.number         = true
 vim.wo.cursorline     = true
 vim.wo.relativenumber = true
@@ -85,6 +86,15 @@ vim.api.nvim_create_autocmd(
       pattern = 'make',
       callback = function()
          vim.o.expandtab = false
+      end
+   }
+)
+
+vim.api.nvim_create_autocmd(
+   'VimEnter',
+   {
+      callback = function()
+         vim.cmd('set cc=0')
       end
    }
 )

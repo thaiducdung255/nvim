@@ -95,9 +95,12 @@ return require('packer').startup({
       }
 
       -- db management
-      use 'tpope/vim-dadbod'
-      use 'kristijanhusak/vim-dadbod-ui'
-      use 'kristijanhusak/vim-dadbod-completion'
+      -- use 'tpope/vim-dadbod'
+      -- use 'kristijanhusak/vim-dadbod-ui'
+      -- use 'kristijanhusak/vim-dadbod-completion'
+
+      -- use 'dinhhuy258/vim-database'
+      use 'thaiducdung255/nvim-pydb'
 
       -- rainbow parentheses
       use 'p00f/nvim-ts-rainbow'
@@ -121,14 +124,8 @@ return require('packer').startup({
 
       use { 'szw/vim-maximizer' }
 
-      -- text transform
-      use 'AndrewRadev/switch.vim'
-
       -- float terminal
       use { 'akinsho/toggleterm.nvim' }
-
-      -- split/join lines
-      use { 'bennypowers/splitjoin.nvim' }
 
       -- git
       use { 'lewis6991/gitsigns.nvim' }
@@ -179,6 +176,9 @@ return require('packer').startup({
             'anuvyklack/pretty-fold.nvim',
          }
       }
+
+      -- cache plugins
+      use 'lewis6991/impatient.nvim'
    end,
    config = {
       display = {

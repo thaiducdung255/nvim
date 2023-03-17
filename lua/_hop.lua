@@ -9,10 +9,10 @@ hop.setup({
 })
 
 map('no', keycodes.char1_line, ':HopChar1CurrentLine<CR>')
+map('no', keycodes.word_line, ':HopWordCurrentLine<CR>')
 map('no', keycodes.word, ':HopWordMW<CR>')
 map('no', keycodes.char2, ':HopChar2MW<CR>')
 map('no', keycodes.line, ':HopLineMW<CR>')
-map('no', keycodes.word_line, ':HopWordCurrentLine<CR>')
 map('no', keycodes.pattern, ':HopPatternMW<CR>')
 
 -- custom highlights
