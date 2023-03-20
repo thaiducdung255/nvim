@@ -146,8 +146,8 @@ return {
       common = {
          select_next_entry = '<TAB>',
          select_prev_entry = '<S-TAB>',
-         next_entry = 'j',
-         prev_entry = 'k',
+         next_entry = 'n',
+         prev_entry = 'e',
          goto_file = 'o',
          goto_file_split = 'O',
          goto_file_tab = '<C-o>',
