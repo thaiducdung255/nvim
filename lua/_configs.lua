@@ -1,7 +1,7 @@
 vim.g.mapleader          = ' '
-vim.g.python_host_prog   = '/usr/bin/python2'
+vim.g.python_host_prog   = '/opt/homebrew/bin/python3.11'
 vim.g.python3_host_prog  = '/opt/homebrew/bin/python3.11'
-vim.g.ruby_host_prog     = '/usr/bin/neovim-ruby-host'
+vim.g.ruby_host_prog     = '/Library/Ruby/Gems/2.6.0/gems/neovim-0.9.0/exe/neovim-ruby-host'
 vim.g.loaded_netrw       = 1
 vim.g.loaded_netrwPlugin = 1
 
