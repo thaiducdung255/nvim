@@ -379,5 +379,9 @@ return {
       cycle_next = '<C-n>',
       cycle_prev = '<C-p>',
       clear = '<C-q>',
+   },
+   split_join = {
+      split = 'cn',
+      join = 'ce',
    }
 }

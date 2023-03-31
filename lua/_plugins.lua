@@ -179,6 +179,9 @@ return require('packer').startup({
 
       -- cache plugins
       use 'lewis6991/impatient.nvim'
+
+      -- split/join lines
+      use 'AndrewRadev/splitjoin.vim'
    end,
    config = {
       display = {
