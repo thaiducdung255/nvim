@@ -56,7 +56,8 @@ vim.wo.cc             = 0
 vim.wo.number         = true
 vim.wo.cursorline     = true
 vim.wo.relativenumber = true
-vim.wo.wrap           = false
+vim.wo.wrap           = true
+vim.wo.showbreak      = '-> '
 vim.wo.signcolumn     = 'yes'
 
 vim.api.nvim_create_autocmd(

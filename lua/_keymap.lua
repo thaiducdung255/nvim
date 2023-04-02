@@ -381,7 +381,7 @@ return {
       clear = '<C-q>',
    },
    split_join = {
-      split = 'cn',
-      join = 'ce',
+      split = '<LEADER>cn',
+      join = '<LEADER>ce',
    }
 }
