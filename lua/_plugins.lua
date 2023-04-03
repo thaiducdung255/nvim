@@ -42,9 +42,16 @@ return require('packer').startup({
 
       -- autocomplete
       use {
-         'Exafunction/codeium.vim',
+         'jcdickinson/codeium.nvim',
+         requires = {
+            'nvim-lua/plenary.nvim',
+            'hrsh7th/nvim-cmp',
+         },
+         config = function()
+            require('codeium').setup({
+            })
+         end
       }
-
       use {
          'hrsh7th/nvim-cmp',
          requires = {
@@ -55,11 +62,14 @@ return require('packer').startup({
             'onsails/lspkind-nvim',
             'hrsh7th/cmp-nvim-lua',
             'hrsh7th/cmp-path',
+            'FelipeLema/cmp-async-path',
             'hrsh7th/cmp-cmdline',
             'dmitmel/cmp-cmdline-history',
             'lukas-reineke/cmp-under-comparator',
             'hrsh7th/cmp-nvim-lsp-signature-help',
             'hrsh7th/cmp-nvim-lsp',
+            'hrsh7th/cmp-nvim-lsp-document-symbol',
+            'hrsh7th/cmp-calc'
          }
       }
 
@@ -95,12 +105,7 @@ return require('packer').startup({
          end
       }
 
-      -- db management
-      -- use 'tpope/vim-dadbod'
-      -- use 'kristijanhusak/vim-dadbod-ui'
-      -- use 'kristijanhusak/vim-dadbod-completion'
-
-      -- use 'dinhhuy258/vim-database'
+      -- database ui
       use 'thaiducdung255/nvim-pydb'
 
       -- rainbow parentheses

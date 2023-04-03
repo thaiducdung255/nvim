@@ -2,15 +2,15 @@ local _gps = require('nvim-gps')
 local _recorder = require('recorder')
 
 local colors = {
-   bg1     = "#101010",
-   bg2     = "#202020",
-   bg3     = "#303030",
-   fg      = "#e0e0e0",
-   green   = "Green",
+   bg1     = '#101010',
+   bg2     = '#202020',
+   bg3     = '#303030',
+   fg      = '#e0e0e0',
+   green   = 'Green',
    orange  = 'Orange',
-   red     = "Red",
-   cyan    = "Cyan",
-   comment = "#444444",
+   red     = 'Red',
+   cyan    = 'Cyan',
+   comment = '#444444',
 }
 
 local theme = {
@@ -53,7 +53,7 @@ _gps.setup {
 }
 
 local shorten_filename = function(str)
-   local found_current_idx = str:find("%.", 1)
+   local found_current_idx = str:find('%.', 1)
 
    if found_current_idx == nil or found_current_idx == 1 then
       return str
@@ -64,7 +64,7 @@ local shorten_filename = function(str)
 
    while found_current_idx ~= nil do
       last_found_idx = found_current_idx
-      found_current_idx = str:find("%.", last_found_idx + 1)
+      found_current_idx = str:find('%.', last_found_idx + 1)
    end
 
    return str:sub(1, last_found_idx - 1)
@@ -136,7 +136,6 @@ require 'lualine'.setup {
       lualine_a = { windows },
       lualine_b = {},
       lualine_c = {},
-
       lualine_x = {},
       lualine_y = {},
       lualine_z = { tabs }
@@ -153,7 +152,6 @@ require 'lualine'.setup {
       lualine_a = { mode },
       lualine_b = { file_name },
       lualine_c = { diagnostics, gps },
-
       lualine_x = {},
       lualine_y = { _recorder.recordingStatus, _recorder.displaySlots, diff },
       lualine_z = { branch, progress }

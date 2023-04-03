@@ -39,28 +39,32 @@ cmp.setup {
       }),
    },
    formatting = {
-      format = function(entry, vim_item)
-         vim_item.kind = lspkind.presets.default[vim_item.kind]
-
-         if entry.source.name == 'nvim_lsp' or entry.source.name == 'cmdline' then
-            vim_item.dup = 0
-         end
-
-         -- local menu = source_mapping[entry.source.name]
-
-         -- vim_item.menu = menu
-
-         return vim_item
-      end
+      format = lspkind.cmp_format({
+         mode = 'symbol',
+         maxwidth = 50,
+         ellipsis_char = '...',
+         symbol_map = {
+            Codeium = '󰛩',
+            NvimLspDocumentSymbol = '*'
+         }
+      })
    },
    sources = {
+      {
+         name           = 'codeium',
+         max_item_count = 10,
+      },
+      {
+         name           = 'calc',
+         max_item_count = 2,
+      },
       {
          name           = 'nvim_lsp_signature_help',
          max_item_count = 13,
       },
       {
-         name           = 'vim-dadbod-completion',
-         max_item_count = 10,
+         name           = 'nvim_lsp_document_symbol',
+         max_item_count = 5,
       },
       {
          name           = 'vsnip',
@@ -81,8 +85,8 @@ cmp.setup {
          keyword_length = 3,
       },
       {
-         name           = 'path',
-         max_item_count = 25,
+         name           = 'async_path',
+         max_item_count = 20,
       },
       {
          name           = 'nvim_lua',
@@ -93,12 +97,12 @@ cmp.setup {
       -- entries = "native"
    },
    experimental = {
-      ghost_text = false
+      ghost_text = true
    },
    performance = {
-      debounce         = 300,
-      throttle         = 200,
-      fetching_timeout = 400,
+      debounce         = 250,
+      throttle         = 250,
+      fetching_timeout = 3000,
    },
 }
 
@@ -111,10 +115,26 @@ for _, cmd_type in ipairs({ ':', '/', '?', '@', '=' }) do
          },
       })
    else
-      cmp.setup.cmdline(cmd_type, {
-         sources = {
-            { name = 'cmdline_history' },
-         },
-      })
+      if (cmd_type == '/') then
+         cmp.setup.cmdline('/', {
+            sources = cmp.config.sources(
+               {
+                  { name = 'nvim_lsp_document_symbol' }
+               },
+               {
+                  { name = 'buffer' }
+               },
+               {
+                  { name = 'cmdline_history' },
+               }
+            )
+         })
+      else
+         cmp.setup.cmdline(cmd_type, {
+            sources = {
+               { name = 'cmdline_history' },
+            },
+         })
+      end
    end
 end
