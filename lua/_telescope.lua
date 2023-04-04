@@ -36,7 +36,7 @@ telescope.setup {
       file_ignore_patterns   = {
          '.git/', 'node_modules/', '.package-lock.json', '.pnpm-lock.yaml', '.yarn-lock.json',
          'dist/', 'debug-adapters/', '.next/', '.cache/', '.cargo/', '.gnupg/', '.oh-my-zsh/plugins/',
-         '__init__.py', 'target', '@generated'
+         'target', '@generated'
       },
       prompt_prefix          = '-> ',
       selection_caret        = '-> ',
@@ -59,7 +59,6 @@ telescope.setup {
       qflist_previewer       = previewers.vim_buffer_qflist.new,
       layout_config          = { width = 0.999, height = 0.999 },
       buffer_previewer_maker = previewers.buffer_previewer_maker,
-
       mappings               = {
          i = {
             ['<C-n>'] = actions.move_selection_next,
@@ -68,7 +67,6 @@ telescope.setup {
             ['<ESC>'] = actions.close,
             ['<C-i>'] = R('telescope').extensions.hop.hop,
          },
-
          n = {
             ['<C-j>'] = actions.move_selection_next,
             ['<C-k>'] = actions.move_selection_previous,
@@ -110,7 +108,6 @@ telescope.setup {
             'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':',
             'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
          },
-
          sign_hl            = { 'WarningMsg', 'Title' },
          line_hl            = { 'CursorLine', 'Normal' },
          clear_selection_hl = false,
