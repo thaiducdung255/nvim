@@ -52,6 +52,7 @@ return require('packer').startup({
             })
          end
       }
+
       use {
          'hrsh7th/nvim-cmp',
          requires = {
@@ -104,9 +105,6 @@ return require('packer').startup({
             }
          end
       }
-
-      -- database ui
-      use 'thaiducdung255/nvim-pydb'
 
       -- rainbow parentheses
       use 'p00f/nvim-ts-rainbow'
@@ -183,11 +181,14 @@ return require('packer').startup({
          }
       }
 
-      -- cache plugins
-      use 'lewis6991/impatient.nvim'
-
       -- split/join lines
       use 'AndrewRadev/splitjoin.vim'
+
+      -- database ui
+      use 'thaiducdung255/nvim-pydb'
+
+      -- cache plugins
+      use 'lewis6991/impatient.nvim'
    end,
    config = {
       display = {

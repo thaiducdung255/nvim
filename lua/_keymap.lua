@@ -333,11 +333,6 @@ return {
       exec_query = '<Space><CR>',
       save_query = '<Space><Tab>',
    },
-   vim_database = {
-      toggle_query    = '<LEADER>dq',
-      toggle_db       = '<LEADER>db',
-      list_tables_fzf = '<LEADER>dt',
-   },
    maximizer = {
       toggle_max = 'l',
       toggle_max_vertical = 'L',
@@ -383,5 +378,9 @@ return {
    split_join = {
       split = '<LEADER>cn',
       join = '<LEADER>ce',
+   },
+   nvim_pydb = {
+      show_connections = '<LEADER>db',
+      show_query_window = '<LEADER>dq'
    }
 }
