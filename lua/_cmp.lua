@@ -22,22 +22,37 @@ cmp.setup {
          cmp.config.compare.order,
       },
    },
-   mapping = {
-      [keycodes.select_next_item] = cmp.mapping(
-         cmp.mapping.select_next_item(),
+   mapping = cmp.mapping.preset.insert({
+      [keycodes.scroll_docs_up] = cmp.mapping(
+         cmp.mapping.scroll_docs(-1),
          { 'i', 'c' }
+      ),
+      [keycodes.scroll_docs_down] = cmp.mapping(
+         cmp.mapping.scroll_docs(1),
+         { 'i', 'c' }
+      ),
+      [keycodes.confirm] = cmp.mapping.confirm { select = true },
+      [keycodes.select_next_item] = cmp.mapping(
+         function(fallback)
+            if cmp.visible() then
+               cmp.select_next_item()
+            else
+               fallback()
+            end
+         end,
+         { 'i', 's', }
       ),
       [keycodes.select_prev_item] = cmp.mapping(
-         cmp.mapping.select_prev_item(),
-         { 'i', 'c' }
+         function(fallback)
+            if cmp.visible() then
+               cmp.select_prev_item()
+            else
+               fallback()
+            end
+         end,
+         { 'i', 's' }
       ),
-      [keycodes.scroll_docs_up]   = cmp.mapping.scroll_docs(-4),
-      [keycodes.scroll_docs_down] = cmp.mapping.scroll_docs(4),
-      [keycodes.confirm]          = cmp.mapping.confirm({
-         behavior = cmp.ConfirmBehavior.Replace,
-         select   = true
-      }),
-   },
+   }),
    formatting = {
       format = lspkind.cmp_format({
          mode = 'symbol',
@@ -45,7 +60,6 @@ cmp.setup {
          ellipsis_char = '...',
          symbol_map = {
             Codeium = '󰛩',
-            NvimLspDocumentSymbol = '*'
          }
       })
    },
@@ -102,7 +116,7 @@ cmp.setup {
    performance = {
       debounce         = 250,
       throttle         = 250,
-      fetching_timeout = 3000,
+      fetching_timeout = 5000,
    },
 }
 

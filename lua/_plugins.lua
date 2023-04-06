@@ -11,6 +11,7 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 
 return require('packer').startup({
    function(use)
+      -- Package manager + misc
       use { 'wbthomason/packer.nvim' }
       use { 'nvim-lua/popup.nvim' }
       use { 'nvim-lua/plenary.nvim' }
@@ -133,7 +134,6 @@ return require('packer').startup({
 
       -- git
       use { 'lewis6991/gitsigns.nvim' }
-      use 'kdheepak/lazygit.nvim'
 
       use {
          'sindrets/diffview.nvim',
@@ -162,8 +162,10 @@ return require('packer').startup({
       use { 'kyazdani42/nvim-web-devicons' }
 
       -- Status Line and Bufferline
-      use { 'SmiteshP/nvim-gps' }
-      use { 'nvim-lualine/lualine.nvim' }
+      use {
+         'nvim-lualine/lualine.nvim',
+         requires = 'SmiteshP/nvim-gps'
+      }
 
       -- Rest client
       use {
@@ -185,7 +187,10 @@ return require('packer').startup({
       use 'AndrewRadev/splitjoin.vim'
 
       -- database ui
-      use 'thaiducdung255/nvim-pydb'
+      use {
+         'thaiducdung255/nvim-pydb',
+         requires = { 'vijaymarupudi/nvim-fzf' }
+      }
 
       -- cache plugins
       use 'lewis6991/impatient.nvim'
