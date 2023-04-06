@@ -20,7 +20,6 @@ return require('packer').startup({
       use { 'neovim/nvim-lspconfig' }
       use { 'b0o/schemastore.nvim' }
       use { 'dnlhc/glance.nvim' }
-      use { 'lvimuser/lsp-inlayhints.nvim' }
 
       -- telescope
       use { 'nvim-telescope/telescope.nvim' }
