@@ -40,7 +40,7 @@ cmp.setup {
                fallback()
             end
          end,
-         { 'i', 's', }
+         { 'i', 'c' }
       ),
       [keycodes.select_prev_item] = cmp.mapping(
          function(fallback)
@@ -50,7 +50,7 @@ cmp.setup {
                fallback()
             end
          end,
-         { 'i', 's' }
+         { 'i', 'c' }
       ),
    }),
    formatting = {
