@@ -28,7 +28,7 @@ local function set_lsp_config(client, _)
    end
 end
 
-local base_servers = { 'dockerls', 'vimls', 'html', 'cssls', 'bashls', 'lua_ls', 'gopls' }
+local base_servers = { 'dockerls', 'vimls', 'html', 'cssls', 'bashls', 'lua_ls', 'gopls', 'prismals' }
 
 for _, lsp_server in ipairs(base_servers) do
    lspconfig[lsp_server].setup {
