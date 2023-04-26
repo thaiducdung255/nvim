@@ -3,6 +3,8 @@
     "Lua.diagnostics.disable": [],
     "Lua.diagnostics.globals": [
         "vim",
-        "require"
+        "require",
+        "opts",
+        "api"
     ]
 }

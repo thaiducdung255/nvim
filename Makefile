@@ -1,12 +1,12 @@
 lsp:
 	sudo pacman -S --noconfirm lua-language-server go
-	npm i --location=global bash-language-server typescript-language-server vscode-langservers-extracted vscode-json-languageserver emmet-ls vim-language-server typescript dockerfile-language-server-nodejs yaml-language-server @prisma/language-server
+	npm i -g bash-language-server typescript-language-server vscode-langservers-extracted vscode-json-languageserver emmet-ls vim-language-server typescript dockerfile-language-server-nodejs yaml-language-server @prisma/language-server
 	pip install --upgrade pip
 	pip install python-lsp-server mypy black isort memestra flake8 pylint
 	go install golang.org/x/tools/gopls@latest
 	sudo ln -fs ~/go/bin/gopls /usr/bin/gopls
-	curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
-	yay -S --noconfirm rust-analyzer
+	# curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+	# yay -S --noconfirm rust-analyzer
 
 
 install:

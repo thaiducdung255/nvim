@@ -87,7 +87,7 @@ return require('packer').startup({
       use {
          'nvim-treesitter/nvim-treesitter',
          -- run = ':TSInstall lua python go http css typescript javascript tsx make dockerfile css html json bash rasi yaml rust prisma'
-         run = ':TSUpdateSync'
+         -- run = ':TSUpdateSync'
       }
       use { 'windwp/nvim-ts-autotag' }
       use 'nvim-treesitter/nvim-treesitter-refactor'
@@ -163,7 +163,6 @@ return require('packer').startup({
       -- Status Line and Bufferline
       use {
          'nvim-lualine/lualine.nvim',
-         requires = 'SmiteshP/nvim-gps'
       }
 
       -- Rest client
@@ -188,7 +187,6 @@ return require('packer').startup({
       -- database ui
       use {
          'thaiducdung255/nvim-pydb',
-         requires = { 'vijaymarupudi/nvim-fzf' }
       }
 
       -- cache plugins

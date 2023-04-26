@@ -1,9 +1,9 @@
 local lspconfig = require 'lspconfig'
 
--- local log = require('vim.lsp.log')
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
+-- local log = require('vim.lsp.log')
 -- vim.lsp.set_log_level('debug')
 -- log.set_format_func(vim.inspect)
 
@@ -32,6 +32,7 @@ local base_servers = { 'dockerls', 'vimls', 'html', 'cssls', 'bashls', 'lua_ls',
 
 for _, lsp_server in ipairs(base_servers) do
    lspconfig[lsp_server].setup {
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = function(client, bufnr)
          set_lsp_config(client, bufnr)
@@ -40,6 +41,10 @@ for _, lsp_server in ipairs(base_servers) do
 end
 
 lspconfig.eslint.setup({
+   runtime = {
+      execArgv = { "--max_old_space_size=4096" }
+   },
+   cmd = { 'vscode-eslint-language-server', '--stdio' },
    on_attach = function(_, bufnr)
       vim.api.nvim_create_autocmd('BufWritePre', {
          buffer = bufnr,
@@ -48,9 +53,33 @@ lspconfig.eslint.setup({
    end,
 })
 
+lspconfig.efm.setup {
+   init_options = { documentFormatting = true },
+   settings = {
+      rootMarkers = { '.git', 'package.json', 'tsconfig.json', 'jsconfig.json' },
+      languagues = {
+         lua = { formatCommand = "lua-format -i", formatStdin = true },
+         javascript = { formatCommand = "eslint --fix", formatStdin = true },
+         typescript = { formatCommand = "eslint --fix", formatStdin = true },
+      }
+   },
+   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
+   single_file_support = true,
+}
+
 lspconfig.tsserver.setup {
+   single_file_support = true,
    capabilities = capabilities,
+   code_actions_on_save = {
+      ['source.organizeImports'] = true,
+      ['source.removeUnusedImports'] = true,
+      ['source.sortImports'] = true,
+      ['source.addMissingImports'] = true,
+      ['source.removeUnused'] = true,
+      ['source.fixAll'] = true
+   },
    init_options = {
+      maxTsServerMemory = 4096,
       preferences = {
          quotesPreference = 'single',
          includeCompletionsForModuleExports = false,
@@ -58,11 +87,15 @@ lspconfig.tsserver.setup {
          includeCompletionsForImportStatements = false
       }
    },
+   on_attach = function(client, bufnr)
+      -- set_lsp_config(client, bufnr)
+   end,
 }
 
 lspconfig.jsonls.setup {
+   single_file_support = true,
    capabilities = capabilities,
-   cmd = { 'vscode-json-languageserver', '--stdio' },
+   cmd = { 'vscode-json-language-server', '--stdio' },
    settings = {
       json = {
          schemas = require('schemastore').json.schemas(),
@@ -71,6 +104,7 @@ lspconfig.jsonls.setup {
 }
 
 lspconfig.yamlls.setup {
+   single_file_support = true,
    capabilities = capabilities,
    settings = {
       yaml = {
@@ -84,6 +118,7 @@ lspconfig.yamlls.setup {
 }
 
 lspconfig.pylsp.setup {
+   single_file_support = true,
    capabilities = capabilities,
    on_attach = function(client, bufnr)
       set_lsp_config(client, bufnr)

@@ -1,4 +1,3 @@
-local _gps = require('nvim-gps')
 local _recorder = require('recorder')
 
 local colors = {
@@ -39,19 +38,6 @@ local theme = {
    },
 }
 
-_gps.setup {
-   separator             = ' -> ',
-   depth                 = 0,
-   depth_limit_indicator = '..',
-   icons                 = {
-      ['class-name']     = ' ',
-      ['function-name']  = ' ',
-      ['method-name']    = ' ',
-      ['container-name'] = ' ',
-      ['tag-name']       = '炙'
-   },
-}
-
 local shorten_filename = function(str)
    local found_current_idx = str:find('%.', 1)
 
@@ -69,11 +55,6 @@ local shorten_filename = function(str)
 
    return str:sub(1, last_found_idx - 1)
 end
-
-local gps = {
-   _gps.get_location,
-   cond = _gps.is_available,
-}
 
 local file_name = {
    'filename',
@@ -151,7 +132,7 @@ require 'lualine'.setup {
    sections   = {
       lualine_a = { mode },
       lualine_b = { file_name },
-      lualine_c = { diagnostics, gps },
+      lualine_c = { diagnostics },
       lualine_x = {},
       lualine_y = { _recorder.recordingStatus, _recorder.displaySlots, diff },
       lualine_z = { branch, progress }
