@@ -16,6 +16,17 @@ return require('packer').startup({
       use { 'nvim-lua/popup.nvim' }
       use { 'nvim-lua/plenary.nvim' }
 
+      use {
+         'axkirillov/hbac.nvim',
+         config = function()
+            require('hbac').setup({
+               autoclose = true,
+               threshold = 10
+            })
+         end
+      }
+
+
       -- LSP
       use { 'neovim/nvim-lspconfig' }
       use { 'b0o/schemastore.nvim' }
