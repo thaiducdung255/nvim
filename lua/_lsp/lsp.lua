@@ -56,16 +56,19 @@ lspconfig.eslint.setup({
 lspconfig.tsserver.setup {
    single_file_support = true,
    capabilities = capabilities,
-   code_actions_on_save = {
-      ['source.organizeImports'] = true,
-      ['source.removeUnusedImports'] = true,
-      ['source.sortImports'] = true,
-      ['source.addMissingImports'] = true,
-      ['source.removeUnused'] = true,
-      ['source.fixAll'] = true
-   },
    init_options = {
+      codeActionsOnSave = {
+         ['source.organizeImports'] = true,
+         ['source.removeUnusedImports'] = true,
+         ['source.sortImports'] = true,
+         ['source.addMissingImports'] = true,
+         ['source.removeUnused'] = true,
+         ['source.fixAll'] = true
+      },
       maxTsServerMemory = 4096,
+      tsserver = {
+         useSyntaxServer = 'auto'
+      },
       preferences = {
          quotesPreference = 'single',
          includeCompletionsForModuleExports = false,
@@ -73,6 +76,9 @@ lspconfig.tsserver.setup {
          includeCompletionsForImportStatements = false
       }
    },
+   on_attach = function(client, bufnr)
+      set_lsp_config(client, bufnr)
+   end,
 }
 
 lspconfig.jsonls.setup {

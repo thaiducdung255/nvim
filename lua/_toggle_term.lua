@@ -9,10 +9,12 @@ require('toggleterm').setup {
    shading_factor  = '1',
    start_in_insert = true,
    insert_mappings = false,
-   persist_size    = true,
+   persist_size    = false,
+   persist_mode    = true,
    direction       = 'horizontal',
    close_on_exit   = true,
    shell           = vim.o.shell,
+   auto_scroll     = false,
    size            = function(term)
       if term.direction == 'horizontal' then
          return 15
