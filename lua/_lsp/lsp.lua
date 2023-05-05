@@ -53,20 +53,6 @@ lspconfig.eslint.setup({
    end,
 })
 
-lspconfig.efm.setup {
-   init_options = { documentFormatting = true },
-   settings = {
-      rootMarkers = { '.git', 'package.json', 'tsconfig.json', 'jsconfig.json' },
-      languagues = {
-         lua = { formatCommand = "lua-format -i", formatStdin = true },
-         javascript = { formatCommand = "eslint --fix", formatStdin = true },
-         typescript = { formatCommand = "eslint --fix", formatStdin = true },
-      }
-   },
-   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' },
-   single_file_support = true,
-}
-
 lspconfig.tsserver.setup {
    single_file_support = true,
    capabilities = capabilities,
@@ -87,9 +73,6 @@ lspconfig.tsserver.setup {
          includeCompletionsForImportStatements = false
       }
    },
-   on_attach = function(client, bufnr)
-      -- set_lsp_config(client, bufnr)
-   end,
 }
 
 lspconfig.jsonls.setup {

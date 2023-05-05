@@ -54,6 +54,7 @@ return require('packer').startup({
       -- autocomplete
       use {
          'jcdickinson/codeium.nvim',
+         commit = '2bbc8d10c5baadbbea9d028131cc37a8a31ec5b2',
          requires = {
             'nvim-lua/plenary.nvim',
             'hrsh7th/nvim-cmp',
