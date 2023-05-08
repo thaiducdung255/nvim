@@ -77,7 +77,7 @@ lspconfig.tsserver.setup {
       }
    },
    on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
+      -- set_lsp_config(client, bufnr)
    end,
 }
 

@@ -203,6 +203,12 @@ return require('packer').startup({
 
       -- cache plugins
       use 'lewis6991/impatient.nvim'
+
+      -- markdown live preview
+      use({
+         "iamcco/markdown-preview.nvim",
+         run = function() vim.fn["mkdp#util#install"]() end,
+      })
    end,
    config = {
       display = {
