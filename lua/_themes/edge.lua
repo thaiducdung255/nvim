@@ -1,12 +1,12 @@
 vim.g.edge_style                     = 'aura'
-vim.g.edge_enable_italic             = 1
+vim.g.edge_enable_italic             = 0
 vim.g.edge_dim_foreground            = 1
 vim.g.edge_disable_italic_comment    = 1
 vim.g.edge_better_performance        = 1
 vim.g.edge_disable_terminal_colors   = 1
 vim.g.edge_menu_selection_background = 'red'
 
-vim.g.edge_colors_override = {
+vim.g.edge_colors_override           = {
    none       = { 'NONE', 'NONE' },
    black      = { '#202023', '232' }, -- window border bg color
    bg0        = { '#0a0a0a', '235' }, -- bg color
@@ -32,20 +32,20 @@ vim.g.edge_colors_override = {
 
 vim.cmd('colorscheme edge')
 
-vim.cmd('hi BufferLineFill guibg=#33353f') -- buffer line empty space
+vim.cmd('hi BufferLineFill guibg=#33353f')                               -- buffer line empty space
 
-vim.cmd('hi BufferLineBackground guibg=#070707 guifg=#33353f') -- bufferline not visible
-vim.cmd('hi BufferLineSeparator guibg=#070707 guifg=#33353f') -- bufferline sep not visible
+vim.cmd('hi BufferLineBackground guibg=#070707 guifg=#33353f')           -- bufferline not visible
+vim.cmd('hi BufferLineSeparator guibg=#070707 guifg=#33353f')            -- bufferline sep not visible
 
-vim.cmd('hi BufferLineSeparatorSelected guifg=#33353f') -- bufferline sep selected
-vim.cmd('hi BufferLineSeparatorVisible guifg=#33353f guibg=#070707') -- bufferline sep selected
+vim.cmd('hi BufferLineSeparatorSelected guifg=#33353f')                  -- bufferline sep selected
+vim.cmd('hi BufferLineSeparatorVisible guifg=#33353f guibg=#070707')     -- bufferline sep selected
 
-vim.cmd('hi BufferLineBufferVisible guibg=#070707 guifg=#57e1ed') -- bufferline visible
-vim.cmd('hi BufferLineBufferSelected guifg=#dfe4ed') -- bufferline selected
+vim.cmd('hi BufferLineBufferVisible guibg=#070707 guifg=#57e1ed')        -- bufferline visible
+vim.cmd('hi BufferLineBufferSelected guifg=#dfe4ed')                     -- bufferline selected
 
-vim.cmd('hi BufferLineTab guibg=#202023 guifg=#33353f') -- buffer tab index indicator
-vim.cmd('hi BufferLineTabSeparator guibg=#33353f guifg=#202023') -- buffer tab index indicator
+vim.cmd('hi BufferLineTab guibg=#202023 guifg=#33353f')                  -- buffer tab index indicator
+vim.cmd('hi BufferLineTabSeparator guibg=#33353f guifg=#202023')         -- buffer tab index indicator
 vim.cmd('hi BufferLineTabSeparatorSelected guibg=#33353f guifg=#0a0a0a') -- buffer tab index indicator
-vim.cmd('hi BufferLineTabSelected guifg=#6cb6eb') -- buffer tab index indicator
+vim.cmd('hi BufferLineTabSelected guifg=#6cb6eb')                        -- buffer tab index indicator
 
-vim.cmd('hi PmenuSel guibg=#33353f') -- completion menu custom
+vim.cmd('hi PmenuSel guibg=#33353f')                                     -- completion menu custom

@@ -1,19 +1,9 @@
-local map = require('_utils').map
-local keycodes = require('_keymap').lsp
-
 local signs = { Error = '✕', Warn = '⚠', Hint = '', Info = '', }
 
 for type, icon in pairs(signs) do
    local hl = 'DiagnosticSign' .. type
    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl, })
 end
-
-map('n', keycodes.hover, vim.lsp.buf.hover)
-map('n', keycodes.code_action, vim.lsp.buf.code_action)
-map('n', keycodes.signature_help, vim.lsp.buf.signature_help)
-map('n', keycodes.rename, vim.lsp.buf.rename)
-map('n', keycodes.n_diag, vim.diagnostic.goto_next)
-map('n', keycodes.p_diag, vim.diagnostic.goto_prev)
 
 -- lsp sign diagnostic for nvim 0.5
 vim.fn.sign_define(

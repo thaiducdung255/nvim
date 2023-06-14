@@ -1,4 +1,10 @@
-local keycodes = require('_keymap').vsnip
+local keycodes = {
+   expand      = '<Space>',
+   jump_next   = '<C-e>',
+   jump_prev   = '<C-n>',
+   select_text = '',
+   cut_text    = ''
+}
 
 vim.g.vsnip_snippet_dir = '~/.config/nvim/snippets'
 local jump_next = keycodes.jump_next

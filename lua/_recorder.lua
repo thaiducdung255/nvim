@@ -5,7 +5,7 @@ require('recorder').setup {
    mapping  = {
       startStopRecording = 'q',
       playMacro          = 'Q',
-      editMacro          = 'cq',
-      switchSlot         = 'sq'
+      editMacro          = '<LEADER>cq',
+      switchSlot         = '<LEADER>sq'
    }
 }

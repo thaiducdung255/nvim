@@ -1,5 +1,15 @@
 local map = require('_utils').map
-local keycodes = require('_keymap').dap
+
+local keycodes = {
+   continue           = '<LEADER>dc',
+   toggle_break_point = '<LEADER>dB',
+   step_over          = '<LEADER>do',
+   step_into          = '<LEADER>di',
+   step_out           = '<LEADER>dm',
+   disconnect         = '<LEADER>dT',
+   open_repl          = 'd<CR>',
+   hover              = 'd<ESC>',
+}
 
 local dap = require('dap')
 

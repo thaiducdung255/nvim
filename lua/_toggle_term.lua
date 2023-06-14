@@ -1,5 +1,9 @@
-local keycodes = require('_keymap').toggle_term
 local map = require('_utils').map
+
+local keycodes = {
+   h_open = '<C-Enter>',
+   v_open = '<S-Enter>',
+}
 
 require('toggleterm').setup {
    open_mapping    = keycodes.h_open,

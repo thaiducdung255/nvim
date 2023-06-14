@@ -1,9 +1,7 @@
-local map        = require('_utils').map
 local actions    = require('telescope.actions')
 local previewers = require('telescope.previewers')
 local telescope  = require('telescope')
 local sorters    = require('telescope.sorters')
-local keycodes   = require('_keymap').telescope
 
 if pcall(require, 'plenary') then
    RELOAD = require('plenary.reload').reload_module
@@ -125,28 +123,3 @@ telescope.load_extension('hop')
 telescope.load_extension('fzy_native')
 telescope.load_extension('repo')
 telescope.load_extension('undo')
-
-map('n', keycodes.files, ':Telescope find_files hidden=true<CR>')
-map('n', keycodes.old_files, ':Telescope oldfiles hidden=true no_ignore=true<CR>')
-map('n', keycodes.bufs, ':Telescope buffers<CR>')
-map('n', keycodes.live_grep, ':Telescope live_grep hidden=true no_ignore=true<CR>')
-
-map('n', keycodes.buf_fuzzy_find, ':Telescope current_buffer_fuzzy_find<CR>')
-map('n', keycodes.lsp_type_def, ':Telescope lsp_type_definitions<CR>')
-
-map('n', keycodes.cmd, ':Telescope commands<CR>')
-map('n', keycodes.cmd_his, ':Telescope command_history<CR>')
-map('n', keycodes.keymap, ':Telescope keymaps<CR>')
-map('n', keycodes.highlight, ':Telescope highlights<CR>')
-map('n', keycodes.lsp_doc_sym, ':Telescope lsp_document_symbols<CR>')
-map('n', keycodes.lsp_doc_diag, ':Telescope lsp_document_diagnostics<CR>')
-map('n', keycodes.lsp_ref, ':Telescope lsp_references<CR>')
-map('n', keycodes.git_branch, ':Telescope git_branches<CR>')
-
-local repo_dirs = [[{'~/Projects','~/Downloads','~/.config'}]]
-
-map('n', keycodes.repo,
-   [[:lua require'telescope'.extensions.repo.list{fd_opts={'--no-ignore-vcs'},search_dirs=]] .. repo_dirs .. [[}<CR>]]
-)
-
-map('n', keycodes.undo, [[:lua require'telescope'.extensions.undo.undo()<CR>]])

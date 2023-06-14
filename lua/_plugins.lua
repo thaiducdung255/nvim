@@ -26,7 +26,6 @@ return require('packer').startup({
          end
       }
 
-
       -- LSP
       use { 'neovim/nvim-lspconfig' }
       use { 'b0o/schemastore.nvim' }
@@ -88,9 +87,6 @@ return require('packer').startup({
 
       -- line peek
       use 'nacro90/numb.nvim'
-
-      -- find and replace
-      use { 'windwp/nvim-spectre' }
 
       -- smooth scroll
       use 'karb94/neoscroll.nvim'
@@ -204,11 +200,8 @@ return require('packer').startup({
       -- cache plugins
       use 'lewis6991/impatient.nvim'
 
-      -- markdown live preview
-      use({
-         "iamcco/markdown-preview.nvim",
-         run = function() vim.fn["mkdp#util#install"]() end,
-      })
+      -- hydra
+      use 'anuvyklack/hydra.nvim'
    end,
    config = {
       display = {

@@ -1,8 +1,95 @@
 local map = require('_utils').map
-local keycodes = require('_keymap').sys
 
--- hot reload config
-map('n', keycodes.config.hot_reload, ':luafile %<CR>')
+local keycodes = {
+   symbol = {
+      cmd_nav = {
+         open = '<CR>',
+         mru  = '<LEADER>cc',
+         l    = '<C-h>',
+         next = '<C-n>',
+         prev = '<C-e>',
+         r    = '<C-i>',
+      },
+      nl = ',,',
+   },
+   nav = {
+      r = '<LEADER>i',
+      l = '<LEADER>h',
+      u = '<LEADER>e',
+      d = '<LEADER>n'
+   },
+   w_split = {
+      v = '<LEADER>se',
+      h = '<LEADER>sn'
+   },
+   buf = {
+      next = 'gn',
+      prev = 'ge',
+   },
+   tab = {
+      new  = '<LEADER>t',
+      prev = 'N',
+      next = 'E'
+   },
+   file = {
+      quit     = '<LEADER>q',
+      undo     = 'U',
+      next_pos = 'I',
+      prev_pos = 'H',
+   },
+   term = {
+      esc = '<ESC>',
+   },
+   search_nav = {
+      next = '<Tab>',
+      prev = '<S-Tab>',
+   },
+   clipboard = {
+      paste = 'p',
+   },
+   cursor_nav = {
+      first = 'gh',
+      last  = 'gi',
+   },
+   custom_V = 'V',
+   custom_super_v = '<LEADER>v',
+   case_mod = {
+      pascal = ';o',
+      upper  = ';u',
+      lower  = ';y',
+   },
+   quote_mod = {
+      single   = ';c',
+      template = ';v',
+   },
+   auto_pair = {
+      parent           = ';n',
+      square           = ';e',
+      curly            = ';i',
+      angle            = ';h',
+      temp_quote       = ';c',
+      double_quote     = ';;',
+      alt_double_quote = '"',
+      single_quote     = '\'',
+      temp_val         = ';v',
+   },
+   bracket_ins = {
+      parent     = 'sn',
+      square     = 'se',
+      curly      = 'si',
+      angle      = 'sh',
+      s_quote    = 's;',
+      d_quote    = 'sO',
+      temp_quote = 's\''
+   },
+   cmd_nav = {
+      l    = '<M-l>',
+      r    = '<M-;>',
+      next = '<M-u>',
+      prev = '<M-y>',
+      mru  = '<LEADER>cc',
+   },
+}
 
 -- window cmds
 ---- nav cmds
@@ -11,12 +98,6 @@ map('n', keycodes.nav.u, '<C-w>k')
 map('n', keycodes.nav.d, '<C-w>j')
 map('n', keycodes.nav.l, '<C-w>h')
 
----- resize window cmds
-map('n', keycodes.w_resize.h_desc, ':vertical resize -2<CR>')
-map('n', keycodes.w_resize.h_inc, ':vertical resize +2<CR>')
-map('n', keycodes.w_resize.v_desc, ':resize -2<CR>')
-map('n', keycodes.w_resize.v_inc, ':resize +2<CR>')
-
 ---- split cmds
 map('n', keycodes.w_split.h, ':split<CR>')
 map('n', keycodes.w_split.v, ':vsplit<CR>')
@@ -24,7 +105,6 @@ map('n', keycodes.w_split.v, ':vsplit<CR>')
 -- buffer cmds
 map('n', keycodes.buf.next, ':bn<CR>')
 map('n', keycodes.buf.prev, ':bp<CR>')
-map('n', keycodes.buf.del, ':bd<CR>')
 ---------------------------------------------------------------------------------------------------
 
 -- tabs cmds
@@ -35,14 +115,13 @@ map('n', keycodes.tab.next, ':tabnext<CR>')
 
 -- file cmds
 map('n', keycodes.file.quit, ':q<CR>')
-map('n', keycodes.file.write, ':write<CR>')
 
 ---- undo
 map('n', keycodes.file.undo, '<C-r>')
 
 ---- mru file nav cmds
-map('n', keycodes.file.next_pos, '<C-o>')
-map('n', keycodes.file.prev_pos, '<C-i>')
+map('n', keycodes.file.next_pos, '<C-i>')
+map('n', keycodes.file.prev_pos, '<C-o>')
 
 -- terminal cmds
 map('t', keycodes.term.esc, '<C-\\><C-n>')

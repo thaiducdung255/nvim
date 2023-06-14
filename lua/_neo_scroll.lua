@@ -1,4 +1,9 @@
-local keycodes       = require('_keymap').sys
+local keycodes       = {
+   scroll = {
+      u = 'M',
+      d = 'm',
+   },
+}
 
 local neoscroll      = require('neoscroll')
 local neoscroll_conf = require('neoscroll.config')

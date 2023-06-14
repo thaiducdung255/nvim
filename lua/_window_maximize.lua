@@ -1,17 +1,21 @@
 local map = require('_utils').map
-local keycodes = require('_keymap').maximizer
+
+local keycodes = {
+   toggle_max          = 'z',
+   toggle_max_vertical = 'Z',
+}
 
 require('windows').setup({
    autowidth = {
-      enable = false,
+      enable   = false,
       winwidth = 1,
       filetype = {},
    },
    animation = {
-      enable = true,
+      enable   = true,
       duration = 200,
-      fps = 60,
-      easing = 'in_out_sine',
+      fps      = 60,
+      easing   = 'in_out_sine',
    }
 })
 

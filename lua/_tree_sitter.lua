@@ -1,5 +1,3 @@
-local keycodes = require('_keymap').ts
-
 local refactor_config = {
    highlight_definitions = {
       enable = true
@@ -10,17 +8,11 @@ local refactor_config = {
    smart_rename = {
       enable = false,
       keymaps = {
-         smart_rename = keycodes.rename
       }
    },
    navigation = {
       enable = false,
       keymaps = {
-         goto_definition      = keycodes.def_nav,
-         list_definitions     = keycodes.list_defs,
-         list_definitions_toc = keycodes.list_defs_toc,
-         goto_next_usage      = keycodes.usage_next,
-         goto_previous_usage  = keycodes.usage_prev,
       }
    }
 }

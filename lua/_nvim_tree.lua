@@ -1,5 +1,47 @@
 local map                          = require('_utils').map
-local keycodes                     = require('_keymap').nvim_tree
+
+local keycodes                     = {
+   toggle = 'T',
+   nav = {
+      exit  = '<ESC>',
+      close = 'h'
+   },
+   fs = {
+      rename        = 'R',
+      rename_base   = 'r',
+      create        = 'a',
+      remove        = 'd',
+      cut           = 'x',
+      paste         = 'p',
+      copy          = 'c',
+      copy_name     = 'y',
+      copy_rel_path = '<C-y>',
+      copy_abs_path = '<C-Y>',
+   },
+   tree = {
+      exit                 = '<ESC>',
+      toggle_help          = '?',
+      cd                   = '<C-CR>',
+      toggle_gitignore     = 'I',
+      toggle_dotfiles      = 'Z',
+      toggle_custom_hidden = 'C',
+      refresh              = 'L',
+      search               = 'ss'
+   },
+   open = {
+      edit    = '<CR>',
+      expand  = 'i',
+      tab     = 't',
+      preview = '<TAB>',
+      hsplit  = 'sn',
+      vsplit  = 'se',
+      info    = '<LEADER>.',
+   },
+   filter = {
+      start = 'f',
+      close = 'z'
+   },
+}
 
 vim.g.nvim_tree_auto_ignore_ft     = 'startify'
 vim.g.nvim_tree_icon_symlink_arrow = '->'
@@ -244,7 +286,7 @@ require 'nvim-tree'.setup {
    },
    ui                                 = {
       confirm = {
-         remove = false,
+         remove = true,
          trash  = false,
       }
    },

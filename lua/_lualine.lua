@@ -59,8 +59,8 @@ end
 local file_name = {
    'filename',
    file_status     = true,
-   path            = 1,
-   shorting_target = 40,
+   path            = 0,
+   shorting_target = 20,
 }
 
 local tabs = {
@@ -86,7 +86,14 @@ local diff = {
 
 local branch = {
    'branch',
-   icon = ''
+   icon = '',
+   fmt = function(str)
+      if str:len() > 18 then
+         return str:sub(1, 18) .. '...'
+      end
+
+      return str
+   end,
 }
 
 local diagnostics = {

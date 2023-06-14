@@ -1,4 +1,9 @@
-local keycodes = require('_keymap').comment
+local keycodes = {
+   line   = ';;',
+   vline  = 'go',
+   block  = '*',
+   vblock = '*',
+}
 
 local commentConf = require('Comment')
 local commentFt = require('Comment.ft')

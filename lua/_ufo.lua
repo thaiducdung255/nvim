@@ -1,7 +1,10 @@
 local map      = require('_utils').map
-local keycodes = require('_keymap').ufo
 local ufo      = require('ufo')
 
+local keycodes = {
+   open_all  = 'zA',
+   close_all = 'zF',
+}
 -- Using ufo provider need remap `zR` and `zM`. If Neovim is 0.6.1, remap yourself
 map('n', keycodes.close_all, ufo.closeAllFolds)
 map('n', keycodes.open_all, ufo.openAllFolds)

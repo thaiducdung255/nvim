@@ -1,5 +1,3 @@
-local keycodes = require('_keymap').git_signs
-
 require('gitsigns').setup {
    numhl                             = false,
    linehl                            = false,
@@ -53,23 +51,5 @@ require('gitsigns').setup {
    },
 
    keymaps                           = {
-      noremap                         = true,
-
-      ['n ' .. keycodes.next_hunk]    = { expr = true,
-         "&diff ? '' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'" },
-      ['n ' .. keycodes.prev_hunk]    = { expr = true,
-         "&diff ? '' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'" },
-
-      ['n ' .. keycodes.reset_hunk]   = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-      ['v ' .. keycodes.reset_hunk]   = '<cmd>lua require"gitsigns".reset_hunk({vim.fn.line("."), vim.fn.line("v")})<CR>',
-      ['n ' .. keycodes.reset_buf]    = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
-
-      ['n ' .. keycodes.preview_hunk] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-      ['n ' .. keycodes.diff_this]    = '<cmd>lua require"gitsigns".diffthis()<CR>',
-
-      ['n ' .. keycodes.set_loc_list] = '<cmd>lua require"gitsigns".setloclist()<CR>',
-
-      ['o ' .. keycodes.select_hunk]  = ':<C-U>lua require"gitsigns".select_hunk()<CR>',
-      ['x ' .. keycodes.select_hunk]  = ':<C-U>lua require"gitsigns".select_hunk()<CR>'
    },
 }

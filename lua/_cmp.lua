@@ -1,7 +1,14 @@
 local cmp = require 'cmp'
 local lspkind = require('lspkind')
 
-local keycodes = require('_keymap').cmp
+local keycodes = {
+   select_next_item = '<Tab>',
+   select_prev_item = '<S-Tab>',
+   scroll_docs_up   = '<C-e>',
+   scroll_docs_down = '<C-n>',
+   confirm          = '<CR>'
+}
+
 
 cmp.setup {
    snippet = {

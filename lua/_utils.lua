@@ -1,7 +1,5 @@
 local M = {}
 
-M.keyboard_layout = 'colemak'
-
 function M.map(mode_str, lhs, rhs, isSilent)
    local modes = {}
 
