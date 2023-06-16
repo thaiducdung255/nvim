@@ -4,6 +4,7 @@ local keymaps = {
    select_next_entry      = '<TAB>',
    select_prev_entry      = '<S-TAB>',
    select_entry           = '<CR>',
+   restore_buf            = 'X',
    next_conflict          = 'N',
    prev_conflict          = 'E',
    conflict_choose_all    = 'ca',
@@ -22,6 +23,7 @@ local keymaps = {
    refresh_files          = 'R',
    close                  = 'q',
    option                 = '?',
+   toggle_fold            = 'z',
 }
 
 require('diffview').setup({
@@ -122,6 +124,8 @@ require('diffview').setup({
          [keymaps.conflict_choose_base]   = actions.conflict_choose('base'),   -- Choose the BASE version of a conflict
          [keymaps.conflict_choose_all]    = actions.conflict_choose('all'),    -- Choose all the versions of a conflict
          [keymaps.conflict_choose_none]   = actions.conflict_choose('none'),   -- Delete the conflict region
+         [keymaps.restore_buf]            = actions.restore_entry,             -- Reset file
+         [keymaps.toggle_fold]            = actions.toggle_fold,               -- Reset file
       },
       diff1 = {},
       diff2 = {},
@@ -146,14 +150,7 @@ require('diffview').setup({
       file_history_panel = {
          [keymaps.close]           = actions.close,   -- Open the diff for the next file
          [keymaps.option]          = actions.options, -- Open the option panel
-         -- [keycodes.fhp.open_in_diffview]     = actions.open_in_diffview, -- Open the entry under the cursor in a diffview
-         -- [keycodes.fhp.copy_hash]            = actions.copy_hash,        -- Copy the commit hash of the entry under the cursor
          [keymaps.open_commit_log] = actions.open_commit_log,
-         -- [keycodes.fhp.open_all_folds]       = actions.open_all_folds,
-         -- [keycodes.fhp.close_all_folds]      = actions.close_all_folds,
-         -- [keycodes.fhp.select_entry]         = actions.select_entry,
-         -- [keycodes.common.scroll_view_up]    = actions.scroll_view(-0.25),
-         -- [keycodes.common.scroll_view_down]  = actions.scroll_view(0.25),
          [keymaps.select_entry]    = actions.select_entry,
          [keymaps.goto_file_tab]   = actions.goto_file_tab,
          [keymaps.toggle_files]    = actions.toggle_files,
@@ -165,6 +162,3 @@ require('diffview').setup({
       },
    },
 })
-
--- map('n', keycodes.open, ':DiffviewOpen<CR><C-w>w')
--- map('n', keycodes.close, ':DiffviewClose<CR>')
