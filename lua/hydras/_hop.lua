@@ -55,11 +55,9 @@ local keymap = {
       yi    = { key = 'y', fn = function() custom_actions('yi') end },
       ci    = { key = 'c', fn = function() custom_actions('di', true) end },
       di    = { key = 'd', fn = function() custom_actions('di') end },
-      vi    = { key = 'v', fn = function() custom_actions('vi') end },
       ya    = { key = 'Y', fn = function() custom_actions('ya') end },
       ca    = { key = 'C', fn = function() custom_actions('da', true) end },
       da    = { key = 'D', fn = function() custom_actions('da') end },
-      va    = { key = 'V', fn = function() custom_actions('va') end },
       save  = { key = '<cr>', fn = cmd 'write' }
    }
 }

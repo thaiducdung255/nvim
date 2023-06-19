@@ -49,7 +49,4 @@ require('gitsigns').setup {
          linehl = 'Grey',
       }
    },
-
-   keymaps                           = {
-   },
 }
