@@ -1,8 +1,9 @@
 local hop = require('hop')
 
 hop.setup({
-   multi_windows = true,
-   case_insensitive = true,
+   multi_windows    = true,
+   uppercase_labels = true,
+   keys             = 'arstdhneioqwfpluy;zxcvkm,.',
 })
 
 -- custom highlights

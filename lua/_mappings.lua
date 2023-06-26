@@ -27,9 +27,10 @@ local keycodes = {
       prev = 'ge',
    },
    tab = {
-      new  = '<LEADER>t',
-      prev = 'N',
-      next = 'E'
+      new           = '<LEADER>t',
+      duplicate_buf = '<LEADER>T',
+      prev          = 'N',
+      next          = 'E'
    },
    file = {
       quit     = '<LEADER>q',
@@ -109,6 +110,7 @@ map('n', keycodes.buf.prev, ':bp<CR>')
 
 -- tabs cmds
 map('n', keycodes.tab.new, ':tabnew<CR>')
+map('n', keycodes.tab.duplicate_buf, ':tab split<CR>')
 map('n', keycodes.tab.prev, ':tabprev<CR>')
 map('n', keycodes.tab.next, ':tabnext<CR>')
 ---------------------------------------------------------------------------------------------------

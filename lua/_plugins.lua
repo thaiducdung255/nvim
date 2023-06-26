@@ -73,7 +73,6 @@ return require('packer').startup({
             'hrsh7th/cmp-nvim-lsp',
             'onsails/lspkind-nvim',
             'hrsh7th/cmp-nvim-lua',
-            'hrsh7th/cmp-path',
             'FelipeLema/cmp-async-path',
             'hrsh7th/cmp-cmdline',
             'dmitmel/cmp-cmdline-history',
@@ -171,6 +170,9 @@ return require('packer').startup({
       -- Status Line and Bufferline
       use {
          'nvim-lualine/lualine.nvim',
+         requires = {
+            'chrisgrieser/nvim-dr-lsp'
+         }
       }
 
       -- Rest client
