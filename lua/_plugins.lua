@@ -171,7 +171,8 @@ return require('packer').startup({
       use {
          'nvim-lualine/lualine.nvim',
          requires = {
-            'chrisgrieser/nvim-dr-lsp'
+            'chrisgrieser/nvim-dr-lsp',
+            'SmiteshP/nvim-navic'
          }
       }
 

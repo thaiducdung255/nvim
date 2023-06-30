@@ -1,7 +1,8 @@
-local _recorder = require('recorder')
-local _lsp = require('dr-lsp')
+local _recorder        = require('recorder')
+local _lsp             = require('dr-lsp')
+local navic            = require('nvim-navic')
 
-local colors = {
+local colors           = {
    bg1     = '#101010',
    bg2     = '#202020',
    bg3     = '#303030',
@@ -13,7 +14,7 @@ local colors = {
    comment = '#444444',
 }
 
-local theme = {
+local theme            = {
    normal = {
       a = { bg = colors.bg1, fg = colors.fg },
       b = { bg = colors.bg2, fg = colors.fg },
@@ -57,20 +58,20 @@ local shorten_filename = function(str)
    return str:sub(1, last_found_idx - 1)
 end
 
-local file_name = {
+local file_name        = {
    'filename',
    file_status     = true,
    path            = 0,
    shorting_target = 20,
 }
 
-local tabs = {
+local tabs             = {
    'tabs',
    mode = 1,
    fmt  = shorten_filename,
 }
 
-local mode = {
+local mode             = {
    'mode',
    icons_enabled = true,
    icon          = '',
@@ -79,13 +80,13 @@ local mode = {
    end,
 }
 
-local diff = {
+local diff             = {
    'diff',
    colored = false,
    symbols = { added = ' ', modified = ' ', removed = ' ' },
 }
 
-local branch = {
+local branch           = {
    'branch',
    icon = '',
    fmt = function(str)
@@ -97,17 +98,17 @@ local branch = {
    end,
 }
 
-local diagnostics = {
+local diagnostics      = {
    'diagnostics',
    sources = { 'nvim_diagnostic' },
    colored = false,
 }
 
-local progress = {
+local progress         = {
    'progress',
 }
 
-local windows = {
+local windows          = {
    'windows',
    show_filename_only   = true,
    show_modified_status = true,
@@ -120,11 +121,20 @@ local windows = {
    }
 }
 
+local nav              = {
+   function()
+      return navic.get_location()
+   end,
+   cond = function()
+      return navic.is_available()
+   end
+}
+
 require 'lualine'.setup {
    tabline    = {
       lualine_a = { windows },
       lualine_b = {},
-      lualine_c = {},
+      lualine_c = { nav },
       lualine_x = {},
       lualine_y = {},
       lualine_z = { tabs }
