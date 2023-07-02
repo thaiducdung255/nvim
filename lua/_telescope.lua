@@ -12,13 +12,6 @@ if pcall(require, 'plenary') then
    end
 end
 
-local vertical_default_conf = {
-   layout_strategy = 'vertical',
-   layout_config = {
-      preview_height = 0.65,
-   },
-}
-
 local horizontal_default_conf = {
    layout_strategy = 'horizontal',
    layout_config = {
@@ -41,8 +34,8 @@ telescope.setup {
       entry_prefix           = '   ',
       initial_mode           = 'insert',
       selection_strategy     = 'reset',
-      sorting_strategy       = 'descending',
-      layout_strategy        = 'horizontal',
+      sorting_strategy       = 'ascending',
+      layout_strategy        = 'center',
       file_sorter            = sorters.get_fuzzy_file,
       generic_sorter         = sorters.get_generic_fuzzy_sorter,
       path_display           = { 'absolute' },
@@ -55,8 +48,16 @@ telescope.setup {
       file_previewer         = previewers.vim_buffer_cat.new,
       grep_previewer         = previewers.vim_buffer_vimgrep.new,
       qflist_previewer       = previewers.vim_buffer_qflist.new,
-      layout_config          = { width = 0.999, height = 0.999 },
+      layout_config          = {
+         width           = 0.999,
+         height          = 0.999,
+         prompt_position = 'top'
+      },
       buffer_previewer_maker = previewers.buffer_previewer_maker,
+      preview                = {
+         filesize_limit = 5,
+         treesitter     = false,
+      },
       mappings               = {
          i = {
             ['<C-n>'] = actions.move_selection_next,
@@ -73,12 +74,13 @@ telescope.setup {
       }
    },
    pickers = {
-      lsp_references           = vertical_default_conf,
-      grep_string              = vertical_default_conf,
-      live_grep                = vertical_default_conf,
-      lsp_document_diagnostics = vertical_default_conf,
+      treesitter               = horizontal_default_conf,
+      lsp_document_symbols     = horizontal_default_conf,
+      grep_string              = horizontal_default_conf,
+      live_grep                = horizontal_default_conf,
+      lsp_document_diagnostics = horizontal_default_conf,
       find_files               = horizontal_default_conf,
-      oldfiles                 = vertical_default_conf,
+      oldfiles                 = horizontal_default_conf,
       buffers                  = horizontal_default_conf,
       lsp_definitions          = {
          file_ignore_patterns = { '.git/', '.dist/' },
@@ -111,6 +113,9 @@ telescope.setup {
          clear_selection_hl = false,
          trace_entry        = true,
          reset_selection    = true,
+      },
+      repo = {
+         layout_strategy = 'center',
       },
       fzy_native = {
          override_generic_sorter = true,
