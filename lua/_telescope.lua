@@ -12,13 +12,6 @@ if pcall(require, 'plenary') then
    end
 end
 
-local horizontal_default_conf = {
-   layout_strategy = 'horizontal',
-   layout_config = {
-      preview_width = 0.45,
-   },
-}
-
 telescope.setup {
    defaults = {
       find_command           = {
@@ -35,7 +28,7 @@ telescope.setup {
       initial_mode           = 'insert',
       selection_strategy     = 'reset',
       sorting_strategy       = 'ascending',
-      layout_strategy        = 'center',
+      layout_strategy        = 'horizontal',
       file_sorter            = sorters.get_fuzzy_file,
       generic_sorter         = sorters.get_generic_fuzzy_sorter,
       path_display           = { 'absolute' },
@@ -56,7 +49,7 @@ telescope.setup {
       buffer_previewer_maker = previewers.buffer_previewer_maker,
       preview                = {
          filesize_limit = 5,
-         treesitter     = false,
+         treesitter     = true,
       },
       mappings               = {
          i = {
@@ -74,15 +67,13 @@ telescope.setup {
       }
    },
    pickers = {
-      treesitter               = horizontal_default_conf,
-      lsp_document_symbols     = horizontal_default_conf,
-      grep_string              = horizontal_default_conf,
-      live_grep                = horizontal_default_conf,
-      lsp_document_diagnostics = horizontal_default_conf,
-      find_files               = horizontal_default_conf,
-      oldfiles                 = horizontal_default_conf,
-      buffers                  = horizontal_default_conf,
-      lsp_definitions          = {
+      oldfiles = {
+         path_display = {
+            'shorten',
+            shorten = 4
+         }
+      },
+      lsp_definitions = {
          file_ignore_patterns = { '.git/', '.dist/' },
       },
    },

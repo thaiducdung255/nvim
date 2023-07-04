@@ -7,8 +7,8 @@ CACHE_PATH  = vim.fn.stdpath('cache')
 
 map('nvo', 'k', 'i')
 map('nvo', 'K', 'I')
-map('nvo', 'W', 'w')
-map('nvo', 'w', 'e')
+map('vo', 'W', 'w')
+map('vo', 'w', 'e')
 
 map('nv', 'n', 'j')
 map('nv', 'e', 'k')
