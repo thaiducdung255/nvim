@@ -30,7 +30,6 @@ return require('packer').startup({
       use { 'neovim/nvim-lspconfig' }
       use { 'b0o/schemastore.nvim' }
       use { 'dnlhc/glance.nvim' }
-
       -- telescope
       use { 'nvim-telescope/telescope.nvim' }
       use { 'nvim-telescope/telescope-hop.nvim' }
@@ -114,7 +113,7 @@ return require('packer').startup({
       }
 
       -- rainbow parentheses
-      use 'p00f/nvim-ts-rainbow'
+      use 'HiPhish/rainbow-delimiters.nvim'
 
       -- align text
       use 'junegunn/vim-easy-align'

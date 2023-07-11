@@ -187,10 +187,3 @@ lspconfig.rust_analyzer.setup {
    },
 
 }
-
-lspconfig.sqlls.setup {
-   capabilities = capabilities,
-   on_attach = function(client, bufnr)
-      set_lsp_config(client, bufnr)
-   end,
-}

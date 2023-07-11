@@ -34,6 +34,8 @@ require('_window_maximize')
 require('_neo_scroll')
 require('_split_join')
 require('_nvim_pydb')
+require('_rainbow-delimiters')
+
 require('hydras._telescope')
 require('hydras._hop')
 require('hydras._gitsigns_diffview')

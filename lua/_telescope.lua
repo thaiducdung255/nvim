@@ -60,8 +60,8 @@ telescope.setup {
             ['<C-i>'] = R('telescope').extensions.hop.hop,
          },
          n = {
-            ['<C-j>'] = actions.move_selection_next,
-            ['<C-k>'] = actions.move_selection_previous,
+            ['<C-n>'] = actions.move_selection_next,
+            ['<C-e>'] = actions.move_selection_previous,
             ['<C-o>'] = actions.smart_send_to_qflist + actions.open_qflist,
          }
       }
