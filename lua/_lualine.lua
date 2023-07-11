@@ -1,5 +1,4 @@
 local _recorder        = require('recorder')
-local _lsp             = require('dr-lsp')
 local navic            = require('nvim-navic')
 
 local colors           = {
@@ -153,6 +152,6 @@ require 'lualine'.setup {
       lualine_c = { diagnostics },
       lualine_x = {},
       lualine_y = { _recorder.recordingStatus, _recorder.displaySlots, diff },
-      lualine_z = { branch, progress, _lsp.lspProgress }
+      lualine_z = { branch, progress }
    },
 }

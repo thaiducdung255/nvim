@@ -170,9 +170,17 @@ return require('packer').startup({
       use {
          'nvim-lualine/lualine.nvim',
          requires = {
-            'chrisgrieser/nvim-dr-lsp',
             'SmiteshP/nvim-navic'
          }
+      }
+
+      use {
+         'j-hui/fidget.nvim',
+         tag = 'legacy',
+         config = function()
+            require('fidget').setup({
+            })
+         end
       }
 
       -- Rest client
