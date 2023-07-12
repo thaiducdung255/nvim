@@ -5,8 +5,8 @@ local keymaps = {
    select_prev_entry      = '<S-TAB>',
    select_entry           = '<CR>',
    restore_buf            = 'X',
-   next_conflict          = 'N',
-   prev_conflict          = 'E',
+   next_conflict          = 'cn',
+   prev_conflict          = 'ce',
    conflict_choose_all    = 'ca',
    conflict_choose_ours   = 'co',
    conflict_choose_theirs = 'ct',
@@ -23,7 +23,7 @@ local keymaps = {
    refresh_files          = 'R',
    close                  = 'q',
    option                 = '?',
-   toggle_fold            = 'z',
+   toggle_fold            = 'i',
 }
 
 require('diffview').setup({
