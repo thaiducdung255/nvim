@@ -60,7 +60,7 @@ end
 local file_name        = {
    'filename',
    file_status     = true,
-   path            = 0,
+   path            = 1,
    shorting_target = 20,
 }
 

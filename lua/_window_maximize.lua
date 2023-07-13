@@ -1,7 +1,7 @@
 local map = require('_utils').map
 
 local keycodes = {
-   toggle_max          = 'z',
+   toggle_max          = '<C-Space>',
    toggle_max_vertical = 'Z',
 }
 
