@@ -30,29 +30,29 @@ return require('packer').startup({
       use { 'neovim/nvim-lspconfig' }
       use { 'b0o/schemastore.nvim' }
       use { 'dnlhc/glance.nvim' }
+
       -- telescope
-      use { 'nvim-telescope/telescope.nvim' }
-      use { 'nvim-telescope/telescope-hop.nvim' }
-
       use {
-         'nvim-telescope/telescope-fzy-native.nvim',
-         run = 'make'
+         'nvim-telescope/telescope.nvim',
+         requires = {
+            'nvim-telescope/telescope-hop.nvim',
+            'cljoly/telescope-repo.nvim',
+            'debugloop/telescope-undo.nvim',
+            'ahmedkhalf/lsp-rooter.nvim'
+         }
       }
-
-      use { 'nvim-telescope/telescope-media-files.nvim' }
-      use { 'cljoly/telescope-repo.nvim' }
-      use { 'debugloop/telescope-undo.nvim' }
+      use {
+         'nvim-telescope/telescope-fzf-native.nvim',
+         run = 'make',
+      }
 
       -- vim motions
       use { 'phaazon/hop.nvim' }
 
-      -- auto update root directory
-      use { 'ahmedkhalf/lsp-rooter.nvim' }
-
       -- autocomplete
       use {
          'jcdickinson/codeium.nvim',
-         commit = '2bbc8d10c5baadbbea9d028131cc37a8a31ec5b2',
+         -- commit = '2bbc8d10c5baadbbea9d028131cc37a8a31ec5b2',
          requires = {
             'nvim-lua/plenary.nvim',
             'hrsh7th/nvim-cmp',
@@ -77,7 +77,6 @@ return require('packer').startup({
             'dmitmel/cmp-cmdline-history',
             'lukas-reineke/cmp-under-comparator',
             'hrsh7th/cmp-nvim-lsp-signature-help',
-            'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-nvim-lsp-document-symbol',
             'hrsh7th/cmp-calc'
          }
@@ -98,6 +97,7 @@ return require('packer').startup({
       use { 'windwp/nvim-ts-autotag' }
       use 'nvim-treesitter/nvim-treesitter-refactor'
       use 'm-demare/hlargs.nvim'
+      use 'nvim-treesitter/nvim-treesitter-textobjects'
 
       -- debugger
       use 'mfussenegger/nvim-dap'

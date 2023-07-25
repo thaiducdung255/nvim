@@ -108,14 +108,16 @@ telescope.setup {
       repo = {
          layout_strategy = 'center',
       },
-      fzy_native = {
+      fzf = {
          override_generic_sorter = true,
-         override_file_sorter    = false,
+         override_file_sorter    = true,
+         case_mode               = 'smart_case',
+         fuzzy                   = true
       },
    }
 }
 
 telescope.load_extension('hop')
-telescope.load_extension('fzy_native')
+telescope.load_extension('fzf')
 telescope.load_extension('repo')
 telescope.load_extension('undo')
