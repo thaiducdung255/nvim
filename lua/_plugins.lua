@@ -49,20 +49,6 @@ return require('packer').startup({
       -- vim motions
       use { 'phaazon/hop.nvim' }
 
-      -- autocomplete
-      use {
-         'jcdickinson/codeium.nvim',
-         -- commit = '2bbc8d10c5baadbbea9d028131cc37a8a31ec5b2',
-         requires = {
-            'nvim-lua/plenary.nvim',
-            'hrsh7th/nvim-cmp',
-         },
-         config = function()
-            require('codeium').setup({
-            })
-         end
-      }
-
       use {
          'hrsh7th/nvim-cmp',
          requires = {
@@ -78,7 +64,7 @@ return require('packer').startup({
             'lukas-reineke/cmp-under-comparator',
             'hrsh7th/cmp-nvim-lsp-signature-help',
             'hrsh7th/cmp-nvim-lsp-document-symbol',
-            'hrsh7th/cmp-calc'
+            'windwp/nvim-autopairs'
          }
       }
 
@@ -91,25 +77,12 @@ return require('packer').startup({
       -- treesitter
       use {
          'nvim-treesitter/nvim-treesitter',
-         -- run = ':TSInstall lua python go http css typescript javascript tsx make dockerfile css html json bash rasi yaml rust prisma'
-         -- run = ':TSUpdateSync'
-      }
-      use { 'windwp/nvim-ts-autotag' }
-      use 'nvim-treesitter/nvim-treesitter-refactor'
-      use 'm-demare/hlargs.nvim'
-      use 'nvim-treesitter/nvim-treesitter-textobjects'
-
-      -- debugger
-      use 'mfussenegger/nvim-dap'
-
-      -- ssh
-      use {
-         'chipsenkbeil/distant.nvim',
-         config = function()
-            require('distant').setup {
-               ['*'] = require('distant.settings').chip_default()
-            }
-         end
+         requires = {
+            'windwp/nvim-ts-autotag',
+            'nvim-treesitter/nvim-treesitter-refactor',
+            'm-demare/hlargs.nvim',
+            'nvim-treesitter/nvim-treesitter-textobjects'
+         }
       }
 
       -- rainbow parentheses
@@ -144,9 +117,6 @@ return require('packer').startup({
          'sindrets/diffview.nvim',
          requires = 'nvim-lua/plenary.nvim'
       }
-
-      -- editorconfig
-      use 'editorconfig/editorconfig-vim'
 
       -- macro
       use 'chrisgrieser/nvim-recorder'

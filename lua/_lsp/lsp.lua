@@ -65,7 +65,7 @@ lspconfig.tsserver.setup {
          ['source.removeUnused'] = true,
          ['source.fixAll'] = true
       },
-      maxTsServerMemory = 4096,
+      maxTsServerMemory = 8192,
       tsserver = {
          useSyntaxServer = 'auto'
       },

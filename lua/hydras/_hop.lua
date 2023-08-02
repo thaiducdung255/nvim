@@ -50,7 +50,7 @@ local keymap = {
       char  = { key = 'f', fn = cmd 'HopChar1CurrentLine' },
       line  = { key = 'l', fn = cmd 'HopLineMW' },
       any   = { key = '.', fn = cmd 'HopPatternMW' },
-      char2 = { key = ',', fn = cmd 'HopChar2MW' },
+      char2 = { key = '<space>', fn = cmd 'HopChar2MW' },
       pairs = { key = 'o', fn = hint_pairs },
       yi    = { key = 'y', fn = function() custom_actions('yi') end },
       ci    = { key = 'c', fn = function() custom_actions('di', true) end },
