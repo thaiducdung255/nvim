@@ -10,7 +10,7 @@ map('n', keycodes.close_all, ufo.closeAllFolds)
 map('n', keycodes.open_all, ufo.openAllFolds)
 
 ufo.setup({
-   provider_selector = function(bufnr, filetype, buftype)
+   provider_selector = function(_, _, _)
       return { 'treesitter', 'indent' }
    end
 })

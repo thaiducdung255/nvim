@@ -28,7 +28,6 @@ vim.o.ignorecase      = true
 vim.o.smartcase       = true
 vim.o.splitbelow      = true
 vim.o.splitright      = true
-vim.o.cmdheight       = 1
 vim.o.backup          = false
 vim.o.termguicolors   = true
 vim.o.writebackup     = false
@@ -51,7 +50,6 @@ vim.o.smartindent     = true
 vim.o.autoindent      = true
 vim.o.copyindent      = true
 vim.o.swapfile        = false
-vim.o.cmdheight       = 0
 vim.wo.cc             = 0
 vim.wo.number         = true
 vim.wo.cursorline     = true
@@ -86,15 +84,6 @@ vim.api.nvim_create_autocmd(
       pattern = 'make',
       callback = function()
          vim.o.expandtab = false
-      end
-   }
-)
-
-vim.api.nvim_create_autocmd(
-   'VimEnter',
-   {
-      callback = function()
-         vim.cmd('set cc=0')
       end
    }
 )

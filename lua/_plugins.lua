@@ -26,11 +26,6 @@ return require('packer').startup({
          end
       }
 
-      -- LSP
-      use { 'neovim/nvim-lspconfig' }
-      use { 'b0o/schemastore.nvim' }
-      use { 'dnlhc/glance.nvim' }
-
       -- telescope
       use {
          'nvim-telescope/telescope.nvim',
@@ -50,22 +45,8 @@ return require('packer').startup({
       use { 'phaazon/hop.nvim' }
 
       use {
-         'hrsh7th/nvim-cmp',
-         requires = {
-            'hrsh7th/vim-vsnip',
-            'hrsh7th/cmp-vsnip',
-            'hrsh7th/cmp-buffer',
-            'hrsh7th/cmp-nvim-lsp',
-            'onsails/lspkind-nvim',
-            'hrsh7th/cmp-nvim-lua',
-            'FelipeLema/cmp-async-path',
-            'hrsh7th/cmp-cmdline',
-            'dmitmel/cmp-cmdline-history',
-            'lukas-reineke/cmp-under-comparator',
-            'hrsh7th/cmp-nvim-lsp-signature-help',
-            'hrsh7th/cmp-nvim-lsp-document-symbol',
-            'windwp/nvim-autopairs'
-         }
+         'neoclide/coc.nvim',
+         branch = 'release'
       }
 
       -- line peek
@@ -139,18 +120,6 @@ return require('packer').startup({
       -- Status Line and Bufferline
       use {
          'nvim-lualine/lualine.nvim',
-         requires = {
-            'SmiteshP/nvim-navic'
-         }
-      }
-
-      use {
-         'j-hui/fidget.nvim',
-         tag = 'legacy',
-         config = function()
-            require('fidget').setup({
-            })
-         end
       }
 
       -- Rest client

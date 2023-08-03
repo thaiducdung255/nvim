@@ -1,0 +1,5 @@
+{
+   "tsserver":{
+      "maxTsServerMemory":8096
+   }
+}

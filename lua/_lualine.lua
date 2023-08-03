@@ -1,5 +1,4 @@
 local _recorder        = require('recorder')
-local navic            = require('nvim-navic')
 
 local colors           = {
    bg1     = '#101010',
@@ -120,20 +119,11 @@ local windows          = {
    }
 }
 
-local nav              = {
-   function()
-      return navic.get_location()
-   end,
-   cond = function()
-      return navic.is_available()
-   end
-}
-
 require 'lualine'.setup {
    tabline    = {
       lualine_a = { windows },
       lualine_b = {},
-      lualine_c = { nav },
+      lualine_c = {},
       lualine_x = {},
       lualine_y = {},
       lualine_z = { tabs }
@@ -149,7 +139,7 @@ require 'lualine'.setup {
    sections   = {
       lualine_a = { mode },
       lualine_b = { file_name },
-      lualine_c = { diagnostics },
+      lualine_c = {  },
       lualine_x = {},
       lualine_y = { _recorder.recordingStatus, _recorder.displaySlots, diff },
       lualine_z = { branch, progress }
