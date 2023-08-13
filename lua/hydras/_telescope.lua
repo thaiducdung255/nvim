@@ -10,6 +10,10 @@ local function repo()
    }
 end
 
+local function lsp_functions()
+   tls_builtin.treesitter({ symbols = 'function' })
+end
+
 local keymap = {
    body    = 'f',
    buf_fzf = '?',
@@ -20,14 +24,12 @@ local keymap = {
       ['mr-file']  = { key = 'r', fn = tls_builtin.oldfiles },
       buf          = { key = 'b', fn = tls_builtin.buffers },
       ripgrep      = { key = 's', fn = tls_builtin.live_grep },
-      tsitter      = { key = 'z', fn = tls_builtin.treesitter },
+      tsitter      = { key = 'd', fn = lsp_functions },
       ['type-def'] = { key = 't', fn = tls_builtin.lsp_type_definitions },
       cmd          = { key = 'c', fn = tls_builtin.commands },
       ['cmd-his']  = { key = 'C', fn = tls_builtin.command_history },
       map          = { key = 'm', fn = tls_builtin.keymaps },
       hi           = { key = 'h', fn = tls_builtin.highlights },
-      symbol       = { key = 'd', fn = tls_builtin.lsp_document_symbols },
-      diag         = { key = 'x', fn = tls_builtin.lsp_document_diagnostics },
       branch       = { key = 'g', fn = tls_builtin.git_branches },
       repo         = { key = '.', fn = repo },
       undo         = { key = 'u', fn = telescope.extensions.undo.undo },

@@ -18,23 +18,33 @@ local refactor_config = {
 }
 
 require 'nvim-treesitter.configs'.setup {
-   sync_install   = true,
-   auto_install   = true,
-   ignore_install = true,
-   refactor       = refactor_config,
-   highlight      = {
+   ensure_installed = {
+      'typescript',
+      'javascript',
+      'go',
+      'prisma',
+      'http',
+      'graphql',
+      'bash',
+      'json',
+      'yaml',
+      'make',
+      'python',
+   },
+   refactor         = refactor_config,
+   highlight        = {
       enable  = true,
       disable = { 'http' },
    },
-   indent         = {
+   indent           = {
       enable = {
          'javascriptreact'
       }
    },
-   autotag        = {
+   autotag          = {
       enable = true
    },
-   rainbow        = {
+   rainbow          = {
       enable         = true,
       extended_mode  = true,
       max_file_lines = 1000,

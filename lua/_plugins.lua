@@ -44,10 +44,23 @@ return require('packer').startup({
       -- vim motions
       use { 'phaazon/hop.nvim' }
 
+      -- auto complete
       use {
          'neoclide/coc.nvim',
-         branch = 'release'
+         branch = 'release',
+         requires = { 'rcarriga/nvim-notify' }
       }
+
+      -- AI
+      use({
+         'jackMort/ChatGPT.nvim',
+         commit = '24bcca7',
+         requires = {
+            'MunifTanjim/nui.nvim',
+            'nvim-lua/plenary.nvim',
+            'nvim-telescope/telescope.nvim'
+         }
+      })
 
       -- line peek
       use 'nacro90/numb.nvim'
@@ -127,6 +140,12 @@ return require('packer').startup({
          'teto/rest.nvim',
          branch = 'always-send-string',
          requires = { 'nvim-lua/plenary.nvim' },
+      }
+
+      -- GraphQL client
+      use {
+         'skanehira/denops-graphql.vim',
+         requires = { 'vim-denops/denops.vim' },
       }
 
       -- smart fold

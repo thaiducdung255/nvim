@@ -98,12 +98,16 @@ local branch           = {
 
 local diagnostics      = {
    'diagnostics',
-   sources = { 'nvim_diagnostic' },
+   -- sources = { 'nvim_diagnostic' },
    colored = false,
 }
 
 local progress         = {
    'progress',
+}
+
+local searchcount      = {
+   'searchcount'
 }
 
 local windows          = {
@@ -139,9 +143,9 @@ require 'lualine'.setup {
    sections   = {
       lualine_a = { mode },
       lualine_b = { file_name },
-      lualine_c = {  },
+      lualine_c = { diagnostics },
       lualine_x = {},
       lualine_y = { _recorder.recordingStatus, _recorder.displaySlots, diff },
-      lualine_z = { branch, progress }
+      lualine_z = { searchcount, branch, progress }
    },
 }

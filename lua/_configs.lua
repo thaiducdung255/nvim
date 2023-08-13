@@ -40,7 +40,7 @@ vim.o.undofile        = true
 vim.o.incsearch       = true
 vim.o.autoread        = true
 vim.o.autowrite       = true
-vim.o.hlsearch        = false
+vim.o.hlsearch        = true
 vim.o.history         = 100
 vim.o.tabstop         = 2
 vim.o.softtabstop     = 2
@@ -50,7 +50,6 @@ vim.o.smartindent     = true
 vim.o.autoindent      = true
 vim.o.copyindent      = true
 vim.o.swapfile        = false
-vim.wo.cc             = 0
 vim.wo.number         = true
 vim.wo.cursorline     = true
 vim.wo.relativenumber = true
@@ -63,6 +62,7 @@ vim.api.nvim_create_autocmd(
       pattern = '*',
       callback = function()
          vim.wo.relativenumber = false
+         vim.cmd([[let @/='']])
       end
    }
 )
@@ -77,6 +77,15 @@ vim.api.nvim_create_autocmd(
    }
 )
 
+vim.api.nvim_create_autocmd(
+   'VimEnter',
+   {
+      pattern = '*',
+      callback = function()
+         vim.cmd('set cmdheight=0')
+      end
+   }
+)
 
 vim.api.nvim_create_autocmd(
    'FileType',

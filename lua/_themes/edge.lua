@@ -23,11 +23,6 @@ vim.g.edge_colors_override           = {
    blue       = { '#6cb6eb', '100' },
    bg_blue    = { '#6cb6eb', '100' },
    diff_blue  = { '#354157', '100' },
-   -- red         = {},
-   -- bg_red      = {},
-   -- diff_red    = {},
-   -- yellow      = {},
-   -- diff_yellow = {},
 }
 
 vim.cmd('colorscheme edge')
@@ -49,3 +44,4 @@ vim.cmd('hi BufferLineTabSeparatorSelected guibg=#33353f guifg=#0a0a0a') -- buff
 vim.cmd('hi BufferLineTabSelected guifg=#6cb6eb')                        -- buffer tab index indicator
 
 vim.cmd('hi PmenuSel guibg=#33353f')                                     -- completion menu custom
+-- vim.cmd('hi CurrentWord gui=bold')                                       -- cusor word
