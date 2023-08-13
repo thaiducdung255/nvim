@@ -7,8 +7,12 @@ local keymap = {
       prompt       = { key = 'l', fn = cmd 'ChatGPT' },
       actAs        = { key = 'a', fn = cmd 'ChatGPTActAs' },
       completeCode = { key = 'f', fn = cmd 'ChatGPTCompleteCode' },
-      run          = { key = 'r', fn = cmd 'ChatGPTRun' },
       edit         = { key = 'e', fn = cmd 'ChatGPTEditWithInstructions' },
+      test         = { key = 't', fn = cmd 'ChatGPTRun add_tests' },
+      optimize     = { key = 'o', fn = cmd 'ChatGPTRun optimize_code' },
+      readability  = { key = 'r', fn = cmd 'ChatGPTRun code_readability_analysis' },
+      codeLens     = { key = 'c', fn = cmd 'ChatGPTRun fix_bugs' },
+      summarize    = { key = 's', fn = cmd 'ChatGPTRun summarize' },
    }
 }
 
