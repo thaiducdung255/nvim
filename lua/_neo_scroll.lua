@@ -17,12 +17,12 @@ neoscroll.setup({
    pre_hook             = nil,   -- Function to run before the scrolling animation starts
    post_hook            = nil,   -- Function to run after the scrolling animation ends
    performance_mode     = false, -- Disable "Performance Mode" on all buffers.
-   mappings             = { '<C-u>', '<C-d>', '<C-b>', '<C-f>', },
+   mappings             = { '<C-u>', '<C-d>' },
 })
 
 local mappings = {
-   [keycodes.scroll.d] = { 'scroll', { 'vim.wo.scroll', 'true', '180' } },
-   [keycodes.scroll.u] = { 'scroll', { '-vim.wo.scroll', 'true', '180' } },
+   [keycodes.scroll.d] = { 'scroll', { 'vim.wo.scroll', 'true', '250' } },
+   [keycodes.scroll.u] = { 'scroll', { '-vim.wo.scroll', 'true', '250' } },
 }
 
 neoscroll_conf.set_mappings(mappings)

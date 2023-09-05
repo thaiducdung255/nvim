@@ -1,3 +1,4 @@
+vim.notify = require('notify')
 require('_plugins')
 require('impatient')
 require('_global')
@@ -27,6 +28,8 @@ require('_split_join')
 require('_nvim_pydb')
 require('_hl_args')
 require('_chat_gpt')
+require('_graphql')
+-- require('_codium')
 
 require('hydras._telescope')
 require('hydras._hop')

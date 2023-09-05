@@ -32,6 +32,7 @@
    "typescript.preferences.includePackageJsonAutoImports": "off",
    "diagnostic.virtualText": true,
    "tsserver.maxTsServerMemory": 8096,
+   "typescript.format.enable": false,
    "deno.lint": true,
    "codeLens.enable": true,
    "colors.enable": true,
@@ -39,7 +40,34 @@
    "list.previousKeymap": "<C-e>",
    "list.floatPreview": true,
    "coc.preferences.formatOnSave": true,
-   "eslint.autoFixOnSave": false,
+   "eslint.autoFixOnSave": true,
    "outline.autoPreview": true,
-   "snippets.autoTrigger": true
+   "snippets.autoTrigger": true,
+   "languageserver": {
+      "graphql": {
+         "command": "graphql-lsp",
+         "args": [
+            "server",
+            "-m",
+            "stream"
+         ],
+         "filetypes": [
+            "graphql",
+            "typescript",
+            "typescriptreact",
+         ]
+      },
+      "sql": {
+         "command": "sql-language-server",
+         "args": [
+            "up",
+            "--method",
+            "node-ipc"
+         ],
+         "filetypes": [
+            "sql",
+            "mysql"
+         ]
+      }
+   }
 }

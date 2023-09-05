@@ -15,7 +15,9 @@ end
 telescope.setup {
    defaults = {
       find_command           = {
-         'ag', '--ignore', '--hidden', '--no-heading', '--with-filename', '--line-number', '--column', '--smart-case'
+         'ag', '--ignore', '.gitignore',
+         '--hidden', '--no-heading', '--with-filename',
+         '--line-number', '--column', '--smart-case'
       },
       file_ignore_patterns   = {
          '.git/', 'node_modules/', '.package-lock.json', '.pnpm-lock.yaml', '.yarn-lock.json',

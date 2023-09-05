@@ -1,8 +1,8 @@
 local map = require('_utils').map
 
 local keycodes = {
-   run  = '<LEADER><CR>',
-   curl = '<LEADER><TAB>',
+   run  = '<LEADER><LEADER>',
+   curl = '<LEADER><CR>',
 }
 
 require('rest-nvim').setup({

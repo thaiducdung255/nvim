@@ -54,13 +54,16 @@ return require('packer').startup({
       -- AI
       use({
          'jackMort/ChatGPT.nvim',
-         commit = '24bcca7',
          requires = {
             'MunifTanjim/nui.nvim',
             'nvim-lua/plenary.nvim',
             'nvim-telescope/telescope.nvim'
          }
       })
+
+      -- use {
+      -- 'Exafunction/codeium.vim',
+      -- }
 
       -- line peek
       use 'nacro90/numb.nvim'
@@ -163,6 +166,11 @@ return require('packer').startup({
       -- database ui
       use {
          'thaiducdung255/nvim-pydb',
+      }
+
+      use {
+         'kristijanhusak/vim-dadbod-ui',
+         'tpope/vim-dadbod'
       }
 
       -- cache plugins

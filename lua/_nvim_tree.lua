@@ -107,7 +107,6 @@ require 'nvim-tree'.setup {
    sync_root_with_cwd                 = true,
    reload_on_bufenter                 = false,
    respect_buf_cwd                    = true,
-   remove_keymaps                     = false,
    select_prompts                     = false,
    open_on_tab                        = false,
    update_cwd                         = true,

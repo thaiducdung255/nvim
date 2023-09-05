@@ -1,5 +1,4 @@
 local keyset = vim.keymap.set
-vim.notify = require('notify')
 
 -- Autocomplete
 function _G.check_back_space()
