@@ -29,6 +29,7 @@ require('_nvim_pydb')
 require('_hl_args')
 require('_chat_gpt')
 require('_graphql')
+-- require('_dbui')
 -- require('_codium')
 
 require('hydras._telescope')

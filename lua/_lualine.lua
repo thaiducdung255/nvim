@@ -116,7 +116,7 @@ local windows          = {
    show_modified_status = true,
    mode                 = 0,
    fmt                  = shorten_filename,
-   disabled_buftypes    = { 'terminal', 'nofile' },
+   disabled_buftypes    = { 'terminal', 'nofile', 'toggleterm' },
    filetype_names       = {
       NvimTree   = 'NTree',
       toggleterm = 'term',
@@ -139,6 +139,7 @@ require 'lualine'.setup {
       component_separators = { left = '|', right = '|' },
       section_separators   = { left = '', right = '' },
       always_divide_middle = true,
+      disabled_filetypes   = { 'toggleterm', 'dbui', 'dbout' }
    },
    sections   = {
       lualine_a = { mode },
