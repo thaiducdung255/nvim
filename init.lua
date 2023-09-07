@@ -1,5 +1,5 @@
-vim.notify = require('notify')
 require('_plugins')
+vim.notify = require('notify')
 require('impatient')
 require('_global')
 require('_configs')
