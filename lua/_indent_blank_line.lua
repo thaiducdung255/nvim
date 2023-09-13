@@ -1,6 +1,6 @@
 vim.g.indent_blankline_filetype_exclude               = {
    'lspinfo', 'text', 'coc-explorer', 'dashboard',
-   'packer', 'help', 'toggleterm', ''
+   'packer', 'help', 'toggleterm', '', 'dbout'
 }
 
 vim.g.indent_blankline_use_treesitter                 = true

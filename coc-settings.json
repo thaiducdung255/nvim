@@ -43,6 +43,10 @@
    "eslint.autoFixOnSave": true,
    "outline.autoPreview": true,
    "snippets.autoTrigger": true,
+   "coc.source.db.priority": 10,
+   "coc.source.buffer.priority": 30,
+   "coc.source.file.priority": 20,
+   "coc.source.around.priority": 40,
    "languageserver": {
       "graphql": {
          "command": "graphql-lsp",

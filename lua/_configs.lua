@@ -96,3 +96,14 @@ vim.api.nvim_create_autocmd(
       end
    }
 )
+
+vim.api.nvim_create_autocmd(
+   'FileType',
+   {
+      pattern = 'dbout',
+      callback = function()
+         vim.wo.relativenumber = false
+         vim.wo.number = false
+      end
+   }
+)
