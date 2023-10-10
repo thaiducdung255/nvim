@@ -201,15 +201,10 @@ require 'nvim-tree'.setup {
       centralize_selection        = false,
       cursorline                  = true,
       debounce_delay              = 20,
-      hide_root_folder            = false,
       preserve_window_proportions = false,
       number                      = false,
       width                       = 45,
       side                        = 'left',
-      -- mappings                    = {
-      --    custom_only = true,
-      --    list        = mappings
-      -- }
    },
    filters                            = {
       dotfiles  = true,

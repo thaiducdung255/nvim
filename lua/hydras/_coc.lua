@@ -1,5 +1,6 @@
 local hydra    = require('_hydra')
 local plug_cmd = require('_utils').plug_cmd
+local cmd      = require('hydra.keymap-util').cmd
 
 local function show_docs()
    local cw = vim.fn.expand('<cword>')
@@ -15,15 +16,17 @@ end
 local keymap = {
    body = 't',
    heads = {
-      ['n-diag'] = { key = 'n', fn = function() plug_cmd('coc-diagnostic-next') end, exit = false },
-      ['p-diag'] = { key = 'e', fn = function() plug_cmd('coc-diagnostic-prev') end, exit = false },
-      impl       = { key = 'i', fn = function() plug_cmd('coc-diagnostic-implementation') end },
-      rename     = { key = 'r', fn = function() plug_cmd('coc-rename') end },
-      ref        = { key = 'f', fn = function() plug_cmd('coc-references') end },
-      def        = { key = 't', fn = function() plug_cmd('coc-definition') end },
-      hover      = { key = 'h', fn = function() plug_cmd('coc-type-definition') end },
-      sig        = { key = 's', fn = show_docs },
-      help       = { key = 'c', fn = function() plug_cmd('coc-codeaction-cursor') end },
+      ndiag  = { key = 'n', fn = function() plug_cmd('coc-diagnostic-next') end },
+      pdiag  = { key = 'e', fn = function() plug_cmd('coc-diagnostic-prev') end },
+      diag   = { key = 'd', fn = cmd 'Telescope coc diagnostics' },
+      cmd    = { key = '<cr>', fn = cmd 'Telescope coc commands' },
+      impl   = { key = 'i', fn = function() plug_cmd('coc-diagnostic-implementation') end },
+      rename = { key = 'r', fn = function() plug_cmd('coc-rename') end },
+      ref    = { key = 'f', fn = cmd 'Telescope coc references' },
+      def    = { key = 't', fn = function() plug_cmd('coc-definition') end },
+      hover  = { key = 'h', fn = function() plug_cmd('coc-type-definition') end },
+      sig    = { key = 's', fn = show_docs },
+      help   = { key = 'c', fn = function() plug_cmd('coc-codeaction-cursor') end },
    }
 }
 

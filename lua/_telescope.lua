@@ -116,6 +116,10 @@ telescope.setup {
          case_mode               = 'smart_case',
          fuzzy                   = true
       },
+      coc = {
+         -- theme = 'ivy',
+         prefer_locations = true, -- always use Telescope locations to preview definitions/declarations/implementations etc
+      }
    }
 }
 
@@ -123,3 +127,4 @@ telescope.load_extension('hop')
 telescope.load_extension('fzf')
 telescope.load_extension('repo')
 telescope.load_extension('undo')
+telescope.load_extension('coc')

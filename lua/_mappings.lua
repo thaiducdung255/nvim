@@ -12,7 +12,7 @@ local keycodes = {
       },
       nl = ',,',
    },
-   nav = {
+   w_nav = {
       r = '<LEADER>i',
       l = '<LEADER>h',
       u = '<LEADER>e',
@@ -94,10 +94,10 @@ local keycodes = {
 
 -- window cmds
 ---- nav cmds
-map('n', keycodes.nav.r, '<C-w>l')
-map('n', keycodes.nav.u, '<C-w>k')
-map('n', keycodes.nav.d, '<C-w>j')
-map('n', keycodes.nav.l, '<C-w>h')
+map('n', keycodes.w_nav.r, '<C-w>l')
+map('n', keycodes.w_nav.u, '<C-w>k')
+map('n', keycodes.w_nav.d, '<C-w>j')
+map('n', keycodes.w_nav.l, '<C-w>h')
 
 ---- split cmds
 map('n', keycodes.w_split.h, ':split<CR>')

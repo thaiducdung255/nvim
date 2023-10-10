@@ -48,7 +48,10 @@ return require('packer').startup({
       use {
          'neoclide/coc.nvim',
          branch = 'release',
-         requires = { 'rcarriga/nvim-notify' }
+         requires = {
+            'rcarriga/nvim-notify',
+            'fannheyward/telescope-coc.nvim',
+         }
       }
 
       -- AI
@@ -81,6 +84,9 @@ return require('packer').startup({
             'nvim-treesitter/nvim-treesitter-textobjects'
          }
       }
+
+      -- find and replace
+      use 'nvim-pack/nvim-spectre'
 
       -- rainbow parentheses
       use 'HiPhish/rainbow-delimiters.nvim'
@@ -164,10 +170,6 @@ return require('packer').startup({
       use 'AndrewRadev/splitjoin.vim'
 
       -- database ui
-      use {
-         'thaiducdung255/nvim-pydb',
-      }
-
       use {
          'kristijanhusak/vim-dadbod-ui',
          'tpope/vim-dadbod'

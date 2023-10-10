@@ -7,7 +7,7 @@ local function hint_pairs()
       {
          current_line_only = true
       },
-      '(\\|\\[\\|{\\|<\\|\'\\|"'
+      '(\\|\\[\\|{\\|<\\|\'\\|"\\|`'
    )
 end
 
@@ -53,9 +53,11 @@ local keymap = {
       char2 = { key = '<space>', fn = cmd 'HopChar2MW' },
       pairs = { key = 'o', fn = hint_pairs },
       yi    = { key = 'y', fn = function() custom_actions('yi') end },
+      vi    = { key = 'v', fn = function() custom_actions('vk') end },
       ci    = { key = 'c', fn = function() custom_actions('di', true) end },
       di    = { key = 'd', fn = function() custom_actions('di') end },
       ya    = { key = 'Y', fn = function() custom_actions('ya') end },
+      va    = { key = 'V', fn = function() custom_actions('va') end },
       ca    = { key = 'C', fn = function() custom_actions('da', true) end },
       da    = { key = 'D', fn = function() custom_actions('da') end },
       save  = { key = '<cr>', fn = cmd 'write' }

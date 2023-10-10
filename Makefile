@@ -2,7 +2,7 @@ coc:
 	npm i -g graphql-language-service-cli sql-language-server
 
 lsp:
-	sudo pacman -S --noconfirm lua-language-server go
+	sudo pacman -S --noconfirm lua-language-server go deno
 	npm i -g bash-language-server typescript-language-server vscode-langservers-extracted vscode-json-languageserver emmet-ls vim-language-server typescript dockerfile-language-server-nodejs yaml-language-server @prisma/language-server
 	pip install --upgrade pip
 	pip install python-lsp-server mypy black isort memestra flake8 pylint

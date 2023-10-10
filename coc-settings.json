@@ -29,6 +29,9 @@
       "typeParameter": "󰗴",
       "default": ""
    },
+   "snippets.textmateSnippetsRoots": [
+      "~/.config/nvim/snippets"
+   ],
    "typescript.preferences.includePackageJsonAutoImports": "off",
    "diagnostic.virtualText": true,
    "tsserver.maxTsServerMemory": 8096,
@@ -73,5 +76,6 @@
             "mysql"
          ]
       }
-   }
+  },
+  "coc.preferences.extensionUpdateCheck": "daily"
 }
