@@ -29,6 +29,8 @@ require 'nvim-treesitter.configs'.setup {
       'json',
       'yaml',
       'make',
+      'lua',
+      'sql',
       'python',
    },
    refactor         = refactor_config,

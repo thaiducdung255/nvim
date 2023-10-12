@@ -1,4 +1,5 @@
 local keyset = vim.keymap.set
+-- CocInstall coc-tsserver coc-python coc-go coc-lua coc-pairs coc-snippets coc-db coc-graphql
 
 -- Autocomplete
 function _G.check_back_space()
