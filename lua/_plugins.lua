@@ -16,16 +16,6 @@ return require('packer').startup({
       use { 'nvim-lua/popup.nvim' }
       use { 'nvim-lua/plenary.nvim' }
 
-      use {
-         'axkirillov/hbac.nvim',
-         config = function()
-            require('hbac').setup({
-               autoclose = true,
-               threshold = 10
-            })
-         end
-      }
-
       -- telescope
       use {
          'nvim-telescope/telescope.nvim',
@@ -63,10 +53,6 @@ return require('packer').startup({
             'nvim-telescope/telescope.nvim'
          }
       })
-
-      -- use {
-      -- 'Exafunction/codeium.vim',
-      -- }
 
       -- line peek
       use 'nacro90/numb.nvim'
@@ -130,7 +116,6 @@ return require('packer').startup({
       -- Color scheme
       use {
          'sainnhe/edge',
-         commit = 'd48ab6039d0f0e4170f921f5e48f4d3e9f0898db'
       }
 
       -- highlight color value

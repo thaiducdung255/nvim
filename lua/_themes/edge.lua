@@ -10,6 +10,7 @@ vim.g.edge_colors_override           = {
    none       = { 'NONE', 'NONE' },
    black      = { '#202023', '232' }, -- window border bg color
    bg0        = { '#0a0a0a', '235' }, -- bg color
+   bg_dim     = { '#0a0a0a', '235' }, -- bg color
    bg1        = { '#33353f', '235' }, -- status bar > empty bg color
    bg2        = { '#202023', '236' }, -- auto complete window bg color
    bg4        = { '#202023', '236' }, -- status bar > file name bg color
@@ -44,4 +45,3 @@ vim.cmd('hi BufferLineTabSeparatorSelected guibg=#33353f guifg=#0a0a0a') -- buff
 vim.cmd('hi BufferLineTabSelected guifg=#6cb6eb')                        -- buffer tab index indicator
 
 vim.cmd('hi PmenuSel guibg=#33353f')                                     -- completion menu custom
--- vim.cmd('hi CurrentWord gui=bold')                                       -- cusor word
