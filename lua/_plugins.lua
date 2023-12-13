@@ -32,7 +32,7 @@ return require('packer').startup({
       }
 
       -- vim motions
-      use { 'phaazon/hop.nvim' }
+      use { 'smoka7/hop.nvim' }
 
       -- auto complete
       use {

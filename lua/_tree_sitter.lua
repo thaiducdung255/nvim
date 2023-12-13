@@ -31,6 +31,7 @@ require 'nvim-treesitter.configs'.setup {
       'make',
       'lua',
       'sql',
+      'rust',
       'python',
    },
    refactor         = refactor_config,

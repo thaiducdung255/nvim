@@ -3,4 +3,5 @@
 ~
 plugin/packer_compiled.lua
 debug-adapters
-.chat-gpt-key.txt.gpg
+.chatgpt-key.gpg
+key

@@ -1,3 +1,5 @@
+require('ibl').setup()
+
 vim.g.indent_blankline_filetype_exclude               = {
    'lspinfo', 'text', 'coc-explorer', 'dashboard',
    'packer', 'help', 'toggleterm', '', 'dbout'
