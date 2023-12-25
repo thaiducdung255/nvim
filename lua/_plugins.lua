@@ -44,16 +44,6 @@ return require('packer').startup({
          }
       }
 
-      -- AI
-      use({
-         'jackMort/ChatGPT.nvim',
-         requires = {
-            'MunifTanjim/nui.nvim',
-            'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope.nvim'
-         }
-      })
-
       -- line peek
       use 'nacro90/numb.nvim'
 
