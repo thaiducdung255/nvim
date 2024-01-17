@@ -155,6 +155,9 @@ return require('packer').startup({
 
       -- hydra
       use 'anuvyklack/hydra.nvim'
+
+      -- kitty config
+      use 'fladson/vim-kitty'
    end,
    config = {
       display = {
