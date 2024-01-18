@@ -128,7 +128,7 @@ return require('packer').startup({
 
       -- GraphQL client
       use {
-         'skanehira/denops-graphql.vim',
+         'thaiducdung255/denops-graphql.vim',
          requires = { 'vim-denops/denops.vim' },
       }
 
@@ -158,6 +158,9 @@ return require('packer').startup({
 
       -- kitty config
       use 'fladson/vim-kitty'
+
+      -- bard
+      use 'deepskyblue86/bard-nvim'
    end,
    config = {
       display = {

@@ -35,6 +35,7 @@
    "typescript.preferences.includePackageJsonAutoImports": "off",
    "diagnostic.virtualText": true,
    "tsserver.maxTsServerMemory": 8096,
+   "tsserver.log": "off",
    "typescript.format.enable": false,
    "deno.lint": true,
    "codeLens.enable": true,
@@ -76,6 +77,6 @@
             "mysql"
          ]
       }
-  },
-  "coc.preferences.extensionUpdateCheck": "daily"
+   },
+   "coc.preferences.extensionUpdateCheck": "daily"
 }
