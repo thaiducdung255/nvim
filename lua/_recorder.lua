@@ -3,8 +3,8 @@ require('recorder').setup {
    clear    = true,
    logLevel = vim.log.levels.OFF,
    mapping  = {
-      startStopRecording = 'q',
-      playMacro          = 'Q',
+      startStopRecording = 'Q',
+      playMacro          = 'q',
       editMacro          = '<LEADER>cq',
       switchSlot         = '<LEADER>sq'
    }

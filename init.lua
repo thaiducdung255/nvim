@@ -29,6 +29,7 @@ require('_graphql')
 require('_dbui')
 require('_spectre')
 require('_coc')
+require('_copilot')
 
 require('hydras._telescope')
 require('hydras._hop')

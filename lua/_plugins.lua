@@ -67,6 +67,11 @@ return require('packer').startup({
       -- rainbow parentheses
       use 'HiPhish/rainbow-delimiters.nvim'
 
+      -- copilot
+      use {
+         'zbirenbaum/copilot.lua'
+      }
+
       -- align text
       use 'junegunn/vim-easy-align'
 
@@ -158,9 +163,6 @@ return require('packer').startup({
 
       -- kitty config
       use 'fladson/vim-kitty'
-
-      -- bard
-      use 'deepskyblue86/bard-nvim'
    end,
    config = {
       display = {
