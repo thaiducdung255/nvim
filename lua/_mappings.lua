@@ -4,11 +4,6 @@ local keycodes = {
    symbol = {
       cmd_nav = {
          open = '<CR>',
-         mru  = '<LEADER>cc',
-         l    = '<C-h>',
-         next = '<C-n>',
-         prev = '<C-e>',
-         r    = '<C-i>',
       },
       nl = ',,',
    },

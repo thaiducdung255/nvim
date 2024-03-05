@@ -71,6 +71,8 @@
    "copilot.enable": true,
    "copilot.kindLabel": " ",
    "copilot.priority": 1000,
+   "json.format.enable": false,
+   "json.enable": true,
    "coc.source.db.priority": 10,
    "coc.source.buffer.priority": 30,
    "coc.source.file.priority": 20,
